@@ -74,8 +74,8 @@ differential equations.
 Optionally, the following package is linked through OrdinaryDiffEq.jl:
 
 - [ODEInterface.jl](https://github.com/luchr/ODEInterface.jl). This wrapper
-  to the famous Hairer Fortan codes includes popular solvers like `dopri5`,
-  `dop853`, etc.
+  to the famous Hairer Fortan codes includes popular solvers like dopri5,
+  dop853, etc.
 
 ### Add-On Functionality
 
