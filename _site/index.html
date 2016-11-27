@@ -79,13 +79,13 @@ solvers and native Julia implementations. Our Julia implementations in many
 cases <a href="https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl">benchmark as faster than the class Fortran methods!</a></li>
   <li>The largest set of algorithms. <a href="https://juliadiffeq.github.io/DiffEqDocs.jl/latest/solvers/ode_solve.html">From the ODE methods alone</a>,
 choose between methods such as the 14th Order Feagin methods, the recent Verner
-Efficient methods with high order interpolations, or the classic <code>dopri</code> methods.
+Efficient methods with high order interpolations, or the classic dopri methods.
 The included set dwarfs what is presented by other ecosystems.</li>
-  <li>A clean user interface. For the different types of equations, users define a <code>Problem</code>
-type, and call <code>solve</code>. The <code>Solution</code> type which <code>solve</code> creates then acts similarly
+  <li>A clean user interface. For the different types of equations, users define a Problem
+type, and call solve. The Solution type which solve creates then acts similarly
 for all types of equations, and includes conveniences like an array interface
-(<code>sol[i]</code> for the <code>i</code>th timepoint), an interpolation interface (<code>sol(t)</code> for the
-solution interpolated at time <code>t</code>), and a plotting interface (<code>plot(sol)</code>).</li>
+(sol[i] for the ith timepoint), an interpolation interface (sol(t) for the
+solution interpolated at time t), and a plotting interface (plot(sol)).</li>
   <li>An enhanced scope for number types. Packages such as OrdinaryDiffEq.jl allow for
 solving differential equations with arbitrary precision numbers, unit-checking arithmetic,
 n-dimensional tensors, complex numbers, and more.</li>
