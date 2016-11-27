@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns:og="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Packages | JuliaDiffEq</title>
+        
+          <meta name="author" content="JuliaDiffEq">
+        
+        <meta name="title" content="Packages" >
+        <link rel="icon" type="image/png" href="http://localhost:4000/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="Packages" />
+<meta name="twitter:title" content="Packages" />
+
+<meta name="keywords" content="differential equations, julia, ODE, SDE, PDE" />
+
+
+<link rel="canonical" href="http://juliadiffeq.github.com/" />
+<meta property="og:site_name" content="JuliaDiffEq" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://juliadiffeq.github.com" />
+<meta name="description" content="Homepage for the JuliaDiffEq organization">
+<meta property="og:description" content="Homepage for the JuliaDiffEq organization" />
+<meta name="twitter:description" content="Homepage for the JuliaDiffEq organization" />
+
+<meta property="og:image" content="http://juliadiffeq.github.com/sharer.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="http://juliadiffeq.github.com/sharer.png" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body class="wrap">
+      <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <header>
+  <h1 class="site-title"><a href="/">JuliaDiffEq</a></h1>
+  <nav class="main-nav">
+    <a href="#" class="opener show-on-mobiles">...</a>
+    <div class="clear-opener show-on-mobiles"></div>
+    <div class="grid">
+      <ul>
+        <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+        <li><a href="/news/index.html"><i class="fa fa-info-circle"></i>News</a></li>
+        <li><a href="/packages.html"><i class="fa fa-info-circle"></i>Packages</a></li>
+        <li><a href="https://juliadiffeq.github.io/DiffEqDocs.jl/latest/index.html"><i class="fa fa-info-circle"></i>Documentation</a></li>
+        <li><a href="https://github.com/JuliaDiffEq/DiffEqTutorials.jl"><i class="fa fa-info-circle"></i>Tutorials</a></li>
+        <li><a href="https://gitter.im/JuliaDiffEq/Lobby"><i class="fa fa-info-circle"></i>Chatroom</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+      <section class="content">
+        <div id="home" class="grid post">
+	<div class="unit whole">
+		<h1 id="the-packages">The Packages</h1>
+
+<p>The packages can be split are split categories. The core metapackage which uses
+the functionality together is DifferentialEquations.jl. The following documentation
+shows how the various components can be used together in DifferentialEquations.jl.
+The component solvers are the packages which provide the functionality for actually
+solving differential equations, and the add-ons utilize the common solution interface
+to provide higher level functionality. Packages for easily specifying
+more domain-specific models are included to enhance the scope of the ecosystem.
+Lastly, developer tools help researchers create and test high performance algorithms
+to add to the ecosystem.</p>
+
+<h3 id="metapackage-differentialequationsjl">MetaPackage: DifferentialEquations.jl</h3>
+
+<p><a href="https://github.com/JuliaDiffEq/DifferentialEquations.jl">DifferentialEquations.jl</a>
+is a metapackage which brings together the various parts
+of the ecosystem into one cohesive and ready to use powerhouse of differential
+equation solving. Using DifferentialEquations.jl, one can perform high level
+analysis like parameter estimation and sensitivty analysis, while retaining the
+ability to swap out different ODE solvers between different packages.
+Offering high-performance native Julia implementations and the well-known
+C/Fortran algorithms like Sundials or the Hairer algorithms (through ODEInterface.jl),
+the mixture of flexibility and performance is unparalleled. This is combined with
+<a href="https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl">benchmark-based</a> algorithms
+for choosing default methods and common user interface for handling the solutions
+across different domains, easing the user experience while not comprimising performance.</p>
+
+<h3 id="documentation-packages">Documentation Packages</h3>
+
+<ul>
+  <li><a href="https://juliadiffeq.github.io/DiffEqDocs.jl/latest/">DiffEqDocs.jl</a>. The documentation
+for the common interface as provided by DifferentialEquations.jl.</li>
+  <li><a href="https://juliadiffeq.github.io/DiffEqDevDocs.jl/latest/">DiffEqDevDocs.jl</a>. The
+developer documentation, explaining how to create new components to the diffeq ecoystem.</li>
+  <li><a href="https://github.com/JuliaDiffEq/DiffEqTutorials.jl">DiffEqTutorials.jl</a>. Jupyter
+notebook tutorials explaining how to use various features in the ecosystem.</li>
+  <li><a href="https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl">DiffEqBenchmarks.jl</a>. Benchmarks
+showing the performance differences between the implementations.</li>
+  <li><a href="https://github.com/JuliaDiffEq/juliadiffeq.github.com">juliadiffeq.github.com</a>.
+The JuliaDiffEq website.</li>
+</ul>
+
+<h3 id="component-solvers">Component Solvers</h3>
+
+<p>The solver component packages provide the functionality for solving
+differential equations.</p>
+
+<ul>
+  <li><a href="https://github.com/JuliaDiffEq/OrdinaryDiffEq.jl">OrdinaryDiffEq.jl</a>.
+These Julia implementations offer the largest amount of Julia-specific options,
+while the benchmarks show that these are some of the fastest ODE solver implementaions.</li>
+  <li><a href="https://github.com/JuliaDiffEq/Sundials.jl">Sundials.jl</a>. This wrapper to the
+Sundials package of ODE and DAE solvers allows users to use the famous multistep methods.</li>
+  <li><a href="https://github.com/JuliaDiffEq/ODE.jl">ODE.jl</a>. This is a suite of ODE solvers
+inspired by MATLAB.</li>
+  <li><a href="https://github.com/JuliaDiffEq/StochasticDiffEq.jl">StochasticDiffEq.jl</a>. This
+is a suite of stochastic differential equation (SDE) solvers based off of recent
+research to offer highly efficient and higher order methods.</li>
+  <li><a href="https://github.com/JuliaDiffEq/DASSL.jl">DASSL.jl</a> This is a Julia
+implementation of the famous DASSL DAE solver.</li>
+  <li><a href="https://github.com/JuliaDiffEq/FiniteElementDiffEq.jl">FiniteElementDiffEq.jl</a>.
+This package has tools for describing linear finite element meshes and for solving
+Poisson and Heat equation problems.</li>
+  <li><a href="https://github.com/JuliaDiffEq/StokesDiffEq.jl">StokesDiffEq.jl</a>. This package
+has tools for solving the Stationary Stokes Equation.</li>
+</ul>
+
+<p>Optionally, the following package is linked through OrdinaryDiffEq.jl:</p>
+
+<ul>
+  <li><a href="https://github.com/luchr/ODEInterface.jl">ODEInterface.jl</a>. This wrapper
+to the famous Hairer Fortan codes includes popular solvers like <code>dopri5</code>,
+<code>dop853</code>, etc.</li>
+</ul>
+
+<h3 id="add-on-functionality">Add-On Functionality</h3>
+
+<p>These packages provide add-on functionality to the differential equation solvers.</p>
+
+<ul>
+  <li><a href="https://github.com/JuliaDiffEq/ParameterizedFunctions.jl">ParameterizedFunctions.jl</a>.
+ParameterizedFunctions.jl provides an easy way to specify differential equations
+which will auto-compute various enhancements (Jacobians, inverse Jacobians) to
+speed up the differential equations solvers. In addition, it provides a way of
+defining functions with explicit parameters, which gives a way for parameter
+analyses like parameter estimation to be possible.</li>
+  <li><a href="https://github.com/JuliaDiffEq/DiffEqParamEstim.jl">DiffEqParamEstim.jl</a>.
+This package links the JuliaDiffEq common interface to the various optimzation
+and machine learning packages in order to provide methods for performing
+parameter estimation.</li>
+  <li><a href="https://github.com/JuliaDiffEq/DiffEqSensitivity.jl">DiffEqSensitivity.jl</a>.
+This package adds sensitivity analysis to the JuliaDiffEq common interface.</li>
+  <li><a href="https://github.com/JuliaDiffEq/DiffEqBifurcate.jl">DiffEqBifurcate.jl</a>. This
+package adds bifurcation analysis to functions defined as a ParameterizedFunction.
+The core functionality is provided by <a href="https://github.com/JuliaDiffEq/PyDSTool.jl">PyDSTool.jl</a>.
+This is a work in progress.</li>
+  <li><a href="https://github.com/JuliaDiffEq/DiffEqUncertainty.jl">DiffEqUncertainty.jl</a>.
+This component provides uncertainty analysis tools to the JuliDiffEq common interface.
+This is a work in progress.</li>
+  <li><a href="https://github.com/JuliaDiffEq/DiffEqOptimalControl.jl">DiffEqOptimalControl.jl</a>.
+This component provides methods for translating optimal control problems to
+relevant differential equations to be solved by the component solvers. This
+is a work in progress.</li>
+</ul>
+
+<h3 id="models-packages">Models Packages</h3>
+
+<ul>
+  <li><a href="https://github.com/JuliaDiffEq/FinancialModels.jl">FinancialModels.jl</a>. This
+package provides an easy way to define the common stochastic differential equations
+found in mathematical finance.</li>
+  <li><a href="https://github.com/JuliaDiffEq/MultiScaleModels.jl">MultiScaleModels.jl</a>. This
+package provides a performant way to define differential equations with a
+changing heirarchical structure. For example, one can define a differential equation
+on the proteins of various cells (of different types), where the proteins change
+continuously (and stochastically) and the cell numbers change discretely.</li>
+</ul>
+
+<h3 id="developer-packages">Developer Packages</h3>
+
+<ul>
+  <li><a href="https://github.com/JuliaDiffEq/DiffEqBase.jl">DiffEqBase.jl</a>. This package provides
+the core structure of JuliaDiffEq, allowing the packages to offer a standardized
+interface while reducing the dependencies of the components.</li>
+  <li><a href="https://github.com/JuliaDiffEq/DiffEqDevTools.jl">DiffEqDevTools.jl</a>. This package
+offers various methods for performing convergence analysis, benchmarking, and
+testing of the component solvers. Also included are tableau analysis tools like
+recipes for stability region plots.</li>
+  <li><a href="https://github.com/JuliaDiffEq/DiffEqProblemLibrary.jl">DiffEqProblemLibrary.jl</a>.
+This package provides a set of premade problems for testing the component solvers.</li>
+</ul>
+
+	</div>
+</div>
+      </section>
+      <footer class="grid site-footer">
+        <p>&copy;&nbsp;JuliaDiffEq</p>
+        <p><small>Powered by <a href="http://jekyllrb.com" target="_blank"><em>Jekyll</em></a> using <a href="http://bitwiser.in/bitwiser/" target="_blank"><em>Bitwiser</em></a> theme.</small></p>
+      </footer>
+      
+      <script src="/js/script.js"></script>
+    </body>
+</html>

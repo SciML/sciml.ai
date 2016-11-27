@@ -1,0 +1,38 @@
+##The website title
+name: JuliaDiffEq
+##Markdown processor
+markdown: kramdown
+##syntax highlighter. change it to pygments
+highlighter: pygments
+
+gems: [jekyll-paginate]
+##define base_url for valid usage in sitemap.xml and robots.txt
+base_url: http://juliadiffeq.github.com
+sass:
+  sass_dir: _sass
+  style: :compressed
+paginate: 5
+paginate_path: "news/page:num"
+##The website description (to be used in meta tags)
+description: Homepage for the JuliaDiffEq organization
+##Some frequently used keywords on your website
+keywords: differential equations, julia, ODE, SDE, PDE
+
+##define this for disqus comment support
+#disqus: forumname
+
+##set this to enable google analytics
+#ga_id: analyticsID
+#ga_domain: analyticsDomain
+
+##Some commonly used links
+links:
+  #facebook: username
+  #twitter: username
+  email: contact@chrisrackauckas.com
+  github: JuliaDiffEq
+
+##put desired image in img/ directory and set the value accordingly. If not defined, a placeholder image will be used.
+about_image: JuliaDiffEq_icon.png
+##comment this if you want full width posts with no sidebar
+sidebar: on

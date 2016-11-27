@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:og="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Home | JuliaDiffEq</title>
+        
+          <meta name="author" content="JuliaDiffEq">
+        
+        <meta name="title" content="Home" >
+        <link rel="icon" type="image/png" href="http://localhost:4000/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="Home" />
+<meta name="twitter:title" content="Home" />
+
+<meta name="keywords" content="differential equations, julia, ODE, SDE, PDE" />
+
+
+<link rel="canonical" href="http://juliadiffeq.github.com/" />
+<meta property="og:site_name" content="JuliaDiffEq" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://juliadiffeq.github.com" />
+<meta name="description" content="Homepage for the JuliaDiffEq organization">
+<meta property="og:description" content="Homepage for the JuliaDiffEq organization" />
+<meta name="twitter:description" content="Homepage for the JuliaDiffEq organization" />
+
+<meta property="og:image" content="http://juliadiffeq.github.com/sharer.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="http://juliadiffeq.github.com/sharer.png" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body class="wrap">
+      <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <header>
+  <h1 class="site-title"><a href="/">JuliaDiffEq</a></h1>
+  <nav class="main-nav">
+    <a href="#" class="opener show-on-mobiles">...</a>
+    <div class="clear-opener show-on-mobiles"></div>
+    <div class="grid">
+      <ul>
+        <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+        <li><a href="/news/index.html"><i class="fa fa-info-circle"></i>News</a></li>
+        <li><a href="/packages.html"><i class="fa fa-info-circle"></i>Packages</a></li>
+        <li><a href="https://juliadiffeq.github.io/DiffEqDocs.jl/latest/index.html"><i class="fa fa-info-circle"></i>Documentation</a></li>
+        <li><a href="https://github.com/JuliaDiffEq/DiffEqTutorials.jl"><i class="fa fa-info-circle"></i>Tutorials</a></li>
+        <li><a href="https://gitter.im/JuliaDiffEq/Lobby"><i class="fa fa-info-circle"></i>Chatroom</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+      <section class="content">
+        <div id="home" class="grid post">
+	<div class="unit whole">
+		<h1 id="juliadiffeq">JuliaDiffEq</h1>
+
+<p>JuliaDiffEq is a Github organization created to unify the packages for solving differential
+equations in Julia. By providing a diverse set of tools with a common interface,
+we provide a modular, easily-extendable, and highly
+performant ecosystem for solving various forms of differential equations.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>To get started, check out the documentation for <a href="https://juliadiffeq.github.io/DiffEqDocs.jl/latest/index.html">DifferentialEquations.jl</a>
+which pulls all of the functionality into one convienent package. If you need help,
+feel free to ask questions <a href="https://gitter.im/JuliaDiffEq/Lobby">in the chatroom</a>
+or <a href="https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues">file an issue at the Github repository</a>.
+We will be happy to help you get accustomed to our ecosystem.</p>
+
+<h2 id="what-we-offer">What We Offer</h2>
+
+<ul>
+  <li>High performance tools. Our tools include both wrappers to popular C/Fortran
+solvers and native Julia implementations. Our Julia implementations in many
+cases <a href="https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl">benchmark as faster than the class Fortran methods!</a></li>
+  <li>The largest set of algorithms. <a href="https://juliadiffeq.github.io/DiffEqDocs.jl/latest/solvers/ode_solve.html">From the ODE methods alone</a>,
+choose between methods such as the 14th Order Feagin methods, the recent Verner
+Efficient methods with high order interpolations, or the classic <code>dopri</code> methods.
+The included set dwarfs what is presented by other ecosystems.</li>
+  <li>An enhanced scope for number types. Packages such as OrdinaryDiffEq.jl allow for
+solving differential equations with arbitrary precision numbers, unit-checking arithmetic,
+n-dimensional tensors, complex numbers, and more.</li>
+  <li>Automatic Symbolic Enhancements. <a href="https://github.com/JuliaDiffEq/ParameterizedFunctions.jl">ParameterizedFunctions.jl</a>
+provides an easy way to specify differential equations and will automatically
+symbolically calculate items such as Jacobians and inverted Jacobians which
+will further increase the speed of the methods.</li>
+  <li>Newest research in stochastic differential equations. The StochasticDiffEq.jl
+solvers include very recent research tools including higher-order methods
+and highly efficient adaptive timestepping.</li>
+  <li>Tools for algorithm development and research. These are to enhance help the JuliaDiffEq
+not only be the easiest to use, but also the easiest ecosystem for developers to target.
+Using the convergence analysis and benchmarking tools, algorithms can be tested
+against the full JuliaDiffEq suite for easy comparison.</li>
+</ul>
+
+	</div>
+</div>
+      </section>
+      <footer class="grid site-footer">
+        <p>&copy;&nbsp;JuliaDiffEq</p>
+        <p><small>Powered by <a href="http://jekyllrb.com" target="_blank"><em>Jekyll</em></a> using <a href="http://bitwiser.in/bitwiser/" target="_blank"><em>Bitwiser</em></a> theme.</small></p>
+      </footer>
+      
+      <script src="/js/script.js"></script>
+    </body>
+</html>
