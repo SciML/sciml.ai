@@ -36,9 +36,9 @@ We will be happy to help you get accustomed to our ecosystem.
   for all types of equations, and includes conveniences like an array interface
   (sol[i] for the ith timepoint), an interpolation interface (sol(t) for the
   solution interpolated at time t), and a plotting interface (plot(sol)).
-- **An enhanced scope for number types**. Packages such as OrdinaryDiffEq.jl allow for
-  solving differential equations with arbitrary precision numbers, unit-checking arithmetic,
-  n-dimensional tensors, complex numbers, and more.
+- **Compatibility with a wide array of Julia-defined number types**. Packages such as
+  OrdinaryDiffEq.jl allow for solving differential equations with arbitrary precision
+  numbers, unit-checking arithmetic, n-dimensional tensors, complex numbers, and more.
 - **Automatic symbolic enhancements**. [ParameterizedFunctions.jl](https://github.com/JuliaDiffEq/ParameterizedFunctions.jl)
   provides an easy way to specify differential equations and will automatically
   symbolically calculate items such as Jacobians and inverted Jacobians which
@@ -46,6 +46,8 @@ We will be happy to help you get accustomed to our ecosystem.
 - **Newest research in stochastic differential equations**. The StochasticDiffEq.jl
   solvers include very recent research tools including higher-order methods
   and highly efficient adaptive timestepping.
+- **Add-ons for high level functionality**. Easily perform parameter estimation,
+  sensitivity analysis, bifurcation analysis, and much more.
 - **Tools for algorithm development and research**. These are to enhance help the JuliaDiffEq
   not only be the easiest to use, but also the easiest ecosystem for developers to target.
   Using the convergence analysis and benchmarking tools, algorithms can be tested
