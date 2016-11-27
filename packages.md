@@ -62,7 +62,7 @@ differential equations.
   inspired by MATLAB.
 - [StochasticDiffEq.jl](https://github.com/JuliaDiffEq/StochasticDiffEq.jl). This
   is a suite of stochastic differential equation (SDE) solvers based off of recent
-  research to offer highly efficient and higher order methods.
+  research to offer highly efficient adaptive timestepping and high strong order methods.
 - [DASSL.jl](https://github.com/JuliaDiffEq/DASSL.jl) This is a Julia
   implementation of the famous DASSL DAE solver.
 - [FiniteElementDiffEq.jl](https://github.com/JuliaDiffEq/FiniteElementDiffEq.jl).
