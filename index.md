@@ -17,7 +17,7 @@ performant ecosystem for solving various forms of differential equations.
 ## Getting Started
 
 To get started, check out the documentation for [DifferentialEquations.jl](https://juliadiffeq.github.io/DiffEqDocs.jl/latest/index.html)
-which pulls all of the functionality into one convienent package. If you need help,
+which pulls all of the functionality into one convenient package. If you need help,
 feel free to ask questions [in the chatroom](https://gitter.im/JuliaDiffEq/Lobby)
 or [file an issue at the Github repository](https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues).
 We will be happy to help you get accustomed to our ecosystem.
