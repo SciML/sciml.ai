@@ -81,6 +81,11 @@ cases <a href="https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl">benchmark as 
 choose between methods such as the 14th Order Feagin methods, the recent Verner
 Efficient methods with high order interpolations, or the classic <code>dopri</code> methods.
 The included set dwarfs what is presented by other ecosystems.</li>
+  <li>A clean user interface. For the different types of equations, users define a <code>Problem</code>
+type, and call <code>solve</code>. The <code>Solution</code> type which <code>solve</code> creates then acts similarly
+for all types of equations, and includes conveniences like an array interface
+(<code>sol[i]</code> for the <code>i</code>th timepoint), an interpolation interface (<code>sol(t)</code> for the
+solution interpolated at time <code>t</code>), and a plotting interface (<code>plot(sol)</code>).</li>
   <li>An enhanced scope for number types. Packages such as OrdinaryDiffEq.jl allow for
 solving differential equations with arbitrary precision numbers, unit-checking arithmetic,
 n-dimensional tensors, complex numbers, and more.</li>
