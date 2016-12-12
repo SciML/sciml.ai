@@ -65,17 +65,22 @@ differential equations.
   research to offer highly efficient adaptive timestepping and high strong order methods.
 - [DASSL.jl](https://github.com/JuliaDiffEq/DASSL.jl) This is a Julia
   implementation of the famous DASSL DAE solver.
+- [DASKR.jl](https://github.com/JuliaDiffEq/DASKR.jl) This is a wrapper to the
+  well-known DASRK differential algebraic equatoin (DAE) solver.
 - [FiniteElementDiffEq.jl](https://github.com/JuliaDiffEq/FiniteElementDiffEq.jl).
   This package has tools for describing linear finite element meshes and for solving
   Poisson and Heat equation problems.
 - [StokesDiffEq.jl](https://github.com/JuliaDiffEq/StokesDiffEq.jl). This package
   has tools for solving the Stationary Stokes Equation.
+- [ODEInterfaceDiffEq.jl](https://github.com/JuliaDiffEq/ODEInterfaceDiffEq). This
+  package extends ODEInterface.jl to have the common JuliaDiffEq interface. This allows
+  one to use classic FORTRAN algorithms like `dopri5` and `radau`.
 
-Optionally, the following package is linked through OrdinaryDiffEq.jl:
+Optionally, the following non-JuliaDiffEq packages can be used through the JuliaDiffEq
+common interface:
 
-- [ODEInterface.jl](https://github.com/luchr/ODEInterface.jl). This wrapper
-  to the famous Hairer Fortan codes includes popular solvers like dopri5,
-  dop853, etc.
+- [LSODA.jl](https://github.com/rveltz/LSODA.jl). This package wraps the popular
+  LSODA algorithm with automatic switching between nonstiff and stiff solvers.
 
 ### Add-On Functionality
 
