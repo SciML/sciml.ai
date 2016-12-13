@@ -66,7 +66,7 @@ differential equations.
 - [DASSL.jl](https://github.com/JuliaDiffEq/DASSL.jl) This is a Julia
   implementation of the famous DASSL DAE solver.
 - [DASKR.jl](https://github.com/JuliaDiffEq/DASKR.jl) This is a wrapper to the
-  well-known DASRK differential algebraic equatoin (DAE) solver.
+  well-known DASKR differential algebraic equatoin (DAE) solver.
 - [FiniteElementDiffEq.jl](https://github.com/JuliaDiffEq/FiniteElementDiffEq.jl).
   This package has tools for describing linear finite element meshes and for solving
   Poisson and Heat equation problems.
