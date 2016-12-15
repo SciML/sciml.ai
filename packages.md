@@ -55,7 +55,7 @@ differential equations.
 
 - [OrdinaryDiffEq.jl](https://github.com/JuliaDiffEq/OrdinaryDiffEq.jl).
   These Julia implementations offer the largest amount of Julia-specific options,
-  while the benchmarks show that these are some of the fastest ODE solver implementaions.
+  while the benchmarks show that these are some of the fastest ODE solver implementations.
 - [Sundials.jl](https://github.com/JuliaDiffEq/Sundials.jl). This wrapper to the
   Sundials package of ODE and DAE solvers allows users to use the famous multistep methods.
 - [ODE.jl](https://github.com/JuliaDiffEq/ODE.jl). This is a suite of ODE solvers
