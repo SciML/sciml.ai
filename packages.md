@@ -72,12 +72,16 @@ differential equations.
   Poisson and Heat equation problems.
 - [StokesDiffEq.jl](https://github.com/JuliaDiffEq/StokesDiffEq.jl). This package
   has tools for solving the Stationary Stokes Equation.
+- [MATLABDiffEq.jl](https://github.com/JuliaDiffEq/MATLABDiffEq.jl). This package has
+  bindings for using MATLAB's ODE solvers through the common interface via MATLAB.jl.
+  It's restricted to solving ParameterizedFunctions and is mostly for benchmarking.
 - [ODEInterfaceDiffEq.jl](https://github.com/JuliaDiffEq/ODEInterfaceDiffEq). This
-  package extends ODEInterface.jl to have the common JuliaDiffEq interface. This allows
-  one to use classic FORTRAN algorithms like `dopri5` and `radau`.
+  package extends ODEInterface.jl to have the common JuliaDiffEq interface.
+  This allows one to use classic FORTRAN algorithms like `dopri5` and
+  `radau`.
 
-Optionally, the following non-JuliaDiffEq packages can be used through the JuliaDiffEq
-common interface:
+Optionally, the following non-JuliaDiffEq packages can be used through the
+JuliaDiffEq common interface:
 
 - [LSODA.jl](https://github.com/rveltz/LSODA.jl). This package wraps the popular
   LSODA algorithm with automatic switching between nonstiff and stiff solvers.
