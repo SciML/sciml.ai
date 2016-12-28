@@ -130,6 +130,10 @@ These packages provide add-on functionality to the differential equation solvers
 - [DiffEqBase.jl](https://github.com/JuliaDiffEq/DiffEqBase.jl). This package provides
   the core structure of JuliaDiffEq, allowing the packages to offer a standardized
   interface while reducing the dependencies of the components.
+- [DiffEqPDEBase.jl](https://github.com/JuliaDiffEq/DiffEqBase.jl). This package provides
+  the core structure of the PDE solvers for JuliaDiffEq. It contains the type
+  definitions associated with PDEs, the tools for finite element meshes, and
+  other utilities which are used to build solvers.
 - [DiffEqDevTools.jl](https://github.com/JuliaDiffEq/DiffEqDevTools.jl). This package
   offers various methods for performing convergence analysis, benchmarking, and
   testing of the component solvers. Also included are tableau analysis tools like
