@@ -3,7 +3,7 @@ name: JuliaDiffEq
 ##Markdown processor
 markdown: kramdown
 ##syntax highlighter. change it to pygments
-#highlighter: pygments
+highlighter: pygments
 
 gems: [jekyll-paginate]
 ##define base_url for valid usage in sitemap.xml and robots.txt
