@@ -37,9 +37,9 @@ across different domains, easing the user experience while not comprimising perf
 
 ### Documentation Packages
 
-- [DiffEqDocs.jl](http://www.juliadiffeq.org/latest/). The documentation
+- [DiffEqDocs.jl](docs://www.juliadiffeq.org/latest/). The documentation
   for the common interface as provided by DifferentialEquations.jl.
-- [DiffEqDevDocs.jl](http://www.juliadiffeq.org/latest/). The
+- [DiffEqDevDocs.jl](http://devdocs.juliadiffeq.org/latest/). The
   developer documentation, explaining how to create new components to the diffeq ecoystem.
 - [DiffEqTutorials.jl](https://github.com/JuliaDiffEq/DiffEqTutorials.jl). Jupyter
   notebook tutorials explaining how to use various features in the ecosystem.
