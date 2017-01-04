@@ -7,8 +7,8 @@ markdown: kramdown
 
 gems: [jekyll-paginate]
 ##define base_url for valid usage in sitemap.xml and robots.txt
-base_url: http://juliadiffeq.github.com
-url: http://juliadiffeq.github.com
+base_url: http://www.juliadiffeq.org
+url: http://www.juliadiffeq.org
 sass:
   sass_dir: _sass
   style: :compressed
