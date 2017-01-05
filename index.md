@@ -39,6 +39,10 @@ We will be happy to help you get accustomed to our ecosystem.
 - **Compatibility with a wide array of Julia-defined number types**. Packages such as
   OrdinaryDiffEq.jl allow for solving differential equations with arbitrary precision
   numbers, unit-checking arithmetic, n-dimensional tensors, complex numbers, and more.
+- **Interactivity and flexibility**. The "integrator interface" along with the callbacks
+  and event handling frameworks are highly flexible, allowing one to solve complicated
+  equations like hybrid dynamical systems involving both discrete and continuous variables,
+  and stochastic jump equations, by extending the solvers as necessary.
 - **Automatic symbolic enhancements**. [ParameterizedFunctions.jl](https://github.com/JuliaDiffEq/ParameterizedFunctions.jl)
   provides an easy way to specify differential equations and will automatically
   symbolically calculate items such as Jacobians and inverted Jacobians which
