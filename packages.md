@@ -113,6 +113,9 @@ These packages provide add-on functionality to the differential equation solvers
   This component provides methods for translating optimal control problems to
   relevant differential equations to be solved by the component solvers. This
   is a work in progress.
+- [DiffEqCallbacks.jl](https://github.com/JuliaDiffEq/DiffEqCallbacks.jl). This
+  is a library of callback functions which extend the diffeq component solvers
+  by adding features like automatic adaptation of tolerances.
 
 ### Models Packages
 
