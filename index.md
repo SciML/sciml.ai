@@ -47,6 +47,9 @@ We will be happy to help you get accustomed to our ecosystem.
   provides an easy way to specify differential equations and will automatically
   symbolically calculate items such as Jacobians and inverted Jacobians which
   will further increase the speed of the methods.
+- **Integration with the Julia Package Ecosystem**. JuliaDiffEq is highly tied
+  to the Julia package ecosystem, using it to provide advanced plotting, automatic
+  differentiation, iterative solvers, and much more.
 - **Newest research in stochastic differential equations**. The StochasticDiffEq.jl
   solvers include very recent research tools including higher-order methods
   and highly efficient adaptive timestepping.
