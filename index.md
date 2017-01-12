@@ -34,8 +34,8 @@ We will be happy to help you get accustomed to our ecosystem.
 - **A clean user interface**. For the different types of equations, users define a Problem
   type, and call solve. The Solution type which solve creates then acts similarly
   for all types of equations, and includes conveniences like an array interface
-  (sol[i] for the ith timepoint), an interpolation interface (sol(t) for the
-  solution interpolated at time t), and a plotting interface (plot(sol)).
+  (`sol[i]` for the ith timepoint), an interpolation interface (`sol(t)` for the
+  solution interpolated at time t), and a plotting interface (`plot(sol)`).
 - **Compatibility with a wide array of Julia-defined number types**. Packages such as
   OrdinaryDiffEq.jl allow for solving differential equations with arbitrary precision
   numbers, unit-checking arithmetic, n-dimensional tensors, complex numbers, and more.
@@ -50,9 +50,12 @@ We will be happy to help you get accustomed to our ecosystem.
 - **Integration with the Julia Package Ecosystem**. JuliaDiffEq is highly tied
   to the Julia package ecosystem, using it to provide advanced plotting, automatic
   differentiation, iterative solvers, and much more.
-- **Newest research in stochastic differential equations**. The StochasticDiffEq.jl
-  solvers include very recent research tools including higher-order methods
-  and highly efficient adaptive timestepping.
+- **Newest research in differential equations**. The various component solvers
+  contain new algorithms to accelerate the solution to your problems. OrdinaryDiffEq.jl
+  allows for specifying `CompositeAlgorithm`s with chosen switching behaviors.
+  StochasticDiffEq.jl's solvers include very recent research tools including
+  higher-order methods and highly efficient adaptive timestepping. DelayDiffEq.jl
+  includes new methods for stiff equations and high accuracy.
 - **Add-ons for high level functionality**. Easily perform parameter estimation,
   sensitivity analysis, bifurcation analysis, and much more.
 - **Tools for algorithm development and research**. These tools help JuliaDiffEq

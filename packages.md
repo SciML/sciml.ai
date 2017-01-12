@@ -26,21 +26,21 @@ to add to the ecosystem.
 is a metapackage which brings together the various parts
 of the ecosystem into one cohesive and ready to use powerhouse of differential
 equation solving. Using DifferentialEquations.jl, one can perform high level
-analysis like parameter estimation and sensitivty analysis, while retaining the
+analysis like parameter estimation and sensitivity analysis, while retaining the
 ability to swap out different ODE solvers between different packages.
 Offering high-performance native Julia implementations and the well-known
 C/Fortran algorithms like Sundials or the Hairer algorithms (through ODEInterface.jl),
 the mixture of flexibility and performance is unparalleled. This is combined with
 [benchmark-based](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl) algorithms
 for choosing default methods and common user interface for handling the solutions
-across different domains, easing the user experience while not comprimising performance.
+across different domains, easing the user experience while not compromising performance.
 
 ### Documentation Packages
 
 - [DiffEqDocs.jl](http://docs.juliadiffeq.org/latest/). The documentation
   for the common interface as provided by DifferentialEquations.jl.
 - [DiffEqDevDocs.jl](http://devdocs.juliadiffeq.org/latest/). The
-  developer documentation, explaining how to create new components to the diffeq ecoystem.
+  developer documentation, explaining how to create new components to the JuliaDiffEq ecoystem.
 - [DiffEqTutorials.jl](https://github.com/JuliaDiffEq/DiffEqTutorials.jl). Jupyter
   notebook tutorials explaining how to use various features in the ecosystem.
 - [DiffEqBenchmarks.jl](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl). Benchmarks
@@ -62,11 +62,14 @@ differential equations.
   inspired by MATLAB.
 - [StochasticDiffEq.jl](https://github.com/JuliaDiffEq/StochasticDiffEq.jl). This
   is a suite of stochastic differential equation (SDE) solvers based off of recent
-  research to offer highly efficient adaptive timestepping and high strong order methods.
+  research to offer highly efficient adaptive time stepping and high strong order methods.
+- [DelayDiffEq.jl](https://github.com/JuliaDiffEq/DelayDiffEq.jl). This suite
+  builds off of OrdinaryDiffEq.jl to deliver new high-performance algorithms
+  for solving delay differential equations.
 - [DASSL.jl](https://github.com/JuliaDiffEq/DASSL.jl) This is a Julia
   implementation of the famous DASSL DAE solver.
 - [DASKR.jl](https://github.com/JuliaDiffEq/DASKR.jl) This is a wrapper to the
-  well-known DASKR differential algebraic equatoin (DAE) solver.
+  well-known DASKR differential algebraic equation (DAE) solver.
 - [FiniteElementDiffEq.jl](https://github.com/JuliaDiffEq/FiniteElementDiffEq.jl).
   This package has tools for describing linear finite element meshes and for solving
   Poisson and Heat equation problems.
@@ -76,9 +79,9 @@ differential equations.
   bindings for using MATLAB's ODE solvers through the common interface via MATLAB.jl.
   It's restricted to solving ParameterizedFunctions and is mostly for benchmarking.
 - [ODEInterfaceDiffEq.jl](https://github.com/JuliaDiffEq/ODEInterfaceDiffEq). This
-  package extends ODEInterface.jl to have the common JuliaDiffEq interface.
-  This allows one to use classic FORTRAN algorithms like `dopri5` and
-  `radau`.
+  package extends [ODEInterface.jl](https://github.com/luchr/ODEInterface.jl)
+  to have the common JuliaDiffEq interface. This allows one to use classic
+  FORTRAN algorithms like `dopri5` and `radau`.
 
 Optionally, the following non-JuliaDiffEq packages can be used through the
 JuliaDiffEq common interface:
@@ -97,9 +100,12 @@ These packages provide add-on functionality to the differential equation solvers
   defining functions with explicit parameters, which gives a way for parameter
   analyses like parameter estimation to be possible.
 - [DiffEqParamEstim.jl](https://github.com/JuliaDiffEq/DiffEqParamEstim.jl).
-  This package links the JuliaDiffEq common interface to the various optimzation
+  This package links the JuliaDiffEq common interface to the various optimization
   and machine learning packages in order to provide methods for performing
   parameter estimation.
+- [DiffEqMonteCarlo.jl](https://github.com/JuliaDiffEq/DiffEqMonteCarlo.jl).
+  This package provides methods for easily performing parallel Monte Carlo simulations
+  using the DiffEq solvers on clusters and analyze the results.
 - [DiffEqSensitivity.jl](https://github.com/JuliaDiffEq/DiffEqSensitivity.jl).
   This package adds sensitivity analysis to the JuliaDiffEq common interface.
 - [DiffEqBifurcate.jl](https://github.com/JuliaDiffEq/DiffEqBifurcate.jl). This
@@ -114,7 +120,7 @@ These packages provide add-on functionality to the differential equation solvers
   relevant differential equations to be solved by the component solvers. This
   is a work in progress.
 - [DiffEqCallbacks.jl](https://github.com/JuliaDiffEq/DiffEqCallbacks.jl). This
-  is a library of callback functions which extend the diffeq component solvers
+  is a library of callback functions which extend the JuliaDiffEq component solvers
   by adding features like automatic adaptation of tolerances.
 
 ### Models Packages
@@ -124,9 +130,16 @@ These packages provide add-on functionality to the differential equation solvers
   found in mathematical finance.
 - [MultiScaleModels.jl](https://github.com/JuliaDiffEq/MultiScaleModels.jl). This
   package provides a performant way to define differential equations with a
-  changing heirarchical structure. For example, one can define a differential equation
+  changing hierarchical structure. For example, one can define a differential equation
   on the proteins of various cells (of different types), where the proteins change
   continuously (and stochastically) and the cell numbers change discretely.
+
+## Web App
+
+- [DiffEqOnline](https://github.com/JuliaDiffEq/DiffEqOnline). This repository
+  stores the frontend for the DiffEqOnline webapp.
+- [DiffEqOnlineServer](https://github.com/JuliaDiffEq/DiffEqOnlineServer). This
+  repository stores the backend for the DiffEqOnline webapp.
 
 ### Developer Packages
 
@@ -137,6 +150,11 @@ These packages provide add-on functionality to the differential equation solvers
   the core structure of the PDE solvers for JuliaDiffEq. It contains the type
   definitions associated with PDEs, the tools for finite element meshes, and
   other utilities which are used to build solvers.
+- [DiffEqDiffTools.jl](https://github.com/JuliaDiffEq/DiffEqDiffTools.jl). This
+  package provides differentiation tools for the JuliaDiffEq solvers, allowing
+  high-performance algorithms to be written at a high level and automatically
+  make use of user-specified "performance overloads", symbolic differentiation,
+  and automatic differentiation: all with a fallback to numerical differentiation.
 - [DiffEqDevTools.jl](https://github.com/JuliaDiffEq/DiffEqDevTools.jl). This package
   offers various methods for performing convergence analysis, benchmarking, and
   testing of the component solvers. Also included are tableau analysis tools like
