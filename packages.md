@@ -45,7 +45,7 @@ across different domains, easing the user experience while not compromising perf
   notebook tutorials explaining how to use various features in the ecosystem.
 - [DiffEqBenchmarks.jl](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl). Benchmarks
   showing the performance differences between the implementations.
-- [juliadiffeq.github.com](https://github.com/JuliaDiffEq/juliadiffeq.github.com).
+- [juliadiffeq.github.io](https://github.com/JuliaDiffEq/juliadiffeq.github.com).
   The JuliaDiffEq website.
 
 ### Component Solvers
