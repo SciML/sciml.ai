@@ -15,10 +15,11 @@ like to support. If you use JuliaDiffEq software as part of your research, teach
 we would be grateful if you could cite our work. Since JuliaDiffEq is a collection of individual
 modules, in order to give proper credit please cite **each related component**.
 
-To give proper academic credit, all software should be cited. [See this link for more information on citing software.](http://openresearchsoftware.metajnl.com/about/#q11). Listed below are
-relevant publications which should be cited upon usage. For software which do
-not have publications, recommended citations are also included. If you have
-any questions about citations, please feel free to
+To give proper academic credit, all software should be cited.
+[See this link for more information on citing software](http://openresearchsoftware.metajnl.com/about/#q11).
+Listed below are relevant publications which should be cited upon usage.
+For software which do not have publications, recommended citations are also
+included. If you have any questions about citations, please feel free to
 [file an issue at the Github repository](https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues)
 or ask in the [Gitter channel](https://gitter.im/JuliaDiffEq/Lobby). If any of
 this information needs to be updated, please open an issue or pull request
@@ -89,7 +90,7 @@ this information needs to be updated, please open an issue or pull request
 
 #### SymEngine.jl (if the `ode_def` macro is used)
 
-- SymEngine. Date of access. Current version, https://github.com/symengine/symengine.
+- SymEngine. Date of access. Current version. https://github.com/symengine/symengine.
 
 ## Algorithm and Addon Citations
 
