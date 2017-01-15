@@ -51,6 +51,11 @@ this information needs to be updated, please open an issue or pull request
   Initial Condition Calculation for Differential-Algebraic
   Systems, SIAM J. Sci. Comp. 19 (1998), pp. 1495-1512.
 
+#### DASSL.jl
+
+- DASSL.jl. Date of access. Current version. https://github.com/JuliaDiffEq/DASSL.jl.
+
+
 #### DelayDiffEq.jl
 
 - DelayDiffEq.jl. Date of access. Current version. https://github.com/JuliaDiffEq/DelayDiffEq.jl.
