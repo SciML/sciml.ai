@@ -25,13 +25,13 @@ this information needs to be updated, please open an issue or pull request
 
 ## JuliaDiffEq Publications
 
-### DifferentialEquations.jl
+#### DifferentialEquations.jl
 
 - Rackauckas C., Nie Q., (2017) DifferentialEquations.jl - A Performant and Feature-Rich
   Ecosystem for Solving Differential Equations in Julia. Journal of Open Research Software.
   Submitted.
 
-### StochasticDiffEq.jl
+#### StochasticDiffEq.jl
 
 - Rackauckas C. Nie Q., (2016) Adaptive Methods for Stochastic Differential Equations
   via Natural Embeddings and Rejection Sampling with Memory. Discrete and Continuous
@@ -39,7 +39,7 @@ this information needs to be updated, please open an issue or pull request
 
 ## Additional Recommended Software Citations
 
-### DASKR.jl
+#### DASKR.jl
 
 - P. N. Brown, A. C. Hindmarsh, and L. R. Petzold, Using Krylov
   Methods in the Solution of Large-Scale Differential-Algebraic
@@ -49,11 +49,11 @@ this information needs to be updated, please open an issue or pull request
   Initial Condition Calculation for Differential-Algebraic
   Systems, SIAM J. Sci. Comp. 19 (1998), pp. 1495-1512.
 
-### DelayDiffEq.jl
+#### DelayDiffEq.jl
 
 - DelayDiffEq.jl. Date of access. Current version. https://github.com/JuliaDiffEq/DelayDiffEq.jl.
 
-### LSODA.jl
+#### LSODA.jl
 
 - Alan Hindmarsh, ODEPACK, a Systematized Collection of ODE Solvers,
   in Scientific Computing, edited by Robert Stepleman, Elsevier, 1983,
@@ -63,30 +63,30 @@ this information needs to be updated, please open an issue or pull request
   Solver for Ordinary Differential Equations, Technical report UCRL-ID-113855,
   Lawrence Livermore National Laboratory, December 1993.
 
-### ODE.jl
+#### ODE.jl
 
 - ODE.jl. Date of access. Current version. https://github.com/JuliaDiffEq/ODE.jl.
 
-### OrdinaryDiffEq.jl
+#### OrdinaryDiffEq.jl
 
 - OrdinaryDiffEq.jl. Date of access. Current version. https://github.com/JuliaDiffEq/OrdinaryDiffEq.jl.
 
-### ParameterizedFunctions.jl
+#### ParameterizedFunctions.jl
 
 - ParameterizedFunctions.jl. Date of access. Current version. https://github.com/JuliaDiffEq/ParameterizedFunctions.jl.
 
-### StochasticDiffEq.jl
+#### StochasticDiffEq.jl
 
 - StochasticDiffEq.jl. Date of access. Current version. https://github.com/JuliaDiffEq/StochasticDiffEq.jl.
 
-### Sundials.jl
+#### Sundials.jl
 
 - A. C. Hindmarsh, P. N. Brown, K. E. Grant, S. L. Lee, R. Serban, D. E. Shumaker,
   and C. S. Woodward, “SUNDIALS: Suite of Nonlinear and Differential/Algebraic Equation Solvers,”
   ACM Transactions on Mathematical Software, 31(3), pp. 363-396, 2005. Also available as
   LLNL technical report UCRL-JP-200037.
 
-#### SymEngine.jl (if the `@ode_def` macro is used)
+#### SymEngine.jl (if the `ode_def` macro is used)
 
 - SymEngine. Date of access. Current version, https://github.com/symengine/symengine.
 
