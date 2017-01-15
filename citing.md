@@ -12,7 +12,7 @@ sitemap:
 
 If you use JuliaDiffEq software as part of your research, we would be greatful
 if you could cite our work. Since JuliaDiffEq is a collection of individual
-modules, in order to give proper credit please cite **each relative component**.
+modules, in order to give proper credit please cite **each related component**.
 
 To give proper academic credit, all software should be cited. [See this link for more information on citing software.](http://openresearchsoftware.metajnl.com/about/#q11). Listed below are
 relevant publications which should be cited upon usage. For software which do
