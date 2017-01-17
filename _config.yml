@@ -23,8 +23,8 @@ keywords: differential equations, julia, ODE, SDE, PDE
 #disqus: forumname
 
 ##set this to enable google analytics
-#ga_id: analyticsID
-#ga_domain: analyticsDomain
+ga_id: UA-90462067-2
+ga_domain: JuliaDiffEq
 
 ##Some commonly used links
 links:
