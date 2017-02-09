@@ -18,11 +18,12 @@ This tag includes many new features, including:
 Jump equations like Gillespie models and jump diffusions can now be solved via
 DifferentialEquations.jl solvers which are compatible with the callback interface.
 A tutorial [for solving discrete stochastic simulations](http://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example.html)
-has been added. Currently, the jump rates must be constant "between any jump"
-(i.e. they can be changed by any other jump, but cannot be changed continuously
-by a differential equation). However, it's already a very powerful interface which
+has been added. It's already a very powerful interface which
 allows you to define equations which depend on a very general form of jump callbacks
-(i.e. mix differential equations and discrete equations). For more information on
+(i.e. mix differential equations and discrete equations). You can even have the
+jump rates dependent on the continuous solution values from the differential equations,
+which is shown in the new [jump diffusion tutorial](http://docs.juliadiffeq.org/latest/tutorials/jump_diffusion.html).
+For more information on
 defining jump equations, [see the manual page](http://docs.juliadiffeq.org/latest/types/jump_types.html)
 
 * Multi-scale Models
