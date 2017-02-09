@@ -103,6 +103,9 @@ These packages provide add-on functionality to the differential equation solvers
   This package links the JuliaDiffEq common interface to the various optimization
   and machine learning packages in order to provide methods for performing
   parameter estimation.
+- [DiffEqJump.jl](https://github.com/JuliaDiffEq/DiffEqJump.jl). This package
+  provides the functionality for extending discrete and differential equations
+  to jump equations which can be solved using the DiffEq methods with callbacks.
 - [DiffEqMonteCarlo.jl](https://github.com/JuliaDiffEq/DiffEqMonteCarlo.jl).
   This package provides methods for easily performing parallel Monte Carlo simulations
   using the DiffEq solvers on clusters and analyze the results.
@@ -125,14 +128,17 @@ These packages provide add-on functionality to the differential equation solvers
 
 ### Models Packages
 
-- [FinancialModels.jl](https://github.com/JuliaDiffEq/FinancialModels.jl). This
-  package provides an easy way to define the common stochastic differential equations
-  found in mathematical finance.
-- [MultiScaleModels.jl](https://github.com/JuliaDiffEq/MultiScaleModels.jl). This
+- [MultiScaleArrays.jl](https://github.com/JuliaDiffEq/MultiScaleArrays.jl). This
   package provides a performant way to define differential equations with a
   changing hierarchical structure. For example, one can define a differential equation
   on the proteins of various cells (of different types), where the proteins change
   continuously (and stochastically) and the cell numbers change discretely.
+- [DiffEqBiological.jl](https://github.com/JuliaDiffEq/DiffEqBiological.jl). This
+  package provides an easy way for creating models of chemical reaction networks
+  in order to simulate them via the DifferentialEquations.jl methods.
+- [DiffEqFinancial.jl](https://github.com/JuliaDiffEq/DiffEqFinancial.jl). This
+  package provides an easy way to define the common stochastic differential equations
+  found in mathematical finance.
 
 ## Web App
 

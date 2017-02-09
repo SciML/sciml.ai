@@ -97,7 +97,7 @@ this information needs to be updated, please open an issue or pull request
 
 - SymEngine. Date of access. Current version. https://github.com/symengine/symengine.
 
-## Algorithm and Addon Citations
+## Algorithm Citations
 
 Many of the algorithms which are included as part of this ecosystem of software
 packages originated as part of academic research. If you know which algorithms
@@ -182,9 +182,23 @@ Scientific Computing, 18 (1), pp. 1-22.
   via Natural Embeddings and Rejection Sampling with Memory. Discrete and Continuous
   Dynamical Systems - Series B. Accepted December 2016.
 
-### Addons
+## Addon Citations
 
-#### ProbInts (Uncertainty Quantification)
+### ProbInts (Uncertainty Quantification)
 
 - Conrad P., Girolami M., Särkkä S., Stuart A., Zygalakis. K, Probability
   Measures for Numerical Solutions of Differential Equations, arXiv:1506.04592
+
+### Constant Rate Jump Aggregators
+
+#### Direct
+
+- Gillespie, Daniel T. (1976). A General Method for Numerically Simulating the
+  Stochastic Time Evolution of Coupled Chemical Reactions. Journal of
+  Computational Physics. 22 (4): 403–434. doi:10.1016/0021-9991(76)90041-3.
+
+### Variable Rate Jumps
+
+- Salis H., Kaznessis Y.,  Accurate hybrid stochastic simulation of a system of
+  coupled chemical or biochemical reactions, Journal of Chemical Physics, 122 (5),
+  DOI:10.1063/1.1835951
