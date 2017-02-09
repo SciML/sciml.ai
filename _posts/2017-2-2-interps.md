@@ -13,12 +13,17 @@ When the release is available, a new version of the documentation will be tagged
 
 This tag includes many new features, including:
 
-* Solver Compatibility Chart
+* Jump Equations
 
-A really nice documentation addition. Use
-[this page](http://docs.juliadiffeq.org/latest/basics/compatibility_chart.html)
-to determine what features are available for a given solver. All of the associated
-packages are represented.
+Jump equations like Gillespie models and jump diffusions can now be solved via
+DifferentialEquations.jl solvers which are compatible with the callback interface.
+A tutorial [for solving discrete stochastic simulations](http://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example.html)
+has been added. Currently, the jump rates must be constant "between any jump"
+(i.e. they can be changed by any other jump, but cannot be changed continuously
+by a differential equation). However, it's already a very powerful interface which
+allows you to define equations which depend on a very general form of jump callbacks
+(i.e. mix differential equations and discrete equations). For more information on
+defining jump equations, [see the manual page](http://docs.juliadiffeq.org/latest/types/jump_types.html)
 
 * Multi-scale Models
 
@@ -38,6 +43,13 @@ stiff methods with adaptive timestepping and event handling, and all of the othe
 features of DifferentialEquations.jl that you know and love. This cuts out the solver
 development part of the complex modeling phase, allowing you to focus on the science
 and get the most optimized numerical methods for free!
+
+* Solver Compatibility Chart
+
+A really nice documentation addition. Use
+[this page](http://docs.juliadiffeq.org/latest/basics/compatibility_chart.html)
+to determine what features are available for a given solver. All of the associated
+packages are represented.
 
 * Improved Event/Callback Handling in OrdinaryDiffEq.jl and DelayDiffEq.jl
 
@@ -102,18 +114,6 @@ which affect the differential equation, and can be changed through callbacks.
 However, unlike using a parameter in a `ParameterizedFunction`, this data is
 saved throughout the run, letting you retrieve the values. For more information,
 [see the documentation page](http://docs.juliadiffeq.org/latest/features/data_arrays.html).
-
-* Jump Equations
-
-Jump equations like Gillespie models and jump diffusions can now be solved via
-DifferentialEquations.jl solvers which are compatible with the callback interface.
-A tutorial [for solving discrete stochastic simulations](http://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example.html)
-has been added. Currently, the jump rates must be constant "between any jump"
-(i.e. they can be changed by any other jump, but cannot be changed continuously
-by a differential equation). However, it's already a very powerful interface which
-allows you to define equations which depend on a very general form of jump callbacks
-(i.e. mix differential equations and discrete equations). For more information on
-defining jump equations, [see the manual page](http://docs.juliadiffeq.org/latest/types/jump_types.html)
 
 * Biological Models
 
