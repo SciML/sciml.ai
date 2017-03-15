@@ -58,7 +58,7 @@ We will be happy to help you get accustomed to our ecosystem.
   includes new methods for stiff equations and high accuracy.
 - **Add-ons for high level functionality**. Easily perform parameter estimation,
   sensitivity analysis, bifurcation analysis, and much more.
-- **Tools for algorithm development and research**. These tools help JuliaDiffEq
+- **Tools for algorithm development and research**. These tools make JuliaDiffEq
   not only be the easiest ecosystem to use, but also the easiest ecosystem for developers to target.
   Using the convergence analysis and benchmarking tools, algorithms can be tested
   against the full JuliaDiffEq suite for easy comparison.
