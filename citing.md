@@ -184,6 +184,11 @@ Scientific Computing, 18 (1), pp. 1-22.
 
 ## Addon Citations
 
+### Bifurcation Analysis
+
+- Clewley R (2012) Hybrid Models and Biological Model Reduction with PyDSTool. 
+  PLoS Comput Biol 8(8): e1002628. doi:10.1371/journal.pcbi.1002628
+
 ### ProbInts (Uncertainty Quantification)
 
 - Conrad P., Girolami M., Särkkä S., Stuart A., Zygalakis. K, Probability
@@ -202,3 +207,9 @@ Scientific Computing, 18 (1), pp. 1-22.
 - Salis H., Kaznessis Y.,  Accurate hybrid stochastic simulation of a system of
   coupled chemical or biochemical reactions, Journal of Chemical Physics, 122 (5),
   DOI:10.1063/1.1835951
+  
+ ### Split Coupling
+ 
+ - David F. Anderson, Masanori Koyama; An asymptotic relationship between coupling 
+   methods for stochastically modeled population processes. IMA J Numer Anal 2015; 
+   35 (4): 1757-1778. doi: 10.1093/imanum/dru044
