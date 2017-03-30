@@ -69,6 +69,8 @@ this information needs to be updated, please open an issue or pull request
 - K Radhakrishnan, Alan Hindmarsh, Description and Use of LSODE, the Livermore
   Solver for Ordinary Differential Equations, Technical report UCRL-ID-113855,
   Lawrence Livermore National Laboratory, December 1993.
+  
+- LSODA.jl. Date of access. Current version. https://github.com/rveltz/LSODA.jl.
 
 #### ODE.jl
 
