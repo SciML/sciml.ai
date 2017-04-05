@@ -165,7 +165,7 @@ Scientific Computing, 18 (1), pp. 1-22.
 - Feagin, T., “An Explicit Runge-Kutta Method of Order Fourteen,” Numerical
   Algorithms, 2009
   
-#### General Strong Stability Sreserving Runge-Kutta Methods
+#### General Strong Stability Preserving Runge-Kutta Methods
 
 - General: Gottlieb, Sigal, David I. Ketcheson, and Chi-Wang Shu. Strong stability preserving Runge-Kutta and multistep time discretizations. World Scientific, 2011.
 
