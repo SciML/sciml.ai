@@ -164,6 +164,18 @@ Scientific Computing, 18 (1), pp. 1-22.
 
 - Feagin, T., “An Explicit Runge-Kutta Method of Order Fourteen,” Numerical
   Algorithms, 2009
+  
+#### General Strong Stability Preserving Runge-Kutta Methods
+
+- General: Gottlieb, Sigal, David I. Ketcheson, and Chi-Wang Shu. Strong stability preserving Runge-Kutta and multistep time discretizations. World Scientific, 2011.
+
+#### SSPRK22, SSPRK33
+
+- Shu, Chi-Wang, and Stanley Osher. "Efficient implementation of essentially non-oscillatory shock-capturing schemes." Journal of Computational Physics 77.2 (1988): 439-471.
+
+#### SSPRK104
+
+- Ketcheson, David I. "Highly efficient strong stability-preserving Runge–Kutta methods with low-storage implementations." SIAM Journal on Scientific Computing 30.4 (2008): 2113-2136.
 
 ### Stochastic Differential Equations
 
