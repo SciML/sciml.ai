@@ -21,9 +21,9 @@ is the time to say something!**
 
 ## Proposed Saving API Changes
 
-https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/132
-https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/133
-https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/139
+[https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/132](https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/132)
+[https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/133](https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/133)
+[https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/139](https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/139)
 
 These changes detail changes in how one can specify timepoints to save. The summary
 is:
@@ -45,7 +45,7 @@ is:
 There is a lot of bikeshedding for the future of the `@ode_def` DSL. For information,
 please see:
 
-https://github.com/JuliaDiffEq/ParameterizedFunctions.jl/issues/17
+[https://github.com/JuliaDiffEq/ParameterizedFunctions.jl/issues/17](https://github.com/JuliaDiffEq/ParameterizedFunctions.jl/issues/17)
 
 Essentially, the breaking change will be `x_t` instead of `dx` for writing the
 derivative part (meaning derivative in time). This makes it easier to carry over
@@ -62,7 +62,7 @@ is faster, this convention breaks column-major ordering which is prevalent in Ju
 Thus with `sol[i,:]`, it would be more apparent that the faster indexing is the inner
 indexing. The full proposal is here:
 
-https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/152
+[https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/152](https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/152)
 
 While this is likely not going to be a huge internal change, it is a breaking
 change which can get opinioned. Whatever the indexing choice is, this setup will
@@ -104,7 +104,7 @@ me to my next point.
 The changes to the Monte Carlo interface is large. To see how to use the newest
 version of this interface, see the documentation page here:
 
-http://docs.juliadiffeq.org/latest/features/monte_carlo.html
+[http://docs.juliadiffeq.org/latest/features/monte_carlo.html](http://docs.juliadiffeq.org/latest/features/monte_carlo.html)
 
 The biggest part of this change is that now you can specify how the simulations
 are reduced, instead of saving the solution object each time. Thus you can specify
@@ -127,7 +127,7 @@ things like solve ODEs, those features are not of much use. However, with this
 wrapper comes PyCont, a library for continuation (bifurcation plots). You
 can see an example for making bifurcation plots here:
 
-http://docs.juliadiffeq.org/latest/analysis/bifurcation.html
+[http://docs.juliadiffeq.org/latest/analysis/bifurcation.html](http://docs.juliadiffeq.org/latest/analysis/bifurcation.html)
 
 This is in its very early stages, but now that it is working all that's left
 are API improvements! But note that it's currently disabled due to a Windows
@@ -138,7 +138,7 @@ will be patched in a way that makes PyDSTool.jl a standard tool in the ecosystem
 
 Retcodes are hard to make sexy, but they are useful.
 
-http://docs.juliadiffeq.org/latest/basics/solution.html#Return-Codes-(RetCodes)-1
+[http://docs.juliadiffeq.org/latest/basics/solution.html#Return-Codes-(RetCodes)-1](http://docs.juliadiffeq.org/latest/basics/solution.html#Return-Codes-(RetCodes)-1)
 
 Now the solvers have a set way to tell you if the solver was successful, or why
 it exited pre-maturely. This setup will grow overtime, but is already fully
@@ -165,15 +165,16 @@ Now you can choose a function to be called on the plotted points. This allows
 you to easily do things like plot the norm of the solution over time. For more
 information, please see the improved plotting docs:
 
-http://docs.juliadiffeq.org/latest/basics/plot.html#Choosing-Variables-1
+[http://docs.juliadiffeq.org/latest/basics/plot.html#Choosing-Variables-1](http://docs.juliadiffeq.org/latest/basics/plot.html#Choosing-Variables-1)
 
 ## SplitODEProblem Types
 
-The `SplitODEProblem` is the generic diffeq answer to IMEX problems. These
-allow you give define an ODE by a tuple of functions instead of a single function.
-Solvers can then use these components separately. This is sufficient for specifying
-any PDE method, and so we will be using this to implement PDE methods. Docs will
-be added when the solvers which make use of this are created.
+The `SplitODEProblem` is the generic diffeq answer to IMEX problems. It was implemented
+by a new contributor Om Prakash. These allow you give define an ODE by a tuple of
+functions instead of a single function. Solvers can then use these components
+separately. This is sufficient for specifying any PDE method, and so we will be
+using this to implement PDE methods. Docs will be added when the solvers which
+make use of this are created.
 
 ## SSPRK Method
 
@@ -182,7 +183,7 @@ higher-order methods which are capable of solving the semi-discretizations
 arising form hyperbolic partial differential equations which have some discontinuities.
 You can find these algorithm choices in the docs:
 
-http://docs.juliadiffeq.org/latest/solvers/ode_solve.html
+[http://docs.juliadiffeq.org/latest/solvers/ode_solve.html](http://docs.juliadiffeq.org/latest/solvers/ode_solve.html)
 
 ## SplitCoupling
 
@@ -192,3 +193,11 @@ moments estimators with less runs. He is developing a more general approach whic
 will extend the Monte Carlo setup and do things like Multi-Level Monte Carlo.
 
 Docs for this coming soon.
+
+# Coming Soon: Google Summer of Code
+
+Many Google Summer of Code (GSoC) applications went in for JuliaDiffEq. This
+means there is a lot of potential GSoC activity over the summer with new contributors
+(students) expanding the ecosystem. A post will detail what these project will
+be about when more information is known. This will likely guide a good portion
+of JuliaDiffEq summer activity.
