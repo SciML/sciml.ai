@@ -1,15 +1,45 @@
 ---
 layout: post
-title:  "DifferentialEquations.jl API Changes"
-date:   2017-4-7 1:30:00
+title:  "DifferentialEquations.jl 2.0"
+date:   2017-4-13 1:30:00
 categories:
 ---
+
+This marks the release of ecosystem version 2.0. All of the issues got looked
+over. All (yes all!) of the API suggestions have been addressed! Below are the API
+changes that have occurred. This marks a really good moment for the JuliaDiffEq
+ecosystem because it means all of the long-standing expected API changes are complete.
+This means that we can simply work on new features in the future (and of course
+field bug reports as they come). A blog post detailing our full 2.0 achievements
+plus our 3.0 goals will come out at our one year anniversary. But for now I want to
+address what the API changes are, and the new features of this latest update.
+
+The main changes in 2.0 is that this finishes a lot of the fundamental design of
+DiffEq. Many new problems were added, and the existing problems were modified
+to accommodate a much larger domain of problems. This leaves the next developments
+in the ecosystem to be fleshing out the algorithms for solving all of the problem
+types.
 
 # API Changes
 
 This post is to detail the API changes that are happening in the DifferentialEquations.jl
 ecosystem. Most of them should not be very disruptive, but are things that you
 should take notice of.
+
+## Solution indexing change
+
+The solution object now indexing has been changed to match Julian APIs better.
+The linear index `sol[i]` returning the value at the `i`th timepoint is the same.
+However, the "matrix indexing" has been flipped. Now, the `j`th component at
+timepoint `i` is given as `sol[j,i]` whereas before it was `sol[i,j]`. This means that
+`sol[j,i]==sol[i][j]`. The reason for this is that in our setup "columns" are timepoints,
+not across time. Given Julia's column-major format, this gave the wrong impression
+about contiguousness of the array.
+
+Now, the `DESolution` type is simply a subtype of the new `AbstractVectorOfArray`
+type in RecursiveArrayTools.jl. That means that, in addition to this change,
+many other features were added that make the solution type act more like an
+array.
 
 ## `save_timeseries` changed to `save_everystep`
 
@@ -87,6 +117,29 @@ The problem types now can hold callbacks. This is to associate some behavior lik
 events with the problem instead of the integrator. They do not act differently,
 and are just a `callback` keyword argument in the problem types.
 
+
+## ParameterizedFunctions
+
+Although there was discussions about changing the `@ode_def` macro syntax, I ultimately
+decided against it. Instead, I polished up the edges of ParameterizedFunctions
+and added to the documentation how you can do all of the things which users
+had issues about. Some of the functionality in there is new. There was a large
+change and an upgrade in the version of SymEngine that is used, so now more
+functions can be differentiated. Importantly, no `@eval`s are used anymore, and
+this means that in the future all of DifferentialEquations.jl can be statically
+compiled. But now this means that DifferentialEquations.jl can be precompiled.
+
+As for where this is going next, ParameterizedFunctions is going to maintenance and
+bugfix mode. It seems everything that can be done in that architecture is done.
+All of the new cool ideas will become an `@diffeq` DSL in DiffEqDSL.jl. You
+can read the following issues for the plan:
+
+[https://github.com/JuliaDiffEq/DiffEqDSL.jl/issues/1](https://github.com/JuliaDiffEq/DiffEqDSL.jl/issues/1)
+[https://github.com/JuliaDiffEq/ParameterizedFunctions.jl/issues/17](https://github.com/JuliaDiffEq/ParameterizedFunctions.jl/issues/17)
+
+It will be exciting, but will be separate from the current macro and thus you
+have no reason to expect breakage.
+
 # New Features
 
 ## EulerHeun and RKMil interpretation
@@ -128,18 +181,36 @@ but this area should be growing.
 
 ## NoiseProcess Improvements
 
-A `NoiseProces` is how you create colored noise in the SDE and RODE problems.
-In fact, it's general enough to create any noise process! The noise process just
-needs a function which can use the `integrator` to generate the noise. For example,
+A `NoiseProcess` is how you create colored noise in the SDE and RODE problems.
+In fact, it's general enough to create any noise process! For example,
 
 ```julia
-noise_func(integrator) = randn()
-noise_func(x::Tuple,integrator) = randn(x)
-noise_func(rand_vec,integrator) = randn!(rand_vec)
+WienerProcess(t0,W0,Z0=nothing)
+WienerProcess!(t0,W0,Z0=nothing)
 ```
 
-are the functions used in defining `WHITE_NOISE`, the default. But you can change
-this around however you please!
+are used to build a `WienerProcess` either in its inplace form or in its out-of-place
+form. The resulting type `W` is designed to use the RSwM adaptivity algorithms to
+allow for very fast generation of the processes. In addition, the process is a
+condition function `W(t)` which will automatically interpolate at the necessary
+points. This allowed for the creation of a wrapper
+
+```julia
+NoiseWrapper(W::NoiseProcess)
+```
+
+that lets you re-use the same noise process in a different stochastic simulation.
+In addition, you can also create colored noise easily by passing in a constant
+covariance matrix:
+
+```julia
+CorrelatedWienerProcess(Γ,t0,W0,Z0=nothing)
+CorrelatedWienerProcess!(Γ,t0,W0,Z0=nothing)
+```
+
+The noise processes now have their own package DiffEqNoiseProcess.jl and the
+interface is documented so that way the creation of new types of noise processes
+can be done as needed.
 
 ## RODEs
 
@@ -160,3 +231,105 @@ new book on methods for RODEs. This has the same compatibility throughout the
 ecosystem as SDEs, so it works for things like parameter estimation. We hope this
 exciting and one of a kind feature helps your research take new and interesting
 directions!
+
+## Steady State Calcuations
+
+In many cases you want an easy way to calculate the steady states of a differential
+equation, that is the state `u` such that
+
+```julia
+0 = f(u)
+```
+
+The new library DiffEqSteadyState.jl has solvers which make this simple. You can
+generate a new steady state problem from an `f` and an inital guess:
+
+```julia
+SteadyStateProblem(f,u0,mass_matrix=I)
+```
+
+or directly convert an `ODEProblem` into a `SteadyStateProblem`:
+
+```julia
+SteadyStateProblem(prob::ODEProblem)
+```
+
+This can then be solved using the new libraries solve function dispatch. Right now
+only `SSRootfind` is implemented, which will solve for the steady states using
+a rootfinding algorithm. However, we plan to implement accelerated methods specific
+for differential equations (and partial differential equations) that will speed
+up these calculations. In fact, a new algorithm for stochastic steady states
+may be coming as a new publication, with an implmentation here...
+
+## Complex Plotting
+
+This new update adds the recipe library DimensionalPlotRecipes.jl to the fray.
+This allows for complex numbers to be directly plotted, and many other controls
+are provided. We plan to extend this to work with Quaternions and allow for automatic
+dimensional reduction for high dimensional plots. Documentation for this can be
+found at the library's README and is now linked to in the DiffEq plotting section.
+
+## Monte Carlo Parallelism Types
+
+The Monte Carlo functionality now has support for different parallelism types,
+so you can tell it to parallelize using threading, pmap, `@parallel`, or no
+parallelism at all. Additionally, there is a `split_threads` option which will
+use threading separately on each process, allowing one to using threading on every
+node of a cluster for maximum performance.
+
+## "Refined Problem Types"
+
+This update introduces "refined problem types". These are problem types which give
+the solver additional information. For example, a `SplitODEProblem` is of the form:
+
+```julia
+du = f1(t,u) + f2(t,u) + ... + fn(t,u)
+```
+
+and the solvers can use the information from this split problem to have more
+optimized algorithms. Additionally, a partitioned form
+
+```julia
+du1 = f1(t,u1,u2,...,uN)
+du2 = f2(t,u1,u2,...,uN)
+...
+dun = fn(t,u1,u2,...,un)
+```
+
+which can be used for things like symplectic algorithms. The underlying machinery
+is the new type `ArrayPartition` in RecursiveArrayTools.jl and allows for heterogeneous
+types to be used with type-stable broadcasting. Notably, this means that second
+order problems:
+
+```julia
+u'' = f(t,u,u')
+```
+
+can be solved with the proper units without loss of efficiency (once broadcast
+is used internally). Thus there are problem types for these new problems, including
+a helper type for `SecondOrderODEProblem`.
+
+While there are not many algorithms implemented which use all of this yet, the machinery
+is all in place in OrdinaryDiffEq.jl, DelayDiffEq.jl, and StochasticDiffEq.jl, so
+implementing new algorithms which solve these types of problems is now easy. This
+will be the basis of some PDE algorithms as well.
+
+## Mass Matrices
+
+Mass matrices were added to the appropriate problem types. Most of the solvers
+don't support using them yet, but now all of the solvers have a way of recieving
+a user-defined mass matrix. Updates will come which will then make use of this functionality.
+
+## linsolve/nlsolve Choice
+
+Now one can explicitly choose the linear solver and nonlinear solver functions
+for each of the `*DiffEq` solvers. [This documentation page](http://docs.juliadiffeq.org/latest/features/linear_nonlinear.html)
+explains how to do this. This means you can tell the linear solving to occur on
+the GPU, or using PETSc, etc., and replace the nonlinear solver code with one of
+your own choosing.
+
+## Experimental: DiffEqIO
+
+IO functionality has been experimentally added through IterableTables.jl. This
+allows one to easily save solution types to DataFrames, CSVs, and more. This will
+be added to the documentation when it's out of the experimental phase. 
