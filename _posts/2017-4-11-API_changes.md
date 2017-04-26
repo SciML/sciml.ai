@@ -328,8 +328,22 @@ explains how to do this. This means you can tell the linear solving to occur on
 the GPU, or using PETSc, etc., and replace the nonlinear solver code with one of
 your own choosing.
 
+# Near Future Changes
+
+These are changes which didn't quite make the 2.0 release, but will be coming soon
+after.
+
+## Full Precompilation
+
+Before, DifferentialEquations.jl could not be precompiled because anything related
+to ParameterizedFunctions.jl could not precompiled. This was due to the dynamic
+use of SymEngine.jl. However, SymEngine will release an update which makes this no
+longer necessary, and thus all of this can now be precompiled. The result is that
+the entirety of DiffEq will be precompile friendly. Not only that, it will be
+statically compliable.
+
 ## Experimental: DiffEqIO
 
 IO functionality has been experimentally added through IterableTables.jl. This
 allows one to easily save solution types to DataFrames, CSVs, and more. This will
-be added to the documentation when it's out of the experimental phase. 
+be added to the documentation when it's out of the experimental phase.
