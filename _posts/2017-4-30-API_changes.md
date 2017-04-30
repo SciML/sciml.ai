@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DifferentialEquations.jl 2.0"
-date:   2017-4-13 1:30:00
+date:   2017-4-30 1:30:00
 categories:
 ---
 
@@ -200,7 +200,7 @@ NoiseWrapper(W::NoiseProcess)
 ```
 
 that lets you re-use the same noise process in a different stochastic simulation.
-In addition, you can also create colored noise easily by passing in a constant
+In addition, you can also create spatial colored noise easily by passing in a constant
 covariance matrix:
 
 ```julia
@@ -347,3 +347,7 @@ statically compliable.
 IO functionality has been experimentally added through IterableTables.jl. This
 allows one to easily save solution types to DataFrames, CSVs, and more. This will
 be added to the documentation when it's out of the experimental phase.
+
+## Extensive PDE Tools
+
+This will be detailed in the follow-up post on the state of the ecosystem.
