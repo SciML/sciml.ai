@@ -328,6 +328,18 @@ explains how to do this. This means you can tell the linear solving to occur on
 the GPU, or using PETSc, etc., and replace the nonlinear solver code with one of
 your own choosing.
 
+## Full v0.6 Compatibility
+
+DifferentialEquations.jl is now compatible with Julia's v0.6. Additionally, the
+deprecation warnings have all been cleaned up (except for the deprecation warnings
+from the dependencies NLsolve.jl and IterativeSolvers.jl... go bug them to merge
+my PRs and tag a new version if you want those depwarns gone :)). This means that
+you should feel free to start using DifferentialEquations on v0.6 without a hitch.
+
+But there is one caveat to mention. Plots.jl is not v0.6 compatible right now, and
+so you should stay on v0.5 until plotting is ready if that's a functionality that
+you need.
+
 # Near Future Changes
 
 These are changes which didn't quite make the 2.0 release, but will be coming soon
