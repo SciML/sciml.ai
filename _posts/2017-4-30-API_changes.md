@@ -6,13 +6,15 @@ categories:
 ---
 
 This marks the release of ecosystem version 2.0. All of the issues got looked
-over. All (yes all!) of the API suggestions have been addressed! Below are the API
-changes that have occurred. This marks a really good moment for the JuliaDiffEq
-ecosystem because it means all of the long-standing expected API changes are complete.
-This means that we can simply work on new features in the future (and of course
-field bug reports as they come). A blog post detailing our full 2.0 achievements
-plus our 3.0 goals will come out at our one year anniversary. But for now I want to
-address what the API changes are, and the new features of this latest update.
+over. All (yes all!) of the API suggestions that were recorded in issues in
+JuliaDiffEq packages have been addressed! Below are the API changes that have occurred.
+This marks a really good moment for the JuliaDiffEq ecosystem because it means all
+of the long-standing planned API changes are complete. Of course new things may come
+up, but there are no more planned changes to core functionality. This means that we can simply
+work on new features in the future (and of course field bug reports as they come).
+A blog post detailing our full 2.0 achievements plus our 3.0 goals will come out at
+our one year anniversary. But for now I want to address what the API changes are,
+and the new features of this latest update.
 
 The main changes in 2.0 is that this finishes a lot of the fundamental design of
 DiffEq. Many new problems were added, and the existing problems were modified
