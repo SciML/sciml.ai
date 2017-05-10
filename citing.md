@@ -222,7 +222,7 @@ Scientific Computing, 18 (1), pp. 1-22.
   coupled chemical or biochemical reactions, Journal of Chemical Physics, 122 (5),
   DOI:10.1063/1.1835951
   
- ### Split Coupling
+### Split Coupling
  
  - David F. Anderson, Masanori Koyama; An asymptotic relationship between coupling 
    methods for stochastically modeled population processes. IMA J Numer Anal 2015; 
