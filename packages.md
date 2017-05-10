@@ -10,7 +10,7 @@ sitemap:
 
 # The Packages
 
-The packages can be split are split categories. The core metapackage which uses
+The packages are split into different categories. The core metapackage which uses
 the functionality together is DifferentialEquations.jl. The following documentation
 shows how the various components can be used together in DifferentialEquations.jl.
 The component solvers are the packages which provide the functionality for actually
@@ -29,10 +29,10 @@ equation solving. Using DifferentialEquations.jl, one can perform high level
 analysis like parameter estimation and sensitivity analysis, while retaining the
 ability to swap out different ODE solvers between different packages.
 Offering high-performance native Julia implementations and the well-known
-C/Fortran algorithms like Sundials or the Hairer algorithms (through ODEInterface.jl),
+C/Fortran algorithms like Sundials or the Hairer algorithms (through ODEInterface.jl) --
 the mixture of flexibility and performance is unparalleled. This is combined with
 [benchmark-based](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl) algorithms
-for choosing default methods and common user interface for handling the solutions
+for choosing default methods and a common user interface for handling the solutions
 across different domains, easing the user experience while not compromising performance.
 
 ### Documentation Packages
@@ -87,7 +87,7 @@ Optionally, the following non-JuliaDiffEq packages can be used through the
 JuliaDiffEq common interface:
 
 - [LSODA.jl](https://github.com/rveltz/LSODA.jl). This package wraps the popular
-  LSODA algorithm with automatic switching between nonstiff and stiff solvers.
+  LSODA algorithm with automatic switching between non-stiff and stiff solvers.
 
 ### Add-On Functionality
 
