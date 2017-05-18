@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Filling In The Interop Packages and Rosenbrock"
-date:   2017-4-30 1:30:00
+date:   2017-5-18 1:30:00
 categories:
 ---
 
@@ -12,14 +12,23 @@ fruits in that battle. Specifically, the interop packages were setup to be as
 complete in their interfaces as possible, and the existing methods which could
 expand were expanded. Time for specifics.
 
-## ODEInterfaceDiffEq: Jacobians and Mass Matrices
+### Revamped ODE and SDE Tutorials
+
+All of the docs have been undergoing a pretty thorough review to make sure that
+every feature is documented. But the tutorials are there to give a simple introduction.
+After having many different users provide feedback, we have revamped the ODE
+and SDE tutorials to more effectively drive users to writing clear and efficient
+code. If there are any concerns, please open and issue or come chat in the
+Gitter chatroom. Docs can always be improved!
+
+### ODEInterfaceDiffEq: Jacobians and Mass Matrices
 
 ODEInterfaceDiffEq.jl is a great interop package with its `radau` being
 a very fast stiff solver. Now the JuliaDiffEq way of defining the Jacobian
 and mass matrix is used by this package to speed up your calculations
 even more.
 
-## Interpolations All Around: Hermites and Linear
+### Interpolations All Around: Hermites and Linear
 
 This is a big update. For the packages which had no interpolations before
 yet had a cheap way to save the derivative (Sundials and DASKR), a free
@@ -41,7 +50,19 @@ But 3rd order interpolations on Sundials and DASKR is a big win. Since these
 normally fluctuate between order 2-4, this almost has the same order as the
 solution time points itself, and thus is a very reliable result.
 
-## Default Algorithm Updates
+### Derivative Interpolation
+
+For the methods of OrdinaryDiffEq.jl, `Val{1}` in the interpolant now makes it
+return the interpolant derivative. Since these are hardcoded directly from the
+interpolation coefficients, these are fast calculations which avoid the standard
+numerical issues of finite differencing. In addition, linear interpolations
+now will return the constant derivative estimate in the interval, and Hermite
+interpolations have both the 1st, 2nd, and 3rd derivative estimates. Other
+derivatives will keep being added, and the interpolants will get derivatives up
+to the order of interpolation in the future. It's not difficult, but it's tedious
+work, so thank @gabrielgellner!
+
+### Default Algorithm Updates
 
 A major update which is slightly hidden to users is a re-work of the default
 algorithms. The default algorithm choices underwent a major update, and now
@@ -49,7 +70,7 @@ things like ODE solver choices are much more sophisticated, taking into account
 the existence of callbacks and mass matrices, the user's tolerance levels, etc.
 This should improve the "automatic" experience of DifferentialEquations.jl.
 
-## Warnings on Incompatibility
+### Warnings on Incompatibility
 
 One huge ecosystem update is that, now that everything is pretty much set,
 we decided to warn users when interface options are ignored. For example,
@@ -71,7 +92,7 @@ In any case, these warnings can be turned off by setting `verbose=false`.
 We hope that these warnings help you know in advance what options have
 a real effect on each and every solver method.
 
-## Monte Carlo Analysis Tools
+### Monte Carlo Analysis Tools
 
 The result of many user requests, there now exists a full suite of analysis
 tools for analyzing the results of your Monte Carlo experiments.
@@ -79,7 +100,7 @@ tools for analyzing the results of your Monte Carlo experiments.
 detail how to use the functionality for getting means, medians, variances,
 covariances, etc. and plotting the timeseries of these values.
 
-## Comprehensive Noise Processes
+### Comprehensive Noise Processes
 
 Noise processes reached their pinnacle design state! If you're interested in
 noise processes, you
@@ -114,7 +135,7 @@ noise very accessible. What is really nice is that all of these `AbstractNoisePr
 types build appropriate back-interpolations, meaning that adaptive timestepping
 methods can be compatible with them (given a suitable error estimate).
 
-## Full Precompilation
+### Full Precompilation
 
 This update follows an update in SymEngine.jl that lets it use libsymengine
 v0.3.0. This means that ParameterizedFunctions.jl could get rid of all
@@ -122,7 +143,7 @@ uses of `@eval` and finally precompile. The result is that every package
 in JuliaDiffEq is now precompilation-safe (before, ParameterizedFunctions.jl
 and DifferentialEquations.jl had precompilation turned off for this reason).
 
-## Improved Derivative Information in the `@ode_def` Macro
+### Improved Derivative Information in the `@ode_def` Macro
 
 The SymEngine change had one additional benefit. A wider range of equations
 can now be symbolically differentiated. This means that your equations can
@@ -130,7 +151,7 @@ have special functions like `erf` and now receive a symbolically-calculated
 Jacobian. This should help sufficiently weird equations run faster with
 stiff solvers!
 
-## Rosenbrock: To the Limits
+### Rosenbrock: To the Limits
 
 The `Rosenbrock23` and `Rosenbrock32` methods now support the full the limits
 of the common interface. Before they could do all of the event things like
@@ -149,7 +170,7 @@ considered a foundational stiff method because of its impeccable stability
 methods like Sundials!), and so it's good that this method is essentially
 complete (barring bugfixes).
 
-## Improved DEDataArray
+### Improved DEDataArray
 
 Now when interpolating `DEDataArray`, its non `.x` values hold true to their
 discrete interpolation and are considered constant on any interval of
@@ -166,14 +187,73 @@ in discrete variables, or save the results of algebraic relations between
 other variables. Some solvers are not compatible with this usage, and this
 is now explicitly stated with the solver choice.
 
-## PyDSTool Removed From DifferentialEquations
+### PyDSTool Removed From DifferentialEquations
 
 PyDSTool is an addon which is only used for bifurcation plotting, so it was
 too large to justify having by default. It's kept in the documentation, and
 instead the relevant documentation page tells the user to install this
 package before using.
 
-## IO Functionality
+### IO Functionality
 
 IO is now out of its experimental phase into its early release. It's still
 being worked on, but [the documentation page exists](http://docs.juliadiffeq.org/latest/features/io.html).
+
+### Monte Carlo Reductions
+
+Monte Carlo reductions allow you to solve the parallel problem in batches, and
+perform operations on the batches. Thus, instead of building a big array of the
+solutions, you can instead in batches of 200 take the mean at each timeseries,
+and add it to the mean of the last batch(es). This way, no more than 200+1 timeseries
+ever have to be in memory, drastically reducing the memory cost and still outputting
+the desired quantity. In addition, convergence checks can be done at the batch
+calculations. For example, you can check the standard error of the mean (SEM), and
+have the Monte Carlo simulation stop when the SEM is low enough (indicating that
+you've ran enough samples to get the confidence in the mean sufficiently small).
+This can save a lot time by adaptiving the simulation size as necessary.
+
+### Support for StaticArrays
+
+StaticArrays.jl provides static and fixed-sized arrays that speed up computations
+on small systems. The `*DiffEq` methods now fully support using `SArray` and
+`MArray` types. The `SArray` types are stack-allocated, meaning that the
+not-in-place versions can be used on these arrays without a performance penalty
+(in fact, they can have a large performance gain!). `MArray`s can be used in
+place of normal arrays when you know the size is constant, and speedups can
+occur due to extra compiler optimizations. Together, these are a good set of
+types for many use cases.
+
+## Minor Changes
+
+- Improved Monte Carlo pmap speed via an extra caching step
+- Fixed some interpolation bugs when differentiating by ForwardDiff
+- Fixed a `NoiseWrapper` bug when interpolating many times in the same interval
+- Added an error to `add_tstop!` when the added time lags behind the current time
+- Fixed `plot_analytic` for refined problems
+- Added a recursive dispatch to the default norm for handling nested arrays
+- `L2DistLoss` added to DiffEqParamEstim.jl for improved efficiency
+- Improved numerical accuracy in interpolations (Horner's rule)
+- Greatly improved OrdinaryDiffEq and DiffEqNoiseProcess tests
+
+## Near Future
+
+In the next minor release, I am hoping to accomplish the following:
+
+### IIF Methods for Split Linear-Nonlinear Equations and Low Order Exponential Runge-Kutta Methods
+
+An implementation of these actually exist now, and pass convergence tests. Caching
+of the exponential and setup with ExpoKit.jl or ExpmV.jl will be necessary before
+this is ready for prime-time.
+
+### High Order Rosenbrock Methods
+
+The coefficients are in, but these need to be debugged.
+
+### Velocity Verlets
+
+This is not far off.
+
+### Shooting Method BVP Solver
+
+It's already created and robust. We just need to clarify the problem setup, add
+some documentation, and get things registered.
