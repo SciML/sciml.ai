@@ -35,7 +35,7 @@ this information needs to be updated, please open an issue or pull request
 
 #### StochasticDiffEq.jl
 
-- Rackauckas C. Nie Q., (2016). Adaptive Methods for Stochastic Differential Equations
+- Rackauckas C., Nie Q., (2016). Adaptive Methods for Stochastic Differential Equations
   via Natural Embeddings and Rejection Sampling with Memory. Discrete and Continuous
   Dynamical Systems - Series B 22 (7), pp. 2731-2761. doi:10.3934/dcdsb.2017133
 
