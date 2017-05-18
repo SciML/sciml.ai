@@ -31,13 +31,13 @@ this information needs to be updated, please open an issue or pull request
 
 - Rackauckas C., Nie Q., (2017) DifferentialEquations.jl - A Performant and Feature-Rich
   Ecosystem for Solving Differential Equations in Julia. Journal of Open Research Software.
-  Submitted.
+  Accepted.
 
 #### StochasticDiffEq.jl
 
-- Rackauckas C. Nie Q., (2016) Adaptive Methods for Stochastic Differential Equations
+- Rackauckas C. Nie Q., (2016). Adaptive Methods for Stochastic Differential Equations
   via Natural Embeddings and Rejection Sampling with Memory. Discrete and Continuous
-  Dynamical Systems - Series B. Accepted December 2016.
+  Dynamical Systems - Series B 22 (7), pp. 2731-2761. doi:10.3934/dcdsb.2017133
 
 ## Additional Recommended Software Citations
 
@@ -69,7 +69,7 @@ this information needs to be updated, please open an issue or pull request
 - K Radhakrishnan, Alan Hindmarsh, Description and Use of LSODE, the Livermore
   Solver for Ordinary Differential Equations, Technical report UCRL-ID-113855,
   Lawrence Livermore National Laboratory, December 1993.
-  
+
 - LSODA.jl. Date of access. Current version. https://github.com/rveltz/LSODA.jl.
 
 #### ODE.jl
@@ -164,7 +164,7 @@ Scientific Computing, 18 (1), pp. 1-22.
 
 - Feagin, T., “An Explicit Runge-Kutta Method of Order Fourteen,” Numerical
   Algorithms, 2009
-  
+
 #### General Strong Stability Preserving Runge-Kutta Methods
 
 - General: Gottlieb, Sigal, David I. Ketcheson, and Chi-Wang Shu. Strong stability preserving Runge-Kutta and multistep time discretizations. World Scientific, 2011.
@@ -200,7 +200,7 @@ Scientific Computing, 18 (1), pp. 1-22.
 
 ### Bifurcation Analysis
 
-- Clewley R (2012) Hybrid Models and Biological Model Reduction with PyDSTool. 
+- Clewley R (2012) Hybrid Models and Biological Model Reduction with PyDSTool.
   PLoS Comput Biol 8(8): e1002628. doi:10.1371/journal.pcbi.1002628
 
 ### ProbInts (Uncertainty Quantification)
@@ -221,9 +221,9 @@ Scientific Computing, 18 (1), pp. 1-22.
 - Salis H., Kaznessis Y.,  Accurate hybrid stochastic simulation of a system of
   coupled chemical or biochemical reactions, Journal of Chemical Physics, 122 (5),
   DOI:10.1063/1.1835951
-  
+
 ### Split Coupling
- 
- - David F. Anderson, Masanori Koyama; An asymptotic relationship between coupling 
-   methods for stochastically modeled population processes. IMA J Numer Anal 2015; 
+
+ - David F. Anderson, Masanori Koyama; An asymptotic relationship between coupling
+   methods for stochastically modeled population processes. IMA J Numer Anal 2015;
    35 (4): 1757-1778. doi: 10.1093/imanum/dru044
