@@ -29,15 +29,15 @@ this information needs to be updated, please open an issue or pull request
 
 #### DifferentialEquations.jl
 
-- Rackauckas C., Nie Q., (2017) DifferentialEquations.jl - A Performant and Feature-Rich
-  Ecosystem for Solving Differential Equations in Julia. Journal of Open Research Software.
-  Accepted.
+- Rackauckas, C. & Nie, Q., (2017). DifferentialEquations.jl – A Performant and 
+  Feature-Rich Ecosystem for Solving Differential Equations in Julia. Journal of 
+  Open Research Software. 5(1), p.15. DOI: http://doi.org/10.5334/jors.151
 
 #### StochasticDiffEq.jl
 
 - Rackauckas C., Nie Q., (2016). Adaptive Methods for Stochastic Differential Equations
   via Natural Embeddings and Rejection Sampling with Memory. Discrete and Continuous
-  Dynamical Systems - Series B 22 (7), pp. 2731-2761. doi:10.3934/dcdsb.2017133
+  Dynamical Systems - Series B, 22(7), pp. 2731-2761. doi:10.3934/dcdsb.2017133
 
 ## Additional Recommended Software Citations
 
