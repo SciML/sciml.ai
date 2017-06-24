@@ -165,9 +165,9 @@ Scientific Computing, 18 (1), pp. 1-22.
 - Feagin, T., “An Explicit Runge-Kutta Method of Order Fourteen,” Numerical
   Algorithms, 2009
 
-#### General Strong Stability Preserving Runge-Kutta Methods
+#### Strong Stability Preserving (SSP) Runge-Kutta Methods: General
 
-- General: Gottlieb, Sigal, David I. Ketcheson, and Chi-Wang Shu. Strong stability preserving Runge-Kutta and multistep time discretizations. World Scientific, 2011.
+- Gottlieb, Sigal, David I. Ketcheson, and Chi-Wang Shu. Strong stability preserving Runge-Kutta and multistep time discretizations. World Scientific, 2011.
 
 #### SSPRK22, SSPRK33
 
@@ -176,6 +176,10 @@ Scientific Computing, 18 (1), pp. 1-22.
 #### SSPRK104
 
 - Ketcheson, David I. "Highly efficient strong stability-preserving Runge–Kutta methods with low-storage implementations." SIAM Journal on Scientific Computing 30.4 (2008): 2113-2136.
+
+#### SSP Dense Output
+
+- Ketcheson, David I., et al. "Dense output for strong stability preserving Runge–Kutta methods." Journal of Scientific Computing 71.3 (2017): 944-958.
 
 ### Stochastic Differential Equations
 
