@@ -18,7 +18,7 @@ release notes.
 
 Due to JuliaCon we now have a video introduction to JuliaDiffEq!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7NDkpWoNiQ4" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/75SCMIRlNXM" frameborder="0" allowfullscreen></iframe>
 
 I find videos to be a very good media for teaching, so there will surely be
 more to follow.
