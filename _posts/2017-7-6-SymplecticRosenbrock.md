@@ -89,7 +89,8 @@ vs a reference solution calculated with `tol=1e-14`:
 
 <img src="https://user-images.githubusercontent.com/1814174/27948516-ec781da6-62ae-11e7-8df0-c84d2fd65e34.PNG">
 
-It's a small problem, but in normal tolerances it's already able to distinguish
+Here we plot error vs compute time, where we are changing the `abstol` and `reltol`
+of the solvers. It's a small problem, but in normal tolerances it's already able to distinguish
 itself. For larger problems where the Jacobian can still be factorized, these
 methods show even larger performance gains. In additions, these methods are in OrdinaryDiffEq.jl,
 so they are compatible with the event handling, have "stiff-aware" high-order interpolants,
