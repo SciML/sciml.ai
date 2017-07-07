@@ -84,7 +84,8 @@ the theory? Yes!
 At standard tolerances (`1e-2 < reltol < 1e-6`), the Rosenbrock methods `Rosenbrock23`,
 `Rodas3`, and `Rodas4` together form a group of methods which are 5x-10x faster
 than the previously recommended Fortran and Sundials methods. Here's an example
-benchmark on the VanDerPol problem:
+benchmark on the VanDerPol problem where the error is at the final timepoint
+vs a reference solution calculated with `tol=1e-14`:
 
 <img src="https://user-images.githubusercontent.com/1814174/27948516-ec781da6-62ae-11e7-8df0-c84d2fd65e34.PNG">
 
