@@ -30,7 +30,11 @@ We will be happy to help you get accustomed to our ecosystem.
 - **The largest set of algorithms**. [From the ODE methods alone](https://juliadiffeq.github.io/DiffEqDocs.jl/latest/solvers/ode_solve.html),
   choose between methods such as the 14th Order Feagin methods, the recent Verner
   Efficient methods with high order interpolations, or the classic dopri methods.
-  The included set dwarfs what is presented by other ecosystems.
+  We offer all of the bells and whistles: high-order symplectic methods, 
+  highly efficient Rosenbrock methods for stiff ODEs and DAEs, high-order adaptive 
+  methods for stochastic differential equations, strong stability presurving (SSP)
+  Runge-Kutta methods for Hyperbolic PDEs, etc. The included set dwarfs what is 
+  presented by other ecosystems.
 - **A clean user interface**. For the different types of equations, users define a Problem
   type, and call solve. The Solution type which solve creates then acts similarly
   for all types of equations, and includes conveniences like an array interface
