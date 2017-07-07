@@ -186,6 +186,11 @@ Oh boy, big performance boosts. The quick lowdown is this:
 - The standard RNG was swapped out for a `Xoroshiro128Plus`. Our tests show that
   it's both more accurate and faster, giving the best of both worlds upgrade.
 
+You can see the impact of these by checking out the improved timings in
+[DiffEqBenchmarks.jl](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl).
+Higher order methods got a really nice boost because their startup cost was
+heavily decreased, making `Vern7` and `Vern9` look even better than before.
+
 ## Experiments with Broadcast
 
 There was a version of OrdinaryDiffEq and StochasticDiffEq which replaced all loops
