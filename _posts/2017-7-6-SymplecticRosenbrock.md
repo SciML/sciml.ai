@@ -23,6 +23,11 @@ Due to JuliaCon we now have a video introduction to JuliaDiffEq!
 I find videos to be a very good media for teaching, so there will surely be
 more to follow.
 
+#### Edit
+
+The video is temporarily down because people are behind the scenes fixing some
+typos in the overlay. It will be back shortly.
+
 ## High Order Rosenbrock Methods
 
 They have finally arrived. Let me accompany this with an explanation. For lots
