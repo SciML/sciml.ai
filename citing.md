@@ -29,8 +29,8 @@ this information needs to be updated, please open an issue or pull request
 
 #### DifferentialEquations.jl
 
-- Rackauckas, C. & Nie, Q., (2017). DifferentialEquations.jl – A Performant and 
-  Feature-Rich Ecosystem for Solving Differential Equations in Julia. Journal of 
+- Rackauckas, C. & Nie, Q., (2017). DifferentialEquations.jl – A Performant and
+  Feature-Rich Ecosystem for Solving Differential Equations in Julia. Journal of
   Open Research Software. 5(1), p.15. DOI: http://doi.org/10.5334/jors.151
 
 #### StochasticDiffEq.jl
@@ -155,6 +155,107 @@ citations.
 
 - Shampine L.F. and Reichelt M., (1997) The MATLAB ODE Suite, SIAM Journal of
 Scientific Computing, 18 (1), pp. 1-22.
+
+#### ROS3P
+
+- Lang, J. & Verwer, ROS3P—An Accurate Third-Order Rosenbrock Solver Designed for
+  Parabolic Problems J. BIT Numerical Mathematics (2001) 41: 731. doi:10.1023/A:1021900219772
+
+#### Rodas3, Ros4LStab, Rodas4, Rodas42
+
+- E. Hairer, G. Wanner, Solving ordinary differential equations II, stiff and
+  differential-algebraic problems. Computational mathematics (2nd revised ed.), Springer (1996)
+
+#### RosShamp4
+
+- L. F. Shampine, Implementation of Rosenbrock Methods, ACM Transactions on
+  Mathematical Software (TOMS), 8: 2, 93-113. doi:10.1145/355993.355994
+
+#### Veldd4, Velds4
+
+- van Veldhuizen, D-stability and Kaps-Rentrop-methods, M. Computing (1984) 32: 229.
+  doi:10.1007/BF02243574
+
+#### GRK4T, GRK4A
+
+- Kaps, P. & Rentrop, Generalized Runge-Kutta methods of order four with stepsize control
+  for stiff ordinary differential equations. P. Numer. Math. (1979) 33: 55. doi:10.1007/BF01396495
+
+#### Rodas4P
+
+- Steinebach G. Order-reduction of ROW-methods for DAEs and method of lines
+  applications. Preprint-Nr. 1741, FB Mathematik, TH Darmstadt; 1995.
+
+#### Rodas5
+
+- Di Marzo G. RODAS5(4) – Méthodes de Rosenbrock d’ordre 5(4) adaptées aux problemes
+différentiels-algébriques. MSc mathematics thesis, Faculty of Science,
+University of Geneva, Switzerland.
+
+#### VelocityVerlet, VerletLeapfrog, PseudoVerletLeapfrog
+
+- Verlet, Loup (1967). "Computer "Experiments" on Classical Fluids. I.
+  Thermodynamical Properties of Lennard−Jones Molecules". Physical Review.
+  159: 98–103. doi:10.1103/PhysRev.159.98
+
+- Etienne Forest, Ronald D. Ruth, Fourth-order symplectic integration, Physica D:
+  Nonlinear Phenomena, Volume 43, Issue 1, 1990, Pages 105-117, ISSN 0167-2789,
+  http://dx.doi.org/10.1016/0167-2789(90)90019-L.
+
+#### Ruth3
+
+- Ruth, Ronald D. (August 1983). "A Canonical Integration Technique". Nuclear
+  Science, IEEE Trans. on. NS-30 (4): 2669–2671. Bibcode:1983ITNS...30.2669R.
+  doi:10.1109/TNS.1983.4332919
+
+- Etienne Forest, Ronald D. Ruth, Fourth-order symplectic integration, Physica D:
+  Nonlinear Phenomena, Volume 43, Issue 1, 1990, Pages 105-117, ISSN 0167-2789,
+  http://dx.doi.org/10.1016/0167-2789(90)90019-L.
+
+#### McAte2, McAte3, McAte4, McAte42, McAte5
+
+- R. I. McLachlan and P. Atela, The accuracy of symplectic integrators,
+  Nonlinearity 5 (1992), 541-562.
+
+- Stephen K. Gray, Donald W. Noid and Bobby G. Sumpter, Symplectic integrators for
+  large scale molecular dynamics simulations: A comparison of several explicit methods
+  The Journal of Chemical Physics 101, 4062 (1994); doi: http://dx.doi.org/10.1063/1.467523
+
+#### CandyRoz4
+
+- Candy, J.; Rozmus, W (1991). "A Symplectic Integration Algorithm for Separable
+  Hamiltonian Functions". J. Comput. Phys. 92: 230. Bibcode:1991JCoPh..92..230C.
+  doi:10.1016/0021-9991(91)90299-Z
+
+#### CalvoSanz4
+
+- Stephen K. Gray, Donald W. Noid and Bobby G. Sumpter, Symplectic integrators for
+  large scale molecular dynamics simulations: A comparison of several explicit methods
+  The Journal of Chemical Physics 101, 4062 (1994); doi: http://dx.doi.org/10.1063/1.467523
+
+-  M. P. Calvo & J. M. Sanz-Serna, Symplectic numerical methods for Hamiltonian
+   problems, Int. J. Mod. Phys. C 4(1993), 617-634.
+
+#### KahanLi6, KahanLi8
+
+- Kahan, W. & Li, Composition constants for raising the orders of unconventional schemes for ordinary
+  differential equations, Mathematics of Computation. 66, 219, p. 1089-1099 11 p.
+
+#### Yoshida6
+
+- Yoshida, H. (1990). "Construction of higher order symplectic integrators". Phys.
+  Lett. A. 150 (5–7): 262. Bibcode:1990PhLA..150..262Y. doi:10.1016/0375-9601(90)90092-3
+
+#### McAte8
+
+- R. I. McLachlan, On the numerical integration of ordinary differential equations
+  by symmetric composition methods, SIAM J. Sci. Comp. 16, (1995), 151-168.
+
+##### SofSpa10
+
+- Mark Sofroniou & Giulia Spaletta, Derivation of symmetric composition constants
+  for symmetric integrators, Optimization Methods and Software Vol. 20 , 
+  4-5,2005
 
 #### Feagin10, Feagin12, Feagin14
 
