@@ -211,6 +211,40 @@ motion, meaning that it still used a lot of memory. Now the `NoiseProcess` match
 the diffeq's saving properties, allowing massive performance gains on really long
 running problems.
 
+## Deprecation of ODE.jl
+
+This has been a long time coming. It's known that
+[some of its methods may be giving incorrect results](https://github.com/JuliaDiffEq/ODE.jl/issues/124),
+[there are some very slow parts](https://github.com/JuliaDiffEq/ODE.jl/issues/121),
+and it's missing a lot of the advanced features we need. If you check out
+[DiffEqBenchmarks.jl](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl), you'll
+see that ODE.jl's algorithms diverge on most of the test problems. The library
+hid this by having very low defaults for the tolerances, but we can do better.
+Also, it sacrifices a lot of features and speed to get cleaner code,
+which is a nice tradeoff in some senses but is not something which should be
+done in a core production ODE solver.  
+
+Because of this state for ODE.jl, many users have asked that I formally deprecate
+ODE.jl in favor of OrdinaryDiffEq.jl in order to stop the confusion around the
+library. This is the announcement that this has occurred.
+To help users transition, all of ODE.jl's algorithms are part of the
+common interface, so setting the defaults correctly will allow you to exactly
+replicate your results in the DiffEq framework. All of the packages which had
+ODE.jl as a dependency received a PR which replaces ODE.jl with OrdinaryDiffEq.jl
+(note you can directly use OrdinaryDiffEq.jl without the rest of DiffEq, see
+[this page in the docs](http://docs.juliadiffeq.org/latest/features/low_dep.html)).
+
+ODE.jl is not going away. I have maintained it for a year, and will continue to
+maintain it and make sure it exists in a usable state in Julia 1.0. What I will
+not promise is any new features. ODE.jl is not designed in a manner that makes
+it easy to develop with all of the bells and whistles, which is why it has been
+ignored. But your ODE.jl code should continue to run on Julia 1.0 exactly the
+same as it did before. ODE.jl will still have its place as a nice clean set
+of algorithms which is good for teaching, and is a low-dependency library
+(for example, it doesn't make use of autodifferentiation so it doesn't have
+dependencies on ForwardDiff.jl). The library will probably get updates in the
+future to help it better serve this role.
+
 # Near Future
 
 This was a huge release, with over 30 new solver methods. Surely we won't have
