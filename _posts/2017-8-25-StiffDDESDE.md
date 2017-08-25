@@ -123,6 +123,13 @@ directly in order to exactly integrate that part. This is good for discretizatio
 of semilinear PDEs. We will be continuing to improve this area over the coming
 year.
 
+Right now the existing methods are made for problems where the system is small
+enough that the dense `exp(dt*A)` can be created and cached. For large PDEs
+we will need an efficient `expmv!` method. These will be created and released
+as separate versions of these algorithms (ex: `IIF2` vs `IIF2Krylov`). However,
+this is currently blocked because we need to implement the `expmv!` algorithms
+which is the subject of a new project in development.
+
 ## New Tooling Package: DiffEqDiffTools.jl
 
 During a bunch of benchmarking members of JuliaDiffEq (@dextorious) noticed
@@ -173,3 +180,21 @@ matrix-free, are able to update their directions each step efficiently. These
 operators all allow for specifying time-dependent boundary conditions and can
 be used with tooling like IterativeSolvers.jl. This makes finite difference
 discretizations a breeze.
+
+# In Development
+
+Note that some projects have been sectioned off as
+[possible GSoC projects](https://github.com/ChrisRackauckas/julialang.github.com/blob/8ed84153946d1d39872099fc64f4810a1ecbc220/soc/projects/diffeq.md).
+These would also do well as new contributor projects if anyone's interested, and
+so these are not considered in the "in development" list as we are leaving these
+open for newcomers/students.
+
+Putting those aside, this is the main current "in development" list:
+
+- IMEX Methods
+- Methods for efficient `expmv!`
+- Native Julia Radau
+- Research in new methods for stiff SDEs
+- Anderson acceleration of unconstrained DDE steps
+- Accurate state-dependent delay tracking
+- Improved jump methods (tau-leaping)
