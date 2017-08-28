@@ -266,13 +266,17 @@ University of Geneva, Switzerland.
 - Feagin, T., “An Explicit Runge-Kutta Method of Order Fourteen,” Numerical
   Algorithms, 2009
 
-#### Strong Stability Preserving (SSP) Runge-Kutta Methods: General information and SSPRK432
+#### Strong Stability Preserving (SSP) Runge-Kutta Methods: General Information, SSPRK432, SSPRK932
 
 - Gottlieb, Sigal, David I. Ketcheson, and Chi-Wang Shu. Strong stability preserving Runge-Kutta and multistep time discretizations. World Scientific, 2011.
 
 #### SSPRK22, SSPRK33
 
 - Shu, Chi-Wang, and Stanley Osher. "Efficient implementation of essentially non-oscillatory shock-capturing schemes." Journal of Computational Physics 77.2 (1988): 439-471.
+
+#### SSPRK53, SSPRK63, SSPRK73, SSPRK83, SSPRK54
+
+- Ruuth, Steven. "Global optimization of explicit strong-stability-preserving Runge-Kutta methods." Mathematics of Computation 75.253 (2006): 183-207.
 
 #### SSPRK104
 
