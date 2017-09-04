@@ -1,21 +1,18 @@
 ---
 layout: post
 title:  "Stiff SDE and DDE Solvers"
-date:   2017-8-25 1:30:00
+date:   2017-9-5 1:30:00
 categories:
 ---
 
-This is a quick release announcement concerning the last one was only two weeks
-away, but this is the end of the summer cycle which means that many things,
-including Google Summer of Code projects, are being released. Thus we actually
-not only have more than enough for a release, but we have some of the most
-unique developments to share. A large part of the current focus has been to
+The end of the summer cycle means that many things, including Google Summer of
+Code projects, are being released. A large part of the current focus has been to
 develop tools to make solving PDEs easier, and also creating efficient tools
-for hard (stiff) differential equations. This release shows our work. I think
-we can claim to be one of the first libraries to include methods for stiff
-SDEs, one of the first for stiff DDEs, and one of the first to include higher
-order adaptive Runge-Kutta Nystrom schemes. And that's not even looking at
-a lot of the more unique stuff in this release. Take a look.
+for generalized stiff differential equations. I think we can claim to be one of
+the first libraries to include methods for stiff SDEs, one of the first for stiff
+DDEs, and one of the first to include higher order adaptive Runge-Kutta Nystrom
+schemes. And that's not even looking at a lot of the more unique stuff in this
+release. Take a look.
 
 ## Solvers for Stiff Stochastic Differential Equations (SDEs and SDAEs)
 
@@ -50,9 +47,10 @@ adaptivity like the MATLAB method `bvp4c`.
 
 ## Solvers for Stiff Delay Differential Equations (DDEs and DADEs)
 
-Technically you could've used a stiff solver (with mass matrices for a
-differential-algebraic equation) in `MethodOfSteps` before to get a stiff DDE
-solver, but it wasn't fully efficient. The issue was that the stiff methods
+The stiff methods from OrdinaryDiffEq.jl are now compatible with the delay
+equation methods. But there's more to it than that. Technically a stiff solver
+(with mass matrices for a differential-algebraic equation) in `MethodOfSteps`
+just works but it wasn't fully efficient. The issue is that the stiff methods
 weren't aware of the possibility of repetitions. Delay differential equations
 have to extrapolate and use fixed-point iteration in order to take timesteps
 larger than the smallest delay. The ODE methods which DelayDiffEq.jl wraps
@@ -180,6 +178,15 @@ matrix-free, are able to update their directions each step efficiently. These
 operators all allow for specifying time-dependent boundary conditions and can
 be used with tooling like IterativeSolvers.jl. This makes finite difference
 discretizations a breeze.
+
+## SSP Limiters
+
+In addition to adding many more strong-stability preserving methods, these methods
+now have the possibility for the user to pass in a `limiter` function to ensure
+that properties like positivity are preserved at each step of the integrator.
+Needless to say, this is very helpful for solving hyperbolic PDEs with larger
+timesteps. In addition we now document the SSP coefficients so users can more
+easily set maximal timesteps to match what's necessary via the CFL constraints.
 
 # In Development
 
