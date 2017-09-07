@@ -266,6 +266,11 @@ University of Geneva, Switzerland.
 - Feagin, T., “An Explicit Runge-Kutta Method of Order Fourteen,” Numerical
   Algorithms, 2009
 
+#### CarpenterKennedy2N54
+
+- M.H. Carpenter, C.A. Kennedy, Fourth-Order Kutta Schemes, NASA Langley Research Center, 
+  Hampton, Virginia 23681-0001, 1994.
+
 #### Strong Stability Preserving (SSP) Runge-Kutta Methods: General Information, SSPRK432, SSPRK932
 
 - Gottlieb, Sigal, David I. Ketcheson, and Chi-Wang Shu. Strong stability preserving Runge-Kutta and multistep time discretizations. World Scientific, 2011.
