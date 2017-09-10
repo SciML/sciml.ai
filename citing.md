@@ -378,6 +378,13 @@ University of Geneva, Switzerland.
   sixth-order Runge-Kutta methods for the solution of state-dependent functional differential 
   equations", Applied Numerical Mathematics, 1997.
 
+### Delay Differential Equations
+
+- Corwin, S.P., D. Sarafyan, and S. Thompson. "DKLAG6: a Code Based on
+  Continuously Imbedded Sixth-Order Runge-Kutta Methods for the Solution of
+  State-Dependent Functional Differential Equations." Applied Numerical
+  Mathematics 24.2-3 (1997): 319–330.
+
 ### Stochastic Differential Equations
 
 #### RK-Mil
