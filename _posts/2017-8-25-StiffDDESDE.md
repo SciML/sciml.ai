@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Stiff SDE and DDE Solvers"
-date:   2017-9-5 1:30:00
+date:   2017-9-9 1:30:00
 categories:
 ---
 
@@ -27,6 +27,49 @@ correction versions to be strong order 1.0 when the noise is diagonal or
 commutative (commutative noise addressed later). Higher order and adaptive
 methods coming soon.
 
+## Solvers for Stiff Delay Differential Equations (DDEs and DADEs)
+
+The stiff methods from OrdinaryDiffEq.jl are now compatible with the delay
+equation methods. But there's more to it than that. Technically a stiff solver
+(with mass matrices for a differential-algebraic equation) in `MethodOfSteps`
+just works but it wasn't fully efficient. The issue is that the stiff methods
+weren't aware of the possibility of repetitions. Delay differential equations
+have to extrapolate and use fixed-point iteration in order to take timesteps
+larger than the smallest delay. The ODE methods which DelayDiffEq.jl wraps
+are now aware of this and will reuse the factorized Jacobians when steps are
+repeated. The result is that `MethodOfSteps` extensions of many of the Rosenbrock
+and SDIRK methods become very efficient solvers for stiff DDEs. More work will
+come by improving the fixed-point iteration scheme (making it Anderson accelerated
+for speed and better convergence properties), but the basics are here and ready
+to be used.
+
+## State-Dependent Delay Equation Solvers
+
+State-dependent delay equations are delay differential equations where the delays
+are dependent on the independent and dependent variables. For example, it could
+be a differential equation where `u' = u(t-u^2)`. We now have two means to solve
+such problems.
+
+One is through a residual control on `RK4()`. This setup is now found in
+the docs and is tested, and it is similar to the `ddesd` algorithm of MATLAB.
+While it will only solve state-dependent delay equations with low accuracy, this
+method is sufficient for roughly solving the equations "to plotting accuracy"
+and can be a relatively cheap means for doing so. We hope to add more residual
+control RK methods to fill this out.
+
+Additionally, we have added full discontinuity tracking for state-dependent delays.
+This automatically detects all discontinuities from the user-specified delays
+and will accurately hit these points "exactly". We have verified on test equations
+that this indeed gets to floating point accuracy and thus should be used in
+cases where accuracy is needed. Additionally, this form can handle "neutral".
+What this means is that in your history function you can use `h(t-τ,Val{1})` to
+get not the value in the past, but the derivative in the past (the number of
+derivatives you can get is dependent on the interpolant). Using order tracking
+for the discontinuities we can properly prorogate issues arriving from this type
+of interaction as well, which means that the full power of the interpolation is
+allowed if you set `neutral=true` in the problem type. You can use this to
+implement things like integral equations using the history function.
+
 ## Boundary Value Problem (BVP) Solvers
 
 BVPs are ODEs where you specify boundary constraints like "u at the end must be
@@ -45,22 +88,6 @@ full solution type which means that "boundary values" can be things like
 specifically for two-point boundary value problems, and will soon include
 adaptivity like the MATLAB method `bvp4c`.
 
-## Solvers for Stiff Delay Differential Equations (DDEs and DADEs)
-
-The stiff methods from OrdinaryDiffEq.jl are now compatible with the delay
-equation methods. But there's more to it than that. Technically a stiff solver
-(with mass matrices for a differential-algebraic equation) in `MethodOfSteps`
-just works but it wasn't fully efficient. The issue is that the stiff methods
-weren't aware of the possibility of repetitions. Delay differential equations
-have to extrapolate and use fixed-point iteration in order to take timesteps
-larger than the smallest delay. The ODE methods which DelayDiffEq.jl wraps
-are now aware of this and will reuse the factorized Jacobians when steps are
-repeated. The result is that `MethodOfSteps` extensions of many of the Rosenbrock
-and SDIRK methods become very efficient solvers for stiff DDEs. More work will
-come by improving the fixed-point iteration scheme (making it Anderson accelerated
-for speed and better convergence properties), but the basics are here and ready
-to be used.
-
 ## Higher order methods for Stratanovich Equations
 
 Milstein methods now have the option for `interpretation=:Stratanovich` which
@@ -76,19 +103,6 @@ form of non-diagonal noise. This is a very efficient form of non-diagonal noise
 which shows up in many real-world models. A full non-diagonal Milstein method
 is coming soon, but it will not be able to reach the efficiency of this special
 form. See the documentation for details on the commutative noise requirement.
-
-## State-Dependent Delay Equation Solvers
-
-State-dependent delay equations are delay differential equations where the delays
-are dependent on the independent and dependent variables. For example, it could
-be a differential equation where `u' = u(t-u^2)`. Through a residual control
-on `RK4()` we are now able to solve such problems. This setup is now found in
-the docs and is tested, and it is similar to the `ddesd` algorithm of MATLAB.
-While it will only solve state-dependent delay equations with low accuracy, this
-method is sufficient for roughly solving the equations "to plotting accuracy".
-We hope to add full discontinuity tracking for state-dependent delays soon
-to increase the accuracy, but for now this can be useful for those getting started
-or who don't need many digits of accuracy.
 
 ## Domain Callbacks
 
@@ -191,7 +205,7 @@ easily set maximal timesteps to match what's necessary via the CFL constraints.
 # In Development
 
 Note that some projects have been sectioned off as
-[possible GSoC projects](https://github.com/ChrisRackauckas/julialang.github.com/blob/8ed84153946d1d39872099fc64f4810a1ecbc220/soc/projects/diffeq.md).
+[possible GSoC projects](https://julialang.org/soc/projects/diffeq.html).
 These would also do well as new contributor projects if anyone's interested, and
 so these are not considered in the "in development" list as we are leaving these
 open for newcomers/students.
@@ -201,7 +215,5 @@ Putting those aside, this is the main current "in development" list:
 - IMEX Methods
 - Methods for efficient `expmv!`
 - Native Julia Radau
-- Research in new methods for stiff SDEs
 - Anderson acceleration of unconstrained DDE steps
-- Accurate state-dependent delay tracking
 - Improved jump methods (tau-leaping)
