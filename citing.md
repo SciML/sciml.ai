@@ -5,7 +5,7 @@ navigation_weight: 1
 sitemap:
     priority: 1.0
     changefreq: monthly
-    lastmod: 2014-09-07T16:31:30+05:30
+    lastmod: 2017-09-09T16:31:30+05:30
 ---
 
 # Citing
@@ -369,13 +369,23 @@ University of Geneva, Switzerland.
 
 - Ketcheson, David I., et al. "Dense output for strong stability preserving
   Runge–Kutta methods." Journal of Scientific Computing 71.3 (2017): 944-958.
-  
+
+#### LawsonEuler, NorsettEuler  
+
+- Hochbruck, Marlis, and Alexander Ostermann. “Exponential Integrators.” Acta
+  Numerica 19 (2010): 209–86. doi:10.1017/S0962492910000048.
+
+#### GenericIIF1, GenericIIF2
+
+- Q. Nie, Y. Zhang and R. Zhao. Efficient Semi-implicit Schemes for Stiff Systems.
+  Journal of Computational Physics, 214, pp 521-537, 2006.
+
 ### Delay Differential Equations
 
 #### State-Dependent Delays
 
-- S. P. Corwin, D. Sarafyan and S. Thompson in "DKLAG6: a code based on continuously imbedded 
-  sixth-order Runge-Kutta methods for the solution of state-dependent functional differential 
+- S. P. Corwin, D. Sarafyan and S. Thompson in "DKLAG6: a code based on continuously imbedded
+  sixth-order Runge-Kutta methods for the solution of state-dependent functional differential
   equations", Applied Numerical Mathematics, 1997.
 
 ### Stochastic Differential Equations
