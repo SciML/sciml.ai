@@ -369,6 +369,14 @@ University of Geneva, Switzerland.
 
 - Ketcheson, David I., et al. "Dense output for strong stability preserving
   Runge–Kutta methods." Journal of Scientific Computing 71.3 (2017): 944-958.
+  
+### Delay Differential Equations
+
+#### State-Dependent Delays
+
+- S. P. Corwin, D. Sarafyan and S. Thompson in "DKLAG6: a code based on continuously imbedded 
+  sixth-order Runge-Kutta methods for the solution of state-dependent functional differential 
+  equations", Applied Numerical Mathematics, 1997.
 
 ### Stochastic Differential Equations
 
