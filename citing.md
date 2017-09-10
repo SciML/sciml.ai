@@ -4,7 +4,7 @@ title: Citing
 navigation_weight: 1
 sitemap:
     priority: 1.0
-    changefreq: weekly
+    changefreq: monthly
     lastmod: 2014-09-07T16:31:30+05:30
 ---
 
@@ -146,6 +146,17 @@ citations.
   Nonstiff Problems. 2nd Edition. Springer Series in Computational Mathematics,
   Springer-Verlag.
 
+#### RK4 Residual Control
+
+- L. F. Shampine. 2005. Solving ODEs and DDEs with residual control. Appl. Numer.
+  Math. 52, 1 (January 2005), 113-127. DOI=http://dx.doi.org/10.1016/j.apnum.2004.07.003
+
+#### OwrenZen3, OwrenZen4, OwrenZen5
+
+- Brynjulf Owren and Marino Zennaro. 1992. Derivation of efficient, continuous,
+  explicit Runge-Kutta methods. SIAM J. Sci. Stat. Comput. 13, 6 (November 1992),
+  1488-1501. DOI=http://dx.doi.org/10.1137/0913084
+
 #### radau, radu5
 
 - E. Hairer and G. Wanner, (1999) Stiff differential equations solved by Radau methods,
@@ -191,6 +202,66 @@ Scientific Computing, 18 (1), pp. 1-22.
 - Di Marzo G. RODAS5(4) – Méthodes de Rosenbrock d’ordre 5(4) adaptées aux problemes
 différentiels-algébriques. MSc mathematics thesis, Faculty of Science,
 University of Geneva, Switzerland.
+
+#### Trapezoid (Adaptivity)
+
+- Andre Vladimirescu. 1994. The Spice Book. John Wiley & Sons, Inc., New York,
+  NY, USA.
+
+#### TRBDF2
+
+- M.E. Hosea, L.F. Shampine, Analysis and implementation of TR-BDF2, Applied
+  Numerical Mathematics, Volume 20, Issue 1, 1996, Pages 21-37, ISSN 0168-9274,
+  http://dx.doi.org/10.1016/0168-9274(95)00115-8.
+
+#### SDIRK2, Cash4
+
+- A. C. Hindmarsh, P. N. Brown, K. E. Grant, S. L. Lee, R. Serban, D. E. Shumaker,
+  and C. S. Woodward, “SUNDIALS: Suite of Nonlinear and Differential/Algebraic
+  Equation Solvers,” ACM Transactions on Mathematical Software, 31(3), pp. 363-396,
+  2005. Also available as LLNL technical report UCRL-JP-200037.
+
+#### Kvaerno3, Kvaerno4, Kvaerno5
+
+- Kværnø, A., Singly Diagonally Implicit Runge–Kutta Methods with an Explicit
+  First Stage, BIT Numerical Mathematics (2004) 44: 489.
+  https://doi.org/10.1023/B:BITN.0000046811.70614.38
+
+#### Hairer4, Hairer42
+
+- E. Hairer, G. Wanner, Solving ordinary differential equations II, stiff and
+  differential-algebraic problems. Computational mathematics (2nd revised ed.),
+  Springer (1996)
+
+#### KenCarp3, KenCarp4, KenCarp5
+
+- Christopher A. Kennedy and Mark H. Carpenter. 2003. Additive Runge-Kutta schemes
+  for convection-diffusion-reaction equations. Appl. Numer. Math. 44, 1-2
+  (January 2003), 139-181. DOI=http://dx.doi.org/10.1016/S0168-9274(02)00138-1
+
+#### Nystrom4, Nystrom4VelocityIndependent, Nystrom5VelocityIndependent
+
+- E. Hairer, S.P. Norsett, G. Wanner, (1993) Solving Ordinary Differential Equations I.
+  Nonstiff Problems. 2nd Edition. Springer Series in Computational Mathematics,
+  Springer-Verlag.
+
+#### IRKN3, IRKN4
+
+- Numerical Solution of Second-Order Ordinary Differential Equations by Improved
+  Runge-Kutta Nystrom Method, International Science Index, Mathematical and
+  Computational Sciences Vol:6, No:9, 2012 waset.org/Publication/1175
+
+#### DPRKN6
+
+- J.R. Dormand, P.J. Prince, Runge-Kutta-Nystrom triples, Computers & Mathematics
+  with Applications, Volume 13, Issue 12, 1987, Pages 937-949, ISSN 0898-1221,
+  http://dx.doi.org/10.1016/0898-1221(87)90066-6.
+
+#### DPRKN8, DPRKN12
+
+- J. R. DORMAND, M. E. A. EL-MIKKAWY, P. J. PRINCE; High-Order Embedded
+  Runge-Kutta-Nystrom Formulae, IMA Journal of Numerical Analysis, Volume 7,
+  Issue 4, 1 October 1987, Pages 423–430, https://doi.org/10.1093/imanum/7.4.423
 
 #### VelocityVerlet, VerletLeapfrog, PseudoVerletLeapfrog
 
@@ -254,7 +325,7 @@ University of Geneva, Switzerland.
 ##### SofSpa10
 
 - Mark Sofroniou & Giulia Spaletta, Derivation of symmetric composition constants
-  for symmetric integrators, Optimization Methods and Software Vol. 20 , 
+  for symmetric integrators, Optimization Methods and Software Vol. 20 ,
   4-5,2005
 
 #### Feagin10, Feagin12, Feagin14
@@ -268,28 +339,36 @@ University of Geneva, Switzerland.
 
 #### CarpenterKennedy2N54
 
-- M.H. Carpenter, C.A. Kennedy, Fourth-Order Kutta Schemes, NASA Langley Research Center, 
-  Hampton, Virginia 23681-0001, 1994.
+- M.H. Carpenter, C.A. Kennedy, Fourth-Order Kutta Schemes, NASA Langley Research
+  Center, Hampton, Virginia 23681-0001, 1994.
 
 #### Strong Stability Preserving (SSP) Runge-Kutta Methods: General Information, SSPRK432, SSPRK932
 
-- Gottlieb, Sigal, David I. Ketcheson, and Chi-Wang Shu. Strong stability preserving Runge-Kutta and multistep time discretizations. World Scientific, 2011.
+- Gottlieb, Sigal, David I. Ketcheson, and Chi-Wang Shu. Strong stability
+  preserving Runge-Kutta and multistep time discretizations. World Scientific,
+  2011.
 
 #### SSPRK22, SSPRK33
 
-- Shu, Chi-Wang, and Stanley Osher. "Efficient implementation of essentially non-oscillatory shock-capturing schemes." Journal of Computational Physics 77.2 (1988): 439-471.
+- Shu, Chi-Wang, and Stanley Osher. "Efficient implementation of essentially
+  non-oscillatory shock-capturing schemes." Journal of Computational Physics
+  77.2 (1988): 439-471.
 
 #### SSPRK53, SSPRK63, SSPRK73, SSPRK83, SSPRK54
 
-- Ruuth, Steven. "Global optimization of explicit strong-stability-preserving Runge-Kutta methods." Mathematics of Computation 75.253 (2006): 183-207.
+- Ruuth, Steven. "Global optimization of explicit strong-stability-preserving
+  Runge-Kutta methods." Mathematics of Computation 75.253 (2006): 183-207.
 
 #### SSPRK104
 
-- Ketcheson, David I. "Highly efficient strong stability-preserving Runge–Kutta methods with low-storage implementations." SIAM Journal on Scientific Computing 30.4 (2008): 2113-2136.
+- Ketcheson, David I. "Highly efficient strong stability-preserving Runge–Kutta
+  methods with low-storage implementations." SIAM Journal on Scientific
+  Computing 30.4 (2008): 2113-2136.
 
 #### SSP Dense Output
 
-- Ketcheson, David I., et al. "Dense output for strong stability preserving Runge–Kutta methods." Journal of Scientific Computing 71.3 (2017): 944-958.
+- Ketcheson, David I., et al. "Dense output for strong stability preserving
+  Runge–Kutta methods." Journal of Scientific Computing 71.3 (2017): 944-958.
 
 ### Stochastic Differential Equations
 
@@ -321,6 +400,18 @@ University of Geneva, Switzerland.
 
 - Conrad P., Girolami M., Särkkä S., Stuart A., Zygalakis. K, Probability
   Measures for Numerical Solutions of Differential Equations, arXiv:1506.04592
+
+### Manifold Projection Callback
+
+- Ernst Hairer, Christian Lubich, Gerhard Wanner. Geometric Numerical Integration:
+  Structure-Preserving Algorithms for Ordinary Differential Equations. Berlin ;
+  New York :Springer, 2002.
+
+### PositiveDomain Callback
+
+- Shampine, Lawrence F., Skip Thompson, Jacek Kierzenka and G. D. Byrne.
+  “Non-negative solutions of ODEs.” Applied Mathematics and Computation 170
+  (2005): 556-569.
 
 ### Constant Rate Jump Aggregators
 
