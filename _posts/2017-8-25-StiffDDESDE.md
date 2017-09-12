@@ -88,17 +88,17 @@ full solution type which means that "boundary values" can be things like
 specifically for two-point boundary value problems, and will soon include
 adaptivity like the MATLAB method `bvp4c`.
 
-## Higher order methods for Stratanovich Equations
+## Higher order methods for Stratonovich Equations
 
-Milstein methods now have the option for `interpretation=:Stratanovich` which
-will make them solve the Stratanovich form of the SDE instead of the Ito form.
-This means that there are many strong order 1.0 methods for Stratanovich
+Milstein methods now have the option for `interpretation=:Stratonovich` which
+will make them solve the Stratonovich form of the SDE instead of the Ito form.
+This means that there are many strong order 1.0 methods for Stratonovich
 equations now (including stiff solvers).
 
 ## Commutative Noise Handling in Milstein
 
 The new Milstein method `RKMilCommute`, is a strong order 1.0 method for both
-Ito and Stratanovich (through the `interpretation` argument) SDEs with a special
+Ito and Stratonovich (through the `interpretation` argument) SDEs with a special
 form of non-diagonal noise. This is a very efficient form of non-diagonal noise
 which shows up in many real-world models. A full non-diagonal Milstein method
 is coming soon, but it will not be able to reach the efficiency of this special
