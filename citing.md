@@ -245,6 +245,14 @@ University of Geneva, Switzerland.
   Nonstiff Problems. 2nd Edition. Springer Series in Computational Mathematics,
   Springer-Verlag.
 
+#### ERKN4
+
+- M. A. Demba, N. Senu, F. Ismail "An embedded 4(3) pair of explicit trigonometrically-fitted Runge-Kutta-Nystrom method for solving periodic initial value problems" Applied Mathematical Sciences, Vol. 11, 2017, no. 17, 819-838, https://doi.org/10.12988/ams.2017.7262
+
+#### ERKN5
+
+- Demba, Musa & Senu, Norazak & Ismail, Fudziah. (2016). A 5(4) Embedded Pair of Explicit Trigonometrically-Fitted Runge–Kutta–Nyström Methods for the Numerical Solution of Oscillatory Initial Value Problems. Mathematical and Computational Applications. 21. . 10.3390/mca21040046.
+
 #### IRKN3, IRKN4
 
 - Numerical Solution of Second-Order Ordinary Differential Equations by Improved
