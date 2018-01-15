@@ -70,6 +70,10 @@ this information needs to be updated, please open an issue or pull request
   Solver for Ordinary Differential Equations, Technical report UCRL-ID-113855,
   Lawrence Livermore National Laboratory, December 1993.
 
+- Linda Petzold, Automatic Selection of Methods for Solving Stiff and Nonstiff
+  Systems of  Ordinary Differential Equations, SIAM J. Sci. and Stat. Comput.,
+  4(1), 136–148.
+
 - LSODA.jl. Date of access. Current version. https://github.com/rveltz/LSODA.jl.
 
 #### ODE.jl
