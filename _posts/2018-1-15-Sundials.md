@@ -39,7 +39,8 @@ Secondly, this adds an entirely new library of solvers called
 `ARKODE` for explicit, implicit, and IMEX (implicit-explicit) Runge-Kutta methods.
 These have been incorporated into the [updated benchmarks](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl)
 Summary: OrdinaryDiffEq.jl tends to be more efficient. For example,
-[see this benchmark](which shows about a 5x timing difference) between the fastest
+[see this benchmark](http://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqBenchmarks.jl/blob/master/StiffODE/Hires.ipynb)
+which shows about a 5x timing difference between the fastest
 OrdinaryDiffEq.jl ESDIRK method and the fastest ARKODE one (both are same general
 tableaus with different implementation details). But, these are very easy to
 use for PDEs with banded and sparse Jacobians so they have a good spot.
