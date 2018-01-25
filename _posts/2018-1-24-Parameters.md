@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DifferentialEquations.jl 4.0: Breaking Syntax Changes, Adjoint Sensitivity, Bayesian Estimation, and ETDRK4"
-date:   2018-1-24 11:30:00
+date:   2018-1-24 7:30:00
 categories:
 ---
 
@@ -19,7 +19,7 @@ Given the incoming Julia 1.0 and its breaking changes, we decided to follow suit
 and fix our syntax issues as well. In our next release we will finally be
 applying these breaking changes.
 
-#### These changes will be live by January 26th, 2018 as part of DifferentialEquations.jl v4.0.0
+#### We hope these changes will be live by January 29th, 2018 as DifferentialEquations.jl v4.0.0
 
 To see what version you have, use `Pkg.status("DifferentialEquations")`. To
 stay on the previous version, use `Pkg.pin("DifferentialEquations",v"3.1.0")`.
@@ -50,11 +50,11 @@ The upgrade path is as follows:
 7. For any BVP boundary condition `bc(resid,u)`, it's now `bc(resid,u,p,t)`
 8. For any RODE function `f(t,u,W)`, it's now `f(u,p,t,W)`
 9. For any RODE function `f(t,u,du,W)`, it's now `f(du,u,p,t,W)`
-10. For any Dynamical ODE function `f(t,u1,u2,dui)`, it's now `f(dui,u1,u2,p,t)`
-11. For any Dynamical ODE function `f(t,u1,u2)`, it's now `f(u1,u2,p,t)`
-12. For any second order ODE function `f(t,u,du,out)`, it's now `f(out,u,du,p,t)`
-13. For any second order ODE function `f(t,u,du)`, it's now `f(u,du,p,t)`
-14. For any Hamiltonian `H(q,p)`, it's now `H(q,p,params)`
+10. For any Dynamical ODE function `f(t,u,v,dv)`, it's now `f(dv,v,u,p,t)`
+11. For any Dynamical ODE function `f(t,u,v)`, it's now `f(v,u,p,t)`
+12. For any second order ODE function `f(t,u,du,out)`, it's now `f(out,du,u,p,t)`
+13. For any second order ODE function `f(t,u,du)`, it's now `f(du,u,p,t)`
+14. For any Hamiltonian `H(q,p)`, it's now `H(p,q,params)`
 15. For any ODE Jacobian `f(::Type{Val{:jac}},t,u,J)`, it's now `f(::Type{Val{:jac}},J,u,p,t)`
 16. For any DAE Jacobian `f(::Type{Val{:jac}},t,u,du,gamma,J)`, it's now
     `f(::Type{Val{:jac}},J,du,u,p,gamma,t)`
@@ -147,7 +147,7 @@ However, there are many things that benefit from this:
 
 These issues are what tripped up more people over time than anything else, so
 while this is a breaking change that will require work from everyone,
-I hope that the dust will settle in about 2 weeks and everything will go forward
+we hope that the dust will settle in about 2 weeks and everything will go forward
 with a syntax that will persist and be well-liked.
 
 ## ETDRK4
@@ -228,8 +228,9 @@ On [Febraury 8th at 7PM PST](https://www.meetup.com/Southern-California-Julia-Us
 we will be having a SoCal Julia meetup at the
 University of California, Irvine. Katharine Hyatt will be giving a talk with
 titled "Using Julia to Develop New Methods for Non-Equilibrium Statistical
-Mechanics". Additionally, Chris Rackauckas will be giving a talk titled ""How
-Multiprecision Leads to More Efficient and More Robust PDE Solvers""
+Mechanics". Additionally, Chris Rackauckas will be giving a talk titled "How
+Multiprecision Leads to More Efficient and More Robust PDE Solvers". If you
+are in the area and would like to give a talk, please contact the organizers.
 
 # In development
 
