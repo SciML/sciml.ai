@@ -24,9 +24,9 @@ applying these breaking changes.
 To see what version you have, use `Pkg.status("DifferentialEquations")`. To
 stay on the previous version, use `Pkg.pin("DifferentialEquations",v"3.1.0")`.
 
-These changes are discussed in
-[this issue](https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues/235)
-and are summarized as:
+Note that the [latest docs](http://docs.juliadiffeq.org/latest/index.html) are
+live with the changes. The [release-3.2 docs](http://docs.juliadiffeq.org/release-3.2/)
+still hold the old syntax if needed.
 
 ### Summary of the Changes
 
