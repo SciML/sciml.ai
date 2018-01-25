@@ -31,7 +31,7 @@ still hold the old syntax if needed.
 ### Summary of the Changes
 
 1. Mutation goes first, then dependent variables, then parameters, then independent
-   variables. `f(mutate, dependent variables, p/integrator, independent variables)`
+   variables.    `f(mutate, dependent variables, p/integrator, independent variables)`
 2. No more wrapping parameters into functors. Parameters are part of the problem.
 3. All functions will have access to the problem parameters `p`.
 
