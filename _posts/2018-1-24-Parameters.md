@@ -6,7 +6,7 @@ categories:
 ---
 
 In this release we have a big exciting breaking change to our API. We are taking
-a "now or never" approach to fixing all of the API cruft we've gather as we've
+a "now or never" approach to fixing all of the API cruft we've gathered as we've
 expanded to different domains. Now that we cover the space of problems we wish
 to solve, we realize many inconsistencies we've introduced in our syntax.
 Instead of keeping them, we've decided to do a breaking change to fix these
