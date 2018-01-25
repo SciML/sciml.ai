@@ -30,10 +30,10 @@ still hold the old syntax if needed.
 
 ### Summary of the Changes
 
-* Mutation goes first, then dependent variables, then parameters, then independent
+1. Mutation goes first, then dependent variables, then parameters, then independent
    variables. `f(mutate, dependent variables, p/integrator, independent variables)`
-* No more wrapping parameters into functors. Parameters are part of the problem.
-* All functions will have access to the problem parameters `p`.
+2. No more wrapping parameters into functors. Parameters are part of the problem.
+3. All functions will have access to the problem parameters `p`.
 
 For example, this means that the ODE syntax will be `f(u,p,t)` and `f(du,u,p,t)`.
 This is breaking, as your previous code will break. In addition, there is no
@@ -41,27 +41,27 @@ deprecation warning which is possible for this transition, making it a little
 more difficult than most. The documentation is already live with the changes.
 The upgrade path is as follows:
 
-1. For any ODE/SDE function `f(t,u)`, it's now `f(u,p,t)`
-2. For any ODE/SDE function `f(t,u,du)`, it's now `f(du,u,p,t)`
-3. For any DAE function `f(t,u,du,resid)`, it's now `f(resid,du,u,p,t)`
-4. For any DAE function `f(t,u,du)`, it's now `f(du,u,p,t)`
-5. For any DDE function `f(t,u,h,du)`, it's now `f(du,u,h,p,t)`
-6. For any DDE function `f(t,u,h)`, it's now `f(u,h,p,t)`
-7. For any BVP boundary condition `bc(resid,u)`, it's now `bc(resid,u,p,t)`
-8. For any RODE function `f(t,u,W)`, it's now `f(u,p,t,W)`
-9. For any RODE function `f(t,u,du,W)`, it's now `f(du,u,p,t,W)`
-10. For any Dynamical ODE function `f(t,u,v,dv)`, it's now `f(dv,v,u,p,t)`
-11. For any Dynamical ODE function `f(t,u,v)`, it's now `f(v,u,p,t)`
-12. For any second order ODE function `f(t,u,du,out)`, it's now `f(out,du,u,p,t)`
-13. For any second order ODE function `f(t,u,du)`, it's now `f(du,u,p,t)`
-14. For any Hamiltonian `H(q,p)`, it's now `H(p,q,params)`
-15. For any ODE Jacobian `f(::Type{Val{:jac}},t,u,J)`, it's now `f(::Type{Val{:jac}},J,u,p,t)`
-16. For any DAE Jacobian `f(::Type{Val{:jac}},t,u,du,gamma,J)`, it's now
-    `f(::Type{Val{:jac}},J,du,u,p,gamma,t)`
-17. For any jump rates `rate(t,u)`, it's now `rate(u,p,t)`
-18. For any callback condition `condition(t,u,integrator)`, it's now `condition(u,t,integrator)`
-19. `DDEProblem`s now use keyword arguments for the lags. The new construction
-    syntax is:
+* For any ODE/SDE function `f(t,u)`, it's now `f(u,p,t)`
+* For any ODE/SDE function `f(t,u,du)`, it's now `f(du,u,p,t)`
+* For any DAE function `f(t,u,du,resid)`, it's now `f(resid,du,u,p,t)`
+* For any DAE function `f(t,u,du)`, it's now `f(du,u,p,t)`
+* For any DDE function `f(t,u,h,du)`, it's now `f(du,u,h,p,t)`
+* For any DDE function `f(t,u,h)`, it's now `f(u,h,p,t)`
+* For any BVP boundary condition `bc(resid,u)`, it's now `bc(resid,u,p,t)`
+* For any RODE function `f(t,u,W)`, it's now `f(u,p,t,W)`
+* For any RODE function `f(t,u,du,W)`, it's now `f(du,u,p,t,W)`
+* For any Dynamical ODE function `f(t,u,v,dv)`, it's now `f(dv,v,u,p,t)`
+* For any Dynamical ODE function `f(t,u,v)`, it's now `f(v,u,p,t)`
+* For any second order ODE function `f(t,u,du,out)`, it's now `f(out,du,u,p,t)`
+* For any second order ODE function `f(t,u,du)`, it's now `f(du,u,p,t)`
+* For any Hamiltonian `H(q,p)`, it's now `H(p,q,params)`
+* For any ODE Jacobian `f(::Type{Val{:jac}},t,u,J)`, it's now `f(::Type{Val{:jac}},J,u,p,t)`
+* For any DAE Jacobian `f(::Type{Val{:jac}},t,u,du,gamma,J)`, it's now
+  `f(::Type{Val{:jac}},J,du,u,p,gamma,t)`
+* For any jump rates `rate(t,u)`, it's now `rate(u,p,t)`
+* For any callback condition `condition(t,u,integrator)`, it's now `condition(u,t,integrator)`
+* `DDEProblem`s now use keyword arguments for the lags. The new construction
+  syntax is:
 
 ```julia
 DDEProblem{isinplace}(f,u0,h,tspan,p=nothing;
@@ -73,19 +73,19 @@ DDEProblem{isinplace}(f,u0,h,tspan,p=nothing;
                              callback = nothing)
 ```
 
-20. State-dependent delay lags `lag(t,u)` are now `lag(u,p,t)`
-21. `DDEProblem` history functions now use keyword arguments for `idxs` to match
-    the interpolation of standard solution types.
-22. `DAEProblem`s now flip to `du0,u0` to match the way the arguments show in the
-    function. The construction syntax is now:
+* State-dependent delay lags `lag(t,u)` are now `lag(u,p,t)`
+* `DDEProblem` history functions now use keyword arguments for `idxs` to match
+  the interpolation of standard solution types.
+* `DAEProblem`s now flip to `du0,u0` to match the way the arguments show in the
+  function. The construction syntax is now:
 
 ```julia
 DAEProblem{isinplace}(f,du0,u0,tspan,p=nothing;
                       callback = nothing,
                       differential_vars = nothing)
 ```
-23. For any `@ode_def` definition, the function no longer holds the
-parameters. For example,
+* For any `@ode_def` definition, the function no longer holds the
+  parameters. For example,
 
 ```julia
 g = @ode_def LorenzExample begin
@@ -108,9 +108,9 @@ end σ ρ β
 This gets rid of the most repeated question "why are some `=>` and others `=`?".
 Now it's only for parameters, instead just inline the constants.
 
-24. There's no need for `ParameterizedFunction(f,p)` to enclose
-parameters. To give parameters, now they are given to the problem. For example,
-for the ODEProblem, you can call
+* There's no need for `ParameterizedFunction(f,p)` to enclose
+  parameters. To give parameters, now they are given to the problem. For example,
+  for the ODEProblem, you can call
 
 ```julia
 ODEProblem(f,u0,tspan)
@@ -171,8 +171,8 @@ use this guide and request new additions as necessary!
 
 Adjoint sensitivity analysis lets you directly solve for the derivative of some
 functional of the differential equation solution, such as a cost function in
-an optimization problem. DifferentialEquations.jl now has a package-independent
-adjoint sensitivity analysis implementation that lets you use any of the common
+an optimization problem.
+[DifferentialEquations.jl now has a package-independent adjoint sensitivity analysis implementation](http://docs.juliadiffeq.org/latest/analysis/sensitivity.html#Adjoint-Sensitivity-Analysis-1) that lets you use any of the common
 interface ODE solvers to perform this analysis. While there are more optimizations
 which still need to be done in this area, this will be a useful feature for those
 looking to perform optimization on the ODE solver.
@@ -197,8 +197,7 @@ requires that your function is defined via `@ode_def` and will write and run a
 code from [Stan](http://mc-stan.org/) to generate posterior distributions. The
 `turing_inference` function uses [Turing.jl](https://github.com/yebai/Turing.jl)
 and can work with any DifferentialEquations.jl object. These functions simply
-require your `DEProblem`, data, and prior distributions and the rest of the
-inference setup is done for you. Thus this is a very quick way to make use of
+require your `DEProblem`, data, and prior distributions and the [rest of the inference setup is done for you](http://docs.juliadiffeq.org/latest/analysis/parameter_estimation.html#Bayesian-Inference-Examples-1). Thus this is a very quick way to make use of
 the power of Bayesian inference tools!
 
 ## Small Problem Speedups
