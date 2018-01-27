@@ -19,7 +19,7 @@ Given the incoming Julia 1.0 and its breaking changes, we decided to follow suit
 and fix our syntax issues as well. In our next release we will finally be
 applying these breaking changes.
 
-#### We hope these changes will be live by January 29th, 2018 as DifferentialEquations.jl v4.0.0
+#### These changes are live!
 
 To see what version you have, use `Pkg.status("DifferentialEquations")`. To
 stay on the previous version, use `Pkg.pin("DifferentialEquations",v"3.1.0")`.
