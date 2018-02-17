@@ -100,7 +100,8 @@ parallelism) but makes it easy to "modify".
 We have a new method by @onoderat for SDEs which is the Predictor-Corrector Euler
 (PCE) method. This methods works on non-diagonal SDEs and
 [can be more much more efficient than EM](https://github.com/JuliaDiffEq/StochasticDiffEq.jl/pull/53).
-It does require the definition of a separate function `ggprime` (defined in the
+It does require the definition of a separate function `ggprime` (which will be
+defined in the
 [documentation](http://docs.juliadiffeq.org/latest/solvers/sde_solve.html#Special-Noise-Forms-1))
 and we will be working to define function versions that will autodifferentiate
 and numerical differentiate (also symbolically build) this function.
