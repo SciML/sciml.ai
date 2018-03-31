@@ -133,10 +133,10 @@ step of a previous event.
 
 This release is packaged with a bunch of goodies, but stay tuned for the next
 release. Soon we will be releasing the first multi-paradigm automatic stiffness
-detection and switching algorithms since LSODA (1983), picking right up where
-the masters left it by incorporating more efficient higher order methods. In
-addition there will be a large set of new SDE solvers dropping within the next
-month.
+detection and switching algorithms since LSODA (1983) (that we know of),
+picking right up where the masters left it by incorporating more efficient
+higher order methods. In addition there will be a large set of new SDE solvers
+dropping within the next month.
 
 Additionally, this is the main current "in development" list:
 
