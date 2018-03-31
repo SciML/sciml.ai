@@ -84,7 +84,8 @@ Runge-Kutta and thus are more effective for large systems and when the derivativ
 function `f` gets costly.
 [OrdinaryDiffEq.jl now has some fixed time step methods of this class](http://docs.juliadiffeq.org/latest/solvers/ode_solve.html#Fixed-Time-and-Order-Multistep-Methods-1)
 and hopefully in the near future we will get our own adaptive time adaptive order
-versions. Stay tuned.
+versions. Thank the new contributor Shubham Maddhashiya (@sipah00) for this
+contribution and stay tuned.
 
 ## Optimized SSAStepper
 
