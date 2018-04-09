@@ -87,6 +87,7 @@ throughout StochasticDiffEq.jl. These include:
 1) [`EM` and `LambaEM`](http://docs.juliadiffeq.org/latest/solvers/sde_solve.html#Nonstiff-Methods-1)
    have a choice to enable/disable step splitting. By default
    step splitting is enabled.
+   
 2) [The `ISSEM` and `ISSEulerHeun` methods](http://docs.juliadiffeq.org/latest/solvers/sde_solve.html#Stiff-Methods-1)
    are implemented which are implicit
    methods with step splitting, giving good stability in both the drift and noise
