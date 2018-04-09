@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching"
-date:   2018-4-8 10:00:00
+date:   2018-4-9 8:00:00
 categories:
 ---
 
@@ -37,6 +37,37 @@ achieved.
 These methods are available to users as the `Auto` algorithms, like
 `AutoTsit5(Rodas5())` which does automatic switching between `Tsit5()` and
 `Rodas5()`. These methods also apply to delay differential equations.
+See the [ODE solver docs for details](http://docs.juliadiffeq.org/latest/solvers/ode_solve.html#CompositeAlgorithm-1).
+
+## New SSA Algorithms/Optimizations, Mass Action Jumps
+
+One issue we had with our previous jump tooling is that it did not scale well
+to large numbers of jumps. Sam (@isaacsas) and Alfonso Landeros (@alanderos91)
+addressed this problem head on by creating a lot more jump problem tooling.
+The key issue is that the `rate` and `affect!` functions are functions, and
+each function in Julia is a separate type. The tuple unpacking scheme is super
+fast for <10 types, but then slows down. What is the best way to keep the
+generality but also scale well?
+
+First of all, they recognized that most jumps are due to mass-action terms
+which can be specialized. These terms don't need functions since we know the
+functional form one would make.
+[Thus now there's the `MassActionJump`](http://docs.juliadiffeq.org/latest/types/jump_types.html#Defining-a-Mass-Action-Jump-1)
+which can hold the stoichiometry matrix for the mass action terms. These can
+hold all of the mass action terms, evaluate them efficiently, and reduce the
+number of functions that have to be handled. It has been
+[added to the jump tutorial](http://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example.html#Defining-the-Jumps-Directly:-MassActionJump-1).
+
+Next, [new SSAs were added](http://docs.juliadiffeq.org/latest/types/jump_types.html#Constant-Rate-Jump-Aggregators-1).
+There is the First Reaction Method `FRM()` that can
+be used as an aggregation. In addition, the SSAs can now utilize
+FunctionWrappers.jl to efficiently scale to large vectors of functions. Thus
+there are new methods like `DirectFW()` which utilize this strategy and will
+be more efficient when one has >10 non mass-action terms.
+
+Together this is looking quite beautiful. These methods can all use the
+`SSAStepper()` for pure-jump problems, but also these methods all compose with
+the ODE/SDE/DDE/DAE solvers to mix jumps and differential equations!
 
 ## Large Noise Stable Methods for SDEs
 
@@ -53,9 +84,11 @@ for large noise SDEs, usually without an additional cost. Given the effectivenes
 of this research, step-splitting has been incorporated in different ways
 throughout StochasticDiffEq.jl. These include:
 
-1) `EM` and `LambaEM` have a choice to enable/disable step splitting. By default
+1) [`EM` and `LambaEM`](http://docs.juliadiffeq.org/latest/solvers/sde_solve.html#Nonstiff-Methods-1)
+   have a choice to enable/disable step splitting. By default
    step splitting is enabled.
-2) The `ISSEM` and `ISSEulerHeun` methods are implemented which are implicit
+2) [The `ISSEM` and `ISSEulerHeun` methods](http://docs.juliadiffeq.org/latest/solvers/sde_solve.html#Stiff-Methods-1)
+   are implemented which are implicit
    methods with step splitting, giving good stability in both the drift and noise
    terms. Additionally, these methods allow non-diagonal noise and have adaptive
    time stepping.
@@ -64,33 +97,6 @@ Together, these algorithms can be much more efficient than the standard
 implementations when the noise term is large. Once again, these methods combine
 adaptivity which increases the amount of automation and the pool of methods which
 can be solved.
-
-## New SSA Algorithms/Optimizations, Mass Action Jumps
-
-One issue we had with our previous jump tooling is that it did not scale well
-to large numbers of jumps. Sam (@isaacsas) and Alfonso Landeros (@alanderos91)
-addressed this problem head on by creating a lot more jump problem tooling.
-The key issue is that the `rate` and `affect!` functions are functions, and
-each function in Julia is a separate type. The tuple unpacking scheme is super
-fast for <10 types, but then slows down. What is the best way to keep the
-generality but also scale well?
-
-First of all, they recognized that most jumps are due to mass-action terms
-which can be specialized. These terms don't need functions since we know the
-functional form one would make. Thus now there's the `MassActionJump` which
-can hold the stoichiometry matrix for the mass action terms. These can hold
-all of the mass action terms, evaluate them efficiently, and reduce the number
-of functions that have to be handled.
-
-Next, new SSAs were added. There is the First Reaction Method `FRM()` that can
-be used as an aggregation. In addition, the SSAs can now utilize
-FunctionWrappers.jl to efficiently scale to large vectors of functions. Thus
-there are new methods like `DirectFW()` which utilize this strategy and will
-be more efficient when one has >10 non mass-action terms.
-
-Together this is looking quite beautiful. These methods can all use the
-`SSAStepper()` for pure-jump problems, but also these methods all compose with
-the ODE/SDE/DDE/DAE solvers to mix jumps and differential equations!
 
 ## First-Differences in Parameter Estimation
 
