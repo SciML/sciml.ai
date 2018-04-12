@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "DifferentialEquations.jl 4.4: Enhanced Stability SDE Integrators"
-date:   2018-4-9 8:00:00
+title:  "DifferentialEquations.jl 4.4: Enhanced Stability and IMEX SDE Integrators"
+date:   2018-4-15 8:00:00
 categories:
 ---
 
