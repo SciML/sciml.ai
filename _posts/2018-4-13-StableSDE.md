@@ -6,14 +6,13 @@ categories:
 ---
 
 These are features long hinted at. The
-[Arxiv paper]()
-is finally up and the
-new methods from that paper are the release. In this paper I wanted to "complete"
+[Arxiv paper](https://arxiv.org/abs/1804.04344) is finally up and the new
+methods from that paper are the release. In this paper I wanted to "complete"
 the methods for additive noise and attempt to start enhancing the methods for
 diagonal noise SDEs. See the
 [updated SDE solvers documentation](http://docs.juliadiffeq.org/latest/solvers/sde_solve.html).
 
-Here's what's up:
+Here's what's up!
 
 ## Stability-Enhanced High Order Explicit Stochastic Runge-Kutta Methods for Additive/Diagonal Noise
 
@@ -40,6 +39,8 @@ The new methods of this type are:
 
 `SOSRA` and `SOSRI` are now the recommended methods for additive and diagonal
 noise respectively.
+
+![Benchmarks](https://user-images.githubusercontent.com/1814174/38661859-1f3f912e-3de7-11e8-9c3d-5e6aaaf5afff.PNG)
 
 ## High Order Adaptive L-Stable Implicit Integrator for Stiff SDEs with Additive Noise
 
