@@ -9,10 +9,11 @@ These are features long hinted at. The
 [Arxiv paper](https://arxiv.org/abs/1804.04344) is finally up and the new
 methods from that paper are the release. In this paper I wanted to "complete"
 the methods for additive noise and attempt to start enhancing the methods for
-diagonal noise SDEs. See the
-[updated SDE solvers documentation](http://docs.juliadiffeq.org/latest/solvers/sde_solve.html).
-
-Here's what's up!
+diagonal noise SDEs. Thus while it focuses on a constrained form of noise, this
+is a form of noise present in a lot of models and, by using the constrained form,
+allows for extremely optimized methods. See the
+[updated SDE solvers documentation](http://docs.juliadiffeq.org/latest/solvers/sde_solve.html)
+for details on the new methods. Here's what's up!
 
 ## Stability-Enhanced High Order Explicit Stochastic Runge-Kutta Methods for Additive/Diagonal Noise
 
