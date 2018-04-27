@@ -462,15 +462,3 @@ University of Geneva, Switzerland.
  - David F. Anderson, Masanori Koyama; An asymptotic relationship between coupling
    methods for stochastically modeled population processes. IMA J Numer Anal 2015;
    35 (4): 1757-1778. doi: 10.1093/imanum/dru044
-
-$$ dX_t = f(X_t,t)dt + g(X_t,t)dW_t $$
-
-where \\(g\\) is a matrix.
-
- $$
- \begin{align}
- dx &= (σ(y-x))dt + 0.3x dW_t^1 +  1.2y dW_t^2 \\
- dy &= (x(ρ-z) - y)dt + 0.6x dW_t^1 + 0.2 dW_t^2 \\
- dz &= (xy - βz) dt + 0.2x dW_t^1 + 0.3y dW_t^2 \\
- \end{align}
- $$
