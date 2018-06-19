@@ -24,8 +24,26 @@ implementation of the variable order variable time step Adams-Bashforth-Moulton
 method. This implementation matches the classic DDEABM software of Shampine
 which specializes in its ability to utilize the higher orders for larger time
 steps and high efficiency on less stiff equations. Our benchmarks show efficiency
-improvements over DDEABM, making it a good native Julia replacement to that
-classic method for large non-stiff ODE systems.
+improvements over not only DDEABM, but also over the Sundials' CVODE Adams
+implementation (not surprised here though: Hairer had showed before that a
+variable coefficient form can give more effective order selection) and the
+Runge-Kutta methods on some problems. This makes it a good native Julia
+replacement to those classic methods, not only for large non-stiff ODE systems,
+but also on many other smooth non-stiff systems.
+
+For example, here is the new method applied to the Pleiades Problem:
+
+![Pleiades work-precision diagram](https://user-images.githubusercontent.com/17304743/41568408-5f5aeb7e-731a-11e8-9bb0-b310cae20d1c.png)
+
+In the [previous notebook](http://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqBenchmarks.jl/blob/master/NonStiffODE/Pleiades%20Work-Precision%20Diagrams.ipynb), the fastest methods were the
+Vern6, Vern7, and Sundials CVODE methods. Now this method seems to be a new
+contender in this field.
+
+## Low Order IMEX Methods
+
+GSoC student Shubham Maddhashiya (@sipah00)
+
+CNAB2, CNLF, IMEXEuler
 
 # In development
 
