@@ -7,7 +7,7 @@ categories:
 
 Tons of improvements due to Google Summer of Code. Here's what's happened.
 
-## Global Sensitivty Analysis (Morris, Sobol)
+## Global Sensitivty Analysis (Morris, Sobol, PRC, SRC, etc.)
 
 GSoC student Vaibhav Dixit (@Vaibhavdixit02) added global sensitivity analysis
 (GSA) methods to DiffEqSensitivity.jl. GSA quantifies the effects of the
@@ -41,14 +41,29 @@ contender in this field.
 
 ## Low Order IMEX Methods
 
-GSoC student Shubham Maddhashiya (@sipah00)
-
-CNAB2, CNLF, IMEXEuler
+GSoC student Shubham Maddhashiya (@sipah00) added some low order IMEX methods
+to the OrdinaryDiffEq.jl solver suite. These methods are common methods for
+solving PDEs, especially spectral discretizations of PDEs. Crank-Nicholson
+Adams-Bashforth 2 (CNAB2), Crank-Nicholson Leapfrog (CNLF), and an
+Implicit-Explicit Euler method (IMEXEuler) are all available on the common
+interface. In many cases one may want to utilize the higher order methods,
+but there are still many uses for these. For example, implicit Euler is the
+only method with an infinite strong stability preserving (SSP) coefficient,
+meaning that it can be much more stable than other methods for hyperbolic
+PDEs. This IMEXEuler can be an easy way to utilize a more efficient than the
+standard IMEXEuler.
 
 # In development
 
 A lot of the next developments will come from our GSoC students. Here's a list
 of things we are aiming for:
+
+- Quasi-constant stepsize variable coefficient BDF and NDF and IMEX BDF (SBDF) 
+  integrators. Both fixed and variable order.
+  
+- High order `EPIRK` adaptive exponential Runge-Kutta methods. 
+
+- Fixed Leading Coefficient (FLC) form Nordsieck BDF integrators.
 
 - `SABDF2`, which is a strong order 0.5 adaptive BDF2 implementation for
   stochastic differential equations which is order 2 for small noise SDEs.
@@ -68,7 +83,6 @@ And here's a quick view of the rest of our "in development" list:
 - Preconditioner choices for Sundials methods
 - Adaptivity in the MIRK BVP solvers
 - More general Banded and sparse Jacobian support outside of Sundials
-- IMEX methods
 - Function input for initial conditions and time span (`u0(p,t0)`)
 - LSODA integrator interface
 
