@@ -39,6 +39,18 @@ In the [previous notebook](http://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEq
 Vern6, Vern7, and Sundials CVODE methods. Now this method seems to be a new
 contender in this field.
 
+## High Stiff Order Exponential Runge-Kutta Methods
+
+GSoC student Xingjian Guo (@MSeeker1340) added the `HochOst4` algorithm which
+is an exponential Runge-Kutta algorithm with stiff order 4. Unlike other high
+order ExpRK methods which have issues with order loss when solving a problem
+with high stiffness, this method retains its order even on this difficult
+class of problems. Note that the classic 4th order exponential integrator,
+`ETDRK4`, is only stiff order 1 making it perform less effectively than
+`HochOst4`on the highly stiff PDE discretizations that it was designed for.
+Xingjian is continuing this line of development with adaptive ExpRK methods
+and the high stiff order EPIRK methods.
+
 ## Low Order IMEX Methods
 
 GSoC student Shubham Maddhashiya (@sipah00) added some low order IMEX methods
@@ -58,10 +70,10 @@ standard IMEXEuler.
 A lot of the next developments will come from our GSoC students. Here's a list
 of things we are aiming for:
 
-- Quasi-constant stepsize variable coefficient BDF and NDF and IMEX BDF (SBDF) 
+- Quasi-constant stepsize variable coefficient BDF and NDF and IMEX BDF (SBDF)
   integrators. Both fixed and variable order.
-  
-- High order `EPIRK` adaptive exponential Runge-Kutta methods. 
+
+- High order `EPIRK` adaptive exponential Runge-Kutta methods.
 
 - Fixed Leading Coefficient (FLC) form Nordsieck BDF integrators.
 
