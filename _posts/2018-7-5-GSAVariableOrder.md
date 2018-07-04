@@ -7,15 +7,15 @@ categories:
 
 Tons of improvements due to Google Summer of Code. Here's what's happened.
 
-## Global Sensitivty Analysis (Morris, Sobol, PRC, SRC, etc.)
+## Global Sensitivty Analysis (Morris, Sobol)
 
 GSoC student Vaibhav Dixit (@Vaibhavdixit02) added global sensitivity analysis
 (GSA) methods to DiffEqSensitivity.jl. GSA quantifies the effects of the
 parameters on the solution of the ODE. The implementation of these methods
 are on any generic `f(p)`, so this may be refactored into an external non-DiffEq
 library. The Morris method and the Sobol method, two of the most commonly used
-GSA methods, are part of this implementation. Other methods, such as FAST,
-eFAST, etc. are coming soon.
+GSA methods, are part of this implementation. Other methods, such as PRC, SRC,
+FAST, eFAST, etc. are coming soon.
 
 ## Variable time step variable order Adams methods (VCABM)
 
