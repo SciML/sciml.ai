@@ -78,6 +78,17 @@ this will increase the usability of the software.
 
 GSoC student Shubham Maddhashiya (@sipah00)
 
+## Stabilized-Explicit Methods
+
+Stabilized explicit methods are explicit Runge-Kutta methods with high stage
+numbers that are chained together to give a stable method for semi-stiff
+differential equations. New contributor Yongfei Tan (@tyfff) implemented
+our first stabilized explicit method, the `ROCK2` algorithm. Since these are
+chained Runge-Kutta methods, no linear algebra is involved meaning that these
+methods can be compatible with all of the features that the basic Runge-Kutta
+methods are, giving us an easy avenue to support units, arbitrary array types,
+etc. in a method for stiff ODEs. This is an exciting area!
+
 # In development
 
 A lot of the next developments will come from our GSoC students. Here's a list
