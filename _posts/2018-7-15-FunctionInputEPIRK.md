@@ -15,12 +15,6 @@ developed for v0.7. This means that all new features will be Julia v0.7-only,
 but v0.6 versions should continue to work. A lot of help came from GSoC student
 Yingbo Ma (@YingboMa).
 
-While there will be some updated needed in user codes due to the changes from
-Julia v0.6 to v0.7, the JuliaDiffEq user interface is unchanged and thus we
-are not considering this to be a major release. On the backend, there are some
-major infrastructure changes (to allow for new features), but these are
-developer-facing changes.
-
 ## Jacobian Types: Sparse, Banded, etc.
 
 ## 5th (Stiff) Order EPIRK Methods
@@ -87,7 +81,11 @@ our first stabilized explicit method, the `ROCK2` algorithm. Since these are
 chained Runge-Kutta methods, no linear algebra is involved meaning that these
 methods can be compatible with all of the features that the basic Runge-Kutta
 methods are, giving us an easy avenue to support units, arbitrary array types,
-etc. in a method for stiff ODEs. This is an exciting area!
+etc. in a method for stiff ODEs. These methods are also low storage: instead
+of storing the Jacobian O(n^2) (unless sparse Jacobians are specified), these
+methods store O(n) by default, allowing them to be a nice default for large
+stiff systems when no sparsity structure is defined (and a dense Jacobian would
+not fit into memory). This is an exciting area!
 
 # In development
 
