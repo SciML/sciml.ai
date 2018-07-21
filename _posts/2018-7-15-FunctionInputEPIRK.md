@@ -1,11 +1,16 @@
 ---
 layout: post
-title:  "DifferentialEquations.jl 4.7: v0.7, Jacobian Types, EPIRK"
+title:  "DifferentialEquations.jl 5.0: v0.7, Jacobian Types, EPIRK"
 date:   2018-7-15 10:00:00
 categories:
 ---
 
-Tons of improvements due to Google Summer of Code. Here's what's happened.
+This marks the release of DifferentialEquations.jl. There will be an accompanying
+summary blog post which goes into more detail about our current state and sets
+the focus for the organization's v6.0 release. However, for now I would like
+to describe some of the large-scale changes which have been included in this
+release. Much thanks goes to the Google Summer of Code students who heavily
+contributed to these advances.
 
 ## v0.7 Compatibility
 
@@ -15,7 +20,7 @@ developed for v0.7. This means that all new features will be Julia v0.7-only,
 but v0.6 versions should continue to work. A lot of help came from GSoC student
 Yingbo Ma (@YingboMa).
 
-## Jacobian Types: Sparse, Banded, etc.
+## Jacobian Types: Sparse, Banded, Matrix-Free, etc.
 
 ## 5th (Stiff) Order EPIRK Methods
 
