@@ -37,18 +37,34 @@ solver ecosystem to incorporate EPIRK methods  into our suite, and so we will
 be performing some extensive testing to see if these claims hold. If they do,
 this would be a major efficiency gain to many potential DiffEq users.
 
+## Quasi-Constant Stepsize Variable Order BDF and NDF Integrators
+
+GSoC student Shubham Maddhashiya (@sipah00) has completed the implementation of
+the variable order quasi-constant time step NDF and BDF integrators. This is the
+implementation of multistep methods which is better known as GEAR, LSODE,
+or `ode15s` where a variable time step BDF method is constructed by
+interpolation to a new step size grid. This is done with the accuracy-increasing
+kappa's of Shampine to allow for larger step sizes. This is a full-Julia
+implementation in OrdinaryDiffEq.jl, so it will allow the use of arbitrary
+Julia types like arbitrary precision and complex numbers.
+
+This is an interesting moment for us because this is the last main feature you
+would expect in any other integrator library, making the native Julia solvers of
+DifferentialEquations.jl a true superset of the ODE libraries like MATLAB ODE
+suite, SciPy, etc.
+
 ## Functional initial conditions and timespans
 
 This is a feature that has been slated to be added for a long time. Now the initial
 condition to your differential equation problems do not have to just be constant
 values. For example, you can give a function `u0(p,t0)` and this will be evaluated
 using the parameters and starting time point in order to generate the `u0` as
-necessary. Additionally, if `u0` returns a `Distributions.jl` distribution, a solution
-will be taken by sampling from the initial distribution. By using this setup we
-will be able to do things like track sensitivity to initial condition in local
-sensitivity schemes. This has been a long requested feature and therefore we
-are happy to have a solution which is able to apply this similarly to all of the
-solvers.
+necessary. Additionally, if `u0` returns a `Distributions.jl` distribution, a
+solution will be taken by sampling from the initial distribution. By using this
+setup we will be able to do things like track sensitivity to initial condition
+in local sensitivity schemes. This has been a long requested feature and
+therefore we are happy to have a solution which is able to apply this similarly
+to all of the solvers.
 
 The structures that this allows may be more important than the feature itself.
 This was an often requested feature by library developers who wanted alternative
@@ -73,56 +89,47 @@ packages as well, which will allow the informal knowledge about package ecosyste
 interactions to get formally encoded and automatically utilized. We hope that
 this will increase the usability of the software.
 
-## Quasi-Constant Stepsize Variable Order BDF and NDF Integrators
+## An N-Body Problem Solver Package for Astrodynamics and Molecular Dynamics
 
-GSoC student Shubham Maddhashiya (@sipah00)
+This package was built by GSoC student Mikhail Vaganov (@Mikhail-Vaganov).
+It was a large endeavor and it includes tooling to easily create N-body
+problems with different potential functions (gravitational, electric, etc.)
+along with all of the pieces analysis methods for calculating temperature,
+pressure, etc. There will be a separate blog post introducing this cool
+and I don't want to steal its thunder so that's all we'll post for now!
 
 ## Stabilized-Explicit Methods
 
 Stabilized explicit methods are explicit Runge-Kutta methods with high stage
 numbers that are chained together to give a stable method for semi-stiff
-differential equations. New contributor Yongfei Tan (@tyfff) implemented
-our first stabilized explicit method, the `ROCK2` algorithm. Since these are
-chained Runge-Kutta methods, no linear algebra is involved meaning that these
-methods can be compatible with all of the features that the basic Runge-Kutta
-methods are, giving us an easy avenue to support units, arbitrary array types,
-etc. in a method for stiff ODEs. These methods are also low storage: instead
-of storing the Jacobian O(n^2) (unless sparse Jacobians are specified), these
-methods store O(n) by default, allowing them to be a nice default for large
-stiff systems when no sparsity structure is defined (and a dense Jacobian would
-not fit into memory). This is an exciting area!
+differential equations. New contributor Yongfei Tan (@tyfff) with the help of
+Yingbo Ma (@YingboMa) implemented our first stabilized explicit method, the
+`ROCK2` algorithm. Since these are chained Runge-Kutta methods, no linear
+algebra is involved meaning that these methods can be compatible with all of the
+features that the basic Runge-Kutta methods are, giving us an easy avenue to
+support units, arbitrary array types, etc. in a method for stiff ODEs. These
+methods are also low storage: instead of storing the Jacobian O(n^2) (unless
+sparse Jacobians are specified), these methods store O(n) by default, allowing
+them to be a nice default for large stiff systems when no sparsity structure is defined (and a dense Jacobian would not fit into memory). This is an exciting
+area!
 
 # In development
-
-A lot of the next developments will come from our GSoC students. Here's a list
-of things we are aiming for:
-
-- Variable coefficient IMEX BDF (SBDF) integrators. Both fixed and variable order.
-
-- Fixed Leading Coefficient (FLC) form Nordsieck BDF integrators.
-
-- `SABDF2`, which is a strong order 0.5 adaptive BDF2 implementation for
-  stochastic differential equations which is order 2 for small noise SDEs.
-  This will be the first implicit adaptive integrator for small noise SDEs and
-  will be a great choice for SPDEs.
-
-- Yiannis Simillides (@ysimillides) keeps making improvements to FEniCS.jl. At
-  this part a large portion (a majority?) of the tutorial works from Julia.
-  Integration with native Julia tools like Makie.jl is in progress.
-
-- Mikhail Vaganov (@Mikhail-Vaganov) is making good progress on his N-body
-  modeling language. This will make it easy to utilize DiffEq as a backend
-  for molecular dynamics simulation. Follow the progress in DiffEqPhysics.jl
 
 And here's a quick view of the rest of our "in development" list:
 
 - Preconditioner choices for Sundials methods
 - Adaptivity in the MIRK BVP solvers
 - LSODA integrator interface
+- Variable coefficient IMEX BDF (SBDF) integrators. Both fixed and variable order.
+- Fixed Leading Coefficient (FLC) form Nordsieck BDF integrators.
+- `SABDF2`, which is a strong order 0.5 adaptive BDF2 implementation for
+  stochastic differential equations which is order 2 for small noise SDEs.
+  This will be the first implicit adaptive integrator specifically for small
+  noise SDEs and will be a great choice for SPDEs.
 
 # Projects
 
 Are you a student who is interested in working on differential equations software
 and modeling? If so, please get in touch with us since we may have some funding
-after August for some student developers to contribute towards some related goals.
-It's not guaranteed yet, but getting in touch never hurts!
+after August for some student developers to contribute towards some related
+goals. It's not guaranteed yet, but getting in touch never hurts!
