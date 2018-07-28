@@ -20,7 +20,42 @@ developed for v0.7. This means that all new features will be Julia v0.7-only,
 but v0.6 versions should continue to work. A lot of help came from GSoC student
 Yingbo Ma (@YingboMa).
 
+The following is a list of user-facing breaking changes:
+
+- The performance overloads are now changed. Instead of defining overloads like
+  `f(::Type{Val{:jac}},J,u,p,t)` for Jacobains, instead you define an
+  `ODEFunction(f,jac=f_jac)` where `f_jac` is the function `f_jac(J,u,p,t)`.
+  The same overloads all exist but now are passed to build the `ODEFunction`
+  which is then used by the solver. Things like `SDEFunction`, `DDEFunction`,
+  etc. all work analygously. These are documented in the
+  `Jacobians and DiffEqFunctions` page of the documentation. Mass matrices have
+  also moved to the DiffEqFunction types.
+
+- `saveat` now only includes the end points if the end points are in the array
+  of `saveat` time points. Before, if `tspan=(0.0,1.0)` and `saveat=[0.5]` it
+  would have saved at `[0.0,0.5,1.0]`. Now it saves at `[0.5]`. `saveat=0.5`
+  still expands to the array `saveat=[0.0,0.5,1.0]` and thus works the same.
+
+All other breaking changes are internal changes to the solver structures to
+support new features.
+
 ## Jacobian Types: Sparse, Banded, Matrix-Free, etc.
+
+The whole ecosystem now has a way to utilize non-dense matrix types by providing
+a `jac_prototype` to the appropriate `AbstractDiffEqFunction` (example:
+`ODEFunction`). This is a type which the solvers will use internally. For
+example, if you pass a sparse matrix than a sparse Jacobian with that sparsity
+structure is what will be used. Matrix types from other packages work: if you
+pass a `BandedMatrix` from BandedMatrices.jl then internally the solvers can
+utilize banded matrix solvers. Also, if you pass a lazy operator type which has
+`mul!` defined, then this matrix-free representation of the Jacobian is what
+will be used in algorithms like `gmres`. Thus any AbstractMatrix or
+AbstractDiffEqOperator can now be used as the Jacobian type. Specific solvers
+will throw an error if they do not support that matrix type. OrdinaryDiffEq.jl
+and StochasticDiffEq.jl support any Julia matrix type while Sundials.jl supports
+dense, sparse, and banded matrices. More widespread support for more matrix
+types can now be the subject of easy development since this interface is all
+setup thanks to GSoC student Xingjian Guo (@MSeeker1340).
 
 ## 5th (Stiff) Order EPIRK Methods
 
@@ -110,7 +145,8 @@ features that the basic Runge-Kutta methods are, giving us an easy avenue to
 support units, arbitrary array types, etc. in a method for stiff ODEs. These
 methods are also low storage: instead of storing the Jacobian O(n^2) (unless
 sparse Jacobians are specified), these methods store O(n) by default, allowing
-them to be a nice default for large stiff systems when no sparsity structure is defined (and a dense Jacobian would not fit into memory). This is an exciting
+them to be a nice default for large stiff systems when no sparsity structure is
+defined (and a dense Jacobian would not fit into memory). This is an exciting
 area!
 
 # In development
