@@ -127,12 +127,12 @@ This was an often requested feature by library developers who wanted alternative
 APIs. For example, this allows you to pass a single number for the timespan
 and have it expand to `(0,X)`. `nothing` timespans are allowed and then a
 user must pass a timespan at the `solve` command. Additionally, passing an
-algorithm via `alg` will place it into the dispatching `solve(prob,alg;kwargs...)`
-position automatically, helping package authors handle this common case where
-it's lumped into the splatted kwargs passed down to an internal DiffEq call
-(note it needs to be a positional algorithm for the dispatch mechanism to work,
-so at least as of Julia v1.0 it cannot be a keyword argument in general but
-this will allow it to act like one).
+algorithm via `alg` will place it into the dispatching
+`solve(prob,alg;kwargs...)` position automatically, helping package authors
+handle this common case where it's lumped into the splatted kwargs passed down
+to an internal DiffEq call (note it needs to be a positional algorithm for the
+dispatch mechanism to work, so at least as of Julia v1.0 it cannot be a keyword
+argument in general but this will allow it to act like one).
 
 Additionally, this let's us place a global type-checking system. There are some
 known type trip-ups which can occur. For example, using an adaptive ODE
@@ -141,9 +141,9 @@ algorithm with initial conditions being dual numbers, you need time to be
 in dual numbers as well. The infrastructure of this change allows us to throw
 warnings in these cases to alert users to potential problems. By mixing this
 with Requires.jl, we can alert problems due to interactions with 3rd party
-packages as well, which will allow the informal knowledge about package ecosystem
-interactions to get formally encoded and automatically utilized. We hope that
-this will increase the usability of the software.
+packages as well, which will allow the informal knowledge about package
+ecosystem interactions to get formally encoded and automatically utilized. We
+hope that this will increase the usability of the software.
 
 ## An N-Body Problem Solver Package for Astrodynamics and Molecular Dynamics
 
@@ -181,7 +181,7 @@ And here's a quick view of the rest of our "in development" list:
 
 # Projects
 
-Are you a student who is interested in working on differential equations software
-and modeling? If so, please get in touch with us since we may have some funding
-after August for some student developers to contribute towards some related
-goals. It's not guaranteed yet, but getting in touch never hurts!
+Are you a student who is interested in working on differential equations
+software and modeling? If so, please get in touch with us since we may have
+some funding after August for some student developers to contribute towards
+some related goals. It's not guaranteed yet, but getting in touch never hurts!
