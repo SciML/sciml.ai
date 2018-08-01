@@ -72,6 +72,18 @@ solver ecosystem to incorporate EPIRK methods  into our suite, and so we will
 be performing some extensive testing to see if these claims hold. If they do,
 this would be a major efficiency gain to many potential DiffEq users.
 
+## Adaptive Exponential-Rosenbrock methods
+
+Like the EPIRK methods, the Exponential-Rosenbrock methods are exponential
+integrators which work directly on first order ODEs and utilize the Krylov
+methods to be efficient solvers for stiff equations. However, the methods allow
+time stepping adaptivity unlike the EPIRK methods, meaning that not `dt` needs
+to be given and these can be standard DiffEq-wide defaults due to their
+minimal necessary user input. More testing will be required to show if these
+methods should replace any of the default implicit methods as default methods
+given by `solve`. This again is the work of the wonderful GSoC student Xingjian
+Guo (@MSeeker1340)
+
 ## Quasi-Constant Stepsize Variable Order BDF and NDF Integrators
 
 GSoC student Shubham Maddhashiya (@sipah00) has completed the implementation of
@@ -87,6 +99,15 @@ This is an interesting moment for us because this is the last main feature you
 would expect in any other integrator library, making the native Julia solvers of
 DifferentialEquations.jl a true superset of the ODE libraries like MATLAB ODE
 suite, SciPy, etc.
+
+## IMEX BDF Integrators
+
+The SBDF integrators are IMEX (implicit-explicit) methods which decrease the
+computational cost on the BDF integrator by allowing non-stiff portions of the
+equation to be integrated explicitly. GSoC student Shubham Maddhashiya (@sipah00)
+has contributed both implementations of the SBDF methods. These methods are
+described in the literature as core for handling large PDEs, yet this is the
+first set of open source implementations.
 
 ## Functional initial conditions and timespans
 
@@ -156,12 +177,7 @@ And here's a quick view of the rest of our "in development" list:
 - Preconditioner choices for Sundials methods
 - Adaptivity in the MIRK BVP solvers
 - LSODA integrator interface
-- Variable coefficient IMEX BDF (SBDF) integrators. Both fixed and variable order.
 - Fixed Leading Coefficient (FLC) form Nordsieck BDF integrators.
-- `SABDF2`, which is a strong order 0.5 adaptive BDF2 implementation for
-  stochastic differential equations which is order 2 for small noise SDEs.
-  This will be the first implicit adaptive integrator specifically for small
-  noise SDEs and will be a great choice for SPDEs.
 
 # Projects
 
