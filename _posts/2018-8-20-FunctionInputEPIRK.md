@@ -93,7 +93,10 @@ or `ode15s` where a variable time step BDF method is constructed by
 interpolation to a new step size grid. This is done with the accuracy-increasing
 kappa's of Shampine to allow for larger step sizes. This is a full-Julia
 implementation in OrdinaryDiffEq.jl, so it will allow the use of arbitrary
-Julia types like arbitrary precision and complex numbers.
+Julia types like arbitrary precision and complex numbers, though some of the
+extra features do need tests. And these still need some extensive benchmarking.
+But they are implemented and these finishing touches are much simpler to do
+over time.
 
 This is an interesting moment for us because this is the last main feature you
 would expect in any other integrator library, making the native Julia solvers of
@@ -147,7 +150,7 @@ hope that this will increase the usability of the software.
 
 ## An N-Body Problem Solver Package for Astrodynamics and Molecular Dynamics
 
-[NBodySimulator.jl](https://github.com/JuliaDiffEq/NBodySimulator.jl) 
+[NBodySimulator.jl](https://github.com/JuliaDiffEq/NBodySimulator.jl)
 was built by GSoC student Mikhail Vaganov (@Mikhail-Vaganov).
 It was a large endeavor and it includes tooling to easily create N-body
 problems with different potential functions (gravitational, electric, etc.)
