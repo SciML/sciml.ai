@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "DifferentialEquations.jl 5.0: v0.7, Jacobian Types, EPIRK"
-date:   2018-7-15 10:00:00
+title:  "DifferentialEquations.jl 5.0: v1.0, Jacobian Types, EPIRK"
+date:   2018-8-20 10:00:00
 categories:
 ---
 
@@ -12,11 +12,11 @@ to describe some of the large-scale changes which have been included in this
 release. Much thanks goes to the Google Summer of Code students who heavily
 contributed to these advances.
 
-## v0.7 Compatibility
+## v0.7 and v1.0 Compatibility
 
-JuliaDiffEq is now considered to be on Julia v0.7. The most of the libraries
-have had a compatibility update release and now the master branches are being
-developed for v0.7. This means that all new features will be Julia v0.7-only,
+JuliaDiffEq is now considered to be on Julia v1.0. The libraries
+have had a compatibility update releases and now the master branches are being
+developed for v1.0. This means that all new features will be Julia v1.0-only,
 but v0.6 versions should continue to work. A lot of help came from GSoC student
 Yingbo Ma (@YingboMa).
 
@@ -27,9 +27,9 @@ The following is a list of user-facing breaking changes:
   `ODEFunction(f,jac=f_jac)` where `f_jac` is the function `f_jac(J,u,p,t)`.
   The same overloads all exist but now are passed to build the `ODEFunction`
   which is then used by the solver. Things like `SDEFunction`, `DDEFunction`,
-  etc. all work analygously. These are documented in the
-  `Jacobians and DiffEqFunctions` page of the documentation. Mass matrices have
-  also moved to the DiffEqFunction types.
+  etc. all work analogously.
+  [These are documented in the `Jacobians and DiffEqFunctions` page of the documentation.](http://docs.juliadiffeq.org/latest/features/performance_overloads.html)
+  Mass matrices have also moved to the DiffEqFunction types.
 
 - `saveat` now only includes the end points if the end points are in the array
   of `saveat` time points. Before, if `tspan=(0.0,1.0)` and `saveat=[0.5]` it
@@ -147,7 +147,8 @@ hope that this will increase the usability of the software.
 
 ## An N-Body Problem Solver Package for Astrodynamics and Molecular Dynamics
 
-This package was built by GSoC student Mikhail Vaganov (@Mikhail-Vaganov).
+[NBodySimulator.jl](https://github.com/JuliaDiffEq/NBodySimulator.jl) 
+was built by GSoC student Mikhail Vaganov (@Mikhail-Vaganov).
 It was a large endeavor and it includes tooling to easily create N-body
 problems with different potential functions (gravitational, electric, etc.)
 along with all of the pieces analysis methods for calculating temperature,
