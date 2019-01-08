@@ -371,6 +371,10 @@ University of Geneva, Switzerland.
 - Ruuth, Steven. "Global optimization of explicit strong-stability-preserving
   Runge-Kutta methods." Mathematics of Computation 75.253 (2006): 183-207.
 
+#### SSPRK53_2N1, SSPRK53_2N2
+
+- Higueras and T. Roldán. "New third order low-storage SSP explicit Runge–Kutta methods". arXiv:1809.04807v1.
+  
 #### SSPRK104
 
 - Ketcheson, David I. "Highly efficient strong stability-preserving Runge–Kutta
