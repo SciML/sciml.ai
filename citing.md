@@ -396,6 +396,18 @@ University of Geneva, Switzerland.
 - Q. Nie, Y. Zhang and R. Zhao. Efficient Semi-implicit Schemes for Stiff Systems.
   Journal of Computational Physics, 214, pp 521-537, 2006.
 
+#### ORK25-6
+
+- Matteo Bernardini, Sergio Pirozzoli. A General Strategy for the Optimization of
+  Runge-Kutta Schemes for Wave Propagation Phenomena. Journal of Computational Physics,
+  228(11), pp 4182-4199, 2009. doi: https://doi.org/10.1016/j.jcp.2009.02.032
+
+#### RK46-NL
+
+- Julien Berland, Christophe Bogey, Christophe Bailly. Low-Dissipation and Low-Dispersion
+  Fourth-Order Runge-Kutta Algorithm. Computers & Fluids, 35(10), pp 1459-1463, 2006.
+  doi: https://doi.org/10.1016/j.compfluid.2005.04.003
+
 #### CFRLDDRK64
 
 - M. Calvo, J. M. Franco, L. Randez. A New Minimum Storage Runge–Kutta Scheme
@@ -442,6 +454,13 @@ University of Geneva, Switzerland.
 - T. Toulorge, W. Desmet. Optimal Runge–Kutta Schemes for Discontinuous Galerkin Space
   Discretizations Applied to Wave Propagation Problems. Journal of Computational Physics, 231(4),
   pp 2067-2091, 2012. doi: https://doi.org/10.1016/j.jcp.2011.11.024
+
+#### ParsaniKetchesonDeconinck3S94, ParsaniKetchesonDeconinck3S184, ParsaniKetchesonDeconinck3S105, ParsaniKetchesonDeconinck3S205
+
+- T. Toulorge, W. Desmet. Optimized Explicit Runge-Kutta Schemes for the Spectral Difference
+  Method Applied to Wave Propagation Problems. 2013 Society for Industrial and Applied
+  Mathematics Journal on Scientific Computing, 35(2), pp A957-A986, 2013. doi:
+  https://doi.org/10.1137/120885899
 
 ### Delay Differential Equations
 
