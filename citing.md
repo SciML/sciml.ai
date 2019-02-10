@@ -408,6 +408,12 @@ University of Geneva, Switzerland.
   Optimized Stability Regions. Journal of Computational Physics, 231, pp 364-372, 2012.
   doi: https://doi.org/10.1016/j.jcp.2011.09.003
 
+#### ROCK4
+
+- Assyr Abdulle. Fourth Order Chebyshev Methods With Recurrence Relation. 2002 Society for
+  Industrial and Applied Mathematics Journal on Scientific Computing, 23(6), pp 2041-2054, 2001.
+  doi: https://doi.org/10.1137/S1064827500379549
+
 ### Delay Differential Equations
 
 #### State-Dependent Delays
