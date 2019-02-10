@@ -402,6 +402,12 @@ University of Geneva, Switzerland.
   for Computational Acoustics. Journal of Computational Physics, 201, pp 1-12, 2004.
   doi: https://doi.org/10.1016/j.jcp.2004.05.012
 
+#### NDBLSRK124, NDBLSRK134, NDBLSRK144
+
+- Jens Niegemann, Richard Diehl, Kurt Busch. Efficient Low-Storage Runge–Kutta Schemes with
+  Optimized Stability Regions. Journal of Computational Physics, 231, pp 364-372, 2012.
+  doi: https://doi.org/10.1016/j.jcp.2011.09.003
+
 ### Delay Differential Equations
 
 #### State-Dependent Delays
