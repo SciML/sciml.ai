@@ -425,6 +425,12 @@ University of Geneva, Switzerland.
   for Problems arising from Computational Ccoustics. Physics Letters A, 393(1-2), pp 38-47, 2007.
   doi: https://doi.org/10.1016/j.physleta.2006.10.072
 
+#### DGLDDRK73_C, DGLDDRK84_C, DGLDDRK84_F
+
+- T. Toulorge, W. Desmet. Optimal Runge–Kutta Schemes for Discontinuous Galerkin Space
+  Discretizations Applied to Wave Propagation Problems. Journal of Computational Physics, 231(4),
+  pp 2067-2091, 2012. doi: https://doi.org/10.1016/j.jcp.2011.11.024
+
 ### Delay Differential Equations
 
 #### State-Dependent Delays
