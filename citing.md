@@ -396,11 +396,11 @@ University of Geneva, Switzerland.
 - Q. Nie, Y. Zhang and R. Zhao. Efficient Semi-implicit Schemes for Stiff Systems.
   Journal of Computational Physics, 214, pp 521-537, 2006.
 
-#### CFRLDDRK64
+#### ORK25-6
 
-- M. Calvo, J. M. Franco, L. Randez. A New Minimum Storage Runge–Kutta Scheme
-  for Computational Acoustics. Journal of Computational Physics, 201, pp 1-12, 2004.
-  doi: https://doi.org/10.1016/j.jcp.2004.05.012
+- Matteo Bernardini, Sergio Pirozzoli. A General Strategy for the Optimization of
+  Runge–Kutta Schemes for Wave Propagation Phenomena. Journal of Computational Physics,
+  228(11), pp 4182-4199, 2009. doi: https://doi.org/10.1016/j.jcp.2009.02.032
 
 #### HSLDDRK64
 
