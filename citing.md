@@ -400,7 +400,7 @@ University of Geneva, Switzerland.
 
 - M. Calvo, J. M. Franco, L. Randez. A New Minimum Storage Runge–Kutta Scheme
   for Computational Acoustics. Journal of Computational Physics, 201, pp 1-12, 2004.
-  doi.org/10.1016/j.jcp.2004.05.012
+  doi: https://doi.org/10.1016/j.jcp.2004.05.012
 
 ### Delay Differential Equations
 
