@@ -374,7 +374,7 @@ University of Geneva, Switzerland.
 #### SSPRK53_2N1, SSPRK53_2N2
 
 - Higueras and T. Roldán. "New third order low-storage SSP explicit Runge–Kutta methods". arXiv:1809.04807v1.
-  
+
 #### SSPRK104
 
 - Ketcheson, David I. "Highly efficient strong stability-preserving Runge–Kutta
@@ -395,6 +395,53 @@ University of Geneva, Switzerland.
 
 - Q. Nie, Y. Zhang and R. Zhao. Efficient Semi-implicit Schemes for Stiff Systems.
   Journal of Computational Physics, 214, pp 521-537, 2006.
+
+#### CFRLDDRK64
+
+- M. Calvo, J. M. Franco, L. Randez. A New Minimum Storage Runge–Kutta Scheme
+  for Computational Acoustics. Journal of Computational Physics, 201, pp 1-12, 2004.
+  doi: https://doi.org/10.1016/j.jcp.2004.05.012
+
+#### HSLDDRK64
+
+- D. Stanescu, W. G. Habashi. 2N-Storage Low Dissipation and Dispersion Runge-Kutta Schemes for
+  Computational Acoustics. Journal of Computational Physics, 143(2), pp 674-681, 1998. doi:
+  https://doi.org/10.1006/jcph.1998.5986
+
+#### NDBLSRK124, NDBLSRK134, NDBLSRK144
+
+- Jens Niegemann, Richard Diehl, Kurt Busch. Efficient Low-Storage Runge–Kutta Schemes with
+  Optimized Stability Regions. Journal of Computational Physics, 231, pp 364-372, 2012.
+  doi: https://doi.org/10.1016/j.jcp.2011.09.003
+
+#### RKC
+
+- B. P. Sommeijer, L. F. Shampine, J. G. Verwer. RKC: An Explicit Solver for Parabolic PDEs,
+  Journal of Computational and Applied Mathematics, 88(2), pp 315-326, 1998. doi:
+  https://doi.org/10.1016/S0377-0427(97)00219-7
+
+#### ROCK2
+
+- Assyr Abdulle, Alexei A. Medovikov. Second Order Chebyshev Methods based on Orthogonal Polynomials.
+  Numerische Mathematik, 90 (1), pp 1-18, 2001. doi: http://dx.doi.org/10.1007/s002110100292
+
+#### ROCK4
+
+- Assyr Abdulle. Fourth Order Chebyshev Methods With Recurrence Relation. 2002 Society for
+  Industrial and Applied Mathematics Journal on Scientific Computing, 23(6), pp 2041-2054, 2001.
+  doi: https://doi.org/10.1137/S1064827500379549
+
+#### TSLDDRK74
+
+- Kostas Tselios, T. E. Simos. Optimized Runge–Kutta Methods with Minimal Dispersion and Dissipation
+  for Problems arising from Computational Ccoustics. Physics Letters A, 393(1-2), pp 38-47, 2007.
+  doi: https://doi.org/10.1016/j.physleta.2006.10.072
+
+#### DGLDDRK73_C, DGLDDRK84_C, DGLDDRK84_F
+
+- T. Toulorge, W. Desmet. Optimal Runge–Kutta Schemes for Discontinuous Galerkin Space
+  Discretizations Applied to Wave Propagation Problems. Journal of Computational Physics, 231(4),
+  pp 2067-2091, 2012. doi: https://doi.org/10.1016/j.jcp.2011.11.024
 
 ### Delay Differential Equations
 
