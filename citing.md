@@ -443,7 +443,7 @@ University of Geneva, Switzerland.
   Discretizations Applied to Wave Propagation Problems. Journal of Computational Physics, 231(4),
   pp 2067-2091, 2012. doi: https://doi.org/10.1016/j.jcp.2011.11.024
 
-#### ParsaniKetchesonDeconinck3S94, ParsaniKetchesonDeconinck3S184, ParsaniKetchesonDeconinck3S105, ParsaniKetchesonDeconinck3S205,
+#### ParsaniKetchesonDeconinck3S94, ParsaniKetchesonDeconinck3S184, ParsaniKetchesonDeconinck3S105, ParsaniKetchesonDeconinck3S205
 
 - T. Toulorge, W. Desmet. Optimized Explicit Runge-Kutta Schemes for the Spectral Difference
   Method Applied to Wave Propagation Problems. 2013 Society for Industrial and Applied
