@@ -408,6 +408,12 @@ University of Geneva, Switzerland.
   Optimized Stability Regions. Journal of Computational Physics, 231, pp 364-372, 2012.
   doi: https://doi.org/10.1016/j.jcp.2011.09.003
 
+#### RKC
+
+- B. P. Sommeijer, L. F. Shampine, J. G. Verwer. RKC: An Explicit Solver for Parabolic PDEs,
+  Journal of Computational and Applied Mathematics, 88(2), pp 315-326, 1998. doi:
+  https://doi.org/10.1016/S0377-0427(97)00219-7
+
 #### ROCK2
 
 - Assyr Abdulle, Alexei A. Medovikov. Second Order Chebyshev Methods based on Orthogonal Polynomials.
