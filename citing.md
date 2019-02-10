@@ -408,6 +408,11 @@ University of Geneva, Switzerland.
   Optimized Stability Regions. Journal of Computational Physics, 231, pp 364-372, 2012.
   doi: https://doi.org/10.1016/j.jcp.2011.09.003
 
+#### ROCK2
+
+- Assyr Abdulle, Alexei A. Medovikov. Second Order Chebyshev Methods based on Orthogonal Polynomials.
+  Numerische Mathematik, 90 (1), pp 1-18, 2001. doi: http://dx.doi.org/10.1007/s002110100292
+
 #### ROCK4
 
 - Assyr Abdulle. Fourth Order Chebyshev Methods With Recurrence Relation. 2002 Society for
