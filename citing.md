@@ -419,6 +419,12 @@ University of Geneva, Switzerland.
   Industrial and Applied Mathematics Journal on Scientific Computing, 23(6), pp 2041-2054, 2001.
   doi: https://doi.org/10.1137/S1064827500379549
 
+#### TSLDDRK74
+
+- Kostas Tselios, T. E. Simos. Optimized Runge–Kutta Methods with Minimal Dispersion and Dissipation
+  for Problems arising from Computational Ccoustics. Physics Letters A, 393(1-2), pp 38-47, 2007.
+  doi: https://doi.org/10.1016/j.physleta.2006.10.072
+
 ### Delay Differential Equations
 
 #### State-Dependent Delays
