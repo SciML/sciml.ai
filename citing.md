@@ -402,6 +402,12 @@ University of Geneva, Switzerland.
   for Computational Acoustics. Journal of Computational Physics, 201, pp 1-12, 2004.
   doi: https://doi.org/10.1016/j.jcp.2004.05.012
 
+#### HSLDDRK64
+
+- D. Stanescu, W. G. Habashi. 2N-Storage Low Dissipation and Dispersion Runge-Kutta Schemes for
+  Computational Acoustics. Journal of Computational Physics, 143(2), pp 674-681, 1998. doi:
+  https://doi.org/10.1006/jcph.1998.5986
+
 #### NDBLSRK124, NDBLSRK134, NDBLSRK144
 
 - Jens Niegemann, Richard Diehl, Kurt Busch. Efficient Low-Storage Runge–Kutta Schemes with
