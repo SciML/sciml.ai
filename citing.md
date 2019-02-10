@@ -374,7 +374,7 @@ University of Geneva, Switzerland.
 #### SSPRK53_2N1, SSPRK53_2N2
 
 - Higueras and T. Roldán. "New third order low-storage SSP explicit Runge–Kutta methods". arXiv:1809.04807v1.
-  
+
 #### SSPRK104
 
 - Ketcheson, David I. "Highly efficient strong stability-preserving Runge–Kutta
@@ -395,6 +395,11 @@ University of Geneva, Switzerland.
 
 - Q. Nie, Y. Zhang and R. Zhao. Efficient Semi-implicit Schemes for Stiff Systems.
   Journal of Computational Physics, 214, pp 521-537, 2006.
+
+#### CFRLDDRK64
+
+- M. Calvo, J. M. Franco, L. Randez. A New Minimum Storage Runge–Kutta Scheme
+  for Computational Acoustics. Journal of Computational Physics, 201, pp 1-12, 2004.
 
 ### Delay Differential Equations
 
