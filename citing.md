@@ -472,7 +472,13 @@ University of Geneva, Switzerland.
 
 - E. Alberdi Celayaa, J. J. Anza Aguirrezabalab, P. Chatzipantelidisc. Implementation of
   an Adaptive BDF2 Formula and Comparison with The MATLAB Ode15s. Procedia Computer Science,
-  29, pp 1014-1026 doi: https://doi.org/10.1016/j.procs.2014.05.091
+  29, pp 1014-1026, 2014. doi: https://doi.org/10.1016/j.procs.2014.05.091
+
+#### SBDF2, SBDF3, SBDF4
+
+- Uri M. Ascher, Steven J. Ruuth, Brian T. R. Wetton. Implicit-Explicit Methods for Time-
+  Dependent Partial Differential Equations. 1995 Society for Industrial and Applied Mathematics  
+  Journal on Numerical Analysis, 32(3), pp 797-823, 1995. doi: https://doi.org/10.1137/0732037
 
 ### Delay Differential Equations
 
