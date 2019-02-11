@@ -470,7 +470,7 @@ University of Geneva, Switzerland.
 
 #### ABDF2
 
-- E. AlberdiCelayaa, J. J. Anza Aguirrezabalab, P. Chatzipantelidisc. Implementation of
+- E. Alberdi Celayaa, J. J. Anza Aguirrezabalab, P. Chatzipantelidisc. Implementation of
   an Adaptive BDF2 Formula and Comparison with The MATLAB Ode15s. Procedia Computer Science,
   29, pp 1014-1026 doi: https://doi.org/10.1016/j.procs.2014.05.091
 
