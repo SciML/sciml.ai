@@ -462,6 +462,24 @@ University of Geneva, Switzerland.
   Mathematics Journal on Scientific Computing, 35(2), pp A957-A986, 2013. doi:
   https://doi.org/10.1137/120885899
 
+#### AB3, AB4, AB5, ABM32, ABM43, ABM54, VCAB3, VCAB4, VCAB5, VCABM, VACBM3, VCABM4, VCABM5
+
+- E. Hairer, S. P. Norsett, G. Wanner, Solving Ordinary Differential Equations I, Nonstiff
+  Problems. Computational Mathematics (2nd revised ed.), Springer (1996) doi:
+  https://doi.org/10.1007/978-3-540-78862-1
+
+#### ABDF2
+
+- E. Alberdi Celayaa, J. J. Anza Aguirrezabalab, P. Chatzipantelidisc. Implementation of
+  an Adaptive BDF2 Formula and Comparison with The MATLAB Ode15s. Procedia Computer Science,
+  29, pp 1014-1026, 2014. doi: https://doi.org/10.1016/j.procs.2014.05.091
+
+#### SBDF2, SBDF3, SBDF4
+
+- Uri M. Ascher, Steven J. Ruuth, Brian T. R. Wetton. Implicit-Explicit Methods for Time-
+  Dependent Partial Differential Equations. 1995 Society for Industrial and Applied Mathematics  
+  Journal on Numerical Analysis, 32(3), pp 797-823, 1995. doi: https://doi.org/10.1137/0732037
+
 ### Delay Differential Equations
 
 #### State-Dependent Delays
