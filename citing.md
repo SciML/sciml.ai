@@ -462,6 +462,12 @@ University of Geneva, Switzerland.
   Mathematics Journal on Scientific Computing, 35(2), pp A957-A986, 2013. doi:
   https://doi.org/10.1137/120885899
 
+#### AB3, AB4, AB5, ABM32, ABM43, ABM54, VCAB3, VCAB4, VCAB5, VCABM, VACBM3, VCABM4, VCABM5
+
+- E. Hairer, S. P. Norsett, G. Wanner, Solving Ordinary Differential Equations I, Nonstiff
+  Problems. Computational Mathematics (2nd revised ed.), Springer (1996) doi:
+  https://doi.org/10.1007/978-3-540-78862-1
+
 ### Delay Differential Equations
 
 #### State-Dependent Delays
