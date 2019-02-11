@@ -468,6 +468,12 @@ University of Geneva, Switzerland.
   Problems. Computational Mathematics (2nd revised ed.), Springer (1996) doi:
   https://doi.org/10.1007/978-3-540-78862-1
 
+#### ABDF2
+
+- E. AlberdiCelayaa, J. J. Anza Aguirrezabalab, P. Chatzipantelidisc. Implementation of
+  an Adaptive BDF2 Formula and Comparison with The MATLAB Ode15s. Procedia Computer Science,
+  29, pp 1014-1026 doi: https://doi.org/10.1016/j.procs.2014.05.091
+
 ### Delay Differential Equations
 
 #### State-Dependent Delays
