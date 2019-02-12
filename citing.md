@@ -425,6 +425,13 @@ University of Geneva, Switzerland.
 - Jens Niegemann, Richard Diehl, Kurt Busch. Efficient Low-Storage Runge–Kutta Schemes with
   Optimized Stability Regions. Journal of Computational Physics, 231, pp 364-372, 2012.
   doi: https://doi.org/10.1016/j.jcp.2011.09.003
+  
+#### ParsaniKetchesonDeconinck3S32, ParsaniKetchesonDeconinck3S82, ParsaniKetchesonDeconinck3S53, ParsaniKetchesonDeconinck3S173, ParsaniKetchesonDeconinck3S94, ParsaniKetchesonDeconinck3S184, ParsaniKetchesonDeconinck3S105, ParsaniKetchesonDeconinck3S205
+
+- Parsani, Matteo, David I. Ketcheson, and W. Deconinck. 
+  "Optimized explicit Runge--Kutta schemes for the spectral difference method applied to wave propagation problems."
+  SIAM Journal on Scientific Computing 35.2 (2013): A957-A986.
+  doi: https://doi.org/10.1137/120885899
 
 #### RKC
 
