@@ -67,6 +67,10 @@ will likely not notice them, but it's worth mentioning:
   `DEIntegrator{alg,iip,uType,tType}`. Existing codes which dispatch on
   DEIntegrator will still work without the type parameters, so this is not
   breaking in a user-facing way.
+- `internalnorm` now takes `(u,t)`. The second argument can be used for
+  properly dispatching on the time type (units, autodiff), or for scaling
+  adaptivity over time. `internalnorm` has been added to the common
+  interface documentation.
 
 ## Scaling Enhancements in DiffEqBiological.jl
 

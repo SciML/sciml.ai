@@ -374,7 +374,7 @@ University of Geneva, Switzerland.
 #### SSPRK53_2N1, SSPRK53_2N2
 
 - Higueras and T. Roldán. "New third order low-storage SSP explicit Runge–Kutta methods". arXiv:1809.04807v1.
-  
+
 #### SSPRK104
 
 - Ketcheson, David I. "Highly efficient strong stability-preserving Runge–Kutta
@@ -395,6 +395,97 @@ University of Geneva, Switzerland.
 
 - Q. Nie, Y. Zhang and R. Zhao. Efficient Semi-implicit Schemes for Stiff Systems.
   Journal of Computational Physics, 214, pp 521-537, 2006.
+
+#### ORK25-6
+
+- Matteo Bernardini, Sergio Pirozzoli. A General Strategy for the Optimization of
+  Runge-Kutta Schemes for Wave Propagation Phenomena. Journal of Computational Physics,
+  228(11), pp 4182-4199, 2009. doi: https://doi.org/10.1016/j.jcp.2009.02.032
+
+#### RK46-NL
+
+- Julien Berland, Christophe Bogey, Christophe Bailly. Low-Dissipation and Low-Dispersion
+  Fourth-Order Runge-Kutta Algorithm. Computers & Fluids, 35(10), pp 1459-1463, 2006.
+  doi: https://doi.org/10.1016/j.compfluid.2005.04.003
+
+#### CFRLDDRK64
+
+- M. Calvo, J. M. Franco, L. Randez. A New Minimum Storage Runge–Kutta Scheme
+  for Computational Acoustics. Journal of Computational Physics, 201, pp 1-12, 2004.
+  doi: https://doi.org/10.1016/j.jcp.2004.05.012
+
+#### HSLDDRK64
+
+- D. Stanescu, W. G. Habashi. 2N-Storage Low Dissipation and Dispersion Runge-Kutta Schemes for
+  Computational Acoustics. Journal of Computational Physics, 143(2), pp 674-681, 1998. doi:
+  https://doi.org/10.1006/jcph.1998.5986
+
+#### NDBLSRK124, NDBLSRK134, NDBLSRK144
+
+- Jens Niegemann, Richard Diehl, Kurt Busch. Efficient Low-Storage Runge–Kutta Schemes with
+  Optimized Stability Regions. Journal of Computational Physics, 231, pp 364-372, 2012.
+  doi: https://doi.org/10.1016/j.jcp.2011.09.003
+  
+#### ParsaniKetchesonDeconinck3S32, ParsaniKetchesonDeconinck3S82, ParsaniKetchesonDeconinck3S53, ParsaniKetchesonDeconinck3S173, ParsaniKetchesonDeconinck3S94, ParsaniKetchesonDeconinck3S184, ParsaniKetchesonDeconinck3S105, ParsaniKetchesonDeconinck3S205
+
+- Parsani, Matteo, David I. Ketcheson, and W. Deconinck. 
+  "Optimized explicit Runge--Kutta schemes for the spectral difference method applied to wave propagation problems."
+  SIAM Journal on Scientific Computing 35.2 (2013): A957-A986.
+  doi: https://doi.org/10.1137/120885899
+
+#### RKC
+
+- B. P. Sommeijer, L. F. Shampine, J. G. Verwer. RKC: An Explicit Solver for Parabolic PDEs,
+  Journal of Computational and Applied Mathematics, 88(2), pp 315-326, 1998. doi:
+  https://doi.org/10.1016/S0377-0427(97)00219-7
+
+#### ROCK2
+
+- Assyr Abdulle, Alexei A. Medovikov. Second Order Chebyshev Methods based on Orthogonal Polynomials.
+  Numerische Mathematik, 90 (1), pp 1-18, 2001. doi: http://dx.doi.org/10.1007/s002110100292
+
+#### ROCK4
+
+- Assyr Abdulle. Fourth Order Chebyshev Methods With Recurrence Relation. 2002 Society for
+  Industrial and Applied Mathematics Journal on Scientific Computing, 23(6), pp 2041-2054, 2001.
+  doi: https://doi.org/10.1137/S1064827500379549
+
+#### TSLDDRK74
+
+- Kostas Tselios, T. E. Simos. Optimized Runge–Kutta Methods with Minimal Dispersion and Dissipation
+  for Problems arising from Computational Ccoustics. Physics Letters A, 393(1-2), pp 38-47, 2007.
+  doi: https://doi.org/10.1016/j.physleta.2006.10.072
+
+#### DGLDDRK73_C, DGLDDRK84_C, DGLDDRK84_F
+
+- T. Toulorge, W. Desmet. Optimal Runge–Kutta Schemes for Discontinuous Galerkin Space
+  Discretizations Applied to Wave Propagation Problems. Journal of Computational Physics, 231(4),
+  pp 2067-2091, 2012. doi: https://doi.org/10.1016/j.jcp.2011.11.024
+
+#### ParsaniKetchesonDeconinck3S94, ParsaniKetchesonDeconinck3S184, ParsaniKetchesonDeconinck3S105, ParsaniKetchesonDeconinck3S205
+
+- T. Toulorge, W. Desmet. Optimized Explicit Runge-Kutta Schemes for the Spectral Difference
+  Method Applied to Wave Propagation Problems. 2013 Society for Industrial and Applied
+  Mathematics Journal on Scientific Computing, 35(2), pp A957-A986, 2013. doi:
+  https://doi.org/10.1137/120885899
+
+#### AB3, AB4, AB5, ABM32, ABM43, ABM54, VCAB3, VCAB4, VCAB5, VCABM, VACBM3, VCABM4, VCABM5
+
+- E. Hairer, S. P. Norsett, G. Wanner, Solving Ordinary Differential Equations I, Nonstiff
+  Problems. Computational Mathematics (2nd revised ed.), Springer (1996) doi:
+  https://doi.org/10.1007/978-3-540-78862-1
+
+#### ABDF2
+
+- E. Alberdi Celayaa, J. J. Anza Aguirrezabalab, P. Chatzipantelidisc. Implementation of
+  an Adaptive BDF2 Formula and Comparison with The MATLAB Ode15s. Procedia Computer Science,
+  29, pp 1014-1026, 2014. doi: https://doi.org/10.1016/j.procs.2014.05.091
+
+#### SBDF2, SBDF3, SBDF4
+
+- Uri M. Ascher, Steven J. Ruuth, Brian T. R. Wetton. Implicit-Explicit Methods for Time-
+  Dependent Partial Differential Equations. 1995 Society for Industrial and Applied Mathematics  
+  Journal on Numerical Analysis, 32(3), pp 797-823, 1995. doi: https://doi.org/10.1137/0732037
 
 ### Delay Differential Equations
 
@@ -449,11 +540,44 @@ University of Geneva, Switzerland.
 
 ### Constant Rate Jump Aggregators
 
-#### Direct
+#### Direct, DirectFW, FRM, FRMRW
 
 - Gillespie, Daniel T. (1976). A General Method for Numerically Simulating the
   Stochastic Time Evolution of Coupled Chemical Reactions. Journal of
   Computational Physics. 22 (4): 403–434. doi:10.1016/0021-9991(76)90041-3.
+
+#### DirectCR  
+
+- A. Slepoy, A.P. Thompson and S.J. Plimpton, A constant-time kinetic Monte
+  Carlo algorithm for simulation of large biochemical reaction networks, Journal
+  of Chemical Physics, 128 (20), 205101 (2008). doi:10.1063/1.2919546
+
+- S. Mauch and M. Stalzer, Efficient formulations for exact stochastic
+  simulation of chemical systems, ACM Transactions on Computational Biology and
+  Bioinformatics, 8 (1), 27-35 (2010). doi:10.1109/TCBB.2009.47
+
+#### NRM
+
+- M. A. Gibson and J. Bruck, Efficient exact stochastic simulation of chemical
+  systems with many species and many channels, Journal of Physical Chemistry A,
+  104 (9), 1876-1889 (2000). doi:10.1021/jp993732q
+
+#### SortingDirect 
+
+- J. M. McCollum, G. D. Peterson, C. D. Cox, M. L. Simpson and N. F. Samatova, The
+  sorting direct method for stochastic simulation of biochemical systems with
+  varying reaction execution behavior, Computational Biology and Chemistry,
+  30 (1), 39049 (2006). doi:10.1016/j.compbiolchem.2005.10.007
+
+#### RSSA  
+
+- V. H. Thanh, C. Priami and R. Zunino, Efficient rejection-based simulation of
+  biochemical reactions with stochastic noise and delays, Journal of Chemical
+  Physics, 141 (13), 134116 (2014). doi:10.1063/1.4896985
+
+- V. H. Thanh, R. Zunino and C. Priami, On the rejection-based algorithm for
+  simulation and analysis of large-scale reaction networks, Journal of Chemical
+  Physics, 142 (24), 244106 (2015). doi:10.1063/1.4922923
 
 ### Variable Rate Jumps
 
