@@ -59,6 +59,45 @@ for this to be used in cases like Modia.jl and ModelingToolkit.jl where many
 events need to be simultaneously checked. Thanks to Kanav Gupta (@kanav99) for
 this new feature!
 
+For reference, here's a ball bouncing off of two walls with one callback:
+
+```julia
+function f(du,u,p,t)
+  du[1] = u[2]
+  du[2] = -p
+  du[3] = u[4]
+  du[4] = 0.0
+end
+
+function condition(out,u,t,integrator) # Event when event_f(u,t) == 0
+  out[1] = u[1]
+  out[2] = (u[3] - 10.0)u[3]
+end
+function affect!(integrator, idx)
+  if idx == 1
+    integrator.u[2] = -0.9integrator.u[2]
+  elseif idx == 2
+    integrator.u[4] = -0.9integrator.u[4]
+  end
+end
+cb = VectorContinuousCallback(condition,affect!,2)
+
+u0 = [50.0,0.0,0.0,2.0]
+tspan = (0.0,15.0)
+p = 9.8
+prob = ODEProblem(f,u0,tspan,p)
+sol = solve(prob,Tsit5(),callback=cb,dt=1e-3,adaptive=false)
+x = []
+y = []
+for i in 1:length(sol.u)
+  append!(y, sol.u[i][1])
+  append!(x, sol.u[i][3])
+end
+plot(x,y)
+```
+
+![double bounce](https://user-images.githubusercontent.com/33966400/59046655-0154f280-88a0-11e9-90c5-ea80b501cd27.png)
+
 ## SROCK
 
 A new class of stiff SDE solvers has been implemented. The SROCK methods are
