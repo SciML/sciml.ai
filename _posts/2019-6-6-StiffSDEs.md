@@ -56,8 +56,9 @@ continuous callbacks. For example, if you have 3,000 events that you want to
 run, using a CallbackSet of 3,000 ContinuousCallbacks is not a good idea for
 performance, but VectorContinuousCallback is a fix for this use case. We plan
 for this to be used in cases like Modia.jl and ModelingToolkit.jl where many
-events need to be simultaneously checked. Thanks to Kanav Gupta (@kanav99) for
-this new feature!
+events need to be simultaneously checked. Thanks to Kanav Gupta (@kanav99) 
+for this new feature!
+
 
 For reference, here's a ball bouncing off of two walls with one callback:
 
@@ -74,6 +75,7 @@ function condition(out,u,t,integrator) # Event when event_f(u,t) == 0
   out[1] = u[1]
   out[2] = (u[3] - 10.0)u[3]
 end
+
 function affect!(integrator, idx)
   if idx == 1
     integrator.u[2] = -0.9integrator.u[2]
@@ -81,6 +83,7 @@ function affect!(integrator, idx)
     integrator.u[4] = -0.9integrator.u[4]
   end
 end
+
 cb = VectorContinuousCallback(condition,affect!,2)
 
 u0 = [50.0,0.0,0.0,2.0]
@@ -88,10 +91,13 @@ tspan = (0.0,15.0)
 p = 9.8
 prob = ODEProblem(f,u0,tspan,p)
 sol = solve(prob,Tsit5(),callback=cb,dt=1e-3,adaptive=false)
+
 plot(sol,vars=(1,3))
 ```
 
 ![double bounce](https://user-images.githubusercontent.com/33966400/59046655-0154f280-88a0-11e9-90c5-ea80b501cd27.png)
+
+Documentation along with explanation of the code above can be found [here](http://docs.juliadiffeq.org/latest/features/callback_functions.html#VectorContinuousCallback-1).
 
 ## SROCK
 
