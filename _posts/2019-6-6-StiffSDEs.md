@@ -62,6 +62,7 @@ this new feature!
 For reference, here's a ball bouncing off of two walls with one callback:
 
 ```julia
+using OrdinaryDiffEq, Plots
 function f(du,u,p,t)
   du[1] = u[2]
   du[2] = -p
@@ -87,13 +88,7 @@ tspan = (0.0,15.0)
 p = 9.8
 prob = ODEProblem(f,u0,tspan,p)
 sol = solve(prob,Tsit5(),callback=cb,dt=1e-3,adaptive=false)
-x = []
-y = []
-for i in 1:length(sol.u)
-  append!(y, sol.u[i][1])
-  append!(x, sol.u[i][3])
-end
-plot(x,y)
+plot(sol,vars=(1,3))
 ```
 
 ![double bounce](https://user-images.githubusercontent.com/33966400/59046655-0154f280-88a0-11e9-90c5-ea80b501cd27.png)
