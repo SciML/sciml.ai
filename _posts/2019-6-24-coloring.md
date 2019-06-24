@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DifferentialEquations.jl v6.6.0: Sparse Jacobian Coloring, Quantum ODEs and Stiff SDEs"
+title:  "DifferentialEquations.jl v6.6.0: Sparse Jacobian Coloring, Quantum Computer ODE Solvers, and Stiff SDEs"
 date:   2019-6-24 12:00:00
 categories:
 ---
