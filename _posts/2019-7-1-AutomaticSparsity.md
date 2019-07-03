@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DifferentialEquations.jl v6.7.0: Automatic Sparsity Handling and GPU-based Monte Carlo"
+title:  "DifferentialEquations.jl v6.7.0: GPU-based Ensembles"
 date:   2019-6-24 12:00:00
 categories:
 ---
@@ -8,6 +8,51 @@ categories:
 In this release we are getting the culmination of our ongoing sparsity story.
 Let's demonstrate what this looks like. Assume you have an `f` with a sparse
 Jacobian which defines a stiff ODE.
+
+## (Breaking with Deprecations) DiffEqGPU: GPU-based Ensemble Simulations
+
+The `MonteCarloProblem` interface received an overhaul. First of all, the
+interface has been renamed to `Ensemble`. The changes are:
+
+- `MonteCarloProblem` -> `EnsembleProblem`
+- `MonteCarloSolution` -> `EnsembleSolution`
+- `MonteCarloSummary` -> `EnsembleSummary`
+
+**Specifying `parallel_type` has been deprecated** and a deprecation warning is
+thrown mentioning this. So don't worry: your code will work but will give
+warnings as to what to change.
+
+Now, `solve` of a `EnsembleProblem` works on the same dispatch mechanism as the
+rest of DiffEq, which looks like `solve(monteprob,Tsit5(),EnsembleThreads())`
+where the third argument is an ensembling algorithm to specify the
+threading-based form.  Code with the deprecation warning will work until the
+release of DiffEq 7.0, at which time the alternative path will be removed.
+
+The change to dispatch was done for a reason: it allows us to build new libraries
+specifically for sophisticated handling of many trajectory ODE solves without
+introducing massive new dependencies to the standard DifferentialEquations.jl
+user. However, many people might be interested in the first project to make
+use of this: DiffEqGPU.jl. DiffEqGPU.jl let's you define a problem, like an
+`ODEProblem`, and then solve thousands of trajectories in parallel using your
+GPU. The syntax looks like:
+
+```julia
+monteprob = EnsembleProblem(my_ode_prob)
+solve(monteprob,Tsit5(),EnsembleGPUArray(),num_monte=100_000)
+```
+
+and it will return 100,000 ODE solves. **We have seen between a 12x and 90x speedup
+depending on the GPU of the test systems**, meaning that this can be a massive
+improvement for parameter space exploration on smaller systems of ODEs.
+Currently there are a few limitations of this method, including that events
+cannot be used, but those will be solved shortly. Additional methods for
+GPU-based parameter parallelism are coming soon to the same interface. Also
+planned are GPU-accelerated multi-level Monte Carlo methods for faster weak
+convergence of SDEs.
+
+Again, this is utilizing compilation tricks to take the user-defined `f`
+and recompile it on the fly to a `.ptx` kernel, and generating kernel-optimized
+array-based formulations of the existing ODE solvers
 
 ## Automated Sparsity Detection
 
@@ -40,40 +85,7 @@ The color vectors can be computed automatically using the SparseDiffTools.jl
 library's `matrix_colors` function. Thank JSoC student Langwen Huang (@huanglangwen)
 for this contribution.
 
-## DiffEqGPU: GPU-based Monte Carlo Simulations
-
-The `MonteCarloProblem` interface received an overhaul. Now, `solve` of a
-`MonteCarloProblem` works on the same dispatch mechanism as the rest of DiffEq,
-which looks like `solve(monteprob,Tsit5(),MonteThreads())` to specify the
-threading-based form. **Specifying `parallel_type` has been deprecated** and
-a deprecation warning is thrown mentioning this. Code with the deprecation
-warning will work until the release of DiffEq 7.0, at which time the alternative
-path will be removed.
-
-The change to dispatch was done for a reason: it allows us to build new libraries
-specifically for sophisticated handling of many trajectory ODE solves without
-introducing massive new dependencies to the standard DifferentialEquations.jl
-user. However, many people might be interested in the first project to make
-use of this: DiffEqGPU.jl. DiffEqGPU.jl let's you define a problem, like an
-`ODEProblem`, and then solve thousands of trajectories in parallel using your
-GPU. The syntax looks like:
-
-```julia
-monteprob = MonteCarloProblem(my_ode_prob)
-solve(monteprob,Tsit5(),MonteGPUArray(),num_monte=100_000)
-```
-
-and it will return 100,000 ODE solves. We have seen between a 12x and 90x speedup
-depending on the GPU of the test systems, meaning that this can be a massive
-improvement for parameter space exploration. Currently there are a few limitations
-of this method, including that events cannot be used, but those will be solved
-shortly. Additional methods for GPU-based parameter parallelism are coming
-soon to the same interface. Also planned are GPU-accelerated multi-level Monte
-Carlo methods for faster weak convergence of SDEs.
-
-Again, this is utilizing compilation tricks to take the user-defined `f`
-and recompile it on the fly to a `.ptx` kernel, and generating kernel-optimized
-array-based formulations of the existing ODE solvers
+## GPU-Optimized Sparse (Colored) Automatic Differentiation
 
 ## Parallelized Implicit ODE Solvers
 
