@@ -5,9 +5,8 @@ date:   2019-7-5 12:00:00
 categories:
 ---
 
-In this release we are getting the culmination of our ongoing sparsity story.
-Let's demonstrate what this looks like. Assume you have an `f` with a sparse
-Jacobian which defines a stiff ODE.
+Let's just jump right in! This time we have a bunch of new GPU tools and
+sparsity handling.
 
 ## (Breaking with Deprecations) DiffEqGPU: GPU-based Ensemble Simulations
 
