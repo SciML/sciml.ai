@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "DifferentialEquations.jl v6.7.0: GPU-based Ensembles"
-date:   2019-6-24 12:00:00
+title:  "DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity"
+date:   2019-7-5 12:00:00
 categories:
 ---
 
@@ -28,13 +28,15 @@ where the third argument is an ensembling algorithm to specify the
 threading-based form.  Code with the deprecation warning will work until the
 release of DiffEq 7.0, at which time the alternative path will be removed.
 
+See the [updated ensembles page for more details](http://docs.juliadiffeq.org/latest/features/ensemble.html)
+
 The change to dispatch was done for a reason: it allows us to build new libraries
 specifically for sophisticated handling of many trajectory ODE solves without
 introducing massive new dependencies to the standard DifferentialEquations.jl
 user. However, many people might be interested in the first project to make
-use of this: DiffEqGPU.jl. DiffEqGPU.jl let's you define a problem, like an
-`ODEProblem`, and then solve thousands of trajectories in parallel using your
-GPU. The syntax looks like:
+use of this: [DiffEqGPU.jl](https://github.com/JuliaDiffEq/DiffEqGPU.jl).
+DiffEqGPU.jl let's you define a problem, like an `ODEProblem`, and then solve
+thousands of trajectories in parallel using your GPU. The syntax looks like:
 
 ```julia
 monteprob = EnsembleProblem(my_ode_prob)
@@ -63,6 +65,33 @@ a more sophisticated version, which we are calling Concolic Combinatoric Analysi
 looks at all possible branch choices and utilizes this to conclusively build a
 Jacobian whose sparsity pattern captures the possible variable interactions.
 
+The nice part is that this functionality is very straightforward to use.
+For example, let's say we had the following function:
+
+```julia
+function f(dx,x,p,t)
+  for i in 2:length(x)-1
+    dx[i] = x[i-1] - 2x[i] + x[i+1]
+  end
+  dx[1] = -2x[1] + x[2]
+  dx[end] = x[end-1] - 2x[end]
+  nothing
+end
+```
+
+If we want to find out the sparsity pattern of `f`, we would simply call:
+
+```julia
+sparsity_pattern = sparsity!(f,output,input,p,t)
+```
+
+where `output` is an array like `dx`, `input` is an array like `x`, `p`
+are possible parameters, and `t` is a possible `t`. The function will then
+be analyzed and `sparsity_pattern` will return a `Sparsity` type of `I` and `J`
+which denotes the terms in the Jacobian with non-zero elements. By doing
+`sparse(sparsity_pattern)` we can turn this into a `SparseMatrixCSC` with the
+correct sparsity pattern.
+
 This functionality highlights the power of Julia since there is no way to
 conclusively determine the Jacobian of an arbitrary program `f` using numerical
 techniques, since all sorts of scenarios lead to "fake zeros" (cancelation,
@@ -75,25 +104,50 @@ all of the possible variable interactions.
 Of course, you can still specify analytical Jacobians and sparsity patterns
 if you want, but if you're lazy... :)
 
-## Color Differentiation Integration with Native Julia DE Solvers
+See [SparseDiffTools's README for more details](https://github.com/JuliaDiffEq/SparseDiffTools.jl).
 
-The `ODEFunction`, `DDEFunction`, `SDEFunction`, `DAEFunction`, etc. constructors
-now allow you to specify a color vector. This will reduce the number of `f`
-calls required to compute a sparse Jacobian, giving a massive speedup to the
-computation of a Jacobian and thus of an implicit differential equation solve.
-The color vectors can be computed automatically using the SparseDiffTools.jl
-library's `matrix_colors` function. Thank JSoC student Langwen Huang (@huanglangwen)
-for this contribution.
+## GPU Offloading in Implicit DE Solving
 
-## GPU-Optimized Sparse (Colored) Automatic Differentiation
+We are pleased to announce the `LinSolveGPUFactorize` option which allows for
+automatic offloading of linear solves to the GPU. For a problem with a large
+enough dense Jacobian, using `linsolve=LinSolveGPUFactorize()` will now
+automatically perform the factorization and back-substitution on the GPU,
+allowing for better scaling. For example:
 
-## Parallelized Implicit ODE Solvers
+```julia
+using CuArrays
+Rodas5(linsolve = LinSolveGPUFactorize())
+```
 
-## High Strong Order Methods for Non-Commutative Noise SDEs
+This simply requires a working installation of CuArrays.jl. See
+[the linear solver documentation for more details](http://docs.juliadiffeq.org/latest/features/linear_nonlinear.html).
 
-## Jacobian reuse efficiency in Rosenbrock-W methods
+## Experimental: Automated Accelerator (GPU) Offloading
 
-## Native Julia fully implicit ODE (DAE) solving in OrdinaryDiffEq.jl
+We have been dabbling in allowing automated accelerator (GPU, multithreading,
+distributed, TPU, etc.) offloading when the right hardware is detected and the
+problem size is sufficient to success a possible speedup.
+[A working implementation exists as a PR for DiffEqBase](https://github.com/JuliaDiffEq/DiffEqBase.jl/pull/273)
+which would allow automated acceleration of linear solves in implicit DE solving.
+However, this somewhat invasive of a default, and very architecture dependent,
+so it is unlikely we will be releasing this soon. However, we are investigating
+this concept in more detail in the [AutoOffload.jl](https://github.com/JuliaDiffEq/AutoOffload.jl). If you're interested in Julia-wide automatic acceleration,
+please take a look at the repo and help us get something going!
+
+## A Complete Set of Iterative Solver Routines for Implicit DEs
+
+Previous releases had only a pre-built GMRES implementation. However, as
+detailed on the [linear solver page](http://docs.juliadiffeq.org/latest/features/linear_nonlinear.html#IterativeSolvers.jl-Based-Methods-1),
+we now have an array of iterative solvers readily available, including:
+
+- LinSolveGMRES – GMRES
+- LinSolveCG – CG (Conjugate Gradient)
+- LinSolveBiCGStabl – BiCGStabl Stabilized Bi-Conjugate Gradient
+- LinSolveChebyshev – Chebyshev
+- LinSolveMINRES – MINRES
+
+These are all compatible with matrix-free implementations of a
+`AbstractDiffEqOperator`.
 
 ## Exponential integrator improvements
 
@@ -108,3 +162,8 @@ Here's some things to look forward to:
 
 - Automated matrix-free finite difference PDE operators
 - Surrogate optimization
+- Jacobian reuse efficiency in Rosenbrock-W methods
+- Native Julia fully implicit ODE (DAE) solving in OrdinaryDiffEq.jl
+- High Strong Order Methods for Non-Commutative Noise SDEs
+- GPU-Optimized Sparse (Colored) Automatic Differentiation
+- Parallelized Implicit Extrapolation of ODEs
