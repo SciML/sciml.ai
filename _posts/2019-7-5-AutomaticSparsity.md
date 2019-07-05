@@ -35,7 +35,7 @@ specifically for sophisticated handling of many trajectory ODE solves without
 introducing massive new dependencies to the standard DifferentialEquations.jl
 user. However, many people might be interested in the first project to make
 use of this: [DiffEqGPU.jl](https://github.com/JuliaDiffEq/DiffEqGPU.jl).
-DiffEqGPU.jl let's you define a problem, like an `ODEProblem`, and then solve
+DiffEqGPU.jl lets you define a problem, like an `ODEProblem`, and then solve
 thousands of trajectories in parallel using your GPU. The syntax looks like:
 
 ```julia
