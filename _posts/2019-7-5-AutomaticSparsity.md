@@ -20,7 +20,8 @@ interface has been renamed to `Ensemble`. The changes are:
 
 **Specifying `parallel_type` has been deprecated** and a deprecation warning is
 thrown mentioning this. So don't worry: your code will work but will give
-warnings as to what to change.
+warnings as to what to change. Additionally, **the DiffEqMonteCarlo.jl package
+is no longer necessary for any of this functionality**.
 
 Now, `solve` of a `EnsembleProblem` works on the same dispatch mechanism as the
 rest of DiffEq, which looks like `solve(monteprob,Tsit5(),EnsembleThreads())`
