@@ -26,6 +26,28 @@ The color vectors can be computed automatically using the SparseDiffTools.jl
 library's `matrix_colors` function. Thank JSoC student Langwen Huang
  (@huanglangwen) for this contribution.
 
+# JuliaCon Hackathon
+
+Please come join the JuliaDiffEq developers at the JuliaCon 2019 Hackathon.
+We have a wide range of projects setup to bring in newcommers and experienced
+developers alike. These projects include:
+
+- (Newcommer friendly!) Generating suites of test problems for differential
+  equations. A list of sources [can be found at the DiffEqProblemLibrary issues](https://github.com/JuliaDiffEq/DiffEqProblemLibrary.jl/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+- (Newcommer friendly!) Make the [DiffEqBenchmarks](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl) more extensive (more methods, more problems)
+- Work on solving your own differential equations! If possible, upstream them
+  to the benchmarks.
+- [Implement Runge-Kutta-Nystrom Integrators](https://github.com/JuliaDiffEq/OrdinaryDiffEq.jl/issues/677)
+- Better warning and error message behavior, [including this issue](https://github.com/JuliaDiffEq/OrdinaryDiffEq.jl/issues/801).
+- [High weak order Stochastic Runge-Kutta methods](https://github.com/JuliaDiffEq/StochasticDiffEq.jl/issues/182)
+- [Implement Gradient/Jacobian/Hessian helper functions in ModelingToolkit](https://github.com/JuliaDiffEq/ModelingToolkit.jl/issues/109)
+- [Finish ModelingToolkit automatic sparsity](https://github.com/JuliaDiffEq/ModelingToolkit.jl/issues/133)
+- [Symbolic ODE adjoint equations in ModelingToolkit](https://github.com/JuliaDiffEq/ModelingToolkit.jl/issues/137).
+- [(Experienced) Transition DiffEqBiological to ModelingToolkit](https://github.com/JuliaDiffEq/ModelingToolkit.jl/issues/143)
+
+And many more. Also, we'll help you start developing whatever areas of DiffEq
+you're interested in, so come find us and we'll get you going.
+
 # Next Directions
 
 Our current development is very much driven by the ongoing GSoC/JSoC projects,
