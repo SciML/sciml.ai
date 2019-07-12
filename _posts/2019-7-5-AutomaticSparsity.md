@@ -16,6 +16,7 @@ interface has been renamed to `Ensemble`. The changes are:
 - `MonteCarloProblem` -> `EnsembleProblem`
 - `MonteCarloSolution` -> `EnsembleSolution`
 - `MonteCarloSummary` -> `EnsembleSummary`
+- `num_monte` -> `trajectories`
 
 **Specifying `parallel_type` has been deprecated** and a deprecation warning is
 thrown mentioning this. So don't worry: your code will work but will give
@@ -23,7 +24,7 @@ warnings as to what to change. Additionally, **the DiffEqMonteCarlo.jl package
 is no longer necessary for any of this functionality**.
 
 Now, `solve` of a `EnsembleProblem` works on the same dispatch mechanism as the
-rest of DiffEq, which looks like `solve(monteprob,Tsit5(),EnsembleThreads())`
+rest of DiffEq, which looks like `solve(ensembleprob,Tsit5(),EnsembleThreads(),trajectories=n)`
 where the third argument is an ensembling algorithm to specify the
 threading-based form.  Code with the deprecation warning will work until the
 release of DiffEq 7.0, at which time the alternative path will be removed.
