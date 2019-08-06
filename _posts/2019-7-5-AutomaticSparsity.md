@@ -105,7 +105,7 @@ all of the possible variable interactions.
 Of course, you can still specify analytical Jacobians and sparsity patterns
 if you want, but if you're lazy... :)
 
-See [SparseDiffTools's README for more details](https://github.com/JuliaDiffEq/SparseDiffTools.jl).
+See [SparsityDetection.jl's README for more details](https://github.com/JuliaDiffEq/SparsityDetection.jl).
 
 ## GPU Offloading in Implicit DE Solving
 

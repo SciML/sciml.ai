@@ -5,16 +5,19 @@ date:   2019-7-5 12:00:00
 categories:
 ---
 
-Let's just jump right in! This time we have a bunch of new GPU tools and
-sparsity handling.
+Yingbo Ma formally promoted
 
-## Parallelized Implicit Extrapolation of Stiff ODEs
+## Automatic Colorization and Optimization for Structured Matrices
 
-## GPU-Optimized Sparse (Colored) Automatic Differentiation
+## Parallelized Implicit Extrapolation and DIRK for Stiff ODEs
 
-## Surrogate optimization
+## Automatic Conversion of Numerical to Symbolic Code with Modelingtoolkitize
 
-## High Strong Order Methods for Non-Commutative Noise SDEs
+## GPU-Optimized Sparse (Colored) Automatic and Finite Differentiation
+
+## DiffEqBiological.jl: Homotopy Continuation
+
+## Greatly improved delay differential equation solving
 
 ## Color Differentiation Integration with Native Julia DE Solvers
 
@@ -26,27 +29,10 @@ The color vectors can be computed automatically using the SparseDiffTools.jl
 library's `matrix_colors` function. Thank JSoC student Langwen Huang
  (@huanglangwen) for this contribution.
 
-# JuliaCon Hackathon
+## Improved compile times
 
-Please come join the JuliaDiffEq developers at the JuliaCon 2019 Hackathon.
-We have a wide range of projects setup to bring in newcommers and experienced
-developers alike. These projects include:
-
-- (Newcommer friendly!) Generating suites of test problems for differential
-  equations. A list of sources [can be found at the DiffEqProblemLibrary issues](https://github.com/JuliaDiffEq/DiffEqProblemLibrary.jl/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-- (Newcommer friendly!) Make the [DiffEqBenchmarks](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl) more extensive (more methods, more problems)
-- Work on solving your own differential equations! If possible, upstream them
-  to the benchmarks.
-- [Implement Runge-Kutta-Nystrom Integrators](https://github.com/JuliaDiffEq/OrdinaryDiffEq.jl/issues/677)
-- Better warning and error message behavior, [including this issue](https://github.com/JuliaDiffEq/OrdinaryDiffEq.jl/issues/801).
-- [High weak order Stochastic Runge-Kutta methods](https://github.com/JuliaDiffEq/StochasticDiffEq.jl/issues/182)
-- [Implement Gradient/Jacobian/Hessian helper functions in ModelingToolkit](https://github.com/JuliaDiffEq/ModelingToolkit.jl/issues/109)
-- [Finish ModelingToolkit automatic sparsity](https://github.com/JuliaDiffEq/ModelingToolkit.jl/issues/133)
-- [Symbolic ODE adjoint equations in ModelingToolkit](https://github.com/JuliaDiffEq/ModelingToolkit.jl/issues/137).
-- [(Experienced) Transition DiffEqBiological to ModelingToolkit](https://github.com/JuliaDiffEq/ModelingToolkit.jl/issues/143)
-
-And many more. Also, we'll help you start developing whatever areas of DiffEq
-you're interested in, so come find us and we'll get you going.
+Compile times should be majorly improved now thanks to David Widmann (@devmotion).
+DelayDiffEq specifically went from 33 minutes to 13 minutes!
 
 # Next Directions
 
@@ -58,3 +44,5 @@ Here's some things to look forward to:
 - Automated matrix-free finite difference PDE operators
 - Jacobian reuse efficiency in Rosenbrock-W methods
 - Native Julia fully implicit ODE (DAE) solving in OrdinaryDiffEq.jl
+- Surrogate optimization
+- High Strong Order Methods for Non-Commutative Noise SDEs
