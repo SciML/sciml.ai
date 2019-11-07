@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity"
+title:  "DifferentialEquations.jl v6.8.0: Advanced Stiff Differential Equation Solving"
 date:   2019-11-7 12:00:00
 categories:
 ---
