@@ -52,7 +52,7 @@ construction.
 ## DiffEqBiological.jl: Homotopy Continuation
 
 DiffEqBiological got support for automatic bifurcation plot generation by
-connecting with HomotopyContinuation.jl. See
+connecting with HomotopyContinuation.jl. See [the new tutorial](https://github.com/JuliaDiffEq/DiffEqBiological.jl#making-bifurcation-diagram)
 
 ## Greatly improved delay differential equation solving
 
