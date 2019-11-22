@@ -16,7 +16,7 @@ performant ecosystem for solving various forms of differential equations.
 
 ## Getting Started
 
-To get started, check out the documentation for [DifferentialEquations.jl](https://juliadiffeq.github.io/DiffEqDocs.jl/latest/index.html)
+To get started, check out the documentation for [DifferentialEquations.jl](https://juliadiffeq.github.io/DiffEqDocs.jl/dev/index.html)
 which pulls all of the functionality into one convenient package. If you need help,
 feel free to ask questions [in the chatroom](https://gitter.im/JuliaDiffEq/Lobby)
 or [file an issue at the Github repository](https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues).
@@ -27,7 +27,7 @@ We will be happy to help you get accustomed to our ecosystem.
 - **High performance tools**. Our tools include both wrappers to popular C/Fortran
   solvers and native Julia implementations. Our Julia implementations in many
   cases [benchmark as faster than the class Fortran methods!](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl)
-- **The largest set of algorithms**. [From the ODE methods alone](https://juliadiffeq.github.io/DiffEqDocs.jl/latest/solvers/ode_solve.html),
+- **The largest set of algorithms**. [From the ODE methods alone](https://juliadiffeq.github.io/DiffEqDocs.jl/dev/solvers/ode_solve.html),
   choose between methods such as the 14th Order Feagin methods, the recent Verner
   Efficient methods with high order interpolations, or the classic dopri methods.
   We offer all of the bells and whistles: high-order symplectic methods, 
