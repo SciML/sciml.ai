@@ -8,7 +8,7 @@ categories:
 DifferentialEquations.jl v1.8.0 is a new release for the JuliaDiffEq ecosystem.
 As promised, the API is stable and there should be no breaking changes. The tag
 PRs have been opened and it will takes a couple days/weeks for this to be available.
-For an early preview, see [the latest documentation](http://docs.juliadiffeq.org/latest/).
+For an early preview, see [the in-development documentation](http://docs.juliadiffeq.org/dev/).
 When the release is available, a new version of the documentation will be tagged.
 
 This tag includes many new features, including:
@@ -17,14 +17,14 @@ This tag includes many new features, including:
 
 Jump equations like Gillespie models and jump diffusions can now be solved via
 DifferentialEquations.jl solvers which are compatible with the callback interface.
-A tutorial [for solving discrete stochastic simulations](http://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example.html)
+A tutorial [for solving discrete stochastic simulations](http://docs.juliadiffeq.org/dev/tutorials/discrete_stochastic_example.html)
 has been added. It's already a very powerful interface which
 allows you to define equations which depend on a very general form of jump callbacks
 (i.e. mix differential equations and discrete equations). You can even have the
 jump rates dependent on the continuous solution values from the differential equations,
-which is shown in the new [jump diffusion tutorial](http://docs.juliadiffeq.org/latest/tutorials/jump_diffusion.html).
+which is shown in the new [jump diffusion tutorial](http://docs.juliadiffeq.org/dev/tutorials/jump_diffusion.html).
 For more information on
-defining jump equations, [see the manual page](http://docs.juliadiffeq.org/latest/types/jump_types.html)
+defining jump equations, [see the manual page](http://docs.juliadiffeq.org/dev/types/jump_types.html)
 
 * Multi-scale Models
 
@@ -48,7 +48,7 @@ and get the most optimized numerical methods for free!
 * Solver Compatibility Chart
 
 A really nice documentation addition. Use
-[this page](http://docs.juliadiffeq.org/latest/basics/compatibility_chart.html)
+[this page](http://docs.juliadiffeq.org/dev/basics/compatibility_chart.html)
 to determine what features are available for a given solver. All of the associated
 packages are represented.
 
@@ -62,7 +62,7 @@ Thus you should find it to be much more robust.
 
 The interpolations interface now has an inplace form, lets you choose to interpolate
 only specified indices, and lets you choose which derivative to receive. See
-[the documentation](http://docs.juliadiffeq.org/latest/basics/solution.html#Interpolations-1)
+[the documentation](http://docs.juliadiffeq.org/dev/basics/solution.html#Interpolations-1)
 for more details.
 
 * Various Speed Improvements
@@ -85,7 +85,7 @@ to reduce allocations even further.
 The OrdinaryDiffEq.jl methods now expose the common interface for choosing
 linear solvers via factorization types, which allows you to replace the `\`
 within the methods with whichever routines/packages you want. See
-[the documentation for more details](http://docs.juliadiffeq.org/latest/features/linear_nonlinear.html)
+[the documentation for more details](http://docs.juliadiffeq.org/dev/features/linear_nonlinear.html)
 
 * Integrator interface and Event/Callbacks in StochasticDiffEq.jl
 
@@ -120,9 +120,9 @@ saved throughout the run, letting you retrieve the values. For more information,
 
 The new DiffEqBiological.jl component of the JuliaDiffEq ecosystem allows you to
 easily build biological models by defining reaction equations. The
-[discrete simulation tutorial](http://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example.html)
+[discrete simulation tutorial](http://docs.juliadiffeq.org/dev/tutorials/discrete_stochastic_example.html)
 shows this functionality in action. For more information, see
-[the biological models page](http://docs.juliadiffeq.org/latest/models/biological.html).
+[the biological models page](http://docs.juliadiffeq.org/dev/models/biological.html).
 Currently, the reactions can only be used to form discrete (Gillespie-type) equations.
 However, there are plans to allow these to build more general models as well.
 Of course, all of this can be done with the other components of DifferentialEquations.jl,
@@ -134,7 +134,7 @@ The new DiffEqFinancial.jl component of the JuliaDiffEq ecosystem allows you
 to easily define and solve common differential equations arising in financial
 applications. Solve equations like the Heston model or the Black-Scholes equations
 by just giving a constructor a few constants or functions. For more information,
-see [the financial models page](http://docs.juliadiffeq.org/latest/models/financial.html).
+see [the financial models page](http://docs.juliadiffeq.org/dev/models/financial.html).
 In the future, discretizations of common PDEs and models with jump diffusions will be added.
 
 -------------
