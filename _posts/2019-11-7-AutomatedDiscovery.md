@@ -13,7 +13,7 @@ new DataDrivenDiffEq.jl module makes this a reality. Automatically learn equatio
 with SInDy or develop linear approximations to differential equations directly
 from data with Koopman operator approaches like Extended Dynamic Mode Decomposition
 (eDMD). For more information on doing this, consult
-[the new documentation page on structural estimation]()
+[the new documentation page on structural estimation](https://docs.juliadiffeq.org/latest/analysis/structural_estimation/)
 
 ## SciPy and deSolve (R) (+Updated MATLAB) Common Interface Bindings for Ease of Translation
 
