@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DifferentialEquations.jl v6.9.0: Automated Equation Discovery, SciPy/R Bindings, and Implicit GPU"
-date:   2019-11-30 12:00:00
+date:   2019-12-3 12:00:00
 categories:
 ---
 
@@ -122,6 +122,28 @@ This solves the Lorenz equations with Rosenbrock and implicit ODE solvers for
 Xeon computer, meaning the time savings to do a parameter sweep with just one
 GPU can be tremendous, even (especially) on a stiff ODE.
 
+## Cluster Multi-GPU Support in DiffEqGPU
+
+Additionally, the DiffEqGPU tools now support multiple GPUs. The README now shows
+that one can do things like:
+
+```julia
+# Setup processes with different CUDA devices
+using Distributed
+addprocs(numgpus)
+import CUDAdrv, CUDAnative
+
+let gpuworkers = asyncmap(collect(zip(workers(), CUDAdrv.devices()))) do (p, d)
+  remotecall_wait(CUDAnative.device!, p, d)
+  p
+end
+```
+
+to setup each individual process with a separate GPU, and then the standard
+usage of DiffEqGPU.jl will now make use of these GPUs per batch of trajectories.
+We can see effective parallel solving of over 100,000 ODEs all simultaniously
+using this approach on just a few nodes!
+
 ## Stiff ODE Linear Solver Performance Improvements
 
 Thanks to Yingbo Ma (@YingboMa), our implicit ODE solvers got a pretty major
@@ -139,9 +161,6 @@ wider Julia ecosystem. This should help us stay on top of all changes and keep
 the system stable.
 
 # Next Directions
-
-Our current development is very much driven by the ongoing GSoC/JSoC projects,
-which is a good thing because they are outputting some really amazing results!
 
 Here's some things to look forward to:
 
