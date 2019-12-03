@@ -1,19 +1,53 @@
 ---
 layout: post
-title:  "DifferentialEquations.jl v6.9.0: Automated Equation Discovery, SciPy/R Bindings, and Implicit GPU"
+title:  "DifferentialEquations.jl v6.9.0: Implicit Multi-GPU on Clusters, SciPy/R Bindings"
 date:   2019-12-3 12:00:00
 categories:
 ---
 
-## Automated Discovery of Differential Equations from Data with DataDrivenDiffEq.jl
+## Cluster Multi-GPU Support in DiffEqGPU
 
-Give us timeseries data, and we will give you a TeX'd equation for the differential
-equations that generated the data. Driven by Julius Martensen (@AlCap23), the
-new DataDrivenDiffEq.jl module makes this a reality. Automatically learn equations
-with SInDy or develop linear approximations to differential equations directly
-from data with Koopman operator approaches like Extended Dynamic Mode Decomposition
-(eDMD). For more information on doing this, consult
-[the new documentation page on structural estimation](https://docs.juliadiffeq.org/latest/analysis/structural_estimation/)
+The DiffEqGPU automated GPU parallelism tools now support multiple GPUs. The
+README now shows that one can do things like:
+
+```julia
+# Setup processes with different CUDA devices
+using Distributed
+addprocs(numgpus)
+import CUDAdrv, CUDAnative
+
+let gpuworkers = asyncmap(collect(zip(workers(), CUDAdrv.devices()))) do (p, d)
+  remotecall_wait(CUDAnative.device!, p, d)
+  p
+end
+```
+
+to setup each individual process with a separate GPU, and then the standard
+usage of DiffEqGPU.jl:
+
+```julia
+function lorenz(du,u,p,t)
+ @inbounds begin
+     du[1] = p[1]*(u[2]-u[1])
+     du[2] = u[1]*(p[2]-u[3]) - u[2]
+     du[3] = u[1]*u[2] - p[3]*u[3]
+ end
+ nothing
+end
+
+u0 = Float32[1.0;0.0;0.0]
+tspan = (0.0f0,100.0f0)
+p = (10.0f0,28.0f0,8/3f0)
+prob = ODEProblem(lorenz,u0,tspan,p)
+prob_func = (prob,i,repeat) -> remake(prob,p=rand(Float32,3).*p)
+monteprob = EnsembleProblem(prob, prob_func = prob_func)
+@time sol = solve(monteprob,Tsit5(),EnsembleGPUArray(),trajectories=100_000,
+                  batch_size = 10_000, saveat=1.0f0)
+```
+
+will now make use of these GPUs per batch of trajectories. We can see effective
+parallel solving of over 100,000 ODEs all simultaneously using this approach
+on just a few compute nodes!
 
 ## SciPy and deSolve (R) (+Updated MATLAB) Common Interface Bindings for Ease of Translation
 
@@ -121,28 +155,6 @@ This solves the Lorenz equations with Rosenbrock and implicit ODE solvers for
 (26 ODEs), a single RTX 2080 card was 5x faster than a multithreaded 16 core
 Xeon computer, meaning the time savings to do a parameter sweep with just one
 GPU can be tremendous, even (especially) on a stiff ODE.
-
-## Cluster Multi-GPU Support in DiffEqGPU
-
-Additionally, the DiffEqGPU tools now support multiple GPUs. The README now shows
-that one can do things like:
-
-```julia
-# Setup processes with different CUDA devices
-using Distributed
-addprocs(numgpus)
-import CUDAdrv, CUDAnative
-
-let gpuworkers = asyncmap(collect(zip(workers(), CUDAdrv.devices()))) do (p, d)
-  remotecall_wait(CUDAnative.device!, p, d)
-  p
-end
-```
-
-to setup each individual process with a separate GPU, and then the standard
-usage of DiffEqGPU.jl will now make use of these GPUs per batch of trajectories.
-We can see effective parallel solving of over 100,000 ODEs all simultaniously
-using this approach on just a few nodes!
 
 ## Stiff ODE Linear Solver Performance Improvements
 
