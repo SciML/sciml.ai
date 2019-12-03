@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DifferentialEquations.jl v6.9.0: Implicit Multi-GPU on Clusters, SciPy/R Bindings"
+title:  "DifferentialEquations.jl v6.9.0: Automated Multi-GPU Implicit ODE Solving, SciPy/R Bindings"
 date:   2019-12-3 12:00:00
 categories:
 ---
