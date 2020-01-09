@@ -83,7 +83,7 @@ sol = solve(prob,deSolveDiffEq.lsoda())
 
 As an added bonus, this gives us a fairly simple way to track performance
 differences between the common ODE solver packages of each language. A new
-[benchmark page is focused on cross language wrapper overhead](https://benchmarks.juliadiffeq.org/html/MultiLanguage/wrapper_packages.html) and showcases the performance differences
+[benchmark page is focused on cross language wrapper overhead](https://benchmarks.juliadiffeq.org/html/MultiLanguage/wrapper_packages) and showcases the performance differences
 between these language's differential equation suites on 4 ODE test problems
 (non-stiff and stiff). For example, on a system of 7 stiff ODEs, we see the
 following:

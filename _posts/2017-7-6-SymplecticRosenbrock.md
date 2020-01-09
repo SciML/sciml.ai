@@ -136,7 +136,7 @@ all out. The new methods are:
 - `SofSpa10`: 10th order explicit symplectic integrator.
 
 You can read more about them
-[in the Refined ODE Solver docs](http://docs.juliadiffeq.org/latest/solvers/refined_ode_solve.html).
+[in the Refined ODE Solver docs](http://docs.juliadiffeq.org/latest/solvers/refined_ode_solve).
 We have some [new physics tutorials](http://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqTutorials.jl/blob/master/PhysicalModels/ClassicalPhysics.ipynb)
 which show how to build a `SecondOrderODEProblem` and use these methods. They use
 the same fast Runge-Kutta setup as the rest of OrdinaryDiffEq.jl so they are quite
@@ -239,7 +239,7 @@ common interface, so setting the defaults correctly will allow you to exactly
 replicate your results in the DiffEq framework. All of the packages which had
 ODE.jl as a dependency received a PR which replaces ODE.jl with OrdinaryDiffEq.jl
 (note you can directly use OrdinaryDiffEq.jl without the rest of DiffEq, see
-[this page in the docs](http://docs.juliadiffeq.org/latest/features/low_dep.html)).
+[this page in the docs](http://docs.juliadiffeq.org/latest/features/low_dep)).
 
 ODE.jl is not going away. I have maintained it for a year, and will continue to
 maintain it and make sure it exists in a usable state in Julia 1.0. What I will

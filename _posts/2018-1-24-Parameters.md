@@ -24,7 +24,7 @@ applying these breaking changes.
 To see what version you have, use `Pkg.status("DifferentialEquations")`. To
 stay on the previous version, use `Pkg.pin("DifferentialEquations",v"3.1.0")`.
 
-Note that the [latest docs](http://docs.juliadiffeq.org/latest/index.html) are
+Note that the [latest docs](http://docs.juliadiffeq.org/latest/index) are
 live with the changes. The [release-3.2 docs](http://docs.juliadiffeq.org/release-3.2/)
 still hold the old syntax if needed.
 
@@ -162,7 +162,7 @@ for solving PDEs in Julia. More on this to come.
 
 ## Documentation FAQ
 
-The documentation now has [a FAQ page](http://docs.juliadiffeq.org/latest/basics/faq.html).
+The documentation now has [a FAQ page](http://docs.juliadiffeq.org/latest/basics/faq).
 It explains a lot of things like how to optimize your code, how to build
 complicated models, and how to diagnose and handle numerical errors. Please
 use this guide and request new additions as necessary!
@@ -172,7 +172,7 @@ use this guide and request new additions as necessary!
 Adjoint sensitivity analysis lets you directly solve for the derivative of some
 functional of the differential equation solution, such as a cost function in
 an optimization problem.
-[DifferentialEquations.jl now has a package-independent adjoint sensitivity analysis implementation](http://docs.juliadiffeq.org/latest/analysis/sensitivity.html#Adjoint-Sensitivity-Analysis-1) that lets you use any of the common
+[DifferentialEquations.jl now has a package-independent adjoint sensitivity analysis implementation](http://docs.juliadiffeq.org/latest/analysis/sensitivity) that lets you use any of the common
 interface ODE solvers to perform this analysis. While there are more optimizations
 which still need to be done in this area, this will be a useful feature for those
 looking to perform optimization on the ODE solver.
@@ -184,7 +184,7 @@ function approach. While L2-error of the solution against data corresponds to
 maximum likelihood estimation under the assumption of a Normal likelihood, this
 is constrained to very specific likelihood functions (Normal). Now our tools
 allow for giving a likelihood distribution associated with each time point.
-[We have some examples in the documentation showing how to use MLE estimation to get fitting distributions](http://docs.juliadiffeq.org/latest/analysis/parameter_estimation.html#Generalized-Likelihood-Example-1).
+[We have some examples in the documentation showing how to use MLE estimation to get fitting distributions](http://docs.juliadiffeq.org/latest/analysis/parameter_estimation).
 This process is a more precise approach to data fitting and thus should be an
 interesting new tool to use in cases where one wants to fit parameters against
 a lot of data.
@@ -197,7 +197,7 @@ requires that your function is defined via `@ode_def` and will write and run a
 code from [Stan](http://mc-stan.org/) to generate posterior distributions. The
 `turing_inference` function uses [Turing.jl](https://github.com/yebai/Turing.jl)
 and can work with any DifferentialEquations.jl object. These functions simply
-require your `DEProblem`, data, and prior distributions and the [rest of the inference setup is done for you](http://docs.juliadiffeq.org/latest/analysis/parameter_estimation.html#Bayesian-Inference-Examples-1). Thus this is a very quick way to make use of
+require your `DEProblem`, data, and prior distributions and the [rest of the inference setup is done for you](http://docs.juliadiffeq.org/latest/analysis/parameter_estimation). Thus this is a very quick way to make use of
 the power of Bayesian inference tools!
 
 ## Small Problem Speedups
