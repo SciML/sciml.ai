@@ -37,3 +37,4 @@ links:
 about_image: JuliaDiffEq_icon.png
 ##comment this if you want full width posts with no sidebar
 sidebar: on
+future: true
