@@ -63,10 +63,70 @@ occur.
 We've seen some pretty massive performance and stability gains by utilizing
 this system!
 
-## DiffEqFlux Overhaul: Zygote Support and `sciml_train` Interface
+## DiffEqFlux Overhaul: Zygote Support, `sciml_train` Interface, and Fast Layers
 
 Given the workflows that we saw in [the UDE paper](https://arxiv.org/abs/2001.04385),
-we have overhauled
+we have overhauled DiffEqFlux. The new interface, `sciml_train`, is more suitable
+to scientific machine learning. We have introduced the `Fast` layer setup, i.e.
+`FastChain` and `FastDense`, which give a 10x speed improvement over Flux.jl
+neural architectures by avoiding expensive restructure/destructure calls. Additionally,
+`sciml_train` links not just to the Flux.jl deep learning optimizer library,
+but also to Optim.jl for stability-enhanced methods like L-BFGS. Lastly, this
+new interface has explicit parameters, something that has helped fix a lot of
+issues users have had with the interface. Together, we can train a neural ODE
+in around 30 seconds in this example that mixes ADAM and BFGS optimizers:
+
+```julia
+using DiffEqFlux, OrdinaryDiffEq, Flux, Optim, Plots
+
+u0 = Float32[2.; 0.]
+datasize = 30
+tspan = (0.0f0,1.5f0)
+
+function trueODEfunc(du,u,p,t)
+    true_A = [-0.1 2.0; -2.0 -0.1]
+    du .= ((u.^3)'true_A)'
+end
+t = range(tspan[1],tspan[2],length=datasize)
+prob = ODEProblem(trueODEfunc,u0,tspan)
+ode_data = Array(solve(prob,Tsit5(),saveat=t))
+
+dudt2 = FastChain((x,p) -> x.^3,
+            FastDense(2,50,tanh),
+            FastDense(50,2))
+n_ode = NeuralODE(dudt2,tspan,Tsit5(),saveat=t)
+
+function predict_n_ode(p)
+  n_ode(u0,p)
+end
+
+function loss_n_ode(p)
+    pred = predict_n_ode(p)
+    loss = sum(abs2,ode_data .- pred)
+    loss,pred
+end
+
+loss_n_ode(n_ode.p) # n_ode.p stores the initial parameters of the neural ODE
+
+cb = function (p,l,pred;doplot=false) #callback function to observe training
+  display(l)
+  # plot current prediction against data
+  if doplot
+    pl = scatter(t,ode_data[1,:],label="data")
+    scatter!(pl,t,pred[1,:],label="prediction")
+    display(plot(pl))
+  end
+  return false
+end
+
+# Display the ODE with the initial parameter values.
+cb(n_ode.p,loss_n_ode(n_ode.p)...)
+
+res1 = DiffEqFlux.sciml_train(loss_n_ode, n_ode.p, ADAM(0.05), cb = cb, maxiters = 300)
+cb(res1.minimizer,loss_n_ode(res1.minimizer)...;doplot=true)
+res2 = DiffEqFlux.sciml_train(loss_n_ode, res1.minimizer, LBFGS(), cb = cb)
+cb(res2.minimizer,loss_n_ode(res2.minimizer)...;doplot=true)
+```
 
 ## SDEs and AD on DiffEqGPU.jl
 
