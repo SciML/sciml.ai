@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DifferentialEquations.jl v6.11.0: Universal Differential Equation Overhaul"
-date:   2019-2-18 12:00:00
+date:   2019-2-18 10:00:00
 categories:
 ---
 
