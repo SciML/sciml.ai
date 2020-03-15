@@ -131,7 +131,7 @@ cb(res2.minimizer,loss_n_ode(res2.minimizer)...;doplot=true)
 ## SDEs and AD on DiffEqGPU.jl
 
 [DiffEqGPU.jl, the library for automated parallelization of small differential equations across GPUs](https://github.com/JuliaDiffEq/DiffEqGPU.jl), now supports SDEs and ForwardDiff dual numbers. This
-means you can use adaptive SDE solvers to solve 100,000 simultanious SDEs on
+means you can use adaptive SDE solvers to solve 100,000 simultaneous SDEs on
 GPUs, or solve ODEs defined by dual numbers in order to do forward sensitivity
 analysis of many parameters at once. Once again, the interface is as simple as
 adding `EnsembleGPUArray()` to your ensemble solve, essentially no code change
