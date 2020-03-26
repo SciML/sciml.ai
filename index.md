@@ -42,7 +42,7 @@ of scientific simulations.
   [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl) estimates
   Koopman operators (DMD) and utilizes methods like SInDy to turn timeseries
   data into LaTeX for driving differential equations.
-- **A Multi-Language Userbase**. While the majority of the tooling for SciML
+- **A Polyglot Userbase**. While the majority of the tooling for SciML
   is built using the [Julia programming language](https://julialang.org/),
   SciML is committed to ensure that these methodologies can be used throughout
   the greater scientific community. Tools like [diffeqpy](https://github.com/SciML/diffeqpy)
