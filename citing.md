@@ -10,9 +10,9 @@ sitemap:
 
 # Citing
 
-To credit the JuliaDiffEq software, please star the repositories that you would
-like to support. If you use JuliaDiffEq software as part of your research, teaching, or other activities,
-we would be grateful if you could cite our work. Since JuliaDiffEq is a collection of individual
+To credit the SciML software, please star the repositories that you would
+like to support. If you use SciML software as part of your research, teaching, or other activities,
+we would be grateful if you could cite our work. Since SciML is a collection of individual
 modules, in order to give proper credit please cite **each related component**.
 
 To give proper academic credit, all software should be cited.
@@ -20,12 +20,12 @@ To give proper academic credit, all software should be cited.
 Listed below are relevant publications which should be cited upon usage.
 For software which do not have publications, recommended citations are also
 included. If you have any questions about citations, please feel free to
-[file an issue at the Github repository](https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues)
-or ask in the [Gitter channel](https://gitter.im/JuliaDiffEq/Lobby). If any of
+[file an issue at the Github repository](https://github.com/SciML/DifferentialEquations.jl/issues)
+or ask in the [Gitter channel](https://gitter.im/SciML/Lobby). If any of
 this information needs to be updated, please open an issue or pull request
-[at the website repository](https://github.com/JuliaDiffEq/juliadiffeq.github.io).
+[at the website repository](https://github.com/SciML/SciML.github.io).
 
-## JuliaDiffEq Publications
+## SciML Publications
 
 #### DifferentialEquations.jl
 
@@ -53,12 +53,12 @@ this information needs to be updated, please open an issue or pull request
 
 #### DASSL.jl
 
-- DASSL.jl. Date of access. Current version. https://github.com/JuliaDiffEq/DASSL.jl.
+- DASSL.jl. Date of access. Current version. https://github.com/SciML/DASSL.jl.
 
 
 #### DelayDiffEq.jl
 
-- DelayDiffEq.jl. Date of access. Current version. https://github.com/JuliaDiffEq/DelayDiffEq.jl.
+- DelayDiffEq.jl. Date of access. Current version. https://github.com/SciML/DelayDiffEq.jl.
 
 #### LSODA.jl
 
@@ -78,19 +78,19 @@ this information needs to be updated, please open an issue or pull request
 
 #### ODE.jl
 
-- ODE.jl. Date of access. Current version. https://github.com/JuliaDiffEq/ODE.jl.
+- ODE.jl. Date of access. Current version. https://github.com/SciML/ODE.jl.
 
 #### OrdinaryDiffEq.jl
 
-- OrdinaryDiffEq.jl. Date of access. Current version. https://github.com/JuliaDiffEq/OrdinaryDiffEq.jl.
+- OrdinaryDiffEq.jl. Date of access. Current version. https://github.com/SciML/OrdinaryDiffEq.jl.
 
 #### ParameterizedFunctions.jl
 
-- ParameterizedFunctions.jl. Date of access. Current version. https://github.com/JuliaDiffEq/ParameterizedFunctions.jl.
+- ParameterizedFunctions.jl. Date of access. Current version. https://github.com/SciML/ParameterizedFunctions.jl.
 
 #### StochasticDiffEq.jl
 
-- StochasticDiffEq.jl. Date of access. Current version. https://github.com/JuliaDiffEq/StochasticDiffEq.jl.
+- StochasticDiffEq.jl. Date of access. Current version. https://github.com/SciML/StochasticDiffEq.jl.
 
 #### Sundials.jl
 
@@ -425,10 +425,10 @@ University of Geneva, Switzerland.
 - Jens Niegemann, Richard Diehl, Kurt Busch. Efficient Low-Storage Runge–Kutta Schemes with
   Optimized Stability Regions. Journal of Computational Physics, 231, pp 364-372, 2012.
   doi: https://doi.org/10.1016/j.jcp.2011.09.003
-  
+
 #### ParsaniKetchesonDeconinck3S32, ParsaniKetchesonDeconinck3S82, ParsaniKetchesonDeconinck3S53, ParsaniKetchesonDeconinck3S173, ParsaniKetchesonDeconinck3S94, ParsaniKetchesonDeconinck3S184, ParsaniKetchesonDeconinck3S105, ParsaniKetchesonDeconinck3S205
 
-- Parsani, Matteo, David I. Ketcheson, and W. Deconinck. 
+- Parsani, Matteo, David I. Ketcheson, and W. Deconinck.
   "Optimized explicit Runge--Kutta schemes for the spectral difference method applied to wave propagation problems."
   SIAM Journal on Scientific Computing 35.2 (2013): A957-A986.
   doi: https://doi.org/10.1137/120885899
@@ -555,7 +555,7 @@ University of Geneva, Switzerland.
   systems with many species and many channels, Journal of Physical Chemistry A,
   104 (9), 1876-1889 (2000). doi:10.1021/jp993732q
 
-#### SortingDirect 
+#### SortingDirect
 
 - J. M. McCollum, G. D. Peterson, C. D. Cox, M. L. Simpson and N. F. Samatova, The
   sorting direct method for stochastic simulation of biochemical systems with

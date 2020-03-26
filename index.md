@@ -7,62 +7,81 @@ sitemap:
     changefreq: weekly
     lastmod: 2014-09-07T16:31:30+05:30
 ---
-# JuliaDiffEq
+# SciML
 
-JuliaDiffEq is a Github organization created to unify the packages for solving differential
-equations in Julia. By providing a diverse set of tools with a common interface,
-we provide a modular, easily-extendable, and highly
-performant ecosystem for solving various forms of differential equations.
+SciML is an open source software organization created to unify the packages for
+scientific machine learning. This includes the development of modular scientific
+simulation support software, such as differential equation solvers, along with the
+methodologies for inverse problems and automated model discovery. By providing
+a diverse set of tools with a common interface, we provide a modular,
+easily-extendable, and highly performant ecosystem for handling a wide variety
+of scientific simulations.
 
-## Getting Started
+## Core Components
 
-To get started, check out the documentation for [DifferentialEquations.jl](https://juliadiffeq.github.io/DiffEqDocs.jl/dev/index)
-which pulls all of the functionality into one convenient package. If you need help,
-feel free to ask questions [in the chatroom](https://gitter.im/JuliaDiffEq/Lobby)
-or [file an issue at the Github repository](https://github.com/JuliaDiffEq/DifferentialEquations.jl/issues).
-We will be happy to help you get accustomed to our ecosystem.
-
-## What We Offer
-
-- **High performance tools**. Our tools include both wrappers to popular C/Fortran
-  solvers and native Julia implementations. Our Julia implementations in many
-  cases [benchmark as faster than the class Fortran methods!](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl)
-- **The largest set of algorithms**. [From the ODE methods alone](https://juliadiffeq.github.io/DiffEqDocs.jl/dev/solvers/ode_solve),
-  choose between methods such as the 14th Order Feagin methods, the recent Verner
-  Efficient methods with high order interpolations, or the classic dopri methods.
-  We offer all of the bells and whistles: high-order symplectic methods,
-  highly efficient Rosenbrock methods for stiff ODEs and DAEs, high-order adaptive
-  methods for stochastic differential equations, strong stability presurving (SSP)
-  Runge-Kutta methods for Hyperbolic PDEs, etc. The included set dwarfs what is
-  presented by other ecosystems.
-- **A clean user interface**. For the different types of equations, users define a Problem
-  type, and call solve. The Solution type which solve creates then acts similarly
-  for all types of equations, and includes conveniences like an array interface
-  (`sol[i]` for the ith timepoint), an interpolation interface (`sol(t)` for the
-  solution interpolated at time t), and a plotting interface (`plot(sol)`).
-- **Compatibility with a wide array of Julia-defined number types**. Packages such as
-  OrdinaryDiffEq.jl allow for solving differential equations with arbitrary precision
-  numbers, unit-checking arithmetic, n-dimensional tensors, complex numbers, and more.
-- **Interactivity and flexibility**. The "integrator interface" along with the callbacks
-  and event handling frameworks are highly flexible, allowing one to solve complicated
-  equations like hybrid dynamical systems involving both discrete and continuous variables,
-  and stochastic jump equations, by extending the solvers as necessary.
-- **Automatic symbolic enhancements**. [ParameterizedFunctions.jl](https://github.com/JuliaDiffEq/ParameterizedFunctions.jl)
-  provides an easy way to specify differential equations and will automatically
-  symbolically calculate items such as Jacobians and inverted Jacobians which
-  will further increase the speed of the methods.
-- **Integration with the Julia Package Ecosystem**. JuliaDiffEq is highly tied
-  to the Julia package ecosystem, using it to provide advanced plotting, automatic
-  differentiation, iterative solvers, and much more.
-- **Newest research in differential equations**. The various component solvers
-  contain new algorithms to accelerate the solution to your problems. OrdinaryDiffEq.jl
-  allows for specifying `CompositeAlgorithm`s with chosen switching behaviors.
-  StochasticDiffEq.jl's solvers include very recent research tools including
-  higher-order methods and highly efficient adaptive timestepping. DelayDiffEq.jl
-  includes new methods for stiff equations and high accuracy.
-- **Add-ons for high level functionality**. Easily perform parameter estimation,
-  sensitivity analysis, bifurcation analysis, and much more.
-- **Tools for algorithm development and research**. These tools make JuliaDiffEq
-  not only be the easiest ecosystem to use, but also the easiest ecosystem for developers to target.
-  Using the convergence analysis and benchmarking tools, algorithms can be tested
-  against the full JuliaDiffEq suite for easy comparison.
+- **High Performance and Feature-Filled Differential Equation Solving**. The
+  library [DifferentialEquations.jl](https://docs.sciml.ai/dev/) is a library
+  for solving ordinary differential equations (ODEs), stochastic differential
+  equations (SDEs), delay differential equations (DDEs), differential-algebraic
+  equations (DAEs), and hybrid differential equations which include multi-scale
+  models and mixtures with agent-based simulations. The templated implementation
+  allows arbitrary array and number types to be compatible, giving compatibility
+  with arbitrary precision floating point numbers, GPU-based computations,
+  unit-checked arithmetic, and other features. DifferentialEquations.jl is designed
+  for both high performance on large-scale and small-scale problems, and routinely
+  [benchmarks at the top of the pack](https://github.com/SciML/DiffEqBenchmarks.jl).
+- **Physics-Informed Model Discovery and Learning**. SciML contains a litany of modules
+  for automating the process of model discovery and fitting. Tools like
+  [DiffEqParamEstim.jl](https://docs.sciml.ai/latest/analysis/parameter_estimation/)
+  and [DiffEqBayes.jl](https://docs.sciml.ai/latest/analysis/parameter_estimation/#Bayesian-Methods-1)
+  provide classical maximum likelihood and Bayesian estimation for differential
+  equation based models, while [DiffEqFlux.jl](https://github.com/SciML/DiffEqFlux.jl)
+  enables the training of embedded neural networks inside of differential
+  equations (neural differential equations or universal differential equations)
+  for discovering unknown dynamical equations, and
+  [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl) estimates
+  Koopman operators (DMD) and utilizes methods like SInDy to turn timeseries
+  data into LaTeX for driving differential equations.
+- **A Multi-Language Userbase**. While the majority of the tooling for SciML
+  is built using the [Julia programming language](https://julialang.org/),
+  SciML is committed to ensure that these methodologies can be used throughout
+  the greater scientific community. Tools like [diffeqpy](https://github.com/SciML/diffeqpy)
+  and [diffeqr](https://cran.r-project.org/web/packages/diffeqr/index.html) bridge
+  the DifferentialEquations.jl solvers to Python and R respectively, and we hope
+  to see many more developments along these lines in the near future.
+- **Compiler-Assisted Model Analysis and Sparsity Acceleration**. Scientific
+  models generally have structures like locality which leads to sparsity in the
+  program structures that can be exploited for major performance acceleration.
+  The SciML builds a set of interconnected tools for generating numerical solver
+  code directly on the models that are being simulated.
+  [SparsityDetection.jl](https://github.com/SciML/SparsityDetection.jl) can automatically
+  detect the sparsity patterns of Jacobians and Hessians from arbitrary source
+  code, while [ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl)
+  can rewrite differential equation models to re-arrange equations for better
+  stability and automatically parallelize code. These tools then connect with
+  affiliated packages like [SparseDiffTools.jl](https://github.com/JuliaDiff/SparseDiffTools.jl)
+  to accelerate solving with DifferentialEquations.jl and training with DiffEqFlux.jl.
+- **ML-Assisted Tooling for Model Acceleration**. SciML supports the development
+  of the latest ML-accelerated toolsets for scientific machine learning. Methods
+  like Physics-Informed Neural Networks (PINNs) and Deep BSDE methods for solving
+  1000 dimensional partial differential equations are productionized in the
+  [NeuralNetDiffEq.jl](https://github.com/SciML/NeuralNetDiffEq.jl) library.
+  Surrogate-based acceleration methods are provided by
+  [Surrogates.jl](https://github.com/SciML/Surrogates.jl).
+- **Differentiable Scientific Data Structures and Simulators**. The SciML ecosystem
+  contains pre-built scientific simulation tools along with data structures
+  for accelerating the development of models. Tools like
+  [LabelledArrays.jl](https://github.com/SciML/LabelledArrays.jl) and
+  [MultiScaleArrays.jl](https://github.com/SciML/MultiScaleArrays.jl) make it easy
+  to build large-scale scientific models, while other tools like
+  [NBodySimulator.jl](https://github.com/SciML/NBodySimulator.jl) provide full-scale
+  simulation simulators.
+- **Tools for Accelerated Algorithm Development and Research**. SciML is an
+  organization dedicated to helping state-of-the-art research in both
+  numerical simulation methods and methodologies in scientific machine learning.
+  Many tools throughout the organization automate the process of benchmarking
+  and testing new methodologies to ensure they are safe and battle tested, both
+  to accelerate the translation of the methods to publications and to users.
+  We invite the larger research community to make use of our tooling like
+  [DiffEqDevTools.jl](https://github.com/SciML/DiffEqDevTools.jl) and our large
+  suite of wrapped algorithms for quickly test and deploying new algorithms.
