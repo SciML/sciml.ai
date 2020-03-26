@@ -38,10 +38,12 @@ of scientific simulations.
   equation based models, while [DiffEqFlux.jl](https://github.com/SciML/DiffEqFlux.jl)
   enables the training of embedded neural networks inside of differential
   equations (neural differential equations or universal differential equations)
-  for discovering unknown dynamical equations, and
+  for discovering unknown dynamical equations,
   [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl) estimates
   Koopman operators (DMD) and utilizes methods like SInDy to turn timeseries
-  data into LaTeX for driving differential equations.
+  data into LaTeX for driving differential equations, and
+  [ReservoirComputing.jl](https://github.com/SciML/ReservoirComputing.jl) for
+  Echo State Networks that learn to predict the dynamics of chaotic systems.
 - **A Polyglot Userbase**. While the majority of the tooling for SciML
   is built using the [Julia programming language](https://julialang.org/),
   SciML is committed to ensure that these methodologies can be used throughout
