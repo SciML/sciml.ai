@@ -7,7 +7,7 @@ sitemap:
     changefreq: weekly
     lastmod: 2014-09-07T16:31:30+05:30
 ---
-# SciML
+# SciML: Open Source Software for Scientific Machine Learning
 
 SciML is an open source software organization created to unify the packages for
 scientific machine learning. This includes the development of modular scientific
