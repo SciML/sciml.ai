@@ -16,7 +16,7 @@ Let's get to it!
 
 ## New Reaction DSL
 
-[The new reaction DSL](http://docs.juliadiffeq.org/latest/models/biological)
+[The new reaction DSL](https://docs.juliadiffeq.org/latest/models/biological)
 is much more comprehensive than our old version. It's now:
 
 - All macro-based
@@ -71,12 +71,12 @@ change, and there's nothing else to do here.
 The new Bayesian estimation package DynamicHMC.jl was added as a backend to
 DiffEqBayes.jl. This contribution by @tpapp and @Vaibhavdixit02 has initial
 tests that show
-[DynamicHMC.jl + DifferentialEquations.jl](http://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqBenchmarks.jl/blob/master/ParameterEstimation/DiffEqBayesLorenz.ipynb)
+[DynamicHMC.jl + DifferentialEquations.jl](https://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqBenchmarks.jl/blob/master/ParameterEstimation/DiffEqBayesLorenz.ipynb)
 is a combination that can be orders of magnitude faster than Stan.jl (though
 additional testing which takes into account accuracy differences will be
 needed for a more precise determination). Still, it's as simple to use as the
 other Bayesian functions (see
-[the example](http://docs.juliadiffeq.org/latest/analysis/parameter_estimation))
+[the example](https://docs.juliadiffeq.org/latest/analysis/parameter_estimation))
 and so give it a try if you're up for it.
 
 ## Livestream Tutorial
@@ -102,7 +102,7 @@ We have a new method by @onoderat for SDEs which is the Predictor-Corrector Eule
 [can be more much more efficient than EM](https://github.com/JuliaDiffEq/StochasticDiffEq.jl/pull/53).
 It does require the definition of a separate function `ggprime` (which will be
 defined in the
-[documentation](http://docs.juliadiffeq.org/latest/solvers/sde_solve))
+[documentation](https://docs.juliadiffeq.org/latest/solvers/sde_solve))
 and we will be working to define function versions that will autodifferentiate
 and numerical differentiate (also symbolically build) this function.
 

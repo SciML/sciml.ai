@@ -35,7 +35,7 @@ For example, here is the new method applied to the Pleiades Problem:
 
 ![Pleiades work-precision diagram](https://user-images.githubusercontent.com/17304743/41568408-5f5aeb7e-731a-11e8-9bb0-b310cae20d1c.png)
 
-In the [previous notebook](http://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqBenchmarks.jl/blob/master/NonStiffODE/Pleiades%20Work-Precision%20Diagrams.ipynb), the fastest methods were the
+In the [previous notebook](https://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqBenchmarks.jl/blob/master/NonStiffODE/Pleiades%20Work-Precision%20Diagrams.ipynb), the fastest methods were the
 Vern6, Vern7, and Sundials CVODE methods. Now this method seems to be a new
 contender in this field.
 
