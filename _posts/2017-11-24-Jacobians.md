@@ -6,7 +6,7 @@ categories:
 ---
 
 The DifferentialEquations.jl 3.0 release had most of the big features and was
-[featured in a separate blog post](https://www.stochasticlifestyle.com/differentialequations-jl-3-0-roadmap-4-0/).
+[featured in a separate blog post](http://www.stochasticlifestyle.com/differentialequations-jl-3-0-roadmap-4-0/).
 Now in this release we had a few big incremental developments. We expanded
 the capabilities of our wrapped libraries and completed one of the most
 requested features: passing Jacobians into the IDA and DASKR DAE solvers.
@@ -25,7 +25,7 @@ dG/du + gamma*dG/d(du)
 
 where `gamma` is dependent on `dt`, and so we can use that form for DAEs.
 This matches the definition used by older packages, so in a sec we'll mention
-that! [Defines the interface.](https://docs.juliadiffeq.org/latest/features/performance_overloads)
+that! [Defines the interface.](http://docs.juliadiffeq.org/latest/features/performance_overloads)
 
 ## Improved bindings and jacobian passing for Sundials.jl and DASKR.jl
 

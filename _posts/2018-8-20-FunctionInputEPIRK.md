@@ -28,7 +28,7 @@ The following is a list of user-facing breaking changes:
   The same overloads all exist but now are passed to build the `ODEFunction`
   which is then used by the solver. Things like `SDEFunction`, `DDEFunction`,
   etc. all work analogously.
-  [These are documented in the `Jacobians and DiffEqFunctions` page of the documentation.](https://docs.juliadiffeq.org/latest/features/performance_overloads)
+  [These are documented in the `Jacobians and DiffEqFunctions` page of the documentation.](http://docs.juliadiffeq.org/latest/features/performance_overloads)
   Mass matrices have also moved to the DiffEqFunction types.
 
 - `saveat` now only includes the end points if the end points are in the array

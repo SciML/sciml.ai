@@ -12,7 +12,7 @@ the methods for additive noise and attempt to start enhancing the methods for
 diagonal noise SDEs. Thus while it focuses on a constrained form of noise, this
 is a form of noise present in a lot of models and, by using the constrained form,
 allows for extremely optimized methods. See the
-[updated SDE solvers documentation](https://docs.juliadiffeq.org/latest/solvers/sde_solve)
+[updated SDE solvers documentation](http://docs.juliadiffeq.org/latest/solvers/sde_solve)
 for details on the new methods. Here's what's up!
 
 ## Stability-Enhanced High Order Explicit Stochastic Runge-Kutta Methods for Additive/Diagonal Noise

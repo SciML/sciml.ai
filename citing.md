@@ -16,7 +16,7 @@ we would be grateful if you could cite our work. Since SciML is a collection of 
 modules, in order to give proper credit please cite **each related component**.
 
 To give proper academic credit, all software should be cited.
-[See this link for more information on citing software](https://openresearchsoftware.metajnl.com/about/#q11).
+[See this link for more information on citing software](http://openresearchsoftware.metajnl.com/about/#q11).
 Listed below are relevant publications which should be cited upon usage.
 For software which do not have publications, recommended citations are also
 included. If you have any questions about citations, please feel free to
@@ -31,7 +31,7 @@ this information needs to be updated, please open an issue or pull request
 
 - Rackauckas, C. & Nie, Q., (2017). DifferentialEquations.jl – A Performant and
   Feature-Rich Ecosystem for Solving Differential Equations in Julia. Journal of
-  Open Research Software. 5(1), p.15. DOI: https://doi.org/10.5334/jors.151
+  Open Research Software. 5(1), p.15. DOI: http://doi.org/10.5334/jors.151
 
 #### StochasticDiffEq.jl
 
@@ -153,13 +153,13 @@ citations.
 #### RK4 Residual Control
 
 - L. F. Shampine. 2005. Solving ODEs and DDEs with residual control. Appl. Numer.
-  Math. 52, 1 (January 2005), 113-127. DOI=https://dx.doi.org/10.1016/j.apnum.2004.07.003
+  Math. 52, 1 (January 2005), 113-127. DOI=http://dx.doi.org/10.1016/j.apnum.2004.07.003
 
 #### OwrenZen3, OwrenZen4, OwrenZen5
 
 - Brynjulf Owren and Marino Zennaro. 1992. Derivation of efficient, continuous,
   explicit Runge-Kutta methods. SIAM J. Sci. Stat. Comput. 13, 6 (November 1992),
-  1488-1501. DOI=https://dx.doi.org/10.1137/0913084
+  1488-1501. DOI=http://dx.doi.org/10.1137/0913084
 
 #### radau, radu5
 
@@ -216,7 +216,7 @@ University of Geneva, Switzerland.
 
 - M.E. Hosea, L.F. Shampine, Analysis and implementation of TR-BDF2, Applied
   Numerical Mathematics, Volume 20, Issue 1, 1996, Pages 21-37, ISSN 0168-9274,
-  https://dx.doi.org/10.1016/0168-9274(95)00115-8.
+  http://dx.doi.org/10.1016/0168-9274(95)00115-8.
 
 #### SDIRK2, Cash4
 
@@ -241,7 +241,7 @@ University of Geneva, Switzerland.
 
 - Christopher A. Kennedy and Mark H. Carpenter. 2003. Additive Runge-Kutta schemes
   for convection-diffusion-reaction equations. Appl. Numer. Math. 44, 1-2
-  (January 2003), 139-181. DOI=https://dx.doi.org/10.1016/S0168-9274(02)00138-1
+  (January 2003), 139-181. DOI=http://dx.doi.org/10.1016/S0168-9274(02)00138-1
 
 #### Nystrom4, Nystrom4VelocityIndependent, Nystrom5VelocityIndependent
 
@@ -267,7 +267,7 @@ University of Geneva, Switzerland.
 
 - J.R. Dormand, P.J. Prince, Runge-Kutta-Nystrom triples, Computers & Mathematics
   with Applications, Volume 13, Issue 12, 1987, Pages 937-949, ISSN 0898-1221,
-  https://dx.doi.org/10.1016/0898-1221(87)90066-6.
+  http://dx.doi.org/10.1016/0898-1221(87)90066-6.
 
 #### DPRKN8, DPRKN12
 
@@ -283,7 +283,7 @@ University of Geneva, Switzerland.
 
 - Etienne Forest, Ronald D. Ruth, Fourth-order symplectic integration, Physica D:
   Nonlinear Phenomena, Volume 43, Issue 1, 1990, Pages 105-117, ISSN 0167-2789,
-  https://dx.doi.org/10.1016/0167-2789(90)90019-L.
+  http://dx.doi.org/10.1016/0167-2789(90)90019-L.
 
 #### Ruth3
 
@@ -293,7 +293,7 @@ University of Geneva, Switzerland.
 
 - Etienne Forest, Ronald D. Ruth, Fourth-order symplectic integration, Physica D:
   Nonlinear Phenomena, Volume 43, Issue 1, 1990, Pages 105-117, ISSN 0167-2789,
-  https://dx.doi.org/10.1016/0167-2789(90)90019-L.
+  http://dx.doi.org/10.1016/0167-2789(90)90019-L.
 
 #### McAte2, McAte3, McAte4, McAte42, McAte5
 
@@ -302,7 +302,7 @@ University of Geneva, Switzerland.
 
 - Stephen K. Gray, Donald W. Noid and Bobby G. Sumpter, Symplectic integrators for
   large scale molecular dynamics simulations: A comparison of several explicit methods
-  The Journal of Chemical Physics 101, 4062 (1994); doi: https://dx.doi.org/10.1063/1.467523
+  The Journal of Chemical Physics 101, 4062 (1994); doi: http://dx.doi.org/10.1063/1.467523
 
 #### CandyRoz4
 
@@ -314,7 +314,7 @@ University of Geneva, Switzerland.
 
 - Stephen K. Gray, Donald W. Noid and Bobby G. Sumpter, Symplectic integrators for
   large scale molecular dynamics simulations: A comparison of several explicit methods
-  The Journal of Chemical Physics 101, 4062 (1994); doi: https://dx.doi.org/10.1063/1.467523
+  The Journal of Chemical Physics 101, 4062 (1994); doi: http://dx.doi.org/10.1063/1.467523
 
 -  M. P. Calvo & J. M. Sanz-Serna, Symplectic numerical methods for Hamiltonian
    problems, Int. J. Mod. Phys. C 4(1993), 617-634.
@@ -442,7 +442,7 @@ University of Geneva, Switzerland.
 #### ROCK2
 
 - Assyr Abdulle, Alexei A. Medovikov. Second Order Chebyshev Methods based on Orthogonal Polynomials.
-  Numerische Mathematik, 90 (1), pp 1-18, 2001. doi: https://dx.doi.org/10.1007/s002110100292
+  Numerische Mathematik, 90 (1), pp 1-18, 2001. doi: http://dx.doi.org/10.1007/s002110100292
 
 #### ROCK4
 

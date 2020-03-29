@@ -5,7 +5,7 @@ date:   2017-5-18 1:30:00
 categories:
 ---
 
-In the [2.0 state of the ecosystem post](https://www.stochasticlifestyle.com/differentialequations-jl-2-0-state-ecosystem/)
+In the [2.0 state of the ecosystem post](http://www.stochasticlifestyle.com/differentialequations-jl-2-0-state-ecosystem/)
 it was noted that, now that we have a clearly laid out and expansive common API,
 the next goal is to fill it in. This set of releases tackles the lowest hanging
 fruits in that battle. Specifically, the interop packages were setup to be as
@@ -86,7 +86,7 @@ set a Jacobian/t-gradient, and the solver cannot use this Jacobian/t-gradient,
 then you will receive a warning that your Jacobian/t-gradient overload
 was ignored. This should help users better orient themselves to what
 is interface-compatible. In addition, this warning leads users to the
-[compatibility chart](https://docs.juliadiffeq.org/latest/basics/compatibility_chart).
+[compatibility chart](http://docs.juliadiffeq.org/latest/basics/compatibility_chart).
 
 In any case, these warnings can be turned off by setting `verbose=false`.
 We hope that these warnings help you know in advance what options have
@@ -96,7 +96,7 @@ a real effect on each and every solver method.
 
 The result of many user requests, there now exists a full suite of analysis
 tools for analyzing the results of your Monte Carlo experiments.
-[The improved docs](https://docs.juliadiffeq.org/latest/features/monte_carlo)
+[The improved docs](http://docs.juliadiffeq.org/latest/features/monte_carlo)
 detail how to use the functionality for getting means, medians, variances,
 covariances, etc. and plotting the timeseries of these values.
 
@@ -104,7 +104,7 @@ covariances, etc. and plotting the timeseries of these values.
 
 Noise processes reached their pinnacle design state! If you're interested in
 noise processes, you
-[should check out the very comprehensive docs](https://docs.juliadiffeq.org/latest/features/noise_process).
+[should check out the very comprehensive docs](http://docs.juliadiffeq.org/latest/features/noise_process).
 The big parts of the change are the following. Noise processes can form their own
 problems now, and so these can be solved just like any other diffeq, even with
 Monte Carlo tools. This is great because the standard noise processes are
@@ -178,7 +178,7 @@ integration. Thus interpolating a `DEDataArray` will keep the same non `.x`
 values as the left-hand side of the integration.
 
 In addition, using `DEDataArray` is now  compatible with "in-equation
-updates". [The docs now show](https://docs.juliadiffeq.org/latest/features/diffeq_arrays)
+updates". [The docs now show](http://docs.juliadiffeq.org/latest/features/diffeq_arrays)
 that DEDataArrays can be updated by updating the `u` variable in the equation
 (keeping with the theme "discrete", and thus `du` does not record changes
 to these variables). These changed values will then be saved for the next
@@ -197,7 +197,7 @@ package before using.
 ### IO Functionality
 
 IO is now out of its experimental phase into its early release. It's still
-being worked on, but [the documentation page exists](https://docs.juliadiffeq.org/latest/features/io).
+being worked on, but [the documentation page exists](http://docs.juliadiffeq.org/latest/features/io).
 
 ### Monte Carlo Reductions
 

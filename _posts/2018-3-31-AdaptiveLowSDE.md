@@ -26,7 +26,7 @@ be done by Krylov subspace methods as seen in
 has developed routes in the exponential integrators of OrdinaryDiffEq.jl to
 utilize these Krylov subspace methods and allow for solving large stiff semilinear
 ODEs and allow for investigating adaptive time stepping exponential integrators.
-[The methods all have a boolean option to turn this feature on](https://docs.juliadiffeq.org/latest/solvers/split_ode_solve).
+[The methods all have a boolean option to turn this feature on](http://docs.juliadiffeq.org/latest/solvers/split_ode_solve).
 For example:
 
 ```julia
@@ -82,7 +82,7 @@ of that technique needs to be investigated in more detail before making it defau
 Multistep methods require fewer function evaluations than one-step methods like
 Runge-Kutta and thus are more effective for large systems and when the derivative
 function `f` gets costly.
-[OrdinaryDiffEq.jl now has some fixed time step methods of this class](https://docs.juliadiffeq.org/latest/solvers/ode_solve)
+[OrdinaryDiffEq.jl now has some fixed time step methods of this class](http://docs.juliadiffeq.org/latest/solvers/ode_solve)
 and hopefully in the near future we will get our own adaptive time adaptive order
 versions. Thank the new contributor Shubham Maddhashiya (@sipah00) for this
 contribution and stay tuned.
@@ -94,7 +94,7 @@ the solver. However, the `FunctionMap` algorithm utilizes the full OrdinaryDiffE
 integrator interface. In cases where the pure-jump problem doesn't have events,
 this is overkill and adds some overhead. Thus for this specific case (pure-jumps
 and no events), we created the `SSAStepper`. You can see it now
-[featured in the tutorials](https://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example).
+[featured in the tutorials](http://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example).
 This stepper is highly efficient and benchmarks faster than other pure-Julia
 SSA implementations. Thus it allows you to have full efficiency in the pure-jump
 case while making it easy to bridge over to mixing ODEs/SDEs in via the same
@@ -110,9 +110,9 @@ highly specific to the existence of jumps, so it makes sense to create a new
 jump type for them. This is the `RegularJump`. A `RegularJump` has a function
 that computes the vector of all rates together, and computes the effect on
 every system component due to each jump together (as a matrix). You can see
-this [in the tau-leaping version of the jump problem tutorial](https://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example).
+this [in the tau-leaping version of the jump problem tutorial](http://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example).
 Right now there's just methods for pure `RegularJump` problems as shown in
-[a new solver page](https://docs.juliadiffeq.org/latest/solvers/jump_solve),
+[a new solver page](http://docs.juliadiffeq.org/latest/solvers/jump_solve),
 but the plan is to add methods with high order regular stepping for jump
 diffusions a la Platen, and other pure jump integrators like Binomial leaping.
 
