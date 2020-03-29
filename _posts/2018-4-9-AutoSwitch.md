@@ -37,7 +37,7 @@ achieved.
 These methods are available to users as the `Auto` algorithms, like
 `AutoTsit5(Rodas5())` which does automatic switching between `Tsit5()` and
 `Rodas5()`. These methods also apply to delay differential equations.
-See the [ODE solver docs for details](http://docs.juliadiffeq.org/latest/solvers/ode_solve).
+See the [ODE solver docs for details](https://docs.juliadiffeq.org/latest/solvers/ode_solve).
 
 ## New SSA Algorithms/Optimizations, Mass Action Jumps
 
@@ -52,13 +52,13 @@ generality but also scale well?
 First of all, they recognized that most jumps are due to mass-action terms
 which can be specialized. These terms don't need functions since we know the
 functional form one would make.
-[Thus now there's the `MassActionJump`](http://docs.juliadiffeq.org/latest/types/jump_types)
+[Thus now there's the `MassActionJump`](https://docs.juliadiffeq.org/latest/types/jump_types)
 which can hold the stoichiometry matrix for the mass action terms. These can
 hold all of the mass action terms, evaluate them efficiently, and reduce the
 number of functions that have to be handled. It has been
-[added to the jump tutorial](http://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example).
+[added to the jump tutorial](https://docs.juliadiffeq.org/latest/tutorials/discrete_stochastic_example).
 
-Next, [new SSAs were added](http://docs.juliadiffeq.org/latest/types/jump_types).
+Next, [new SSAs were added](https://docs.juliadiffeq.org/latest/types/jump_types).
 There is the First Reaction Method `FRM()` that can
 be used as an aggregation. In addition, the SSAs can now utilize
 FunctionWrappers.jl to efficiently scale to large vectors of functions. Thus
@@ -84,11 +84,11 @@ for large noise SDEs, usually without an additional cost. Given the effectivenes
 of this research, step-splitting has been incorporated in different ways
 throughout StochasticDiffEq.jl. These include:
 
-1) [`EM` and `LambaEM`](http://docs.juliadiffeq.org/latest/solvers/sde_solve)
+1) [`EM` and `LambaEM`](https://docs.juliadiffeq.org/latest/solvers/sde_solve)
    have a choice to enable/disable step splitting. By default
    step splitting is enabled.
 
-2) [The `ISSEM` and `ISSEulerHeun` methods](http://docs.juliadiffeq.org/latest/solvers/sde_solve)
+2) [The `ISSEM` and `ISSEulerHeun` methods](https://docs.juliadiffeq.org/latest/solvers/sde_solve)
    are implemented which are implicit
    methods with step splitting, giving good stability in both the drift and noise
    terms. Additionally, these methods allow non-diagonal noise and have adaptive

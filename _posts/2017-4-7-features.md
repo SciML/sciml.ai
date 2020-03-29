@@ -104,7 +104,7 @@ me to my next point.
 The changes to the Monte Carlo interface is large. To see how to use the newest
 version of this interface, see the documentation page here:
 
-[http://docs.juliadiffeq.org/latest/features/ensemble](http://docs.juliadiffeq.org/latest/features/ensemble)
+[https://docs.juliadiffeq.org/latest/features/ensemble](https://docs.juliadiffeq.org/latest/features/ensemble)
 
 The biggest part of this change is that now you can specify how the simulations
 are reduced, instead of saving the solution object each time. Thus you can specify
@@ -127,7 +127,7 @@ things like solve ODEs, those features are not of much use. However, with this
 wrapper comes PyCont, a library for continuation (bifurcation plots). You
 can see an example for making bifurcation plots here:
 
-[http://docs.juliadiffeq.org/latest/analysis/bifurcation](http://docs.juliadiffeq.org/latest/analysis/bifurcation)
+[https://docs.juliadiffeq.org/latest/analysis/bifurcation](https://docs.juliadiffeq.org/latest/analysis/bifurcation)
 
 This is in its very early stages, but now that it is working all that's left
 are API improvements! But note that it's currently disabled due to a Windows
@@ -138,7 +138,7 @@ will be patched in a way that makes PyDSTool.jl a standard tool in the ecosystem
 
 Retcodes are hard to make sexy, but they are useful.
 
-[http://docs.juliadiffeq.org/latest/basics/solution](http://docs.juliadiffeq.org/latest/basics/solution)
+[https://docs.juliadiffeq.org/latest/basics/solution](https://docs.juliadiffeq.org/latest/basics/solution)
 
 Now the solvers have a set way to tell you if the solver was successful, or why
 it exited pre-maturely. This setup will grow overtime, but is already fully
@@ -165,7 +165,7 @@ Now you can choose a function to be called on the plotted points. This allows
 you to easily do things like plot the norm of the solution over time. For more
 information, please see the improved plotting docs:
 
-[http://docs.juliadiffeq.org/latest/basics/plot](http://docs.juliadiffeq.org/latest/basics/plot)
+[https://docs.juliadiffeq.org/latest/basics/plot](https://docs.juliadiffeq.org/latest/basics/plot)
 
 ## SplitODEProblem Types
 
@@ -183,7 +183,7 @@ higher-order methods which are capable of solving the semi-discretizations
 arising form hyperbolic partial differential equations which have some discontinuities.
 You can find these algorithm choices in the docs:
 
-[http://docs.juliadiffeq.org/latest/solvers/ode_solve](http://docs.juliadiffeq.org/latest/solvers/ode_solve)
+[https://docs.juliadiffeq.org/latest/solvers/ode_solve](https://docs.juliadiffeq.org/latest/solvers/ode_solve)
 
 ## SplitCoupling
 

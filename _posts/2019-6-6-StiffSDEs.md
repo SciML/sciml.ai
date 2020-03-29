@@ -97,7 +97,7 @@ plot(sol,vars=(1,3))
 
 ![double bounce](https://user-images.githubusercontent.com/33966400/59046655-0154f280-88a0-11e9-90c5-ea80b501cd27.png)
 
-Documentation along with explanation of the code above can be found [here](http://docs.juliadiffeq.org/latest/features/callback_functions).
+Documentation along with explanation of the code above can be found [here](https://docs.juliadiffeq.org/latest/features/callback_functions).
 
 ## SROCK
 

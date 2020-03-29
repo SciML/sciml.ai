@@ -12,7 +12,7 @@ equations. Most of this is covered in the exciting....
 ## New Tutorial: Solving Stiff Equations for Advanced Users!
 
 That is right, we now have a new tutorial added to the documentation on
-[solving stiff differential equations](http://docs.juliadiffeq.org/latest/tutorials/advanced_ode_example).
+[solving stiff differential equations](https://docs.juliadiffeq.org/latest/tutorials/advanced_ode_example).
 This tutorial goes into depth, showing how to use our recent developments to
 do things like automatically detect and optimize a solver with respect to
 sparsity pattern, or automatically symbolically calculate a Jacobian from a
