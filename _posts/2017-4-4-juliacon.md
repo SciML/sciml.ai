@@ -5,7 +5,7 @@ date:   2017-4-4 11:00:00
 categories:
 ---
 
-[There will be a workshop on DifferentialEquations.jl at this year's JuliaCon!](https://juliacon.org/2017/talks.html)
+[There will be a workshop on DifferentialEquations.jl at this year's JuliaCon!](http://juliacon.org/2017/talks.html)
 The title is "The Unique Features and Performance of DifferentialEquations.jl".
 The goal will be to teach new users how to solve a wide variety of differential
 equations, and show how to achieve the best possible performance. I hope to lead

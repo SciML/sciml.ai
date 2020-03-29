@@ -39,7 +39,7 @@ Secondly, this adds an entirely new library of solvers called
 `ARKODE` for explicit, implicit, and IMEX (implicit-explicit) Runge-Kutta methods.
 These have been incorporated into the [updated benchmarks](https://github.com/JuliaDiffEq/DiffEqBenchmarks.jl)
 Summary: OrdinaryDiffEq.jl tends to be more efficient. For example,
-[see this benchmark](https://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqBenchmarks.jl/blob/master/StiffODE/Hires.ipynb)
+[see this benchmark](http://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqBenchmarks.jl/blob/master/StiffODE/Hires.ipynb)
 which shows about a 5x timing difference between the fastest
 OrdinaryDiffEq.jl ESDIRK method and the fastest ARKODE one (both are same general
 tableaus with different implementation details). But, these are very easy to
@@ -55,7 +55,7 @@ Please report any bugs in the installation process that you may encounter.
 
 This round of updates gives significant speedups to out-of-place codes, especially
 those that use static arrays and ArrayFire GPU-based arrays. The DynamicalODE
-benchmarks have been upgraded and [this benchmark for example](https://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqBenchmarks.jl/blob/master/DynamicalODE/Quadrupole_boson_Hamiltonian_energy_conservation_benchmark.ipynb)
+benchmarks have been upgraded and [this benchmark for example](http://nbviewer.jupyter.org/github/JuliaDiffEq/DiffEqBenchmarks.jl/blob/master/DynamicalODE/Quadrupole_boson_Hamiltonian_energy_conservation_benchmark.ipynb)
 displays the difference between using static arrays and mutable arrays for
 small physical problems. We hope that users can use this to good effect!
 

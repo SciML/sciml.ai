@@ -325,7 +325,7 @@ a user-defined mass matrix. Updates will come which will then make use of this f
 ## linsolve/nlsolve Choice
 
 Now one can explicitly choose the linear solver and nonlinear solver functions
-for each of the `*DiffEq` solvers. [This documentation page](https://docs.juliadiffeq.org/latest/features/linear_nonlinear)
+for each of the `*DiffEq` solvers. [This documentation page](http://docs.juliadiffeq.org/latest/features/linear_nonlinear)
 explains how to do this. This means you can tell the linear solving to occur on
 the GPU, or using PETSc, etc., and replace the nonlinear solver code with one of
 your own choosing.

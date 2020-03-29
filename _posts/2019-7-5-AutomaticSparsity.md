@@ -29,7 +29,7 @@ where the third argument is an ensembling algorithm to specify the
 threading-based form.  Code with the deprecation warning will work until the
 release of DiffEq 7.0, at which time the alternative path will be removed.
 
-See the [updated ensembles page for more details](https://docs.juliadiffeq.org/latest/features/ensemble)
+See the [updated ensembles page for more details](http://docs.juliadiffeq.org/latest/features/ensemble)
 
 The change to dispatch was done for a reason: it allows us to build new libraries
 specifically for sophisticated handling of many trajectory ODE solves without
@@ -121,7 +121,7 @@ Rodas5(linsolve = LinSolveGPUFactorize())
 ```
 
 This simply requires a working installation of CuArrays.jl. See
-[the linear solver documentation for more details](https://docs.juliadiffeq.org/latest/features/linear_nonlinear).
+[the linear solver documentation for more details](http://docs.juliadiffeq.org/latest/features/linear_nonlinear).
 
 ## Experimental: Automated Accelerator (GPU) Offloading
 
@@ -138,7 +138,7 @@ please take a look at the repo and help us get something going!
 ## A Complete Set of Iterative Solver Routines for Implicit DEs
 
 Previous releases had only a pre-built GMRES implementation. However, as
-detailed on the [linear solver page](https://docs.juliadiffeq.org/latest/features/linear_nonlinear),
+detailed on the [linear solver page](http://docs.juliadiffeq.org/latest/features/linear_nonlinear),
 we now have an array of iterative solvers readily available, including:
 
 - LinSolveGMRES – GMRES
