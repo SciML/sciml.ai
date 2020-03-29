@@ -45,7 +45,7 @@ of scientific simulations.
   [ReservoirComputing.jl](https://github.com/SciML/ReservoirComputing.jl) for
   Echo State Networks that learn to predict the dynamics of chaotic systems.
 - **A Polyglot Userbase**. While the majority of the tooling for SciML
-  is built using the [Julia programming language](https://julialang.org/),
+  is built using the [Julia programming language](https://sciml.ai/),
   SciML is committed to ensure that these methodologies can be used throughout
   the greater scientific community. Tools like [diffeqpy](https://github.com/SciML/diffeqpy)
   and [diffeqr](https://cran.r-project.org/web/packages/diffeqr/index.html) bridge

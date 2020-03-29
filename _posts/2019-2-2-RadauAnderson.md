@@ -138,7 +138,7 @@ information.
 
 DifferentialEquations.jl is now integrated with the Flux.jl platform with
 DiffEqFlux.jl. For more information, please see our
-[release blog post](https://julialang.org/blog/2019/01/fluxdiffeq).
+[release blog post](https://sciml.ai/blog/2019/01/fluxdiffeq).
 
 ## Tons and Tons of Small Fixes
 
@@ -175,4 +175,4 @@ done.
 Are you a student who is interested in working on differential equations
 software and modeling? If so, please get in touch with us since we many Google
 Summer of Code projects available! [Take a look at our projects
-list on the Julia webpage](https://julialang.org/soc/projects/diffeq.html)
+list on the Julia webpage](https://sciml.ai/soc/projects/diffeq.html)

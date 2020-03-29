@@ -131,7 +131,7 @@ of solving models (efficiently).
 
 # In development
 
-Please take a look at [possible GSoC projects](https://julialang.org/soc/projects/diffeq.html).
+Please take a look at [possible GSoC projects](https://sciml.ai/soc/projects/diffeq.html).
 Please get in touch with us if you're interested in working on numerical
 differential equation solvers!
 

@@ -30,7 +30,7 @@ available, we can easily upgrade and add things in the future. We plan
 to add KLU and Super_LUMT in the short term to give even better sparse
 Jacobian support. In the longer term, this can be utilized to easily added
 wrappers for the parallel parts of Sundials (this is now a suggested
-[Google Summer of Code project](https://julialang.org/soc/projects/diffeq.html#parallelization-of-the-sundials-solver-library)).
+[Google Summer of Code project](https://sciml.ai/soc/projects/diffeq.html#parallelization-of-the-sundials-solver-library)).
 High efficiency fully distributed PDE solving with Krylov methods for sparse
 matrices over MPI via Sundials with only a one line change to DifferentialEquations.jl
 code is a very close reality!
@@ -70,7 +70,7 @@ handling is coming for this library as well.
 
 We note that a huge update to the stochastic differential equation solvers is
 right around the corner: stay tuned. In addition, note that some projects have
-been sectioned off as [possible GSoC projects](https://julialang.org/soc/projects/diffeq.html).
+been sectioned off as [possible GSoC projects](https://sciml.ai/soc/projects/diffeq.html).
 Please get in touch with us if you're interested in working on numerical
 differential equation solvers!
 

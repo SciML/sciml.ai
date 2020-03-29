@@ -205,7 +205,7 @@ easily set maximal timesteps to match what's necessary via the CFL constraints.
 # In Development
 
 Note that some projects have been sectioned off as
-[possible GSoC projects](https://julialang.org/soc/projects/diffeq.html).
+[possible GSoC projects](https://sciml.ai/soc/projects/diffeq.html).
 These would also do well as new contributor projects if anyone's interested, and
 so these are not considered in the "in development" list as we are leaving these
 open for newcomers/students.

@@ -56,7 +56,7 @@ team that allows us to run performance regression benchmarks on demand with
 preset Gitlab runners. Right now this has a dedicated machine for CPU and
 parallelism performance testing, and soon we'll have a second machine
 up and running for performance testing on GPUs. If you haven't seen the Julialang
-blog post on this topic, [please check it out!](https://julialang.org/blog/2019/06/diffeqbot).
+blog post on this topic, [please check it out!](https://sciml.ai/blog/2019/06/diffeqbot).
 
 ## Quantum ODE Solver QuLDE
 
