@@ -7,8 +7,8 @@ markdown: kramdown
 
 gems: [jekyll-paginate]
 ##define base_url for valid usage in sitemap.xml and robots.txt
-base_url: http://sciml.ai
-url: http://sciml.ai
+base_url: https://sciml.ai
+url: https://sciml.ai
 sass:
   sass_dir: _sass
   style: :compressed
