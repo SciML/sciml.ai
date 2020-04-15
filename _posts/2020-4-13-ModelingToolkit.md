@@ -7,5 +7,8 @@ categories:
 
 Sundials 5 and LAPACK
 MTK Compiler targets
+MTK Automatic Parallelism
 MTK Components
 MTK DAEs
+MTK Index Reduction
+High Weak Order SDE Integrators
