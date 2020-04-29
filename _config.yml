@@ -5,7 +5,8 @@ markdown: kramdown
 ##syntax highlighter. change it to pygments
 #highlighter: pygments
 
-gems: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
 ##define base_url for valid usage in sitemap.xml and robots.txt
 base_url: https://sciml.ai
 url: https://sciml.ai

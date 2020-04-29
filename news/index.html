@@ -9,7 +9,7 @@ lastmod: 2014-07-07T16:57:30+05:30
 ---
 {% for post in paginator.posts %}
 <div class="unit whole single-post-excerpt">
-	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 	<div class="meta-info">
 		<span class="meta"><time class="timeago postlist-meta" datetime="{{ post.date | date: "%Y-%m-%d" }}"><i class="fa fa-calendar"></i>{{ post.date | date: "%B %-d, %Y" }}</time></span>
 		{% if post.tags and post.tags.size > 0 %}
@@ -21,7 +21,7 @@ lastmod: 2014-07-07T16:57:30+05:30
 			</div>
 		{% endif %}
 	</div>
-	<p class="description">{{ post.excerpt | strip_html}}</p>
+	<p class="description">{{ post.excerpt | markdownify | strip_html | markdownify | truncatewords: 100 }}</p>
 </div>
 {% endfor %}
 <div class="unit whole paginator">
