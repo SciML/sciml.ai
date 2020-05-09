@@ -113,7 +113,7 @@ Big thanks to @MartinuzziFrancesco who has been driving this effort.
 This library is able to train neural networks that learn attractor behavior and
 then predict the evolution of chaotic systems. More development will soon follow
 on this library as it was
-[chosen to be one of the JuliaLang Google Summer of Code projects](https://summerofcode.withgoogle.com/organizations/6363760870031360/?sp-page=2#5374375945043968)
+[chosen to be one of the JuliaLang Google Summer of Code projects](https://summerofcode.withgoogle.com/organizations/6363760870031360/?sp-page=2#5374375945043968).
 
 ![](https://user-images.githubusercontent.com/10376688/72997095-1913c380-3dfc-11ea-9702-a9734a375b96.png)
 
