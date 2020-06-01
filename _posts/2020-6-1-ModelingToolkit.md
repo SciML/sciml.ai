@@ -204,6 +204,9 @@ computed and an optimal sparse multithreaded Jacobian function has been
 generated for use with DifferentialEquations.jl, NLsolve.jl, and whatever
 other mathematical library you wish to use it with**.
 
+Indeed, this gives about a 4x speedup on a computer with 4 threads,
+exactly as you'd expect.
+
 ## Highlight: sir-julia Model Simulation and Inference Repository
 
 Simon Frost, Principal Data Scientist at Microsoft Health, published
