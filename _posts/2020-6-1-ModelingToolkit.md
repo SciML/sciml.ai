@@ -99,7 +99,7 @@ ModelingToolkit.build_function(eqs,[x,y],[a],t,target = ModelingToolkit.CTarget(
 
 which gives:
 
-```C
+```julia
 void diffeqf(double* internal_var___du, double* internal_var___u, double* internal_var___p, t) {
   internal_var___du[1] = internal_var___p[1] * internal_var___u[1] - internal_var___u[1] * internal_var___u[2];
   internal_var___du[2] = -3 * internal_var___u[2] + internal_var___u[1] * internal_var___u[2];
@@ -115,7 +115,7 @@ ModelingToolkit.build_function(eqs,convert.(Variable,[x,y]),convert.(Variable,[a
 
 which gives:
 
-```C
+```julia
 real[] diffeqf(real t,real[] internal_var___u,real[] internal_var___p,real[] x_r,int[] x_i) {
   real internal_var___du[2];
   internal_var___du[1] = internal_var___p[1] * internal_var___u[1] - internal_var___u[1] * internal_var___u[2];
