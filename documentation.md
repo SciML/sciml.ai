@@ -9,11 +9,11 @@ sitemap:
 ---
 # Documentation and Tutorials
 
-The SciML organization is an organization which develops and maintains
-many different packages associated with scientific machine learning
-and differential equation modeling. As such there is no single documentation,
-but the following are the relevant resources for users interested
-in the functionality.
+The SciML organization is an opinionated collection of tools for
+scientific machine learning and differential equation modeling. The
+organization provides well-maintained tools which compose together
+as a coherent ecosystem. The following are the relevant resources for
+users interested in the functionality.
 
 ## Differential Equations
 
@@ -80,7 +80,7 @@ These resources cover:
 Please see [the developer documentation](http://devdocs.sciml.ai/latest/)
 for information on getting started with developing in the SciML organization.
 
-# External Modeling Libraries
+# External Applications
 
 There are many external libraries which connect and utilize SciML
 utilities under the hood. The following an incomplete list of software
@@ -93,3 +93,4 @@ SciML:
 - [Julia Robotics](https://juliarobotics.org/)
 - [Pumas-AI: Pharmaceutical Modeling and Simulation](https://pumas.ai/)
 - [Brazilian National Institute for Space Research (INPE)](https://github.com/JuliaSpace/SatelliteToolbox.jl)
+- [CMU+MIT Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
