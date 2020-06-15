@@ -80,7 +80,7 @@ These resources cover:
 Please see [the developer documentation](http://devdocs.sciml.ai/latest/)
 for information on getting started with developing in the SciML organization.
 
-# External Tutorials and Teaching Materials Featuring SciML
+# External Tutorials and Teaching Materials
 
 - [MIT 18.337J/6.338J: Parallel Computing and Scientific Machine Learning](https://github.com/mitmath/18337)
 - [MIT 6.S083/18.S190: Computational thinking with Julia + application to the COVID-19 pandemic](https://github.com/mitmath/6S083)

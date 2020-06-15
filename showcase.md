@@ -42,6 +42,7 @@ own work added to this list,
 
 ## External Blog Posts and Presentations
 
+- [Frank Schäfer: GSoC 2020: High weak order SDE solvers and their utility in neural SDEs](https://frankschae.github.io/post/gsoc2020-high-weak-order-solvers-sde-adjoints/)
 - [Safe Blues — The Measurement Tool for Responsible Easing of Social Distancing](https://medium.com/@yoni_26949/safe-blues-the-measurement-tool-for-responsible-undoing-of-social-distancing-34079464db43)
 - [Phylodynamics of SARS-CoV-2, Simon Frost (Microsoft Health Futures)](https://sdwfrost.github.io/idp-phylodynamics/#/section)
 - [Nicolau Leal Werneck: Fitting the SIR model to Covid-19 fatality data](http://nic.hpavc.net/almoxarifado/sirfit.html)
@@ -83,6 +84,8 @@ own work added to this list,
 - [JuliaLang: NeuralNetDiffEq.jl: A Neural Network solver for ODEs](https://julialang.org/blog/2017/10/gsoc-NeuralNetDiffEq/)
 - [StochasticLifestyle: Some Fun With Julia Types: Symbolic Expressions in the ODE Solver](https://www.stochasticlifestyle.com/fun-julia-types-symbolic-expressions-ode-solver/)
 - [JuliaLang: GSoC 2017: Native Julia second order ODE and BVP solvers](https://julialang.org/blog/2017/11/gsoc-ode/)
+- [Yiannis Simillides blog: FEniCS.jl: Second "Approximate" Month](https://ysimillides.github.io/jekyll/update/2018/07/10/second-evaluation.html)
+- [Yiannis Simillides blog: FEniCS.jl: First "Approximate" Month](https://ysimillides.github.io/jekyll/update/2018/06/08/first-month.html)
 - [Mathieu Besançon: DifferentialEquations.jl - part 2: decision from the model](https://matbesancon.github.io/post/2017-12-20-diffeq-julia2/)
 - [Mathieu Besançon: Getting started with DifferentialEquations.jl](https://matbesancon.github.io/post/2017-12-14-diffeq-julia/)
 - [StochasticLifestyle: A Comparison Between Differential Equation Solver Suites In MATLAB, R, Julia, Python, C, Mathematica, Maple, and Fortran](https://www.stochasticlifestyle.com/comparison-differential-equation-solver-suites-matlab-r-julia-python-c-fortran/)
