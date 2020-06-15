@@ -44,6 +44,7 @@ own work added to this list,
 
 - [Frank Schäfer: GSoC 2020: High weak order SDE solvers and their utility in neural SDEs](https://frankschae.github.io/post/gsoc2020-high-weak-order-solvers-sde-adjoints/)
 - [Safe Blues — The Measurement Tool for Responsible Easing of Social Distancing](https://medium.com/@yoni_26949/safe-blues-the-measurement-tool-for-responsible-undoing-of-social-distancing-34079464db43)
+- [Per-Olof Persson and Robert Sweeney Blanco: The DifferentialEquations Package](https://robertsweeneyblanco.github.io/Programming_for_Mathematical_Applications/Differential_Equations/DifferentialEquations_Package.html)
 - [Phylodynamics of SARS-CoV-2, Simon Frost (Microsoft Health Futures)](https://sdwfrost.github.io/idp-phylodynamics/#/section)
 - [Nicolau Leal Werneck: Fitting the SIR model to Covid-19 fatality data](http://nic.hpavc.net/almoxarifado/sirfit.html)
 - [SIR Model for COVID-19: Estimating R0, Roberto Berwa, MIT](https://nextjournal.com/berwa/sir-model-for-covid-19-estimating-R_o)
@@ -59,7 +60,6 @@ own work added to this list,
 - [Ludovico: More optimization methods and future surrogates](https://nextjournal.com/ludoro/more-optimization-methods-and-future-surrogates)
 - [Ludovico: Surrogate optimization and Sampling](https://nextjournal.com/ludoro/surrogate-optimization-and-sampling)
 - [Toby Driscoll: Matlab vs. Julia vs. Python](https://tobydriscoll.net/blog/matlab-vs.-julia-vs.-python/)
-  - "If this software doesn’t win the Wilkinson prize soon, the system is broken. Just go to the site and prepare to be converted."
 - [Ludovico: New abstract types: RadialBasis and Kriging.](https://nextjournal.com/ludoro/new-abstract-types-radialbasis-and-kriging)
 - [Ludovico: Bonding-time, or should I say coding time?](https://nextjournal.com/ludoro/bonding-time-or-should-i-say-coding-time)
 - [StochasticLifestyle: The Essential Tools of Scientific Machine Learning (Scientific ML)](https://www.stochasticlifestyle.com/the-essential-tools-of-scientific-machine-learning-scientific-ml/)

@@ -86,6 +86,7 @@ for information on getting started with developing in the SciML organization.
 - [MIT 6.S083/18.S190: Computational thinking with Julia + application to the COVID-19 pandemic](https://github.com/mitmath/6S083)
 - [MIT 18.S096 Special Subject in Mathematics: Applications of Scientific Machine Learning](https://github.com/mitmath/18S096SciML)
 - [Various implementations of the classical SIR model in Julia](https://github.com/epirecipes/sir-julia)
+- [Programming for Mathematical Applications](https://robertsweeneyblanco.github.io/Programming_for_Mathematical_Applications/home.html)
 
 # External Applications Libraries
 
