@@ -27,9 +27,16 @@ list of repositories.
 
 Our open webform is provided courteously of the
 [Julia programming language disourse](https://discourse.julialang.org/)
-using the tags `diffeq` or `sciml`, and using the domains
-`Modeling & Simulations`. When using this discourse, you must adhere
-to [the Julia community rules](https://julialang.org/community/).
+using the tags `diffeq` or `sciml`, and using the domain
+[Modeling & Simulations](https://discourse.julialang.org/c/domain/models/21).
+When using this discourse, you must adhere to
+[the Julia community rules](https://julialang.org/community/).
+
+### StackOverflow
+
+Questions on StackOverflow can be asked with the
+[differentialequations.jl](https://stackoverflow.com/questions/tagged/differentialequations.jl)
+tag.
 
 ### Chat
 
