@@ -11,7 +11,7 @@ sitemap:
 # Governance
 
 The following contains the formal governance structure of the SciML
-project. This document clarifies how decision are made with respect
+project. This document clarifies how decisions are made with respect
 to community interactions, including the relationship between
 open source development and work that may be funded by for-profit
 and non-profit entities.
