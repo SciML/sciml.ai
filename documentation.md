@@ -80,12 +80,20 @@ These resources cover:
 Please see [the developer documentation](http://devdocs.sciml.ai/latest/)
 for information on getting started with developing in the SciML organization.
 
-# External Applications
+# External Tutorials and Teaching Materials Featuring SciML
+
+- [MIT 18.337J/6.338J: Parallel Computing and Scientific Machine Learning](https://github.com/mitmath/18337)
+- [MIT 6.S083/18.S190: Computational thinking with Julia + application to the COVID-19 pandemic](https://github.com/mitmath/6S083)
+- [MIT 18.S096 Special Subject in Mathematics: Applications of Scientific Machine Learning](https://github.com/mitmath/18S096SciML)
+- [Various implementations of the classical SIR model in Julia](https://github.com/epirecipes/sir-julia)
+
+# External Applications Libraries
 
 There are many external libraries which connect and utilize SciML
 utilities under the hood. The following an incomplete list of software
 organizations providing domain modeling tools that are built upon
-SciML:
+SciML. If you would like your institution's tools added to the list,
+[please open a pull request](https://github.com/SciML/sciml.ai).
 
 - [CliMA: Climate Modeling Alliance](https://clima.caltech.edu/)
 - [QuantumOptics](https://qojulia.org/)
@@ -94,3 +102,6 @@ SciML:
 - [Pumas-AI: Pharmaceutical Modeling and Simulation](https://pumas.ai/)
 - [Brazilian National Institute for Space Research (INPE)](https://github.com/JuliaSpace/SatelliteToolbox.jl)
 - [CMU+MIT+Citrine: Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
+- [Los Alamos National Lab: Model Analaysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
+- [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
+- [Safe Blues: A Method for Estimation and Control in the Fight Against COVID-19](https://safeblues.org/)
