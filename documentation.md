@@ -93,4 +93,4 @@ SciML:
 - [Julia Robotics](https://juliarobotics.org/)
 - [Pumas-AI: Pharmaceutical Modeling and Simulation](https://pumas.ai/)
 - [Brazilian National Institute for Space Research (INPE)](https://github.com/JuliaSpace/SatelliteToolbox.jl)
-- [CMU+MIT Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
+- [CMU+MIT+Citrine: Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
