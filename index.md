@@ -4,7 +4,7 @@ title: Home
 navigation_weight: 1
 sitemap:
     priority: 1.0
-    changefreq: weekly
+    changefreq: yearly
     lastmod: 2014-09-07T16:31:30+05:30
 ---
 # SciML: Open Source Software for Scientific Machine Learning
