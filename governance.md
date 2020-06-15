@@ -28,11 +28,6 @@ Everyone in the community must adhere to the [NumFOCUS Code of Conduct](https://
 - David Widmann (Uppsala Universitet)
 - Kanav Gupta (IIT Roorkee)
 
-## NumFOCUS Subcommittee
-
-- Chris Rackauckas
-- Samuel Isaacson
-
 ## Advisory Committee
 
 - Alan Edelman (Massachusetts Institute of Technology)
