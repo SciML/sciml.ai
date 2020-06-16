@@ -50,6 +50,7 @@ own work added to this list,
 - [Nicolau Leal Werneck: Fitting the SIR model to Covid-19 fatality data](http://nic.hpavc.net/almoxarifado/sirfit.html)
 - [SIR Model for COVID-19: Estimating R0, Roberto Berwa, MIT](https://nextjournal.com/berwa/sir-model-for-covid-19-estimating-R_o)
 - [StochasticLifestyle: How To Train Interpretable Neural Networks That Accurately Extrapolate From Small Data](https://www.stochasticlifestyle.com/how-to-train-interpretable-neural-networks-that-accurately-extrapolate-from-small-data/)
+- [Awesome Julia: A nice list of resources to start from](www.github.com/SubhadityaMukherjee/awesomeJulia)
 - [Machine Learning aided Epidemiology: COVID-19 Global quarantine strength and reproduction number evolution](https://covid19ml.org/)
 - [StochasticLifestyle: How Inexact Models Can Guide Decision Making in Quantitative Systems Pharmacology](https://www.stochasticlifestyle.com/how-inexact-models-can-guide-decision-making-in-quantitative-systems-pharmacology/)
 - [JuliaLang: GSoC and JSoC 2020 Project List](https://julialang.org/blog/2020/05/jsoc-gsoc2020/)
@@ -90,4 +91,3 @@ own work added to this list,
 - [Mathieu Besançon: DifferentialEquations.jl - part 2: decision from the model](https://matbesancon.github.io/post/2017-12-20-diffeq-julia2/)
 - [Mathieu Besançon: Getting started with DifferentialEquations.jl](https://matbesancon.github.io/post/2017-12-14-diffeq-julia/)
 - [StochasticLifestyle: A Comparison Between Differential Equation Solver Suites In MATLAB, R, Julia, Python, C, Mathematica, Maple, and Fortran](https://www.stochasticlifestyle.com/comparison-differential-equation-solver-suites-matlab-r-julia-python-c-fortran/)
-- [Awesome Julia: A nice list of resources to start from](www.github.com/SubhadityaMukherjee/awesomeJulia)
