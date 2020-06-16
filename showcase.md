@@ -89,3 +89,4 @@ own work added to this list,
 - [Mathieu Besançon: DifferentialEquations.jl - part 2: decision from the model](https://matbesancon.github.io/post/2017-12-20-diffeq-julia2/)
 - [Mathieu Besançon: Getting started with DifferentialEquations.jl](https://matbesancon.github.io/post/2017-12-14-diffeq-julia/)
 - [StochasticLifestyle: A Comparison Between Differential Equation Solver Suites In MATLAB, R, Julia, Python, C, Mathematica, Maple, and Fortran](https://www.stochasticlifestyle.com/comparison-differential-equation-solver-suites-matlab-r-julia-python-c-fortran/)
+- [Awesome Julia: A nice list of resources to start from](www.github.com/SubhadityaMukherjee/awesomeJulia)
