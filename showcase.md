@@ -43,6 +43,7 @@ own work added to this list,
 ## External Blog Posts and Presentations
 
 - [Frank Schäfer: GSoC 2020: High weak order SDE solvers and their utility in neural SDEs](https://frankschae.github.io/post/gsoc2020-high-weak-order-solvers-sde-adjoints/)
+- [Kevin Hannay: Differential Equations as a Neural Network Layers](https://towardsdatascience.com/differential-equations-as-a-neural-network-layer-ac3092632255)
 - [Safe Blues — The Measurement Tool for Responsible Easing of Social Distancing](https://medium.com/@yoni_26949/safe-blues-the-measurement-tool-for-responsible-undoing-of-social-distancing-34079464db43)
 - [Per-Olof Persson and Robert Sweeney Blanco: The DifferentialEquations Package](https://robertsweeneyblanco.github.io/Programming_for_Mathematical_Applications/Differential_Equations/DifferentialEquations_Package.html)
 - [Phylodynamics of SARS-CoV-2, Simon Frost (Microsoft Health Futures)](https://sdwfrost.github.io/idp-phylodynamics/#/section)
