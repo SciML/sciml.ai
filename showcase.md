@@ -42,6 +42,7 @@ own work added to this list,
 
 ## External Blog Posts and Presentations
 
+- [SCIML: LOGICIELS LIBRES POUR L'APPRENTISSAGE MACHINE SCIENTIFIQUE](https://chimieetjulia.org/e107/news.php?extend.6#)
 - [Fitting the SIR model to Covid-19 fatality data](https://gist.github.com/nlw0/3d80ae106b70704a1aca157a63303ec0)
 - [Francesco Martinuzzi: GSoC week 2: Support Vector Regression in Echo State Networks](https://martinuzzifrancesco.github.io/posts/02_gsoc_week/)
 - [Frank Schäfer: GSoC 2020: High weak order SDE solvers and their utility in neural SDEs](https://frankschae.github.io/post/gsoc2020-high-weak-order-solvers-sde-adjoints/)
