@@ -33,6 +33,7 @@ own work added to this list,
 
 ## Books
 
+- [Statistics with Julia](https://statisticswithjulia.org/)
 - [The Koopman Operator in Systems and Control](https://www.springer.com/gp/book/9783030357122)
     - "All simulations have been performed in Julia, with additional Julia packages: LinearAlgebra.jl, Random.jl, Plots.jl, Lasso.jl, DifferentialEquations.jl"
 
