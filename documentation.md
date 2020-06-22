@@ -79,6 +79,8 @@ These resources cover:
 
 Please see [the developer documentation](http://devdocs.sciml.ai/latest/)
 for information on getting started with developing in the SciML organization.
+Please see [Colprac](https://github.com/SciML/ColPrac) for the community
+development practices.
 
 # External Tutorials and Teaching Materials
 

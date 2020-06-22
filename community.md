@@ -11,7 +11,9 @@ sitemap:
 
 ## Community Standards
 
-Everyone in the community must adhere to the [NumFOCUS Code of Conduct](https://numfocus.org/code-of-conduct).
+Everyone in the community must adhere to the
+[NumFOCUS Code of Conduct](https://numfocus.org/code-of-conduct).
+Developers must adhere to [Colprac](https://github.com/SciML/ColPrac).
 
 ## Official Channels
 

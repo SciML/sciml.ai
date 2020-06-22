@@ -18,7 +18,10 @@ and non-profit entities.
 
 ## Code of Conduct
 
-Everyone in the community must adhere to the [NumFOCUS Code of Conduct](https://numfocus.org/code-of-conduct).
+Everyone in the community must adhere to the
+[NumFOCUS Code of Conduct](https://numfocus.org/code-of-conduct).
+Standard community repository development practices are described in
+[Colprac](https://github.com/SciML/ColPrac).
 
 ## Current Steering Council
 
