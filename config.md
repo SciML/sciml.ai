@@ -11,7 +11,7 @@ The website_* must be defined for the RSS to work
 
 @def mintoclevel = 2
 
-@def prepath = "staging.sciml.ai"
+@def prepath = ""
 
 <!--
 Add here files or directories that should be ignored by Franklin, otherwise
