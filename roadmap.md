@@ -1,12 +1,10 @@
----
-layout: page
-title: SciML Open Source Software Organization Roadmap
-navigation_weight: 1
-sitemap:
-    priority: 1.0
-    changefreq: yearly
-    lastmod: 2014-09-07T16:31:30+05:30
----
+@def title = "SciML Roadmap"
+@def hascode = true
+@def date = Date(2019, 3, 22)
+@def rss = "Roadmap for the SciML organization"
+
+@def tags = ["syntax", "code"]
+
 # SciML Open Source Software Organization Roadmap
 
 Computational scientific discovery is at an interesting juncture. While we have
@@ -31,6 +29,7 @@ research with new methods, architectures, and algorithms which overcome these
 problems while adding the data-driven automatic learning features of modern
 deep learning. Many successes have already been found, with tools like
 [physics-informed neural networks](https://www.sciencedirect.com/science/article/pii/S0021999118307125),
+[universal differential equations](https://arxiv.org/abs/2001.04385),
 [deep BSDE solvers for high dimensional PDEs](https://link.springer.com/article/10.1007%2Fs40304-017-0117-6),
 and [neural surrogates](https://arxiv.org/pdf/2001.08055.pdf) showcasing how
 deep learning can greatly improve scientific modeling practice. At the same time,
@@ -105,6 +104,7 @@ methods outperforming classical Fortran methods like LSODA by 5x on a 20
 equation stiff ODE benchmark:
 
 ![](https://user-images.githubusercontent.com/1814174/77687352-a0082800-6f74-11ea-924d-442a0836be6d.PNG)
+
 [Reference: Pollution Model Benchmarks](https://benchmarks.sciml.ai/html/StiffODE/Pollution.html)
 
 ## We provide tools for deriving and fitting scientific models
@@ -138,8 +138,8 @@ function ishi(X)
 end
 
 n = 600000
-lb = -ones(4)*π
-ub = ones(4)*π
+lb = -ones(4)*p
+ub = ones(4)*p
 sampler = SobolSample()
 A,B = QuasiMonteCarlo.generate_design_matrices(n,lb,ub,sampler)
 res1 = gsa(ishi,Sobol(),A,B)
@@ -190,6 +190,7 @@ and achieve an order of magnitude better performance than the classic Gillespie
 SSA methods:
 
 ![](https://user-images.githubusercontent.com/1814174/77689050-6d136380-6f77-11ea-9248-175de8c1c8e6.PNG)
+
 [Reference: Diffusion Model Benchmarks](https://benchmarks.sciml.ai/html/Jumps/Diffusion_CTRW.html)
 
 Additionally, we have physics-based tooling and support external libraries like:

@@ -1,12 +1,9 @@
----
-layout: page
-title: Showcase
-navigation_weight: 1
-sitemap:
-    priority: 1.0
-    changefreq: l
-    lastmod: 2014-09-07T16:31:30+05:30
----
+@def title = "Showcase"
+@def hascode = true
+@def date = Date(2019, 3, 22)
+@def rss = "Showcase for SciML applications"
+
+@def tags = ["syntax", "code"]
 
 # Showcase
 
@@ -17,6 +14,7 @@ own work added to this list,
 
 ## Press Releases
 
+- [Air Force Is Looking At Using Magnetic Fields To Navigate Instead Of GPS And Flight Testing It On F-16s (Algorithms Powered by SciML)](https://www.forbes.com/sites/erictegler/2020/06/12/air-force-gps-magnetic-fields-navigation-f-16/#4ed565db6818)
 - [Cornell Chronicle: Digital ‘virus’ helps researchers map potential spread](https://news.cornell.edu/stories/2020/05/digital-virus-helps-researchers-map-potential-spread)
 - [Phys.org: Digital 'virus' helps researchers map potential spread](https://phys.org/news/2020-05-digital-virus-potential.html)
 - [latronet.gr: Χαρτογράφηση εξάπλωσης CoViD-19 με κινητό τηλέφωνο](https://www.iatronet.gr/eidiseis-nea/epistimi-zwi/news/55544/psifiakos-ios-voitha-erevnites-na-xartografisoyn-pithani-exaplwsi-covid-19.html)
@@ -39,10 +37,22 @@ own work added to this list,
 
 ## Media
 
+~~~
+<div style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLI0mn-Oiwrl4j_ZgkJg1h5wOaQlXsSY3U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+~~~
 
 ## External Blog Posts and Presentations
 
+- [Francesco Martinuzzi: GSoC week 6: minimum complexity echo state network](https://martinuzzifrancesco.github.io/posts/06_gsoc_week/)
+- [Working with Differential Equations and Neural Networks](https://nextjournal.com/ashutosh-b-b/jsoc-2020-working-with-differential-equations-and-neural-networks)
+- [Francesco Martinuzzi: Data-driven prediction of chaotic systems: comparison of Echo State Network variations](https://martinuzzifrancesco.github.io/posts/05_gsoc_week/)
+- [Kirill Zubov: Physics-informed neural networks (PINNs) solvers on Julia](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solvers-on-julia-gsoc-2020-first-evaluations)
+- [Sebastian Callh personal blog: Forecasting the weather with neural ODEs](https://sebastiancallh.github.io/post/neural-ode-weather-forecast/)
+- [Utkarsh's Blog: GSoC Blog: Community Bonding & First Evaluation](https://utkarsh530.github.io/blog/post/gsoc-blog-2/)
+- [Ludovico: From JSOC to GSOC: a new beginning with Surrogates.jl](https://nextjournal.com/ludoro/from-jsoc-to-gsoc-a-new-beginning-with-surrogatesjl/)
+- [Francesco Martinuzzi: GSoC week 4: SVD-based Reservoir](https://martinuzzifrancesco.github.io/posts/04_gsoc_week/)
 - [Francesco Martinuzzi: GSoC week 3: Echo State Gaussian Processes](https://martinuzzifrancesco.github.io/posts/03_gsoc_week/)
 - [SCIML: LOGICIELS LIBRES POUR L'APPRENTISSAGE MACHINE SCIENTIFIQUE](https://chimieetjulia.org/e107/news.php?extend.6#)
 - [Fitting the SIR model to Covid-19 fatality data](https://gist.github.com/nlw0/3d80ae106b70704a1aca157a63303ec0)
@@ -50,7 +60,9 @@ own work added to this list,
 - [Frank Schäfer: GSoC 2020: High weak order SDE solvers and their utility in neural SDEs](https://frankschae.github.io/post/gsoc2020-high-weak-order-solvers-sde-adjoints/)
 - [Modeling pandemics subject to stochastic uncertainties -- A polynomial chaos approach](https://github.com/timueh/PandemicModeling)
 - [Francesco Martinuzzi: GSoC week 1: lasso, Elastic Net and Huber loss](https://martinuzzifrancesco.github.io/posts/01_gsoc_week/)
+- [awesome-ode-neural-networks](https://github.com/Zymrael/awesome-neural-ode)
 - [Modelling and data analysis tools to study the 2020 COVID-19 outbreak](https://github.com/berndblasius/Covid19)
+- [awesomeJulia](https://github.com/SubhadityaMukherjee/awesomeJulia)
 - [Kevin Hannay: Differential Equations as a Neural Network Layers](https://towardsdatascience.com/differential-equations-as-a-neural-network-layer-ac3092632255)
 - [Safe Blues — The Measurement Tool for Responsible Easing of Social Distancing](https://medium.com/@yoni_26949/safe-blues-the-measurement-tool-for-responsible-undoing-of-social-distancing-34079464db43)
 - [Per-Olof Persson and Robert Sweeney Blanco: The DifferentialEquations Package](https://robertsweeneyblanco.github.io/Programming_for_Mathematical_Applications/Differential_Equations/DifferentialEquations_Package.html)
@@ -88,6 +100,7 @@ own work added to this list,
 - [Ronan Chagas: Changes in OrdinaryDiffEq v3](https://www.ronanarraes.com/2018/02/changes-in-ordinarydiffeq-jl-v3/)
 - [Mathieu Besançon: Winter warm-up: toy models for heat exchangers](https://matbesancon.github.io/post/2018-12-27-heat-exchanger/)
 - [Ronan Chagas: Extending the ODE Solutions in Julia by Creating Custom Data Arrays for the Simulations](https://www.ronanarraes.com/2017/02/extending-the-ode-solutions-in-julia-by-creating-custom-data-arrays-for-the-simulations/)
+- [UCI Data Science Initiative: A Quick Tour of DifferentialEquations.jl](http://ucidatascienceinitiative.github.io/IntroToJulia/Html/DiffEq)
 - [StochasticLifestyle: Why Numba and Cython are not substitutes for Julia](https://www.stochasticlifestyle.com/why-numba-and-cython-are-not-substitutes-for-julia/)
 - [Ronan Chagas: Using julia to simulate systems composed of continuous and discrete parts](https://www.ronanarraes.com/2017/02/using-julia-to-simulate-systems-composed-of-continuous-and-discrete-parts/)
 - [StochasticLifestyle: Solving Systems of Stochastic PDEs and using GPUs in Julia](https://www.stochasticlifestyle.com/solving-systems-stochastic-pdes-using-gpus-julia/)

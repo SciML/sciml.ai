@@ -1,12 +1,5 @@
----
-layout: page
-title: Documentation
-navigation_weight: 1
-sitemap:
-    priority: 1.0
-    changefreq: yearly
-    lastmod: 2014-09-07T16:31:30+05:30
----
+@def title = "Documentation"
+
 # Documentation and Tutorials
 
 The SciML organization is an opinionated collection of tools for
@@ -107,4 +100,3 @@ SciML. If you would like your institution's tools added to the list,
 - [CMU+MIT+Citrine: Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
 - [Los Alamos National Lab: Model Analaysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
 - [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
-- [Safe Blues: A Method for Estimation and Control in the Fight Against COVID-19](https://safeblues.org/)
