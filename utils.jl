@@ -92,6 +92,7 @@ function hfun_blog_post_redirects()
             write(dst, redirect(relpath * "/"))
         end
     end
+    return ""
 end
 
 function hfun_add_redirects()
