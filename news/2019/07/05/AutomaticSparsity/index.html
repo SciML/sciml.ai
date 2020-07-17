@@ -1,0 +1,57 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/staging.sciml.ai/libs/highlight/github.min.css"> <link rel=stylesheet  href="/staging.sciml.ai/css/franklin.css"> <link rel=stylesheet  href="/staging.sciml.ai/css/hypertext.css"> <link rel=icon  href="/staging.sciml.ai/assets/favicon.png"> <title> DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity </title> <header> <h1><b><center>SciML</center></b></h1> <nav> | <a href="/staging.sciml.ai/" class=current >Home</a> | <a href="/staging.sciml.ai/news/">News</a> | <a href="/staging.sciml.ai/roadmap/">Roadmap</a> | <a href="/staging.sciml.ai/citing/">Citing</a> | <a href="/staging.sciml.ai/governance/">Governance</a> | <a href="/staging.sciml.ai/showcase/">Showcase</a> | <a href="/staging.sciml.ai/community/">Community</a> <hr/> | <a href="/staging.sciml.ai/documentation/">Documentation</a> | <a href="https://benchmarks.sciml.ai/">Benchmarks</a> | <a href="https://github.com/SciML/">Source Code</a> </nav> </header> <div class=franklin-content ><p>﻿ Let&#39;s just jump right in&#33; This time we have a bunch of new GPU tools and sparsity handling.</p> <h2 id=breaking_with_deprecations_diffeqgpu_gpu-based_ensemble_simulations ><a href="#breaking_with_deprecations_diffeqgpu_gpu-based_ensemble_simulations">&#40;Breaking with Deprecations&#41; DiffEqGPU: GPU-based Ensemble Simulations</a></h2> <p>The <code>MonteCarloProblem</code> interface received an overhaul. First of all, the interface has been renamed to <code>Ensemble</code>. The changes are:</p> <ul> <li><p><code>MonteCarloProblem</code> -&gt; <code>EnsembleProblem</code></p> <li><p><code>MonteCarloSolution</code> -&gt; <code>EnsembleSolution</code></p> <li><p><code>MonteCarloSummary</code> -&gt; <code>EnsembleSummary</code></p> <li><p><code>num_monte</code> -&gt; <code>trajectories</code></p> </ul> <p><strong>Specifying <code>parallel_type</code> has been deprecated</strong> and a deprecation warning is thrown mentioning this. So don&#39;t worry: your code will work but will give warnings as to what to change. Additionally, <strong>the DiffEqMonteCarlo.jl package is no longer necessary for any of this functionality</strong>.</p> <p>Now, <code>solve</code> of a <code>EnsembleProblem</code> works on the same dispatch mechanism as the rest of DiffEq, which looks like <code>solve&#40;ensembleprob,Tsit5&#40;&#41;,EnsembleThreads&#40;&#41;,trajectories&#61;n&#41;</code> where the third argument is an ensembling algorithm to specify the threading-based form. Code with the deprecation warning will work until the release of DiffEq 7.0, at which time the alternative path will be removed.</p> <p>See the <a href="https://docs.juliadiffeq.org/latest/features/ensemble">updated ensembles page for more details</a></p> <p>The change to dispatch was done for a reason: it allows us to build new libraries specifically for sophisticated handling of many trajectory ODE solves without introducing massive new dependencies to the standard DifferentialEquations.jl user. However, many people might be interested in the first project to make use of this: <a href="https://github.com/JuliaDiffEq/DiffEqGPU.jl">DiffEqGPU.jl</a>. DiffEqGPU.jl lets you define a problem, like an <code>ODEProblem</code>, and then solve thousands of trajectories in parallel using your GPU. The syntax looks like:</p> <pre><code class="julia hljs">monteprob = EnsembleProblem(my_ode_prob)
+solve(monteprob,Tsit5(),EnsembleGPUArray(),num_monte=<span class=hljs-number >100_000</span>)</code></pre> <p>and it will return 100,000 ODE solves. <strong>We have seen between a 12x and 90x speedup depending on the GPU of the test systems</strong>, meaning that this can be a massive improvement for parameter space exploration on smaller systems of ODEs. Currently there are a few limitations of this method, including that events cannot be used, but those will be solved shortly. Additional methods for GPU-based parameter parallelism are coming soon to the same interface. Also planned are GPU-accelerated multi-level Monte Carlo methods for faster weak convergence of SDEs.</p> <p>Again, this is utilizing compilation tricks to take the user-defined <code>f</code> and recompile it on the fly to a <code>.ptx</code> kernel, and generating kernel-optimized array-based formulations of the existing ODE solvers</p> <h2 id=automated_sparsity_detection ><a href="#automated_sparsity_detection">Automated Sparsity Detection</a></h2> <p>Shashi Gowda &#40;@shashigowda&#41; implemented a sparsity detection algorithm which digs through user-defined Julia functions with Cassette.jl to find out what inputs influence the output. The basic version checks at a given trace, but a more sophisticated version, which we are calling Concolic Combinatoric Analysis, looks at all possible branch choices and utilizes this to conclusively build a Jacobian whose sparsity pattern captures the possible variable interactions.</p> <p>The nice part is that this functionality is very straightforward to use. For example, let&#39;s say we had the following function:</p> <pre><code class="julia hljs"><span class=hljs-keyword >function</span> f(dx,x,p,t)
+  <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >2</span>:length(x)-<span class=hljs-number >1</span>
+    dx[i] = x[i-<span class=hljs-number >1</span>] - <span class=hljs-number >2</span>x[i] + x[i+<span class=hljs-number >1</span>]
+  <span class=hljs-keyword >end</span>
+  dx[<span class=hljs-number >1</span>] = -<span class=hljs-number >2</span>x[<span class=hljs-number >1</span>] + x[<span class=hljs-number >2</span>]
+  dx[<span class=hljs-keyword >end</span>] = x[<span class=hljs-keyword >end</span>-<span class=hljs-number >1</span>] - <span class=hljs-number >2</span>x[<span class=hljs-keyword >end</span>]
+  <span class=hljs-literal >nothing</span>
+<span class=hljs-keyword >end</span></code></pre> <p>If we want to find out the sparsity pattern of <code>f</code>, we would simply call:</p> <pre><code class="julia hljs">sparsity_pattern = sparsity!(f,output,input,p,t)</code></pre>
+<p>where <code>output</code> is an array like <code>dx</code>, <code>input</code> is an array like <code>x</code>, <code>p</code> are possible parameters, and <code>t</code> is a possible <code>t</code>. The function will then be analyzed and <code>sparsity_pattern</code> will return a <code>Sparsity</code> type of <code>I</code> and <code>J</code> which denotes the terms in the Jacobian with non-zero elements. By doing <code>sparse&#40;sparsity_pattern&#41;</code> we can turn this into a <code>SparseMatrixCSC</code> with the correct sparsity pattern.</p>
+<p>This functionality highlights the power of Julia since there is no way to conclusively determine the Jacobian of an arbitrary program <code>f</code> using numerical techniques, since all sorts of scenarios lead to &quot;fake zeros&quot; &#40;cancelation, not checking a place in parameter space where a branch is false, etc.&#41;. However, by directly utilizing Julia&#39;s compiler and the SSA provided by a Julia function definition we can perform a non-standard interpretation that tells all of the possible numerical ways the program can act, thus conclusively determining all of the possible variable interactions.</p>
+<p>Of course, you can still specify analytical Jacobians and sparsity patterns if you want, but if you&#39;re lazy... :&#41;</p>
+<p>See <a href="https://github.com/JuliaDiffEq/SparsityDetection.jl">SparsityDetection.jl&#39;s README for more details</a>.</p>
+<h2 id=gpu_offloading_in_implicit_de_solving ><a href="#gpu_offloading_in_implicit_de_solving">GPU Offloading in Implicit DE Solving</a></h2>
+<p>We are pleased to announce the <code>LinSolveGPUFactorize</code> option which allows for automatic offloading of linear solves to the GPU. For a problem with a large enough dense Jacobian, using <code>linsolve&#61;LinSolveGPUFactorize&#40;&#41;</code> will now automatically perform the factorization and back-substitution on the GPU, allowing for better scaling. For example:</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >using</span> CuArrays
+Rodas5(linsolve = LinSolveGPUFactorize())</code></pre>
+<p>This simply requires a working installation of CuArrays.jl. See <a href="https://docs.juliadiffeq.org/latest/features/linear_nonlinear">the linear solver documentation for more details</a>.</p>
+<h2 id=experimental_automated_accelerator_gpu_offloading ><a href="#experimental_automated_accelerator_gpu_offloading">Experimental: Automated Accelerator &#40;GPU&#41; Offloading</a></h2>
+<p>We have been dabbling in allowing automated accelerator &#40;GPU, multithreading, distributed, TPU, etc.&#41; offloading when the right hardware is detected and the problem size is sufficient to success a possible speedup. <a href="https://github.com/JuliaDiffEq/DiffEqBase.jl/pull/273">A working implementation exists as a PR for DiffEqBase</a> which would allow automated acceleration of linear solves in implicit DE solving. However, this somewhat invasive of a default, and very architecture dependent, so it is unlikely we will be releasing this soon. However, we are investigating this concept in more detail in the <a href="https://github.com/JuliaDiffEq/AutoOffload.jl">AutoOffload.jl</a>. If you&#39;re interested in Julia-wide automatic acceleration, please take a look at the repo and help us get something going&#33;</p>
+<h2 id=a_complete_set_of_iterative_solver_routines_for_implicit_des ><a href="#a_complete_set_of_iterative_solver_routines_for_implicit_des">A Complete Set of Iterative Solver Routines for Implicit DEs</a></h2>
+<p>Previous releases had only a pre-built GMRES implementation. However, as detailed on the <a href="https://docs.juliadiffeq.org/latest/features/linear_nonlinear">linear solver page</a>, we now have an array of iterative solvers readily available, including:</p>
+<ul>
+<li><p>LinSolveGMRES – GMRES</p>
+
+<li><p>LinSolveCG – CG &#40;Conjugate Gradient&#41;</p>
+
+<li><p>LinSolveBiCGStabl – BiCGStabl Stabilized Bi-Conjugate Gradient</p>
+
+<li><p>LinSolveChebyshev – Chebyshev</p>
+
+<li><p>LinSolveMINRES – MINRES</p>
+
+</ul>
+<p>These are all compatible with matrix-free implementations of a <code>AbstractDiffEqOperator</code>.</p>
+<h2 id=exponential_integrator_improvements ><a href="#exponential_integrator_improvements">Exponential integrator improvements</a></h2>
+<p>Thanks to Yingbo Ma &#40;@YingboMa&#41;, the exprb methods have been greatly improved.</p>
+<h1 id=next_directions ><a href="#next_directions">Next Directions</a></h1>
+<p>Our current development is very much driven by the ongoing GSoC/JSoC projects, which is a good thing because they are outputting some really amazing results&#33;</p>
+<p>Here&#39;s some things to look forward to:</p>
+<ul>
+<li><p>Automated matrix-free finite difference PDE operators</p>
+
+<li><p>Surrogate optimization</p>
+
+<li><p>Jacobian reuse efficiency in Rosenbrock-W methods</p>
+
+<li><p>Native Julia fully implicit ODE &#40;DAE&#41; solving in OrdinaryDiffEq.jl</p>
+
+<li><p>High Strong Order Methods for Non-Commutative Noise SDEs</p>
+
+<li><p>GPU-Optimized Sparse &#40;Colored&#41; Automatic Differentiation</p>
+
+<li><p>Parallelized Implicit Extrapolation of ODEs</p>
+
+</ul>
+</div>

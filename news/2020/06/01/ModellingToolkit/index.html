@@ -1,0 +1,179 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/staging.sciml.ai/libs/highlight/github.min.css"> <link rel=stylesheet  href="/staging.sciml.ai/css/franklin.css"> <link rel=stylesheet  href="/staging.sciml.ai/css/hypertext.css"> <link rel=icon  href="/staging.sciml.ai/assets/favicon.png"> <title> SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling </title> <header> <h1><b><center>SciML</center></b></h1> <nav> | <a href="/staging.sciml.ai/" class=current >Home</a> | <a href="/staging.sciml.ai/news/">News</a> | <a href="/staging.sciml.ai/roadmap/">Roadmap</a> | <a href="/staging.sciml.ai/citing/">Citing</a> | <a href="/staging.sciml.ai/governance/">Governance</a> | <a href="/staging.sciml.ai/showcase/">Showcase</a> | <a href="/staging.sciml.ai/community/">Community</a> <hr/> | <a href="/staging.sciml.ai/documentation/">Documentation</a> | <a href="https://benchmarks.sciml.ai/">Benchmarks</a> | <a href="https://github.com/SciML/">Source Code</a> </nav> </header> <div class=franklin-content ><p>﻿ Another month and another set of SciML updates&#33; This month we have been focusing a lot on simplifying our interfaces and cleaning our tutorials. We can demonstrate that <em>no user-intervention is required for adjoints</em>. Also, the ModelingToolkit.jl symbolic modeling language has really come into fruition, allowing component-based models and automated parallelism. Indeed, let&#39;s jump right into an example.</p> <h2 id=modelingtoolkit_daes_and_component-based_modeling ><a href="#modelingtoolkit_daes_and_component-based_modeling">ModelingToolkit DAEs and Component-Based Modeling</a></h2> <p><a href="https://github.com/SciML/ModelingToolkit.jl">ModelingToolkit.jl</a> has added the ability to build differential-algebraic equations through acausal component-based models. As an example, let&#39;s say we built two Lorenz equations:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> ModelingToolkit, OrdinaryDiffEq
+
+<span class=hljs-meta >@parameters</span> t σ ρ β
+<span class=hljs-meta >@variables</span> x(t) y(t) z(t)
+<span class=hljs-meta >@derivatives</span> D&#x27;~t
+
+eqs = [D(x) ~ σ*(y-x),
+       D(y) ~ x*(ρ-z)-y,
+       D(z) ~ x*y - β*z]
+
+lorenz1 = ODESystem(eqs,name=:lorenz1)
+lorenz2 = ODESystem(eqs,name=:lorenz2)</code></pre> <p>We can then define an implicit equation that couples the two equations together and solve the system:</p> <pre><code class="julia hljs"><span class=hljs-meta >@variables</span> a
+<span class=hljs-meta >@parameters</span> <span class=hljs-literal >γ</span>
+connections = [<span class=hljs-number >0</span> ~ lorenz1.x + lorenz2.y + a*<span class=hljs-literal >γ</span>]
+connected = ODESystem(connections,t,[a],[<span class=hljs-literal >γ</span>],systems=[lorenz1,lorenz2])
+
+u0 = [lorenz1.x =&gt; <span class=hljs-number >1.0</span>,
+      lorenz1.y =&gt; <span class=hljs-number >0.0</span>,
+      lorenz1.z =&gt; <span class=hljs-number >0.0</span>,
+      lorenz2.x =&gt; <span class=hljs-number >0.0</span>,
+      lorenz2.y =&gt; <span class=hljs-number >1.0</span>,
+      lorenz2.z =&gt; <span class=hljs-number >0.0</span>,
+      a =&gt; <span class=hljs-number >2.0</span>]
+
+p  = [lorenz1.σ =&gt; <span class=hljs-number >10.0</span>,
+      lorenz1.ρ =&gt; <span class=hljs-number >28.0</span>,
+      lorenz1.β =&gt; <span class=hljs-number >8</span>/<span class=hljs-number >3</span>,
+      lorenz2.σ =&gt; <span class=hljs-number >10.0</span>,
+      lorenz2.ρ =&gt; <span class=hljs-number >28.0</span>,
+      lorenz2.β =&gt; <span class=hljs-number >8</span>/<span class=hljs-number >3</span>,
+      <span class=hljs-literal >γ</span> =&gt; <span class=hljs-number >2.0</span>]
+
+tspan = (<span class=hljs-number >0.0</span>,<span class=hljs-number >100.0</span>)
+prob = ODEProblem(connected,u0,tspan,p)
+sol = solve(prob,Rodas5())
+
+<span class=hljs-keyword >using</span> Plots; plot(sol,vars=(a,lorenz1.x,lorenz2.z))</code></pre> <p><img src="https://user-images.githubusercontent.com/1814174/79229194-9e71a780-7e30-11ea-9f93-bfa762eb8dfb.png" alt="" /></p> <p>Because of this, one can build up independent components and start tying them together to make large complex models. We plan to start building a comprehensive model library to help users easily generate large-scale models.</p> <h2 id=modelingtoolkit_compiler_targets_c_stan_and_matlab ><a href="#modelingtoolkit_compiler_targets_c_stan_and_matlab">ModelingToolkit Compiler targets: C, Stan, and MATLAB</a></h2> <p>We have added the ability to specify compiler targets from ModelingToolkit. If you have a model specified in its symbolic language, it can generate code for C, Stan, and MATLAB. For example, take the Lotka-Volterra equations:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> ModelingToolkit, Test
+<span class=hljs-meta >@parameters</span> t a
+<span class=hljs-meta >@variables</span> x(t) y(t)
+<span class=hljs-meta >@derivatives</span> D&#x27;~t
+eqs = [D(x) ~ a*x - x*y,
+       D(y) ~ -<span class=hljs-number >3</span>y + x*y]</code></pre> <p>Let&#39;s say we now need to deploy this onto an embedded system which only has a C compiler. We can have ModelingToolkit.jl generate the required C code:</p> <pre><code class="julia hljs">ModelingToolkit.build_function(eqs,[x,y],[a],t,target = ModelingToolkit.CTarget()) ==</code></pre>
+<p>which gives:</p>
+<pre><code class="julia hljs">void diffeqf(double* internal_var___du, double* internal_var___u, double* internal_var___p, t) {
+  internal_var___du[<span class=hljs-number >1</span>] = internal_var___p[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >1</span>] - internal_var___u[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >2</span>];
+  internal_var___du[<span class=hljs-number >2</span>] = -<span class=hljs-number >3</span> * internal_var___u[<span class=hljs-number >2</span>] + internal_var___u[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >2</span>];
+}</code></pre>
+<p>Now let&#39;s say we needed to use Stan for some probabilistic programming. That&#39;s as simple as:</p>
+<pre><code class="julia hljs">ModelingToolkit.build_function(eqs,convert.(Variable,[x,y]),convert.(Variable,[a]),t,target = ModelingToolkit.StanTarget()) ==</code></pre>
+<p>which gives:</p>
+<pre><code class="julia hljs">real[] diffeqf(real t,real[] internal_var___u,real[] internal_var___p,real[] x_r,int[] x_i) {
+  real internal_var___du[<span class=hljs-number >2</span>];
+  internal_var___du[<span class=hljs-number >1</span>] = internal_var___p[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >1</span>] - internal_var___u[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >2</span>];
+  internal_var___du[<span class=hljs-number >2</span>] = -<span class=hljs-number >3</span> * internal_var___u[<span class=hljs-number >2</span>] + internal_var___u[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >2</span>];
+  <span class=hljs-keyword >return</span> internal_var___du;
+}</code></pre>
+<p>When you mix this with the fact that code can automatically be converted to ModelingToolkit, this gives a way to transpile mathematical model code from Julia to other languages, making it easy to develop and test models in Julia and finally transpile and recompile the final model for embedded platforms. However, this automatic transformation can be used in another way...</p>
+<h2 id=modelingtoolkit_automatic_parallelism ><a href="#modelingtoolkit_automatic_parallelism">ModelingToolkit Automatic Parallelism</a></h2>
+<p>ModelingToolkit now has automatic parallelism on the generated model code. As an example, let&#39;s automatically translate a discretized partial differential equation solver code into ModelingToolkit form:</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >using</span> ModelingToolkit, LinearAlgebra, SparseArrays
+
+<span class=hljs-comment ># Define the constants for the PDE</span>
+<span class=hljs-keyword >const</span> α₂ = <span class=hljs-number >1.0</span>
+<span class=hljs-keyword >const</span> α₃ = <span class=hljs-number >1.0</span>
+<span class=hljs-keyword >const</span> β₁ = <span class=hljs-number >1.0</span>
+<span class=hljs-keyword >const</span> β₂ = <span class=hljs-number >1.0</span>
+<span class=hljs-keyword >const</span> β₃ = <span class=hljs-number >1.0</span>
+<span class=hljs-keyword >const</span> r₁ = <span class=hljs-number >1.0</span>
+<span class=hljs-keyword >const</span> r₂ = <span class=hljs-number >1.0</span>
+<span class=hljs-keyword >const</span> _DD = <span class=hljs-number >100.0</span>
+<span class=hljs-keyword >const</span> γ₁ = <span class=hljs-number >0.1</span>
+<span class=hljs-keyword >const</span> γ₂ = <span class=hljs-number >0.1</span>
+<span class=hljs-keyword >const</span> γ₃ = <span class=hljs-number >0.1</span>
+<span class=hljs-keyword >const</span> N = <span class=hljs-number >8</span>
+<span class=hljs-keyword >const</span> X = reshape([i <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N],N,N)
+<span class=hljs-keyword >const</span> Y = reshape([j <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N],N,N)
+<span class=hljs-keyword >const</span> α₁ = <span class=hljs-number >1.0</span>.*(X.&gt;=<span class=hljs-number >4</span>*N/<span class=hljs-number >5</span>)
+
+<span class=hljs-keyword >const</span> Mx = <span class=hljs-built_in >Tridiagonal</span>([<span class=hljs-number >1.0</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N-<span class=hljs-number >1</span>],[-<span class=hljs-number >2.0</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N],[<span class=hljs-number >1.0</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N-<span class=hljs-number >1</span>])
+<span class=hljs-keyword >const</span> My = copy(Mx)
+Mx[<span class=hljs-number >2</span>,<span class=hljs-number >1</span>] = <span class=hljs-number >2.0</span>
+Mx[<span class=hljs-keyword >end</span>-<span class=hljs-number >1</span>,<span class=hljs-keyword >end</span>] = <span class=hljs-number >2.0</span>
+My[<span class=hljs-number >1</span>,<span class=hljs-number >2</span>] = <span class=hljs-number >2.0</span>
+My[<span class=hljs-keyword >end</span>,<span class=hljs-keyword >end</span>-<span class=hljs-number >1</span>] = <span class=hljs-number >2.0</span>
+
+<span class=hljs-comment ># Define the discretized PDE as an ODE function</span>
+<span class=hljs-keyword >function</span> f!(du,u,p,t)
+   A = <span class=hljs-meta >@view</span>  u[:,:,<span class=hljs-number >1</span>]
+   B = <span class=hljs-meta >@view</span>  u[:,:,<span class=hljs-number >2</span>]
+   C = <span class=hljs-meta >@view</span>  u[:,:,<span class=hljs-number >3</span>]
+  dA = <span class=hljs-meta >@view</span> du[:,:,<span class=hljs-number >1</span>]
+  dB = <span class=hljs-meta >@view</span> du[:,:,<span class=hljs-number >2</span>]
+  dC = <span class=hljs-meta >@view</span> du[:,:,<span class=hljs-number >3</span>]
+  mul!(MyA,My,A)
+  mul!(AMx,A,Mx)
+  @. DA = _DD*(MyA + AMx)
+  @. dA = DA + α₁ - β₁*A - r₁*A*B + r₂*C
+  @. dB = α₂ - β₂*B - r₁*A*B + r₂*C
+  @. dC = α₃ - β₃*C + r₁*A*B - r₂*C
+<span class=hljs-keyword >end</span></code></pre>
+<p>Now let&#39;s symbolically calculate the sparse Jacobian of the function <code>f&#33;</code>. We can do so by tracing with the ModelingToolkit variables:</p>
+<pre><code class="julia hljs"><span class=hljs-meta >@variables</span> du[<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:<span class=hljs-number >3</span>] u[<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:<span class=hljs-number >3</span>] MyA[<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:N] AMx[<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:N] DA[<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:N]
+f!(du,u,<span class=hljs-literal >nothing</span>,<span class=hljs-number >0.0</span>)
+jac = sparse(ModelingToolkit.jacobian(vec(du),vec(u),simplify=<span class=hljs-literal >false</span>))</code></pre>
+<p>Now that we&#39;ve automatically translated this into the symbolic system and calculated the sparse Jacobian, we can tell it to generate an automatically multithreaded Julia code:</p>
+<pre><code class="julia hljs">multithreadedjac = eval(ModelingToolkit.build_function(vec(jac),u,multithread=<span class=hljs-literal >true</span>)[<span class=hljs-number >2</span>])</code></pre>
+<p>The output is omitted since it is quite large, but the massive speedup over the original form since <strong>the sparsity pattern has been automatically computed and an optimal sparse multithreaded Jacobian function has been generated for use with DifferentialEquations.jl, NLsolve.jl, and whatever other mathematical library you wish to use it with</strong>.</p>
+<p>Indeed, this gives about a 4x speedup on a computer with 4 threads, exactly as you&#39;d expect.</p>
+<h2 id=highlight_sir-julia_model_simulation_and_inference_repository ><a href="#highlight_sir-julia_model_simulation_and_inference_repository">Highlight: sir-julia Model Simulation and Inference Repository</a></h2>
+<p>Simon Frost, Principal Data Scientist at Microsoft Health, published an <a href="https://github.com/epirecipes/sir-julia">epidemic modeling recipes library, sir-julia</a> which heavily features SciML and its tooling. There are many aspects to note, including integration with probabilistic programming for Bayesian inference. Indeed, the use of DifferentialEquations.jl inside of a Turing.jl macro is simply to use <code>solve</code> inside of the Turing library: no special tricks or techniques required. For example, this looks like:</p>
+<pre><code class="julia hljs"><span class=hljs-meta >@model</span> bayes_sir(y) = <span class=hljs-keyword >begin</span>
+  <span class=hljs-comment ># Calculate number of timepoints</span>
+  l = length(y)
+  i₀  ~ Uniform(<span class=hljs-number >0.0</span>,<span class=hljs-number >1.0</span>)
+  β ~ Uniform(<span class=hljs-number >0.0</span>,<span class=hljs-number >1.0</span>)
+  <span class=hljs-literal >I</span> = i₀*<span class=hljs-number >1000.0</span>
+  u0=[<span class=hljs-number >1000.0</span>-<span class=hljs-literal >I</span>,<span class=hljs-literal >I</span>,<span class=hljs-number >0.0</span>,<span class=hljs-number >0.0</span>]
+  p=[β,<span class=hljs-number >10.0</span>,<span class=hljs-number >0.25</span>]
+  tspan = (<span class=hljs-number >0.0</span>,float(l))
+  prob = ODEProblem(sir_ode!,
+          u0,
+          tspan,
+          p)
+  sol = solve(prob,
+              Tsit5(),
+              saveat = <span class=hljs-number >1.0</span>)
+  sol_C = <span class=hljs-built_in >Array</span>(sol)[<span class=hljs-number >4</span>,:] <span class=hljs-comment ># Cumulative cases</span>
+  sol_X = sol_C[<span class=hljs-number >2</span>:<span class=hljs-keyword >end</span>] - sol_C[<span class=hljs-number >1</span>:(<span class=hljs-keyword >end</span>-<span class=hljs-number >1</span>)]
+  l = length(y)
+  <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:l
+    y[i] ~ Poisson(sol_X[i])
+  <span class=hljs-keyword >end</span>
+<span class=hljs-keyword >end</span>;</code></pre>
+<p>For more examples, please consult the repository which is chock full of training examples. However, this demonstration leads us to your next major release note:</p>
+<h2 id=the_end_of_concrete_solve ><a href="#the_end_of_concrete_solve">The End of <code>concrete_solve</code></a></h2>
+<p>It&#39;s finally here: <code>concrete_solve</code> has been deprecated for, you guessed it, <code>solve</code>. If you want to solve an ODE with <code>Tsit5&#40;&#41;</code>, how do you write it?</p>
+<pre><code class="julia hljs">solve(prob,Tsit5())</code></pre>
+<p>If you want to differentiate the solution to an ODE with <code>Tsit5&#40;&#41;</code>, how do you write it?</p>
+<pre><code class="julia hljs">solve(prob,Tsit5())</code></pre>
+<p>If you want to use Bayesian inference on <code>Tsit5&#40;&#41;</code> solutions, how do you write it?</p>
+<pre><code class="julia hljs">solve(prob,Tsit5())</code></pre>
+<p>That is correct: for both forward and reverse mode automatic differentiation, there is no modification that is required. When forward-mode automatic differentiation libraries are used, type handling will automatically promote to ensure the solution is differentiated properly. When reverse-mode automatic differentiation is used, the backpropogation will automatically be replaced with <a href="https://docs.sciml.ai/latest/analysis/sensitivity/#solve-Differentiation-Examples-1">adjoint sensitivity methods</a> which can be controlled through the <code>sensealg</code> keyword argument. <strong>The result is full performance and flexibility, but no code changes required</strong>.</p>
+<p>This is a step up from where we were. In the first version of DiffEqFlux.jl, we required the use of special functions like <code>diffeq_adjoint</code> to use the adjoint methods. Then we better integrated by having <code>concrete_solve</code>, which was a neutered version of <code>solve</code> but would work perfectly in the AD contexts. Now, <code>solve</code> does it all, and so there is no other function to use.</p>
+<h3 id=demonstration_stiff_neural_ode_with_nested_forward_reverse_and_adjoint_ad ><a href="#demonstration_stiff_neural_ode_with_nested_forward_reverse_and_adjoint_ad">Demonstration: Stiff Neural ODE with Nested Forward, Reverse, and Adjoint AD</a></h3>
+<p>As a quick demonstration, here&#39;s the use of checkpointed interpolating adjoints over a stiff ODE solver.</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >using</span> OrdinaryDiffEq, Flux, DiffEqSensitivity
+model = Chain(Dense(<span class=hljs-number >2</span>, <span class=hljs-number >50</span>, tanh), Dense(<span class=hljs-number >50</span>, <span class=hljs-number >2</span>))
+p, re = Flux.destructure(model)
+dudt!(u, p, t) = re(p)(u)
+u0 = rand(<span class=hljs-number >2</span>)
+odedata = rand(<span class=hljs-number >2</span>,<span class=hljs-number >11</span>)
+<span class=hljs-keyword >function</span> loss()
+  prob = ODEProblem(dudt!, u0, (<span class=hljs-number >0.0</span>,<span class=hljs-number >1.0</span>), p)
+  my_neural_ode_prob = solve(prob, RadauIIA5(), saveat=<span class=hljs-number >0.1</span>)
+  sum(abs2,my_neural_ode_prob .- odedata)
+<span class=hljs-keyword >end</span>
+loss()
+Flux.gradient(loss,Flux.params(u0,p))</code></pre>
+<p>Note that it&#39;s nesting 3 modes of differentiation all in the optimal ways: forward-mode for the Jacobians in the stiff ODE solver, an adjoint mode for the derivative of <code>solve</code>, and reverse-mode for the vector-Jacobian-product &#40;vjp&#41; calculation of the neural network. This means that the DiffEqFlux.jl library is pretty much at its endgame where nothing about your code needs to be changed to utilize its tools&#33;</p>
+<h1 id=next_directions_google_summer_of_code ><a href="#next_directions_google_summer_of_code">Next Directions: Google Summer of Code</a></h1>
+<p>The next directions are going to be highly tied to the directions that we are going with the latest Google Summer of Code, so here are a few things to look forward to:</p>
+<ul>
+<li><p>Adjoints of stochastic differential equations. Just like with ODEs, adjoint sensitivity methods for SDEs are being integrated into the library and are being setup to be automatically used when performing reverse mode automatic differentiation over <code>solve</code>. Actually, one of these methods is already completed, but we will be rounding out the offering a bit before documenting and formally releasing it. Be on the lookout for some pretty major neural SDE improvements.</p>
+
+<li><p>Some tooling for automated training of physics-informed neural networks &#40;PINNs&#41; from ModelingToolkit symbolic descriptions of the PDE.</p>
+
+<li><p>Efficiency enhancements to native Julia BDF methods.</p>
+
+<li><p>More Lie Group integrator methods.</p>
+
+<li><p>Higher efficiency low-storage Runge-Kutta methods with a demonstration of optimality in a large-scale climate model &#40;&#33;&#33;&#33;&#41;.</p>
+
+<li><p>More high weak order methods for SDEs</p>
+
+<li><p>Causal components in ModelingToolkit</p>
+
+</ul>
+<p>And many many more. There will be enough that I don&#39;t think we will wait a whole month for the next update, so see you soon&#33;</p>
+</div>

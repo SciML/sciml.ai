@@ -1,0 +1,117 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/staging.sciml.ai/libs/highlight/github.min.css"> <link rel=stylesheet  href="/staging.sciml.ai/css/franklin.css"> <link rel=stylesheet  href="/staging.sciml.ai/css/hypertext.css"> <link rel=icon  href="/staging.sciml.ai/assets/favicon.png"> <title> DifferentialEquations.jl v6.11.0: Universal Differential Equation Overhaul </title> <header> <h1><b><center>SciML</center></b></h1> <nav> | <a href="/staging.sciml.ai/" class=current >Home</a> | <a href="/staging.sciml.ai/news/">News</a> | <a href="/staging.sciml.ai/roadmap/">Roadmap</a> | <a href="/staging.sciml.ai/citing/">Citing</a> | <a href="/staging.sciml.ai/governance/">Governance</a> | <a href="/staging.sciml.ai/showcase/">Showcase</a> | <a href="/staging.sciml.ai/community/">Community</a> <hr/> | <a href="/staging.sciml.ai/documentation/">Documentation</a> | <a href="https://benchmarks.sciml.ai/">Benchmarks</a> | <a href="https://github.com/SciML/">Source Code</a> </nav> </header> <div class=franklin-content ><p>After the release of the paper <a href="https://arxiv.org/abs/2001.04385">Universal Differential Equations for Scientific Machine Learning</a>, we have had very good feedback and have seen plenty of new users joining the Julia differential equation ecosystem and utilizing the tools for scientific machine learning. A lot of our work in this last release focuses around these capability, mixing with GPU support and global sensitivity analysis to augment the normal local tools of SciML.</p> <h2 id=1000_stars_for_differentialequationsjl ><a href="#1000_stars_for_differentialequationsjl">1,000 Stars for DifferentialEquations.jl&#33;</a></h2> <p>Before the bigger updates, I wanted to announce that DifferentialEquations.jl surpassed the 1,000 star milestone in this round. This is very helpful for the community as an indicator of community utility. If you haven&#39;t done so yet, please <a href="https://github.com/JuliaDiffEq/DifferentialEquations.jl">star DifferentialEquations.jl</a> as it is a valuble indicator for future grants and funding for student projects.</p> <h2 id=local_sensitivity_analysis_overhaul_concrete_solve_and_sensealg ><a href="#local_sensitivity_analysis_overhaul_concrete_solve_and_sensealg">Local Sensitivity Analysis Overhaul: <code>concrete_solve</code> and <code>sensealg</code></a></h2> <p>With major help from Yingbo Ma &#40;@YingboMa&#41;, we have overhauled our sensitivity analysis algorithms to give a lot more choice and implementation flexibility. While all of the lower level interface is still in place, a new higher level interface will make users especially happy. This interface is <code>concrete_solve</code>. It&#39;s a version of <code>solve</code> &#40;limitation: no post-solution interpolation&#41; which explicitly takes in <code>u0</code> and <code>p</code>, and is setup with Zygote to automatically utilize our built-in <code>SensitivityAlgoritm</code> methods whether Zygote &#40;or any ChainRules.jl-based AD system&#41; asks for a gradient. For example:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> DiffEqSensitivity, OrdinaryDiffEq, Zygote
+
+<span class=hljs-keyword >function</span> fiip(du,u,p,t)
+  du[<span class=hljs-number >1</span>] = dx = p[<span class=hljs-number >1</span>]*u[<span class=hljs-number >1</span>] - p[<span class=hljs-number >2</span>]*u[<span class=hljs-number >1</span>]*u[<span class=hljs-number >2</span>]
+  du[<span class=hljs-number >2</span>] = dy = -p[<span class=hljs-number >3</span>]*u[<span class=hljs-number >2</span>] + p[<span class=hljs-number >4</span>]*u[<span class=hljs-number >1</span>]*u[<span class=hljs-number >2</span>]
+<span class=hljs-keyword >end</span>
+p = [<span class=hljs-number >1.5</span>,<span class=hljs-number >1.0</span>,<span class=hljs-number >3.0</span>,<span class=hljs-number >1.0</span>]; u0 = [<span class=hljs-number >1.0</span>;<span class=hljs-number >1.0</span>]
+prob = ODEProblem(fiip,u0,(<span class=hljs-number >0.0</span>,<span class=hljs-number >10.0</span>),p)
+sol = concrete_solve(prob,Tsit5())</code></pre> <p>solves the equation, while:</p> <pre><code class="julia hljs">du0,dp = Zygote.gradient((u0,p)-&gt;sum(concrete_solve(prob,Tsit5(),u0,p,saveat=<span class=hljs-number >0.1</span>,sensealg=QuadratureAdjoint())),u0,p)</code></pre>
+<p>computes <code>du0</code> and <code>dp</code>: the gradient of the cost function with respect to the initial condition and parameters. Notice here we have a choice of <code>sensealg</code>, which allows the choice of a sensitivity analysis method for Zygote to use. The choices are vast and growing, with each having pros and cons. You can ask it to use forward sensitivity analysis, forward mode AD, Tracker.jl, O&#40;1&#41; adjoints via backsolve, <strong>checkpointed adjoints</strong>, etc. all just by changing the <code>sensealg</code> keyword argument. Thus this is the first system to offer such flexibility to allow for the most efficient gradient calculations for a specific problem to occur.</p>
+<p>We&#39;ve seen some pretty massive performance and stability gains by utilizing this system&#33;</p>
+<h2 id=diffeqflux_overhaul_zygote_support_sciml_train_interface_and_fast_layers ><a href="#diffeqflux_overhaul_zygote_support_sciml_train_interface_and_fast_layers">DiffEqFlux Overhaul: Zygote Support, <code>sciml_train</code> Interface, and Fast Layers</a></h2>
+<p>Given the workflows that we saw in <a href="https://arxiv.org/abs/2001.04385">the UDE paper</a>, we have overhauled DiffEqFlux. The new interface, <code>sciml_train</code>, is more suitable to scientific machine learning. We have introduced the <code>Fast</code> layer setup, i.e. <code>FastChain</code> and <code>FastDense</code>, which give a 10x speed improvement over Flux.jl neural architectures by avoiding expensive restructure/destructure calls. Additionally, <code>sciml_train</code> links not just to the Flux.jl deep learning optimizer library, but also to Optim.jl for stability-enhanced methods like L-BFGS. Lastly, this new interface has explicit parameters, something that has helped fix a lot of issues users have had with the interface. Together, we can train a neural ODE in around 30 seconds in this example that mixes ADAM and BFGS optimizers:</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >using</span> DiffEqFlux, OrdinaryDiffEq, Flux, Optim, Plots
+
+u0 = <span class=hljs-built_in >Float32</span>[<span class=hljs-number >2.</span>; <span class=hljs-number >0.</span>]
+datasize = <span class=hljs-number >30</span>
+tspan = (<span class=hljs-number >0.0f0</span>,<span class=hljs-number >1.5f0</span>)
+
+<span class=hljs-keyword >function</span> trueODEfunc(du,u,p,t)
+    true_A = [-<span class=hljs-number >0.1</span> <span class=hljs-number >2.0</span>; -<span class=hljs-number >2.0</span> -<span class=hljs-number >0.1</span>]
+    du .= ((u.^<span class=hljs-number >3</span>)&#x27;true_A)&#x27;
+<span class=hljs-keyword >end</span>
+t = range(tspan[<span class=hljs-number >1</span>],tspan[<span class=hljs-number >2</span>],length=datasize)
+prob = ODEProblem(trueODEfunc,u0,tspan)
+ode_data = <span class=hljs-built_in >Array</span>(solve(prob,Tsit5(),saveat=t))
+
+dudt2 = FastChain((x,p) -&gt; x.^<span class=hljs-number >3</span>,
+            FastDense(<span class=hljs-number >2</span>,<span class=hljs-number >50</span>,tanh),
+            FastDense(<span class=hljs-number >50</span>,<span class=hljs-number >2</span>))
+n_ode = NeuralODE(dudt2,tspan,Tsit5(),saveat=t)
+
+<span class=hljs-keyword >function</span> predict_n_ode(p)
+  n_ode(u0,p)
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-keyword >function</span> loss_n_ode(p)
+    pred = predict_n_ode(p)
+    loss = sum(abs2,ode_data .- pred)
+    loss,pred
+<span class=hljs-keyword >end</span>
+
+loss_n_ode(n_ode.p) <span class=hljs-comment ># n_ode.p stores the initial parameters of the neural ODE</span>
+
+cb = <span class=hljs-keyword >function</span> (p,l,pred;doplot=<span class=hljs-literal >false</span>) <span class=hljs-comment >#callback function to observe training</span>
+  display(l)
+  <span class=hljs-comment ># plot current prediction against data</span>
+  <span class=hljs-keyword >if</span> doplot
+    pl = scatter(t,ode_data[<span class=hljs-number >1</span>,:],label=<span class=hljs-string >&quot;data&quot;</span>)
+    scatter!(pl,t,pred[<span class=hljs-number >1</span>,:],label=<span class=hljs-string >&quot;prediction&quot;</span>)
+    display(plot(pl))
+  <span class=hljs-keyword >end</span>
+  <span class=hljs-keyword >return</span> <span class=hljs-literal >false</span>
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-comment ># Display the ODE with the initial parameter values.</span>
+cb(n_ode.p,loss_n_ode(n_ode.p)...)
+
+res1 = DiffEqFlux.sciml_train(loss_n_ode, n_ode.p, ADAM(<span class=hljs-number >0.05</span>), cb = cb, maxiters = <span class=hljs-number >300</span>)
+cb(res1.minimizer,loss_n_ode(res1.minimizer)...;doplot=<span class=hljs-literal >true</span>)
+res2 = DiffEqFlux.sciml_train(loss_n_ode, res1.minimizer, LBFGS(), cb = cb)
+cb(res2.minimizer,loss_n_ode(res2.minimizer)...;doplot=<span class=hljs-literal >true</span>)</code></pre>
+<h2 id=sdes_and_ad_on_diffeqgpujl ><a href="#sdes_and_ad_on_diffeqgpujl">SDEs and AD on DiffEqGPU.jl</a></h2>
+<p><a href="https://github.com/JuliaDiffEq/DiffEqGPU.jl">DiffEqGPU.jl, the library for automated parallelization of small differential equations across GPUs</a>, now supports SDEs and ForwardDiff dual numbers. This means you can use adaptive SDE solvers to solve 100,000 simultaneous SDEs on GPUs, or solve ODEs defined by dual numbers in order to do forward sensitivity analysis of many parameters at once. Once again, the interface is as simple as adding <code>EnsembleGPUArray&#40;&#41;</code> to your ensemble solve, essentially no code change is required to make use of these features&#33;</p>
+<h2 id=global_sensitivity_analysis_overhaul_common_interface_and_parallelism ><a href="#global_sensitivity_analysis_overhaul_common_interface_and_parallelism">Global Sensitivity Analysis Overhaul: Common interface and Parallelism</a></h2>
+<p>Thanks to Vaibhav Dixit &#40;@vaibhavdixit02&#41;, we now have a new interface for global sensitivity analysis which allows for specifying a function that is compatible with all forms of GSA and allows for parallelism. For example, we can look at the global sensitivity of the mean and the maximum of the Lotka-Volterra ODE by defining a function of the parmeters <code>p</code>:</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >using</span> DiffEqSensitivity, Statistics, OrdinaryDiffEq <span class=hljs-comment >#load packages</span>
+<span class=hljs-keyword >function</span> f(du,u,p,t)
+  du[<span class=hljs-number >1</span>] = p[<span class=hljs-number >1</span>]*u[<span class=hljs-number >1</span>] - p[<span class=hljs-number >2</span>]*u[<span class=hljs-number >1</span>]*u[<span class=hljs-number >2</span>] <span class=hljs-comment >#prey</span>
+  du[<span class=hljs-number >2</span>] = -p[<span class=hljs-number >3</span>]*u[<span class=hljs-number >2</span>] + p[<span class=hljs-number >4</span>]*u[<span class=hljs-number >1</span>]*u[<span class=hljs-number >2</span>] <span class=hljs-comment >#predator</span>
+<span class=hljs-keyword >end</span>
+u0 = [<span class=hljs-number >1.0</span>;<span class=hljs-number >1.0</span>]
+tspan = (<span class=hljs-number >0.0</span>,<span class=hljs-number >10.0</span>)
+p = [<span class=hljs-number >1.5</span>,<span class=hljs-number >1.0</span>,<span class=hljs-number >3.0</span>,<span class=hljs-number >1.0</span>]
+prob = ODEProblem(f,u0,tspan,p)
+t = collect(range(<span class=hljs-number >0</span>, stop=<span class=hljs-number >10</span>, length=<span class=hljs-number >200</span>))
+f1 = <span class=hljs-keyword >function</span> (p)
+  prob1 = remake(prob;p=p)
+  sol = solve(prob1,Tsit5();saveat=t)
+  [mean(sol[<span class=hljs-number >1</span>,:]), maximum(sol[<span class=hljs-number >2</span>,:])]
+<span class=hljs-keyword >end</span></code></pre>
+<p>And from here we can call <code>gsa</code>:</p>
+<pre><code class="julia hljs">m = gsa(f1,Morris(total_num_trajectory=<span class=hljs-number >1000</span>,num_trajectory=<span class=hljs-number >150</span>),[[<span class=hljs-number >1</span>,<span class=hljs-number >5</span>],[<span class=hljs-number >1</span>,<span class=hljs-number >5</span>],[<span class=hljs-number >1</span>,<span class=hljs-number >5</span>],[<span class=hljs-number >1</span>,<span class=hljs-number >5</span>]])</code></pre>
+<p>That&#39;s GSA with the Morris method. But now Sobol is one line away, and eFAST, etc. are all simple variations.</p>
+<p>In addition, there is a parallel batching interface that works nicely with the Ensemble interface. All that happens is that <code>p</code> becomes a matrix where each row <code>p&#91;i,:&#93;</code> is a set of parameters. For example, the following does the same global sensitivity analysis but with Sobol sensitivity and automatic GPU parallelism:</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >using</span> DiffEqGPU
+
+f1 = <span class=hljs-keyword >function</span> (p)
+  prob_func(prob,i,repeat) = remake(prob;p=p[i,:])
+  ensemble_prob = EnsembleProblem(prob,prob_func=prob_func)
+  sol = solve(ensemble_prob,Tsit5(),EnsembleGPUArray();saveat=t)
+  <span class=hljs-comment ># Now sol[i] is the solution for the ith set of parameters</span>
+  out = zeros(size(p,<span class=hljs-number >1</span>),<span class=hljs-number >2</span>)
+  <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:size(p,<span class=hljs-number >1</span>)
+    out[i,<span class=hljs-number >1</span>] = mean(sol[i][<span class=hljs-number >1</span>,:])
+    out[i,<span class=hljs-number >2</span>] = maximum(sol[i][<span class=hljs-number >2</span>,:])
+  <span class=hljs-keyword >end</span>
+  out
+<span class=hljs-keyword >end</span>
+sobol_result = gsa(f1,Sobol(),A,B,batch=<span class=hljs-literal >true</span>)</code></pre>
+<h2 id=efast_global_sensitivity_analysis ><a href="#efast_global_sensitivity_analysis">eFAST Global Sensitivity Analysis</a></h2>
+<p>A new global sensitivity analysis method with fast convergence, eFAST, has been added to the library. It works on the same <code>gsa</code> interface, so code using more traditional Sobol or Morris techniques can switch over to this faster converging method with just a few lines changed&#33;</p>
+<h1 id=next_directions ><a href="#next_directions">Next Directions</a></h1>
+<p>Here&#39;s some things to look forward to:</p>
+<ul>
+<li><p>Automated matrix-free finite difference PDE operators</p>
+
+<li><p>Jacobian reuse efficiency in Rosenbrock-W methods</p>
+
+<li><p>Native Julia fully implicit ODE &#40;DAE&#41; solving in OrdinaryDiffEq.jl</p>
+
+<li><p>High Strong Order Methods for Non-Commutative Noise SDEs</p>
+
+<li><p>Stochastic delay differential equations</p>
+
+</ul>
+</div>

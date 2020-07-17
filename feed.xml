@@ -1,0 +1,337 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>SciMl</title>
+  <description><![CDATA[Website for SciMl Organization
+]]></description>
+  <link>https://sciml.ai/</link>
+  <atom:link href="https://sciml.ai/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title> DifferentialEquations.jl 4.5: ABC, Adaptive Multistep, Maximum A Posteriori </title>
+    <link>https://sciml.ai/news/2018/05/26/ABCMore/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 4.5: ABC, Adaptive Multistep, Maximum A Posteriori 
+<br><a href="https://sciml.ai/news/2018/05/26/ABCMore/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2018/05/26/ABCMore/index.html</guid>
+    <pubDate>Sat, 26 May 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl v6.12.0: DAE Extravaganza </title>
+    <link>https://sciml.ai/news/2020/03/23/DAE/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl v6.12.0: DAE Extravaganza 
+<br><a href="https://sciml.ai/news/2020/03/23/DAE/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2020/03/23/DAE/index.html</guid>
+    <pubDate>Mon, 23 Mar 2020 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>DifferentialEquations.jl v1.8.0</title>
+    <link>https://sciml.ai/news/2017/02/02/interps/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl v1.8.0 
+<br><a href="https://sciml.ai/news/2017/02/02/interps/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/02/02/interps/index.html</guid>
+    <pubDate>Thu, 9 Feb 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl v6.5.0: Stiff SDEs, VectorContinuousCallback, Multithreaded Extrapolation </title>
+    <link>https://sciml.ai/news/2019/06/06/StiffSDEs/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl v6.5.0: Stiff SDEs, VectorContinuousCallback, Multithreaded Extrapolation 
+<br><a href="https://sciml.ai/news/2019/06/06/StiffSDEs/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2019/06/06/StiffSDEs/index.html</guid>
+    <pubDate>Thu, 6 Jun 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 6.0: Radau5, Hyperbolic PDEs, Dependency Reductions </title>
+    <link>https://sciml.ai/news/2019/02/02/RadauAnderson/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 6.0: Radau5, Hyperbolic PDEs, Dependency Reductions 
+<br><a href="https://sciml.ai/news/2019/02/02/RadauAnderson/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2019/02/02/RadauAnderson/index.html</guid>
+    <pubDate>Sat, 2 Feb 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>SciML Roadmap</title>
+    <link>https://sciml.ai/roadmap/index.html</link>
+    <description><![CDATA[Roadmap for the SciML organization
+<br><a href="https://sciml.ai/roadmap/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/roadmap/index.html</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>Community</title>
+    <link>https://sciml.ai/community/index.html</link>
+    <description><![CDATA[A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg" alt="" />
+<br><a href="https://sciml.ai/community/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/community/index.html</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>DifferentialEquations.jl v1.6.0</title>
+    <link>https://sciml.ai/news/2017/01/14/stable/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl v1.6.0 
+<br><a href="https://sciml.ai/news/2017/01/14/stable/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/01/14/stable/index.html</guid>
+    <pubDate>Sat, 14 Jan 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 3.1: Jacobian Passing </title>
+    <link>https://sciml.ai/news/2017/11/24/Jacobians/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 3.1: Jacobian Passing 
+<br><a href="https://sciml.ai/news/2017/11/24/Jacobians/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/11/24/Jacobians/index.html</guid>
+    <pubDate>Fri, 24 Nov 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>DifferentialEquations.jl 3.3: IMEX Solvers</title>
+    <link>https://sciml.ai/news/2017/01/01/IMEX/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 3.3: IMEX Solvers
+<br><a href="https://sciml.ai/news/2017/01/01/IMEX/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/01/01/IMEX/index.html</guid>
+    <pubDate>Mon, 1 Jan 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 5.0: v1.0, Jacobian Types, EPIRK </title>
+    <link>https://sciml.ai/news/2018/08/20/FunctionInputEPIRK/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 5.0: v1.0, Jacobian Types, EPIRK 
+<br><a href="https://sciml.ai/news/2018/08/20/FunctionInputEPIRK/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2018/08/20/FunctionInputEPIRK/index.html</guid>
+    <pubDate>Mon, 20 Aug 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>Citing</title>
+    <link>https://sciml.ai/citing/index.html</link>
+    <description><![CDATA[A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg" alt="" />
+<br><a href="https://sciml.ai/citing/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/citing/index.html</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>Governance</title>
+    <link>https://sciml.ai/governance/index.html</link>
+    <description><![CDATA[A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg" alt="" />
+<br><a href="https://sciml.ai/governance/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/governance/index.html</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>PDEs Update</title>
+    <link>https://sciml.ai/news/2017/01/05/fem/index.html</link>
+    <description><![CDATA[PDEs Update 
+<br><a href="https://sciml.ai/news/2017/01/05/fem/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/01/05/fem/index.html</guid>
+    <pubDate>Wed, 21 Dec 2016 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>OrdinaryDiffEq v0.5</title>
+    <link>https://sciml.ai/news/2016/01/21/saveat/index.html</link>
+    <description><![CDATA[OrdinaryDiffEq v0.5 
+<br><a href="https://sciml.ai/news/2016/01/21/saveat/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2016/01/21/saveat/index.html</guid>
+    <pubDate>Wed, 21 Dec 2016 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> SDIRK Methods </title>
+    <link>https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html</link>
+    <description><![CDATA[SDIRK Methods 
+<br><a href="https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html</guid>
+    <pubDate>Sun, 13 Aug 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl v6.11.0: Universal Differential Equation Overhaul </title>
+    <link>https://sciml.ai/news/2020/02/18/Universal/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl v6.11.0: Universal Differential Equation Overhaul 
+<br><a href="https://sciml.ai/news/2020/02/18/Universal/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2020/02/18/Universal/index.html</guid>
+    <pubDate>Tue, 18 Feb 2020 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 4.2: Krylov Exponential Integrators, Non-Diagonal Adaptive SDEs, Tau-Leaping </title>
+    <link>https://sciml.ai/news/2018/03/31/AdaptiveLowSDE/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 4.2: Krylov Exponential Integrators, Non-Diagonal Adaptive SDEs, Tau-Leaping 
+<br><a href="https://sciml.ai/news/2018/03/31/AdaptiveLowSDE/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2018/03/31/AdaptiveLowSDE/index.html</guid>
+    <pubDate>Sat, 31 Mar 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 4.4: Enhanced Stability and IMEX SDE Integrators </title>
+    <link>https://sciml.ai/news/2018/04/13/StableSDE/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 4.4: Enhanced Stability and IMEX SDE Integrators 
+<br><a href="https://sciml.ai/news/2018/04/13/StableSDE/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2018/04/13/StableSDE/index.html</guid>
+    <pubDate>Sun, 15 Apr 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 4.1: New ReactionDSL and KLU Sundials </title>
+    <link>https://sciml.ai/news/2018/02/17/Reactions/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 4.1: New ReactionDSL and KLU Sundials 
+<br><a href="https://sciml.ai/news/2018/02/17/Reactions/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2018/02/17/Reactions/index.html</guid>
+    <pubDate>Sat, 17 Feb 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl v6.4.0: Full GPU ODE, Performance, ModelingToolkit </title>
+    <link>https://sciml.ai/news/2019/05/09/GPU/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl v6.4.0: Full GPU ODE, Performance, ModelingToolkit 
+<br><a href="https://sciml.ai/news/2019/05/09/GPU/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2019/05/09/GPU/index.html</guid>
+    <pubDate>Thu, 9 May 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> Stiff SDE and DDE Solvers </title>
+    <link>https://sciml.ai/news/2017/08/25/StiffDDESDE/index.html</link>
+    <description><![CDATA[Stiff SDE and DDE Solvers 
+<br><a href="https://sciml.ai/news/2017/08/25/StiffDDESDE/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/08/25/StiffDDESDE/index.html</guid>
+    <pubDate>Sat, 9 Sep 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 4.0: Breaking Syntax Changes, Adjoint Sensitivity, Bayesian Estimation, and ETDRK4 </title>
+    <link>https://sciml.ai/news/2018/01/24/Parameters/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 4.0: Breaking Syntax Changes, Adjoint Sensitivity, Bayesian Estimation, and ETDRK4 
+<br><a href="https://sciml.ai/news/2018/01/24/Parameters/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2018/01/24/Parameters/index.html</guid>
+    <pubDate>Wed, 24 Jan 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>DifferentialEquations.jl v1.9.1</title>
+    <link>https://sciml.ai/news/2017/04/07/features/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 
+<br><a href="https://sciml.ai/news/2017/04/07/features/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/04/07/features/index.html</guid>
+    <pubDate>Fri, 7 Apr 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>DifferentialEquations.jl Workshop at JuliaCon 2017</title>
+    <link>https://sciml.ai/news/2017/04/04/juliacon/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl Workshop at JuliaCon 2017 
+<br><a href="https://sciml.ai/news/2017/04/04/juliacon/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/04/04/juliacon/index.html</guid>
+    <pubDate>Tue, 4 Apr 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 4.6: Global Sensitivity Analysis, Variable Order Adams </title>
+    <link>https://sciml.ai/news/2018/07/05/GSAVariableOrder/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 4.6: Global Sensitivity Analysis, Variable Order Adams 
+<br><a href="https://sciml.ai/news/2018/07/05/GSAVariableOrder/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2018/07/05/GSAVariableOrder/index.html</guid>
+    <pubDate>Thu, 5 Jul 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> SciML: An Open Source Software Organization for Scientific Machine Learning </title>
+    <link>https://sciml.ai/news/2020/03/29/SciML/index.html</link>
+    <description><![CDATA[SciML: An Open Source Software Organization for Scientific Machine Learning 
+<br><a href="https://sciml.ai/news/2020/03/29/SciML/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2020/03/29/SciML/index.html</guid>
+    <pubDate>Sun, 29 Mar 2020 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> SDIRK Methods </title>
+    <link>https://sciml.ai/news/2017/08/13/SDIRK/index.html</link>
+    <description><![CDATA[SDIRK Methods 
+<br><a href="https://sciml.ai/news/2017/08/13/SDIRK/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/08/13/SDIRK/index.html</guid>
+    <pubDate>Sun, 13 Aug 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity </title>
+    <link>https://sciml.ai/news/2019/07/05/AutomaticSparsity/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity 
+<br><a href="https://sciml.ai/news/2019/07/05/AutomaticSparsity/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2019/07/05/AutomaticSparsity/index.html</guid>
+    <pubDate>Fri, 5 Jul 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl v6.6.0: Sparse Jacobian Coloring, Quantum Computer ODE Solvers, and Stiff SDEs </title>
+    <link>https://sciml.ai/news/2019/06/24/coloring/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl v6.6.0: Sparse Jacobian Coloring, Quantum Computer ODE Solvers, and Stiff SDEs 
+<br><a href="https://sciml.ai/news/2019/06/24/coloring/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2019/06/24/coloring/index.html</guid>
+    <pubDate>Mon, 24 Jun 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>Hello World!!</title>
+    <link>https://sciml.ai/news/2016/11/26/hello/index.html</link>
+    <description><![CDATA[Hello World&#33;&#33;
+<br><a href="https://sciml.ai/news/2016/11/26/hello/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2016/11/26/hello/index.html</guid>
+    <pubDate>Sat, 26 Nov 2016 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>base</title>
+    <link>https://sciml.ai/news/2017/01/08/base/index.html</link>
+    <description><![CDATA[base 
+<br><a href="https://sciml.ai/news/2017/01/08/base/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/01/08/base/index.html</guid>
+    <pubDate>Sun, 8 Jan 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 2.0 </title>
+    <link>https://sciml.ai/news/2017/04/30/API_changes/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 2.0. 
+<br><a href="https://sciml.ai/news/2017/04/30/API_changes/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/04/30/API_changes/index.html</guid>
+    <pubDate>Sun, 30 Apr 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> Filling In The Interop Packages and Rosenbrock </title>
+    <link>https://sciml.ai/news/2017/05/17/Filling_in/index.html</link>
+    <description><![CDATA[Filling In The Interop Packages and Rosenbrock... 
+<br><a href="https://sciml.ai/news/2017/05/17/Filling_in/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/05/17/Filling_in/index.html</guid>
+    <pubDate>Thu, 18 May 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 3.4: Sundials 3.1, ARKODE, Static Arrays </title>
+    <link>https://sciml.ai/news/2018/01/15/Sundials/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 3.4: Sundials 3.1, ARKODE, Static Arrays 
+<br><a href="https://sciml.ai/news/2018/01/15/Sundials/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2018/01/15/Sundials/index.html</guid>
+    <pubDate>Mon, 15 Jan 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching </title>
+    <link>https://sciml.ai/news/2018/04/09/AutoSwitch/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching 
+<br><a href="https://sciml.ai/news/2018/04/09/AutoSwitch/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2018/04/09/AutoSwitch/index.html</guid>
+    <pubDate>Mon, 9 Apr 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> DifferentialEquations.jl 3.2: Expansion of Event Compatibility </title>
+    <link>https://sciml.ai/news/2017/12/11/Events/index.html</link>
+    <description><![CDATA[DifferentialEquations.jl 3.2: Expansion of Event Compatibility 
+<br><a href="https://sciml.ai/news/2017/12/11/Events/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2017/12/11/Events/index.html</guid>
+    <pubDate>Mon, 11 Dec 2017 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> A "Jupyter" of DiffEq: Introducing Python and R Bindings for DifferentialEquations.jl </title>
+    <link>https://sciml.ai/news/2018/04/30/Jupyter/index.html</link>
+    <description><![CDATA[A &quot;Jupyter&quot; of DiffEq: Introducing Python and R Bindings for DifferentialEquations.jl 
+<br><a href="https://sciml.ai/news/2018/04/30/Jupyter/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2018/04/30/Jupyter/index.html</guid>
+    <pubDate>Mon, 30 Apr 2018 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling </title>
+    <link>https://sciml.ai/news/2020/06/01/ModellingToolkit/index.html</link>
+    <description><![CDATA[SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling 
+<br><a href="https://sciml.ai/news/2020/06/01/ModellingToolkit/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2020/06/01/ModellingToolkit/index.html</guid>
+    <pubDate>Mon, 1 Jun 2020 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>Showcase</title>
+    <link>https://sciml.ai/showcase/index.html</link>
+    <description><![CDATA[Showcase for SciML applications
+<br><a href="https://sciml.ai/showcase/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/showcase/index.html</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title> SciML Ecosystem Update: Automated Model Discovery with DataDrivenDiffEq.jl and ReservoirComputing.jl </title>
+    <link>https://sciml.ai/news/2020/05/09/ModelDiscovery/index.html</link>
+    <description><![CDATA[SciML Ecosystem Update: Automated Model Discovery with DataDrivenDiffEq.jl and ReservoirComputing.jl 
+<br><a href="https://sciml.ai/news/2020/05/09/ModelDiscovery/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2020/05/09/ModelDiscovery/index.html</guid>
+    <pubDate>Sat, 9 May 2020 00:00:00 UT</pubDate>
+  </item>
+</channel>
+</rss>
