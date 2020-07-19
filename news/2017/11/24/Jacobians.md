@@ -25,7 +25,7 @@ dG/du + gamma*dG/d(du)
 
 where `gamma` is dependent on `dt`, and so we can use that form for DAEs.
 This matches the definition used by older packages, so in a sec we'll mention
-that! [Defines the interface.](https://docs.juliadiffeq.org/latest/features/performance_overloads)
+that! [Defines the interface.](https://diffeq.sciml.ai/latest/features/performance_overloads)
 
 ## Improved bindings and jacobian passing for Sundials.jl and DASKR.jl
 
