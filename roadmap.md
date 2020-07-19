@@ -60,7 +60,7 @@ the organization by explaining a few things:
 
 ## We provide best-in-class tooling for solving differential equations
 
-We will continue to have [DifferentialEquations.jl](https://docs.sciml.ai/dev/) at
+We will continue to have [DifferentialEquations.jl](https://diffeq.sciml.ai/dev/) at
 the core of the organization to support high performance solving of the differential
 equations that show up in scientific models. This means we plan to continue the
 research and development in:
@@ -87,8 +87,8 @@ This includes features like:
 - Automatic Jacobian coloring with [SparseDiffTools.jl](https://github.com/SciML/SparseDiffTools.jl), allowing for fast solutions
   to problems with sparse or structured (Tridiagonal, Banded, BlockBanded, etc.) Jacobians
 - Progress meter integration with the Juno IDE for estimated time to solution
-- [Automatic distributed, multithreaded, and GPU parallelism of ensemble trajectories](https://docs.SciML.ai/dev/features/ensemble/)
-- [Forward and adjoint local sensitivity analysis](https://docs.SciML.ai/dev/analysis/sensitivity/) for fast gradient computations
+- [Automatic distributed, multithreaded, and GPU parallelism of ensemble trajectories](https://diffeq.SciML.ai/dev/features/ensemble/)
+- [Forward and adjoint local sensitivity analysis](https://diffeq.SciML.ai/dev/analysis/sensitivity/) for fast gradient computations
 - Built-in interpolations for differential equation solutions
 - Wrappers for common C/Fortran methods like Sundials and Hairer's radau
 - Arbitrary precision with BigFloats and Arbfloats
@@ -113,11 +113,11 @@ It is very rare that someone thinks their model is perfect. Thus a large portion
 of the focus of our organization is to help scientific modelers derive equations
 and fit models. This includes tools for:
 
-- [Maximum likelihood and Bayesian parameter estimation](https://docs.sciml.ai/dev/analysis/parameter_estimation/)
-- [Forward and adjoint local sensitivity analysis](https://docs.sciml.ai/dev/analysis/sensitivity/) for fast gradients
-- [Global sensitivity analysis](https://docs.sciml.ai/dev/analysis/global_sensitivity/)
+- [Maximum likelihood and Bayesian parameter estimation](https://diffeq.sciml.ai/dev/analysis/parameter_estimation/)
+- [Forward and adjoint local sensitivity analysis](https://diffeq.sciml.ai/dev/analysis/sensitivity/) for fast gradients
+- [Global sensitivity analysis](https://diffeq.sciml.ai/dev/analysis/global_sensitivity/)
 - [Building surrogates of models](https://surrogates.sciml.ai/latest/)
-- [Uncertainty quantification](https://docs.sciml.ai/dev/analysis/uncertainty_quantification/)
+- [Uncertainty quantification](https://diffeq.sciml.ai/dev/analysis/uncertainty_quantification/)
 
 Some of our newer tooling like [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl)
 can even take in timeseries data and generate LaTeX code for the best fitting model
@@ -340,7 +340,7 @@ scientific machine learning to scale, and so we take performance seriously.
 
 This means we will continue to develop tools like
 [DiffEqFlux.jl](https://github.com/SciML/DiffEqFlux.jl) which supports the
-connection between the [DifferentialEquations.jl](https://docs.sciml.ai/dev/)
+connection between the [DifferentialEquations.jl](https://diffeq.sciml.ai/dev/)
 differential equation solvers and the [Flux](https://fluxml.ai/) deep learning
 library. Another example includes our
 [surrogate modeling library, Surrogates.jl](https://surrogates.sciml.ai/dev/)
@@ -369,7 +369,7 @@ are the following:
   directions, such as adding support for stochastic delay differential equations
   and improving our methods for DAEs.
 - We plan to create a new documentation setup. Instead of having everything
-  inside of the [DifferentialEquations.jl documentation](https://docs.sciml.ai/latest/),
+  inside of the [DifferentialEquations.jl documentation](https://diffeq.sciml.ai/latest/),
   we plan to split out some of the SciML tools to their own complete documentation.
   We have already done this for [Surrogates.jl](https://surrogates.sciml.ai/latest/).
   Next on the list is [DiffEqFlux.jl](https://github.com/SciML/DiffEqFlux.jl)
@@ -378,7 +378,7 @@ are the following:
   and its Physics-Informed Neural Networks (PINN) functionality,
   [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl), etc.
   Because it does not require differential equations, we plan to split out the
-  documentation of [Global Sensitivity Analysis](https://docs.sciml.ai/latest/analysis/global_sensitivity/)
+  documentation of [Global Sensitivity Analysis](https://diffeq.sciml.ai/latest/analysis/global_sensitivity/)
   to better facilitate its wider usage.
 - We plan to continue improving the [ModelingToolkit](https://github.com/SciML/ModelingToolkit.jl)
   ecosystem utilizing its symbolic nature for [generic specification of PDEs](https://github.com/SciML/DifferentialEquations.jl/issues/469).
