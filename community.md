@@ -36,11 +36,16 @@ Questions on StackOverflow can be asked with the
 [differentialequations.jl](https://stackoverflow.com/questions/tagged/differentialequations.jl)
 tag.
 
+### Twitter
+
+For updates on recent scientific machine learning developers, follow
+[@SciML_Org](https://twitter.com/SciML_Org)
+
 ### Chat
 
 For casual conversation and informal questions, we provide an open
 chatroom. The chatroom is openly available through the
 [Gitter JuliaDiffEq/lobby](https://gitter.im/JuliaDiffEq/Lobby). This
 channel is also bridged to the Julialang Slack and is accessible in
-the #diffeq-bridged channel. For access to the Slack, please ask for
+the #diffeq-bridged and #sciml channels. For access to the Slack, please ask for
 an invite via [this link](https://slackinvite.julialang.org/).
