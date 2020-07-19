@@ -1,6 +1,8 @@
 @def title = "SciML Scientific Machine Learning Blog"
 @def author = ""
 
+# SciML Scientific Machine Learning News
+
 The SciML scientific machine learning blog discusses issues of
 numerical, technical, distributed and parallel computing associated
 with the field of scientific machine learning and the recent software
