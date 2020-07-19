@@ -276,7 +276,7 @@ there is no modification that is required. When forward-mode automatic
 differentiation libraries are used, type handling will automatically
 promote to ensure the solution is differentiated properly. When reverse-mode
 automatic differentiation is used, the backpropogation will automatically
-be replaced with [adjoint sensitivity methods](https://docs.sciml.ai/latest/analysis/sensitivity/#solve-Differentiation-Examples-1)
+be replaced with [adjoint sensitivity methods](https://diffeq.sciml.ai/latest/analysis/sensitivity/#solve-Differentiation-Examples-1)
 which can be controlled through the `sensealg` keyword argument.
 **The result is full performance and flexibility, but no code changes
 required**.
