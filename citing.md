@@ -5,7 +5,7 @@
 
 @def tags = ["syntax", "code"]
 
-# Citing SciML Software
+# Citing SciML Scientific Machine Learning Software
 
 To credit the SciML software, please star the repositories that you would
 like to support. If you use SciML software as part of your research, teaching, or other activities,
