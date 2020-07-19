@@ -7,18 +7,18 @@
 DifferentialEquations.jl v1.6.0 is a stable version of the JuliaDiffEq ecosystem.
 This tag includes many new features, including:
 
-* [The integrator interface](https://docs.juliadiffeq.org/stable/basics/integrator)
-* [New Events/Callbacks API](https://docs.juliadiffeq.org/stable/features/callback_functions)
-* [Delay differential equation solvers](https://docs.juliadiffeq.org/stable/tutorials/dde_example)
-* [Monte Carlo simulation methods](https://docs.juliadiffeq.org/stable/features/monte_carlo)
-* [Uncertainty quantification](https://docs.juliadiffeq.org/stable/analysis/uncertainty_quantification)
+* [The integrator interface](https://diffeq.sciml.ai/stable/basics/integrator)
+* [New Events/Callbacks API](https://diffeq.sciml.ai/stable/features/callback_functions)
+* [Delay differential equation solvers](https://diffeq.sciml.ai/stable/tutorials/dde_example)
+* [Monte Carlo simulation methods](https://diffeq.sciml.ai/stable/features/monte_carlo)
+* [Uncertainty quantification](https://diffeq.sciml.ai/stable/analysis/uncertainty_quantification)
 * Updated Developer tools (benchmarking, etc.)
-* [Greatly enhanced plot recipes](https://docs.juliadiffeq.org/stable/basics/plot)
-* [A Callback Library](https://docs.juliadiffeq.org/stable/features/callback_library)
-* [The new ParameterizedFunction constructor on arbitrary user-defined functions](https://docs.juliadiffeq.org/stable/analysis/parameterized_functions)
-* [CompositeAlgorithms](https://docs.juliadiffeq.org/stable/solvers/ode_solve)
-* [ODE.jl common interface bindings](https://docs.juliadiffeq.org/stable/solvers/ode_solve)
-* [More control over the Sundials solvers](https://docs.juliadiffeq.org/stable/solvers/ode_solve)
+* [Greatly enhanced plot recipes](https://diffeq.sciml.ai/stable/basics/plot)
+* [A Callback Library](https://diffeq.sciml.ai/stable/features/callback_library)
+* [The new ParameterizedFunction constructor on arbitrary user-defined functions](https://diffeq.sciml.ai/stable/analysis/parameterized_functions)
+* [CompositeAlgorithms](https://diffeq.sciml.ai/stable/solvers/ode_solve)
+* [ODE.jl common interface bindings](https://diffeq.sciml.ai/stable/solvers/ode_solve)
+* [More control over the Sundials solvers](https://diffeq.sciml.ai/stable/solvers/ode_solve)
 
 Over the last few months these changes (among others) have been part of a large
 feature expansion
