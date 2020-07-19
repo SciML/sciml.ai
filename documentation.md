@@ -10,7 +10,7 @@ users interested in the functionality.
 
 ## Differential Equations
 
-- [DifferentialEquations.jl documentation](https://docs.sciml.ai/latest/)
+- [DifferentialEquations.jl documentation](https://diffeq.sciml.ai/latest/)
 - [DiffEqTutorials](https://github.com/SciML/DiffEqTutorials.jl)
 - [diffeqpy: DifferentialEquations.jl from Python](https://github.com/SciML/diffeqpy)
 - [diffeqr: DifferentialEquations.jl from R](https://github.com/SciML/diffeqr)
