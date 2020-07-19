@@ -118,7 +118,7 @@ on this library as it was
 
 ## High Weak Order SDE Integrators
 
-As part of our continued work on [DifferentialEquations.jl](https://docs.sciml.ai/latest/)
+As part of our continued work on [DifferentialEquations.jl](https://diffeq.sciml.ai/latest/)
 we have added new stochastic differential equation integrators, `DRI1` and `RI1`,
 which are able to better estimate the expected value of the solution without
 requiring the computational overhead of getting high order strong convergence.
@@ -148,7 +148,7 @@ probabilistic programming libraries ([ModelingToolkit.jl](https://github.com/Sci
 automatically transforms Julia differential equation code to Stan). Together,
 this serves as a very good resource for non-Bayesian-inclined users to utilize
 Bayesian parameter estimation with just one function.
-[See the parameter estimation documentation for more details](https://docs.sciml.ai/latest/analysis/parameter_estimation/).
+[See the parameter estimation documentation for more details](https://diffeq.sciml.ai/latest/analysis/parameter_estimation/).
 
 As a quick update to the probabilistic programming space, we would like to note
 that the Turing.jl library performs exceptionally well in comparison to the
