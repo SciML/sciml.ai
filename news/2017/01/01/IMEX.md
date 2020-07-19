@@ -37,9 +37,9 @@ The main method for solving like this are additive Runge-Kutta schemes. The
 most well-regarded schemes are due to Kennedy and Carpenter, names you may
 recognize from the ESDIRK `KenCarp` schemes. Our `KenCarp` methods can now
 make use the full IMEX formulation. The documentation shows that
-[defining a `SplitODEProblem`](https://docs.juliadiffeq.org/latest/types/split_ode_types)
+[defining a `SplitODEProblem`](https://diffeq.sciml.ai/latest/types/split_ode_types)
 is as easy as giving the two functions, and then you just choose
-[one of the `KenCarp` methods](https://docs.juliadiffeq.org/latest/solvers/split_ode_solve)
+[one of the `KenCarp` methods](https://diffeq.sciml.ai/latest/solvers/split_ode_solve)
 and now it works in the IMEX fashion. These methods are well-known for being
 highly efficient integrators for discretizations of large PDEs like
 convection-reaction-diffusion equations but they are usually relegated to more
