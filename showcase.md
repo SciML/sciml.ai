@@ -1,16 +1,34 @@
-@def title = "Showcase"
+@def title = "SciML Scientific Machine Learning Showcase"
 @def hascode = true
 @def date = Date(2019, 3, 22)
-@def rss = "Showcase for SciML applications"
+@def rss = "Showcase of SciML Scientific Machine Learning applications"
 
 @def tags = ["syntax", "code"]
 
-# Showcase
+# SciML Scientific Machine Learning Showcase
 
 The purpose of this page is to demonstrate the various applications
 where the SciML tools have been employed. If you would like your
 own work added to this list,
 [please open a pull request](https://github.com/SciML/sciml.ai).
+
+# External Applications Libraries
+
+There are many external libraries which connect and utilize SciML
+utilities under the hood. The following an incomplete list of software
+organizations providing domain modeling tools that are built upon
+SciML. If you would like your institution's tools added to the list,
+[please open a pull request](https://github.com/SciML/sciml.ai).
+
+- [CliMA: Climate Modeling Alliance](https://clima.caltech.edu/)
+- [QuantumOptics](https://qojulia.org/)
+- [New York Federal Reserve Bank](https://frbny-dsge.github.io/DSGE.jl/latest/)
+- [Julia Robotics](https://juliarobotics.org/)
+- [Pumas-AI: Pharmaceutical Modeling and Simulation](https://pumas.ai/)
+- [Brazilian National Institute for Space Research (INPE)](https://github.com/JuliaSpace/SatelliteToolbox.jl)
+- [CMU+MIT+Citrine: Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
+- [Los Alamos National Lab: Model Analaysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
+- [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
 
 ## Press Releases
 

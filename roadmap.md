@@ -1,11 +1,11 @@
-@def title = "SciML Roadmap"
+@def title = "SciML: Scientific Machine Learning Roadmap"
 @def hascode = true
 @def date = Date(2019, 3, 22)
-@def rss = "Roadmap for the SciML organization"
+@def rss = "SciML: Scientific Machine Learning Roadmap"
 
 @def tags = ["syntax", "code"]
 
-# SciML Open Source Software Organization Roadmap
+# SciML Scientific Machine Learning Open Source Software Organization Roadmap
 
 Computational scientific discovery is at an interesting juncture. While we have
 mechanistic models of lots of different scientific phenomena, and reams of data

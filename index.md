@@ -1,4 +1,4 @@
-@def title = "Home"
+@def title = "SciML: Open Source Software for Scientific Machine Learning"
 @def tags = ["home", "sciml"]
 
 # SciML: Open Source Software for Scientific Machine Learning

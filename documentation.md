@@ -1,6 +1,6 @@
-@def title = "Documentation"
+@def title = "Scientific Machine Learning Software Documentation"
 
-# Documentation and Tutorials
+# SciML Scientific Machine Learning Documentation and Tutorials
 
 The SciML organization is an opinionated collection of tools for
 scientific machine learning and differential equation modeling. The
@@ -49,7 +49,7 @@ These resources cover:
 ## Modeling Languages and Domain-Specific Languages
 
 - [ModelingToolkit.jl documentation](https://mtk.sciml.ai/dev/)
-- [DiffEqBiological.jl](https://github.com/SciML/DiffEqBiological.jl)
+- [Catalyst.jl documentation](https://catalyst.sciml.ai/dev/)
 - [ParameterizedFunctions.jl](https://github.com/SciML/ParameterizedFunctions.jl)
 - [NBodySimulator.jl](https://github.com/SciML/NBodySimulator.jl)
 
@@ -82,21 +82,3 @@ development practices.
 - [MIT 18.S096 Special Subject in Mathematics: Applications of Scientific Machine Learning](https://github.com/mitmath/18S096SciML)
 - [Various implementations of the classical SIR model in Julia](https://github.com/epirecipes/sir-julia)
 - [Programming for Mathematical Applications](https://robertsweeneyblanco.github.io/Programming_for_Mathematical_Applications/home.html)
-
-# External Applications Libraries
-
-There are many external libraries which connect and utilize SciML
-utilities under the hood. The following an incomplete list of software
-organizations providing domain modeling tools that are built upon
-SciML. If you would like your institution's tools added to the list,
-[please open a pull request](https://github.com/SciML/sciml.ai).
-
-- [CliMA: Climate Modeling Alliance](https://clima.caltech.edu/)
-- [QuantumOptics](https://qojulia.org/)
-- [New York Federal Reserve Bank](https://frbny-dsge.github.io/DSGE.jl/latest/)
-- [Julia Robotics](https://juliarobotics.org/)
-- [Pumas-AI: Pharmaceutical Modeling and Simulation](https://pumas.ai/)
-- [Brazilian National Institute for Space Research (INPE)](https://github.com/JuliaSpace/SatelliteToolbox.jl)
-- [CMU+MIT+Citrine: Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
-- [Los Alamos National Lab: Model Analaysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
-- [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)

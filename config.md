@@ -3,8 +3,8 @@ Add here global page variables to use throughout your
 website.
 The website_* must be defined for the RSS to work
 -->
-@def website_title = "SciMl"
-@def website_descr = "Website for SciMl Organization"
+@def website_title = "SciML"
+@def website_descr = "Website for SciML Scientific Machine Learning Organization"
 @def website_url   = "https://sciml.ai"
 
 @def author = "Staging Team"
