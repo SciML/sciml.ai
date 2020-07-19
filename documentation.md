@@ -63,7 +63,7 @@ These resources cover:
 
 - [ExponentialUtilities.jl: Fast and GPU matrix exponentials](https://github.com/SciML/ExponentialUtilities.jl)
 - [Quadrature.jl: Common interface for quadrature and numerical integration](https://github.com/SciML/Quadrature.jl)
-- [QuasiMonteCarlo.jl](https://github.com/SciML/QuasiMonteCarlo.jl0)
+- [QuasiMonteCarlo.jl](https://github.com/SciML/QuasiMonteCarlo.jl)
 - [SparsityDetection.jl: Automated Jacobian and Hessian sparsity patterns](https://github.com/SciML/SparsityDetection.jl)
 - [PoissonRandom.jl: Fast Poisson random numbers](https://github.com/SciML/PoissonRandom.jl)
 - [AutoOffload.jl: Automatic GPU, TPU, FPGA, Xeon Phi, Multithreaded, Distributed, etc. offloading](https://github.com/SciML/AutoOffload.jl)
