@@ -33,7 +33,7 @@ These resources cover:
 
 - [DiffEqOperators.jl (Finite Difference Methods)](https://github.com/SciML/DiffEqOperators.jl)
 - [NeuralPDE.jl (Physics-Informed Neural Networks)](https://github.com/SciML/NeuralPDE.jl)
-- [FEniCS.jl](https://github.com/SciML/FEniCS.jl)
+- [FEniCS.jl (Finite Element Methods)](https://github.com/SciML/FEniCS.jl)
 
 ## Scientific Machine Learning Model Discovery
 
