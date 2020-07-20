@@ -39,12 +39,12 @@ tag.
 ### Twitter
 
 For updates on recent scientific machine learning developers, follow
-[@SciML_Org](https://twitter.com/SciML_Org)
+[@SciML_Org](https://twitter.com/SciML_Org).
 
 ### Reddit
 
 For sharing updates on scientific machine learning, see the
-[SciML Scientific Machine Learning Reddit](https://www.reddit.com/r/sciml)
+[SciML Scientific Machine Learning Reddit](https://www.reddit.com/r/sciml).
 
 ### Chat
 
