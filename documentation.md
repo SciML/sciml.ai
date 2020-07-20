@@ -32,13 +32,13 @@ These resources cover:
 ## Partial Differential Equation Modeling
 
 - [DiffEqOperators.jl (Finite Difference Methods)](https://github.com/SciML/DiffEqOperators.jl)
-- [NeuralNetDiffEq.jl (Physics-Informed Neural Networks)](https://github.com/SciML/NeuralNetDiffEq.jl)
+- [NeuralPDE.jl (Physics-Informed Neural Networks)](https://github.com/SciML/NeuralPDE.jl)
 - [FEniCS.jl](https://github.com/SciML/FEniCS.jl)
 
 ## Scientific Machine Learning Model Discovery
 
 - [DiffEqFlux.jl documentation](https://diffeqflux.sciml.ai/dev/)
-- [NeuralNetDiffEq.jl](https://github.com/SciML/NeuralNetDiffEq.jl)
+- [NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl)
 - [DataDrivenDiffEq.jl documentation](https://datadriven.sciml.ai/dev/)
 - [ReservoirComputing.jl](https://github.com/SciML/ReservoirComputing.jl)
 

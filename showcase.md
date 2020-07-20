@@ -63,6 +63,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Francesco Martinuzzi: GSoC week 7: Reservoir Computing with Cellular Automata Part 1](https://martinuzzifrancesco.github.io/posts/07_gsoc_week/)
 - [Francesco Martinuzzi: GSoC week 6: minimum complexity echo state network](https://martinuzzifrancesco.github.io/posts/06_gsoc_week/)
 - [Working with Differential Equations and Neural Networks](https://nextjournal.com/ashutosh-b-b/jsoc-2020-working-with-differential-equations-and-neural-networks)
 - [Francesco Martinuzzi: Data-driven prediction of chaotic systems: comparison of Echo State Network variations](https://martinuzzifrancesco.github.io/posts/05_gsoc_week/)
@@ -124,7 +125,7 @@ SciML. If you would like your institution's tools added to the list,
 - [StochasticLifestyle: Solving Systems of Stochastic PDEs and using GPUs in Julia](https://www.stochasticlifestyle.com/solving-systems-stochastic-pdes-using-gpus-julia/)
 - [JuliaLang: GSoC 2017 : A Wrapper for the FEniCS Finite Element Toolbox](https://julialang.org/blog/2017/09/gsoc-fenics/)
 - [JuliaLang: GSoC 2017: Efficient Discretizations of PDE Operators](https://julialang.org/blog/2017/09/gsoc-derivative_operators/)
-- [JuliaLang: NeuralNetDiffEq.jl: A Neural Network solver for ODEs](https://julialang.org/blog/2017/10/gsoc-NeuralNetDiffEq/)
+- [JuliaLang: NeuralPDE.jl: A Neural Network solver for ODEs](https://julialang.org/blog/2017/10/gsoc-NeuralPDE/)
 - [StochasticLifestyle: Some Fun With Julia Types: Symbolic Expressions in the ODE Solver](https://www.stochasticlifestyle.com/fun-julia-types-symbolic-expressions-ode-solver/)
 - [JuliaLang: GSoC 2017: Native Julia second order ODE and BVP solvers](https://julialang.org/blog/2017/11/gsoc-ode/)
 - [Yiannis Simillides blog: FEniCS.jl: Second "Approximate" Month](https://ysimillides.github.io/jekyll/update/2018/07/10/second-evaluation.html)

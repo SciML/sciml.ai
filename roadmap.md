@@ -222,7 +222,7 @@ provide libraries like:
 - [DiffEqFlux.jl](https://github.com/SciML/DiffEqFlux.jl) for neural and universal differential equations
 - [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl) for automated equation generation with Dynamic Mode Decomposition (DMD) and SInDy type methods
 - [ReservoirComputing.jl](https://github.com/SciML/ReservoirComputing.jl) for echo state networks and prediction of chaotic systems
-- [NeuralNetDiffEq.jl](https://github.com/SciML/NeuralNetDiffEq.jl) for Physics-Informed Neural Networks (PINNs) and Deep BSDE solvers of 100 dimensional PDEs
+- [NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl) for Physics-Informed Neural Networks (PINNs) and Deep BSDE solvers of 100 dimensional PDEs
 
 We will continue to expand this portion of our offering, building tools that
 automatically solve PDEs from a symbolic description using neural networks,
@@ -374,7 +374,7 @@ are the following:
   We have already done this for [Surrogates.jl](https://surrogates.sciml.ai/latest/).
   Next on the list is [DiffEqFlux.jl](https://github.com/SciML/DiffEqFlux.jl)
   which by looking at the README should be clear is in need of its own full docs.
-  Following that we plan to fully document [NeuralNetDiffEq.jl](https://github.com/SciML/NeuralNetDiffEq.jl)
+  Following that we plan to fully document [NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl)
   and its Physics-Informed Neural Networks (PINN) functionality,
   [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl), etc.
   Because it does not require differential equations, we plan to split out the
@@ -392,7 +392,7 @@ are the following:
   it automatically download precompiled Julia binaries so that way users can
   utilize the tooling just by using CRAN or pip to install the package. We
   plan to extend our Python and R offerings to include our neural network
-  infused software like DiffEqFlux and NeuralNetDiffEq.
+  infused software like DiffEqFlux and NeuralPDE.
 - We plan to get feature-completeness in data driven modeling techniques like
   [Radial Basis Function (RBF) surrogates](https://surrogates.sciml.ai/latest/),
   [Dynamic Mode Decomposition and SInDy type methods](https://github.com/SciML/DataDrivenDiffEq.jl),
