@@ -10,7 +10,7 @@ users interested in the functionality.
 
 ## Differential Equations
 
-- [DifferentialEquations.jl documentation](https://diffeq.sciml.ai/latest/)
+- [DifferentialEquations.jl documentation](https://docs.sciml.ai/latest/)
 - [DiffEqTutorials](https://github.com/SciML/DiffEqTutorials.jl)
 - [diffeqpy: DifferentialEquations.jl from Python](https://github.com/SciML/diffeqpy)
 - [diffeqr: DifferentialEquations.jl from R](https://github.com/SciML/diffeqr)
@@ -38,7 +38,7 @@ These resources cover:
 ## Scientific Machine Learning Model Discovery
 
 - [DiffEqFlux.jl documentation](https://diffeqflux.sciml.ai/dev/)
-- [NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl)
+- [NeuralPDE.jl documentation](https://github.com/SciML/NeuralPDE.jl)
 - [DataDrivenDiffEq.jl documentation](https://datadriven.sciml.ai/dev/)
 - [ReservoirComputing.jl](https://github.com/SciML/ReservoirComputing.jl)
 
