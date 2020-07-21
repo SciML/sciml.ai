@@ -326,6 +326,14 @@
     <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
   </item>
   <item>
+    <title>SciML Scientific Machine Learning Challenge Problems and Datasets</title>
+    <link>https://sciml.ai/challenge/index.html</link>
+    <description><![CDATA[Challenge problems and research datasets for the Scientific Machine Learning &#40;SciML&#41;
+<br><a href="https://sciml.ai/challenge/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/challenge/index.html</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
     <title> SciML Ecosystem Update: Automated Model Discovery with DataDrivenDiffEq.jl and ReservoirComputing.jl </title>
     <link>https://sciml.ai/news/2020/05/09/ModelDiscovery/index.html</link>
     <description><![CDATA[SciML Ecosystem Update: Automated Model Discovery with DataDrivenDiffEq.jl and ReservoirComputing.jl 
