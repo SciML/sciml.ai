@@ -15,7 +15,13 @@ and non-profit entities.
 
 ## Code of Conduct
 
-Everyone in the community must adhere to the [NumFOCUS Code of Conduct](https://numfocus.org/code-of-conduct).
+The SciML community strongly values inclusivity and diversity. Everyone
+should treat others with the utmost respect. Everyone in the community
+must adhere to the
+[NumFOCUS Code of Conduct](https://numfocus.org/code-of-conduct) which
+reflects the values of our community. Violations of the code should be
+reported to members of the steering council, where the offenses will be
+handled on a case-by-case basis.
 
 ## Current Steering Council
 
@@ -110,20 +116,27 @@ The Council reserves the right to eject current Members if they are
 deemed to be actively harmful to the Project's well-being, and
 attempts at communication and conflict resolution have failed.
 
-## Advisory Board
+## Fiscal Decisions
 
-The Project has an Advisory Board that works to ensure the long-term
-well-being of the Project. The Board advises the Steering Council and
+All fiscal decisions are made by the steering council to ensure any
+funds are spent in a manner that furthers the mission of the Project.
+Fiscal decisions require majority approval by acting steering council
+members.
+
+## Advisory Committee
+
+The Project has an Advisory Committee that works to ensure the long-term
+well-being of the Project. The Committee advises the Steering Council and
 may be called upon to break deadlocks or serious disagreements in the
-Council. The Community can ask the Board to review actions taken by
-the Council, and the Board will meet annually to review Project
-activities. Board decisions are taken in consensus. Members of the
-Advisory Board are appointed by the Steering Council.
+Council. The Community can ask the Committee to review actions taken by
+the Council, and the Committee will meet annually to review Project
+activities. Committee decisions are taken in consensus. Members of the
+Advisory Committee are appointed by the Steering Council.
 
 ## Conflict of interest
 
-It is expected that Council and Board Members will be employed at a
-wide range of companies, universities and non-profit
+It is expected that Steering Council and Advisory Committee Members
+will be employed at a wide range of companies, universities and non-profit
 organizations. Because of this, it is possible that Members will have
 conflicts of interest. Such conflicts of interest include, but are not
 limited to:
@@ -134,7 +147,7 @@ limited to:
 - Access to proprietary information of their employer that could
   potentially leak into their work with the Project.
 
-All members of the Council and Board shall disclose any conflict of
+All members of the Council and Committee shall disclose any conflict of
 interest they may have. Members with a conflict of interest in a
 particular issue may participate in Council discussions on that issue,
 but must recuse themselves from voting on the issue.
