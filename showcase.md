@@ -100,6 +100,7 @@ SciML. If you would like your institution's tools added to the list,
 - [Pankaj Mishra: A Summer with Jacobians](https://nextjournal.com/pkj-m/a-summer-with-jacobians)
 - [JuliaLang: Hello @DiffEqBot](https://julialang.org/blog/2019/06/diffeqbot/)
 - [Ludovico: New Surrogates and final plans](https://nextjournal.com/ludoro/new-surrogates-and-final-plans)
+- [Julia DifferentialEquations.jl to model an explosion load](https://nikstoyanov.me/post/2019-02-22-single-degree-of-freedom-oscillator/)
 - [Ludovico: More optimization methods and future surrogates](https://nextjournal.com/ludoro/more-optimization-methods-and-future-surrogates)
 - [Ludovico: Surrogate optimization and Sampling](https://nextjournal.com/ludoro/surrogate-optimization-and-sampling)
 - [Toby Driscoll: Matlab vs. Julia vs. Python](https://tobydriscoll.net/blog/matlab-vs.-julia-vs.-python/)
