@@ -63,6 +63,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Ludovico: July deliverables: Two new surrogates methods and benchmarking](https://nextjournal.com/ludoro/july-deliverables-two-new-surrogates-methods-and-benchmarking)
 - [Francesco Martinuzzi: GSoC week 7: Reservoir Computing with Cellular Automata Part 1](https://martinuzzifrancesco.github.io/posts/07_gsoc_week/)
 - [Francesco Martinuzzi: GSoC week 6: minimum complexity echo state network](https://martinuzzifrancesco.github.io/posts/06_gsoc_week/)
 - [Working with Differential Equations and Neural Networks](https://nextjournal.com/ashutosh-b-b/jsoc-2020-working-with-differential-equations-and-neural-networks)
