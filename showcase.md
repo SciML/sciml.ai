@@ -27,7 +27,7 @@ SciML. If you would like your institution's tools added to the list,
 - [Pumas-AI: Pharmaceutical Modeling and Simulation](https://pumas.ai/)
 - [Brazilian National Institute for Space Research (INPE)](https://github.com/JuliaSpace/SatelliteToolbox.jl)
 - [CMU+MIT+Citrine: Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
-- [Los Alamos National Lab: Model Analaysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
+- [Los Alamos National Lab: Model Analysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
 - [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
 
 ## Press Releases
