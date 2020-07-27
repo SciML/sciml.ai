@@ -32,6 +32,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Releases
 
+- [The road to electric vehicles with lower sticker prices than gas cars – battery costs explained (research powered by SciML)](https://theconversation.com/the-road-to-electric-vehicles-with-lower-sticker-prices-than-gas-cars-battery-costs-explained-137196)
 - [Air Force Is Looking At Using Magnetic Fields To Navigate Instead Of GPS And Flight Testing It On F-16s (Algorithms Powered by SciML)](https://www.forbes.com/sites/erictegler/2020/06/12/air-force-gps-magnetic-fields-navigation-f-16/#4ed565db6818)
 - [Cornell Chronicle: Digital ‘virus’ helps researchers map potential spread](https://news.cornell.edu/stories/2020/05/digital-virus-helps-researchers-map-potential-spread)
 - [Phys.org: Digital 'virus' helps researchers map potential spread](https://phys.org/news/2020-05-digital-virus-potential.html)
