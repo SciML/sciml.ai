@@ -64,6 +64,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Neural ODEs as continuous network layers](https://sebastiancallh.github.io/post/neural-ode-continuous-layer/)
 - [Physics-informed neural networks (PINNs) solver on Julia. GSoC 2020. Second evaluation.](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solver-on-julia-gsoc-2020-second-evaluation)
 - [Ludovico: July deliverables: Two new surrogates methods and benchmarking](https://nextjournal.com/ludoro/july-deliverables-two-new-surrogates-methods-and-benchmarking)
 - [Francesco Martinuzzi: GSoC week 7: Reservoir Computing with Cellular Automata Part 1](https://martinuzzifrancesco.github.io/posts/07_gsoc_week/)
