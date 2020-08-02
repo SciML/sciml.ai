@@ -64,6 +64,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Utkarsh's Blog: Second Evaluations (Parallel Extrapolation Methods)](https://utkarsh530.github.io/blog/post/gsoc-blog-3/)
 - [Neural ODEs as continuous network layers](https://sebastiancallh.github.io/post/neural-ode-continuous-layer/)
 - [Physics-informed neural networks (PINNs) solver on Julia. GSoC 2020. Second evaluation.](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solver-on-julia-gsoc-2020-second-evaluation)
 - [Ludovico: July deliverables: Two new surrogates methods and benchmarking](https://nextjournal.com/ludoro/july-deliverables-two-new-surrogates-methods-and-benchmarking)
@@ -73,7 +74,7 @@ SciML. If you would like your institution's tools added to the list,
 - [Francesco Martinuzzi: Data-driven prediction of chaotic systems: comparison of Echo State Network variations](https://martinuzzifrancesco.github.io/posts/05_gsoc_week/)
 - [Kirill Zubov: Physics-informed neural networks (PINNs) solvers on Julia](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solvers-on-julia-gsoc-2020-first-evaluations)
 - [Sebastian Callh personal blog: Forecasting the weather with neural ODEs](https://sebastiancallh.github.io/post/neural-ode-weather-forecast/)
-- [Utkarsh's Blog: GSoC Blog: Community Bonding & First Evaluation](https://utkarsh530.github.io/blog/post/gsoc-blog-2/)
+- [Utkarsh's Blog: Community Bonding & First Evaluation (BDF & NDF methods)](https://utkarsh530.github.io/blog/post/gsoc-blog-2/)
 - [Ludovico: From JSOC to GSOC: a new beginning with Surrogates.jl](https://nextjournal.com/ludoro/from-jsoc-to-gsoc-a-new-beginning-with-surrogatesjl/)
 - [Francesco Martinuzzi: GSoC week 4: SVD-based Reservoir](https://martinuzzifrancesco.github.io/posts/04_gsoc_week/)
 - [Francesco Martinuzzi: GSoC week 3: Echo State Gaussian Processes](https://martinuzzifrancesco.github.io/posts/03_gsoc_week/)
@@ -83,6 +84,7 @@ SciML. If you would like your institution's tools added to the list,
 - [Frank Schäfer: GSoC 2020: High weak order SDE solvers and their utility in neural SDEs](https://frankschae.github.io/post/gsoc2020-high-weak-order-solvers-sde-adjoints/)
 - [Modeling pandemics subject to stochastic uncertainties -- A polynomial chaos approach](https://github.com/timueh/PandemicModeling)
 - [Francesco Martinuzzi: GSoC week 1: lasso, Elastic Net and Huber loss](https://martinuzzifrancesco.github.io/posts/01_gsoc_week/)
+- [Utkarsh's Blog: GSoC 2020 with The Julia Language, Performance Enhancements and Optimisations for Differential Equation solvers](https://utkarsh530.github.io/blog/post/gsoc-blog-1/)
 - [awesome-ode-neural-networks](https://github.com/Zymrael/awesome-neural-ode)
 - [Modelling and data analysis tools to study the 2020 COVID-19 outbreak](https://github.com/berndblasius/Covid19)
 - [awesomeJulia](https://github.com/SubhadityaMukherjee/awesomeJulia)
