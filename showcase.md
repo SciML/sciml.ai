@@ -64,6 +64,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Francesco Martinuzzi:  GSoC week 9: Cycle Reservoirs with Regular Jumps](https://martinuzzifrancesco.github.io/posts/09_gsoc_week/)
 - [Utkarsh's Blog: Second Evaluations (Parallel Extrapolation Methods)](https://utkarsh530.github.io/blog/post/gsoc-blog-3/)
 - [Neural ODEs as continuous network layers](https://sebastiancallh.github.io/post/neural-ode-continuous-layer/)
 - [Physics-informed neural networks (PINNs) solver on Julia. GSoC 2020. Second evaluation.](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solver-on-julia-gsoc-2020-second-evaluation)
