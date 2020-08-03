@@ -108,15 +108,7 @@ function hfun_add_redirects()
     if prepath !== nothing && !isempty(prepath)
       pre = "/" * strip(prepath, '/')
     end
-    s = """
-    <!-- REDIRECT - DO NOT MODIFY-->
-    <!doctype html>
-    <html>
-      <head>
-        <meta http-equiv="refresh" content="0; url=$pre/$name/">
-      </head>
-    </html>
-    """
+    s = redirect("$pre/$name/")
     write(dst, s)
   end
   return ""
