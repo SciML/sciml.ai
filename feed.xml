@@ -286,6 +286,14 @@
     <pubDate>Mon, 15 Jan 2018 00:00:00 UT</pubDate>
   </item>
   <item>
+    <title> SciML Ecosystem Update: SDE Adjoints, FFORD Layers, and Jump Diffusion</title>
+    <link>https://sciml.ai/news/2020/08/10/StochasticBonanza/index.html</link>
+    <description><![CDATA[SciML Ecosystem Update: SDE Adjoints, FFORD Layers, and Jump Diffusion
+<br><a href="https://sciml.ai/news/2020/08/10/StochasticBonanza/index.html">Read more</a>]]></description>
+    <guid>https://sciml.ai/news/2020/08/10/StochasticBonanza/index.html</guid>
+    <pubDate>Mon, 10 Aug 2020 00:00:00 UT</pubDate>
+  </item>
+  <item>
     <title> DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching </title>
     <link>https://sciml.ai/news/2018/04/09/AutoSwitch/index.html</link>
     <description><![CDATA[DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching 
