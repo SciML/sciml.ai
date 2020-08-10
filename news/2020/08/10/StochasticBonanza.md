@@ -4,7 +4,7 @@
 @def title = " SciML Ecosystem Update: SDE Adjoints, FFORD Layers, and Jump Diffusion"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
 
-# Chemical Reaction Modeling and Major Stochastic Simulation Improvements
+# SciML Ecosystem Update: Chemical Reaction Modeling and Major Stochastic Simulation Improvements
 
 This ecosystem update has a lot of stochastic components added. We have a new
 DSL and a bunch of new solvers which incorporate jump dynamics for Levy processes
