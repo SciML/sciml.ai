@@ -133,7 +133,10 @@ DiffEqFlux now provides
 [pre-built continuous normalizing flow and FFJORD layers](https://diffeqflux.sciml.ai/dev/layers/CNFLayer/)
 for doing common neural ODE based machine learning. [A new tutorial](https://diffeqflux.sciml.ai/dev/examples/normalizing_flows/)
 demonstrates how to get up and running with these layers in just a matter of
-minutes. Thank [Diogo Netto (@d-netto)](https://github.com/d-netto) and
+minutes. This brings [a system demonstrated to have a 100x neural ODE training
+advantage over PyTorch](https://gist.github.com/ChrisRackauckas/4a4d526c15cc4170ce37da837bfc32c4)
+into the land of continuous normalizing flow modeling. Thank
+[Diogo Netto (@d-netto)](https://github.com/d-netto) and
 [Avik Pal (@avik-pal)](https://github.com/avik-pal) for these strong contributions
 to the SciML ecosystem!
 
