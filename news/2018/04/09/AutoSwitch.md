@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching
+
 Okay, this is a quick release. However, There's so much good stuff coming out
 that I don't want them to overlap and steal each other's thunder! This release
 has two long awaited features for increasing the ability to automatically solve

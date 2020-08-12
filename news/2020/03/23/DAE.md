@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl v6.12.0: DAE Extravaganza "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl v6.12.0: DAE Extravaganza
+
 This release is the long-awaited DAE extravaganza! We are releasing fully-implicit
 DAE integrators written in pure Julia, and thus compatible with items things like
 GPUs and arbitrary precision. We have various DAE initialization schemes to

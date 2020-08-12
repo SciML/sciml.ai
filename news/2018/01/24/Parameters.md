@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl 4.0: Breaking Syntax Changes, Adjoint Sensitivity, Bayesian Estimation, and ETDRK4 "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 4.0: Breaking Syntax Changes, Adjoint Sensitivity, Bayesian Estimation, and ETDRK4
+
 In this release we have a big exciting breaking change to our API. We are taking
 a "now or never" approach to fixing all of the API cruft we've gathered as we've
 expanded to different domains. Now that we cover the space of problems we wish

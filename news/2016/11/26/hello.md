@@ -4,6 +4,8 @@
 @def title = "Hello World!!"
 @def authors = """<a href="https://github.com/ChrisRackauckas">ChrisRackauckas</a>"""  
 
+# Hello World!!
+
 Hello world! This is the first post from the JuliaDiffEq organization. This
 blog will be used to share the most recent updates to the JuliaDiffEq ecosystem.
 Hopefully this will make it easier for everyone to follow our developments.

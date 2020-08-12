@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl v6.5.0: Stiff SDEs, VectorContinuousCallback, Multithreaded Extrapolation "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl v6.5.0: Stiff SDEs, VectorContinuousCallback, Multithreaded Extrapolation
+
 Well, we zoomed towards this one. In this release we have a lot of very compelling
 new features for performance in specific domains. Large ODEs, stiff SDEs, high
 accuracy ODE solving, many callbacks, etc. are all specialized on and greatly

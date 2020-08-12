@@ -4,6 +4,7 @@
 @def title = "DifferentialEquations.jl v1.8.0"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl v1.8.0
 
 DifferentialEquations.jl v1.8.0 is a new release for the JuliaDiffEq ecosystem.
 As promised, the API is stable and there should be no breaking changes. The tag

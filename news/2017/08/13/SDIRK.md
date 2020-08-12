@@ -4,6 +4,7 @@
 @def title = " SDIRK Methods "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# SDIRK Methods
 
 This has been a very productive summer! Let me start by saying that a relative
 newcomer to the JuliaDiffEq team, David Widmann, has been doing some impressive

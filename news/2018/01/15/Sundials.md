@@ -4,6 +4,7 @@
 @def title = " DifferentialEquations.jl 3.4: Sundials 3.1, ARKODE, Static Arrays "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 3.4: Sundials 3.1, ARKODE, Static Arrays
 
 In this release we have a big exciting breaking change to Sundials and some
 performance increases.

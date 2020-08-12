@@ -4,6 +4,8 @@
 @def title = " SciML Ecosystem Update: Automated Model Discovery with DataDrivenDiffEq.jl and ReservoirComputing.jl "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# SciML Ecosystem Update: Automated Model Discovery with DataDrivenDiffEq.jl and ReservoirComputing.jl
+
 You give us data and we give you back LaTeX for the differential equation system
 that generated the data. That may sound like the future, but the future is here.
 In this SciML ecosystem update I am pleased to announce that a lot of our

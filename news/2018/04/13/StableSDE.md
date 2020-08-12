@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl 4.4: Enhanced Stability and IMEX SDE Integrators "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 4.4: Enhanced Stability and IMEX SDE Integrators
+
 These are features long hinted at. The
 [Arxiv paper](https://arxiv.org/abs/1804.04344) is finally up and the new
 methods from that paper are the release. In this paper I wanted to "complete"

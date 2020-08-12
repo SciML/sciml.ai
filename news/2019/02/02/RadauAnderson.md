@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl 6.0: Radau5, Hyperbolic PDEs, Dependency Reductions "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 6.0: Radau5, Hyperbolic PDEs, Dependency Reductions
+
 This marks the release of DifferentialEquations.jl v6.0.0. Here's a low down
 of what has happened in the timeframe.
 

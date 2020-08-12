@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl v6.6.0: Sparse Jacobian Coloring, Quantum Computer ODE Solvers, and Stiff SDEs "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl v6.6.0: Sparse Jacobian Coloring, Quantum Computer ODE Solvers, and Stiff SDEs
+
 ## Sparsity Performance: Jacobian coloring with numerical and forward differentiation
 
 If you have a function `f!(du,u)` which has a Tridiagonal Jacobian, you could

@@ -4,6 +4,7 @@
 @def title = "DifferentialEquations.jl v1.9.1"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl v1.9.1
 
 DifferentialEquations v1.9.1 is a feature update which, well, brings a lot of new
 features. But before we get started, there is one thing to highlight:

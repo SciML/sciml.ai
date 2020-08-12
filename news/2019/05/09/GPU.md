@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl v6.4.0: Full GPU ODE, Performance, ModelingToolkit "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl v6.4.0: Full GPU ODE, Performance, ModelingToolkit
+
 This is a huge release. We should take the time to thank every contributor
 to the JuliaDiffEq package ecosystem. A lot of this release focuses on performance
 features. The ability to use stiff ODE solvers on the GPU, with automated

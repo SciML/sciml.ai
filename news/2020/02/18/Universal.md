@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl v6.11.0: Universal Differential Equation Overhaul "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl v6.11.0: Universal Differential Equation Overhaul
+
 After the release of the paper
 [Universal Differential Equations for Scientific Machine Learning](https://arxiv.org/abs/2001.04385),
 we have had very good feedback and have seen plenty of new users joining the

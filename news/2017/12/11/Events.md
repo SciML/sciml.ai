@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl 3.2: Expansion of Event Compatibility "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 3.2: Expansion of Event Compatibility
+
 DifferentialEquations.jl 3.2 is just a nice feature update. This hits a few
 long requested features.
 

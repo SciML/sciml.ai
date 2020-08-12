@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl 4.1: New ReactionDSL and KLU Sundials "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 4.1: New ReactionDSL and KLU Sundials
+
 Alright, that syntax change was painful but now everything seems to have
 calmed down. We thank everyone for sticking with us and helping file issues
 as necessary. It seems most people have done the syntax update and now we're

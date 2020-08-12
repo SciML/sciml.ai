@@ -2,7 +2,9 @@
 @def rss = """ DifferentialEquations.jl v1.6.0 """
 @def published = "14 January 2017"
 @def title = "DifferentialEquations.jl v1.6.0"
-@def authors = """<a href="https://github.com/Chris Rackauckas">Chris Rackauckas</a>"""
+@def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
+
+# DifferentialEquations.jl v1.6.0
 
 DifferentialEquations.jl v1.6.0 is a stable version of the JuliaDiffEq ecosystem.
 This tag includes many new features, including:

@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity
+
 Let's just jump right in! This time we have a bunch of new GPU tools and
 sparsity handling.
 

@@ -4,6 +4,7 @@
 @def title = " DifferentialEquations.jl 3.1: Jacobian Passing "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 3.1: Jacobian Passing
 
 The DifferentialEquations.jl 3.0 release had most of the big features and was
 [featured in a separate blog post](https://www.stochasticlifestyle.com/differentialequations-jl-3-0-roadmap-4-0/).

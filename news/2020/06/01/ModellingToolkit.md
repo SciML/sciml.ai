@@ -4,6 +4,8 @@
 @def title = " SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling
+
 Another month and another set of SciML updates! This month we have been
 focusing a lot on simplifying our interfaces and cleaning our tutorials.
 We can demonstrate that *no user-intervention is required for adjoints*.

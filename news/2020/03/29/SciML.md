@@ -4,6 +4,8 @@
 @def title = " SciML: An Open Source Software Organization for Scientific Machine Learning "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# SciML: An Open Source Software Organization for Scientific Machine Learning
+
 Computational scientific discovery is at an interesting juncture. While we have
 mechanistic models of lots of different scientific phenomena, and reams of data
 being generated from experiments - our computational capabilities are unable to

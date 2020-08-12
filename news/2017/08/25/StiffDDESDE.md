@@ -4,6 +4,7 @@
 @def title = " Stiff SDE and DDE Solvers "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# Stiff SDE and DDE Solvers
 
 The end of the summer cycle means that many things, including Google Summer of
 Code projects, are being released. A large part of the current focus has been to

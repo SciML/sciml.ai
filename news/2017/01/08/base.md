@@ -4,6 +4,7 @@
 @def title = "base"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# Base
 
 A new set of tags will be going through over the next week. I am working with Tony to make sure there is no breakage, and for the most part the API has not changed. What has changed is the API for events and callbacks, there is a PR in DiffEqDocs.jl for the new API. The translation to the new API should be really easy: it's almost the exact same thing but now a type-based API instead of a macro-based API (and will be cross-package). Also included is a new "integrator" interface which gives step-wise control over integration routines, starting with support from OrdinaryDiffEq.jl.
 

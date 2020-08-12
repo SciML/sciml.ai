@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl 5.0: v1.0, Jacobian Types, EPIRK "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 5.0: v1.0, Jacobian Types, EPIRK
+
 This marks the release of DifferentialEquations.jl. There will be an accompanying
 summary blog post which goes into more detail about our current state and sets
 the focus for the organization's v6.0 release. However, for now I would like

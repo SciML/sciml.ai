@@ -4,6 +4,8 @@
 @def title = " DifferentialEquations.jl 4.2: Krylov Exponential Integrators, Non-Diagonal Adaptive SDEs, Tau-Leaping "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 4.2: Krylov Exponential Integrators, Non-Diagonal Adaptive SDEs, Tau-Leaping
+
 This is a jam packed release. A lot of new integration methods were developed
 in the last month to address specific issues of community members. Some of these
 methods are one of a kind!

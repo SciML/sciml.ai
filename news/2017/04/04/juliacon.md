@@ -4,6 +4,8 @@
 @def title = "DifferentialEquations.jl Workshop at JuliaCon 2017"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl Workshop at JuliaCon 2017
+
 [There will be a workshop on DifferentialEquations.jl at this year's JuliaCon!](https://juliacon.org/2017/talks.html)
 The title is "The Unique Features and Performance of DifferentialEquations.jl".
 The goal will be to teach new users how to solve a wide variety of differential

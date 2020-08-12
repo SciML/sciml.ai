@@ -4,6 +4,7 @@
 @def title = " DifferentialEquations.jl 2.0 "
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""  
 
+# DifferentialEquations.jl 2.0
 
 This marks the release of ecosystem version 2.0. All of the issues got looked
 over. All (yes all!) of the API suggestions that were recorded in issues in
