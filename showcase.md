@@ -65,6 +65,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [High weak order SDE solvers](https://frankschae.github.io/post/high-weak/)
 - [Francesco Martinuzzi:  GSoC week 11: Gated Recurring Unit-based reservoir](https://martinuzzifrancesco.github.io/posts/11_gsoc_week/)
 - [Francesco Martinuzzi:  GSoC week 10: Reservoir Memory Machines](https://martinuzzifrancesco.github.io/posts/10_gsoc_week/)
 - [Francesco Martinuzzi:  GSoC week 9: Cycle Reservoirs with Regular Jumps](https://martinuzzifrancesco.github.io/posts/09_gsoc_week/)
