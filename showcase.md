@@ -65,6 +65,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [GPU-Accelerated ODE Solving in R with Julia, the Language of Libraries](https://www.stochasticlifestyle.com/gpu-accelerated-ode-solving-in-r-with-julia-the-language-of-libraries/)
 - [Francesco Martinuzzi: Google Summer of Code 2020 Final Report](https://martinuzzifrancesco.github.io/posts/12_gsoc_week/)
 - [High weak order solvers and adjoint sensitivity analysis for stochastic differential equations](https://frankschae.github.io/post/gsoc-2020/)
 - [High weak order SDE solvers](https://frankschae.github.io/post/high-weak/)
