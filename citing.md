@@ -25,7 +25,7 @@ please feel free to [ask in the community channels](/community.html).
 
 ```
 @article{rackauckas2017differentialequations,
-  title={Differentialequations. jl--a performant and feature-rich ecosystem for solving differential equations in julia},
+  title={Differentialequations.jl--a performant and feature-rich ecosystem for solving differential equations in julia},
   author={Rackauckas, Christopher and Nie, Qing},
   journal={Journal of Open Research Software},
   volume={5},
@@ -99,7 +99,7 @@ please feel free to [ask in the community channels](/community.html).
 
 ```
 @article{rackauckas2019diffeqflux,
-  title={Diffeqflux. jl-A julia library for neural differential equations},
+  title={Diffeqflux.jl-A julia library for neural differential equations},
   author={Rackauckas, Chris and Innes, Mike and Ma, Yingbo and Bettencourt, Jesse and White, Lyndon and Dixit, Vaibhav},
   journal={arXiv preprint arXiv:1902.02376},
   year={2019}
