@@ -65,6 +65,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Physics-informed neural networks (PINNs) solver on Julia](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solver-on-julia-gsoc-2020-final-report)
+- [Utkarsh's Blog: Performance Enhancements and Optimizations for Differential Equation solvers, GSoC Blog: Final Report](https://utkarsh530.github.io/blog/post/gsoc-blog-final/)
 - [GPU-Accelerated ODE Solving in R with Julia, the Language of Libraries](https://www.stochasticlifestyle.com/gpu-accelerated-ode-solving-in-r-with-julia-the-language-of-libraries/)
 - [Francesco Martinuzzi: Google Summer of Code 2020 Final Report](https://martinuzzifrancesco.github.io/posts/12_gsoc_week/)
 - [High weak order solvers and adjoint sensitivity analysis for stochastic differential equations](https://frankschae.github.io/post/gsoc-2020/)
