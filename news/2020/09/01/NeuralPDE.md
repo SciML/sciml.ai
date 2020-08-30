@@ -6,6 +6,7 @@
 
 # SciML Ecosystem Update:
 
+Differentiable Molecular Dynamics Performance https://nextjournal.com/a/MvWhGqwkuwMetgbjsh9sQ?token=2QnKjKYpnF5UYrB6ECZCYn
 https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solver-on-julia-gsoc-2020-final-report
 Augmented neural differential equations
 https://github.com/SciML/Quadrature.jl
