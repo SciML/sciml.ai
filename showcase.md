@@ -65,6 +65,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- ["Modeling control of run-of-river power plant Grønvollfoss" in Julia](https://nextjournal.com/emmanuellujan/modeling-control-of-run-of-river-power-plant-gr%C3%B8nvollfoss-in-julia)
 - [Physics-informed neural networks (PINNs) solver on Julia](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solver-on-julia-gsoc-2020-final-report)
 - [Utkarsh's Blog: Performance Enhancements and Optimizations for Differential Equation solvers, GSoC Blog: Final Report](https://utkarsh530.github.io/blog/post/gsoc-blog-final/)
 - [GPU-Accelerated ODE Solving in R with Julia, the Language of Libraries](https://www.stochasticlifestyle.com/gpu-accelerated-ode-solving-in-r-with-julia-the-language-of-libraries/)
