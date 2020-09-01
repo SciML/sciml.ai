@@ -6,11 +6,19 @@
 
 # SciML Ecosystem Update:
 
-Differentiable Molecular Dynamics Performance https://nextjournal.com/a/MvWhGqwkuwMetgbjsh9sQ?token=2QnKjKYpnF5UYrB6ECZCYn
+## Differentiable Molecular Dynamics Performance https://nextjournal.com/a/MvWhGqwkuwMetgbjsh9sQ?token=2QnKjKYpnF5UYrB6ECZCYn
+
+
+
+## Physics-Informed Neural Networks: Systems of equations, PDAEs, and more
+
 https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solver-on-julia-gsoc-2020-final-report
-Augmented neural differential equations
+
+## Differentiable Quadrature
+
 https://github.com/SciML/Quadrature.jl
-ReactionNetworkImporters and CellML on Catalyst
+
+## ReactionNetworkImporters.jl (BioNetGen) and CellML Support on Catalyst
 
 ## DifferentialEquations.jl Solvers Micro Tested Against Boost C++ with VCL
 
