@@ -165,7 +165,7 @@ most other usage, though a lot of users who do small ODE optimization will likel
 be interested in the little bits of performance gains seen in our latest updates.
 Improvements along these lines for ensemble GPU methods are coming soon.
 
-[Boost VCL vs Julia DifferentialEquations.jl](https://user-images.githubusercontent.com/1814174/91665075-1af3e280-eac1-11ea-8fce-a0f311db05de.png)
+![Boost VCL vs Julia DifferentialEquations.jl](https://user-images.githubusercontent.com/1814174/91665075-1af3e280-eac1-11ea-8fce-a0f311db05de.png)
 
 # Next Directions
 
