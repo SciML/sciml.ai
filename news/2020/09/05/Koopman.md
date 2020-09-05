@@ -109,6 +109,14 @@ automatic differentiation via ForwardDiff.jl, meaning that both forward and reve
 are possible. With this, high dimensional quadrature schemes can be mixed with
 all kinds of problems like training neural networks and Bayesian estimation.
 
+## GPU Accelerated Differential Equation Solving in R with diffeqr 1.0
+
+diffeqr, the DifferentialEquations.jl's R counterpart, got its 1.0 release
+demonstrating new accelerations, including GPU support. Check out
+[this new blog post](https://www.stochasticlifestyle.com/gpu-accelerated-ode-solving-in-r-with-julia-the-language-of-libraries/)
+which describes how to solve an ensemble of ODEs 350x faster than deSolve in
+pure R.
+
 ## Differentiable Molecular Dynamics Performance
 
 Our differentiable molecular dynamics libraries,
