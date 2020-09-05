@@ -15,6 +15,8 @@ portions that have had lots of recent development. Let's dig in!
 
 ## DiffEqUncertainty.jl: Optimization Under Uncertainty with Koopman Operators
 
+![Koopman Speed](https://user-images.githubusercontent.com/1814174/92310533-6acd2080-ef7d-11ea-8ac2-67c1f248f372.PNG)
+
 We have recently released a new preprint [demonstrating a new method for highly efficient
 uncertainty quantification with respect to parametric and process noise](https://arxiv.org/abs/2008.08737)
 using the Koopman expectation. This method is released as part of the
