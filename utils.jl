@@ -54,7 +54,7 @@ function hfun_blogposts()
                     surl     = strip(url, '/')
                     title    = pagevar(surl, :title)
                     pubdate  = "$ys-$ms-$ds"
-                    write(io, "\n[$title]($url) $pubdate \n")
+                    write(io, "\n[$title]($url) $author ($pubdate) \n")
                 end
             end
         end
