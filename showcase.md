@@ -32,6 +32,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Releases
 
+- [MIT-led team to develop (SciML) software to help forecast space storms](https://news.mit.edu/2020/mit-led-team-will-develop-software-forecast-space-storms-0910)
 - [The Air Force’s Latest GPS Alternative: Earth’s Magnetic Fields (research powered by SciML)](https://www.defenseone.com/technology/2020/07/air-forces-latest-gps-alternative-earths-magnetic-fields/167387/)
 - [The road to electric vehicles with lower sticker prices than gas cars – battery costs explained (research powered by SciML)](https://theconversation.com/the-road-to-electric-vehicles-with-lower-sticker-prices-than-gas-cars-battery-costs-explained-137196)
 - [Air Force Is Looking At Using Magnetic Fields To Navigate Instead Of GPS And Flight Testing It On F-16s (Algorithms Powered by SciML)](https://www.forbes.com/sites/erictegler/2020/06/12/air-force-gps-magnetic-fields-navigation-f-16/#4ed565db6818)
