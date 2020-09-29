@@ -33,9 +33,11 @@ handled on a case-by-case basis.
 
 ## Advisory Committee
 
-- Alan Edelman (Massachusetts Institute of Technology)
-- Viral Shah (Julia Computing)
-- Vijay Ivaturi (University of Maryland)
+- [Alan Edelman (Massachusetts Institute of Technology)](http://math.mit.edu/~edelman/index.php)
+- [Viral Shah (Julia Computing)](https://en.wikipedia.org/wiki/Viral_B._Shah)
+- [Vijay Ivaturi (University of Maryland)](https://www.linkedin.com/in/vijayivaturi/)
+- [Venkat Viswanathan (Carnegie Mellon University)](https://www.meche.engineering.cmu.edu/directory/bios/viswanathan-venkat.html)
+- [Jesse Parla (University of British Columbia)](https://www.jesseperla.com/)
 
 # Governing Rules and Duties
 
