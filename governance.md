@@ -38,6 +38,8 @@ handled on a case-by-case basis.
 - [Vijay Ivaturi (University of Maryland)](https://www.linkedin.com/in/vijayivaturi/)
 - [Venkat Viswanathan (Carnegie Mellon University)](https://www.meche.engineering.cmu.edu/directory/bios/viswanathan-venkat.html)
 - [Jesse Parla (University of British Columbia)](https://www.jesseperla.com/)
+- [Mykel Kochenderfer (Stanford)](https://mykel.kochenderfer.com/)
+- [Madeleine Udell (Cornell)](https://people.orie.cornell.edu/mru8/)
 
 # Governing Rules and Duties
 
