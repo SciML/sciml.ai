@@ -37,7 +37,7 @@ handled on a case-by-case basis.
 - [Viral Shah (Julia Computing)](https://en.wikipedia.org/wiki/Viral_B._Shah)
 - [Vijay Ivaturi (University of Maryland)](https://www.linkedin.com/in/vijayivaturi/)
 - [Venkat Viswanathan (Carnegie Mellon University)](https://www.meche.engineering.cmu.edu/directory/bios/viswanathan-venkat.html)
-- [Jesse Parla (University of British Columbia)](https://www.jesseperla.com/)
+- [Jesse Perla (University of British Columbia)](https://www.jesseperla.com/)
 - [Mykel Kochenderfer (Stanford)](https://mykel.kochenderfer.com/)
 - [Madeleine Udell (Cornell)](https://people.orie.cornell.edu/mru8/)
 
