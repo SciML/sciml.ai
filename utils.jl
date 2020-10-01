@@ -53,6 +53,8 @@ function hfun_blogposts()
                     url      = "/news/$ys/$ms/$ds/$ps/"
                     surl     = strip(url, '/')
                     title    = pagevar(surl, :title)
+                    author   = pagevar(surl, :author)
+                    isnothing(author) && (author = "")
                     pubdate  = "$ys-$ms-$ds"
                     write(io, "\n[$title]($url) $author ($pubdate) \n")
                 end
