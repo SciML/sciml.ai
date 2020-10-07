@@ -32,6 +32,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Releases
 
+- [SciML used to develop school reopening strategies in Southern California for COVID-19](https://www.microbe.tv/twiv/twiv-653/)
+- [SciML Software (through Pumas) is utilized in an FDA-approved submission](https://www.linkedin.com/feed/update/urn:li:activity:6718901388555927552/)
 - [MIT-led team to develop (SciML) software to help forecast space storms](https://news.mit.edu/2020/mit-led-team-will-develop-software-forecast-space-storms-0910)
 - [The Air Force’s Latest GPS Alternative: Earth’s Magnetic Fields (research powered by SciML)](https://www.defenseone.com/technology/2020/07/air-forces-latest-gps-alternative-earths-magnetic-fields/167387/)
 - [The road to electric vehicles with lower sticker prices than gas cars – battery costs explained (research powered by SciML)](https://theconversation.com/the-road-to-electric-vehicles-with-lower-sticker-prices-than-gas-cars-battery-costs-explained-137196)
