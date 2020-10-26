@@ -59,4 +59,4 @@ chatroom. The chatroom is openly available through the
 [Gitter JuliaDiffEq/lobby](https://gitter.im/JuliaDiffEq/Lobby). This
 channel is also bridged to the Julialang Slack and is accessible in
 the #diffeq-bridged and #sciml channels. For access to the Slack, please ask for
-an invite via [this link](https://slackinvite.julialang.org/).
+an invite via [this link](https://julialang.org/slack/).
