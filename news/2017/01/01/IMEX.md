@@ -7,12 +7,12 @@
 # DifferentialEquations.jl 3.3: IMEX Solvers
 
 What's a better way to ring in the new year than to announce new features?
-This ecosystem 3.3 release we have a few exciting developments, and at the
+This ecosystem 3.3 release has a few exciting developments, and at the
 top of the list is new IMEX schemes. Let's get right to it.
 
 ## Additive Runge-Kutta Schemes for Implicit-Explicit Problems
 
-Using an implicit solver is required for solving a stiff differential equation.
+An implicit solver is required for solving a stiff differential equation.
 However, an implicit solver has to solve a rootfinding problem every step
 which takes considerable computational resources. What if there was a way
 so that the solver was only implicit for certain parts of the equation?
