@@ -1,0 +1,57 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>SciML</title>
+  <description><![CDATA[Website for SciML Scientific Machine Learning Organization
+]]></description>
+  <link>https://sciml.ai/</link>
+  <atom:link href="https://sciml.ai/tag/syntax/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>SciML: Scientific Machine Learning Roadmap</title>
+    <link>https://sciml.ai/roadmap/</link>
+    <description><![CDATA[SciML: Scientific Machine Learning Roadmap
+<br><a href="https://sciml.ai/roadmap/">Read more</a>]]></description>
+    <guid>https://sciml.ai/roadmap/</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>Scientific Machine Learning Community</title>
+    <link>https://sciml.ai/community/</link>
+    <description><![CDATA[This page describes the community pages, chatrooms, and forums used by the scientific machine learning community
+<br><a href="https://sciml.ai/community/">Read more</a>]]></description>
+    <guid>https://sciml.ai/community/</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>SciML Scientific Machine Learning Citations</title>
+    <link>https://sciml.ai/citing/</link>
+    <description><![CDATA[Citations for the SciML Scientific Machine Learning software organization
+<br><a href="https://sciml.ai/citing/">Read more</a>]]></description>
+    <guid>https://sciml.ai/citing/</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>SciML Scientific Machine Learning Governance</title>
+    <link>https://sciml.ai/governance/</link>
+    <description><![CDATA[Governance structure for the SciML Scientific Machine Learning open source software organization
+<br><a href="https://sciml.ai/governance/">Read more</a>]]></description>
+    <guid>https://sciml.ai/governance/</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>SciML Scientific Machine Learning Showcase</title>
+    <link>https://sciml.ai/showcase/</link>
+    <description><![CDATA[Showcase of SciML Scientific Machine Learning applications
+<br><a href="https://sciml.ai/showcase/">Read more</a>]]></description>
+    <guid>https://sciml.ai/showcase/</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>SciML Scientific Machine Learning Challenge Problems and Datasets</title>
+    <link>https://sciml.ai/challenge/</link>
+    <description><![CDATA[Challenge problems and research datasets for the Scientific Machine Learning &#40;SciML&#41;
+<br><a href="https://sciml.ai/challenge/">Read more</a>]]></description>
+    <guid>https://sciml.ai/challenge/</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+</channel>
+</rss>

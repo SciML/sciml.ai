@@ -1,4 +1,4 @@
-<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/hypertext.css"> <link rel=icon  href="/assets/favicon.png"> <title> SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling </title> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90474609-2"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-90474609-2'); </script> <header> <h1><b><center>SciML Scientific Machine Learning Software</center></b></h1> <nav> | <a href="/" class=current >Home</a> | <a href="/news/">News</a> | <a href="/roadmap/">Roadmap</a> | <a href="/citing/">Citing</a> | <a href="/showcase/">Showcase</a> | <a href="/challenge/">Challenge Problems</a> | <a href="/community/">Community</a> <hr/> | <a href="/documentation/">Documentation</a> | <a href="/governance/">Governance</a> | <a href="https://benchmarks.sciml.ai/">Benchmarks</a> | <a href="https://github.com/SciML/">Source Code</a> </nav> </header> <div class=franklin-content ><p>﻿</p> <h1 id=sciml_ecosystem_update_auto-parallelism_and_component-based_modeling ><a href="#sciml_ecosystem_update_auto-parallelism_and_component-based_modeling">SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling</a></h1> <p>Another month and another set of SciML updates&#33; This month we have been focusing a lot on simplifying our interfaces and cleaning our tutorials. We can demonstrate that <em>no user-intervention is required for adjoints</em>. Also, the ModelingToolkit.jl symbolic modeling language has really come into fruition, allowing component-based models and automated parallelism. Indeed, let&#39;s jump right into an example.</p> <h2 id=modelingtoolkit_daes_and_component-based_modeling ><a href="#modelingtoolkit_daes_and_component-based_modeling">ModelingToolkit DAEs and Component-Based Modeling</a></h2> <p><a href="https://github.com/SciML/ModelingToolkit.jl">ModelingToolkit.jl</a> has added the ability to build differential-algebraic equations through acausal component-based models. As an example, let&#39;s say we built two Lorenz equations:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> ModelingToolkit, OrdinaryDiffEq
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/hypertext.css"> <link rel=icon  href="/assets/favicon.png"> <title> SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling </title> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90474609-2"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-90474609-2'); </script> <header> <h1><b><center>SciML Scientific Machine Learning Software</center></b></h1> <nav> | <a href="/" class=current >Home</a> | <a href="/news/">News</a> | <a href="/roadmap/">Roadmap</a> | <a href="/citing/">Citing</a> | <a href="/showcase/">Showcase</a> | <a href="/challenge/">Challenge Problems</a> | <a href="/community/">Community</a> <hr/> | <a href="/documentation/">Documentation</a> | <a href="/governance/">Governance</a> | <a href="https://benchmarks.sciml.ai/">Benchmarks</a> | <a href="https://github.com/SciML/">Source Code</a> | <a href="https://numfocus.org/donate-to-sciml">Donate</a> </nav> </header> <div class=franklin-content ><p>﻿</p> <h1 id=sciml_ecosystem_update_auto-parallelism_and_component-based_modeling ><a href="#sciml_ecosystem_update_auto-parallelism_and_component-based_modeling">SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling</a></h1> <p>Another month and another set of SciML updates&#33; This month we have been focusing a lot on simplifying our interfaces and cleaning our tutorials. We can demonstrate that <em>no user-intervention is required for adjoints</em>. Also, the ModelingToolkit.jl symbolic modeling language has really come into fruition, allowing component-based models and automated parallelism. Indeed, let&#39;s jump right into an example.</p> <h2 id=modelingtoolkit_daes_and_component-based_modeling ><a href="#modelingtoolkit_daes_and_component-based_modeling">ModelingToolkit DAEs and Component-Based Modeling</a></h2> <p><a href="https://github.com/SciML/ModelingToolkit.jl">ModelingToolkit.jl</a> has added the ability to build differential-algebraic equations through acausal component-based models. As an example, let&#39;s say we built two Lorenz equations:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> ModelingToolkit, OrdinaryDiffEq
 
 <span class=hljs-meta >@parameters</span> t σ ρ β
 <span class=hljs-meta >@variables</span> x(t) y(t) z(t)
@@ -10,9 +10,9 @@ eqs = [D(x) ~ σ*(y-x),
 
 lorenz1 = ODESystem(eqs,name=:lorenz1)
 lorenz2 = ODESystem(eqs,name=:lorenz2)</code></pre> <p>We can then define an implicit equation that couples the two equations together and solve the system:</p> <pre><code class="julia hljs"><span class=hljs-meta >@variables</span> a
-<span class=hljs-meta >@parameters</span> <span class=hljs-literal >γ</span>
-connections = [<span class=hljs-number >0</span> ~ lorenz1.x + lorenz2.y + a*<span class=hljs-literal >γ</span>]
-connected = ODESystem(connections,t,[a],[<span class=hljs-literal >γ</span>],systems=[lorenz1,lorenz2])
+<span class=hljs-meta >@parameters</span> γ
+connections = [<span class=hljs-number >0</span> ~ lorenz1.x + lorenz2.y + a*γ]
+connected = ODESystem(connections,t,[a],[γ],systems=[lorenz1,lorenz2])
 
 u0 = [lorenz1.x =&gt; <span class=hljs-number >1.0</span>,
       lorenz1.y =&gt; <span class=hljs-number >0.0</span>,
@@ -28,7 +28,7 @@ p  = [lorenz1.σ =&gt; <span class=hljs-number >10.0</span>,
       lorenz2.σ =&gt; <span class=hljs-number >10.0</span>,
       lorenz2.ρ =&gt; <span class=hljs-number >28.0</span>,
       lorenz2.β =&gt; <span class=hljs-number >8</span>/<span class=hljs-number >3</span>,
-      <span class=hljs-literal >γ</span> =&gt; <span class=hljs-number >2.0</span>]
+      γ =&gt; <span class=hljs-number >2.0</span>]
 
 tspan = (<span class=hljs-number >0.0</span>,<span class=hljs-number >100.0</span>)
 prob = ODEProblem(connected,u0,tspan,p)
@@ -76,7 +76,7 @@ eqs = [D(x) ~ a*x - x*y,
 <span class=hljs-keyword >const</span> Y = reshape([j <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N],N,N)
 <span class=hljs-keyword >const</span> α₁ = <span class=hljs-number >1.0</span>.*(X.&gt;=<span class=hljs-number >4</span>*N/<span class=hljs-number >5</span>)
 
-<span class=hljs-keyword >const</span> Mx = <span class=hljs-built_in >Tridiagonal</span>([<span class=hljs-number >1.0</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N-<span class=hljs-number >1</span>],[-<span class=hljs-number >2.0</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N],[<span class=hljs-number >1.0</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N-<span class=hljs-number >1</span>])
+<span class=hljs-keyword >const</span> Mx = Tridiagonal([<span class=hljs-number >1.0</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N-<span class=hljs-number >1</span>],[-<span class=hljs-number >2.0</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N],[<span class=hljs-number >1.0</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N-<span class=hljs-number >1</span>])
 <span class=hljs-keyword >const</span> My = copy(Mx)
 Mx[<span class=hljs-number >2</span>,<span class=hljs-number >1</span>] = <span class=hljs-number >2.0</span>
 Mx[<span class=hljs-keyword >end</span>-<span class=hljs-number >1</span>,<span class=hljs-keyword >end</span>] = <span class=hljs-number >2.0</span>
@@ -113,8 +113,8 @@ jac = sparse(ModelingToolkit.jacobian(vec(du),vec(u),simplify=<span class=hljs-l
   l = length(y)
   i₀  ~ Uniform(<span class=hljs-number >0.0</span>,<span class=hljs-number >1.0</span>)
   β ~ Uniform(<span class=hljs-number >0.0</span>,<span class=hljs-number >1.0</span>)
-  <span class=hljs-literal >I</span> = i₀*<span class=hljs-number >1000.0</span>
-  u0=[<span class=hljs-number >1000.0</span>-<span class=hljs-literal >I</span>,<span class=hljs-literal >I</span>,<span class=hljs-number >0.0</span>,<span class=hljs-number >0.0</span>]
+  I = i₀*<span class=hljs-number >1000.0</span>
+  u0=[<span class=hljs-number >1000.0</span>-I,I,<span class=hljs-number >0.0</span>,<span class=hljs-number >0.0</span>]
   p=[β,<span class=hljs-number >10.0</span>,<span class=hljs-number >0.25</span>]
   tspan = (<span class=hljs-number >0.0</span>,float(l))
   prob = ODEProblem(sir_ode!,
