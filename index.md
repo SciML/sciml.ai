@@ -3,7 +3,8 @@
 
 # SciML: Open Source Software for Scientific Machine Learning
 
-SciML is an open source software organization created to unify the packages for
+SciML is a [NumFOCUS sponsored](https://numfocus.org/project/sciml) open source 
+software organization created to unify the packages for
 scientific machine learning. This includes the development of modular scientific
 simulation support software, such as differential equation solvers, along with the
 methodologies for inverse problems and automated model discovery. By providing
