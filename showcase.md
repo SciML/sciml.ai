@@ -32,6 +32,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Releases
 
+- [Slowing the spread of Covid-19 with SciML modeling](https://news.mit.edu/2020/slowing-spread-covid-19-mit-meche-1130)
 - [SciML used to develop school reopening strategies in Southern California for COVID-19](https://www.microbe.tv/twiv/twiv-653/)
 - [SciML Software (through Pumas) is utilized in an FDA-approved submission](https://www.linkedin.com/feed/update/urn:li:activity:6718901388555927552/)
 - [MIT-led team to develop (SciML) software to help forecast space storms](https://news.mit.edu/2020/mit-led-team-will-develop-software-forecast-space-storms-0910)
