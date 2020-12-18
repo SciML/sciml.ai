@@ -68,6 +68,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [CFD tutorial in Julia](https://emadmasroor.github.io/2020/12/16/CFD-tutorial-in-julia.html)
 - [Neural ODE for Reinforcement Learning and Nonlinear Optimal Control: Cartpole Problem Revisited](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71)
 - ["Modeling control of run-of-river power plant Grønvollfoss" in Julia](https://nextjournal.com/emmanuellujan/modeling-control-of-run-of-river-power-plant-gr%C3%B8nvollfoss-in-julia)
 - [Physics-informed neural networks (PINNs) solver on Julia](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solver-on-julia-gsoc-2020-final-report)
