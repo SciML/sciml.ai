@@ -30,10 +30,11 @@ SciML. If you would like your institution's tools added to the list,
 - [Los Alamos National Lab: Model Analysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
 - [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
 
-## Press Releases
+## Press Releases Featuring SciML
 
-- [Slowing the spread of Covid-19 with SciML modeling](https://news.mit.edu/2020/slowing-spread-covid-19-mit-meche-1130)
-- [SciML used to develop school reopening strategies in Southern California for COVID-19](https://www.microbe.tv/twiv/twiv-653/)
+- [New MIT (SciML) Model Could Help Determine Quarantine Measures Needed to Reduce COVID-19’s Spread](https://scitechdaily.com/new-mit-model-could-help-determine-quarantine-measures-needed-to-reduce-covid-19s-spread/)
+- [Slowing the spread of Covid-19 (with SciML models)](https://news.mit.edu/2020/slowing-spread-covid-19-mit-meche-1130)
+- [TWiV 653: Back to school with COVID-19 (SciML used to develop school reopening strategies in Southern California for COVID-19)](https://www.microbe.tv/twiv/twiv-653/)
 - [SciML Software (through Pumas) is utilized in an FDA-approved submission](https://www.linkedin.com/feed/update/urn:li:activity:6718901388555927552/)
 - [MIT-led team to develop (SciML) software to help forecast space storms](https://news.mit.edu/2020/mit-led-team-will-develop-software-forecast-space-storms-0910)
 - [The Air Force’s Latest GPS Alternative: Earth’s Magnetic Fields (research powered by SciML)](https://www.defenseone.com/technology/2020/07/air-forces-latest-gps-alternative-earths-magnetic-fields/167387/)
