@@ -71,6 +71,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Experiments with Neural ODEs in Julia](https://computationalmindset.com/en/neural-networks/experiments-with-neural-odes-in-julia.html)
 - [CFD tutorial in Julia](https://emadmasroor.github.io/2020/12/16/CFD-tutorial-in-julia.html)
 - [Neural ODE for Reinforcement Learning and Nonlinear Optimal Control: Cartpole Problem Revisited](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71)
 - ["Modeling control of run-of-river power plant Grønvollfoss" in Julia](https://nextjournal.com/emmanuellujan/modeling-control-of-run-of-river-power-plant-gr%C3%B8nvollfoss-in-julia)
