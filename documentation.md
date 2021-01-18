@@ -8,11 +8,14 @@ organization provides well-maintained tools which compose together
 as a coherent ecosystem. The following are the relevant resources for
 users interested in the functionality.
 
-## Differential Equations
+## SciML-Wide Documentation
 
-- [DifferentialEquations.jl documentation](https://docs.sciml.ai/latest/)
 - [SciMLTutorials](https://github.com/SciML/SciMLTutorials.jl)
 - [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl)
+
+## Differential Equations
+
+- [DifferentialEquations.jl](https://docs.sciml.ai/latest/)
 - [diffeqpy: DifferentialEquations.jl from Python](https://github.com/SciML/diffeqpy)
 - [diffeqr: DifferentialEquations.jl from R](https://github.com/SciML/diffeqr)
 
@@ -32,27 +35,36 @@ These resources cover:
 
 ## Partial Differential Equation Modeling
 
-- [DiffEqOperators.jl (Finite Difference Methods)](https://github.com/SciML/DiffEqOperators.jl)
-- [NeuralPDE.jl (Physics-Informed Neural Networks)](https://github.com/SciML/NeuralPDE.jl)
-- [FEniCS.jl (Finite Element Methods)](https://github.com/SciML/FEniCS.jl)
+- [DiffEqOperators.jl: Finite Difference Methods](https://github.com/SciML/DiffEqOperators.jl)
+- [NeuralPDE.jl: Physics-Informed Neural Networks](https://github.com/SciML/NeuralPDE.jl)
+- [FEniCS.jl: Finite Element Methods](https://github.com/SciML/FEniCS.jl)
 
-## Scientific Machine Learning Model Discovery
+## Optimization
 
-- [DiffEqFlux.jl documentation](https://diffeqflux.sciml.ai/dev/)
-- [NeuralPDE.jl documentation](https://github.com/SciML/NeuralPDE.jl)
-- [DataDrivenDiffEq.jl documentation](https://datadriven.sciml.ai/dev/)
-- [ReservoirComputing.jl](https://github.com/SciML/ReservoirComputing.jl)
+- [GalacticOptim.jl: Differentiable local and global optimizers all in one interface](https://galacticoptim.sciml.ai/dev/)
 
-## Surrogate Acceleration and Optimization
+## Estimation, Inference, and Model Discovery
 
-- [Surrogates.jl documentation](https://surrogates.sciml.ai/latest/)
+- [DiffEqFlux.jl: Universal and neural differential equations](https://diffeqflux.sciml.ai/dev/)
+- [NeuralPDE.jl: Physics-Informed Nueral Networks](https://github.com/SciML/NeuralPDE.jl)
+- [DataDrivenDiffEq.jl: Koopman Operator and Symbolic Regression](https://datadriven.sciml.ai/dev/)
+- [DiffEqParamEstim.jl: Easy parameter estimation by maximum likelihood and MAP of differential equations](https://diffeqparamestim.sciml.ai/dev/)
+- [DiffEqBayes.jl: Easy Bayesian inference of differential equations](https://diffeqbayes.sciml.ai/dev/)
+- [ReservoirComputing.jl: Reservoir computing methods like echo state networks](https://github.com/SciML/ReservoirComputing.jl)
+
+Honorable mention to [Turing.jl](https://turing.ml/dev/), a probabilistic programming
+language that composes with the SciML tools.
+
+## Surrogate Acceleration
+
+- [Surrogates.jl: Fast and differentiable surrogates](https://surrogates.sciml.ai/latest/)
 
 ## Modeling Languages and Domain-Specific Languages
 
-- [ModelingToolkit.jl documentation](https://mtk.sciml.ai/dev/)
-- [Catalyst.jl documentation](https://catalyst.sciml.ai/dev/)
-- [ParameterizedFunctions.jl](https://github.com/SciML/ParameterizedFunctions.jl)
-- [NBodySimulator.jl](https://github.com/SciML/NBodySimulator.jl)
+- [ModelingToolkit.jl: A Composable Modeling and Simulation Environment](https://mtk.sciml.ai/dev/)
+- [Catalyst.jl: Fast chemical reaction modeling](https://catalyst.sciml.ai/dev/)
+- [ParameterizedFunctions.jl: Easy definition of differential equation functions](https://github.com/SciML/ParameterizedFunctions.jl)
+- [NBodySimulator.jl: A differentiable N-body problem simulator for molecular dynamics and forcefield equations](https://github.com/SciML/NBodySimulator.jl)
 
 ## Modeling Tools and Primatives
 
@@ -64,7 +76,7 @@ These resources cover:
 
 - [ExponentialUtilities.jl: Fast and GPU matrix exponentials](https://github.com/SciML/ExponentialUtilities.jl)
 - [Quadrature.jl: Common interface for quadrature and numerical integration](https://github.com/SciML/Quadrature.jl)
-- [QuasiMonteCarlo.jl](https://github.com/SciML/QuasiMonteCarlo.jl)
+- [QuasiMonteCarlo.jl: Quasi-Monte Carlo sampling routines](https://github.com/SciML/QuasiMonteCarlo.jl)
 - [SparsityDetection.jl: Automated Jacobian and Hessian sparsity patterns](https://github.com/SciML/SparsityDetection.jl)
 - [PoissonRandom.jl: Fast Poisson random numbers](https://github.com/SciML/PoissonRandom.jl)
 - [AutoOffload.jl: Automatic GPU, TPU, FPGA, Xeon Phi, Multithreaded, Distributed, etc. offloading](https://github.com/SciML/AutoOffload.jl)

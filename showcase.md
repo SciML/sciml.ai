@@ -30,9 +30,11 @@ SciML. If you would like your institution's tools added to the list,
 - [Los Alamos National Lab: Model Analysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
 - [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
 
-## Press Releases
+## Press Releases Featuring SciML
 
-- [SciML used to develop school reopening strategies in Southern California for COVID-19](https://www.microbe.tv/twiv/twiv-653/)
+- [New MIT (SciML) Model Could Help Determine Quarantine Measures Needed to Reduce COVID-19’s Spread](https://scitechdaily.com/new-mit-model-could-help-determine-quarantine-measures-needed-to-reduce-covid-19s-spread/)
+- [Slowing the spread of Covid-19 (with SciML models)](https://news.mit.edu/2020/slowing-spread-covid-19-mit-meche-1130)
+- [TWiV 653: Back to school with COVID-19 (SciML used to develop school reopening strategies in Southern California for COVID-19)](https://www.microbe.tv/twiv/twiv-653/)
 - [SciML Software (through Pumas) is utilized in an FDA-approved submission](https://www.linkedin.com/feed/update/urn:li:activity:6718901388555927552/)
 - [MIT-led team to develop (SciML) software to help forecast space storms](https://news.mit.edu/2020/mit-led-team-will-develop-software-forecast-space-storms-0910)
 - [The Air Force’s Latest GPS Alternative: Earth’s Magnetic Fields (research powered by SciML)](https://www.defenseone.com/technology/2020/07/air-forces-latest-gps-alternative-earths-magnetic-fields/167387/)
@@ -41,6 +43,7 @@ SciML. If you would like your institution's tools added to the list,
 - [Cornell Chronicle: Digital ‘virus’ helps researchers map potential spread](https://news.cornell.edu/stories/2020/05/digital-virus-helps-researchers-map-potential-spread)
 - [Phys.org: Digital 'virus' helps researchers map potential spread](https://phys.org/news/2020-05-digital-virus-potential.html)
 - [latronet.gr: Χαρτογράφηση εξάπλωσης CoViD-19 με κινητό τηλέφωνο](https://www.iatronet.gr/eidiseis-nea/epistimi-zwi/news/55544/psifiakos-ios-voitha-erevnites-na-xartografisoyn-pithani-exaplwsi-covid-19.html)
+- [Popular Deep Learning Frameworks: An Overview (DiffEqFlux.jl mentioned)](https://analyticsindiamag.com/deep-learning-frameworks/)
 - [ZDNet: Could a neural network have predicted this pandemic’s impact?](https://www.zdnet.com/article/could-a-neural-network-have-predicted-this-pandemics-impact/)
 - [UQ News: A mathematical framework could help safely ease social distancing](https://www.uq.edu.au/news/article/2020/05/mathematical-framework-could-help-safely-ease-social-distancing)
 - [MIT News: Model quantifies the impact of quarantine measures on Covid-19’s spread](http://news.mit.edu/2020/new-model-quantifies-impact-quarantine-measures-covid-19-spread-0416)
@@ -68,6 +71,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Experiments with Neural ODEs in Julia](https://computationalmindset.com/en/neural-networks/experiments-with-neural-odes-in-julia.html)
+- [CFD tutorial in Julia](https://emadmasroor.github.io/2020/12/16/CFD-tutorial-in-julia.html)
 - [Neural ODE for Reinforcement Learning and Nonlinear Optimal Control: Cartpole Problem Revisited](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71)
 - ["Modeling control of run-of-river power plant Grønvollfoss" in Julia](https://nextjournal.com/emmanuellujan/modeling-control-of-run-of-river-power-plant-gr%C3%B8nvollfoss-in-julia)
 - [Physics-informed neural networks (PINNs) solver on Julia](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solver-on-julia-gsoc-2020-final-report)
