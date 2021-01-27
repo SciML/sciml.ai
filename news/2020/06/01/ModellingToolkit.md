@@ -1,4 +1,4 @@
-﻿@def rss_pubdate = Date(2020,6,1)
+@def rss_pubdate = Date(2020,6,1)
 @def rss = """ SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling """
 @def published = " 1 June 2020 "
 @def title = " SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling "
