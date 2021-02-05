@@ -1,6 +1,6 @@
-@def rss_pubdate = Date(2021,1,30)
+@def rss_pubdate = Date(2021,2,5)
 @def rss = """SciML Ecosystem Update: GalacticOptim, GlobalSensitivity, Tutorials, and Documentation"""
-@def published = " 30 January 2021 "
+@def published = " 5 February 2021 "
 @def title = "SciML Ecosystem Update: GalacticOptim, GlobalSensitivity, Tutorials, and Documentation"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
 
