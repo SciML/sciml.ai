@@ -77,7 +77,7 @@ information in solver calls, and automatic differentiability.
 GlobalSensitivity.jl is not necessarily too new since some of the functionality
 did exist within DiffEqSensitivity.jl before, but now it has been given its
 own package with a bunch of upgrades to become a full-fledged global sensitivity
-analysis package. It is complete with its won documentation, tutorials, and
+analysis package. It is complete with its own documentation, tutorials, and
 many new methods. All of the methods allow for batching in a way that exposes
 parallelism to the user! [Check out the new documentation.](https://gsa.sciml.ai/dev/)
 
