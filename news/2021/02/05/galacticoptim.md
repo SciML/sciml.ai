@@ -79,7 +79,7 @@ did exist within DiffEqSensitivity.jl before, but now it has been given its
 own package with a bunch of upgrades to become a full-fledged global sensitivity
 analysis package. It is complete with its won documentation, tutorials, and
 many new methods. All of the methods allow for batching in a way that exposes
-parallelism to the user!
+parallelism to the user! [Check out the new documentation.](https://gsa.sciml.ai/dev/)
 
 ## New DiffEqFlux Tutorials: Bouncing Ball, Multiple Networks, and More
 
@@ -98,9 +98,9 @@ about the solution in a GPU-accelerated fashion that's order of magnitude faster
 than Monte Carlo. The steps are:
 
 1. Parameter estimation with uncertainty with Bayesian differential equations by
-integrating the differentiable differential equation solvers with the Turing.jl library.
+   integrating the differentiable differential equation solvers with the Turing.jl library.
 2. Fast calculation of probabilistic estimates of differential equation solutions
-  with parametric uncertainty using the Koopman expectation.
+   with parametric uncertainty using the Koopman expectation.
 3. GPU-acceleration of batched differential equation solves.
 
 Check the tutorial for more information!
