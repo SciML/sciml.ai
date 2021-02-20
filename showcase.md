@@ -57,6 +57,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Books
 
+- [Fundamentals of Numerical Computation](https://tobydriscoll.net/project/fnc/)
 - [Statistics with Julia](https://statisticswithjulia.org/)
 - [The Koopman Operator in Systems and Control](https://www.springer.com/gp/book/9783030357122)
     - "All simulations have been performed in Julia, with additional Julia packages: LinearAlgebra.jl, Random.jl, Plots.jl, Lasso.jl, DifferentialEquations.jl"
@@ -68,6 +69,16 @@ SciML. If you would like your institution's tools added to the list,
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLI0mn-Oiwrl4j_ZgkJg1h5wOaQlXsSY3U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 ~~~
+
+## Awards Associated with SciML Software
+
+- [2021: Mediterranean Machine Learning School Outstanding Poster Award (Simone Azeglio, Valerio Pagliarino, Francesco Calisto, Luca Bottero, Martina S., Sara Tiengo, Giovanni Graziano)](https://www.linkedin.com/feed/update/urn:li:activity:6765588899801653249/): For "Physics-Informed Machine Learning Simulator for Wildfire Propagation" with NeuralPDE.jl.
+- [2020: International Society of Pharmacology (ISoP) Emerging Scientist Award (Chris Rackauckas)](http://go-isop.org/2020-isop-award-winners/): For development of SciML and Pumas.
+- [2020: American Conference on Pharmacometrics (ACoP) Quality Award (Chris Rackauckas and Vijay Ivaturi)](https://www.go-acop.org/abstract-awards): For DiffEqGPU accelerating QSP models by 175x.
+- [2019: International Society of Pharmacology (ISoP) Mathematics and Computing Special Interest Group Poster Award (Chris Rackauckas and Vijay Ivaturi)](http://go-isop.org/wp-content/uploads/2019/09/ISOP-Newsletter-September-2019-V1a.pdf): Koopman operator tooling of DiffEqUncertainty.jl accelerating uncertainty quantification in PK/PD modeling by 100x.
+- [2018 Julia Community Award (Chris Rackauckas)](https://julialang.org/blog/2018/09/julia-community-prizes/): For development of SciML (at the time, named JuliaDiffEq).
+- [DSWeb 2018 Dynamical Systems Software Contest](https://dsweb.siam.org/The-Magazine/All-Issues/winners-of-the-dsweb-2018-software-contest): Runner up is DifferentialEquations.jl and a winner is DynamicalSystems.jl which utilizes DifferentialEquations.jl.
+- [2017: Best Speaker Award, Tsukuba Global Science Week (Chris Rackauckas)](): Presentation on StochasticDiffEq.jl for systems biology.
 
 ## External Blog Posts and Presentations
 
