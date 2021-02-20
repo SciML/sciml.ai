@@ -32,14 +32,24 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Releases Featuring SciML
 
-- [New MIT (SciML) Model Could Help Determine Quarantine Measures Needed to Reduce COVID-19’s Spread](https://scitechdaily.com/new-mit-model-could-help-determine-quarantine-measures-needed-to-reduce-covid-19s-spread/)
-- [Slowing the spread of Covid-19 (with SciML models)](https://news.mit.edu/2020/slowing-spread-covid-19-mit-meche-1130)
-- [TWiV 653: Back to school with COVID-19 (SciML used to develop school reopening strategies in Southern California for COVID-19)](https://www.microbe.tv/twiv/twiv-653/)
+- [Synced Review: The Best AI Technology Developed in the Past 3 to 5 Years: “Scientific Machine Learning” (2020 in Review With Viral B. Shah)](https://syncedreview.com/2020/12/28/2020-in-review-with-viral-b-shah/)
+- [entwickler.de: „Julia ist bei einfachen Machine-Learning-Aufgaben mit Python vergleichbar, aber besser geeignet für komplexere.“](https://entwickler.de/online/machine-learning/julia-programmiersprache-interview-579933983.html)
+- [SciTechDaily: New MIT (SciML) Model Could Help Determine Quarantine Measures Needed to Reduce COVID-19’s Spread](https://scitechdaily.com/new-mit-model-could-help-determine-quarantine-measures-needed-to-reduce-covid-19s-spread/)
+- [MIT News: Slowing the spread of Covid-19 (with SciML models)](https://news.mit.edu/2020/slowing-spread-covid-19-mit-meche-1130)
+- [Microbe.tv: TWiV 653: Back to school with COVID-19 (SciML used to develop school reopening strategies in Southern California for COVID-19)](https://www.microbe.tv/twiv/twiv-653/)
+- [JaxEnter: Julia: The programming language of the future? (SciML mentioned as a popular tool)](https://jaxenter.com/julia-survey-results-160782.html)
 - [SciML Software (through Pumas) is utilized in an FDA-approved submission](https://www.linkedin.com/feed/update/urn:li:activity:6718901388555927552/)
-- [MIT-led team to develop (SciML) software to help forecast space storms](https://news.mit.edu/2020/mit-led-team-will-develop-software-forecast-space-storms-0910)
-- [The Air Force’s Latest GPS Alternative: Earth’s Magnetic Fields (research powered by SciML)](https://www.defenseone.com/technology/2020/07/air-forces-latest-gps-alternative-earths-magnetic-fields/167387/)
-- [The road to electric vehicles with lower sticker prices than gas cars – battery costs explained (research powered by SciML)](https://theconversation.com/the-road-to-electric-vehicles-with-lower-sticker-prices-than-gas-cars-battery-costs-explained-137196)
-- [Air Force Is Looking At Using Magnetic Fields To Navigate Instead Of GPS And Flight Testing It On F-16s (Algorithms Powered by SciML)](https://www.forbes.com/sites/erictegler/2020/06/12/air-force-gps-magnetic-fields-navigation-f-16/#4ed565db6818)
+- [MIT News: MIT-led team to develop (SciML) software to help forecast space storms](https://news.mit.edu/2020/mit-led-team-will-develop-software-forecast-space-storms-0910)
+- [DefenseOne: The Air Force’s Latest GPS Alternative: Earth’s Magnetic Fields (research powered by SciML)](https://www.defenseone.com/technology/2020/07/air-forces-latest-gps-alternative-earths-magnetic-fields/167387/)
+- [HPCWire: What’s New in Computing vs. COVID-19: Julia, Twitter, TACC & More](https://www.hpcwire.com/2020/05/07/whats-new-in-computing-vs-covid-19-julia-twitter-tacc-more/)
+- [InsideBigData: Pumas-AI Launches Julia Language-Based Software to Advance Drug Development, Patient Care (powered by SciML)](https://insidebigdata.com/2019/08/04/pumas-ai-launches-julia-language-based-software-to-advance-drug-development-patient-care/)
+- [JaxEnter: “Julia is comparable to Python for simple machine learning tasks and better for complex ones”](https://jaxenter.com/julia-programming-language-interview-171506.html)
+- [ArsTechnica: The unreasonable effectiveness of the Julia programming language (discussion on DifferentialEquations.jl)](https://arstechnica.com/science/2020/10/the-unreasonable-effectiveness-of-the-julia-programming-language/)
+- [The Conversation: The road to electric vehicles with lower sticker prices than gas cars – battery costs explained (research powered by SciML)](https://theconversation.com/the-road-to-electric-vehicles-with-lower-sticker-prices-than-gas-cars-battery-costs-explained-137196)
+- [Frobes: Air Force Is Looking At Using Magnetic Fields To Navigate Instead Of GPS And Flight Testing It On F-16s (Algorithms Powered by SciML)](https://www.forbes.com/sites/erictegler/2020/06/12/air-force-gps-magnetic-fields-navigation-f-16/#4ed565db6818)
+- [Analytics India Magazine: How Julia Computing Just Gave A Push To High-Performance GPU Computing (SciML for GPUs mentioned)](https://analyticsindiamag.com/julia-computing-gpu-computing/)
+- [Technical.ly: JuliaCon is the stage for a week of programming talks — and a new Baltimore company (Pumas-AI, Powered by SciML)](https://technical.ly/baltimore/2019/07/23/juliacon-provides-the-stage-for-a-week-of-programming-talks-and-a-new-baltimore-company/)
+- [NewsWise: University of Maryland, Baltimore Researchers' Startup, Pumas-AI, Launches Cutting-Edge Healthcare Software (Pumas-AI, Powered by SciML)](https://www.newswise.com/articles/university-of-maryland-baltimore-researchers-startup-launches-pumas-software-to-advance-drug-development-patient-care)
 - [Cornell Chronicle: Digital ‘virus’ helps researchers map potential spread](https://news.cornell.edu/stories/2020/05/digital-virus-helps-researchers-map-potential-spread)
 - [Phys.org: Digital 'virus' helps researchers map potential spread](https://phys.org/news/2020-05-digital-virus-potential.html)
 - [latronet.gr: Χαρτογράφηση εξάπλωσης CoViD-19 με κινητό τηλέφωνο](https://www.iatronet.gr/eidiseis-nea/epistimi-zwi/news/55544/psifiakos-ios-voitha-erevnites-na-xartografisoyn-pithani-exaplwsi-covid-19.html)
@@ -48,7 +58,7 @@ SciML. If you would like your institution's tools added to the list,
 - [UQ News: A mathematical framework could help safely ease social distancing](https://www.uq.edu.au/news/article/2020/05/mathematical-framework-could-help-safely-ease-social-distancing)
 - [MIT News: Model quantifies the impact of quarantine measures on Covid-19’s spread](http://news.mit.edu/2020/new-model-quantifies-impact-quarantine-measures-covid-19-spread-0416)
 - [TechXplore: Machine learning algorithm quantifies the impact of quarantine measures on COVID-19's spread](https://techxplore.com/news/2020-04-machine-algorithm-quantifies-impact-quarantine.html)
-- [COVID-19 simulator could help track virus spread as restrictions eased](https://www.theage.com.au/national/queensland/covid-19-simulator-could-help-track-virus-spread-as-restrictions-eased-20200506-p54qfr.html)
+- [The Age: COVID-19 simulator could help track virus spread as restrictions eased](https://www.theage.com.au/national/queensland/covid-19-simulator-could-help-track-virus-spread-as-restrictions-eased-20200506-p54qfr.html)
 - [Pfizer uses Julia (SciML) to accelerate simulations of new therapies for metabolic diseases up to 175x](https://juliacomputing.com/case-studies/pfizer.html)
 - [The Brazilian National Institute for Space Research (INPE) plans space missions with SciML](https://juliacomputing.com/case-studies/BrazilNationalinstituteforspaceResearch.html)
 - [JaxEnter: Machine learning meets math: Solve differential equations with new Julia library](https://jaxenter.com/julia-machine-learning-library-154880.html)
@@ -82,6 +92,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Jesse Perla: Machine Learning and High Dimensional Economics](https://www.jesseperla.com/project/ml-high-dim/)
 - [Experiments with Neural ODEs in Julia](https://computationalmindset.com/en/neural-networks/experiments-with-neural-odes-in-julia.html)
 - [CFD tutorial in Julia](https://emadmasroor.github.io/2020/12/16/CFD-tutorial-in-julia.html)
 - [Neural ODE for Reinforcement Learning and Nonlinear Optimal Control: Cartpole Problem Revisited](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71)
