@@ -32,6 +32,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Releases Featuring SciML
 
+- [Apostolato Digitale: Intelligenza Artificiale in parrocchia (Video)](https://www.youtube.com/watch?v=4j-Wb5rHXr4)
 - [Synced Review: The Best AI Technology Developed in the Past 3 to 5 Years: “Scientific Machine Learning” (2020 in Review With Viral B. Shah)](https://syncedreview.com/2020/12/28/2020-in-review-with-viral-b-shah/)
 - [entwickler.de: „Julia ist bei einfachen Machine-Learning-Aufgaben mit Python vergleichbar, aber besser geeignet für komplexere.“](https://entwickler.de/online/machine-learning/julia-programmiersprache-interview-579933983.html)
 - [SciTechDaily: New MIT (SciML) Model Could Help Determine Quarantine Measures Needed to Reduce COVID-19’s Spread](https://scitechdaily.com/new-mit-model-could-help-determine-quarantine-measures-needed-to-reduce-covid-19s-spread/)
