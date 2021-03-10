@@ -32,6 +32,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Releases Featuring SciML
 
+- [Julia Computing Receives Funding To Accelerate Electronics Simulation Using AI & ML (using SciML)](https://analyticsindiamag.com/julia-computing-receives-funding-to-accelerate-electronics-simulation-using-ai-ml/)
+- [Julia Computing Receives DARPA Award to Accelerate Electronics Simulation by 1,000x (with SciML tools)](https://www.hpcwire.com/off-the-wire/julia-computing-receives-darpa-award-to-accelerate-electronics-simulation-by-1000x/)
 - [Apostolato Digitale: Intelligenza Artificiale in parrocchia (Video)](https://www.youtube.com/watch?v=4j-Wb5rHXr4)
 - [Synced Review: The Best AI Technology Developed in the Past 3 to 5 Years: “Scientific Machine Learning” (2020 in Review With Viral B. Shah)](https://syncedreview.com/2020/12/28/2020-in-review-with-viral-b-shah/)
 - [entwickler.de: „Julia ist bei einfachen Machine-Learning-Aufgaben mit Python vergleichbar, aber besser geeignet für komplexere.“](https://entwickler.de/online/machine-learning/julia-programmiersprache-interview-579933983.html)
