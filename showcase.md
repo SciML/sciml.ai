@@ -93,6 +93,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Generalizing Automatic Differentiation to Automatic Sparsity, Uncertainty, Stability, and Parallelism](https://www.stochasticlifestyle.com/generalizing-automatic-differentiation-to-automatic-sparsity-uncertainty-stability-and-parallelism/)
+- [Adam MacLean: A thread on teaching dynamical systems in Julia](https://twitter.com/adamlmaclean/status/1368988846457647105)
 - [Jesse Perla: Machine Learning and High Dimensional Economics](https://www.jesseperla.com/project/ml-high-dim/)
 - [Experiments with Neural ODEs in Julia](https://computationalmindset.com/en/neural-networks/experiments-with-neural-odes-in-julia.html)
 - [CFD tutorial in Julia](https://emadmasroor.github.io/2020/12/16/CFD-tutorial-in-julia.html)
