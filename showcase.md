@@ -30,8 +30,9 @@ SciML. If you would like your institution's tools added to the list,
 - [Los Alamos National Lab: Model Analysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
 - [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
 
-## Press Releases Featuring SciML
+## Press Coverage Featuring SciML
 
+- [We’ve designed a safe ‘virtual’ epidemic. Spreading it is going to help us learn about COVID (using SciML)](https://theconversation.com/weve-designed-a-safe-virtual-epidemic-spreading-it-is-going-to-help-us-learn-about-covid-156853)
 - [Apostolato Digitale: Intelligenza Artificiale in parrocchia (Video)](https://www.youtube.com/watch?v=4j-Wb5rHXr4)
 - [Synced Review: The Best AI Technology Developed in the Past 3 to 5 Years: “Scientific Machine Learning” (2020 in Review With Viral B. Shah)](https://syncedreview.com/2020/12/28/2020-in-review-with-viral-b-shah/)
 - [entwickler.de: „Julia ist bei einfachen Machine-Learning-Aufgaben mit Python vergleichbar, aber besser geeignet für komplexere.“](https://entwickler.de/online/machine-learning/julia-programmiersprache-interview-579933983.html)
