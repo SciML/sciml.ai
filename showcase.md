@@ -32,6 +32,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Coverage Featuring SciML
 
+- [Julia Computing Receives Funding To Accelerate Electronics Simulation Using AI & ML (using SciML)](https://analyticsindiamag.com/julia-computing-receives-funding-to-accelerate-electronics-simulation-using-ai-ml/)
+- [Julia Computing Receives DARPA Award to Accelerate Electronics Simulation by 1,000x (with SciML tools)](https://www.hpcwire.com/off-the-wire/julia-computing-receives-darpa-award-to-accelerate-electronics-simulation-by-1000x/)
 - [We’ve designed a safe ‘virtual’ epidemic. Spreading it is going to help us learn about COVID (using SciML)](https://theconversation.com/weve-designed-a-safe-virtual-epidemic-spreading-it-is-going-to-help-us-learn-about-covid-156853)
 - [Apostolato Digitale: Intelligenza Artificiale in parrocchia (Video)](https://www.youtube.com/watch?v=4j-Wb5rHXr4)
 - [Synced Review: The Best AI Technology Developed in the Past 3 to 5 Years: “Scientific Machine Learning” (2020 in Review With Viral B. Shah)](https://syncedreview.com/2020/12/28/2020-in-review-with-viral-b-shah/)
@@ -94,6 +96,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [StochasticLifestyle: Generalizing Automatic Differentiation to Automatic Sparsity, Uncertainty, Stability, and Parallelism](https://www.stochasticlifestyle.com/generalizing-automatic-differentiation-to-automatic-sparsity-uncertainty-stability-and-parallelism/)
+- [Adam MacLean: A thread on teaching dynamical systems in Julia](https://twitter.com/adamlmaclean/status/1368988846457647105)
 - [Jesse Perla: Machine Learning and High Dimensional Economics](https://www.jesseperla.com/project/ml-high-dim/)
 - [Experiments with Neural ODEs in Julia](https://computationalmindset.com/en/neural-networks/experiments-with-neural-odes-in-julia.html)
 - [CFD tutorial in Julia](https://emadmasroor.github.io/2020/12/16/CFD-tutorial-in-julia.html)
