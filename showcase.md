@@ -32,9 +32,18 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Coverage Featuring SciML
 
-- [Julia Computing Receives Funding To Accelerate Electronics Simulation Using AI & ML (using SciML)](https://analyticsindiamag.com/julia-computing-receives-funding-to-accelerate-electronics-simulation-using-ai-ml/)
-- [Julia Computing Receives DARPA Award to Accelerate Electronics Simulation by 1,000x (with SciML tools)](https://www.hpcwire.com/off-the-wire/julia-computing-receives-darpa-award-to-accelerate-electronics-simulation-by-1000x/)
-- [We’ve designed a safe ‘virtual’ epidemic. Spreading it is going to help us learn about COVID (using SciML)](https://theconversation.com/weve-designed-a-safe-virtual-epidemic-spreading-it-is-going-to-help-us-learn-about-covid-156853)
+- [TechnologyFortnight: A ‘safe’ virus that transfers via Bluetooth created to predict Covid-like virus spread](http://technologyfortnight.com/a-safe-virus-that-transfers-via-bluetooth-created-to-predict-covid-like-virus-spread-latest-news/)
+- [Times of India: A ‘safe’ virus that transfers via Bluetooth created to predict Covid-like virus spread](http://www.harshitindia.com/2021/03/15/a-safe-virus-that-transfers-via-bluetooth-created-to-predict-covid-like-virus-spread-times-of-india/)
+- [Flipboard UK: Virtual virus that transmits between phones developed to mimic COVID spread](https://flipboard.com/@FlipboardUK/virtual-virus-that-transmits-between-phones-developed-to-mimic-covid-spread/a-dGIUbNp5QUuBrrtRA_n4DQ%3Aa%3A26228122-5bb540c95f%2Fandroidauthority.com)
+- [ZDNet: Researchers develop Bluetooth-transmitting 'virus' to improve COVID-19 tracking accuracy](https://www.zdnet.com/article/researchers-develop-bluetooth-transmitting-virus-to-improve-covid-19-tracking-accuracy/)
+- [GadgetsNow: A ‘safe’ virus that transfers via Bluetooth created to predict Covid-like virus spread](https://www.gadgetsnow.com/tech-news/a-safe-virus-that-transfers-via-bluetooth-created-to-predict-covid-like-virus-spread/articleshow/81512487.cms)
+- [guncelkal: Researchers Are Working on a Virtual Phone Virus That ‘Mimics’ the Spread of Covid-19](https://guncelkal.net/2021/03/15/researchers-are-working-on-a-virtual-phone-virus-that-mimics-the-spread-of-covid-19/)
+- [Gizmodo: Researchers Are Working on a Virtual Phone Virus That 'Mimics' the Spread of Covid-19](https://gizmodo.com/researchers-are-working-on-a-virtual-phone-virus-that-m-1846478050)
+- [Newsbreak: Researchers Are Working on a Virtual Phone Virus That 'Mimics' the Spread of Covid-19](https://www.newsbreak.com/news/2182834444343/researchers-are-working-on-a-virtual-phone-virus-that-mimics-the-spread-of-covid-19)
+- [Android Authority: Virtual virus that transmits between phones developed to mimic COVID spread](https://www.androidauthority.com/safe-blues-virtual-virus-covid-19-1208605/)
+- [Analytics India Magazine: Julia Computing Receives Funding To Accelerate Electronics Simulation Using AI & ML (using SciML)](https://analyticsindiamag.com/julia-computing-receives-funding-to-accelerate-electronics-simulation-using-ai-ml/)
+- [HPC Wire: Julia Computing Receives DARPA Award to Accelerate Electronics Simulation by 1,000x (with SciML tools)](https://www.hpcwire.com/off-the-wire/julia-computing-receives-darpa-award-to-accelerate-electronics-simulation-by-1000x/)
+- [The Conversation: We’ve designed a safe ‘virtual’ epidemic. Spreading it is going to help us learn about COVID (using SciML)](https://theconversation.com/weve-designed-a-safe-virtual-epidemic-spreading-it-is-going-to-help-us-learn-about-covid-156853)
 - [Apostolato Digitale: Intelligenza Artificiale in parrocchia (Video)](https://www.youtube.com/watch?v=4j-Wb5rHXr4)
 - [Synced Review: The Best AI Technology Developed in the Past 3 to 5 Years: “Scientific Machine Learning” (2020 in Review With Viral B. Shah)](https://syncedreview.com/2020/12/28/2020-in-review-with-viral-b-shah/)
 - [entwickler.de: „Julia ist bei einfachen Machine-Learning-Aufgaben mit Python vergleichbar, aber besser geeignet für komplexere.“](https://entwickler.de/online/machine-learning/julia-programmiersprache-interview-579933983.html)
