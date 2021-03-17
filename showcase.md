@@ -33,6 +33,7 @@ SciML. If you would like your institution's tools added to the list,
 ## Press Coverage Featuring SciML
 
 - SafeBlues Release (3/16/2021) ([analysis done with SciML](https://github.com/SafeBlues/SafeBlues-Deep-Learning))
+    - <iframe width="560" height="315" src="https://www.youtube.com/embed/-e4x3QqA2Rk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     - [Gizmodo: Researchers Are Working on a Virtual Phone Virus That 'Mimics' the Spread of Covid-19](https://gizmodo.com/researchers-are-working-on-a-virtual-phone-virus-that-m-1846478050)
     - [DailyMail: A virtual Bluetooth virus spread between SMARTPHONES 'could help us track Covid-19 more accurately', study claims](https://www.dailymail.co.uk/sciencetech/article-9355661/Virtual-Bluetooth-virus-spreads-SMARTPHONES-learn-disease-spread.html0)
     - [The Next Web: Scientists want to unleash a Bluetooth-powered ‘virtual virus’ to study COVID-19](https://thenextweb.com/science/2021/03/16/scientists-unleash-a-bluetooth-powered-virtual-virus-to-study-covid-19/)
