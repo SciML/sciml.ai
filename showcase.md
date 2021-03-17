@@ -33,7 +33,6 @@ SciML. If you would like your institution's tools added to the list,
 ## Press Coverage Featuring SciML
 
 - SafeBlues Release (3/16/2021) ([analysis done with SciML](https://github.com/SafeBlues/SafeBlues-Deep-Learning))
-    - <iframe width="560" height="315" src="https://www.youtube.com/embed/-e4x3QqA2Rk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     - [Gizmodo: Researchers Are Working on a Virtual Phone Virus That 'Mimics' the Spread of Covid-19](https://gizmodo.com/researchers-are-working-on-a-virtual-phone-virus-that-m-1846478050)
     - [DailyMail: A virtual Bluetooth virus spread between SMARTPHONES 'could help us track Covid-19 more accurately', study claims](https://www.dailymail.co.uk/sciencetech/article-9355661/Virtual-Bluetooth-virus-spreads-SMARTPHONES-learn-disease-spread.html0)
     - [The Next Web: Scientists want to unleash a Bluetooth-powered ‘virtual virus’ to study COVID-19](https://thenextweb.com/science/2021/03/16/scientists-unleash-a-bluetooth-powered-virtual-virus-to-study-covid-19/)
@@ -41,11 +40,13 @@ SciML. If you would like your institution's tools added to the list,
     - [WoahTech: Bluetooth Transmitting ‘Safe’ Virus Developed To Track COVID Spread](https://woahtech.com/safe-blues-virtual-virus/)
     - [News 21: A ‘safe’ virus that transfers via Bluetooth created to predict Covid-like virus spread](https://news21.duniadari.in/a-safe-virus-that-transfers-via-bluetooth-created-to-predict-covid-like-virus-spread/)
     - [24-e News: They create a laboratory cell phone virus that simulates the spread of COVID-19](https://24enews.com/2021/03/16/they-create-a-laboratory-cell-phone-virus-that-simulates-the-spread-of-covid-19/)
+    - [JioForMe: Designed a secure “virtual” epidemic .Spreading it will help us learn about COVID](https://www.jioforme.com/designed-a-secure-virtual-epidemic-spreading-it-will-help-us-learn-about-covid/249799/)
     - [Prowell Tech: This Bluetooth-transmitting virtual virus can mimic COVID spread](https://www.prowell-tech.com/this-bluetooth-transmitting-virtual-virus-can-mimic-covid-spread/)
-    - [MobyGeek: Researchers Developled Virtual Phone Virus To Recreate How COVID-19 Spreads](https://mobygeek.com/features/researchers-developled-virtual-phone-virus-to-recreate-how-covid-19-spreads-15996)
+    - [Olhar Digital: Researchers create “virtual virus” to study the spread of Covid-19](https://olhardigital.com.br/en/2021/03/15/science-and-space/researchers-create-virtual-virus-to-study-the-spread-of-covid-19/)
+    - [MobyGeek: Researchers Developed Virtual Phone Virus To Recreate How COVID-19 Spreads](https://mobygeek.com/features/researchers-developled-virtual-phone-virus-to-recreate-how-covid-19-spreads-15996)
     - [Tech Codex: Researchers develop virtual mobile virus to better understand COVID-19 spread](https://techcodex.com/researchers-develop-virtual-mobile-virus-to-better-understand-covid-19-spread/)
     - [The Canadian: Researchers Develop Virtual Mobile Viruses to Better Understand the Spread of COVID-19](https://thecanadian.news/2021/03/16/researchers-develop-virtual-mobile-viruses-to-better-understand-the-spread-of-covid-19/)
-    - [TechnologyFortnight: A ‘safe’ virus that transfers via Bluetooth created to predict Covid-like virus spread](http://technologyfortnight.com/a-safe-virus-that-transfers-via-bluetooth-created-to-predict-covid-like-virus-spread-latest-news/)
+    - [Technology Fortnight: A ‘safe’ virus that transfers via Bluetooth created to predict Covid-like virus spread](http://technologyfortnight.com/a-safe-virus-that-transfers-via-bluetooth-created-to-predict-covid-like-virus-spread-latest-news/)
     - [Times of India: A ‘safe’ virus that transfers via Bluetooth created to predict Covid-like virus spread](http://www.harshitindia.com/2021/03/15/a-safe-virus-that-transfers-via-bluetooth-created-to-predict-covid-like-virus-spread-times-of-india/)
     - [Flipboard UK: Virtual virus that transmits between phones developed to mimic COVID spread](https://flipboard.com/@FlipboardUK/virtual-virus-that-transmits-between-phones-developed-to-mimic-covid-spread/a-dGIUbNp5QUuBrrtRA_n4DQ%3Aa%3A26228122-5bb540c95f%2Fandroidauthority.com)
     - [ZDNet: Researchers develop Bluetooth-transmitting 'virus' to improve COVID-19 tracking accuracy](https://www.zdnet.com/article/researchers-develop-bluetooth-transmitting-virus-to-improve-covid-19-tracking-accuracy/)
