@@ -12,7 +12,7 @@ where the SciML tools have been employed. If you would like your
 own work added to this list,
 [please open a pull request](https://github.com/SciML/sciml.ai).
 
-# External Applications Libraries
+# External Applications Libraries and Large Projects using SciML
 
 There are many external libraries which connect and utilize SciML
 utilities under the hood. The following an incomplete list of software
@@ -29,6 +29,7 @@ SciML. If you would like your institution's tools added to the list,
 - [CMU+MIT+Citrine: Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
 - [Los Alamos National Lab: Model Analysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
 - [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
+- [Safe Blues: A Method for Estimation and Control in the Fight Against COVID-19](https://safeblues.org/)
 
 ## Press Coverage Featuring SciML
 
