@@ -61,7 +61,6 @@ SciML. If you would like your institution's tools added to the list,
     - [Pingvin.pro: Віртуальний вірус для смартфонів допоможе оцінити поширення COVID-19](https://pingvin.pro/gadgets/news-gadgets/virtualnyj-virus-dlya-smartfoniv-dopomozhe-oczinyty-poshyrennya-covid-19.html)
     - [SecurityLab.ru: Передающийся по Bluetooth вирус поможет в оценке распространения COVID-19](https://www.securitylab.ru/news/517476.php)
     - [Explica.co: ‘Safe Blues’, the new virtual virus that spreads between mobiles imitating the coronavirus](https://www.explica.co/safe-blues-the-new-virtual-virus-that-spreads-between-mobiles-imitating-the-coronavirus/)
-    - [ACEMS Podcast, Episode 25: Safe Blues](https://acems.org.au/podcast/episode-25-Safe-Blues)
     - [juventudrebelde.cu: Desarrollan virus de teléfonos móviles que se replica por cercanía, como el SARSCov-2](http://www.juventudrebelde.cu/ciencia-tecnica/2021-03-16/desarrollan-virus-de-telefonos-moviles-que-se-replica-por-cercania-como-el-sarscov-2)
     - [The Next Web: Scientists want to unleash a Bluetooth-powered ‘virtual virus’ to study COVID-19](https://thenextweb.com/science/2021/03/16/scientists-unleash-a-bluetooth-powered-virtual-virus-to-study-covid-19/)
     - [Pinakait: A ‘safe’ virus that transfers via Bluetooth created to predict Covid-like virus spread](https://www.pinakait.com/a-safe-virus-that-transfers-via-bluetooth-created-to-predict-covid-like-virus-spread/)
@@ -143,6 +142,15 @@ SciML. If you would like your institution's tools added to the list,
 - [2018 Julia Community Award (Chris Rackauckas)](https://julialang.org/blog/2018/09/julia-community-prizes/): For development of SciML (at the time, named JuliaDiffEq).
 - [DSWeb 2018 Dynamical Systems Software Contest](https://dsweb.siam.org/The-Magazine/All-Issues/winners-of-the-dsweb-2018-software-contest): Runner up is DifferentialEquations.jl and a winner is DynamicalSystems.jl which utilizes DifferentialEquations.jl.
 - [2017: Best Speaker Award, Tsukuba Global Science Week (Chris Rackauckas)](): Presentation on StochasticDiffEq.jl for systems biology.
+
+## Podcasts and Developer Interviews
+
+- [Notamonadtutorial.com: Modeling complexity with Symbolics.jl and ModelingToolkit.jl (Interview with Chris Rackauckas)](https://notamonadtutorial.com/modeling-complexity-with-symbolics-jl-and-modelingtoolkit-jl-df923129996b?gi=76fd905cb0c0)
+- [Jousef Murad: Chris Rackauckas - Physics-Informed Neural Networks (PINNs) | Podcast #42](https://www.youtube.com/watch?v=OmySUTFwh2g)
+- [The Stardust Podcast #7 - Christopher Rackauckas](https://youtu.be/uoz08EqSpmY)
+- [JuliaLang AMA: Ask us anything, SciML edition: Chris Rackauckas and Yingbo Ma](https://youtu.be/-ykT5EcBfck)
+- [ACEMS Podcast, Episode 25: Safe Blues](https://acems.org.au/podcast/episode-25-Safe-Blues)
+- [Notamonadtutorial.com: Scientific Machine Learning with Julia: the SciML ecosystem (Interview with Chris Rackauckas)](https://notamonadtutorial.com/scientific-machine-learning-with-julia-the-sciml-ecosystem-b22802951c8a)
 
 ## External Blog Posts and Presentations
 
