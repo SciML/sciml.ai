@@ -12,7 +12,7 @@ where the SciML tools have been employed. If you would like your
 own work added to this list,
 [please open a pull request](https://github.com/SciML/sciml.ai).
 
-# External Applications Libraries
+# External Applications Libraries and Large Projects using SciML
 
 There are many external libraries which connect and utilize SciML
 utilities under the hood. The following an incomplete list of software
@@ -29,6 +29,7 @@ SciML. If you would like your institution's tools added to the list,
 - [CMU+MIT+Citrine: Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
 - [Los Alamos National Lab: Model Analysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
 - [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
+- [Safe Blues: A Method for Estimation and Control in the Fight Against COVID-19](https://safeblues.org/)
 
 ## Press Coverage Featuring SciML
 
@@ -36,6 +37,33 @@ SciML. If you would like your institution's tools added to the list,
     - [Gizmodo: Researchers Are Working on a Virtual Phone Virus That 'Mimics' the Spread of Covid-19](https://gizmodo.com/researchers-are-working-on-a-virtual-phone-virus-that-m-1846478050)
     - [El Universal: Covid-19. Crean virus virtual que se propaga por Bluetooth en tu móvil](https://www.youtube.com/watch?v=O0CjFjc7WeE)
     - [DailyMail: A virtual Bluetooth virus spread between SMARTPHONES 'could help us track Covid-19 more accurately', study claims](https://www.dailymail.co.uk/sciencetech/article-9355661/Virtual-Bluetooth-virus-spreads-SMARTPHONES-learn-disease-spread.html0)
+    - [QS Noticias: Crearon un virus que infecta smartphones cercanos para probar cómo funciona el distanciamiento social](https://qsnoticias.mx/crearon-un-virus-que-infecta-smartphones-cercanos-para-probar-como-funciona-el-distanciamiento-social/)
+    - [MarseilleNews.net: Ce virus virtuel transmettant Bluetooth peut imiter la propagation du COVID](https://www.marseillenews.net/ce-virus-virtuel-transmettant-bluetooth-peut-imiter-la-propagation-du-covid/)
+    - [la100 Cienradios: Crearon un “virus digital” que podría rastrear el coronavirus](https://la100.cienradios.com/salud-y-bienestar/crearon-un-virus-digital-que-podria-rastrear-el-coronavirus/)
+    - [Mobile Bulgaria: Виртуален вирус пресъздава моделите на разпространение на COVID-19](https://mobilebulgaria.com/news/virtualen-virus-presazdava-modelite-na-razprostranenie-na-covid-19)
+    - [LaMinute.info: Le virus du téléphone virtuel «  imite  » la propagation de Covid-19](https://laminute.info/2021/03/15/le-virus-du-telephone-virtuel-imite-la-propagation-de-covid-19/)
+    - [Manlokam: ఇదొక స్పెషల్‌ వైరస్.. బ్లూటూత్ ద్వారా పనిచేస్తూ కోవిడ్‌ను గుర్తిస్తుంది..](https://manalokam.com/news/international/safe-blues-virtual-virus-created-by-scientists-to-track-covid-19.html)
+    - [ambitio: Propagan un virus virtual que imita al coronavirus](https://www.ambito.com/informacion-general/tecnologia/propagan-un-virus-virtual-que-imita-al-coronavirus-n5177147)
+    - [El Pais: DESARROLLAN UN VIRUS PARA MÓVILES QUE SE PROPAGA COMO SI FUERA LA COVID-19](https://cincodias.elpais.com/cincodias/2021/03/15/lifestyle/1615800877_230408.html)
+    - [La Repubblica: Il virus 'virtuale' mima Covid e sa dire come viaggia l'epidemia](https://www.repubblica.it/salute/2021/03/12/news/vi_presento_il_virus_virtuale_che_si_comporta_come_covid_-291970019/)
+    - [Amarujala.com: ब्लूटूथ से फोन में फैलता है यह खास वायरस, कोरोना ट्रैक करने में करता है मदद](https://www.amarujala.com/technology/tech-diary/researchers-develop-bluetooth-transmitting-virus-to-improve-covid-19-tracking-accuracy-called-safe-blues)
+    - [pplware: “Vírus virtual” transmite-se entre smartphones ao estilo do coronavírus](https://pplware.sapo.pt/smartphones-tablets/virus-virtual-transmite-se-entre-smartphones-ao-estilo-do-coronavirus/)
+    - [Spider's Web: Naukowcy chcą stworzyć cyfrowego koronawirusa. Pomoże w monitorowaniu tego biologicznego](https://spidersweb.pl/2021/03/cyfrowy-koronawirus-safe-blues.html)
+    - [LokMat News 18: ब्लूट्यूथने फोनमध्ये पसरतो हा खास व्हायरस; Coronavirus ट्रॅक करण्यासाठी होते मदत](https://lokmat.news18.com/technology/researchers-have-now-developed-a-safe-blues-bluetooth-contact-tracing-virus-that-can-alert-people-via-bluetooth-about-coronavirus-mhkb-531168.html)
+    - [Ajel News: فيروس افتراضي ينتقل بالبلوتوث يساعد في تتبع انتشار «كورونا»](https://ajel.sa/NC6B4n/)
+    - [4gnews: Investigadores criam "coronavirus digital" transmissível aos smartphones por Bluetooth](https://4gnews.pt/investigadores-criam-coronavirus-digital-transmissivel-aos-smartphones-por-bluetooth/)
+    - [Upvarta News: ब्लूटूथ से मोबाइल में दस्तक देगा ये खास Virus , जानें क्या है वर्चुअल वायरस](https://upvartanews.com/national/this-special-virus-will-knock-in-mobile-from-bluetooth/146308/)
+    - [Youm7: تطوير فيروس افتراضى ينتشر عبر البلوتوث بين الهواتف الذكية لتتبع كورونا](https://www.youm7.com/story/2021/3/14/%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D9%81%D9%8A%D8%B1%D9%88%D8%B3-%D8%A7%D9%81%D8%AA%D8%B1%D8%A7%D8%B6%D9%89-%D9%8A%D9%86%D8%AA%D8%B4%D8%B1-%D8%B9%D8%A8%D8%B1-%D8%A7%D9%84%D8%A8%D9%84%D9%88%D8%AA%D9%88%D8%AB-%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D9%87%D9%88%D8%A7%D8%AA%D9%81-%D8%A7%D9%84%D8%B0%D9%83%D9%8A%D8%A9-%D9%84%D8%AA%D8%AA%D8%A8%D8%B9/5244015)
+    - [El Universal: Covid-19. Crean virus virtual que se propaga por Bluetooth en tu móvil](https://www.eluniversal.com.mx/ciencia-y-salud/covid-19-crean-virus-virtual-que-se-propaga-por-bluetooth)
+    - [MobileSyrup: Researchers develop virtual mobile virus to better understand COVID-19 spread](https://mobilesyrup.com/2021/03/16/researchers-develop-virtual-mobile-virus-to-better-understand-covid-19-spread/)
+    - [20 Minutos: 'Safe Blues', el nuevo virus virtual que se contagia entre móviles imitando al coronavirus](https://www.20minutos.es/noticia/4620998/0/safe-blues-es-el-nuevo-virus-virtual-que-se-contagia-entre-moviles-su-propagacion-es-igual-al-coronavirus/?autoref=true)
+    - [LaFM: Aparece virus que infecta smartphones de manera 'similar' al coronavirus](https://www.lafm.com.co/tecnologia/aparece-virus-que-infecta-smartphones-de-manera-similar-al-coronavirus)
+    - [DeobreProgramy: Safe Blues: wirus na smartfony ma pomóc w badaniu COVID-19](https://www.dobreprogramy.pl/Safe-Blues-wirus-na-smartfony-ma-pomoc-w-badaniu-COVID19,News,113881.html)
+    - [Playtech.ro: Virusul pentru telefon care „imită” răspândirea COVID-19. Ce e Safe Blues și cum funcționează](https://playtech.ro/2021/virusul-pentru-telefon-care-imita-raspandirea-covid-19-ce-e-safe-blues-si-cum-functioneaza/)
+    - [Pingvin.pro: Віртуальний вірус для смартфонів допоможе оцінити поширення COVID-19](https://pingvin.pro/gadgets/news-gadgets/virtualnyj-virus-dlya-smartfoniv-dopomozhe-oczinyty-poshyrennya-covid-19.html)
+    - [SecurityLab.ru: Передающийся по Bluetooth вирус поможет в оценке распространения COVID-19](https://www.securitylab.ru/news/517476.php)
+    - [Explica.co: ‘Safe Blues’, the new virtual virus that spreads between mobiles imitating the coronavirus](https://www.explica.co/safe-blues-the-new-virtual-virus-that-spreads-between-mobiles-imitating-the-coronavirus/)
+    - [juventudrebelde.cu: Desarrollan virus de teléfonos móviles que se replica por cercanía, como el SARSCov-2](http://www.juventudrebelde.cu/ciencia-tecnica/2021-03-16/desarrollan-virus-de-telefonos-moviles-que-se-replica-por-cercania-como-el-sarscov-2)
     - [The Next Web: Scientists want to unleash a Bluetooth-powered ‘virtual virus’ to study COVID-19](https://thenextweb.com/science/2021/03/16/scientists-unleash-a-bluetooth-powered-virtual-virus-to-study-covid-19/)
     - [Pinakait: A ‘safe’ virus that transfers via Bluetooth created to predict Covid-like virus spread](https://www.pinakait.com/a-safe-virus-that-transfers-via-bluetooth-created-to-predict-covid-like-virus-spread/)
     - [WoahTech: Bluetooth Transmitting ‘Safe’ Virus Developed To Track COVID Spread](https://woahtech.com/safe-blues-virtual-virus/)
@@ -116,6 +144,15 @@ SciML. If you would like your institution's tools added to the list,
 - [2018 Julia Community Award (Chris Rackauckas)](https://julialang.org/blog/2018/09/julia-community-prizes/): For development of SciML (at the time, named JuliaDiffEq).
 - [DSWeb 2018 Dynamical Systems Software Contest](https://dsweb.siam.org/The-Magazine/All-Issues/winners-of-the-dsweb-2018-software-contest): Runner up is DifferentialEquations.jl and a winner is DynamicalSystems.jl which utilizes DifferentialEquations.jl.
 - [2017: Best Speaker Award, Tsukuba Global Science Week (Chris Rackauckas)](): Presentation on StochasticDiffEq.jl for systems biology.
+
+## Podcasts and Developer Interviews
+
+- [Notamonadtutorial.com: Modeling complexity with Symbolics.jl and ModelingToolkit.jl (Interview with Chris Rackauckas)](https://notamonadtutorial.com/modeling-complexity-with-symbolics-jl-and-modelingtoolkit-jl-df923129996b?gi=76fd905cb0c0)
+- [Jousef Murad: Chris Rackauckas - Physics-Informed Neural Networks (PINNs) | Podcast #42](https://www.youtube.com/watch?v=OmySUTFwh2g)
+- [The Stardust Podcast #7 - Christopher Rackauckas](https://youtu.be/uoz08EqSpmY)
+- [JuliaLang AMA: Ask us anything, SciML edition: Chris Rackauckas and Yingbo Ma](https://youtu.be/-ykT5EcBfck)
+- [ACEMS Podcast, Episode 25: Safe Blues](https://acems.org.au/podcast/episode-25-Safe-Blues)
+- [Notamonadtutorial.com: Scientific Machine Learning with Julia: the SciML ecosystem (Interview with Chris Rackauckas)](https://notamonadtutorial.com/scientific-machine-learning-with-julia-the-sciml-ecosystem-b22802951c8a)
 
 ## External Blog Posts and Presentations
 
