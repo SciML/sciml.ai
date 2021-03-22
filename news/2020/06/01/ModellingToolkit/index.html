@@ -1,4 +1,4 @@
-<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/hypertext.css"> <link rel=icon  href="/assets/favicon.png"> <title> SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling </title> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90474609-2"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-90474609-2'); </script> <header> <h1><b><center>SciML Scientific Machine Learning Software</center></b></h1> <nav> | <a href="/" class=current >Home</a> | <a href="/news/">News</a> | <a href="/roadmap/">Roadmap</a> | <a href="/citing/">Citing</a> | <a href="/showcase/">Showcase</a> | <a href="/challenge/">Challenge Problems</a> | <a href="/community/">Community</a> <hr/> | <a href="/documentation/">Documentation</a> | <a href="/dev/">Dev Programs</a> | <a href="/governance/">Governance</a> | <a href="https://benchmarks.sciml.ai/">Benchmarks</a> | <a href="https://github.com/SciML/">Source Code</a> | <a href="https://numfocus.org/donate-to-sciml">Donate</a> </nav> </header> <div class=franklin-content ><h1 id=sciml_ecosystem_update_auto-parallelism_and_component-based_modeling ><a href="#sciml_ecosystem_update_auto-parallelism_and_component-based_modeling" class=header-anchor >SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling</a></h1> <p>Another month and another set of SciML updates&#33; This month we have been focusing a lot on simplifying our interfaces and cleaning our tutorials. We can demonstrate that <em>no user-intervention is required for adjoints</em>. Also, the ModelingToolkit.jl symbolic modeling language has really come into fruition, allowing component-based models and automated parallelism. Indeed, let&#39;s jump right into an example.</p> <h2 id=modelingtoolkit_daes_and_component-based_modeling ><a href="#modelingtoolkit_daes_and_component-based_modeling" class=header-anchor >ModelingToolkit DAEs and Component-Based Modeling</a></h2> <p><a href="https://github.com/SciML/ModelingToolkit.jl">ModelingToolkit.jl</a> has added the ability to build differential-algebraic equations through acausal component-based models. As an example, let&#39;s say we built two Lorenz equations:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> ModelingToolkit, OrdinaryDiffEq
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/hypertext.css"> <link rel=icon  href="/assets/favicon.png"> <title> SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling </title> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90474609-2"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-90474609-2'); </script> <header> <h1><b><center>SciML Scientific Machine Learning Software</center></b></h1> <nav> | <a href="/" class=current >Home</a> | <a href="/news/">News</a> | <a href="/roadmap/">Roadmap</a> | <a href="/citing/">Citing</a> | <a href="/showcase/">Showcase</a> | <a href="/challenge/">Challenge Problems</a> | <a href="/community/">Community</a> <hr/> | <a href="/documentation/">Documentation</a> | <a href="/dev/">Dev Programs</a> | <a href="/governance/">Governance</a> | <a href="https://benchmarks.sciml.ai/">Benchmarks</a> | <a href="https://github.com/SciML/">Source Code</a> | <a href="https://numfocus.org/donate-to-sciml">Donate</a> </nav> </header> <div class=franklin-content ><h1 id=sciml_ecosystem_update_auto-parallelism_and_component-based_modeling ><a href="#sciml_ecosystem_update_auto-parallelism_and_component-based_modeling" class=header-anchor >SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling</a></h1> <p>Another month and another set of SciML updates&#33; This month we have been focusing a lot on simplifying our interfaces and cleaning our tutorials. We can demonstrate that <em>no user-intervention is required for adjoints</em>. Also, the ModelingToolkit.jl symbolic modeling language has really come into fruition, allowing component-based models and automated parallelism. Indeed, let&#39;s jump right into an example.</p> <h2 id=modelingtoolkit_daes_and_component-based_modeling ><a href="#modelingtoolkit_daes_and_component-based_modeling" class=header-anchor >ModelingToolkit DAEs and Component-Based Modeling</a></h2> <p><a href="https://github.com/SciML/ModelingToolkit.jl">ModelingToolkit.jl</a> has added the ability to build differential-algebraic equations through acausal component-based models. As an example, let&#39;s say we built two Lorenz equations:</p> Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated. Deprecated as of 10.7.0. Please use highlight(code, options) instead. https://github.com/highlightjs/highlight.js/issues/2277 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> ModelingToolkit, OrdinaryDiffEq
 
 <span class=hljs-meta >@parameters</span> t σ ρ β
 <span class=hljs-meta >@variables</span> x(t) y(t) z(t)
@@ -9,7 +9,7 @@ eqs = [D(x) ~ σ*(y-x),
        D(z) ~ x*y - β*z]
 
 lorenz1 = ODESystem(eqs,name=:lorenz1)
-lorenz2 = ODESystem(eqs,name=:lorenz2)</code></pre> <p>We can then define an implicit equation that couples the two equations together and solve the system:</p> <pre><code class="julia hljs"><span class=hljs-meta >@variables</span> a
+lorenz2 = ODESystem(eqs,name=:lorenz2)</code></pre> <p>We can then define an implicit equation that couples the two equations together and solve the system:</p> Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated. Deprecated as of 10.7.0. Please use highlight(code, options) instead. https://github.com/highlightjs/highlight.js/issues/2277 <pre><code class="julia hljs"><span class=hljs-meta >@variables</span> a
 <span class=hljs-meta >@parameters</span> γ
 connections = [<span class=hljs-number >0</span> ~ lorenz1.x + lorenz2.y + a*γ]
 connected = ODESystem(connections,t,[a],[γ],systems=[lorenz1,lorenz2])
@@ -34,20 +34,29 @@ tspan = (<span class=hljs-number >0.0</span>,<span class=hljs-number >100.0</spa
 prob = ODEProblem(connected,u0,tspan,p)
 sol = solve(prob,Rodas5())
 
-<span class=hljs-keyword >using</span> Plots; plot(sol,vars=(a,lorenz1.x,lorenz2.z))</code></pre> <p><img src="https://user-images.githubusercontent.com/1814174/79229194-9e71a780-7e30-11ea-9f93-bfa762eb8dfb.png" alt="" /></p> <p>Because of this, one can build up independent components and start tying them together to make large complex models. We plan to start building a comprehensive model library to help users easily generate large-scale models.</p> <h2 id=modelingtoolkit_compiler_targets_c_stan_and_matlab ><a href="#modelingtoolkit_compiler_targets_c_stan_and_matlab" class=header-anchor >ModelingToolkit Compiler targets: C, Stan, and MATLAB</a></h2> <p>We have added the ability to specify compiler targets from ModelingToolkit. If you have a model specified in its symbolic language, it can generate code for C, Stan, and MATLAB. For example, take the Lotka-Volterra equations:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> ModelingToolkit, Test
+<span class=hljs-keyword >using</span> Plots; plot(sol,vars=(a,lorenz1.x,lorenz2.z))</code></pre> <p><img src="https://user-images.githubusercontent.com/1814174/79229194-9e71a780-7e30-11ea-9f93-bfa762eb8dfb.png" alt="" /></p> <p>Because of this, one can build up independent components and start tying them together to make large complex models. We plan to start building a comprehensive model library to help users easily generate large-scale models.</p> <h2 id=modelingtoolkit_compiler_targets_c_stan_and_matlab ><a href="#modelingtoolkit_compiler_targets_c_stan_and_matlab" class=header-anchor >ModelingToolkit Compiler targets: C, Stan, and MATLAB</a></h2> <p>We have added the ability to specify compiler targets from ModelingToolkit. If you have a model specified in its symbolic language, it can generate code for C, Stan, and MATLAB. For example, take the Lotka-Volterra equations:</p> Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated. Deprecated as of 10.7.0. Please use highlight(code, options) instead. https://github.com/highlightjs/highlight.js/issues/2277 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> ModelingToolkit, Test
 <span class=hljs-meta >@parameters</span> t a
 <span class=hljs-meta >@variables</span> x(t) y(t)
 <span class=hljs-meta >@derivatives</span> D&#x27;~t
 eqs = [D(x) ~ a*x - x*y,
-       D(y) ~ -<span class=hljs-number >3</span>y + x*y]</code></pre> <p>Let&#39;s say we now need to deploy this onto an embedded system which only has a C compiler. We can have ModelingToolkit.jl generate the required C code:</p> <pre><code class="julia hljs">ModelingToolkit.build_function(eqs,[x,y],[a],t,target = ModelingToolkit.CTarget()) ==</code></pre>
+       D(y) ~ -<span class=hljs-number >3</span>y + x*y]</code></pre> <p>Let&#39;s say we now need to deploy this onto an embedded system which only has a C compiler. We can have ModelingToolkit.jl generate the required C code:</p> Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated. Deprecated as of 10.7.0. Please use highlight(code, options) instead. https://github.com/highlightjs/highlight.js/issues/2277 <pre><code class="julia hljs">ModelingToolkit.build_function(eqs,[x,y],[a],t,target = ModelingToolkit.CTarget()) ==</code></pre>
 <p>which gives:</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">void diffeqf(double* internal_var___du, double* internal_var___u, double* internal_var___p, t) {
   internal_var___du[<span class=hljs-number >1</span>] = internal_var___p[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >1</span>] - internal_var___u[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >2</span>];
   internal_var___du[<span class=hljs-number >2</span>] = -<span class=hljs-number >3</span> * internal_var___u[<span class=hljs-number >2</span>] + internal_var___u[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >2</span>];
 }</code></pre>
 <p>Now let&#39;s say we needed to use Stan for some probabilistic programming. That&#39;s as simple as:</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">ModelingToolkit.build_function(eqs,convert.(Variable,[x,y]),convert.(Variable,[a]),t,target = ModelingToolkit.StanTarget()) ==</code></pre>
 <p>which gives:</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">real[] diffeqf(real t,real[] internal_var___u,real[] internal_var___p,real[] x_r,int[] x_i) {
   real internal_var___du[<span class=hljs-number >2</span>];
   internal_var___du[<span class=hljs-number >1</span>] = internal_var___p[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >1</span>] - internal_var___u[<span class=hljs-number >1</span>] * internal_var___u[<span class=hljs-number >2</span>];
@@ -57,6 +66,9 @@ eqs = [D(x) ~ a*x - x*y,
 <p>When you mix this with the fact that code can automatically be converted to ModelingToolkit, this gives a way to transpile mathematical model code from Julia to other languages, making it easy to develop and test models in Julia and finally transpile and recompile the final model for embedded platforms. However, this automatic transformation can be used in another way...</p>
 <h2 id=modelingtoolkit_automatic_parallelism ><a href="#modelingtoolkit_automatic_parallelism" class=header-anchor >ModelingToolkit Automatic Parallelism</a></h2>
 <p>ModelingToolkit now has automatic parallelism on the generated model code. As an example, let&#39;s automatically translate a discretized partial differential equation solver code into ModelingToolkit form:</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> ModelingToolkit, LinearAlgebra, SparseArrays
 
 <span class=hljs-comment ># Define the constants for the PDE</span>
@@ -99,15 +111,24 @@ My[<span class=hljs-keyword >end</span>,<span class=hljs-keyword >end</span>-<sp
   @. dC = α₃ - β₃*C + r₁*A*B - r₂*C
 <span class=hljs-keyword >end</span></code></pre>
 <p>Now let&#39;s symbolically calculate the sparse Jacobian of the function <code>f&#33;</code>. We can do so by tracing with the ModelingToolkit variables:</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-meta >@variables</span> du[<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:<span class=hljs-number >3</span>] u[<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:<span class=hljs-number >3</span>] MyA[<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:N] AMx[<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:N] DA[<span class=hljs-number >1</span>:N,<span class=hljs-number >1</span>:N]
 f!(du,u,<span class=hljs-literal >nothing</span>,<span class=hljs-number >0.0</span>)
 jac = sparse(ModelingToolkit.jacobian(vec(du),vec(u),simplify=<span class=hljs-literal >false</span>))</code></pre>
 <p>Now that we&#39;ve automatically translated this into the symbolic system and calculated the sparse Jacobian, we can tell it to generate an automatically multithreaded Julia code:</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">multithreadedjac = eval(ModelingToolkit.build_function(vec(jac),u,multithread=<span class=hljs-literal >true</span>)[<span class=hljs-number >2</span>])</code></pre>
 <p>The output is omitted since it is quite large, but the massive speedup over the original form since <strong>the sparsity pattern has been automatically computed and an optimal sparse multithreaded Jacobian function has been generated for use with DifferentialEquations.jl, NLsolve.jl, and whatever other mathematical library you wish to use it with</strong>.</p>
 <p>Indeed, this gives about a 4x speedup on a computer with 4 threads, exactly as you&#39;d expect.</p>
 <h2 id=highlight_sir-julia_model_simulation_and_inference_repository ><a href="#highlight_sir-julia_model_simulation_and_inference_repository" class=header-anchor >Highlight: sir-julia Model Simulation and Inference Repository</a></h2>
 <p>Simon Frost, Principal Data Scientist at Microsoft Health, published an <a href="https://github.com/epirecipes/sir-julia">epidemic modeling recipes library, sir-julia</a> which heavily features SciML and its tooling. There are many aspects to note, including integration with probabilistic programming for Bayesian inference. Indeed, the use of DifferentialEquations.jl inside of a Turing.jl macro is simply to use <code>solve</code> inside of the Turing library: no special tricks or techniques required. For example, this looks like:</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-meta >@model</span> bayes_sir(y) = <span class=hljs-keyword >begin</span>
   <span class=hljs-comment ># Calculate number of timepoints</span>
   l = length(y)
@@ -134,15 +155,27 @@ jac = sparse(ModelingToolkit.jacobian(vec(du),vec(u),simplify=<span class=hljs-l
 <p>For more examples, please consult the repository which is chock full of training examples. However, this demonstration leads us to your next major release note:</p>
 <h2 id=the_end_of_concrete_solve ><a href="#the_end_of_concrete_solve" class=header-anchor >The End of <code>concrete_solve</code></a></h2>
 <p>It&#39;s finally here: <code>concrete_solve</code> has been deprecated for, you guessed it, <code>solve</code>. If you want to solve an ODE with <code>Tsit5&#40;&#41;</code>, how do you write it?</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">solve(prob,Tsit5())</code></pre>
 <p>If you want to differentiate the solution to an ODE with <code>Tsit5&#40;&#41;</code>, how do you write it?</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">solve(prob,Tsit5())</code></pre>
 <p>If you want to use Bayesian inference on <code>Tsit5&#40;&#41;</code> solutions, how do you write it?</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">solve(prob,Tsit5())</code></pre>
 <p>That is correct: for both forward and reverse mode automatic differentiation, there is no modification that is required. When forward-mode automatic differentiation libraries are used, type handling will automatically promote to ensure the solution is differentiated properly. When reverse-mode automatic differentiation is used, the backpropogation will automatically be replaced with <a href="https://diffeq.sciml.ai/latest/analysis/sensitivity/#solve-Differentiation-Examples-1">adjoint sensitivity methods</a> which can be controlled through the <code>sensealg</code> keyword argument. <strong>The result is full performance and flexibility, but no code changes required</strong>.</p>
 <p>This is a step up from where we were. In the first version of DiffEqFlux.jl, we required the use of special functions like <code>diffeq_adjoint</code> to use the adjoint methods. Then we better integrated by having <code>concrete_solve</code>, which was a neutered version of <code>solve</code> but would work perfectly in the AD contexts. Now, <code>solve</code> does it all, and so there is no other function to use.</p>
 <h3 id=demonstration_stiff_neural_ode_with_nested_forward_reverse_and_adjoint_ad ><a href="#demonstration_stiff_neural_ode_with_nested_forward_reverse_and_adjoint_ad" class=header-anchor >Demonstration: Stiff Neural ODE with Nested Forward, Reverse, and Adjoint AD</a></h3>
 <p>As a quick demonstration, here&#39;s the use of checkpointed interpolating adjoints over a stiff ODE solver.</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> OrdinaryDiffEq, Flux, DiffEqSensitivity
 model = Chain(Dense(<span class=hljs-number >2</span>, <span class=hljs-number >50</span>, tanh), Dense(<span class=hljs-number >50</span>, <span class=hljs-number >2</span>))
 p, re = Flux.destructure(model)
