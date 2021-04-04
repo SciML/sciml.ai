@@ -3,7 +3,7 @@
 
 # SciML Scientific Machine Learning Projects – Google Summer of Code
 
-### Physics-Informed Neural Networks (PINNs) and Solving Differential Equations with Deep Learning
+## Physics-Informed Neural Networks (PINNs) and Solving Differential Equations with Deep Learning
 
 Neural networks can be used as a method for efficiently solving difficult partial
 differential equations. Recently this strategy has been dubbed [physics-informed neural networks](https://www.sciencedirect.com/science/article/pii/S0021999118307125)
@@ -30,7 +30,7 @@ graduate research in the field.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Kirill Zubov](https://github.com/KirillZubov)
 
-### Improvements to Neural and Universal Differential Equations
+## Improvements to Neural and Universal Differential Equations
 
 [Neural ordinary differential equations](https://arxiv.org/abs/1806.07366) have
 been shown to be a way to use machine learning to learn differential equation
@@ -62,7 +62,7 @@ differential equations.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
-### Accelerating optimization via machine learning with surrogate models: Surrogates.jl
+## Accelerating optimization via machine learning with surrogate models: Surrogates.jl
 
 In many cases, when attempting to optimize a function `f(p)` each calculation
 of `f` is very expensive. For example, evaluating `f` may require solving a
@@ -75,9 +75,9 @@ to accelerate optimization.
 
 Advanced techniques [utilize radial basis functions](https://www.cambridge.org/core/journals/acta-numerica/article/kernel-techniques-from-machine-learning-to-meshless-methods/00686923110F799A1537C4F02BBAAE8E) and Gaussian
 processes in order to interpolate to new parameters to estimate `f` in areas
-which have not been sampled. [Adaptive training techniques](http%3A%2F%2Fwww.ressources-actuarielles.net%2FEXT%2FISFA%2F1226.nsf%2F9c8e3fd4d8874d60c1257052003eced6%2Fe7dc33e4da12c5a9c12576d8002e442b%2F%24FILE%2FJones01.pdf) explore how to pick new areas to evaluate `f` to better hone in on global optima. 
+which have not been sampled. [Adaptive training techniques](http%3A%2F%2Fwww.ressources-actuarielles.net%2FEXT%2FISFA%2F1226.nsf%2F9c8e3fd4d8874d60c1257052003eced6%2Fe7dc33e4da12c5a9c12576d8002e442b%2F%24FILE%2FJones01.pdf) explore how to pick new areas to evaluate `f` to better hone in on global optima.
 
-The purpose of this project is to further improve Surrogates.jl by: adding new surrogate models, adding new optimization techniques, showcasing compatibility with the SciML ecosystem and fixing unwanted behaviour with some current surrogate models. 
+The purpose of this project is to further improve Surrogates.jl by: adding new surrogate models, adding new optimization techniques, showcasing compatibility with the SciML ecosystem and fixing unwanted behaviour with some current surrogate models.
 
 **Recommended Skills**: Background knowledge of standard machine learning,
 statistical, or optimization techniques. Strong knowledge of numerical analysis
@@ -87,7 +87,7 @@ is helpful but not required.
 
 **Mentors**: [Ludovico Bessi](https:https://github.com/ludoro), [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
-### Parameter estimation for nonlinear dynamical models
+## Parameter estimation for nonlinear dynamical models
 
 Machine learning has become a popular tool for understanding data, but scientists
 typically understand the world through the lens of physical laws and their
@@ -151,21 +151,3 @@ Julia knowledge is preferred but not strictly required.
 **Expected Results**: Efficient and high-quality implementations of adjoints for Zygote.jl over FEniCS.jl functions.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
-
-## Multi-Start Optimization Methods
-
-While standard machine learning can be shown to be "safe" for local optimization,
-scientific machine learning can sometimes require the use of globalizing techniques
-to improve the optimization process. Hybrid methods, known as multistart optimization
-methods, glue together a local optimization technique together with a parameter
-search over a large space of possible initial points. The purpose of this project
-would be to take a [MultistartOptimization.jl](https://github.com/tpapp/MultistartOptimization.jl)
-as a starting point and create a fully featured set of multistart optimization
-tools for use with [Optim.jl](https://github.com/JuliaNLSolvers/Optim.jl)
-
-**Recommended Skills**: A basic background in optimization. Having previous
-Julia knowledge is preferred but not strictly required.
-
-**Expected Results**: Efficient and high-quality implementations of multistart optimization methods.
-
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Patrick Kofod Mogensen](https://github.com/pkofod)
