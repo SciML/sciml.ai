@@ -40,6 +40,7 @@ SciML. If you would like your institution's tools added to the list,
     - [DailyMail: A virtual Bluetooth virus spread between SMARTPHONES 'could help us track Covid-19 more accurately', study claims](https://www.dailymail.co.uk/sciencetech/article-9355661/Virtual-Bluetooth-virus-spreads-SMARTPHONES-learn-disease-spread.html0)
     - [QS Noticias: Crearon un virus que infecta smartphones cercanos para probar cómo funciona el distanciamiento social](https://qsnoticias.mx/crearon-un-virus-que-infecta-smartphones-cercanos-para-probar-como-funciona-el-distanciamiento-social/)
     - [MarseilleNews.net: Ce virus virtuel transmettant Bluetooth peut imiter la propagation du COVID](https://www.marseillenews.net/ce-virus-virtuel-transmettant-bluetooth-peut-imiter-la-propagation-du-covid/)
+    - [MIT CCE News: Researchers develop Bluetooth powered “virtual virus” to track COVID-19’s spread](https://cee.mit.edu/researchers-develop-bluetooth-powered-virtual-virus-to-track-covid-19s-spread/)
     - [la100 Cienradios: Crearon un “virus digital” que podría rastrear el coronavirus](https://la100.cienradios.com/salud-y-bienestar/crearon-un-virus-digital-que-podria-rastrear-el-coronavirus/)
     - [Mobile Bulgaria: Виртуален вирус пресъздава моделите на разпространение на COVID-19](https://mobilebulgaria.com/news/virtualen-virus-presazdava-modelite-na-razprostranenie-na-covid-19)
     - [LaMinute.info: Le virus du téléphone virtuel «  imite  » la propagation de Covid-19](https://laminute.info/2021/03/15/le-virus-du-telephone-virtuel-imite-la-propagation-de-covid-19/)
