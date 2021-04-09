@@ -34,6 +34,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Coverage Featuring SciML
 
+- [United Therapeutics uses SciML for CFD/PDEs](https://juliacomputing.com/case-studies/united-therapeutics/)
 - SafeBlues Release (3/16/2021) ([analysis done with SciML](https://github.com/SafeBlues/SafeBlues-Deep-Learning))
     - [Gizmodo: Researchers Are Working on a Virtual Phone Virus That 'Mimics' the Spread of Covid-19](https://gizmodo.com/researchers-are-working-on-a-virtual-phone-virus-that-m-1846478050)
     - [El Universal: Covid-19. Crean virus virtual que se propaga por Bluetooth en tu móvil](https://www.youtube.com/watch?v=O0CjFjc7WeE)
