@@ -24,6 +24,7 @@ SciML. If you would like your institution's tools added to the list,
 - [QuantumOptics](https://qojulia.org/)
 - [New York Federal Reserve Bank](https://frbny-dsge.github.io/DSGE.jl/latest/)
 - [Julia Robotics](https://juliarobotics.org/)
+- [Julia Computing: JuliaSim](https://juliacomputing.com/products/juliasim/)
 - [Pumas-AI: Pharmaceutical Modeling and Simulation](https://pumas.ai/)
 - [Brazilian National Institute for Space Research (INPE)](https://github.com/JuliaSpace/SatelliteToolbox.jl)
     - [Julia and the satellite Amazonia-1](https://discourse.julialang.org/t/julia-and-the-satellite-amazonia-1/57541)
@@ -34,6 +35,9 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Coverage Featuring SciML
 
+- [Julia Computing Launches JuliaSim for Scientific ML In Cloud](https://www.hpcwire.com/off-the-wire/julia-computing-launches-juliasim-for-scientific-ml-in-cloud/)
+- [Julia Computing Launches JuliaSim For Scientific Machine Learning In Cloud](https://analyticsindiamag.com/julia-computing-launches-juliasim-for-scientific-machine-learning-in-cloud/)
+- [Julia Computing introduces JuliaSim, next-generation cloud-based simulation platform](https://cloud7.news/software/julia-computing-introduces-juliasim-next-generation-cloud-based-simulation-platform/)
 - [United Therapeutics uses SciML for CFD/PDEs](https://juliacomputing.com/case-studies/united-therapeutics/)
 - SafeBlues Release (3/16/2021) ([analysis done with SciML](https://github.com/SafeBlues/SafeBlues-Deep-Learning))
     - [Gizmodo: Researchers Are Working on a Virtual Phone Virus That 'Mimics' the Spread of Covid-19](https://gizmodo.com/researchers-are-working-on-a-virtual-phone-virus-that-m-1846478050)
