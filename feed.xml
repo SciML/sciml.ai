@@ -1,432 +1,916 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-<channel>
-  <title><![CDATA[SciML]]></title>
-  <description><![CDATA[Website for SciML Scientific Machine Learning Organization
-]]></description>
-  <link>https://sciml.ai/</link>
-  <atom:link href="https://sciml.ai/feed.xml" rel="self" type="application/rss+xml" />
-  <item>
-    <title><![CDATA[SciML Ecosystem Update: GalacticOptim, GlobalSensitivity, Tutorials, and Documentation]]></title>
-    <link>https://sciml.ai/news/2021/02/05/galacticoptim/</link>
-    <description><![CDATA[SciML Ecosystem Update: GalacticOptim, GlobalSensitivity, Tutorials, and Documentation
-<br><a href="https://sciml.ai/news/2021/02/05/galacticoptim/">Read more</a>]]></description>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  SciML  ]]>
+    </title>
+    <link> https://sciml.ai </link>
+    <description>
+      <![CDATA[  Website for SciML Scientific Machine Learning Organization  ]]>
+    </description>
+    <atom:link
+      href="https://sciml.ai/feed.xml"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  SciML Ecosystem Update: GalacticOptim, GlobalSensitivity, Tutorials, and Documentation  ]]>
+  </title>
+  <link> https://sciml.ai/news/2021/02/05/galacticoptim/index.html </link>
+  <guid> https://sciml.ai/news/2021/02/05/galacticoptim/index.html </guid>
+  <description>
+    <![CDATA[  SciML Ecosystem Update: GalacticOptim, GlobalSensitivity, Tutorials, and Documentation  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2021/02/05/galacticoptim/</guid>
-    <pubDate>Fri, 5 Feb 2021 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[SciML Ecosystem Update: Bayesian Neural ODEs, Virtual Brownian Trees, Parallel Batching and More]]></title>
-    <link>https://sciml.ai/news/2021/01/19/bayesian_neural_ode/</link>
-    <description><![CDATA[SciML Ecosystem Update: Bayesian Neural ODEs, Virtual Brownian Trees, Parallel Batching and More
-<br><a href="https://sciml.ai/news/2021/01/19/bayesian_neural_ode/">Read more</a>]]></description>
+  <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Ecosystem Update: Bayesian Neural ODEs, Virtual Brownian Trees, Parallel Batching and More  ]]>
+  </title>
+  <link> https://sciml.ai/news/2021/01/19/bayesian_neural_ode/index.html </link>
+  <guid> https://sciml.ai/news/2021/01/19/bayesian_neural_ode/index.html </guid>
+  <description>
+    <![CDATA[  SciML Ecosystem Update: Bayesian Neural ODEs, Virtual Brownian Trees, Parallel Batching and More  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2021/01/19/bayesian_neural_ode/</guid>
-    <pubDate>Tue, 19 Jan 2021 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ SciML Ecosystem Update: Koopman Optimization Under Uncertainty, Non-Commutative SDEs, GPUs in R, and More ]]></title>
-    <link>https://sciml.ai/news/2020/09/05/Koopman/</link>
-    <description><![CDATA[SciML Ecosystem Update: Koopman Optimization Under Uncertainty, Non-Commutative SDEs, GPUs in R, and More 
-<br><a href="https://sciml.ai/news/2020/09/05/Koopman/">Read more</a>]]></description>
+  <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Ecosystem Update: Koopman Optimization Under Uncertainty, Non-Commutative SDEs, GPUs in R, and More   ]]>
+  </title>
+  <link> https://sciml.ai/news/2020/09/05/Koopman/index.html </link>
+  <guid> https://sciml.ai/news/2020/09/05/Koopman/index.html </guid>
+  <description>
+    <![CDATA[  SciML Ecosystem Update: Koopman Optimization Under Uncertainty, Non-Commutative SDEs, GPUs in R, and More   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2020/09/05/Koopman/</guid>
-    <pubDate>Sat, 5 Sep 2020 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ SciML Ecosystem Update: Neural PDEs, Lie Groups, and Stochastic Delay Differential Equations]]></title>
-    <link>https://sciml.ai/news/2020/08/17/NeuralPDE/</link>
-    <description><![CDATA[SciML Ecosystem Update: Neural PDEs, Lie Groups, and Stochastic Delay Differential Equations
-<br><a href="https://sciml.ai/news/2020/08/17/NeuralPDE/">Read more</a>]]></description>
+  <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Ecosystem Update: Neural PDEs, Lie Groups, and Stochastic Delay Differential Equations  ]]>
+  </title>
+  <link> https://sciml.ai/news/2020/08/17/NeuralPDE/index.html </link>
+  <guid> https://sciml.ai/news/2020/08/17/NeuralPDE/index.html </guid>
+  <description>
+    <![CDATA[  SciML Ecosystem Update: Neural PDEs, Lie Groups, and Stochastic Delay Differential Equations  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2020/08/17/NeuralPDE/</guid>
-    <pubDate>Mon, 17 Aug 2020 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ SciML Ecosystem Update: SDE Adjoints, FFORD Layers, and Jump Diffusion]]></title>
-    <link>https://sciml.ai/news/2020/08/10/StochasticBonanza/</link>
-    <description><![CDATA[SciML Ecosystem Update: SDE Adjoints, FFORD Layers, and Jump Diffusion
-<br><a href="https://sciml.ai/news/2020/08/10/StochasticBonanza/">Read more</a>]]></description>
+  <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Ecosystem Update: SDE Adjoints, FFORD Layers, and Jump Diffusion  ]]>
+  </title>
+  <link> https://sciml.ai/news/2020/08/10/StochasticBonanza/index.html </link>
+  <guid> https://sciml.ai/news/2020/08/10/StochasticBonanza/index.html </guid>
+  <description>
+    <![CDATA[  SciML Ecosystem Update: SDE Adjoints, FFORD Layers, and Jump Diffusion  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2020/08/10/StochasticBonanza/</guid>
-    <pubDate>Mon, 10 Aug 2020 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling ]]></title>
-    <link>https://sciml.ai/news/2020/06/01/ModellingToolkit/</link>
-    <description><![CDATA[SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling 
-<br><a href="https://sciml.ai/news/2020/06/01/ModellingToolkit/">Read more</a>]]></description>
+  <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling   ]]>
+  </title>
+  <link> https://sciml.ai/news/2020/06/01/ModellingToolkit/index.html </link>
+  <guid> https://sciml.ai/news/2020/06/01/ModellingToolkit/index.html </guid>
+  <description>
+    <![CDATA[  SciML Ecosystem Update: Auto-Parallelism and Component-Based Modeling   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2020/06/01/ModellingToolkit/</guid>
-    <pubDate>Mon, 1 Jun 2020 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ SciML Ecosystem Update: Automated Model Discovery with DataDrivenDiffEq.jl and ReservoirComputing.jl ]]></title>
-    <link>https://sciml.ai/news/2020/05/09/ModelDiscovery/</link>
-    <description><![CDATA[SciML Ecosystem Update: Automated Model Discovery with DataDrivenDiffEq.jl and ReservoirComputing.jl 
-<br><a href="https://sciml.ai/news/2020/05/09/ModelDiscovery/">Read more</a>]]></description>
+  <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Ecosystem Update: Automated Model Discovery with DataDrivenDiffEq.jl and ReservoirComputing.jl   ]]>
+  </title>
+  <link> https://sciml.ai/news/2020/05/09/ModelDiscovery/index.html </link>
+  <guid> https://sciml.ai/news/2020/05/09/ModelDiscovery/index.html </guid>
+  <description>
+    <![CDATA[  SciML Ecosystem Update: Automated Model Discovery with DataDrivenDiffEq.jl and ReservoirComputing.jl   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2020/05/09/ModelDiscovery/</guid>
-    <pubDate>Sat, 9 May 2020 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ SciML: An Open Source Software Organization for Scientific Machine Learning ]]></title>
-    <link>https://sciml.ai/news/2020/03/29/SciML/</link>
-    <description><![CDATA[SciML: An Open Source Software Organization for Scientific Machine Learning 
-<br><a href="https://sciml.ai/news/2020/03/29/SciML/">Read more</a>]]></description>
+  <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML: An Open Source Software Organization for Scientific Machine Learning   ]]>
+  </title>
+  <link> https://sciml.ai/news/2020/03/29/SciML/index.html </link>
+  <guid> https://sciml.ai/news/2020/03/29/SciML/index.html </guid>
+  <description>
+    <![CDATA[  SciML: An Open Source Software Organization for Scientific Machine Learning   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2020/03/29/SciML/</guid>
-    <pubDate>Sun, 29 Mar 2020 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl v6.12.0: DAE Extravaganza ]]></title>
-    <link>https://sciml.ai/news/2020/03/23/DAE/</link>
-    <description><![CDATA[DifferentialEquations.jl v6.12.0: DAE Extravaganza 
-<br><a href="https://sciml.ai/news/2020/03/23/DAE/">Read more</a>]]></description>
+  <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl v6.12.0: DAE Extravaganza   ]]>
+  </title>
+  <link> https://sciml.ai/news/2020/03/23/DAE/index.html </link>
+  <guid> https://sciml.ai/news/2020/03/23/DAE/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl v6.12.0: DAE Extravaganza   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2020/03/23/DAE/</guid>
-    <pubDate>Mon, 23 Mar 2020 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl v6.11.0: Universal Differential Equation Overhaul ]]></title>
-    <link>https://sciml.ai/news/2020/02/18/Universal/</link>
-    <description><![CDATA[DifferentialEquations.jl v6.11.0: Universal Differential Equation Overhaul 
-<br><a href="https://sciml.ai/news/2020/02/18/Universal/">Read more</a>]]></description>
+  <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl v6.11.0: Universal Differential Equation Overhaul   ]]>
+  </title>
+  <link> https://sciml.ai/news/2020/02/18/Universal/index.html </link>
+  <guid> https://sciml.ai/news/2020/02/18/Universal/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl v6.11.0: Universal Differential Equation Overhaul   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2020/02/18/Universal/</guid>
-    <pubDate>Tue, 18 Feb 2020 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity ]]></title>
-    <link>https://sciml.ai/news/2019/07/05/AutomaticSparsity/</link>
-    <description><![CDATA[DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity 
-<br><a href="https://sciml.ai/news/2019/07/05/AutomaticSparsity/">Read more</a>]]></description>
+  <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity   ]]>
+  </title>
+  <link> https://sciml.ai/news/2019/07/05/AutomaticSparsity/index.html </link>
+  <guid> https://sciml.ai/news/2019/07/05/AutomaticSparsity/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl v6.7.0: GPU-based Ensembles and Automatic Sparsity   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2019/07/05/AutomaticSparsity/</guid>
-    <pubDate>Fri, 5 Jul 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl v6.6.0: Sparse Jacobian Coloring, Quantum Computer ODE Solvers, and Stiff SDEs ]]></title>
-    <link>https://sciml.ai/news/2019/06/24/coloring/</link>
-    <description><![CDATA[DifferentialEquations.jl v6.6.0: Sparse Jacobian Coloring, Quantum Computer ODE Solvers, and Stiff SDEs 
-<br><a href="https://sciml.ai/news/2019/06/24/coloring/">Read more</a>]]></description>
+  <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl v6.6.0: Sparse Jacobian Coloring, Quantum Computer ODE Solvers, and Stiff SDEs   ]]>
+  </title>
+  <link> https://sciml.ai/news/2019/06/24/coloring/index.html </link>
+  <guid> https://sciml.ai/news/2019/06/24/coloring/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl v6.6.0: Sparse Jacobian Coloring, Quantum Computer ODE Solvers, and Stiff SDEs   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2019/06/24/coloring/</guid>
-    <pubDate>Mon, 24 Jun 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl v6.5.0: Stiff SDEs, VectorContinuousCallback, Multithreaded Extrapolation ]]></title>
-    <link>https://sciml.ai/news/2019/06/06/StiffSDEs/</link>
-    <description><![CDATA[DifferentialEquations.jl v6.5.0: Stiff SDEs, VectorContinuousCallback, Multithreaded Extrapolation 
-<br><a href="https://sciml.ai/news/2019/06/06/StiffSDEs/">Read more</a>]]></description>
+  <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl v6.5.0: Stiff SDEs, VectorContinuousCallback, Multithreaded Extrapolation   ]]>
+  </title>
+  <link> https://sciml.ai/news/2019/06/06/StiffSDEs/index.html </link>
+  <guid> https://sciml.ai/news/2019/06/06/StiffSDEs/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl v6.5.0: Stiff SDEs, VectorContinuousCallback, Multithreaded Extrapolation   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2019/06/06/StiffSDEs/</guid>
-    <pubDate>Thu, 6 Jun 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl v6.4.0: Full GPU ODE, Performance, ModelingToolkit ]]></title>
-    <link>https://sciml.ai/news/2019/05/09/GPU/</link>
-    <description><![CDATA[DifferentialEquations.jl v6.4.0: Full GPU ODE, Performance, ModelingToolkit 
-<br><a href="https://sciml.ai/news/2019/05/09/GPU/">Read more</a>]]></description>
+  <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl v6.4.0: Full GPU ODE, Performance, ModelingToolkit   ]]>
+  </title>
+  <link> https://sciml.ai/news/2019/05/09/GPU/index.html </link>
+  <guid> https://sciml.ai/news/2019/05/09/GPU/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl v6.4.0: Full GPU ODE, Performance, ModelingToolkit   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2019/05/09/GPU/</guid>
-    <pubDate>Thu, 9 May 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[SciML: Scientific Machine Learning Roadmap]]></title>
-    <link>https://sciml.ai/roadmap/</link>
-    <description><![CDATA[SciML: Scientific Machine Learning Roadmap
-<br><a href="https://sciml.ai/roadmap/">Read more</a>]]></description>
+  <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
+  </title>
+  <link> https://sciml.ai/roadmap/index.html </link>
+  <guid> https://sciml.ai/roadmap/index.html </guid>
+  <description>
+    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/roadmap/</guid>
-    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[Scientific Machine Learning Community]]></title>
-    <link>https://sciml.ai/community/</link>
-    <description><![CDATA[This page describes the community pages, chatrooms, and forums used by the scientific machine learning community
-<br><a href="https://sciml.ai/community/">Read more</a>]]></description>
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Scientific Machine Learning Community  ]]>
+  </title>
+  <link> https://sciml.ai/community/index.html </link>
+  <guid> https://sciml.ai/community/index.html </guid>
+  <description>
+    <![CDATA[  This page describes the community pages, chatrooms, and forums used by the scientific machine learning community  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/community/</guid>
-    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[SciML Scientific Machine Learning Citations]]></title>
-    <link>https://sciml.ai/citing/</link>
-    <description><![CDATA[Citations for the SciML Scientific Machine Learning software organization
-<br><a href="https://sciml.ai/citing/">Read more</a>]]></description>
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Scientific Machine Learning Citations  ]]>
+  </title>
+  <link> https://sciml.ai/citing/index.html </link>
+  <guid> https://sciml.ai/citing/index.html </guid>
+  <description>
+    <![CDATA[  Citations for the SciML Scientific Machine Learning software organization  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/citing/</guid>
-    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[SciML Scientific Machine Learning Governance]]></title>
-    <link>https://sciml.ai/governance/</link>
-    <description><![CDATA[Governance structure for the SciML Scientific Machine Learning open source software organization
-<br><a href="https://sciml.ai/governance/">Read more</a>]]></description>
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Scientific Machine Learning Governance  ]]>
+  </title>
+  <link> https://sciml.ai/governance/index.html </link>
+  <guid> https://sciml.ai/governance/index.html </guid>
+  <description>
+    <![CDATA[  Governance structure for the SciML Scientific Machine Learning open source software organization  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/governance/</guid>
-    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[SciML Scientific Machine Learning Showcase]]></title>
-    <link>https://sciml.ai/showcase/</link>
-    <description><![CDATA[Showcase of SciML Scientific Machine Learning applications
-<br><a href="https://sciml.ai/showcase/">Read more</a>]]></description>
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Scientific Machine Learning Showcase  ]]>
+  </title>
+  <link> https://sciml.ai/showcase/index.html </link>
+  <guid> https://sciml.ai/showcase/index.html </guid>
+  <description>
+    <![CDATA[  Showcase of SciML Scientific Machine Learning applications  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/showcase/</guid>
-    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[SciML Scientific Machine Learning Challenge Problems and Datasets]]></title>
-    <link>https://sciml.ai/challenge/</link>
-    <description><![CDATA[Challenge problems and research datasets for the Scientific Machine Learning &#40;SciML&#41;
-<br><a href="https://sciml.ai/challenge/">Read more</a>]]></description>
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Scientific Machine Learning Challenge Problems and Datasets  ]]>
+  </title>
+  <link> https://sciml.ai/challenge/index.html </link>
+  <guid> https://sciml.ai/challenge/index.html </guid>
+  <description>
+    <![CDATA[  Challenge problems and research datasets for the Scientific Machine Learning &#40;SciML&#41;  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/challenge/</guid>
-    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 6.0: Radau5, Hyperbolic PDEs, Dependency Reductions ]]></title>
-    <link>https://sciml.ai/news/2019/02/02/RadauAnderson/</link>
-    <description><![CDATA[DifferentialEquations.jl 6.0: Radau5, Hyperbolic PDEs, Dependency Reductions 
-<br><a href="https://sciml.ai/news/2019/02/02/RadauAnderson/">Read more</a>]]></description>
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 6.0: Radau5, Hyperbolic PDEs, Dependency Reductions   ]]>
+  </title>
+  <link> https://sciml.ai/news/2019/02/02/RadauAnderson/index.html </link>
+  <guid> https://sciml.ai/news/2019/02/02/RadauAnderson/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 6.0: Radau5, Hyperbolic PDEs, Dependency Reductions   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2019/02/02/RadauAnderson/</guid>
-    <pubDate>Sat, 2 Feb 2019 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 5.0: v1.0, Jacobian Types, EPIRK ]]></title>
-    <link>https://sciml.ai/news/2018/08/20/FunctionInputEPIRK/</link>
-    <description><![CDATA[DifferentialEquations.jl 5.0: v1.0, Jacobian Types, EPIRK 
-<br><a href="https://sciml.ai/news/2018/08/20/FunctionInputEPIRK/">Read more</a>]]></description>
+  <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 5.0: v1.0, Jacobian Types, EPIRK   ]]>
+  </title>
+  <link> https://sciml.ai/news/2018/08/20/FunctionInputEPIRK/index.html </link>
+  <guid> https://sciml.ai/news/2018/08/20/FunctionInputEPIRK/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 5.0: v1.0, Jacobian Types, EPIRK   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2018/08/20/FunctionInputEPIRK/</guid>
-    <pubDate>Mon, 20 Aug 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 4.6: Global Sensitivity Analysis, Variable Order Adams ]]></title>
-    <link>https://sciml.ai/news/2018/07/05/GSAVariableOrder/</link>
-    <description><![CDATA[DifferentialEquations.jl 4.6: Global Sensitivity Analysis, Variable Order Adams 
-<br><a href="https://sciml.ai/news/2018/07/05/GSAVariableOrder/">Read more</a>]]></description>
+  <pubDate>Mon, 20 Aug 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 4.6: Global Sensitivity Analysis, Variable Order Adams   ]]>
+  </title>
+  <link> https://sciml.ai/news/2018/07/05/GSAVariableOrder/index.html </link>
+  <guid> https://sciml.ai/news/2018/07/05/GSAVariableOrder/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 4.6: Global Sensitivity Analysis, Variable Order Adams   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2018/07/05/GSAVariableOrder/</guid>
-    <pubDate>Thu, 5 Jul 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 4.5: ABC, Adaptive Multistep, Maximum A Posteriori ]]></title>
-    <link>https://sciml.ai/news/2018/05/26/ABCMore/</link>
-    <description><![CDATA[DifferentialEquations.jl 4.5: ABC, Adaptive Multistep, Maximum A Posteriori 
-<br><a href="https://sciml.ai/news/2018/05/26/ABCMore/">Read more</a>]]></description>
+  <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 4.5: ABC, Adaptive Multistep, Maximum A Posteriori   ]]>
+  </title>
+  <link> https://sciml.ai/news/2018/05/26/ABCMore/index.html </link>
+  <guid> https://sciml.ai/news/2018/05/26/ABCMore/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 4.5: ABC, Adaptive Multistep, Maximum A Posteriori   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2018/05/26/ABCMore/</guid>
-    <pubDate>Sat, 26 May 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ A "Jupyter" of DiffEq: Introducing Python and R Bindings for DifferentialEquations.jl ]]></title>
-    <link>https://sciml.ai/news/2018/04/30/Jupyter/</link>
-    <description><![CDATA[A &quot;Jupyter&quot; of DiffEq: Introducing Python and R Bindings for DifferentialEquations.jl 
-<br><a href="https://sciml.ai/news/2018/04/30/Jupyter/">Read more</a>]]></description>
+  <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  A &quot;Jupyter&quot; of DiffEq: Introducing Python and R Bindings for DifferentialEquations.jl   ]]>
+  </title>
+  <link> https://sciml.ai/news/2018/04/30/Jupyter/index.html </link>
+  <guid> https://sciml.ai/news/2018/04/30/Jupyter/index.html </guid>
+  <description>
+    <![CDATA[  A &quot;Jupyter&quot; of DiffEq: Introducing Python and R Bindings for DifferentialEquations.jl   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2018/04/30/Jupyter/</guid>
-    <pubDate>Mon, 30 Apr 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 4.4: Enhanced Stability and IMEX SDE Integrators ]]></title>
-    <link>https://sciml.ai/news/2018/04/13/StableSDE/</link>
-    <description><![CDATA[DifferentialEquations.jl 4.4: Enhanced Stability and IMEX SDE Integrators 
-<br><a href="https://sciml.ai/news/2018/04/13/StableSDE/">Read more</a>]]></description>
+  <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 4.4: Enhanced Stability and IMEX SDE Integrators   ]]>
+  </title>
+  <link> https://sciml.ai/news/2018/04/13/StableSDE/index.html </link>
+  <guid> https://sciml.ai/news/2018/04/13/StableSDE/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 4.4: Enhanced Stability and IMEX SDE Integrators   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2018/04/13/StableSDE/</guid>
-    <pubDate>Sun, 15 Apr 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching ]]></title>
-    <link>https://sciml.ai/news/2018/04/09/AutoSwitch/</link>
-    <description><![CDATA[DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching 
-<br><a href="https://sciml.ai/news/2018/04/09/AutoSwitch/">Read more</a>]]></description>
+  <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching   ]]>
+  </title>
+  <link> https://sciml.ai/news/2018/04/09/AutoSwitch/index.html </link>
+  <guid> https://sciml.ai/news/2018/04/09/AutoSwitch/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 4.3: Automatic Stiffness Detection and Switching   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2018/04/09/AutoSwitch/</guid>
-    <pubDate>Mon, 9 Apr 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 4.2: Krylov Exponential Integrators, Non-Diagonal Adaptive SDEs, Tau-Leaping ]]></title>
-    <link>https://sciml.ai/news/2018/03/31/AdaptiveLowSDE/</link>
-    <description><![CDATA[DifferentialEquations.jl 4.2: Krylov Exponential Integrators, Non-Diagonal Adaptive SDEs, Tau-Leaping 
-<br><a href="https://sciml.ai/news/2018/03/31/AdaptiveLowSDE/">Read more</a>]]></description>
+  <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 4.2: Krylov Exponential Integrators, Non-Diagonal Adaptive SDEs, Tau-Leaping   ]]>
+  </title>
+  <link> https://sciml.ai/news/2018/03/31/AdaptiveLowSDE/index.html </link>
+  <guid> https://sciml.ai/news/2018/03/31/AdaptiveLowSDE/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 4.2: Krylov Exponential Integrators, Non-Diagonal Adaptive SDEs, Tau-Leaping   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2018/03/31/AdaptiveLowSDE/</guid>
-    <pubDate>Sat, 31 Mar 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 4.1: New ReactionDSL and KLU Sundials ]]></title>
-    <link>https://sciml.ai/news/2018/02/17/Reactions/</link>
-    <description><![CDATA[DifferentialEquations.jl 4.1: New ReactionDSL and KLU Sundials 
-<br><a href="https://sciml.ai/news/2018/02/17/Reactions/">Read more</a>]]></description>
+  <pubDate>Sat, 31 Mar 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 4.1: New ReactionDSL and KLU Sundials   ]]>
+  </title>
+  <link> https://sciml.ai/news/2018/02/17/Reactions/index.html </link>
+  <guid> https://sciml.ai/news/2018/02/17/Reactions/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 4.1: New ReactionDSL and KLU Sundials   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2018/02/17/Reactions/</guid>
-    <pubDate>Sat, 17 Feb 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 4.0: Breaking Syntax Changes, Adjoint Sensitivity, Bayesian Estimation, and ETDRK4 ]]></title>
-    <link>https://sciml.ai/news/2018/01/24/Parameters/</link>
-    <description><![CDATA[DifferentialEquations.jl 4.0: Breaking Syntax Changes, Adjoint Sensitivity, Bayesian Estimation, and ETDRK4 
-<br><a href="https://sciml.ai/news/2018/01/24/Parameters/">Read more</a>]]></description>
+  <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 4.0: Breaking Syntax Changes, Adjoint Sensitivity, Bayesian Estimation, and ETDRK4   ]]>
+  </title>
+  <link> https://sciml.ai/news/2018/01/24/Parameters/index.html </link>
+  <guid> https://sciml.ai/news/2018/01/24/Parameters/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 4.0: Breaking Syntax Changes, Adjoint Sensitivity, Bayesian Estimation, and ETDRK4   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2018/01/24/Parameters/</guid>
-    <pubDate>Wed, 24 Jan 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 3.4: Sundials 3.1, ARKODE, Static Arrays ]]></title>
-    <link>https://sciml.ai/news/2018/01/15/Sundials/</link>
-    <description><![CDATA[DifferentialEquations.jl 3.4: Sundials 3.1, ARKODE, Static Arrays 
-<br><a href="https://sciml.ai/news/2018/01/15/Sundials/">Read more</a>]]></description>
+  <pubDate>Wed, 24 Jan 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 3.4: Sundials 3.1, ARKODE, Static Arrays   ]]>
+  </title>
+  <link> https://sciml.ai/news/2018/01/15/Sundials/index.html </link>
+  <guid> https://sciml.ai/news/2018/01/15/Sundials/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 3.4: Sundials 3.1, ARKODE, Static Arrays   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2018/01/15/Sundials/</guid>
-    <pubDate>Mon, 15 Jan 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[DifferentialEquations.jl 3.3: IMEX Solvers]]></title>
-    <link>https://sciml.ai/news/2017/01/01/IMEX/</link>
-    <description><![CDATA[DifferentialEquations.jl 3.3: IMEX Solvers
-<br><a href="https://sciml.ai/news/2017/01/01/IMEX/">Read more</a>]]></description>
+  <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 3.3: IMEX Solvers  ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/01/01/IMEX/index.html </link>
+  <guid> https://sciml.ai/news/2017/01/01/IMEX/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 3.3: IMEX Solvers  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/01/01/IMEX/</guid>
-    <pubDate>Mon, 1 Jan 2018 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 3.2: Expansion of Event Compatibility ]]></title>
-    <link>https://sciml.ai/news/2017/12/11/Events/</link>
-    <description><![CDATA[DifferentialEquations.jl 3.2: Expansion of Event Compatibility 
-<br><a href="https://sciml.ai/news/2017/12/11/Events/">Read more</a>]]></description>
+  <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 3.2: Expansion of Event Compatibility   ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/12/11/Events/index.html </link>
+  <guid> https://sciml.ai/news/2017/12/11/Events/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 3.2: Expansion of Event Compatibility   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/12/11/Events/</guid>
-    <pubDate>Mon, 11 Dec 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 3.1: Jacobian Passing ]]></title>
-    <link>https://sciml.ai/news/2017/11/24/Jacobians/</link>
-    <description><![CDATA[DifferentialEquations.jl 3.1: Jacobian Passing 
-<br><a href="https://sciml.ai/news/2017/11/24/Jacobians/">Read more</a>]]></description>
+  <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 3.1: Jacobian Passing   ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/11/24/Jacobians/index.html </link>
+  <guid> https://sciml.ai/news/2017/11/24/Jacobians/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 3.1: Jacobian Passing   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/11/24/Jacobians/</guid>
-    <pubDate>Fri, 24 Nov 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ Stiff SDE and DDE Solvers ]]></title>
-    <link>https://sciml.ai/news/2017/08/25/StiffDDESDE/</link>
-    <description><![CDATA[Stiff SDE and DDE Solvers 
-<br><a href="https://sciml.ai/news/2017/08/25/StiffDDESDE/">Read more</a>]]></description>
+  <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Stiff SDE and DDE Solvers   ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/08/25/StiffDDESDE/index.html </link>
+  <guid> https://sciml.ai/news/2017/08/25/StiffDDESDE/index.html </guid>
+  <description>
+    <![CDATA[  Stiff SDE and DDE Solvers   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/08/25/StiffDDESDE/</guid>
-    <pubDate>Sat, 9 Sep 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ SDIRK Methods ]]></title>
-    <link>https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/</link>
-    <description><![CDATA[SDIRK Methods 
-<br><a href="https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/">Read more</a>]]></description>
+  <pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SDIRK Methods   ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html </link>
+  <guid> https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html </guid>
+  <description>
+    <![CDATA[  SDIRK Methods   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/</guid>
-    <pubDate>Sun, 13 Aug 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ SDIRK Methods ]]></title>
-    <link>https://sciml.ai/news/2017/08/13/SDIRK/</link>
-    <description><![CDATA[SDIRK Methods 
-<br><a href="https://sciml.ai/news/2017/08/13/SDIRK/">Read more</a>]]></description>
+  <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SDIRK Methods   ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/08/13/SDIRK/index.html </link>
+  <guid> https://sciml.ai/news/2017/08/13/SDIRK/index.html </guid>
+  <description>
+    <![CDATA[  SDIRK Methods   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/08/13/SDIRK/</guid>
-    <pubDate>Sun, 13 Aug 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ Filling In The Interop Packages and Rosenbrock ]]></title>
-    <link>https://sciml.ai/news/2017/05/17/Filling_in/</link>
-    <description><![CDATA[Filling In The Interop Packages and Rosenbrock... 
-<br><a href="https://sciml.ai/news/2017/05/17/Filling_in/">Read more</a>]]></description>
+  <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Filling In The Interop Packages and Rosenbrock   ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/05/17/Filling_in/index.html </link>
+  <guid> https://sciml.ai/news/2017/05/17/Filling_in/index.html </guid>
+  <description>
+    <![CDATA[  Filling In The Interop Packages and Rosenbrock...   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/05/17/Filling_in/</guid>
-    <pubDate>Thu, 18 May 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[ DifferentialEquations.jl 2.0 ]]></title>
-    <link>https://sciml.ai/news/2017/04/30/API_changes/</link>
-    <description><![CDATA[DifferentialEquations.jl 2.0. 
-<br><a href="https://sciml.ai/news/2017/04/30/API_changes/">Read more</a>]]></description>
+  <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl 2.0   ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/04/30/API_changes/index.html </link>
+  <guid> https://sciml.ai/news/2017/04/30/API_changes/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl 2.0.   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/04/30/API_changes/</guid>
-    <pubDate>Sun, 30 Apr 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[DifferentialEquations.jl v1.9.1]]></title>
-    <link>https://sciml.ai/news/2017/04/07/features/</link>
-    <description><![CDATA[DifferentialEquations.jl 
-<br><a href="https://sciml.ai/news/2017/04/07/features/">Read more</a>]]></description>
+  <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl v1.9.1  ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/04/07/features/index.html </link>
+  <guid> https://sciml.ai/news/2017/04/07/features/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/04/07/features/</guid>
-    <pubDate>Fri, 7 Apr 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[DifferentialEquations.jl Workshop at JuliaCon 2017]]></title>
-    <link>https://sciml.ai/news/2017/04/04/juliacon/</link>
-    <description><![CDATA[DifferentialEquations.jl Workshop at JuliaCon 2017 
-<br><a href="https://sciml.ai/news/2017/04/04/juliacon/">Read more</a>]]></description>
+  <pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl Workshop at JuliaCon 2017  ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/04/04/juliacon/index.html </link>
+  <guid> https://sciml.ai/news/2017/04/04/juliacon/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl Workshop at JuliaCon 2017   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/04/04/juliacon/</guid>
-    <pubDate>Tue, 4 Apr 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[DifferentialEquations.jl v1.8.0]]></title>
-    <link>https://sciml.ai/news/2017/02/02/interps/</link>
-    <description><![CDATA[DifferentialEquations.jl v1.8.0 
-<br><a href="https://sciml.ai/news/2017/02/02/interps/">Read more</a>]]></description>
+  <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl v1.8.0  ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/02/02/interps/index.html </link>
+  <guid> https://sciml.ai/news/2017/02/02/interps/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl v1.8.0   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/02/02/interps/</guid>
-    <pubDate>Thu, 9 Feb 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[DifferentialEquations.jl v1.6.0]]></title>
-    <link>https://sciml.ai/news/2017/01/14/stable/</link>
-    <description><![CDATA[DifferentialEquations.jl v1.6.0 
-<br><a href="https://sciml.ai/news/2017/01/14/stable/">Read more</a>]]></description>
+  <pubDate>Thu, 09 Feb 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  DifferentialEquations.jl v1.6.0  ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/01/14/stable/index.html </link>
+  <guid> https://sciml.ai/news/2017/01/14/stable/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl v1.6.0   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/01/14/stable/</guid>
-    <pubDate>Sat, 14 Jan 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[base]]></title>
-    <link>https://sciml.ai/news/2017/01/08/base/</link>
-    <description><![CDATA[base 
-<br><a href="https://sciml.ai/news/2017/01/08/base/">Read more</a>]]></description>
+  <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  base  ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/01/08/base/index.html </link>
+  <guid> https://sciml.ai/news/2017/01/08/base/index.html </guid>
+  <description>
+    <![CDATA[  base   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/01/08/base/</guid>
-    <pubDate>Sun, 8 Jan 2017 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[OrdinaryDiffEq v0.5]]></title>
-    <link>https://sciml.ai/news/2016/01/21/saveat/</link>
-    <description><![CDATA[OrdinaryDiffEq v0.5 
-<br><a href="https://sciml.ai/news/2016/01/21/saveat/">Read more</a>]]></description>
+  <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  OrdinaryDiffEq v0.5  ]]>
+  </title>
+  <link> https://sciml.ai/news/2016/01/21/saveat/index.html </link>
+  <guid> https://sciml.ai/news/2016/01/21/saveat/index.html </guid>
+  <description>
+    <![CDATA[  OrdinaryDiffEq v0.5   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2016/01/21/saveat/</guid>
-    <pubDate>Wed, 21 Dec 2016 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[PDEs Update]]></title>
-    <link>https://sciml.ai/news/2017/01/05/fem/</link>
-    <description><![CDATA[PDEs Update 
-<br><a href="https://sciml.ai/news/2017/01/05/fem/">Read more</a>]]></description>
+  <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  PDEs Update  ]]>
+  </title>
+  <link> https://sciml.ai/news/2017/01/05/fem/index.html </link>
+  <guid> https://sciml.ai/news/2017/01/05/fem/index.html </guid>
+  <description>
+    <![CDATA[  PDEs Update   ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2017/01/05/fem/</guid>
-    <pubDate>Wed, 21 Dec 2016 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[Hello World!!]]></title>
-    <link>https://sciml.ai/news/2016/11/26/hello/</link>
-    <description><![CDATA[Hello World&#33;&#33;
-<br><a href="https://sciml.ai/news/2016/11/26/hello/">Read more</a>]]></description>
+  <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Hello World&#33;&#33;  ]]>
+  </title>
+  <link> https://sciml.ai/news/2016/11/26/hello/index.html </link>
+  <guid> https://sciml.ai/news/2016/11/26/hello/index.html </guid>
+  <description>
+    <![CDATA[  Hello World&#33;&#33;  ]]>
+  </description>  
     
-    <guid>https://sciml.ai/news/2016/11/26/hello/</guid>
-    <pubDate>Sat, 26 Nov 2016 00:00:00 UT</pubDate>
-  </item>
-</channel>
-</rss>
+  <pubDate>Sat, 26 Nov 2016 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+</channel></rss>
