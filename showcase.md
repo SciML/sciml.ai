@@ -164,16 +164,19 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Adam Davis: DiffEqFlux — Differential Equations and Neural Networks](https://slowandsteadybrain.medium.com/diffeqflux-differential-equations-and-neural-networks-9cc1fda63868)
+- [StochasticLifestyle: ModelingToolkit, Modelica, and Modia: The Composable Modeling Future in Julia](https://www.stochasticlifestyle.com/modelingtoolkit-modelica-and-modia-the-composable-modeling-future-in-julia/)
 - [StochasticLifestyle: Generalizing Automatic Differentiation to Automatic Sparsity, Uncertainty, Stability, and Parallelism](https://www.stochasticlifestyle.com/generalizing-automatic-differentiation-to-automatic-sparsity-uncertainty-stability-and-parallelism/)
 - [Adam MacLean: A thread on teaching dynamical systems in Julia](https://twitter.com/adamlmaclean/status/1368988846457647105)
 - [Jesse Perla: Machine Learning and High Dimensional Economics](https://www.jesseperla.com/project/ml-high-dim/)
 - [Experiments with Neural ODEs in Julia](https://computationalmindset.com/en/neural-networks/experiments-with-neural-odes-in-julia.html)
+- [StochasticLifestyle: JuliaCall Update: Automated Julia Installation for R Packages](https://www.stochasticlifestyle.com/juliacall-update-automated-julia-installation-for-r-packages/)
 - [CFD tutorial in Julia](https://emadmasroor.github.io/2020/12/16/CFD-tutorial-in-julia.html)
 - [Neural ODE for Reinforcement Learning and Nonlinear Optimal Control: Cartpole Problem Revisited](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71)
 - ["Modeling control of run-of-river power plant Grønvollfoss" in Julia](https://nextjournal.com/emmanuellujan/modeling-control-of-run-of-river-power-plant-gr%C3%B8nvollfoss-in-julia)
 - [Physics-informed neural networks (PINNs) solver on Julia](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solver-on-julia-gsoc-2020-final-report)
 - [Utkarsh's Blog: Performance Enhancements and Optimizations for Differential Equation solvers, GSoC Blog: Final Report](https://utkarsh530.github.io/blog/post/gsoc-blog-final/)
-- [GPU-Accelerated ODE Solving in R with Julia, the Language of Libraries](https://www.stochasticlifestyle.com/gpu-accelerated-ode-solving-in-r-with-julia-the-language-of-libraries/)
+- [StochasticLifestyle: GPU-Accelerated ODE Solving in R with Julia, the Language of Libraries](https://www.stochasticlifestyle.com/gpu-accelerated-ode-solving-in-r-with-julia-the-language-of-libraries/)
 - [Francesco Martinuzzi: Google Summer of Code 2020 Final Report](https://martinuzzifrancesco.github.io/posts/12_gsoc_week/)
 - [High weak order solvers and adjoint sensitivity analysis for stochastic differential equations](https://frankschae.github.io/post/gsoc-2020/)
 - [High weak order SDE solvers](https://frankschae.github.io/post/high-weak/)
