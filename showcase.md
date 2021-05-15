@@ -26,6 +26,7 @@ SciML. If you would like your institution's tools added to the list,
 - [Julia Robotics](https://juliarobotics.org/)
 - [Julia Computing: JuliaSim](https://juliacomputing.com/products/juliasim/)
 - [Pumas-AI: Pharmaceutical Modeling and Simulation](https://pumas.ai/)
+  - [SciML and Pumas-AI tools are an accepted standard by the FDA with trained evaluators](https://www.fda.gov/media/85816/download)
 - [Brazilian National Institute for Space Research (INPE)](https://github.com/JuliaSpace/SatelliteToolbox.jl)
     - [Julia and the satellite Amazonia-1](https://discourse.julialang.org/t/julia-and-the-satellite-amazonia-1/57541)
 - [CMU+MIT+Citrine: Accelerated Computational Electrochemical Systems Discovery (ACED)](https://www.cmu.edu/aced/)
