@@ -41,12 +41,14 @@ for. Code development, documentation work, educational, sustainability, and
 diversity initiatives, or other types of projects are all eligible.
 Since only one application can be put in for the Julia project, an internal
 selection process is used to determine which proposals will be submitted to
-NumFOCUS. For examples of grants that were funded in the first round,
-[previous awards](https://www.numfocus.org/blog/numfocus-awards-development-grants-to-open-source-projects-spring-2018).
+NumFOCUS. For examples of grants that have been funded and more information,
+see the
+[NumFOCUS small development grants](https://numfocus.org/programs/small-development-grants)
+page.
 
-Up to USD 3,000 is available per proposal. The total allocated funding from
-NumFOCUS was USD 20,000 in previous cycles, meaning that not every project will
-be able to receive a grant. This total amount is adjusted depending on the
-number and quality of proposals this may be adjusted up or down.
+Up to USD 5,000 is available per proposal. The total allocated funding for
+NumFOCUS in 2021 is USD 53,000 for each of the three cycles, with USD 11,000
+for off cycle grants. NumFOCUS sponsored and affiliated projects may receive
+upto two grants per year and can submit one application per cycle.
 
 If you are interested, please get in contact with Chris Rackauckas.
