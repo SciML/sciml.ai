@@ -172,7 +172,9 @@ talk at SIAM CSE 2021 on how SciML tools are used by him to accelerate about
 15,000x over Simulink. See the talk for yourself!
 
 ~~~
+<center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tQpqsmwlfY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 ~~~
 
 ## Major Improvements to Adjoint Sensitivities with Ill-Conditioning (Stiffness)
