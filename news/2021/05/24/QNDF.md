@@ -16,7 +16,7 @@ For context, let's look at the previous DifferentialEquations.jl documentation
 on how to choose a stiff ODE solver:
 
 > For stiff problems at high tolerances (>1e-2?) it is recommended that you use
-  Rosenbrock23 or TRBDF2...
+> Rosenbrock23 or TRBDF2...
 
 Okay, it keeps on going and going. All of the methods it recommends are from
 OrdinaryDiffEq.jl though, which is all guided by
@@ -25,11 +25,11 @@ OrdinaryDiffEq.jl though, which is all guided by
 But at the very end of the recommendations you see:
 
 > For asymptotically large systems of ODEs (N>1000?) where f is very costly and
-  the complex eigenvalues are minimal (low oscillations), in that case CVODE_BDF
-  will be the most efficient but requires Vector{Float64}. CVODE_BDF will also
-  do surprisingly well if the solution is smooth. However, this method can
-  handle less stiffness than other methods and its Newton iterations may fail
-  at low accuracy situations. Another good choice for this regime is lsoda.
+> the complex eigenvalues are minimal (low oscillations), in that case CVODE_BDF
+> will be the most efficient but requires Vector{Float64}. CVODE_BDF will also
+> do surprisingly well if the solution is smooth. However, this method can
+> handle less stiffness than other methods and its Newton iterations may fail
+> at low accuracy situations. Another good choice for this regime is lsoda.
 
 In translation, "if you happen to be in the asymptotically big case, you still need
 to make use of Sundials".
