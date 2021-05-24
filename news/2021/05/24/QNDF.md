@@ -1,7 +1,7 @@
 @def rss_pubdate = Date(2021,5,24)
-@def rss = """SciML Ecosystem Update: Improved QNDF Outperforms CVODE Across the Board"""
+@def rss = """SciML Ecosystem Update: Improved QNDF Outperforms CVODE On SciMLBenchmarks"""
 @def published = " 24 May 2021 "
-@def title = "SciML Ecosystem Update: Improved QNDF Outperforms CVODE Across the Board"
+@def title = "SciML Ecosystem Update: Improved QNDF Outperforms CVODE On SciMLBenchmarks"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
 
 # SciML Ecosystem Update: Improved QNDF Outperforms CVODE On SciMLBenchmarks
@@ -10,7 +10,7 @@ It has been a few months so there's a lot to update, especially in terms of
 performance improvements. But let's start with the announcement of how we have
 solved one of the longest running issues in the SciML universe.
 
-## QNDF Improvements Removes CVODE From All Recommendations and Defaults
+## QNDF Improvements Replaces CVODE in Recommendations and Defaults
 
 For context, let's look at the previous DifferentialEquations.jl documentation
 on how to choose a stiff ODE solver:
