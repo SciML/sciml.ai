@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  SciML Ecosystem Update: Improved QNDF Outperforms CVODE Across the Board  ]]>
+  </title>
+  <link> https://sciml.ai/news/2021/05/24/QNDF/index.html </link>
+  <guid> https://sciml.ai/news/2021/05/24/QNDF/index.html </guid>
+  <description>
+    <![CDATA[  SciML Ecosystem Update: Improved QNDF Outperforms CVODE Across the Board  ]]>
+  </description>  
+    
+  <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  SciML Ecosystem Update: GalacticOptim, GlobalSensitivity, Tutorials, and Documentation  ]]>
   </title>
   <link> https://sciml.ai/news/2021/02/05/galacticoptim/index.html </link>
