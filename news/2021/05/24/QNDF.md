@@ -65,8 +65,8 @@ to 1,000 stiff ODEs with BCR:
 
 ![](https://user-images.githubusercontent.com/17304743/119210963-6f8b2380-ba7d-11eb-839a-017423723acd.png)
 
-and on a difficult HVAC model, we saw it taking larger steps, less Jacobians,
-and factorizing less:
+and on a difficult 8,000 equation HVAC model, we saw it taking larger steps,
+less Jacobians, and factorizing less:
 
 ![](https://user-images.githubusercontent.com/1814174/119265211-dca0d500-bbb3-11eb-82f0-fd3049a64b33.png)
 
