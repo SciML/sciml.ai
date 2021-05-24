@@ -113,21 +113,29 @@ the solvers built 3 years before the creation of DifferentialEquations.jl. They
 are locked in time giving the same answers at the same speed, allowing ease of
 code updating.
 
-Sundials.jl will likely evolve similarly. The advancement of `QNDF` means there
-will likely be no attempts to connect to Sundials CUDA support, but what is there
-will continue to be maintained. It's built with fancy LAPACK options, KLU
-integration, etc. and it will continue to stay that way. It will be updated and
-its tests will keep passing. But it will likely not capture as much developer
-focus.
+Sundials.jl will likely evolve similarly. We still note that `CVODE_BDF` is still
+worth trying in many cases, and it will likely have instances where it
+outperforms `QNDF`, as every method is optimized in different ways. To be clear,
+the reason for the recommendation change is because over a large array of
+equations we see a very general pattern of preferring `QNDF`, though there will
+always be exceptions to the rule and so `CVODE_BDF` will still have a place in
+the DifferentialEquations.jl arsenal, just a very reduced one from the position
+it held before.
 
-That said, there is one thing to make note of. There is still one place in the
+That said, the advancement of `QNDF` means there will likely be no attempts to
+connect to Sundials CUDA support, but what is there will continue to be
+maintained. It's built with fancy LAPACK options, KLU integration, etc. and it
+will continue to stay that way. It will be updated and its tests will keep
+passing. But it will likely not capture as much developer focus.
+
+There is one more thing to make note of. There is still one place in the
 entire DifferentialEquations.jl universe where a Sundials algorithm still reigns
 supreme as the recommended algorithm over any pure Julia method, and that is not
 in ODEs but DAEs. `IDA` is still unmatched in the pure Julia space. While it's
-routinely outperformed if you have a DAE written in mass matrix form,
+routinely outperformed if you have a DAE written in mass matrix form of a certain size,
 [giving rise to the recommendations of OrdinaryDiffEq.jl in many DAE cases](https://diffeq.sciml.ai/stable/solvers/dae_solve/#Recommended-Methods),
-`IDA` is still unmatched when you have a fully-implicit DAE definition. That
-will change. Junpeng Gao's summer project, under the mentorship of Yingbo, will
+`IDA` is still unmatched when you have a fully-implicit or asymtopically large
+DAE definition. That will change. Junpeng Gao's summer project, under the mentorship of Yingbo, will
 be to similarly build a pure Julia BDF/NDF for fully-implicit DAEs into
 OrdinaryDiffEq.jl, aiming to similarly extensive benchmark and outperform `IDA`
 by the end of the summer using the same tricks as `QNDF`. When that is completed,
