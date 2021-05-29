@@ -164,6 +164,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [hustf's blog: Ordinary differential equations (ODE)](https://hustf.github.io/DEQ/ode1/)
 - [Adam Davis: DiffEqFlux — Differential Equations and Neural Networks](https://slowandsteadybrain.medium.com/diffeqflux-differential-equations-and-neural-networks-9cc1fda63868)
 - [StochasticLifestyle: ModelingToolkit, Modelica, and Modia: The Composable Modeling Future in Julia](https://www.stochasticlifestyle.com/modelingtoolkit-modelica-and-modia-the-composable-modeling-future-in-julia/)
 - [StochasticLifestyle: Generalizing Automatic Differentiation to Automatic Sparsity, Uncertainty, Stability, and Parallelism](https://www.stochasticlifestyle.com/generalizing-automatic-differentiation-to-automatic-sparsity-uncertainty-stability-and-parallelism/)
