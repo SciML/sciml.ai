@@ -31,14 +31,14 @@ jsol = solve(jprob, SSAStepper())</code></pre> <p>This builds a specific form th
 <span class=hljs-keyword >from</span> diffeqpy <span class=hljs-keyword >import</span> de
 <span class=hljs-comment ># diffeqpy.install()</span>
 
-<span class=hljs-function ><span class=hljs-keyword >def</span> <span class=hljs-title >f</span>(<span class=hljs-params >du,u,p,t</span>):</span>
+<span class=hljs-keyword >def</span> <span class="hljs-title function_">f</span>(<span class=hljs-params >du,u,p,t</span>):
     x, y, z = u
     sigma, rho, beta = p
     du[<span class=hljs-number >0</span>] = sigma * (y - x)
     du[<span class=hljs-number >1</span>] = x * (rho - z) - y
     du[<span class=hljs-number >2</span>] = x * y - beta * z
 
-<span class=hljs-function ><span class=hljs-keyword >def</span> <span class=hljs-title >g</span>(<span class=hljs-params >du,u,p,t</span>):</span>
+<span class=hljs-keyword >def</span> <span class="hljs-title function_">g</span>(<span class=hljs-params >du,u,p,t</span>):
     du[<span class=hljs-number >0</span>] = <span class=hljs-number >0.3</span>*u[<span class=hljs-number >0</span>]
     du[<span class=hljs-number >1</span>] = <span class=hljs-number >0.3</span>*u[<span class=hljs-number >1</span>]
     du[<span class=hljs-number >2</span>] = <span class=hljs-number >0.3</span>*u[<span class=hljs-number >2</span>]
