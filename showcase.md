@@ -148,6 +148,7 @@ SciML. If you would like your institution's tools added to the list,
 - [2021: Mediterranean Machine Learning School Outstanding Poster Award (Simone Azeglio, Valerio Pagliarino, Francesco Calisto, Luca Bottero, Martina S., Sara Tiengo, Giovanni Graziano)](https://www.linkedin.com/feed/update/urn:li:activity:6765588899801653249/): For "Physics-Informed Machine Learning Simulator for Wildfire Propagation" with NeuralPDE.jl.
 - [2020: International Society of Pharmacology (ISoP) Emerging Scientist Award (Chris Rackauckas)](http://go-isop.org/2020-isop-award-winners/): For development of SciML and Pumas.
 - [2020: American Conference on Pharmacometrics (ACoP) Quality Award (Chris Rackauckas and Vijay Ivaturi)](https://www.go-acop.org/abstract-awards): For DiffEqGPU accelerating QSP models by 175x.
+- [2020: IEEE High-Performance Extreme Computing (HPEC) Outstanding Paper Award (Chris Rackauckas and Qing Nie)](http://www.ieee-hpec.org/prelimagenda2020.html): For the high-performance adaptive SDE solvers in StochasticDiffEq.jl.
 - [2019: International Society of Pharmacology (ISoP) Mathematics and Computing Special Interest Group Poster Award (Chris Rackauckas and Vijay Ivaturi)](http://go-isop.org/wp-content/uploads/2019/09/ISOP-Newsletter-September-2019-V1a.pdf): Koopman operator tooling of DiffEqUncertainty.jl accelerating uncertainty quantification in PK/PD modeling by 100x.
 - [2018 Julia Community Award (Chris Rackauckas)](https://julialang.org/blog/2018/09/julia-community-prizes/): For development of SciML (at the time, named JuliaDiffEq).
 - [DSWeb 2018 Dynamical Systems Software Contest](https://dsweb.siam.org/The-Magazine/All-Issues/winners-of-the-dsweb-2018-software-contest): Runner up is DifferentialEquations.jl and a winner is DynamicalSystems.jl which utilizes DifferentialEquations.jl.
@@ -164,6 +165,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Bayesian Inference using Julia and TuringLang at Stuttgart Julia Programming](https://storopoli.io/Turing-Workshop/)
 - [hustf's blog: Ordinary differential equations (ODE)](https://hustf.github.io/DEQ/ode1/)
 - [Adam Davis: DiffEqFlux — Differential Equations and Neural Networks](https://slowandsteadybrain.medium.com/diffeqflux-differential-equations-and-neural-networks-9cc1fda63868)
 - [StochasticLifestyle: ModelingToolkit, Modelica, and Modia: The Composable Modeling Future in Julia](https://www.stochasticlifestyle.com/modelingtoolkit-modelica-and-modia-the-composable-modeling-future-in-julia/)
