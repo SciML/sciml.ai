@@ -125,6 +125,19 @@ please feel free to [ask in the community channels](/community.html).
 }
 ```
 
+#### Symbolic Modeling (ModelingToolkit.jl)
+
+```
+@misc{ma2021modelingtoolkit,
+      title={ModelingToolkit: A Composable Graph Transformation System For Equation-Based Modeling},
+      author={Yingbo Ma and Shashi Gowda and Ranjan Anantharaman and Chris Laughman and Viral Shah and Chris Rackauckas},
+      year={2021},
+      eprint={2103.05244},
+      archivePrefix={arXiv},
+      primaryClass={cs.MS}
+}
+```
+
 ## Algorithm Citations
 
 Many of the algorithms which are included as part of this ecosystem of software
