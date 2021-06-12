@@ -145,6 +145,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Awards Associated with SciML Software
 
+- 2021: United States Department of the Air Force Artificial Intelligence Accelerator Scientific Excellence Award (Chris Rackauckas): For "For developing innovative computational processes to accelerate the simulation of nonlinear systems using neural networks".
 - [2021: Mediterranean Machine Learning School Outstanding Poster Award (Simone Azeglio, Valerio Pagliarino, Francesco Calisto, Luca Bottero, Martina S., Sara Tiengo, Giovanni Graziano)](https://www.linkedin.com/feed/update/urn:li:activity:6765588899801653249/): For "Physics-Informed Machine Learning Simulator for Wildfire Propagation" with NeuralPDE.jl.
 - [2020: International Society of Pharmacology (ISoP) Emerging Scientist Award (Chris Rackauckas)](http://go-isop.org/2020-isop-award-winners/): For development of SciML and Pumas.
 - [2020: American Conference on Pharmacometrics (ACoP) Quality Award (Chris Rackauckas and Vijay Ivaturi)](https://www.go-acop.org/abstract-awards): For DiffEqGPU accelerating QSP models by 175x.
