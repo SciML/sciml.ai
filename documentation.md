@@ -10,6 +10,7 @@ users interested in the functionality.
 
 ## SciML-Wide Documentation
 
+- [The SciML Common Interface](https://scimlbase.sciml.ai/latest/)
 - [SciMLTutorials](https://github.com/SciML/SciMLTutorials.jl)
 - [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl)
 
@@ -38,6 +39,10 @@ These resources cover:
 - [DiffEqOperators.jl: Finite Difference Methods](https://github.com/SciML/DiffEqOperators.jl)
 - [NeuralPDE.jl: Physics-Informed Neural Networks](https://github.com/SciML/NeuralPDE.jl)
 - [FEniCS.jl: Finite Element Methods](https://github.com/SciML/FEniCS.jl)
+
+## Nonlinear Systems
+
+- [NonlinearSolve.jl: High-performance and differentiation-enabled Nonlinear Solvers](https://nonlinearsolve.sciml.ai/dev/)
 
 ## Optimization
 
