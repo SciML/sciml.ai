@@ -10,7 +10,7 @@ users interested in the functionality.
 
 ## SciML-Wide Documentation
 
-- [The SciML Common Interface](https://scimlbase.sciml.ai/latest/)
+- [The SciML Common Interface](https://scimlbase.sciml.ai/dev/)
 - [SciMLTutorials](https://github.com/SciML/SciMLTutorials.jl)
 - [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl)
 
