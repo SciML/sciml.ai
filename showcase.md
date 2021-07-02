@@ -166,6 +166,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Shadowing Methods for Forward and Adjoint Sensitivity Analysis of Chaotic Systems](https://frankschae.github.io/post/shadowing/)
+- [Neural Hybrid Differential Equations](https://frankschae.github.io/post/hybridde/)
 - [Bayesian Inference using Julia and TuringLang at Stuttgart Julia Programming](https://storopoli.io/Turing-Workshop/)
 - [hustf's blog: Ordinary differential equations (ODE)](https://hustf.github.io/DEQ/ode1/)
 - [Adam Davis: DiffEqFlux — Differential Equations and Neural Networks](https://slowandsteadybrain.medium.com/diffeqflux-differential-equations-and-neural-networks-9cc1fda63868)
