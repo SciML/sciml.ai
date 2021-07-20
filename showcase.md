@@ -36,6 +36,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Coverage Featuring SciML
 
+- [NREL Open-Source Modeling Approach Cracks the Code of Simulating Low-Inertia Power Systems (uses SciML)](https://www.nrel.gov/news/program/2021/nrel-open-source-modeling-approach-cracks-the-code-of-simulating-low-inertia-power-systems.html)
+- [Julia Computing Raises $24M Series A, Former Snowflake CEO Bob Muglia Joins Board (products built using SciML)](https://www.hpcwire.com/off-the-wire/julia-computing-raises-24m-series-a-former-snowflake-ceo-bob-muglia-joins-board/)
 - [Julia Computing Launches JuliaSim for Scientific ML In Cloud](https://www.hpcwire.com/off-the-wire/julia-computing-launches-juliasim-for-scientific-ml-in-cloud/)
 - [Julia Computing Launches JuliaSim For Scientific Machine Learning In Cloud](https://analyticsindiamag.com/julia-computing-launches-juliasim-for-scientific-machine-learning-in-cloud/)
 - [Julia Computing introduces JuliaSim, next-generation cloud-based simulation platform](https://cloud7.news/software/julia-computing-introduces-juliasim-next-generation-cloud-based-simulation-platform/)
