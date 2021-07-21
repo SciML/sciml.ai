@@ -201,6 +201,7 @@ SciML. If you would like your institution's tools added to the list,
 - [Francesco Martinuzzi: Data-driven prediction of chaotic systems: comparison of Echo State Network variations](https://martinuzzifrancesco.github.io/posts/05_gsoc_week/)
 - [Working with Differential Equations and Neural Networks](https://nextjournal.com/ashutosh-b-b/jsoc-2020-working-with-differential-equations-and-neural-networks)
 - [Kirill Zubov: Physics-informed neural networks (PINNs) solvers on Julia](https://nextjournal.com/kirill_zubov/physics-informed-neural-networks-pinns-solvers-on-julia-gsoc-2020-first-evaluations)
+- [Faster Policy Learning with Continuous-Time Gradients](https://homes.cs.washington.edu/~thickstn/ctpg-project-page/ctpg.html)
 - [Sebastian Callh personal blog: Forecasting the weather with neural ODEs](https://sebastiancallh.github.io/post/neural-ode-weather-forecast/)
 - [Utkarsh's Blog: Community Bonding & First Evaluation (BDF & NDF methods)](https://utkarsh530.github.io/blog/post/gsoc-blog-2/)
 - [Ludovico: From JSOC to GSOC: a new beginning with Surrogates.jl](https://nextjournal.com/ludoro/from-jsoc-to-gsoc-a-new-beginning-with-surrogatesjl/)
