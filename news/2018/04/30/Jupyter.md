@@ -38,15 +38,13 @@ To meet the multi-language demands, we have produced the [diffeqpy](https://gith
 
 ## Interface Matching: Differential-Algebraic Equations
 
-As a first example, let's solve the Robertson differential-algebraic equation (DAE) in each of the languages. A DAE is an ODE defined implicitly: \\(f(du,u,p,t) = 0\\). These are interesting because it allows constraints to be incorporated as part of the equation. The Robertson equation is defined as follows:
+As a first example, let's solve the Robertson differential-algebraic equation (DAE) in each of the languages. A DAE is an ODE defined implicitly: $f(du,u,p,t) = 0$. These are interesting because it allows constraints to be incorporated as part of the equation. The Robertson equation is defined as follows:
 
-$$
 \begin{align}
 dy_1 &= -0.04y₁ + 10^4 y_2 y_3 \\
 dy_2 &= 0.04 y_1 - 10^4 y_2 y_3 - 3*10^7 y_{2}^2 \\
 1 &=  y_{1} + y_{2} + y_{3} \\
 \end{align}
-$$
 
 In DifferentialEquations.jl, we would solve this equation by defining that implicit system via its residual, and calling solve:
 
@@ -67,7 +65,9 @@ using Plots; plotly() # Using the Plotly backend
 plot(sol, xscale=:log10, tspan=(1e-6, 1e5), layout=(3,1))
 ```
 
+~~~
 <img href="https://docs.juliadiffeq.org/latest/assets/intro_dae_plot.png"/>
+~~~
 
 This code directly translates over to Python with diffeqpy by putting "de." in front of package functions:
 
@@ -138,23 +138,21 @@ A stochastic differential equation is a problem of the form
 
 $$ dX_t = f(X_t,t)dt + \sum_i g_i(X_t,t)dW_t^i $$
 
-where \\( f \\) and \\( g \\) are vector functions. If we instead use \\( g \\) as a matrix function against the vector of Brownian motions \\( dW_t \\) (the translation is described [in the DifferentialEquations.jl documentation](https://docs.juliadiffeq.org/latest/tutorials/sde_example)), then we have
+where $f$ and $g$ are vector functions. If we instead use $ g $ as a matrix function against the vector of Brownian motions $ dW_t $ (the translation is described [in the DifferentialEquations.jl documentation](https://docs.juliadiffeq.org/latest/tutorials/sde_example)), then we have
 
 $$ dX_t = f(X_t,t)dt + g(X_t,t)dW_t $$
 
-where \\(g\\) is a matrix. When \\(g\\) is a diagonal matrix this is known as diagonal noise. DifferentialEquations.jl started out as a package developed for [adaptive integrators for diagonal noise SDEs](https://chrisrackauckas.com/assets/Papers/ChrisRackauckas-AdaptiveSRK.pdf), and the research has continued in this area, with [the newest default methods offering over 6000x speedups over the traditional methods](https://arxiv.org/abs/1804.04344). But instead of diagonal noise, let's take a look at non-diagonal stochastic differential equations.
+where $g$ is a matrix. When $g$ is a diagonal matrix this is known as diagonal noise. DifferentialEquations.jl started out as a package developed for [adaptive integrators for diagonal noise SDEs](https://chrisrackauckas.com/assets/Papers/ChrisRackauckas-AdaptiveSRK.pdf), and the research has continued in this area, with [the newest default methods offering over 6000x speedups over the traditional methods](https://arxiv.org/abs/1804.04344). But instead of diagonal noise, let's take a look at non-diagonal stochastic differential equations.
 
-In this case, \\(g\\) of course is non-diagonal. What this means is that different parts of the system share Wiener processes (or more practically, random numbers). This comes up for example when [modeling reaction systems arising from Poisson processes](https://mbesancon.github.io/post/2017-12-14-diffeq-julia/), since you can show [that the randomness is due to events like chemical reactions](https://aip.scitation.org/doi/10.1063/1.481811) and so each chemical of a system should share the same randomness of a reaction. Modeling these correlations correctly can be crucial for reproducing the features of a system.
+In this case, $g$ of course is non-diagonal. What this means is that different parts of the system share Wiener processes (or more practically, random numbers). This comes up for example when [modeling reaction systems arising from Poisson processes](https://mbesancon.github.io/post/2017-12-14-diffeq-julia/), since you can show [that the randomness is due to events like chemical reactions](https://aip.scitation.org/doi/10.1063/1.481811) and so each chemical of a system should share the same randomness of a reaction. Modeling these correlations correctly can be crucial for reproducing the features of a system.
 
-In DifferentialEquations.jl, you solve such a problem by giving the \\(f\\) vector function and the \\(g\\) matrix function. You must also define what the matrix is like so that it is known how many random processes there should be. Let's solve the Lorenz equation with two Wiener processes and heavy cross-correlations. This equations is given via:
+In DifferentialEquations.jl, you solve such a problem by giving the $f$ vector function and the $g$ matrix function. You must also define what the matrix is like so that it is known how many random processes there should be. Let's solve the Lorenz equation with two Wiener processes and heavy cross-correlations. This equations is given via:
 
-$$
 \begin{align}
 dx &= (σ(y-x))dt + 0.3x dW_t^1 +  1.2y dW_t^2 \\
 dy &= (x(ρ-z) - y)dt + 0.6x dW_t^1 + 0.2y dW_t^2 \\
 dz &= (xy - βz) dt + 0.2x dW_t^1 + 0.3y dW_t^2 \\
 \end{align}
-$$
 
 The code then translates the problem to:
 
@@ -222,7 +220,9 @@ ax.plot(ut[0,:],ut[1,:],ut[2,:])
 plt.show()
 ```
 
+~~~
 <center><img src="https://user-images.githubusercontent.com/1814174/39089391-e91f0494-457a-11e8-860a-865caa26c262.png"/></center>
+~~~
 
 You can clearly see the warping effect of the correlations from this image generated by matplotlib. The same ideas carry over to R, but in diffeqr we use a simplified function "sde.solve" instead of the problem setup:
 
@@ -306,7 +306,9 @@ plt.plot(sol.t,u2)
 plt.show()
 ```
 
+~~~
 <img src="https://user-images.githubusercontent.com/1814174/39023532-10bdd750-43f0-11e8-837d-156d33ea2f99.png"/>
+~~~
 
 This is a win-win situation for everyone: domain-experts can spend more time (more productively/efficiently) simulating difficult models, while methods researchers can get better feedback about the effectiveness of integrator classes to then better guide the development of the next numerical methods. We have already seen the effects from the Julia ecosystem, with [DynamicalSystems.jl](https://github.com/JuliaDynamics/DynamicalSystems.jl) and [QuantumOptics.jl](https://github.com/qojulia/QuantumOptics.jl) identifying new issues which have started new research projects!
 
