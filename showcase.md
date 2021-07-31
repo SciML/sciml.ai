@@ -36,6 +36,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Coverage Featuring SciML
 
+- [Why Artificial Intelligence Isn’t Intelligent (Julia Computing CEO Viral Shah Quoted Discussing SciML applications)](https://www.wsj.com/articles/why-artificial-intelligence-isnt-intelligent-11627704050)
 - [Williams Welcomes Julia Computing as Dorilton Ventures Partner (Formula 1 Racecar Team Partners to use SciML)](https://www.williamsf1.com/news/2021/partners/williams-welcomes-julia-computing)
 - [NREL Open-Source Modeling Approach Cracks the Code of Simulating Low-Inertia Power Systems (uses SciML)](https://www.nrel.gov/news/program/2021/nrel-open-source-modeling-approach-cracks-the-code-of-simulating-low-inertia-power-systems.html)
 - [Julia Computing Raises \$24M Series A, Former Snowflake CEO Bob Muglia Joins Board (products built using SciML)](https://www.hpcwire.com/off-the-wire/julia-computing-raises-24m-series-a-former-snowflake-ceo-bob-muglia-joins-board/)
