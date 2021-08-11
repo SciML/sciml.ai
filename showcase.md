@@ -33,9 +33,12 @@ SciML. If you would like your institution's tools added to the list,
 - [Los Alamos National Lab: Model Analysis & Decision Support (MADS)](http://madsjulia.github.io/Mads.jl/)
 - [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
 - [Safe Blues: A Method for Estimation and Control in the Fight Against COVID-19](https://safeblues.org/)
+- [InSysBio: Heta Project QSP Simulation](https://hetalang.github.io/#/)
 
 ## Press Coverage Featuring SciML
 
+- [List23: The Open Source HetaSimulator project is going to be launched by InSysBio](https://list23.com/33854-the-open-source-hetasimulator-project-is-going-to-be-launched-by-insysbio/)
+- [PR Newswire: InSysBio to launch its OpenSource HetaSimulator project](https://www.prnewswire.com/news-releases/insysbio-to-launch-its-opensource-hetasimulator-project-301348204.html)
 - [Wall Street Journal: Why Artificial Intelligence Isn’t Intelligent (Julia Computing CEO Viral Shah Quoted Discussing SciML applications)](https://www.wsj.com/articles/why-artificial-intelligence-isnt-intelligent-11627704050)
 - [Williams Welcomes Julia Computing as Dorilton Ventures Partner (Formula 1 Racecar Team Partners to use SciML)](https://www.williamsf1.com/news/2021/partners/williams-welcomes-julia-computing)
 - [NREL Open-Source Modeling Approach Cracks the Code of Simulating Low-Inertia Power Systems (uses SciML)](https://www.nrel.gov/news/program/2021/nrel-open-source-modeling-approach-cracks-the-code-of-simulating-low-inertia-power-systems.html)
