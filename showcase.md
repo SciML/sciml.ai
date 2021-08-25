@@ -173,9 +173,17 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Integro Differential Equations GSoC 2021 NumFOCUS: Final Report](https://medium.com/@a.bharambe123/gsoc-2021-numfocus-final-report-2b2f32b63492)
+- [Spatial SSAs GSOC 2021 Final Report](https://vilin97.github.io/posts/post5/)
+- [StructuralIdentifiability.jl Google Summer of Code: Final Results](https://iliailmer.github.io/2021/08/google-summer-of-code-final-results.html#google-summer-of-code-final-results)
+- [Discretizations of Partial Differential Equations: GSoC'21 : Final Report](https://mjsheikh.github.io/blog/post/final_report/)
+- [Sensitivity Analysis of Hybrid Differential Equations](https://frankschae.github.io/post/bouncing_ball/)
+- [Tutorial on using spatial SSAs in DiffEqJump](https://vilin97.github.io/posts/post4/)
+- [Neural Hybrid Differential Equations and Adjoint Sensitivity Analysis](https://frankschae.github.io/post/gsoc-2021/)
 - [Shadowing Methods for Forward and Adjoint Sensitivity Analysis of Chaotic Systems](https://frankschae.github.io/post/shadowing/)
 - [Neural Hybrid Differential Equations](https://frankschae.github.io/post/hybridde/)
 - [Bayesian Inference using Julia and TuringLang at Stuttgart Julia Programming](https://storopoli.io/Turing-Workshop/)
+- [First achievements: Next Subvolume Method](https://vilin97.github.io/posts/post2/)
 - [hustf's blog: Ordinary differential equations (ODE)](https://hustf.github.io/DEQ/ode1/)
 - [Adam Davis: DiffEqFlux — Differential Equations and Neural Networks](https://slowandsteadybrain.medium.com/diffeqflux-differential-equations-and-neural-networks-9cc1fda63868)
 - [StochasticLifestyle: ModelingToolkit, Modelica, and Modia: The Composable Modeling Future in Julia](https://www.stochasticlifestyle.com/modelingtoolkit-modelica-and-modia-the-composable-modeling-future-in-julia/)
