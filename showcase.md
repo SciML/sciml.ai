@@ -34,6 +34,7 @@ SciML. If you would like your institution's tools added to the list,
 - [ModiaSim: Modia.jl](https://github.com/ModiaSim/Modia.jl)
 - [Safe Blues: A Method for Estimation and Control in the Fight Against COVID-19](https://safeblues.org/)
 - [InSysBio: Heta Project QSP Simulation](https://hetalang.github.io/#/)
+- [Trixi.jl: Adaptive high-order numerical simulations of hyperbolic PDEs in Julia](https://github.com/trixi-framework/Trixi.jl)
 
 ## Press Coverage Featuring SciML
 
