@@ -12,9 +12,9 @@ grant as part of Cycle 4! As a leading organization developing the mathematical
 techniques being used in [software for clinical pharmacology by top firms like Moderna](https://pumas.ai/),
 [demonstrating 175x accelerations in preclinical analysis by firms like Pfizer](https://juliacomputing.com/case-studies/pfizer/),
 and [an core part of the Heta language tools from InSysBio](https://hetalang.github.io/#/),
-SciML has become a standard in the field of pharmacology. This grant is to accelerate
-the open source development in ways that improve the ecosystem for this essential
-industry.
+SciML and the Julia programming language have become a standard in the field of
+pharmacology. This grant is to accelerate the open source development in ways
+that improve the ecosystem for this essential industry.
 
 As part of this grant, [Professor Samuel
 Isaacson](http://math.bu.edu/people/isaacson/) and his lab will work to expand
