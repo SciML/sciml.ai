@@ -1,6 +1,6 @@
-@def rss_pubdate = Date(2021,8,30)
+@def rss_pubdate = Date(2021,8,31)
 @def rss = """SciML Receives Chan Zuckerberg Institute Funding: Spatial SSAs, Identifiability, and Compile Times"""
-@def published = " 30 August 2021 "
+@def published = " 31 August 2021 "
 @def title = "SciML Receives Chan Zuckerberg Institute Funding: Spatial SSAs, Identifiability, and Compile Times"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
 
