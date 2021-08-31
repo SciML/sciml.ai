@@ -21,3 +21,10 @@ of scientific simulations.
 - **ML-Assisted Tooling for Model Acceleration**. SciML supports the development of the latest ML-accelerated toolsets for scientific machine learning. Methods like Physics-Informed Neural Networks (PINNs) and Deep BSDE methods for solving 1000 dimensional partial differential equations are productionized in the [NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl) library. Surrogate-based acceleration methods are provided by [Surrogates.jl](https://github.com/SciML/Surrogates.jl).
 - **Differentiable Scientific Data Structures and Simulators**. The SciML ecosystem contains pre-built scientific simulation tools along with data structures for accelerating the development of models. Tools like [LabelledArrays.jl](https://github.com/SciML/LabelledArrays.jl) and [MultiScaleArrays.jl](https://github.com/SciML/MultiScaleArrays.jl) make it easy to build large-scale scientific models, while other tools like [NBodySimulator.jl](https://github.com/SciML/NBodySimulator.jl) provide full-scale simulation simulators.
 - **Tools for Accelerated Algorithm Development and Research**. SciML is an organization dedicated to helping state-of-the-art research in both numerical simulation methods and methodologies in scientific machine learning. Many tools throughout the organization automate the process of benchmarking and testing new methodologies to ensure they are safe and battle tested, both to accelerate the translation of the methods to publications and to users. We invite the larger research community to make use of our tooling like [DiffEqDevTools.jl](https://github.com/SciML/DiffEqDevTools.jl) and our large suite of wrapped algorithms for quickly test and deploying new algorithms.
+
+## Sponsors
+Thank you to all our sponsors! We acknowledge support from
+- [Chan Zuckerberg Initiative](https://chanzuckerberg.com/)
+- Individual sponsors via [Github](https://github.com/sponsors/SciML) and [NumFOCUS](https://numfocus.org/donate-to-sciml) donations
+- [Wellcome Trust](https://wellcome.org/)
+
