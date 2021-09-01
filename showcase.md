@@ -38,6 +38,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Coverage Featuring SciML
 
+- [13 NumFOCUS Projects Awarded CZI Grants](https://numfocus.medium.com/13-numfocus-projects-awarded-czi-grants-d54663cd43be)
 - [List23: The Open Source HetaSimulator project is going to be launched by InSysBio](https://list23.com/33854-the-open-source-hetasimulator-project-is-going-to-be-launched-by-insysbio/)
 - [PR Newswire: InSysBio to launch its OpenSource HetaSimulator project](https://www.prnewswire.com/news-releases/insysbio-to-launch-its-opensource-hetasimulator-project-301348204.html)
 - [Wall Street Journal: Why Artificial Intelligence Isn’t Intelligent (Julia Computing CEO Viral Shah Quoted Discussing SciML applications)](https://www.wsj.com/articles/why-artificial-intelligence-isnt-intelligent-11627704050)
