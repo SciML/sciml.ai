@@ -29,4 +29,4 @@ Thank you to all our sponsors! We acknowledge support from:
 - [Chan Zuckerberg Initiative](https://chanzuckerberg.com/)
 - Individual sponsors via [Github](https://github.com/sponsors/SciML) and [NumFOCUS](https://numfocus.org/donate-to-sciml) donations
 - [Wellcome Trust](https://wellcome.org/)
-
+- [Microsoft](https://www.microsoft.com/en-us/research/collaboration/studies-in-pandemic-preparedness/#!overview)
