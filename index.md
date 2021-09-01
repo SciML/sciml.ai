@@ -23,7 +23,9 @@ of scientific simulations.
 - **Tools for Accelerated Algorithm Development and Research**. SciML is an organization dedicated to helping state-of-the-art research in both numerical simulation methods and methodologies in scientific machine learning. Many tools throughout the organization automate the process of benchmarking and testing new methodologies to ensure they are safe and battle tested, both to accelerate the translation of the methods to publications and to users. We invite the larger research community to make use of our tooling like [DiffEqDevTools.jl](https://github.com/SciML/DiffEqDevTools.jl) and our large suite of wrapped algorithms for quickly test and deploying new algorithms.
 
 ## Sponsors
-Thank you to all our sponsors! We acknowledge support from
+
+Thank you to all our sponsors! We acknowledge support from:
+
 - [Chan Zuckerberg Initiative](https://chanzuckerberg.com/)
 - Individual sponsors via [Github](https://github.com/sponsors/SciML) and [NumFOCUS](https://numfocus.org/donate-to-sciml) donations
 - [Wellcome Trust](https://wellcome.org/)
