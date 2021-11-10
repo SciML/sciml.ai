@@ -32,7 +32,7 @@ end
     {{blogposts}}
 Plug in the list of blog posts contained in the `/blog/` folder.
 """
-function hfun_blogposts()
+@delay function hfun_blogposts()
     curyear = Dates.Year(Dates.today()).value
     io = IOBuffer()
     for year in curyear:-1:2016
