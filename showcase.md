@@ -21,6 +21,7 @@ SciML. If you would like your institution's tools added to the list,
 [please open a pull request](https://github.com/SciML/sciml.ai).
 
 - [CliMA: Climate Modeling Alliance](https://clima.caltech.edu/)
+- [DJ4Earth: Differentaible Programming / SciML for Climate Modeling](https://dj4earth.github.io/)
 - [QuantumOptics](https://qojulia.org/)
 - [New York Federal Reserve Bank](https://frbny-dsge.github.io/DSGE.jl/latest/)
 - [Julia Robotics](https://juliarobotics.org/)
