@@ -24,17 +24,17 @@ Distributed and GPUs, will require support from viewers like you. Now back to th
 
 Julia has built in linear solvers, so why does this library exist? The problem
 is that the person who writes a library may not be the person who can make the
-best choice for how a linear system is solved. Thus while `A\b` looks like the
+best choice for how a linear system is solved. Thus while `A\\b` looks like the
 "best" way to solve `Ax=b`, in reality there are many ways to do it:
 
-- `lu(A)\b` is the fastest, but has more numerical error than something like `qr(A)\b`
+- `lu(A)\\b` is the fastest, but has more numerical error than something like `qr(A)\\b`
 - When you get to sparse arrays, there are many different LU-factorizations, like
   [KLU.jl](https://github.com/JuliaSparse/KLU.jl) as an alternative to the standard
   UMFPACK one, which will be better or worse depending on the sparsity pattern.
 - There are methods which do not require constructing the full `A` matrix, like
   [IterativeSolvers.jl](https://github.com/JuliaLinearAlgebra/IterativeSolvers.jl)
   or [Krylov.jl](https://github.com/JuliaSmoothOptimizers/Krylov.jl) Krylov-subspace
-  methods. These cannot be represented by a simple `\` because they require
+  methods. These cannot be represented by a simple `\\` because they require
   specifying a tolerance.
 
 Thus, how can you write a library but expose the linear solver choice to the
@@ -553,7 +553,7 @@ news posts. As a quick overview:
 - GalacticOptim.jl received some major improvements and overhauled documentation
   over the last round. It now wraps nearly 100 optimization methods from 13
   libraries into its common interface.
-- ExponentialUtilities.jl received a new exponential! method with greatly
+- ExponentialUtilities.jl received a new `exponential!` method with greatly
   improved matrix exponential performance over Julia's Base.
 - PreallocationTools.jl received many cosmetic updates to be easier to use.
 - Many performance improvements to DiffEqSensitivity.jl and DiffEqFlux.jl
