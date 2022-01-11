@@ -98,6 +98,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://sciml.ai/news/2022/01/11/linearsolve_preconditioners/index.html</loc>
+    <lastmod>2022-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://sciml.ai/news/2021/02/05/galacticoptim/index.html</loc>
     <lastmod>2022-01-11</lastmod>
     <changefreq>monthly</changefreq>

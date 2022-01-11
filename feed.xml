@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  DifferentialEquations.jl v7: New linear solver and preconditioner interface  ]]>
+  </title>
+  <link> https://sciml.ai/news/2022/01/11/linearsolve_preconditioners/index.html </link>
+  <guid> https://sciml.ai/news/2022/01/11/linearsolve_preconditioners/index.html </guid>
+  <description>
+    <![CDATA[  DifferentialEquations.jl v7: New linear solver and preconditioner interface  ]]>
+  </description>  
+    
+  <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  SciML&#39;s Stance on Long Term Support &#40;LTS&#41;  ]]>
   </title>
   <link> https://sciml.ai/news/2021/12/02/lts/index.html </link>
