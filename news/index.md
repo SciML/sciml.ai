@@ -1,7 +1,7 @@
 @def title = "SciML Scientific Machine Learning Blog"
 @def author = ""
 
-# SciML Scientific Machine Learning News
+# SciML news: Scientific Machine Learning, Physics-Informed Learning, and Science-Guided AI
 
 The SciML scientific machine learning blog discusses issues of
 numerical, technical, distributed and parallel computing associated
