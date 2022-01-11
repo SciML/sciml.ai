@@ -146,6 +146,7 @@ This will solve pretty fast:
 But we can swap it over to GMRES and get a nice speedup:
 
 ```julia
+using LinearSolve
 @btime solve(prob_ode_brusselator_2d,KenCarp47(linsolve=KrylovJL_GMRES()),save_everystep=false)
 # 707.439 ms (173868 allocations: 31.07 MiB)
 ```
