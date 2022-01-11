@@ -12,6 +12,14 @@ major version, this does indicate breaking API changes have been introduced.
 That said, they are relatively minor and only involve the linear solver interface,
 which is the main topic of this release post.
 
+Before we move on, I want to mention that all of your support helps. Thank you
+very much! If you do not have anything to donate, you can still help by starring
+the [DifferentialEquations.jl](https://github.com/SciML/DifferentialEquations.jl)
+and other Github repositories in the [SciML Organization](https://github.com/SciML).
+If you do have funds, please consider [becoming a sponsor](https://github.com/sponsors/SciML).
+The next set of tools, like tutorials showing large sparse PDEs solved using
+Distributed and GPUs, will require support from viewers like you. Now back to the show.
+
 ## LinearSolve.jl: A common interface for linear solvers
 
 Julia has built in linear solvers, so why does this library exist? The problem
