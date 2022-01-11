@@ -553,7 +553,7 @@ news posts. As a quick overview:
 - GalacticOptim.jl received some major improvements and overhauled documentation
   over the last round. It now wraps nearly 100 optimization methods from 13
   libraries into its common interface.
-- ExponentialUtilities.jl received a new `exponential!` method with greatly
+- ExponentialUtilities.jl received a new exponential! method with greatly
   improved matrix exponential performance over Julia's Base.
 - PreallocationTools.jl received many cosmetic updates to be easier to use.
 - Many performance improvements to DiffEqSensitivity.jl and DiffEqFlux.jl
