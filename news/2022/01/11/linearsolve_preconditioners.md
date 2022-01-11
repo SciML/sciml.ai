@@ -27,8 +27,9 @@ is that the person who writes a library may not be the person who can make the
 best choice for how a linear system is solved. Thus while `A\b` looks like the
 "best" way to solve `Ax=b`, in reality there are many ways to do it:
 
-- `lu(A)\b` is the fastest or the factorizations, but has more numerical error
-  than something like `qr(A)\b`.
+- `lu(A)\b` is the fastest of the factorizations for standard matrices, but if
+  the matrix is positive definite then `cholesky(A)\b` can be faster, etc. And
+  if the matrix is ill-conditioned then `qr(A)\b` will have less numerical error.
 - When you get to sparse arrays, there are many different LU-factorizations, like
   [KLU.jl](https://github.com/JuliaSparse/KLU.jl) as an alternative to the standard
   UMFPACK one, which will be better or worse depending on the sparsity pattern.
