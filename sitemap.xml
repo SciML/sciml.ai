@@ -26,6 +26,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://sciml.ai/gsoc/gsoc_numerics/index.html</loc>
+    <lastmod>2022-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://sciml.ai/news/2019/06/06/StiffSDEs/index.html</loc>
     <lastmod>2022-01-18</lastmod>
     <changefreq>monthly</changefreq>
