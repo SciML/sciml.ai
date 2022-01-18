@@ -120,7 +120,7 @@ have on a differential equation model. A good introduction [can be found in this
 much more efficient than Local Sensitivity Analysis tools, and give a better
 view of how parameters affect the model in a more general sense.
 The goal of this project would be to implement more global
-sensitivity analysis methods like the eFAST method into [DiffEqSensitivity.jl](https://github.com/SciML/DiffEqSensitivity.jl) which
+sensitivity analysis methods like the eFAST method into [GlobalSensitivity.jl](https://github.com/SciML/GlobalSensitivity.jl) which
 can be used with any differential equation solver on the common interface.
 
 **Recommended Skills**: An understanding of how to use DifferentialEquations.jl
