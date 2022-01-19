@@ -87,48 +87,19 @@ is helpful but not required.
 
 **Mentors**: [Ludovico Bessi](https:https://github.com/ludoro), [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
-## Parameter estimation for nonlinear dynamical models
+## Improved interfacing between ModelingToolkit.jl and GalacticOptim.jl
 
-Machine learning has become a popular tool for understanding data, but scientists
-typically understand the world through the lens of physical laws and their
-resulting dynamical models. These models are generally differential equations
-given by physical first principles, where the constants in the equations such
-as chemical reaction rates and planetary masses determine the overall dynamics.
-The inverse problem to simulation, known as parameter estimation, is the process
-of utilizing data to determine these model parameters.
-
-The purpose of this project is to utilize the growing array of statistical,
-optimization, and machine learning tools in the Julia ecosystem to build
-library functions that make it easy for scientists to perform this parameter
-estimation with the most high-powered and robust methodologies. Possible projects
-include improving methods for Bayesian estimation of parameters via Stan.jl
-and Julia-based libraries like Turing.jl, or global optimization-based approaches.
-Novel techniques like classifying model outcomes via support vector machines
-and deep neural networks can also be considered. Research and benchmarking
-to attempt to find the most robust methods will take place in this project.
-Additionally, the implementation of methods for estimating structure, such
-as [topological sensitivity analysis](https://www.pnas.org/content/111/52/18507)
-along with performance enhancements to existing methods will be considered.
-
-Some work in this area can be found in
-[DiffEqParamEstim.jl](https://github.com/SciML/DiffEqParamEstim.jl)
-and [DiffEqBayes.jl](https://github.com/SciML/DiffEqBayes.jl). Examples
-can be found [in the DifferentialEquations.jl documentation]( https://docs.sciml.ai/dev/analysis/parameter_estimation).
+GalacticOptim.jl wraps multiple optimization packages local and global to provide a common interface.
+GalacticOptim.jl adds a few high-level features, such as integrating with automatic differentiation, to make its usage fairly simple for most cases, while allowing all of the options in a single unified interface.
+Currently ModelingToolkit.jl is provided as one of the AD backend options and can also be used to define the optimization problem symbolically directly. Thsi support is currently limited and doesn't cover things like constraints yet, but there is tremendous value to be gained by leveraging symbolic simplification possible with ModelingToolkit. This project would also cover integrating into MathOptInterface to by using the symbolic expressions generated from MTK, in addition to the current MOI wrapper available in GalacticOptim.
 
 **Recommended Skills**: Background knowledge of standard machine learning,
-statistical, or optimization techniques. It's recommended but not required that
-one has basic knowledge of differential equations and DifferentialEquations.jl.
-Using the differential equation solver to get outputs from parameters can
-be learned on the job, but you should already be familiar (but not necessarily
-an expert) with the estimation techniques you are looking to employ.
+statistical, or optimization techniques. Familiarity with the relevant packages, ModelingToolkit, GalacticOptim and MathOptInterface would be helpful to get started.
 
-**Expected Results**: Library functions for performing parameter estimation
-and inferring properties of differential equation solutions from parameters.
-Notebooks containing benchmarks determining the effectiveness of various methods
-and classifying when specific approaches are appropriate will be developed
-simultaneously.
+**Expected Results**: Feature complete symbolic optimization problem interface.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Vaibhav Dixit](https://github.com/Vaibhavdixit02)
+**Mentors**: [Vaibhav Dixit](https://github.com/Vaibhavdixit02), [Chris Rackauckas](https://github.com/ChrisRackauckas)
+
 
 ## Integration of FEniCS.jl with dolfin-adjoint + Zygote.jl for Finite Element Scientific Machine Learning
 
