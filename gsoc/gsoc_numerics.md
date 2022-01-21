@@ -40,7 +40,7 @@ and more.
 
 **Expected Results**: New tutorials in [SciMLTutorials](https://github.com/SciML/SciMLTutorials.jl) and benchmarks in [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl).
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Utkarsh](https://github.com/utkarsh530)
 
 ## Benchmarks and Tutorial Writing
 
