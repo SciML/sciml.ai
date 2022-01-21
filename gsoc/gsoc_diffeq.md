@@ -49,7 +49,7 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Expected Results**: Contributions of production-quality solver methods.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Yingbo Ma](https://github.com/YingboMa), and [Kanav Gupta](https://github.com/kanav99)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Yingbo Ma](https://github.com/YingboMa), [Kanav Gupta](https://github.com/kanav99) and [Utkarsh](https://github.com/utkarsh530)
 
 ## Improvements to Physics-Informend Neural networks (PINN) for solving differential equations
 
