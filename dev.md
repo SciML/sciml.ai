@@ -14,7 +14,7 @@ The SciML organization is a partner organization for Google Summer of Code
 under the [NumFOCUS](https://numfocus.org/) umbrella. In this summer program,
 students are paid to work on various SciML open source software repositories.
 Each of the students are paired with a team of mentors to teaching them various
-aspects of computatinoal science, from numerical differential equations and
+aspects of computational science, from numerical differential equations and
 scientific machine learning, to parallel and symbolic-numeric computing.
 
 To get started, take a look at the project lists and contact one of the mentors
@@ -22,6 +22,7 @@ associated with the project.
 
 #### Projects Lists
 
+- [General Numerics](/gsoc/gsoc_numerics)
 - [Numerical Differential Equations](/gsoc/gsoc_diffeq)
 - [Scientific Machine Learning](/gsoc/gsoc_sciml)
 - [Symbolic-Numeric Computing](/gsoc/gsoc_symbolic)

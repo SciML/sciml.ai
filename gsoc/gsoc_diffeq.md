@@ -49,7 +49,7 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Expected Results**: Contributions of production-quality solver methods.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Yingbo Ma](https://github.com/YingboMa), and [Kanav Gupta](https://github.com/kanav99)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Yingbo Ma](https://github.com/YingboMa), [Kanav Gupta](https://github.com/kanav99) and [Utkarsh](https://github.com/utkarsh530)
 
 ## Improvements to Physics-Informend Neural networks (PINN) for solving differential equations
 
@@ -88,7 +88,7 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Expected Results**: Improved benchmarks to share with the community.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Yingbo Ma](https://github.com/YingboMa), and [Kanav Gupta](https://github.com/kanav99)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Yingbo Ma](https://github.com/YingboMa)
 
 ## Discretizations of partial differential equations
 
@@ -99,7 +99,7 @@ are some ideas for potential projects:
 
 @@tight-list
 1. Automated PDE discretization tooling. We want users to describe a PDE in its mathematical form and automate the rest of the solution process. See [this issue for details](https://github.com/SciML/DifferentialEquations.jl/issues/469).
-2. Enhancement of existing tools for discretizing PDEs. The finite differencing (FDM) library [DiffEqOperators.jl](https://github.com/SciML/DiffEqOperators.jl) could be enhanced to allow non-uniform grids or composition of operators. The finite element method (FEM) library [FEniCS.jl](https://github.com/SciML/FEniCS.jl) could wrap more of the FEniCS library.
+2. Enhancement of existing tools for discretizing PDEs. The finite differencing (FDM) library [MethodOfLines.jl](https://github.com/SciML/MethodOfLines.jl) could be enhanced to allow non-uniform grids or composition of operators. The finite element method (FEM) library [FEniCS.jl](https://github.com/SciML/FEniCS.jl) could wrap more of the FEniCS library.
 3. Full stop solvers of common fluid dynamical equations, such as diffusion-advection-convection equations, or of hyperbolic PDEs such as the Hamilton-Jacobi-Bellman equations would be useful to many users.
 4. Using stochastic differential equation (SDE) solvers to efficiently (and highly parallel) approximate certain PDEs.
 5. Development of ODE solvers for more efficiently solving specific types of PDE discretizations. See the "Native Julia solvers for ordinary differential equations" project.
