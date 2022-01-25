@@ -73,6 +73,27 @@ solvers is not required.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Yingbo Ma](https://github.com/YingboMa)
 
+## Symbolic chemistry and calculating reaction rate coefficients
+
+Catalyst is a great tool to model chemical reactions, but often reaction rate coefficients 
+are usually suspect. There are well established methods to calculate what these coefficients 
+should be given the activation energy of a reaction. We want to automate part of this modeling, 
+allowing the user to provide atom-bond graphs and have coefficients determined for free.
+
+@@tight-list
+- Data structures to represent chemical species, compounds, ions, and isotopes
+- Arrhenius equation calculation of reaction rate coefficients k(T)
+- Automatically balancing reactions using above data structures
+- Verifying conservation of energy for each Reaction in a ReactionSystem
+@@
+
+**Recommended Skills**: Strong understanding of chemistry and Julia open-source programming, 
+particularly [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl) and [ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl).
+
+**Expected Results**: Define an interface for providing a Symbolics.jl object that contains relevant metadata for calculating activation energy and reaction rate coefficients using the Arrhenius equation.
+
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Anand Jain](https://github.com/anandijain) and [Samuel Isaacson](https://github.com/isaacsas)
+
 ## Improved interfacing between ModelingToolkit.jl and GalacticOptim.jl
 
 GalacticOptim.jl wraps multiple optimization packages local and global to provide a common interface.
