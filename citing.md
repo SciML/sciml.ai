@@ -30,6 +30,7 @@ please feel free to [ask in the community channels](/community.html).
   journal={Journal of Open Research Software},
   volume={5},
   number={1},
+  pages={15},
   year={2017},
   publisher={Ubiquity Press}
 }
@@ -65,12 +66,13 @@ please feel free to [ask in the community channels](/community.html).
 ```
 
 ```
-@article{rackauckas_stability-optimized_2018,
-	title = {Stability-{Optimized} {High} {Order} {Methods} and {Stiffness} {Detection} for {Pathwise} {Stiff} {Stochastic} {Differential} {Equations}},
-	url = {http://arxiv.org/abs/1804.04344},
-	journal = {arXiv:1804.04344 [math]},
-	author = {Rackauckas, Christopher and Nie, Qing},
-	year = {2018},
+@inproceedings{rackauckas2020stability,
+  title={Stability-optimized high order methods and stiffness detection for pathwise stiff stochastic differential equations},
+  author={Rackauckas, Chris and Nie, Qing},
+  booktitle={2020 IEEE High Performance Extreme Computing Conference (HPEC)},
+  pages={1--8},
+  year={2020},
+  organization={IEEE}
 }
 ```
 
@@ -87,11 +89,15 @@ please feel free to [ask in the community channels](/community.html).
 #### Sensitivity Analysis and Adjoints
 
 ```
-@article{rackauckas2018comparison,
-  title={A comparison of automatic differentiation and continuous sensitivity analysis for derivatives of differential equation solutions},
-  author={Rackauckas, Christopher and Ma, Yingbo and Dixit, Vaibhav and Guo, Xingjian and Innes, Mike and Revels, Jarrett and Nyberg, Joakim and Ivaturi, Vijay},
-  journal={arXiv preprint arXiv:1812.01892},
-  year={2018}
+@INPROCEEDINGS{9622796,
+  author={Ma, Yingbo and Dixit, Vaibhav and Innes, Michael J and Guo, Xingjian and Rackauckas, Chris},
+  booktitle={2021 IEEE High Performance Extreme Computing Conference (HPEC)}, 
+  title={A Comparison of Automatic Differentiation and Continuous Sensitivity Analysis for Derivatives of Differential Equation Solutions}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-9},
+  doi={10.1109/HPEC49654.2021.9622796}
 }
 ```
 
