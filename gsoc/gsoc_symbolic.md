@@ -108,6 +108,7 @@ statistical, or optimization techniques. Familiarity with the relevant packages,
 **Mentors**: [Vaibhav Dixit](https://github.com/Vaibhavdixit02), [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
 ## Symbolic Analysis and Transformations of Chemical Reaction Networks
+
 Catalyst.jl provides the ability to create symbolic models of chemical reaction networks, generate symbolic differential equation and stochastic process models from them, and offers some limited ability to analyze the symbolic chemical reaction networks. There are a variety of ways Catalyst.jl's core capabilities could be expanded, including adding
 
 @@tight-list
