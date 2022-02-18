@@ -146,4 +146,4 @@ Jump processes are a widely used approach for modeling biological, chemical and 
 
 **Expected Results**: Completing one or more of the preceding improvements to the jump process simulation tooling.
 
-
+**Mentors**: [Samuel Isaacson](https://github.com/isaacsas) and [Chris Rackauckas](https://github.com/ChrisRackauckas).
