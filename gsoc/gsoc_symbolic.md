@@ -106,3 +106,24 @@ statistical, or optimization techniques. Familiarity with the relevant packages,
 **Expected Results**: Feature complete symbolic optimization problem interface.
 
 **Mentors**: [Vaibhav Dixit](https://github.com/Vaibhavdixit02), [Chris Rackauckas](https://github.com/ChrisRackauckas)
+
+## Symbolic Analysis and Transformations of Chemical Reaction Networks
+Catalyst.jl provides the ability to create symbolic models of chemical reaction networks, generate symbolic differential equation and stochastic process models from them, and offers some limited ability to analyze the symbolic chemical reaction networks. There are a variety of ways Catalyst.jl's core capabilities could be expanded, including adding
+
+@@tight-list
+- tooling for detecting and classifying steady-states and their equilibria for mass-action systems (i.e. polynomial ODE systems).
+- tooling to infer from reaction network graph representations possible dynamic and equilibrium behaviors using chemical reaction network theory.
+- methods to reduce the size of reaction networks via the elimination of conserved species. 
+- support for elimination of aliased species between different Catalyst model components to enable more modular composition of Catalyst-based models.
+- new ModelingToolkit-based systems to represent τ-leaping and/or abstract master equation representations, along with translation layers to generate such systems from Catalyst reaction network models.
+- new ModelingToolkit-based representations for hybrid systems mixing reactions across modeling scales (ODEs, SDEs, jump processes), along with translation layers to generate such systems from Catalyst reaction network models.
+- the ability for Catalyst reactions to allow random variables or general parameters to encode reaction stoichiometry, with updates to ModelingToolkit and Symbolics to support the generation of corresponding ODE, SDE and jump process models.
+
+**Recommended Skills**: Strong understanding of ODE models for chemical systems and Julia open-source programming, 
+particularly [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl) and [ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl). 
+
+**Expected Results**: Extend Catalyst with one or more of the preceding features, with corresponding ModelingToolkit updates, enabling users to build, analyze, and simulate Catalyst-derived models incorporating the new components. 
+
+**Mentors**: [Samuel Isaacson](https://github.com/isaacsas) and [Chris Rackauckas](https://github.com/ChrisRackauckas).
+
+@@
