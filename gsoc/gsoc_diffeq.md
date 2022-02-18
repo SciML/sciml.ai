@@ -130,3 +130,20 @@ to solve equations.
 analysis.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Vaibhav Dixit](https://github.com/Vaibhavdixit02)
+
+## Jump Process Simulation Algorithms
+Jump processes are a widely used approach for modeling biological, chemical and epidemiological systems that can account for both stochastic interactions, and spatial transport, of proteins/particles/agents. [DiffEqJump.jl](https://github.com/SciML/DiffEqJump.jl/) provides a library of optimized solvers for exactly simulating jump processes, including recently added solvers that allow for the simulation of spatially-distributed jump processes (where particles/agents move on graphs or general meshes). A variety of possible projects to extend and enhance the current tooling include
+
+@@tight-list
+- Adding additional stochastic simulation algorithms such as the constant complexity next reaction method or partial propensity methods (either explicitly or via wrapping the C++ [pSSALib](https://github.com/breezerider/pSSAlib)).
+- Extending the current graph and spatial algorithms to support interactions between particles/agents at different spatial locations, and developing tooling to automatically calculate transition rates via PDE discretization techniques.
+- Extending StochasticDiffEq.jl with τ-leap algorithms to enable the approximate, but more computationally efficient, simulation of jump processes.
+- Extending DiffEqJump and StochasticDiffEq with hybrid simulation capabilities, allowing models that mix ODEs, SDE and jump processes and can dynamically partition model components between each mathematical representation as needed to maintain physical accuracy.
+- Extending DiffEqJump's simulation algorithm collection to better support time-dependent rate functions and delays.
+@@
+
+**Recommended Skills**: An understanding of how the Gillespie method or basic jump process simulation algorithms work, and experience using DiffEqJump.jl to simulate jump processes.
+
+**Expected Results**: Completing one or more of the preceding improvements to the jump process simulation tooling.
+
+
