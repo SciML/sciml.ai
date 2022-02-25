@@ -51,7 +51,11 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Yingbo Ma](https://github.com/YingboMa), [Kanav Gupta](https://github.com/kanav99) and [Utkarsh](https://github.com/utkarsh530)
 
-## Improvements to Physics-Informend Neural networks (PINN) for solving differential equations
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Easy to Hard depending on the chosen subtasks.
+
+## Improvements to Physics-Informed Neural networks (PINN) for solving differential equations
 
 Neural networks can be used as a method for efficiently solving difficult partial differential equations.
 Efficient implementations of physics-informed machine learning from recent papers are being explored as
@@ -64,6 +68,10 @@ would be interesting new neural network based methods to implement and benchmark
 **Expected Results**: New neural network based solver methods.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Kirill Zubov](https://github.com/KirillZubov)
+
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Easy to Hard depending on the chosen subtasks.
 
 ## Performance enhancements for differential equation solvers
 
@@ -90,6 +98,10 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Yingbo Ma](https://github.com/YingboMa)
 
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Easy to Hard depending on the chosen subtasks.
+
 ## Discretizations of partial differential equations
 
 There are two ways to approach libraries for partial differential equations (PDEs): one can build "toolkits" which enable users to discretize any PDE but require knowledge
@@ -113,6 +125,10 @@ to learn and a strong understanding of calculus and linear algebra.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Medium to Hard depending on the chosen subtasks.
+
 ## Tools for global sensitivity analysis
 
 Global Sensitivity Analysis is a popular tool to assess the effect that parameters
@@ -131,6 +147,10 @@ analysis.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Vaibhav Dixit](https://github.com/Vaibhavdixit02)
 
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Easy to Medium depending on the chosen subtasks.
+
 ## Jump Process Simulation Algorithms
 
 Jump processes are a widely used approach for modeling biological, chemical and epidemiological systems that can account for both stochastic interactions, and spatial transport, of proteins/particles/agents. [DiffEqJump.jl](https://github.com/SciML/DiffEqJump.jl/) provides a library of optimized solvers for exactly simulating jump processes, including recently added solvers that allow for the simulation of spatially-distributed jump processes (where particles/agents move on graphs or general meshes). A variety of possible projects to extend and enhance the current tooling include
@@ -148,3 +168,7 @@ Jump processes are a widely used approach for modeling biological, chemical and 
 **Expected Results**: Completing one or more of the preceding improvements to the jump process simulation tooling.
 
 **Mentors**: [Samuel Isaacson](https://github.com/isaacsas) and [Chris Rackauckas](https://github.com/ChrisRackauckas).
+
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Medium to Hard depending on the chosen subtasks.

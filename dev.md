@@ -22,9 +22,6 @@ associated with the project.
 
 #### Projects Lists
 
-All of the projects are designed to fit both a medium length project (175 hours
-expected contributor time) or long length project (300 hours).
-
 - [General Numerics](/gsoc/gsoc_numerics)
 - [Numerical Differential Equations and Stochastic Process Simulation](/gsoc/gsoc_diffeq)
 - [Scientific Machine Learning](/gsoc/gsoc_sciml)

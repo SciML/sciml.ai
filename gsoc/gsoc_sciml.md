@@ -30,6 +30,10 @@ graduate research in the field.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Kirill Zubov](https://github.com/KirillZubov)
 
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Easy to Hard depending on the chosen subtasks.
+
 ## Improvements to Neural and Universal Differential Equations
 
 [Neural ordinary differential equations](https://arxiv.org/abs/1806.07366) have
@@ -62,6 +66,10 @@ differential equations.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Medium to Hard depending on the chosen subtasks.
+
 ## Accelerating optimization via machine learning with surrogate models: Surrogates.jl
 
 In many cases, when attempting to optimize a function `f(p)` each calculation
@@ -87,6 +95,10 @@ is helpful but not required.
 
 **Mentors**: [Ludovico Bessi](https:https://github.com/ludoro), [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Medium to Hard depending on the chosen subtasks.
+
 ## Integration of FEniCS.jl with dolfin-adjoint + Zygote.jl for Finite Element Scientific Machine Learning
 
 Scientific machine learning requires mixing scientific computing libraries with machine learning.
@@ -108,3 +120,7 @@ Julia knowledge is preferred but not strictly required.
 **Expected Results**: Efficient and high-quality implementations of adjoints for Zygote.jl over FEniCS.jl functions.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
+
+**Expected Project Size**: 350 hour.
+
+**Difficulty**: Medium to Hard depending on the chosen subtasks.
