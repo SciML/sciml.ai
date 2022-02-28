@@ -123,6 +123,10 @@ statistical, or optimization techniques. Familiarity with the relevant packages,
 
 **Mentors**: [Vaibhav Dixit](https://github.com/Vaibhavdixit02), [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Easy to Medium depending on the chosen subtasks.
+
 ## Symbolic Analysis and Transformations of Chemical Reaction Networks
 
 Catalyst.jl provides the ability to create symbolic models of chemical reaction networks, generate symbolic differential equation and stochastic process models from them, and offers some limited ability to analyze the symbolic chemical reaction networks. There are a variety of ways Catalyst.jl's core capabilities could be expanded, including adding
@@ -142,5 +146,9 @@ particularly [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl) and 
 **Expected Results**: Extend Catalyst with one or more of the preceding features, with corresponding ModelingToolkit updates, enabling users to build, analyze, and simulate Catalyst-derived models incorporating the new components.
 
 **Mentors**: [Samuel Isaacson](https://github.com/isaacsas) and [Chris Rackauckas](https://github.com/ChrisRackauckas).
+
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Easy to Hard depending on the chosen subtasks.
 
 @@
