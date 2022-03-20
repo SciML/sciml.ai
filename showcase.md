@@ -143,6 +143,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Books
 
+- [Nonlinear Dynamics: A Concise Introduction Interlaced with Code](https://link.springer.com/book/10.1007/978-3-030-91032-7)
+- [Numerical Methods for Scientific Computing: The Definitive Manual for Math Geeks](https://www.equalsharepress.com/)
 - [Fundamentals of Numerical Computation](https://tobydriscoll.net/project/fnc/)
 - [Statistics with Julia](https://statisticswithjulia.org/)
 - [The Koopman Operator in Systems and Control](https://www.springer.com/gp/book/9783030357122)
