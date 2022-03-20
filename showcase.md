@@ -174,6 +174,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Podcasts and Developer Interviews
 
+- [Peregrination of a raconteur through maths, computing, and life with Chris Rackauckas (MIT)](https://anchor.fm/random-walks/episodes/Peregrination-of-a-raconteur-through-maths--computing--and-life-with-Chris-Rackauckas-MIT-e1c4cla)
 - [Notamonadtutorial.com: Modeling complexity with Symbolics.jl and ModelingToolkit.jl (Interview with Chris Rackauckas)](https://notamonadtutorial.com/modeling-complexity-with-symbolics-jl-and-modelingtoolkit-jl-df923129996b?gi=76fd905cb0c0)
 - [Jousef Murad: Chris Rackauckas - Physics-Informed Neural Networks (PINNs) | Podcast #42](https://www.youtube.com/watch?v=OmySUTFwh2g)
 - [The Stardust Podcast #7 - Christopher Rackauckas](https://youtu.be/uoz08EqSpmY)
