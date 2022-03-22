@@ -27,6 +27,13 @@ associated with the project.
 - [Scientific Machine Learning](/gsoc/gsoc_sciml)
 - [Symbolic-Numeric Computing](/gsoc/gsoc_symbolic)
 
+## Google Season of Docs
+
+The SciML project is a participant organization for Google Season of Docs. In this program, technical writers are paid to work on various SciML open source documentation. Each of the writers are paired with a team of mentors to help them learn various aspects of computational science, from numerical differential equations and scientific machine learning, to parallel and symbolic-numeric computing.
+
+Check out the [SciML GSoD projects to learn more](/gsod)!
+
+
 ## MLH Summer Fellowship
 
 The SciML organization partners with the [MLH Fellowship](https://fellowship.mlh.io/)
@@ -47,9 +54,7 @@ see the
 [NumFOCUS small development grants](https://numfocus.org/programs/small-development-grants)
 page.
 
-Up to USD 5,000 is available per proposal. The total allocated funding for
-NumFOCUS in 2021 is USD 53,000 for each of the three cycles, with USD 11,000
-for off cycle grants. NumFOCUS sponsored and affiliated projects may receive
+Up to USD 10,000 is available per proposal. NumFOCUS sponsored and affiliated projects may receive
 upto two grants per year and can submit one application per cycle.
 
 If you are interested, please get in contact with Chris Rackauckas.
