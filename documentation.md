@@ -34,14 +34,17 @@ These resources cover:
 - (Stochastic) partial differential equations ((S)PDEs) (with both finite
   difference and finite element methods)
 
-## Partial Differential Equation Modeling
+## Partial Differential Equation Modeling and Solving
 
-- [DiffEqOperators.jl: Finite Difference Methods](https://github.com/SciML/DiffEqOperators.jl)
-- [NeuralPDE.jl: Physics-Informed Neural Networks](https://github.com/SciML/NeuralPDE.jl)
+- [MethodOfLines.jl: Finite Difference Methods](https://methodoflines.sciml.ai/dev/)
+- [NeuralPDE.jl: Physics-Informed Neural Networks](https://neuralpde.sciml.ai/dev/)
+- [NearalOperators.jl: DeepONets and Neural Operator Methods](https://neuraloperators.sciml.ai/dev/)
+- [DiffEqOperators.jl: Finite Difference Methods](https://diffeqoperators.sciml.ai/dev/)
 - [FEniCS.jl: Finite Element Methods](https://github.com/SciML/FEniCS.jl)
 
-## Nonlinear Systems
+## Core Mathematical Systems
 
+- [LinearSolve.jl: High-performance and differentiation-enabled Linear Solvers](https://linearsolve.sciml.ai/dev/)
 - [NonlinearSolve.jl: High-performance and differentiation-enabled Nonlinear Solvers](https://nonlinearsolve.sciml.ai/dev/)
 
 ## Optimization
@@ -55,7 +58,7 @@ These resources cover:
 - [DataDrivenDiffEq.jl: Koopman Operator and Symbolic Regression](https://datadriven.sciml.ai/dev/)
 - [DiffEqParamEstim.jl: Easy parameter estimation by maximum likelihood and MAP of differential equations](https://diffeqparamestim.sciml.ai/dev/)
 - [DiffEqBayes.jl: Easy Bayesian inference of differential equations](https://diffeqbayes.sciml.ai/dev/)
-- [ReservoirComputing.jl: Reservoir computing methods like echo state networks](https://github.com/SciML/ReservoirComputing.jl)
+- [ReservoirComputing.jl: Reservoir computing methods like echo state networks](https://reservoircomputing.sciml.ai/dev/)
 
 Honorable mention to [Turing.jl](https://turing.ml/dev/), a probabilistic programming
 language that composes with the SciML tools.
@@ -79,6 +82,7 @@ language that composes with the SciML tools.
 
 ## Numerical Tools and Primatives
 
+- [GlobalSensitivity.jl: Fast and Parallel Global Sensitivity Analysis](https://globalsensitivity.sciml.ai/dev/)
 - [ExponentialUtilities.jl: Fast and GPU matrix exponentials](https://github.com/SciML/ExponentialUtilities.jl)
 - [Quadrature.jl: Common interface for quadrature and numerical integration](https://github.com/SciML/Quadrature.jl)
 - [QuasiMonteCarlo.jl: Quasi-Monte Carlo sampling routines](https://github.com/SciML/QuasiMonteCarlo.jl)
