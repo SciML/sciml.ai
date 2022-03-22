@@ -10,7 +10,7 @@ header {
 /* on wide screens, fix content width to a max value */
 @media (min-width: 940px) {
   header {
-    width: 705px;
+    /* width: 705px; */
     margin-left: auto;
     margin-right: auto; }
   }
