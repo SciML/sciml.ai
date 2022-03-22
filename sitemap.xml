@@ -224,7 +224,13 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://sciml.ai/news/2017/08/25/StiffDDESDE/index.html</loc>
+    <loc>https://sciml.ai/news/2018/01/24/Parameters/index.html</loc>
+    <lastmod>2022-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://sciml.ai/old_index/index.html</loc>
     <lastmod>2022-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -236,7 +242,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://sciml.ai/news/2018/01/24/Parameters/index.html</loc>
+    <loc>https://sciml.ai/news/2017/08/25/StiffDDESDE/index.html</loc>
     <lastmod>2022-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -267,12 +273,6 @@
 </url>
 <url>
     <loc>https://sciml.ai/news/2020/03/29/SciML/index.html</loc>
-    <lastmod>2022-03-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://sciml.ai/index.html</loc>
     <lastmod>2022-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -375,6 +375,18 @@
 </url>
 <url>
     <loc>https://sciml.ai/news/2020/05/09/ModelDiscovery/index.html</loc>
+    <lastmod>2022-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://sciml.ai/index%20copy/</loc>
+    <lastmod>2022-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://sciml.ai/index/</loc>
     <lastmod>2022-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
