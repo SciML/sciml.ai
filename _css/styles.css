@@ -11300,14 +11300,28 @@ textarea.form-control-lg {
   font-size: 4.5rem;
 }
 
-header.masthead {
-  position: relative;
-  background-color: #343a40;
-  background: url("../assets/SciML_Website_Header.png") no-repeat center center;
-  background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
+@media (max-width: 1000px) { 
+  header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background: url("../assets/SciML_Website_Header_Small.png") no-repeat center center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+ }
+
+@media (min-width: 1000px) { 
+  header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background: url("../assets/SciML_Website_Header.png") no-repeat center center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+ }
+
 header.masthead:before {
   content: "";
   position: absolute;
