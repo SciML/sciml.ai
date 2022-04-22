@@ -97,6 +97,38 @@
         </div>
     </div>
 </section>
+<section>
+    <div class="container-fluid">
+        <h2 style="text-align: center;">Watch SciMLCon 2022 Talks:</h2>
+        <div class="embed-responsive embed-responsive-21by9"><div id="player" style="width: 50%; height: 450px; margin: auto; display: block;"></div></div>
+    
+        <script type="text/javascript">
+          var tag = document.createElement('script');
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+              playerVars: {
+                list: 'PLP8iPy9hna6QglWLQM02jcVjEBjaamzvw',
+                listType: 'playlist',
+              },
+              events: {
+                'onReady': onPlayerReady,
+              }
+            });
+          }
+    
+          function onPlayerReady(event) {
+            player.cuePlaylist({
+              index: Math.floor(Math.random() * player.getPlaylist().length)
+            });
+          }
+        </script>
+    </div>
+</section>
 <!-- Sponsors-->
 <section class="testimonials text-center bg-light">
     <div class="container">
