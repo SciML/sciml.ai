@@ -64,7 +64,7 @@ graduate research in the field.
 **Expected Results**: New and improved methods for neural and universal
 differential equations.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Anas Abdelrehim](https://github.com/AnasAbdelR)
 
 **Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
 
