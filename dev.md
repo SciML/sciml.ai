@@ -8,6 +8,21 @@ Opportunities are available for everyone, all the way from students looking to
 learn to career scientists looking to fund dedicated open source time. Below
 are our major developer programs with more information on how to get involved.
 
+## SciML Summer Fellowship
+
+The SciML organization is happy to announce it will be running its first summer
+fellowship program! SciML summer fellowships are designed to fund promising
+budding open source developers wishing to develop on SciML projects or applications
+of the SciML projects. Students as part of this fellowship program are expected to
+work full-time on Julia-based open source projects in the SciML organization or
+in sister organizations maintained by the SciML developers to ensure long-term
+viability for the projects. To apply, send an email to (XXXXXXXXXXXXXXX?) with a 
+CV and a two page project description, describing your prior open source contributions
+and what is planned to work on for the summer.
+
+Note that the definition of summer is left purposely vague to accomodate the differing
+schedules of university students.
+
 ## Google Summer of Code
 
 The SciML organization is a partner organization for Google Summer of Code
@@ -32,7 +47,6 @@ associated with the project.
 The SciML project is a participant organization for Google Season of Docs. In this program, technical writers are paid to work on various SciML open source documentation. Each of the writers are paired with a team of mentors to help them learn various aspects of computational science, from numerical differential equations and scientific machine learning, to parallel and symbolic-numeric computing.
 
 Check out the [SciML GSoD projects to learn more](/gsod)!
-
 
 ## MLH Summer Fellowship
 
