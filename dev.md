@@ -12,7 +12,7 @@ are our major developer programs with more information on how to get involved.
 
 The SciML organization is happy to announce it will be running its first summer
 fellowship program! SciML summer fellowships are designed to fund promising
-budding open source developers wishing to develop on SciML projects or applications
+budding open source developers wishing to contribute to SciML projects or applications
 of the SciML projects. Students as part of this fellowship program are expected to
 work full-time on Julia-based open source projects in the SciML organization or
 in sister organizations maintained by the SciML developers to ensure long-term
