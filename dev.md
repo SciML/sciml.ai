@@ -20,6 +20,9 @@ viability for the projects. To apply, send an email to (XXXXXXXXXXXXXXX?) with a
 CV and a two page project description, describing your prior open source contributions
 and what is planned to work on for the summer.
 
+For information on possible projects, please look at the Google Summer of Code and
+Google Season of Docs project lists for more information.
+
 Note that the definition of summer is left purposely vague to accomodate the differing
 schedules of university students.
 
