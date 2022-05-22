@@ -16,7 +16,7 @@ budding open source developers wishing to contribute to SciML projects or applic
 of the SciML projects. Students as part of this fellowship program are expected to
 work full-time on Julia-based open source projects in the SciML organization or
 in sister organizations maintained by the SciML developers to ensure long-term
-viability for the projects. To apply, send an email to (XXXXXXXXXXXXXXX?) with a 
+viability for the projects. To apply, send an email to sciml@julialang.org with a 
 CV and a two page project description, describing your prior open source contributions
 and what is planned to work on for the summer.
 
