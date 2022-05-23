@@ -148,6 +148,7 @@ SciML. If you would like your institution's tools added to the list,
 - [Numerical Methods for Scientific Computing: The Definitive Manual for Math Geeks](https://www.equalsharepress.com/)
 - [Fundamentals of Numerical Computation](https://tobydriscoll.net/project/fnc/)
 - [Statistics with Julia](https://statisticswithjulia.org/)
+- [Statistical Rethinking with Julia](https://shmuma.github.io/rethinking-2ed-julia/)
 - [The Koopman Operator in Systems and Control](https://www.springer.com/gp/book/9783030357122)
     - "All simulations have been performed in Julia, with additional Julia packages: LinearAlgebra.jl, Random.jl, Plots.jl, Lasso.jl, DifferentialEquations.jl"
 
