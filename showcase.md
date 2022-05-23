@@ -39,6 +39,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Coverage Featuring SciML
 
+- [Q&A: Chris Rackauckas on the equations at the heart of practically everything](https://news.mit.edu/2022/qa-chris-rackauckas-equations-heart-practically-everything-0509)
 - [Using machine learning to derive black hole motion from gravitational waves (using SciML DiffEqFlux)](https://phys.org/news/2021-11-machine-derive-black-hole-motion.html)
 - [HPCWire: Argonne AI for Science Colloquium Marks Challenges and Progress](https://www.hpcwire.com/2021/11/09/argonne-ai-for-science-colloquium-marks-challenges-and-progress/)
 - [Pumas-AI looks to democratize access to drug development tools (using SciML)](https://technical.ly/baltimore/2021/09/07/pumas-ai-umb/)
