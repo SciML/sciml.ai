@@ -44,8 +44,14 @@ tag.
 
 ### Twitter
 
-For updates on recent scientific machine learning developers, follow
+For updates on recent scientific machine learning developments, follow
+
 [@SciML_Org](https://twitter.com/SciML_Org).
+
+### LinkedIn
+
+To keep up with announcements follow
+[SciML](https://www.linkedin.com/company/sciml/).
 
 ### Reddit
 
