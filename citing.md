@@ -144,6 +144,17 @@ please feel free to [ask in the community channels](/community.html).
 }
 ```
 
+#### HighDimPDE.jl
+
+```
+@article{Boussange2022,
+  title={Deep learning approximations for non-local nonlinear PDEs with Neumann boundary conditions},
+  author={Boussange, Victor and Becker, Sebastian and Jentzen, Arnulf and Kuckuck, Benno and Pellissier, Loïc},
+  journal={arXiv preprint arXiv:2205.03672},
+  year={2022}
+}
+```
+
 ## Algorithm Citations
 
 Many of the algorithms which are included as part of this ecosystem of software

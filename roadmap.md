@@ -222,7 +222,8 @@ provide libraries like:
 - [DiffEqFlux.jl](https://github.com/SciML/DiffEqFlux.jl) for neural and universal differential equations
 - [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl) for automated equation generation with Dynamic Mode Decomposition (DMD) and SInDy type methods
 - [ReservoirComputing.jl](https://github.com/SciML/ReservoirComputing.jl) for echo state networks and prediction of chaotic systems
-- [NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl) for Physics-Informed Neural Networks (PINNs) and Deep BSDE solvers of 100 dimensional PDEs
+- [NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl) for Physics-Informed Neural Networks (PINNs)
+- [HighDimPDE.jl](https://github.com/SciML/HighDimPDE.jl) for high-dimensional partial differential equations.
 
 We will continue to expand this portion of our offering, building tools that
 automatically solve PDEs from a symbolic description using neural networks,
