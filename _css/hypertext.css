@@ -5,7 +5,7 @@ header {
   position: relative;
   padding-left: 10%;
   padding-right: 10%;
-  margin-bottom: 50px; }
+  margin-bottom: 10px; }
 
 /* on wide screens, fix content width to a max value */
 @media (min-width: 940px) {
