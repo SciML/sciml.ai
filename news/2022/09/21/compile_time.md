@@ -1264,6 +1264,12 @@ system image was still >10 seconds. So while system images do some heavy lifting
 "good compile time practices" were required to really get that final system image actually removing
 all compilation.
 
+#### Note About VS Code
+
+VS Code has 
+[tools to make building system images easier](https://www.julia-vscode.org/docs/stable/userguide/compilesysimage/).
+Use them.
+
 ## Conclusions and Lasting Thoughts
 
 Nothing is complete, but huge strides have been made. Major thanks to Tim Holy who put together the
