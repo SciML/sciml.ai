@@ -1280,7 +1280,7 @@ this was a culmination of package developers working with the compiler developer
 that are needed to solve the real problems.
 
 SciML's packages can thus serve as a source of inspiration for the Julia community. Here's a set of
-packages which had some of the largest compile times just a year ago, and now the REPL feels instantanious.
+packages which had some of the largest compile times just a year ago, and now the REPL feels instantaneous.
 These steps are reproducible to other packages and just need someone to roll up their sleeves. We have
 the tools, let's go for it!
 
