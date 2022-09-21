@@ -111,7 +111,7 @@ is performed by underlying libraries called the BLAS and LAPACK library. Most op
 which does many of the tricks required for getting much higher performance than "simple" codes by using
 CPU-specialized kernels based on the sizes of the CPU's caches. Open source projects like R and SciPy
 also ship with OpenBLAS because of its generally good performance and open licensing, though it's known
-that OpenBLAS is handedly outperformed by [Intel MKL](https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-mkl-for-dpcpp/top.html)
+that OpenBLAS is handily outperformed by [Intel MKL](https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-mkl-for-dpcpp/top.html)
 which is a vendor-optimized BLAS/LAPACK implementation for Intel CPUs (which works on AMD CPUs as well).
 Given its licensing, most open source projects cannot (and thus do not) ship with a binary of MKL even
 though it is known to perform better in many circumstances.

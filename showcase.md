@@ -163,6 +163,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Awards Associated with SciML Software
 
+- [MIT Portugal Program Poster Award, Vinicius Santana, University of Porto](https://www.linkedin.com/feed/update/urn:li:activity:6978355245521264640/)
 - [2021: NeurIPS 2021 Differentiable Programming Workshop Best Poster, AbstractDifferentiation.jl: Backend-Agnostic Differentiable Programming in Julia, by Frank Schaefer (University of Basel), Mohamed Tarek (Pumas-AI, UNSW), Lyndon White (Invenia Labs), and Christopher Rackauckas (MIT, Julia Computing, Pumas-AI)](https://diffprogramming.mit.edu/awards)
 - [2021: International Society of Pharmacology (ISoP) Mathematics and Computing Special Interest Group Poster Award. Niklas Korsbo (Pumas-AI, University of Cambridge), Chris Elrod (Julia Computing), Francesco Brizzi (Roche), Antoine Soubret (Roche), Andreas Noack (Julia Computing), Vijay Ivaturi (Pumas-AI, University of Maryland School of Pharmacy) and Christopher Rackauckas (Julia Computing, MIT)](https://sites.google.com/view/mcssig/previous-acop-meetings?authuser=0): For "Automatic identification of non-obvious prognostic factors in big data with DeepNLME". DeepNLME is built using the SciML tooling.
 - [2021: United States Department of the Air Force Artificial Intelligence Accelerator Scientific Excellence Award (Chris Rackauckas)](https://aia.mit.edu/2021/07/20/accelerator-names-annual-award-winners/): For "For developing innovative computational processes to accelerate the simulation of nonlinear systems using neural networks".
@@ -187,6 +188,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [SimpleChains.jl for NeuralODE and SciML](https://medium.com/@abhishekbhatt730/simplechains-jl-for-neuralode-and-sciml-fadbe6fee481)
 - [Integro Differential Equations GSoC 2021 NumFOCUS: Final Report](https://medium.com/@a.bharambe123/gsoc-2021-numfocus-final-report-2b2f32b63492)
 - [Spatial SSAs GSOC 2021 Final Report](https://vilin97.github.io/posts/post5/)
 - [StructuralIdentifiability.jl Google Summer of Code: Final Results](https://iliailmer.github.io/2021/08/google-summer-of-code-final-results.html#google-summer-of-code-final-results)
