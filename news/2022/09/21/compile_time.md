@@ -322,7 +322,7 @@ end
 ```
 
 Now, just like before, I want to reduce the time to first calls of `g` by forcing precompilation.
-Let's do it the same way as on `MyPackage:
+Let's do it the same way as on `MyPackage`:
 
 ```julia
 module MyPackage2
@@ -1549,5 +1549,9 @@ else
     return f
 end
 ```
+
+Note that since we are not wrapping the `jac` type, there's no reason to wrap `f` since it will recompile
+anyways. That's just a current limitation of the design which can get lifted after I'm done spending too
+much time writing blog posts.
 
 Tada! Take care all.
