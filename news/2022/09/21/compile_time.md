@@ -52,7 +52,7 @@ But why? The major improvement which came to the Julia language in the summer of
 off this project, was the ability to profile compile times. To do this, one uses a mixture of
 the package [SnoopCompile.jl](https://github.com/timholy/SnoopCompile.jl) with the flamegraph
 viewing package [ProfileView.jl](https://github.com/timholy/ProfileView.jl). When we did that back
-in the early phase of this project, the flamegraph looked like this:
+in the early phase of this project, the profiling code was:
 
 ```julia
 using OrdinaryDiffEq, SnoopCompile
@@ -1274,9 +1274,9 @@ Use them.
 
 Nothing is complete, but huge strides have been made. Major thanks to Tim Holy who put together the
 tools required to make these changes as part of the CZI work. Also major kudos to Chris Elrod, Jeff
-Bezanson, and Jameson Nash at Julia Computing who helped complete complete the story with ambiguity
+Bezanson, and Jameson Nash at Julia Computing who helped complete the story with ambiguity
 handling and function specialization pieces as part of the (yet to be made public) grant work. All of
-this was a culmonation of package developers working with the compiler developers to get the tools
+this was a culmination of package developers working with the compiler developers to get the tools
 that are needed to solve the real problems.
 
 SciML's packages can thus serve as a source of inspiration for the Julia community. Here's a set of
