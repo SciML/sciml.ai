@@ -469,6 +469,8 @@ create_sysimage([<span class=hljs-string >&quot;OrdinaryDiffEq&quot;</span>], sy
 
 <li><p>Most of the remaining issues in SciML are due to the JuliaSIMD stack, specifically LoopVectorization.jl and its usage in RecursiveFactorization.jl. It&#39;s just a big generated code and therefore its LLVM time is long. New packages are being developed in the JuliaSIMD stack which alleviate this and further bring down the &quot;no system image first solve time&quot;.</p>
 
+<li><p>Precompilation of uninferred calls and reduction of world-splitting optimizations have been identified as two improvements to Julia&#39;s Base that could further help compile times. We&#39;ve upstreamed these needs and should hopefully hear some good news in the future.</p>
+
 </ul>
 <p>And that&#39;s all for now. It&#39;s still on-going work, but there&#39;s no reason to not get started yourself.</p>
 <h1 id=appendix ><a href="#appendix" class=header-anchor >Appendix</a></h1>
