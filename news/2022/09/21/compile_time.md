@@ -1550,8 +1550,4 @@ else
 end
 ```
 
-Note that since we are not wrapping the `jac` type, there's no reason to wrap `f` since it will recompile
-anyways. That's just a current limitation of the design which can get lifted after I'm done spending too
-much time writing blog posts.
-
 Tada! Take care all.
