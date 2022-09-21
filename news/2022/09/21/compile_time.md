@@ -1317,6 +1317,9 @@ As for improvements coming soon:
   and its usage in RecursiveFactorization.jl. It's just a big generated code and therefore its LLVM
   time is long. New packages are being developed in the JuliaSIMD stack which alleviate this and further
   bring down the "no system image first solve time".
+* Precompilation of uninferred calls and reduction of world-splitting optimizations have been identified
+  as two improvements to Julia's Base that could further help compile times. We've upstreamed these
+  needs and should hopefully hear some good news in the future.
 
 And that's all for now. It's still on-going work, but there's no reason to not get started yourself.
 
