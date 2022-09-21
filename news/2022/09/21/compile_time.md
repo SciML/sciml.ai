@@ -1198,7 +1198,7 @@ not descern a meaningful difference.
 
 #### Small Detail on Wrapper Performance with ForwardDiff
 
-Though not that needs a caveat on it. When forward-mode automatic differentiation via ForwardDiff.jl
+Though that note that needs a caveat on it. When forward-mode automatic differentiation via ForwardDiff.jl
 is used, the chunk size is a part of the type. Having a larger chunk size can improve the performance
 of the method, but the allowed values are dependent on the number of ODEs. Thus if one was only going
 to pick a single chunk size, the only valid answer is `1`, which can be less performant than some other
