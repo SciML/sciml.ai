@@ -1,6 +1,6 @@
 @def rss_pubdate = Date(2022,1,11)
 @def rss = """DifferentialEquations.jl v7: New linear solver and preconditioner interface"""
-@def published = " 11 January 2021 "
+@def published = " 11 January 2022 "
 @def title = "DifferentialEquations.jl v7: New linear solver and preconditioner interface"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
 
