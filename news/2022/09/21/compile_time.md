@@ -1322,6 +1322,109 @@ And that's all for now. It's still on-going work, but there's no reason to not g
 
 # Appendix
 
+## Using Preferences to Control Local Precompilation Choices
+
+While the ability for a `SnoopPrecompile.@precompile_all_calls` block to precompile all well-inferred
+calls is a good thing, in some cases users may want to control the amount that is precompiled. Moreso
+than users, this is helpful to developers who may need to frequently recompile the package. To make
+the precompilation choices more flexible, [Preferences.jl](https://github.com/JuliaPackaging/Preferences.jl)
+can be used to set compile-time preference controls on what to precompile. For example, with
+OrdinaryDiffEq.jl there are controls on whether to precompile the non-stiff, stiff, and auto-switching
+ODE solvers. This is done for example like:
+
+```julia
+SnoopPrecompile.@precompile_all_calls begin
+    function lorenz(du, u, p, t)
+        du[1] = 10.0(u[2] - u[1])
+        du[2] = u[1] * (28.0 - u[3]) - u[2]
+        du[3] = u[1] * u[2] - (8 / 3) * u[3]
+    end
+
+    nonstiff = [BS3(), Tsit5(), Vern7(), Vern9()]
+
+    stiff = [Rosenbrock23(), Rosenbrock23(autodiff = false),
+             Rodas4(), Rodas4(autodiff = false),
+             Rodas5(), Rodas5(autodiff = false),
+             Rodas5P(), Rodas5P(autodiff = false),
+             TRBDF2(), TRBDF2(autodiff = false),
+             KenCarp4(), KenCarp4(autodiff = false),
+             QNDF(), QNDF(autodiff = false)]
+
+    autoswitch = [
+        AutoTsit5(Rosenbrock23()), AutoTsit5(Rosenbrock23(autodiff = false)),
+        AutoTsit5(TRBDF2()), AutoTsit5(TRBDF2(autodiff = false)),
+        AutoVern9(KenCarp47()), AutoVern9(KenCarp47(autodiff = false)),
+        AutoVern9(Rodas5()), AutoVern9(Rodas5(autodiff = false)),
+        AutoVern9(Rodas5P()), AutoVern9(Rodas5P(autodiff = false)),
+        AutoVern7(Rodas4()), AutoVern7(Rodas4(autodiff = false)),
+        AutoVern7(TRBDF2()), AutoVern7(TRBDF2(autodiff = false))]
+
+    solver_list = []
+
+    if Preferences.@load_preference("PrecompileNonStiff", true)
+        append!(solver_list, nonstiff)
+    end
+
+    if Preferences.@load_preference("PrecompileStiff", true)
+        append!(solver_list, stiff)
+    end
+
+    if Preferences.@load_preference("PrecompileAutoSwitch", true)
+        append!(solver_list, autoswitch)
+    end
+
+    prob_list = []
+
+    if Preferences.@load_preference("PrecompileDefaultSpecialize", true)
+        push!(prob_list, ODEProblem(lorenz, [1.0; 0.0; 0.0], (0.0, 1.0)))
+        push!(prob_list, ODEProblem(lorenz, [1.0; 0.0; 0.0], (0.0, 1.0), Float64[]))
+    end
+
+    if Preferences.@load_preference("PrecompileAutoSpecialize", false)
+        push!(prob_list,
+              ODEProblem{true, SciMLBase.AutoSpecialize}(lorenz, [1.0; 0.0; 0.0],
+                                                         (0.0, 1.0)))
+        push!(prob_list,
+              ODEProblem{true, SciMLBase.AutoSpecialize}(lorenz, [1.0; 0.0; 0.0],
+                                                         (0.0, 1.0), Float64[]))
+    end
+
+    if Preferences.@load_preference("PrecompileFunctionWrapperSpecialize", false)
+        push!(prob_list,
+              ODEProblem{true, SciMLBase.FunctionWrapperSpecialize}(lorenz, [1.0; 0.0; 0.0],
+                                                                    (0.0, 1.0)))
+        push!(prob_list,
+              ODEProblem{true, SciMLBase.FunctionWrapperSpecialize}(lorenz, [1.0; 0.0; 0.0],
+                                                                    (0.0, 1.0), Float64[]))
+    end
+
+    if Preferences.@load_preference("PrecompileNoSpecialize", false)
+        push!(prob_list,
+              ODEProblem{true, SciMLBase.NoSpecialize}(lorenz, [1.0; 0.0; 0.0], (0.0, 1.0)))
+        push!(prob_list,
+              ODEProblem{true, SciMLBase.NoSpecialize}(lorenz, [1.0; 0.0; 0.0], (0.0, 1.0),
+                                                       Float64[]))
+    end
+
+    for prob in prob_list, solver in solver_list; solve(prob, solver)(5.0); end
+end
+```
+
+Then in the user's startup profile, precompilation amount can be toggled using the UUID of the
+OrdinaryDiffEq.jl package:
+
+```julia
+using Preferences, UUIDs
+set_preferences!(UUID("1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"), "PrecompileNonStiff" => true)
+set_preferences!(UUID("1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"), "PrecompileStiff" => false)
+set_preferences!(UUID("1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"), "PrecompileAutoSwitch" => false)
+set_preferences!(UUID("1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"), "PrecompileAutoSwitch" => false)
+set_preferences!(UUID("1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"), "PrecompileDefaultSpecialize" => true)
+set_preferences!(UUID("1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"), "PrecompileAutoSpecialize" => false)
+set_preferences!(UUID("1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"), "PrecompileFunctionWrapperSpecialize" => false)
+set_preferences!(UUID("1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"), "PrecompileNoSpecialize" => false)
+```
+
 ## Bonus Extra Profiling Tool
 
 I couldn't figure out where else to put this, so if you want to know the compile time contributions
