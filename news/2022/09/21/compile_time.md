@@ -1,4 +1,4 @@
-@def rss_pubdate = Date(2022,21,9)
+@def rss_pubdate = Date(2022,9,21)
 @def rss = """How Julia ODE Solve Compile Time Was Reduced From 30 Seconds to 0.1"""
 @def published = " 21 September 2022 "
 @def title = "How Julia ODE Solve Compile Time Was Reduced From 30 Seconds to 0.1"
