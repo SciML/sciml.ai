@@ -230,7 +230,7 @@ are the methods of `f` which are called in the top-level of the module during `u
 In other words, since in our module `MyPackage` `f` is defined but no methods of `f` are used, there 
 are no methods of `f` which are precompiled. Yay, we stopped combinatorial precompilation growth!
 
-This eludes to a simple fix: just call the methods that you need. For example, in the example `MyPackage`,
+This alludes to a simple fix: just call the methods that you need. For example, in the example `MyPackage`,
 we can force the precompilation mechanism to precompile `f` on many standard number types by doing:
 
 ```julia
@@ -603,7 +603,7 @@ could not infer the type of `!` need to be invalidated, since if it can infer th
 it can still know that `!x::Bool` and thus no invalidation occurs. This is one principle to take away from
 this discussion:
 
-**Invalidations and other bad compile-time things have a bigger change of occuring on uninferred code**
+**Invalidations and other bad compile-time things have a bigger chance of occuring on uninferred code**
 
 In other words, making sure that code is type-stable and easy to infer can have many different compile-time
 benefits.
