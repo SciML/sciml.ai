@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  How Julia ODE Solve Compile Time Was Reduced From 30 Seconds to 0.1  ]]>
+  </title>
+  <link> https://sciml.ai/news/2022/09/21/compile_time/index.html </link>
+  <guid> https://sciml.ai/news/2022/09/21/compile_time/index.html </guid>
+  <description>
+    <![CDATA[  How Julia ODE Solve Compile Time Was Reduced From 30 Seconds to 0.1  ]]>
+  </description>  
+    
+  <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  DifferentialEquations.jl v7: New linear solver and preconditioner interface  ]]>
   </title>
   <link> https://sciml.ai/news/2022/01/11/linearsolve_preconditioners/index.html </link>

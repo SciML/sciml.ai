@@ -272,6 +272,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://sciml.ai/news/2022/09/21/compile_time/index.html</loc>
+    <lastmod>2022-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://sciml.ai/news/2017/08/13/SDIRK/index.html</loc>
     <lastmod>2022-09-21</lastmod>
     <changefreq>monthly</changefreq>
