@@ -353,7 +353,7 @@ FunctionWrapper{<span class=hljs-built_in >Nothing</span>,<span class=hljs-built
     _prob = prob
   <span class=hljs-keyword >end</span>
 
-  __solve(prob,alg)
+  __solve(_prob,alg)
 <span class=hljs-keyword >end</span></code></pre>
 <p>In other words, we can wait to apply the function wrapping until we really know that we want it, allow for doing things like promoting <code>t</code> from <code>Int</code> etc., and thus have something very robust without ever forcing any other solver to be compatible with the <code>FunctionWrappersWrappers</code> types. This is what we implemented as the <code>AutoSpecialize</code> mode. And from  <a href="https://github.com/SciML/SciMLBase.jl/pull/242">a quick benchmark</a> we see that there&#39;s almost no  difference:</p>
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> OrdinaryDiffEq, SnoopCompile, Profile, ProfileView
