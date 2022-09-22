@@ -1100,7 +1100,7 @@ function solve(prob,alg)
     _prob = prob
   end
 
-  __solve(prob,alg)
+  __solve(_prob,alg)
 end
 ```
 
