@@ -65,10 +65,13 @@ html {
 /* on wide screens, fix content width to a max value */
 @media (min-width: 940px) {
     .franklin-content {
-        /* width: 705px; */
+        width: 785px;
+        padding-left: 0%;
+        padding-right: 0%;
         margin-left: auto;
-        margin-right: auto; }
+        margin-right: auto; 
     }
+}
 
 /* on narrow device, reduce margins */
 @media (max-width: 480px) {
@@ -182,9 +185,11 @@ html {
 ================================================================== */
 
 .franklin-content img {
-    width: 70%;
+    width: 100%;
     text-align: center;
-    padding-left: 10%; }
+    padding-left: 3%;
+    padding-right: 3%;
+}
 
 .franklin-content .img-small img {
     width: 50%;
@@ -229,7 +234,11 @@ code {
 .hljs {
     font-size: 90%;
     line-height: 1.35em;
-    border-radius: 10px; }
+    border-radius: 10px; 
+    display: block;
+    overflow: auto;
+    padding: 0.5em 1em;
+}
 
 .hljs-meta, .hljs-metas, .hljs-metap { font-weight: bold; }
 
