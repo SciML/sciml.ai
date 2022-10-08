@@ -11,6 +11,8 @@ and documentation generation. Other related issues, such as code style enforceme
 seen huge overhauls in this ecosystem update. From all of this, 
 **the documetation of SciML post summer 2022 has essentially been completely overhauled and improved!**
 
+![Function definition error message](https://user-images.githubusercontent.com/1814174/194701459-dc28d519-d49d-4f92-9c21-9a683536c12e.png)
+
 With that, let's start showing some details!
 
 ## New High Level Error Catching (Better Error Messages!)
