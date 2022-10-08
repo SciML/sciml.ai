@@ -9,7 +9,7 @@
 This release had a major focus on high-level user issues such as error messages, compile times,
 and documentation generation. Other related issues, such as code style enforcement, have also
 seen huge overhauls in this ecosystem update. From all of this, 
-**the documetation of SciML post summer 2022 has essentially been completely overhauled and improved!**
+**the documentation of SciML post summer 2022 has essentially been completely overhauled and improved!**
 
 ![Function definition error message](https://user-images.githubusercontent.com/1814174/194701459-dc28d519-d49d-4f92-9c21-9a683536c12e.png)
 
@@ -188,7 +188,7 @@ The DifferentialEquations.jl documentation has been restructured to make use of 
 
 The entire SciML organization updated its practices to have a well-defined style guide called
 [SciML Style](https://github.com/SciML/SciMLStyle) This style guide is comprehensive, covered high-level details such as whether 
-to prefer the use of closures or not, to lower more mondane details like the proper style for 
+to prefer the use of closures or not, to lower more mundane details like the proper style for 
 continuing equations to the next line. It has quickly become one of the most widely used style
 guides for Julia packages. For more information, please check out the style guide's documentation.
 
@@ -202,7 +202,7 @@ format(raw"C:\Users\accou\.julia\dev\QuasiMonteCarlo")
 ```
 
 in order to reformat their code into the SciML style. This ensures that the code is more uniform
-across contributors, making it even easier to read, understand, and contribute.
+across contributors, making it easier to read, understand, and contribute.
 
 ## NeuralOperators.jl: Fast Partial Differential Equation Solving via Neural Networks
 
@@ -219,5 +219,5 @@ More on this coming soon!
 The [PolyChaos.jl](https://github.com/SciML/PolyChaos.jl) library has been incorporated into the SciML ecosystem to give fast and accurate
 polynomial chaos expansions through multiple dispatch, similar to ForwardDiff Dual numbers in some sense.
 This is then being used in other projects to make it easy to develop codes for model order reduction
-and uncertainty quantification. We are excited to ensure the maintanace and longevity of this crucial
+and uncertainty quantification. We are excited to ensure the maintenance and longevity of this crucial
 building block, and already have a planned package release which makes use of this functionality.
