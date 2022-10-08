@@ -368,6 +368,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://sciml.ai/news/2022/10/08/error_messages/index.html</loc>
+    <lastmod>2022-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://sciml.ai/challenge/index.html</loc>
     <lastmod>2022-10-08</lastmod>
     <changefreq>monthly</changefreq>
