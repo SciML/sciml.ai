@@ -8,7 +8,7 @@
 
 This release had a major focus on high-level user issues such as error messages, compile times,
 and documentation generation. Other related issues, such as code style enforcement, have also
-seen huge overhauls in this ecosystem update. From all of this, 
+seen huge overhauls in this ecosystem update. From all of this,
 **the documentation of SciML post summer 2022 has essentially been completely overhauled and improved!**
 
 ![Function definition error message](https://user-images.githubusercontent.com/1814174/194701459-dc28d519-d49d-4f92-9c21-9a683536c12e.png)
@@ -48,7 +48,7 @@ For more information on the required number of arguments for the function
 you were defining, consult the documentation for the `SciMLProblem` or
 `SciMLFunction` type that was being constructed.
 
-A common reason for this occurance is due to following the MATLAB or SciPy
+A common reason for this occurrence is due to following the MATLAB or SciPy
 convention for parameter passing, i.e. to add each parameter as an arguemnt.
 In the SciML convention, if you wish to pass multiple parameters, use a
 struct or other collection to hold the parameters. For example, here is the
@@ -85,7 +85,7 @@ Stacktrace:
    @ REPL[5]:1
 ```
 
-Lots of knowledge from common user issues and backgrounds was pulled from the 
+Lots of knowledge from common user issues and backgrounds was pulled from the
 [Julialang Discourse](https://discourse.julialang.org/) in order to help identify where the misconceptions
 come from and give very detailed responses. We hope this makes the library a lot friendlier to
 newcomers.
@@ -110,7 +110,7 @@ search: ODEProblem RODEProblem SplitODEProblem DynamicalODEProblem IncrementingO
   Mathematical Specification of an ODE Problem
   ==============================================
 
-  To define an ODE Problem, you simply need to give the function f and the initial condition 
+  To define an ODE Problem, you simply need to give the function f and the initial condition
   u_0 which define an ODE:
 
   M \frac{du}{dt} = f(u,p,t)
@@ -123,8 +123,8 @@ search: ODEProblem RODEProblem SplitODEProblem DynamicalODEProblem IncrementingO
     •  f(u,p,t): returning du. Less memory-efficient way, particularly suitable when mutation is not allowed
        (e.g. with certain automatic differentiation packages such as Zygote).
 
-  u₀ should be an AbstractArray (or number) whose geometry matches the desired geometry of u. 
-  Note that we are not limited to numbers or vectors for u₀; one is allowed to provide u₀ as 
+  u₀ should be an AbstractArray (or number) whose geometry matches the desired geometry of u.
+  Note that we are not limited to numbers or vectors for u₀; one is allowed to provide u₀ as
   arbitrary matrices / higher dimension tensors as well.
 
   For the mass matrix M, see the documentation of ODEFunction.
@@ -148,9 +148,9 @@ search: ODEProblem RODEProblem SplitODEProblem DynamicalODEProblem IncrementingO
 
   For more details on the in-place and specialization controls, see the ODEFunction documentation.
 
-  Parameters are optional, and if not given then a NullParameters() singleton will be used which 
-  will throw nice errors if you try to index non-existent parameters. Any extra keyword arguments 
-  are passed on to the solvers. For example, if you set a callback in the problem, then that 
+  Parameters are optional, and if not given then a NullParameters() singleton will be used which
+  will throw nice errors if you try to index non-existent parameters. Any extra keyword arguments
+  are passed on to the solvers. For example, if you set a callback in the problem, then that
   callback will be added in every solve call.
 
   For specifying Jacobians and mass matrices, see the ODEFunction documentation.
@@ -187,8 +187,8 @@ The DifferentialEquations.jl documentation has been restructured to make use of 
 ## SciML Style Guide and Formatting Enforcement
 
 The entire SciML organization updated its practices to have a well-defined style guide called
-[SciML Style](https://github.com/SciML/SciMLStyle) This style guide is comprehensive, covered high-level details such as whether 
-to prefer the use of closures or not, to lower more mundane details like the proper style for 
+[SciML Style](https://github.com/SciML/SciMLStyle) This style guide is comprehensive, covered high-level details such as whether
+to prefer the use of closures or not, to lower more mundane details like the proper style for
 continuing equations to the next line. It has quickly become one of the most widely used style
 guides for Julia packages. For more information, please check out the style guide's documentation.
 
