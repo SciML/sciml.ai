@@ -15,7 +15,7 @@ For more information on the required number of arguments <span class=hljs-keywor
 you were defining, consult the documentation <span class=hljs-keyword >for</span> the <span class=hljs-string >`SciMLProblem`</span> or
 <span class=hljs-string >`SciMLFunction`</span> type that was being constructed.
 
-A common reason <span class=hljs-keyword >for</span> this occurance is due to following the MATLAB or SciPy
+A common reason <span class=hljs-keyword >for</span> this occurrence is due to following the MATLAB or SciPy
 convention <span class=hljs-keyword >for</span> parameter passing, i.e. to add each parameter as an arguemnt.
 In the SciML convention, <span class=hljs-keyword >if</span> you wish to pass multiple parameters, use a
 <span class=hljs-keyword >struct</span> or other collection to hold the parameters. For example, here is the
@@ -58,7 +58,7 @@ search: ODEProblem RODEProblem SplitODEProblem DynamicalODEProblem IncrementingO
   Mathematical Specification of an ODE Problem
   ==============================================
 
-  To define an ODE Problem, you simply need to give the <span class=hljs-keyword >function</span> f and the initial condition 
+  To define an ODE Problem, you simply need to give the <span class=hljs-keyword >function</span> f and the initial condition
   u_0 which define an ODE:
 
   M \frac{du}{dt} = f(u,p,t)
@@ -71,8 +71,8 @@ search: ODEProblem RODEProblem SplitODEProblem DynamicalODEProblem IncrementingO
     •  f(u,p,t): returning du. Less memory-efficient way, particularly suitable when mutation is not allowed
        (e.g. with certain automatic differentiation packages such as Zygote).
 
-  u₀ should be an <span class=hljs-built_in >AbstractArray</span> (or number) whose geometry matches the desired geometry of u. 
-  Note that we are not limited to numbers or vectors <span class=hljs-keyword >for</span> u₀; one is allowed to provide u₀ as 
+  u₀ should be an <span class=hljs-built_in >AbstractArray</span> (or number) whose geometry matches the desired geometry of u.
+  Note that we are not limited to numbers or vectors <span class=hljs-keyword >for</span> u₀; one is allowed to provide u₀ as
   arbitrary matrices / higher dimension tensors as well.
 
   For the mass matrix M, see the documentation of ODEFunction.
@@ -96,9 +96,9 @@ search: ODEProblem RODEProblem SplitODEProblem DynamicalODEProblem IncrementingO
 
   For more details on the <span class=hljs-keyword >in</span>-place and specialization controls, see the ODEFunction documentation.
 
-  Parameters are optional, and <span class=hljs-keyword >if</span> not given then a NullParameters() singleton will be used which 
-  will throw nice errors <span class=hljs-keyword >if</span> you <span class=hljs-keyword >try</span> to index non-existent parameters. <span class=hljs-built_in >Any</span> extra keyword arguments 
-  are passed on to the solvers. For example, <span class=hljs-keyword >if</span> you set a callback <span class=hljs-keyword >in</span> the problem, then that 
+  Parameters are optional, and <span class=hljs-keyword >if</span> not given then a NullParameters() singleton will be used which
+  will throw nice errors <span class=hljs-keyword >if</span> you <span class=hljs-keyword >try</span> to index non-existent parameters. <span class=hljs-built_in >Any</span> extra keyword arguments
+  are passed on to the solvers. For example, <span class=hljs-keyword >if</span> you set a callback <span class=hljs-keyword >in</span> the problem, then that
   callback will be added <span class=hljs-keyword >in</span> every solve call.
 
   For specifying Jacobians and mass matrices, see the ODEFunction documentation.
