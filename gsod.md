@@ -23,7 +23,6 @@ Here are some possible projects:
 [SciML](https://sciml.ai/) is the scientific machine learning organization. However, 
 its documentation is spread amongst many different fairly large packages:
 
-- [DifferentialEquations.jl](https://docs.sciml.ai/)
 - [Surrogates.jl](https://surrogates.sciml.ai/latest/)
 - [MethodOfLines.jl: Finite Difference Methods](https://methodoflines.sciml.ai/dev/)
 - [NeuralPDE.jl: Physics-Informed Neural Networks](https://neuralpde.sciml.ai/dev/)
