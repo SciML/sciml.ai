@@ -23,7 +23,7 @@ Here are some possible projects:
 [SciML](https://sciml.ai/) is the scientific machine learning organization. However, 
 its documentation is spread amongst many different fairly large packages:
 
-- [DifferentialEquations.jl](https://docs.sciml.ai/latest/)
+- [DifferentialEquations.jl](https://docs.sciml.ai/)
 - [Surrogates.jl](https://surrogates.sciml.ai/latest/)
 - [MethodOfLines.jl: Finite Difference Methods](https://methodoflines.sciml.ai/dev/)
 - [NeuralPDE.jl: Physics-Informed Neural Networks](https://neuralpde.sciml.ai/dev/)
@@ -36,11 +36,11 @@ its documentation is spread amongst many different fairly large packages:
 - [DataDrivenDiffEq.jl: Koopman Operator and Symbolic Regression](https://datadriven.sciml.ai/dev/)
 - [DiffEqParamEstim.jl: Easy parameter estimation by maximum likelihood and MAP of differential equations](https://diffeqparamestim.sciml.ai/dev/)
 - [DiffEqBayes.jl: Easy Bayesian inference of differential equations](https://diffeqbayes.sciml.ai/dev/)
-- [ReservoirComputing.jl: Reservoir computing methods like echo state networks](https://reservoircomputing.sciml.ai/dev/)
+- [ReservoirComputing.jl: Reservoir computing methods like echo state networks](http://reservoir.sciml.ai)
 - [Surrogates.jl: Fast and differentiable surrogates](https://surrogates.sciml.ai/latest/)
 - [ModelingToolkit.jl: A Composable Modeling and Simulation Environment](https://mtk.sciml.ai/dev/)
 - [Catalyst.jl: Fast chemical reaction modeling](https://catalyst.sciml.ai/dev/)
-- [GlobalSensitivity.jl: Fast and Parallel Global Sensitivity Analysis](https://globalsensitivity.sciml.ai/dev/)
+- [GlobalSensitivity.jl: Fast and Parallel Global Sensitivity Analysis](https://gsa.sciml.ai/dev/)
 
 #### Project Scope
 
