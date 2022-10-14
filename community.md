@@ -13,7 +13,7 @@ The following are the official channels of communication for the SciML community
 
 ### Discourse
 
-Our open webforum is provided courtesy of the
+Our open web forum is provided courtesy of the
 [Julia programming language disourse](https://discourse.julialang.org/). SciML-specific
 questions can be tagged with `diffeq` or `sciml`, and using the domain
 [Modeling & Simulations](https://discourse.julialang.org/c/domain/models/21). Other general
