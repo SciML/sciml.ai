@@ -9,7 +9,7 @@ Neural networks can be used as a method for efficiently solving difficult partia
 differential equations. Recently this strategy has been dubbed [physics-informed neural networks](https://www.sciencedirect.com/science/article/pii/S0021999118307125)
 and has seen a resurgence because of its efficiency advantages over classical
 deep learning. Efficient implementations from recent papers are being
-explored as part of the [NeuralNetDiffEq.jl](https://github.com/SciML/NeuralNetDiffEq.jl)
+explored as part of the [NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl)
 package. The [issue tracker](https://github.com/SciML/NeuralNetDiffEq.jl/issues)
 contains links to papers which would be interesting new neural network based methods to
 implement and benchmark against classical techniques. Project work in this area
