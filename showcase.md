@@ -189,6 +189,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Towards Modular Data-driven Simulations (Microsoft Research)](https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/articles/towards-modular-data-driven-simulations/)
 - [SimpleChains.jl for NeuralODE and SciML](https://medium.com/@abhishekbhatt730/simplechains-jl-for-neuralode-and-sciml-fadbe6fee481)
 - [Integro Differential Equations GSoC 2021 NumFOCUS: Final Report](https://medium.com/@a.bharambe123/gsoc-2021-numfocus-final-report-2b2f32b63492)
 - [Spatial SSAs GSOC 2021 Final Report](https://vilin97.github.io/posts/post5/)
