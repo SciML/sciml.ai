@@ -36,6 +36,7 @@ SciML. If you would like your institution's tools added to the list,
 - [Safe Blues: A Method for Estimation and Control in the Fight Against COVID-19](https://safeblues.org/)
 - [InSysBio: Heta Project QSP Simulation](https://hetalang.github.io/#/)
 - [Trixi.jl: Adaptive high-order numerical simulations of hyperbolic PDEs in Julia](https://github.com/trixi-framework/Trixi.jl)
+- [Ai4EComponentLib.jl: An Component library of Energy and Power Engineering based on the ModelingToolkit acasual modeling system](https://github.com/ai4energy/Ai4EComponentLib.jl)
 
 ## Press Coverage Featuring SciML
 
