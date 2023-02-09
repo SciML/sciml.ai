@@ -1,3 +1,9 @@
+@def rss_pubdate = Date(2023,2,09)
+@def rss = """SciML's Scientific Machine Learning Essential to New Major FDA Project in Artificial Blood"""
+@def published = " 9 February 2023 "
+@def title = "SciML's Scientific Machine Learning Essential to New Major FDA Project in Artificial Blood"
+@def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
+
 # SciML's Scientific Machine Learning Essential to New Major FDA Project in Artificial Blood
 
 University of Maryland has [recently received $46 million dollars in Federal funding](https://www.medschool.umaryland.edu/news/2023/Artificial-Blood-Product-One-Step-Closer-to-Reality-With-46-Million-in-Federal-Funding.html) 
