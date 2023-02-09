@@ -6,7 +6,7 @@
 
 # SciML's Scientific Machine Learning Essential to New Major FDA Project in Artificial Blood
 
-University of Maryland has [recently received $46 million dollars in Federal funding](https://www.medschool.umaryland.edu/news/2023/Artificial-Blood-Product-One-Step-Closer-to-Reality-With-46-Million-in-Federal-Funding.html) 
+University of Maryland has [recently received \$46 million dollars in Federal funding](https://www.medschool.umaryland.edu/news/2023/Artificial-Blood-Product-One-Step-Closer-to-Reality-With-46-Million-in-Federal-Funding.html) 
 through DARPA for the development of an artificial blood product:
 
 > a whole blood product, storable at room temperature, that can be used to transfuse wounded soldiers in the field within 30 minutes of injury, potentially saving thousands of lives. 
