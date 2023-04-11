@@ -167,7 +167,6 @@ SciML. If you would like your institution's tools added to the list,
 ## Awards Associated with SciML Software
 
 - [2023: MIT Center for Computational Science & Engineering MathWorks Prize for Outstanding Master's Research in Computational Science & Engineering. For Songchen Tan (MIT Julia Lab) for his work on TaylorDiff.jl for use NeuralPDE.jl physics-informed neural networks (PINNs)](https://github.com/SciML/sciml.ai/files/11043019/CSEMathWorksPrizeCertificate2023_Tan.pdf)
-COMPUTATIONAL SCIENCE & ENGINEERING PROGRAM](https://github.com/SciML/sciml.ai/files/11043019/CSEMathWorksPrizeCertificate2023_Tan.pdf)
 - [2022: MIT Portugal Program Poster Award, Vinicius Santana, University of Porto](https://www.linkedin.com/feed/update/urn:li:activity:6978355245521264640/)
 - [2021: NeurIPS 2021 Differentiable Programming Workshop Best Poster, AbstractDifferentiation.jl: Backend-Agnostic Differentiable Programming in Julia, by Frank Schaefer (University of Basel), Mohamed Tarek (Pumas-AI, UNSW), Lyndon White (Invenia Labs), and Christopher Rackauckas (MIT, Julia Computing, Pumas-AI)](https://diffprogramming.mit.edu/awards)
 - [2021: International Society of Pharmacology (ISoP) Mathematics and Computing Special Interest Group Poster Award. Niklas Korsbo (Pumas-AI, University of Cambridge), Chris Elrod (Julia Computing), Francesco Brizzi (Roche), Antoine Soubret (Roche), Andreas Noack (Julia Computing), Vijay Ivaturi (Pumas-AI, University of Maryland School of Pharmacy) and Christopher Rackauckas (Julia Computing, MIT)](https://sites.google.com/view/mcssig/previous-acop-meetings?authuser=0): For "Automatic identification of non-obvious prognostic factors in big data with DeepNLME". DeepNLME is built using the SciML tooling.
@@ -193,6 +192,8 @@ COMPUTATIONAL SCIENCE & ENGINEERING PROGRAM](https://github.com/SciML/sciml.ai/f
 
 ## External Blog Posts and Presentations
 
+- [Integrating the Orbital Systems with Satellite Analysis Toolkit (SAT)](https://michaszj.github.io/starcoffee/posts/sat-work-log-3/)
+- [GroundTracker and Orbital Analysis for Satellite Analysis Toolkit](https://michaszj.github.io/starcoffee/posts/sat-work-log-2/)
 - [Towards Modular Data-driven Simulations (Microsoft Research)](https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/articles/towards-modular-data-driven-simulations/)
 - [SimpleChains.jl for NeuralODE and SciML](https://medium.com/@abhishekbhatt730/simplechains-jl-for-neuralode-and-sciml-fadbe6fee481)
 - [Integro Differential Equations GSoC 2021 NumFOCUS: Final Report](https://medium.com/@a.bharambe123/gsoc-2021-numfocus-final-report-2b2f32b63492)
