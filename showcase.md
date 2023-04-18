@@ -193,6 +193,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Optimal Control in Practice](https://github.com/donskerclass/ComputationalMethodsClass/blob/main/Julia/notebooks/OptControl.ipynb)
 - [Integrating the Orbital Systems with Satellite Analysis Toolkit (SAT)](https://michaszj.github.io/starcoffee/posts/sat-work-log-3/)
 - [GroundTracker and Orbital Analysis for Satellite Analysis Toolkit](https://michaszj.github.io/starcoffee/posts/sat-work-log-2/)
 - [Towards Modular Data-driven Simulations (Microsoft Research)](https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/articles/towards-modular-data-driven-simulations/)
