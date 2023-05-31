@@ -194,6 +194,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Modelling Spacecraft Attitude Control with Thrusters](https://michaszj.github.io/starcoffee/posts/sac-thrusters/)
 - [Acausal Spacecraft Attitude Dynamics and Control Modelling](https://michaszj.github.io/starcoffee/posts/acausal-sadc-modelling/#recreating_the_simple_example)
 - [Modeling Cocktail Shaking](https://michielstock.github.io/posts/2022/cocktails.jl/)
 - [Direct Shooting Method with Approximated Jacobian Matrices](https://michaszj.github.io/starcoffee/posts/direct-shooting-with-approx/)
