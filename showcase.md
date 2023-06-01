@@ -168,6 +168,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Awards Associated with SciML Software
 
+- [2023: International Society of Pharmacometrics (ISoP) QSP Student Symposium Best Oral Presentation, for Uncertainty Quantified Discovery of Chemical Reaction Networks via Bayesian Scientific Machine Learning, Emily Helen Nieves](https://user-images.githubusercontent.com/1814174/242699957-1574e51a-4ddb-4dd1-b788-f57915b08e11.png)
 - [2023: MIT Center for Computational Science & Engineering MathWorks Prize for Outstanding Master's Research in Computational Science & Engineering. For Songchen Tan (MIT Julia Lab) for his work on TaylorDiff.jl for use NeuralPDE.jl physics-informed neural networks (PINNs)](https://github.com/SciML/sciml.ai/files/11043019/CSEMathWorksPrizeCertificate2023_Tan.pdf)
 - [2022: MIT Portugal Program Poster Award, Vinicius Santana, University of Porto](https://www.linkedin.com/feed/update/urn:li:activity:6978355245521264640/)
 - [2021: NeurIPS 2021 Differentiable Programming Workshop Best Poster, AbstractDifferentiation.jl: Backend-Agnostic Differentiable Programming in Julia, by Frank Schaefer (University of Basel), Mohamed Tarek (Pumas-AI, UNSW), Lyndon White (Invenia Labs), and Christopher Rackauckas (MIT, Julia Computing, Pumas-AI)](https://diffprogramming.mit.edu/awards)
