@@ -194,6 +194,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## External Blog Posts and Presentations
 
+- [Wobble Perturbation](https://geoenergymath.com/2023/04/26/wobble-perturbation/)
 - [Modelling Spacecraft Attitude Control with Thrusters](https://michaszj.github.io/starcoffee/posts/sac-thrusters/)
 - [Acausal Spacecraft Attitude Dynamics and Control Modelling](https://michaszj.github.io/starcoffee/posts/acausal-sadc-modelling/#recreating_the_simple_example)
 - [Modeling Cocktail Shaking](https://michielstock.github.io/posts/2022/cocktails.jl/)
