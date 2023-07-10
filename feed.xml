@@ -536,25 +536,6 @@
 
 <item>
   <title>
-    <![CDATA[  SciML Scientific Machine Learning Showcase  ]]>
-  </title>
-  <link> https://sciml.ai/showcase/index.html </link>
-  <guid> https://sciml.ai/showcase/index.html </guid>
-  <description>
-    <![CDATA[  Showcase of SciML Scientific Machine Learning applications  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Staging Team</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  SciML Scientific Machine Learning Challenge Problems and Datasets  ]]>
   </title>
   <link> https://sciml.ai/challenge/index.html </link>

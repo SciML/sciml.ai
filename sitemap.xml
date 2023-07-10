@@ -362,12 +362,6 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://sciml.ai/showcase/index.html</loc>
-    <lastmod>2023-07-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>https://sciml.ai/gsoc/gsoc_sciml/index.html</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>monthly</changefreq>
