@@ -40,6 +40,7 @@ handled on a case-by-case basis.
 - [Jesse Perla (University of British Columbia)](https://www.jesseperla.com/)
 - [Mykel Kochenderfer (Stanford)](https://mykel.kochenderfer.com/)
 - [Madeleine Udell (Cornell)](https://people.orie.cornell.edu/mru8/)
+- [Moritz Schauer (Chalmers University of Technology | University of Gothenburg)](http://www.math.chalmers.se/~smoritz/index.html)
 
 # Governing Rules and Duties
 
