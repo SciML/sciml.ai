@@ -24,6 +24,40 @@ rest of the ecosystem. So let's get started!
 Note: this is meant to be a human-readable summary of the 
 [original thread on compile times found in the DifferentialEquations.jl repository](https://github.com/SciML/DifferentialEquations.jl/issues/786)
 
+#### Edit: 9/18/2023
+
+The release of Julia v1.9 added caching of native code to precompilation. This means that the system
+image step is no longer necessary, see [the v1.9 release blog post for details](https://julialang.org/blog/2023/04/julia-1.9-highlights/).
+In particular, on v1.10 we with out of the both Julia we see the following result for the first solve
+time:
+
+```julia
+using OrdinaryDiffEq, SnoopCompile
+function lorenz(du, u, p, t)
+    du[1] = 10.0(u[2] - u[1])
+    du[2] = u[1] * (28.0 - u[3]) - u[2]
+    du[3] = u[1] * u[2] - (8 / 3) * u[3]
+end
+
+@time begin
+    lorenzprob = ODEProblem{true, SciMLBase.AutoSpecialize}(lorenz, [1.0; 0.0; 0.0], (0.0, 1.0), Float64[])
+    sol = solve(lorenzprob, Rosenbrock23())
+end
+
+# 0.096844 seconds (106.87 k allocations: 7.286 MiB, 99.59% compilation time)
+```
+
+so now less than 0.1 seconds right out of the box. This is a fantastic improvement by the compiler team!
+
+However, note that the system image can still be useful in reducing load times, i.e. the time for doing
+`using OrdinaryDiffEq` which on v1.10 is about
+`1.784398 seconds (2.76 M allocations: 168.908 MiB, 1.58% gc time, 1.95% compilation time)`. There are
+some further improvements to this in the works, but a system image will bring this to effectively zero.
+
+Now back to the show, with the understanding that this blog post and its numbers reflect the environment
+of Julia v1.8. All of the same tricks are still useful, or even more useful now that precompilation
+always builds binaries.
+
 ## Starting the Process: Profiling Why OrdinaryDiffEq First Solve Time Was 30 Second Compilation
 
 First let's introduce our challenger. Up at bat and standing strong at 12 lines of code is a
