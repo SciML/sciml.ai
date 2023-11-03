@@ -137,6 +137,7 @@ SciML. If you would like your institution's tools added to the list,
 - [Phys.org: Digital 'virus' helps researchers map potential spread](https://phys.org/news/2020-05-digital-virus-potential.html)
 - [latronet.gr: Χαρτογράφηση εξάπλωσης CoViD-19 με κινητό τηλέφωνο](https://www.iatronet.gr/eidiseis-nea/epistimi-zwi/news/55544/psifiakos-ios-voitha-erevnites-na-xartografisoyn-pithani-exaplwsi-covid-19.html)
 - [Popular Deep Learning Frameworks: An Overview (DiffEqFlux.jl mentioned)](https://analyticsindiamag.com/deep-learning-frameworks/)
+- [Fox News: Dr. Nicole Saphier agrees with new MIT model: America needs to 'hunker down for a bit more,' open with caution (justified via a SciML model)](https://www.foxnews.com/media/dr-nicole-saphier-mit-coronavirus-study-reopening-america)
 - [ZDNet: Could a neural network have predicted this pandemic’s impact?](https://www.zdnet.com/article/could-a-neural-network-have-predicted-this-pandemics-impact/)
 - [UQ News: A mathematical framework could help safely ease social distancing](https://www.uq.edu.au/news/article/2020/05/mathematical-framework-could-help-safely-ease-social-distancing)
 - [MIT News: Model quantifies the impact of quarantine measures on Covid-19’s spread](http://news.mit.edu/2020/new-model-quantifies-impact-quarantine-measures-covid-19-spread-0416)
