@@ -158,6 +158,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://sciml.ai/news/2024/01/23/nlsolve/index.html</loc>
+    <lastmod>2024-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://sciml.ai/news/2016/01/21/saveat/index.html</loc>
     <lastmod>2024-01-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -249,12 +255,6 @@
 </url>
 <url>
     <loc>https://sciml.ai/news/2018/01/24/Parameters/index.html</loc>
-    <lastmod>2024-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://sciml.ai/news/2024/01/nlsolve/index.html</loc>
     <lastmod>2024-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

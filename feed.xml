@@ -25,8 +25,8 @@
   <title>
     <![CDATA[  Why we deprecated NLsolve.jl for NonlinearSolve.jl  ]]>
   </title>
-  <link> https://sciml.ai/news/2024/01/nlsolve/index.html </link>
-  <guid> https://sciml.ai/news/2024/01/nlsolve/index.html </guid>
+  <link> https://sciml.ai/news/2024/01/23/nlsolve/index.html </link>
+  <guid> https://sciml.ai/news/2024/01/23/nlsolve/index.html </guid>
   <description>
     <![CDATA[  Why we deprecated NLsolve.jl for NonlinearSolve.jl for Solving Nonlinear Systems in Julia  ]]>
   </description>  
