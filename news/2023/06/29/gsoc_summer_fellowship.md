@@ -1,3 +1,9 @@
+@def rss_pubdate = Date(2023,6,29)
+@def rss = """2023 Google Summer of Code and SciML's Summer Fellowship!"""
+@def published = " 29 June 2023 "
+@def title = "2023 Google Summer of Code and SciML's Summer Fellowship!"
+@def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
+
 # 2023 Google Summer of Code and SciML's Summer Fellowship!
 
 Interested in what work is going on over the summer? Meet our top students who are describing their fellowship and GSoC projects!
