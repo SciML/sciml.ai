@@ -1,4 +1,4 @@
-@def rss_pubdate = Date(2024,23,01)
+@def rss_pubdate = Date(2024,1,23)
 @def rss = """Why we deprecated NLsolve.jl for NonlinearSolve.jl for Solving Nonlinear Systems in Julia"""
 @def published = " 23 January 2024 "
 @def title = "Why we deprecated NLsolve.jl for NonlinearSolve.jl"
