@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  Why we deprecated NLsolve.jl for NonlinearSolve.jl  ]]>
+  </title>
+  <link> https://sciml.ai/news/2024/01/nlsolve/index.html </link>
+  <guid> https://sciml.ai/news/2024/01/nlsolve/index.html </guid>
+  <description>
+    <![CDATA[  Why we deprecated NLsolve.jl for NonlinearSolve.jl for Solving Nonlinear Systems in Julia  ]]>
+  </description>  
+    
+  <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  SciML&#39;s Scientific Machine Learning Essential to New Major FDA Project in Artificial Blood  ]]>
   </title>
   <link> https://sciml.ai/news/2023/02/09/sciml_blood/index.html </link>
