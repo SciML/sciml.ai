@@ -41,7 +41,7 @@ To meet the multi-language demands, we have produced the [diffeqpy](https://gith
 As a first example, let's solve the Robertson differential-algebraic equation (DAE) in each of the languages. A DAE is an ODE defined implicitly: $f(du,u,p,t) = 0$. These are interesting because it allows constraints to be incorporated as part of the equation. The Robertson equation is defined as follows:
 
 \begin{align}
-dy_1 &= -0.04y₁ + 10^4 y_2 y_3 \\
+dy_1 &= -0.04y_1 + 10^4 y_2 y_3 \\
 dy_2 &= 0.04 y_1 - 10^4 y_2 y_3 - 3*10^7 y_{2}^2 \\
 1 &=  y_{1} + y_{2} + y_{3} \\
 \end{align}
