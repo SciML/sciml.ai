@@ -41,6 +41,7 @@ associated with the project.
 #### Projects Lists
 
 - [General Numerics](/gsoc/gsoc_numerics)
+- [Optimization](/gsoc/gsoc_optimization) 
 - [Numerical Differential Equations and Stochastic Process Simulation](/gsoc/gsoc_diffeq)
 - [Scientific Machine Learning](/gsoc/gsoc_sciml)
 - [Symbolic-Numeric Computing](/gsoc/gsoc_symbolic)
