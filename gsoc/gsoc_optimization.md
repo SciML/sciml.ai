@@ -50,6 +50,24 @@ predefined callbacks, using the state for non-standard stopping criterias in glo
 
 **Difficulty**: Easy to Medium depending on the chosen subtasks.
 
+## SciML native Line Search implementations
+
+A variety of optimization solvers rely on utilizing line search within their routine. The current julia 
+implementation for these line searching methods exist in LineSearches.jl and is used quite extensively, 
+but it is quite an old package and leaves some performance on the table. An implementation of these methods 
+compatible with SciML solvers for nonlinear and optimization problems will be an impactful contribution for 
+making these solvers efficient.
+
+**Recommended Skills**: Background knowledge in optimization.
+
+**Expected Results**: A package with implementation of linesearch methods.
+
+**Mentors**: [Vaibhav Dixit](https://github.com/Vaibhavdixit02), [Avik Pal](https://github.com/avik-pal), [Utkarsh](https://github.com/utkarsh530)
+
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Easy to Medium depending on the chosen subtasks.
+
 ## More AD goodies, more backends and sparsity support
 
 ## Benchmarking suite, automated timing and code profiling
