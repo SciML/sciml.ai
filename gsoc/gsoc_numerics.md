@@ -3,6 +3,23 @@
 
 # SciML Numerical Methods Projects – Google Summer of Code
 
+## Translation of Modelica Standard Library Components to the ModelingToolkit Standard Library
+
+The [ModelingToolkit Standard Library](https://github.com/SciML/ModelingToolkitStandardLibrary.jl)
+is a standard library of pre-built components for the [ModelingToolkit](https://github.com/SciML/ModelingToolkit.jl)
+acausal modeling system. It can be improved by porting pre-built physical components from
+other acausal modeling systems, such as the [Modelica Standard Library](https://doc.modelica.org/Modelica%204.0.0/Resources/helpDymola/Modelica.html)
+
+**Recommended Skills**: Background knowledge in mathematical modeling.
+
+**Expected Results**: Ported components and tutorials from the Modelica Standard Library to the ModelingToolkit Standard Library
+
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
+
+**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+
+**Difficulty**: Easy to Medium depending on the chosen subtasks.
+
 ## LinearSolve.jl Distributed Algorithms
 
 [LinearSolve.jl](https://github.com/SciML/LinearSolve.jl) is the higher level
