@@ -67,7 +67,7 @@ would be interesting new neural network based methods to implement and benchmark
 
 **Expected Results**: New neural network based solver methods.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Kirill Zubov](https://github.com/KirillZubov)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Sathvik Bhagavan](https://github.com/sathvikbhagavan)
 
 **Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
 
@@ -123,7 +123,7 @@ to learn and a strong understanding of calculus and linear algebra.
 
 **Expected Results**: A production-quality PDE solver package for some common PDEs.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Alex Jones](https://github.com/xtalax)
 
 **Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
 

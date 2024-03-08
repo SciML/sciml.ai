@@ -110,23 +110,6 @@ particularly [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl) and 
 
 **Difficulty**: Easy to Medium depending on the chosen subtasks.
 
-## Improved interfacing between ModelingToolkit.jl and GalacticOptim.jl
-
-GalacticOptim.jl wraps multiple optimization packages local and global to provide a common interface.
-GalacticOptim.jl adds a few high-level features, such as integrating with automatic differentiation, to make its usage fairly simple for most cases, while allowing all of the options in a single unified interface.
-Currently ModelingToolkit.jl is provided as one of the AD backend options and can also be used to define the optimization problem symbolically directly. Thsi support is currently limited and doesn't cover things like constraints yet, but there is tremendous value to be gained by leveraging symbolic simplification possible with ModelingToolkit. This project would also cover integrating into MathOptInterface to by using the symbolic expressions generated from MTK, in addition to the current MOI wrapper available in GalacticOptim.
-
-**Recommended Skills**: Background knowledge of standard machine learning,
-statistical, or optimization techniques. Familiarity with the relevant packages, ModelingToolkit, GalacticOptim and MathOptInterface would be helpful to get started.
-
-**Expected Results**: Feature complete symbolic optimization problem interface.
-
-**Mentors**: [Vaibhav Dixit](https://github.com/Vaibhavdixit02), [Chris Rackauckas](https://github.com/ChrisRackauckas)
-
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
-
-**Difficulty**: Easy to Medium depending on the chosen subtasks.
-
 ## Symbolic Analysis and Transformations of Chemical Reaction Networks
 
 Catalyst.jl provides the ability to create symbolic models of chemical reaction networks, generate symbolic differential equation and stochastic process models from them, and offers some limited ability to analyze the symbolic chemical reaction networks. There are a variety of ways Catalyst.jl's core capabilities could be expanded, including adding
