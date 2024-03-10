@@ -3,25 +3,26 @@
 
 # Google Season of Docs: Scientific Machine Learning (SciML) and Differential Equations
 
-The SciML project is a participant organization for Google Season of Docs. In this program, 
-technical writers are paid to work on various SciML open source documentation. Each of the 
-writers are paired with a team of mentors to help them learn various aspects of computational 
-science, from numerical differential equations and scientific machine learning, to parallel 
+The SciML project is a participant organization for Google Season of Docs. In this program,
+technical writers are paid to work on various SciML open source documentation. Each of the
+writers are paired with a team of mentors to help them learn various aspects of computational
+science, from numerical differential equations and scientific machine learning, to parallel
 and symbolic-numeric computing.
 
-Below are the proposed projects in this area. Technical 
-writers may wish to do a combination of these projects. The mentors for the SciML 
-projects are [Chris Rackauckas](https://github.com/ChrisRackauckas), and 
+Below are the proposed projects in this area. Technical
+writers may wish to do a combination of these projects. The mentors for the SciML
+projects are [Chris Rackauckas](https://github.com/ChrisRackauckas), and
 [Sam Isaacson](https://github.com/isaacsas).
 
 Here are some possible projects:
 
-## Tutorial Writing
+## SciML Tutorial Writing
 
 #### Problem
 
-The SciML organization hosts the [SciMLTutorials.jl](https://github.com/SciML/SciMLTutorials.jl) repository which auto-builds 
-websites and pdfs from tutorials. Tutorials generally center on features of DifferentialEquations.jl or on application domains.
+The SciML organization hosts the [Tutorials and Showcase examples](https://docs.sciml.ai/Overview/stable/showcase/showcase/)
+which demonstrate cross-cutting applications from automating the discovery of relativitistic
+corrections to black hole phyiscs to GPU accelerating pharmacometric intervention analysis.
 However, there are so many domains that could be covered in more depth, like:
 
 - Tutorials walking users through optimizing solvers for partial differential equations
@@ -38,7 +39,7 @@ And much much more.
 
 ### Project Scope
 
-This is simple! Technical writers who have expertise in areas like biological modeling may wish to contribute tutorials that 
+This is simple! Technical writers who have expertise in areas like biological modeling may wish to contribute tutorials that
 showcase how to use the SciML tools to solve problems arising in their discipline. Thus this can be an exciting project to
 for technical folks interested in learning more about the SciML tools as the project devs have agreed to lend a hand in helping
 put together the demo code.
@@ -47,8 +48,8 @@ put together the demo code.
 
 Because of the large active userbase of the SciML software, accrewing tens of thousands of downloads each month
 and having a highly active presence on [the Julialang Discourse](https://discourse.julialang.org/) and
-the Julia tag on StackOverflow, success can be measured by the number of users who are satisfied after being 
-linked these tutorialson these Q&A forums. Success would be measured by having non-SciML devs posting 
+the Julia tag on StackOverflow, success can be measured by the number of users who are satisfied after being
+linked these tutorialson these Q&A forums. Success would be measured by having non-SciML devs posting
 links to these tutorials on these docs.
 
 #### Timeline
@@ -62,7 +63,7 @@ dedicated to creating more effective visualizations in the tutorial, which we fi
 
 #### Potential Impact
 
-Many university classes use the SciML ecosystem for its teaching, and thus classrooms all over the world will be improved. 
-Tutorials that capture more domains will allow professors teaching biological modeling courses to not have to manually 
+Many university classes use the SciML ecosystem for its teaching, and thus classrooms all over the world will be improved.
+Tutorials that capture more domains will allow professors teaching biological modeling courses to not have to manually
 rewrite physics-based tutorials to match their curriculum. These tutorials will likely make it into the homework of many
 students!
