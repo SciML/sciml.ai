@@ -29,7 +29,8 @@ handled on a case-by-case basis.
 - Yingbo Ma (Julia Computing)
 - [Samuel Isaacson (Boston University)](http://math.bu.edu/people/isaacson/)
 - [David Widmann (Uppsala Universitet)](https://widmann.dev/)
-- [Vaibhav Dixit (Julia Computing)](https://www.linkedin.com/in/vaibhav-dixit-0a9739156/)
+- [Vaibhav Dixit (MIT)](https://vaibhavdixit02.github.io/)
+
 
 ## Advisory Committee
 
