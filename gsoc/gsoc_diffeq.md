@@ -55,24 +55,6 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Difficulty**: Easy to Hard depending on the chosen subtasks.
 
-## Improvements to Physics-Informed Neural networks (PINN) for solving differential equations
-
-Neural networks can be used as a method for efficiently solving difficult partial differential equations.
-Efficient implementations of physics-informed machine learning from recent papers are being explored as
-part of the [NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl) package.
-The [issue tracker](https://github.com/SciML/NeuralPDE.jl/issues) contains links to papers which
-would be interesting new neural network based methods to implement and benchmark against classical techniques.
-
-**Recommended Skills**: Background knowledge in numerical analysis and machine learning.
-
-**Expected Results**: New neural network based solver methods.
-
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Sathvik Bhagavan](https://github.com/sathvikbhagavan)
-
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
-
-**Difficulty**: Easy to Hard depending on the chosen subtasks.
-
 ## Performance enhancements for differential equation solvers
 
 Wouldn't it be cool to have had a part in the development of widely used efficient differential equation solvers?
@@ -128,28 +110,6 @@ to learn and a strong understanding of calculus and linear algebra.
 **Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
 
 **Difficulty**: Medium to Hard depending on the chosen subtasks.
-
-## Tools for global sensitivity analysis
-
-Global Sensitivity Analysis is a popular tool to assess the effect that parameters
-have on a differential equation model. A good introduction [can be found in this thesis](https://discovery.ucl.ac.uk/id/eprint/19896/). Global Sensitivity Analysis tools can be
-much more efficient than Local Sensitivity Analysis tools, and give a better
-view of how parameters affect the model in a more general sense.
-The goal of this project would be to implement more global
-sensitivity analysis methods like the eFAST method into [GlobalSensitivity.jl](https://github.com/SciML/GlobalSensitivity.jl) which
-can be used with any differential equation solver on the common interface.
-
-**Recommended Skills**: An understanding of how to use DifferentialEquations.jl
-to solve equations.
-
-**Expected Results**: Efficient functions for performing global sensitivity
-analysis.
-
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Vaibhav Dixit](https://github.com/Vaibhavdixit02)
-
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
-
-**Difficulty**: Easy to Medium depending on the chosen subtasks.
 
 ## Jump Process Simulation Algorithms
 
