@@ -8,6 +8,29 @@ Opportunities are available for everyone, all the way from students looking to
 learn to career scientists looking to fund dedicated open source time. Below
 are our major developer programs with more information on how to get involved.
 
+## SciML Small Grants Program
+
+The SciML small grants program is a program used to fund directed development
+towards high-impact issues through community donations. The small grant projects
+are decided by the SciML Steering Council and candidates can choose to take on
+projects from the project list. This is similar to "bounty programs" seen in
+other open source environments, though it is driven by SciML in a manner that
+is designed to give the better outcomes to both contributors and maintainers
+of the project. In order to remove a hostile competitive atmosphere,
+candidates must declare to the committee interest in solving the chosen issue
+and, upon approval by the selection committee, are given an exclusive time 
+interval (defaulting to one month) to solve the issue. Payout is done upon 
+completion of the chosen project.
+
+The list of current small grants projects can be found at:
+
+[SciML Small Grants Program Current Project List](/small_grants)
+
+To declare for a small grant program, send an email to 
+
+Note: Developers funded by the other fellowship programs are ineligable for
+obtaining the small grant awards during the term of their fellowship.
+
 ## SciML Summer Fellowship
 
 The SciML organization is happy to announce it will be running its first summer
