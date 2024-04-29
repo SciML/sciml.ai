@@ -28,7 +28,7 @@ The list of current small grants projects can be found at:
 
 To declare for a small grant program, send an email to 
 
-Note: Developers funded by the other fellowship programs are ineligable for
+Note: Developers funded by other SciML fellowship programs are ineligible for
 obtaining the small grant awards during the term of their fellowship.
 
 ## SciML Summer Fellowship
