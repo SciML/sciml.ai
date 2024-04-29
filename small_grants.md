@@ -27,7 +27,7 @@ to the extent provided by US law. General donated funds are used for the develop
 programs such as the small grants program and the SciML Fellowship.
 
 Donations can be earmarked towards specific projects. In order for an earmarked
-project to become a part of part of the SciML Small Grants program it must be
+project to become a part of the SciML Small Grants program it must be
 approved by the SciML Steering Council. The reason why all chosen projects must be
 vetted by the Steering Council is that we want to be fair to the potential contributors,
 and this means we must ensure that the suggested projects will have a prompt review
