@@ -8,21 +8,46 @@ The following is the current project list for the SciML Small Grants Program.
 ## Rules and Regulations
 
 The small grant projects are decided by the SciML Steering Council and candidates
-can choose to take on projects from the project list. This is similar to 
-"bounty programs" seen in other open source environments, though it is driven 
-by SciML in a manner that is designed to give the better outcomes to both 
-contributors and maintainers of the project. In order to remove a hostile 
-competitive atmosphere, **candidates must declare to the committee interest 
-before solving the chosen issue** and, upon approval by the selection committee, 
-are given an exclusive time  interval (defaulting to one month) to solve the issue. 
+can choose to take on projects from the project list. This is similar to
+"bounty programs" seen in other open source environments, though it is driven
+by SciML in a manner that is designed to give the better outcomes to both
+contributors and maintainers of the project. In order to remove a hostile
+competitive atmosphere, **candidates must declare to the committee interest
+before solving the chosen issue** and, upon approval by the selection committee,
+are given an exclusive time  interval (defaulting to one month) to solve the issue.
 Payout is done upon completion of the chosen project and acceptance by the steering
 council.
 
+All projects are expected to contribute the code to repositories in the SciML Github
+organization. Code which is not contributed to the open source repositories will not
+be considered in the approval evaluations.
+
+## Declaring for a Project
+
+To declare for a small grant program, send an email to sciml@julialang.org with:
+
+* Full legal name
+* CV
+* Link to Github account
+* Short bio / background about your experience in the topic
+* Description of which project you're interested in
+
+The potential reviewers will then get in touch to clarify details of the project and
+establish a clear work statement. Once clarifed, steering council will then respond with
+whether the application is accepted and commence the work under the supervision of the
+reviewer. When the reviewer accepts and merges the appropriate PRs, the grant will be
+determined as completed and the payout will commence. The grants are project based and
+payout will only occur upon acceptance by the reviewer.
+
+Note that information about ongoing projects will be tracked as public information
+below in order to give clear information to other contributors about what projects
+are taken. Completed projects will be added to a projects archive.
+
 ## Donating to the Program
 
-If you wish to donate to the SciML Small Grants Program, 
+If you wish to donate to the SciML Small Grants Program,
 [please donate via NumFOCUS](https://numfocus.org/donate-to-sciml). SciML via NumFOCUS
-is a 501(c)(3) public charity in the United States. Your donation is tax-deductible 
+is a 501(c)(3) public charity in the United States. Your donation is tax-deductible
 to the extent provided by US law. General donated funds are used for the developer
 programs such as the small grants program and the SciML Fellowship.
 
@@ -35,6 +60,19 @@ process and proper maintanance beyond the timeframe of the project. For this rea
 we suggest discussing with maintainers in the official Slack/Zulip before making
 an earmarked donation.
 
+## Commitments from Reviewers
+
+Reviewers are committed to giving timely feedback and reviews. It is expected that you keep
+in constant touch with the reviewer during the duration of the project, discussing on
+one of the community chat channels at least a few times a week until project completion.
+Discussions should take place in the SciML Slack or Zulip channels (#diffeq-bridged or
+#sciml-bridged) to allow for other contributors to give feedback. Reviews of PRs should be
+expected within a few days to ensure the contributor can complete the project in the
+allotted time frame.
+
+It is expected that the contributor can work fairly independently with guidence from the
+reviewer.
+
 ## List of Current Projects
 
 ### Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set ($200)
@@ -45,7 +83,7 @@ When updated, these benchmarks should serve as a canonical development
 point for PDE-specific methods, such as implicit-explicit (IMEX) and
 exponential integrators.
 
-**Information to Get Started**: The 
+**Information to Get Started**: The
 [Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
 describes how to contribute to the benchmarks. The benchmark results are
 generated using the benchmark server. Half of the benchmarks are setup
@@ -61,7 +99,10 @@ folder https://github.com/SciML/SciMLBenchmarks.jl/tree/master/benchmarks/Simple
 to be sucessful with current Julia and package version (v1.10) without
 erroring, generating work-precision diagrams. In addition, these should be updated
 to give a more clear definition of the PDE being solve, adding a LaTeX
-description of the equations to the top of the file. 
+description of the equations to the top of the file.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of finite difference and pseudospectral
+PDE discretiations.
 
 **Reviewers**: Chris Rackauckas
 
@@ -74,7 +115,7 @@ set of benchmarks was updated to the modern SciML interfaces and benchmarking to
 so it can make use of the full set of methods in Optimization.jl and drive further
 developments and recommendations to users.
 
-**Information to Get Started**: The 
+**Information to Get Started**: The
 [Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
 describes how to contribute to the benchmarks. The benchmark results are
 generated using the benchmark server. It is expected that the benchmarks are
@@ -87,6 +128,41 @@ are not wrapped into Optimization.jl
 
 **Success Criteria**: The benchmarks should be turned into a loop over Optimization.jl
 solvers in a standard SciMLBenchmarks benchmark build.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of using numerical optimizers
+
+**Reviewers**: Chris Rackauckas and Vaibhav Dixit
+
+### Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks ($200)
+
+[CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
+is a repository of constrained and unconstrained nonlinear programming problems for testing
+and comparing optimization algorithms. We would like to be able to repurpose this work for
+improving Optimization.jl's performance and tracking the performance of optimizers. It would
+be useful to the community if this set of benchmarks was updated to the modern SciML
+interfaces and benchmarking tools so it can make use of the full set of methods in
+Optimization.jl and drive further developments and recommendations to users.
+
+This would likely turn into either contributions to CUTEst or wrappers to CUTEst (hosted in
+SciML) which which transform the NLPModels form into Optimization.jl, and a benchmarking
+script that loops over all optimization problems and applies a set of optimizers to each of
+them, computing summary statistics at the bottom.
+
+**Information to Get Started**: The
+[Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
+describes how to contribute to the benchmarks. The benchmark results are
+generated using the benchmark server. It is expected that the benchmarks are
+updated to use the [Optimization.jl](https://docs.sciml.ai/Optimization/stable/)
+interface, which is an interface over most optimizers in Julia. Not all of the
+optimizers are covered in this interface: simply remove the optimizers which
+are not wrapped into Optimization.jl
+
+**Related Issues**: https://github.com/SciML/SciMLBenchmarks.jl/issues/640
+
+**Success Criteria**: The benchmarks should be turned into a loop over Optimization.jl
+solvers in a standard SciMLBenchmarks benchmark build.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of using numerical optimizers
 
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
@@ -102,7 +178,7 @@ while not imposing a loading cost on the more standard appliations.
 
 **Information to Get Started**: The OrdinaryDiffEq.jl solvers are all found in
 [the Github repository](https://github.com/SciML/OrdinaryDiffEq.jl) and
-the format of the package is docmented in the 
+the format of the package is docmented in the
 [developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/)
 
 **Related Issues**: https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177
@@ -111,6 +187,10 @@ the format of the package is docmented in the
 and a breaking update to OrdinaryDiffEq.jl is released which reduces the loading
 time by not including all solvers by default. This success also requires updating
 package documentation to reflect these changes.
+
+**Recommended Skills**: Since all of the code for the solvers exists and this a refactor,
+no prior knowledge of numerical differential equations is required. Only standard software
+development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
@@ -135,7 +215,7 @@ because the nuances of the implementation are less likely to noticably impact pe
 
 **Information to Get Started**: The OrdinaryDiffEq.jl solvers are all found in
 [the Github repository](https://github.com/SciML/OrdinaryDiffEq.jl) and
-the format of the package is docmented in the 
+the format of the package is docmented in the
 [developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/). The key to doing
 this right is to note that it is just a refactor, so all of the methods are there in
 the package already. However, note that some methods can be a bit nuanced, for example,
@@ -149,5 +229,9 @@ careful to add points to dispatch to alternative based on the nuances of the giv
 and a breaking update to OrdinaryDiffEq.jl is released which reduces the loading
 time by not including all solvers by default. This success also requires updating
 package documentation to reflect these changes.
+
+**Recommended Skills**: Since all of the code for the solvers exists and this a refactor,
+no prior knowledge of numerical differential equations is required. Only standard software
+development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas

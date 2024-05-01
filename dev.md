@@ -18,15 +18,28 @@ other open source environments, though it is driven by SciML in a manner that
 is designed to give the better outcomes to both contributors and maintainers
 of the project. In order to remove a hostile competitive atmosphere,
 candidates must declare to the committee interest in solving the chosen issue
-and, upon approval by the selection committee, are given an exclusive time 
-interval (defaulting to one month) to solve the issue. Payout is done upon 
+and, upon approval by the selection committee, are given an exclusive time
+interval (defaulting to one month) to solve the issue. Payout is done upon
 completion of the chosen project.
 
 The list of current small grants projects can be found at:
 
 [SciML Small Grants Program Current Project List](/small_grants)
 
-To declare for a small grant program, send an email to 
+To declare for a small grant program, send an email to sciml@julialang.org with:
+
+* Full legal name
+* CV
+* Link to Github account
+* Short bio / background about your experience in the topic
+* Description of which project you're interested in
+
+The potential reviewers will then get in touch to clarify details of the project and
+establish a clear work statement. Once clarifed, steering council will then respond with
+whether the application is accepted and commence the work under the supervision of the
+reviewer. When the reviewer accepts and merges the appropriate PRs, the grant will be
+determined as completed and the payout will commence. The grants are project based and
+payout will only occur upon acceptance by the reviewer.
 
 Note: Developers funded by other SciML fellowship programs are ineligible for
 obtaining the small grant awards during the term of their fellowship.
@@ -39,7 +52,7 @@ budding open source developers wishing to contribute to SciML projects or applic
 of the SciML projects. Students as part of this fellowship program are expected to
 work full-time on Julia-based open source projects in the SciML organization or
 in sister organizations maintained by the SciML developers to ensure long-term
-viability for the projects. To apply, send an email to sciml@julialang.org with a 
+viability for the projects. To apply, send an email to sciml@julialang.org with a
 CV and a two page project description, describing your prior open source contributions
 and what is planned to work on for the summer.
 
@@ -64,7 +77,7 @@ associated with the project.
 #### Projects Lists
 
 - [General Numerics](/gsoc/gsoc_numerics)
-- [Optimization](/gsoc/gsoc_optimization) 
+- [Optimization](/gsoc/gsoc_optimization)
 - [Numerical Differential Equations and Stochastic Process Simulation](/gsoc/gsoc_diffeq)
 - [Scientific Machine Learning](/gsoc/gsoc_sciml)
 - [Symbolic-Numeric Computing](/gsoc/gsoc_symbolic)
