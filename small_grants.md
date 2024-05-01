@@ -10,7 +10,7 @@ The following is the current project list for the SciML Small Grants Program.
 The small grant projects are decided by the SciML Steering Council and candidates
 can choose to take on projects from the project list. This is similar to
 "bounty programs" seen in other open source environments, though it is driven
-by SciML in a manner that is designed to give the better outcomes to both
+by SciML in a manner that is designed to give better outcomes to both
 contributors and maintainers of the project. In order to remove a hostile
 competitive atmosphere, **candidates must declare to the committee interest
 before solving the chosen issue** and, upon approval by the selection committee,
