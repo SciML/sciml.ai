@@ -75,7 +75,7 @@ reviewer.
 
 ## List of Current Projects
 
-### Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set ($200)
+### Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
 
 The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for awhile.
 They need to be updated to the "new" linear solve syntax introduced in 2022.
@@ -106,7 +106,7 @@ PDE discretiations.
 
 **Reviewers**: Chris Rackauckas
 
-### Update BlackBoxOptimizationBenchmarking.jl to the Optimization.jl Interface and Add to SciMLBenchmarks ($300)
+### Update BlackBoxOptimizationBenchmarking.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$300)
 
 [BlackBoxOptimizationBenchmarking.jl](https://github.com/jonathanBieler/BlackBoxOptimizationBenchmarking.jl)
 is a very interesting set of benchmarks between global optimization tools. However,
@@ -133,7 +133,7 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
-### Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks ($200)
+### Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
@@ -166,7 +166,7 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
-### Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers ($300)
+### Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers (\$300)
 
 It's no surprise to anyone to hear that DifferentialEquations.jl, in particular the
 OrdinaryDiffEq.jl solver package, is very large and takes a long time to precompile.
@@ -194,7 +194,7 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
-### Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus ($100/solver set)
+### Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus (\$100/solver set)
 
 The perform_step! implementations per solver in OrdinaryDiffEq.jl are often "bespoke", i.e.
 one step implementation per solver. The reason is because the package code grew organically
