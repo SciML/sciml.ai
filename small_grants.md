@@ -92,10 +92,10 @@ half use ApproxFun.jl in order to do a pseudospectral discretization.
 A direct pseudospectral discretization via manual FFTs and operator
 construction would also be fine.
 
-**Related Issues**: https://github.com/SciML/SciMLBenchmarks.jl/issues/929
+**Related Issues**: [https://github.com/SciML/SciMLBenchmarks.jl/issues/929](https://github.com/SciML/SciMLBenchmarks.jl/issues/929)
 
-**Success Criteria**: Pull requests which update the benchmarks in the
-folder https://github.com/SciML/SciMLBenchmarks.jl/tree/master/benchmarks/SimpleHandwrittenPDE
+**Success Criteria**: Pull requests which [update the benchmarks in the
+folder](https://github.com/SciML/SciMLBenchmarks.jl/tree/master/benchmarks/SimpleHandwrittenPDE)
 to be sucessful with current Julia and package version (v1.10) without
 erroring, generating work-precision diagrams. In addition, these should be updated
 to give a more clear definition of the PDE being solve, adding a LaTeX
@@ -124,7 +124,7 @@ interface, which is an interface over most optimizers in Julia. Not all of the
 optimizers are covered in this interface: simply remove the optimizers which
 are not wrapped into Optimization.jl
 
-**Related Issues**: https://github.com/SciML/SciMLBenchmarks.jl/issues/640
+**Related Issues**: [https://github.com/SciML/SciMLBenchmarks.jl/issues/640](https://github.com/SciML/SciMLBenchmarks.jl/issues/640)
 
 **Success Criteria**: The benchmarks should be turned into a loop over Optimization.jl
 solvers in a standard SciMLBenchmarks benchmark build.
@@ -157,7 +157,7 @@ interface, which is an interface over most optimizers in Julia. Not all of the
 optimizers are covered in this interface: simply remove the optimizers which
 are not wrapped into Optimization.jl
 
-**Related Issues**: https://github.com/SciML/SciMLBenchmarks.jl/issues/640
+**Related Issues**: [https://github.com/SciML/SciMLBenchmarks.jl/issues/935](https://github.com/SciML/SciMLBenchmarks.jl/issues/935)
 
 **Success Criteria**: The benchmarks should be turned into a loop over Optimization.jl
 solvers in a standard SciMLBenchmarks benchmark build.
@@ -181,7 +181,7 @@ while not imposing a loading cost on the more standard appliations.
 the format of the package is docmented in the
 [developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/)
 
-**Related Issues**: https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177
+**Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
 
 **Success Criteria**: The independent solver packages are registered and released,
 and a breaking update to OrdinaryDiffEq.jl is released which reduces the loading
@@ -223,7 +223,7 @@ BS5 and DP8 use fairly non-standard error estimators for an explicit Runge-Kutta
 while Verner methods have a twist with laziness. Because of this, the key is to be
 careful to add points to dispatch to alternative based on the nuances of the given algorithms.
 
-**Related Issues**: https://github.com/SciML/OrdinaryDiffEq.jl/issues/233
+**Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/233](https://github.com/SciML/OrdinaryDiffEq.jl/issues/233)
 
 **Success Criteria**: The independent solver packages are registered and released,
 and a breaking update to OrdinaryDiffEq.jl is released which reduces the loading
