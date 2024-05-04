@@ -236,30 +236,29 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
-## Update LoopVectorization to Support Memory Changes in Julia v1.11 (\$500)
+## Update LoopVectorization to Support Changes in Julia v1.12 (\$200)
 
 [LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
 central package for the performance of many Julia packages. Its internals make
 use of many low-level features and manual SIMD that can make it require significant
-maintanance to be optimized for new versions of the compiler. With Julia v1.11,
-the new [Memory type](https://github.com/JuliaLang/julia/pull/51319) has caused a
-large amount of breakage in LoopVectorization.jl, making it difficult to update.
-The purpose of this project is to update LoopVectorization.jl to be compatible
-with the upcoming Julia v1.11 release.
+maintanance to be optimized for new versions of the compiler.
+
+**Information to Get Started**: 
+
+With Julia v1.12:
+ - [opaque pointer mode](https://releases.llvm.org/17.0.1/docs/OpaquePointers.html) is now the default
+ - [Julia pointers are now LLVM pointers](https://github.com/JuliaLang/julia/pull/53687) instead of integers, as they were in earlier Julia versions.
+
+The purpose of this project is to update LoopVectorization.jl, VectorizationBase.jl,
+SLEEFPirates.jl and the rest of the JuliaSIMD ecosystem so that all the `llvmcall`s
+use opaque pointers, and any `Ptr` arguments or returns are llvm `ptr`s instead of
+integers. LoopVectorization.jl tests should pass under `--depwarn=error`.
 
 Note that the funds for this project as given by earmarked donations to the JuliaLang project
 which SciML will help administer through the small grants program.
 
-**Information to Get Started**: A good understanding of the new
-[Memory type](https://github.com/JuliaLang/julia/pull/51319). Some descriptions of the
-issues can be found in [this pull request](https://github.com/JuliaSIMD/LoopVectorization.jl/pull/519),
-and [this Discourse thread](https://discourse.julialang.org/t/why-is-loopvectorization-deprecated/109547).
+**Success Criteria**: LoopVectorization.jl runs on v1.12's latest release.
 
-**Related Issues**: [https://github.com/JuliaSIMD/LoopVectorization.jl/issues/525](https://github.com/JuliaSIMD/LoopVectorization.jl/issues/525)
-
-**Success Criteria**: LoopVectorization.jl runs on v1.11's latest release.
-
-**Recommended Skills**: This requires some low-level knoweldge of GC.@preserve, Memory,
-SIMD, and code generation. Compiler skills are highly recommended for this project.
+**Recommended Skills**: This requires some low-level knoweldge of LLVM IR and familiarity with `llvmcall`. The changes should be routine.
 
 **Reviewers**: Chris Elrod
