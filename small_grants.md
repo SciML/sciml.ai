@@ -108,6 +108,8 @@ PDE discretiations.
 
 ## Update BlackBoxOptimizationBenchmarking.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$300)
 
+**In Progress**: Claimed by Edward Berman for the time period of May 6th, 2024 - June 6th 2024.
+
 [BlackBoxOptimizationBenchmarking.jl](https://github.com/jonathanBieler/BlackBoxOptimizationBenchmarking.jl)
 is a very interesting set of benchmarks between global optimization tools. However,
 it has not been updated in years. It would be useful to the community if this
@@ -243,7 +245,7 @@ central package for the performance of many Julia packages. Its internals make
 use of many low-level features and manual SIMD that can make it require significant
 maintanance to be optimized for new versions of the compiler.
 
-**Information to Get Started**: 
+**Information to Get Started**:
 
 With Julia v1.12:
  - [opaque pointer mode](https://releases.llvm.org/17.0.1/docs/OpaquePointers.html) is now the default
