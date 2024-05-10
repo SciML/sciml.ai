@@ -173,6 +173,8 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Awards Associated with SciML Software
 
+- [2024: PumasAI Named Best Clinical Pharmacology Technology Development Firm in Biotechnology Awards](https://www.ghp-news.com/winners/pumasai/)
+    - [Press Release](https://www.biopharmadive.com/press-release/20240507-pumasai-named-best-clinical-pharmacology-technology-development-firm-in-bio/)
 - [2023: IEEE HPEC Best Student Paper Award, for Continuous Deep Equilibrium Models: Training Neural ODEs Faster by Integrating Them to Infinity, Avik Pal, Alan Edelman, Christopher Rackauckas](https://ieee-hpec.org/index.php/ieee-hpec-2023-prelim-agenda/)
 - [2023: International Society of Pharmacometrics (ISoP) QSP Student Symposium Best Oral Presentation, for Uncertainty Quantified Discovery of Chemical Reaction Networks via Bayesian Scientific Machine Learning, Emily Helen Nieves](https://user-images.githubusercontent.com/1814174/242699957-1574e51a-4ddb-4dd1-b788-f57915b08e11.png)
 - [2023: MIT Center for Computational Science & Engineering MathWorks Prize for Outstanding Master's Research in Computational Science & Engineering. For Songchen Tan (MIT Julia Lab) for his work on TaylorDiff.jl for use NeuralPDE.jl physics-informed neural networks (PINNs)](https://github.com/SciML/sciml.ai/files/11043019/CSEMathWorksPrizeCertificate2023_Tan.pdf)
