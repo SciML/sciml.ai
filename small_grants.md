@@ -240,6 +240,8 @@ development skills and test-driven development of a large code base is required.
 
 ## Update LoopVectorization to Support Changes in Julia v1.12 (\$200)
 
+**In Progress**: Claimed by Miguel Raz Guzman for the time period of May 10th, 2024 - June 10th 2024.
+
 [LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
 central package for the performance of many Julia packages. Its internals make
 use of many low-level features and manual SIMD that can make it require significant
