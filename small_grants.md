@@ -70,8 +70,18 @@ Discussions should take place in the SciML Slack or Zulip channels (#diffeq-brid
 expected within a few days to ensure the contributor can complete the project in the
 allotted time frame.
 
-It is expected that the contributor can work fairly independently with guidence from the
-reviewer.
+However, it is also expected that the contributor can work fairly independently with
+guidance from the reviewer. Contributors are expected to be comfortable enough in the area
+of expertise to work through the errors and test failures on their own. The SciML Small Grants
+Program is not a training program like Google Summer of Code or the SciML Fellowship,
+and thus the reviewer is not expected to mentor or teach the contributor how to solve the
+problem. The reviewer is in no obligation to help the contributor work through tests, bug
+fixing, etc. as these projects were chosen due to the fact that the maintainers have not been
+able to find the time to cover these areas. The obligation of the reviewer is to give a
+timely feedback on what the requirements for merging would be (i.e. what tests are required
+to be added, whether certain code meets style demands, etc.) so that the contributor can
+achieve a mergable PR within the time frame, but there is no expectation that the reviewer
+will "go the extra mile" to teach the contributor how the package or mathematics works.
 
 # List of Current Projects
 
