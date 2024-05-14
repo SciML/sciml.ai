@@ -180,6 +180,8 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 ## Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers (\$300)
 
+**In Progress**: Claimed by Victor Cano Gil for the time period of May 14th, 2024 - June 14th 2024.
+
 It's no surprise to anyone to hear that DifferentialEquations.jl, in particular the
 OrdinaryDiffEq.jl solver package, is very large and takes a long time to precompile.
 However, this is because there are a lot of solvers in the package. The goal would
