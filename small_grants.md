@@ -206,6 +206,31 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
+## DAE Problem Benchmarks (\$100 / Benchmark)
+
+New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
+ability to better tune solvers across problems. However, we are currently lacking in the
+number of such benchmarks that exist. The goal would be to add standard benchmarks from
+[this issue](https://github.com/SciML/SciMLBenchmarks.jl/issues/359) to the SciMLBenchmarks
+system so that they can be performance tracked over time.
+
+**Information to Get Started**: [Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
+describes how to contribute to the benchmarks. The benchmark results are
+generated using the benchmark server. The [transition amplifier benchmark](https://github.com/SciML/SciMLBenchmarks.jl/pull/372)
+and [slider crank benchmark](https://github.com/SciML/SciMLBenchmarks.jl/pull/373) were old
+PRs to add a few of the problems. These could be used as starting points to solve two problems.
+One would likely need to modify the structural simplification to turn dummy derivative off
+as well, that can be discsused with Chris in the PR review.
+
+**Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
+
+**Success Criteria**: New benchmarks with the DAE systems.
+
+**Recommended Skills**: Prior knowledge in modeling with differential-algebaic equations
+would be helpful for debugging.
+
+**Reviewers**: Chris Rackauckas
+
 ## Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus (\$100/solver set)
 
 The perform_step! implementations per solver in OrdinaryDiffEq.jl are often "bespoke", i.e.
