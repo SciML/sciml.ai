@@ -41,7 +41,7 @@ SciML. If you would like your institution's tools added to the list,
 ## Press Coverage Featuring SciML
 
 - [Technique could efficiently solve partial differential equations for numerous applications (PEDS)](https://news.mit.edu/2024/peds-technique-could-efficiently-solve-partial-differential-equations-0108)
-- [https://www.defensemirror.com/news/34263/MagNav_Project_Demos_Real_time_Magnetic_Navigation (built on SciML tooling)](https://www.defensemirror.com/news/34263/MagNav_Project_Demos_Real_time_Magnetic_Navigation)
+- [MagNav Project Demos Real-Time Magnetic Navigation (built on SciML tooling)](https://www.defensemirror.com/news/34263/MagNav_Project_Demos_Real_time_Magnetic_Navigation)
 - [JuliaHub (Using SciML in JuliaSim) Receives \$13 Million Strategic Investment from AE Industrial Partners HorizonX](https://www.prnewswire.com/news-releases/juliahub-receives-13-million-strategic-investment-from-ae-industrial-partners-horizonx-301863793.html?fbclid=IwAR1mpSlUxnFVDylAtzxbh64mTHkiNDkjQGn_RoKUa5PA4h3Y6tUYkimORHM)
 - [Neuroblox Changing the Game: How biomedical engineer and neuroscientist Lilianne Mujica-Parodi is revolutionizing the study and treatment of brain disorders (Developed using SciML)](https://mag.stonybrook.edu/changing-game/)
 - [Computing our climate future. "For climate models to take full advantage of these advancements, there’s only one option: starting over with a modern, more flexible language. Written in Julia, a part of Julialab’s Scientific Machine Learning technology, and spearheaded by Alan Edelman, a professor of applied mathematics in MIT’s Department of Mathematics, CliMA will be able to harness far more data than the current models can handle."](https://news.mit.edu/2022/computing-our-climate-future-0413)
