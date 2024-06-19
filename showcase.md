@@ -40,6 +40,7 @@ SciML. If you would like your institution's tools added to the list,
 
 ## Press Coverage Featuring SciML
 
+- [This is how they use AI to recreate smells from the past (using Julia SciML)](https://www.nrk.no/trondelag/hvordan-luktet-gatene-rundt-colosseum-i-gamle-roma_-det-kan-ki-kanskje-snart-ha-et-svar-pa-1.16923760)
 - [Technique could efficiently solve partial differential equations for numerous applications (PEDS)](https://news.mit.edu/2024/peds-technique-could-efficiently-solve-partial-differential-equations-0108)
 - [MagNav Project Demos Real-Time Magnetic Navigation (built on SciML tooling)](https://www.defensemirror.com/news/34263/MagNav_Project_Demos_Real_time_Magnetic_Navigation)
 - [JuliaHub (Using SciML in JuliaSim) Receives \$13 Million Strategic Investment from AE Industrial Partners HorizonX](https://www.prnewswire.com/news-releases/juliahub-receives-13-million-strategic-investment-from-ae-industrial-partners-horizonx-301863793.html?fbclid=IwAR1mpSlUxnFVDylAtzxbh64mTHkiNDkjQGn_RoKUa5PA4h3Y6tUYkimORHM)
