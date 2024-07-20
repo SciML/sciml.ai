@@ -118,8 +118,6 @@ PDE discretiations.
 
 ## Update BlackBoxOptimizationBenchmarking.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$300)
 
-**In Progress**: Claimed by Edward Berman for the time period of May 6th, 2024 - June 6th 2024.
-
 [BlackBoxOptimizationBenchmarking.jl](https://github.com/jonathanBieler/BlackBoxOptimizationBenchmarking.jl)
 is a very interesting set of benchmarks between global optimization tools. However,
 it has not been updated in years. It would be useful to the community if this
@@ -146,6 +144,8 @@ solvers in a standard SciMLBenchmarks benchmark build.
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
+
+**In Progress**: Claimed by Alonso Cisneros for the time period of July 20th, 2024 - August 20th 2024.
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
@@ -182,6 +182,8 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 #### Note: Bounty increase to \$600 from \$300 (7/20/2024)
 
+**In Progress**: Claimed by Param Umesh Thakkar for the time period of June 18th, 2024 - July 18th 2024.
+
 It's no surprise to anyone to hear that DifferentialEquations.jl, in particular the
 OrdinaryDiffEq.jl solver package, is very large and takes a long time to precompile.
 However, this is because there are a lot of solvers in the package. The goal would
@@ -209,6 +211,8 @@ development skills and test-driven development of a large code base is required.
 **Reviewers**: Chris Rackauckas
 
 ## DAE Problem Benchmarks (\$100 / Benchmark)
+
+**In Progress**: Claimed by Marko Polic for the time period of June 18th, 2024 - July 18th 2024.
 
 New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
 ability to better tune solvers across problems. However, we are currently lacking in the
