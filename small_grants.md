@@ -178,7 +178,9 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
-## Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers (\$300)
+## Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers (\$600)
+
+#### Note: Bounty increase to \$600 from \$300 (7/20/2024)
 
 It's no surprise to anyone to hear that DifferentialEquations.jl, in particular the
 OrdinaryDiffEq.jl solver package, is very large and takes a long time to precompile.
