@@ -178,38 +178,6 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
-## Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers (\$600)
-
-#### Note: Bounty increase to \$600 from \$300 (7/20/2024)
-
-**In Progress**: Claimed by Param Umesh Thakkar for the time period of June 18th, 2024 - July 18th 2024.
-
-It's no surprise to anyone to hear that DifferentialEquations.jl, in particular the
-OrdinaryDiffEq.jl solver package, is very large and takes a long time to precompile.
-However, this is because there are a lot of solvers in the package. The goal would
-be to refactor this package so that sets of solvers are instead held in subpackages
-that are only loaded on-demand. Since many of the solvers are only used in more
-niche applications, this allows for them to be easily maintained in the same repo
-while not imposing a loading cost on the more standard appliations.
-
-**Information to Get Started**: The OrdinaryDiffEq.jl solvers are all found in
-[the Github repository](https://github.com/SciML/OrdinaryDiffEq.jl) and
-the format of the package is docmented in the
-[developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/)
-
-**Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
-
-**Success Criteria**: The independent solver packages are registered and released,
-and a breaking update to OrdinaryDiffEq.jl is released which reduces the loading
-time by not including all solvers by default. This success also requires updating
-package documentation to reflect these changes.
-
-**Recommended Skills**: Since all of the code for the solvers exists and this a refactor,
-no prior knowledge of numerical differential equations is required. Only standard software
-development skills and test-driven development of a large code base is required.
-
-**Reviewers**: Chris Rackauckas
-
 ## DAE Problem Benchmarks (\$100 / Benchmark)
 
 **In Progress**: Claimed by Marko Polic for the time period of June 18th, 2024 - July 18th 2024.
@@ -307,3 +275,45 @@ which SciML will help administer through the small grants program.
 **Recommended Skills**: This requires some low-level knoweldge of LLVM IR and familiarity with `llvmcall`. The changes should be routine.
 
 **Reviewers**: Chris Elrod
+
+# Successful Projects Archive
+
+These are the previous SciML small grants projects which have successfully concluded and payed out.
+
+## Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers (\$600)
+
+#### Note: Bounty increase to \$600 from \$300 (7/20/2024)
+
+**In Progress**: Claimed by Param Umesh Thakkar for the time period of June 18th, 2024 - August 18th 2024. Extended due to scope and cost extension.
+
+It's no surprise to anyone to hear that DifferentialEquations.jl, in particular the
+OrdinaryDiffEq.jl solver package, is very large and takes a long time to precompile.
+However, this is because there are a lot of solvers in the package. The goal would
+be to refactor this package so that sets of solvers are instead held in subpackages
+that are only loaded on-demand. Since many of the solvers are only used in more
+niche applications, this allows for them to be easily maintained in the same repo
+while not imposing a loading cost on the more standard appliations.
+
+**Information to Get Started**: The OrdinaryDiffEq.jl solvers are all found in
+[the Github repository](https://github.com/SciML/OrdinaryDiffEq.jl) and
+the format of the package is docmented in the
+[developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/)
+
+**Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
+
+**Success Criteria**: The independent solver packages are registered and released,
+and a breaking update to OrdinaryDiffEq.jl is released which reduces the loading
+time by not including all solvers by default. This success also requires updating
+package documentation to reflect these changes.
+
+**Recommended Skills**: Since all of the code for the solvers exists and this a refactor,
+no prior knowledge of numerical differential equations is required. Only standard software
+development skills and test-driven development of a large code base is required.
+
+**Reviewers**: Chris Rackauckas
+
+## DAE Problem Benchmarks (\$100 / Benchmark)
+
+**In Progress**: Claimed by Marko Polic for the time period of June 18th, 2024 - July 18th 2024. 
+The transistor amplifier benchmark was added https://github.com/SciML/SciMLBenchmarks.jl/pull/1007. 
+Project is kept open for other benchmarks.
