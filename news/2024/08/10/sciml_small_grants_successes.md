@@ -13,7 +13,7 @@ share.
 
 ## Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers (\$600)
 
-Origionally set at $300, this project was expanded to two months with the bounty doubled after the full
+Originally set at \$300, this project was expanded to two months with the bounty doubled after the full
 scope of the work was found to be much larger than expected. 
 
 - https://github.com/SciML/OrdinaryDiffEq.jl/pull/2253
