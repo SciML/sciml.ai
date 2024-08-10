@@ -1,0 +1,135 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <meta property="og:title" content="SciML: Open Source Software for Scientific Machine Learning"> <meta property="og:description" content="Open Source Software for Scientific Machine Learning"> <meta property="og:image" content="https://sciml.ai/assets/SciMLGitHubPreview.png"> <meta property="og:url" content="https://sciml.ai"> <meta name="twitter:title" content=SciML > <meta name="twitter:description" content="Open Source Software for Scientific Machine Learning"> <meta name="twitter:image" content="https://sciml.ai/assets/SciMLGitHubPreview.png"> <meta name="twitter:card" content=summary_large_image > <!-- Favicon--> <link rel=icon  type="image/x-icon" href="assets/favicon.png" /> <!-- Bootstrap icons--> <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel=stylesheet  type="text/css" /> <link rel=stylesheet  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"> <!-- Google fonts--> <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel=stylesheet  type="text/css" /> <!-- Core theme CSS (includes Bootstrap)--> <link href="./css/styles.css" rel=stylesheet  /> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/styles.css"> <link rel=stylesheet  href="/css/hypertext.css"> <link rel=icon  href="/assets/favicon.png"> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90474609-2"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-90474609-2'); </script> <title>First Successes of the SciML Small Grants Program: Faster OrdinaryDiffEq Startup and New Benchmarks</title> <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin=anonymous ></script> <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin=anonymous ></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin=anonymous ></script> <div class=container-fluid  id=top-alert > <div class="alert alert-dark alert-dismissible mb-0" role=alert > <p class=text-center > <a href="https://youtu.be/yHiyJQdWBY8">Check out the latest talk: "The Continuing Advancements of Scientific Machine Learning (SciML)"</a> </p> <!-- <button type=button  class=close  data-dismiss=alert  aria-label=Close > <span aria-hidden=true >&times;</span> --> </button> </div> </div> <header> <nav class="navbar navbar-expand-lg navbar-light"> <a class=navbar-brand  href="/">Home</a> <button class=navbar-toggler  type=button  data-toggle=collapse  data-target="#navbarSupportedContent" aria-controls=navbarSupportedContent  aria-expanded=false  aria-label="Toggle navigation"> <span class=navbar-toggler-icon ></span> </button> <div class="collapse navbar-collapse" id=navbarSupportedContent > <ul class="navbar-nav mr-auto"> <li class="nav-item active"> <a class=nav-link  href="https://docs.sciml.ai/">Documentation</a> <li class=nav-item > <a class=nav-link  href="/news/">News</a> <li class=nav-item > <a class=nav-link  href="/roadmap/">Roadmap</a> <li class=nav-item > <a class=nav-link  href="/citing/">Citing</a> <li class=nav-item > <a class=nav-link  href="/showcase/">Showcase</a> <li class=nav-item > <a class=nav-link  href="https://benchmarks.sciml.ai/">Benchmarks</a> <li class=nav-item > <a class=nav-link  href="https://github.com/SciML/">GitHub</a> <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id=navbarDropdownMenuLink  role=button  data-toggle=dropdown  aria-haspopup=true  aria-expanded=false > Community </a> <div class=dropdown-menu  aria-labelledby=navbarDropdownMenuLink > <a class=dropdown-item  href="/community/">Community Home</a> <a class=dropdown-item  href="/governance/">Governance</a> <a class=dropdown-item  href="/challenge/">Challenges</a> <a class=dropdown-item  href="/dev/">Developer Programs</a> </div> <li class=nav-item > <a class=nav-link  href="https://numfocus.org/donate-to-sciml"><i class="bi bi-heart"></i> Donate</a> </ul> </div> </nav> </header> <div class=franklin-content ><h1 id=first_successes_of_the_sciml_small_grants_program_faster_ordinarydiffeq_startup_and_new_benchmarks ><a href="#first_successes_of_the_sciml_small_grants_program_faster_ordinarydiffeq_startup_and_new_benchmarks" class=header-anchor >First Successes of the SciML Small Grants Program: Faster OrdinaryDiffEq Startup and New Benchmarks</a></h1> <p>Earlier this year we lauched the <a href="https://sciml.ai/small_grants/">SciML Small Grants</a> program in order to get new contributors up and running in working on important projects. We are excited to share that this program has been successful in recruiting new contributors and we have some results to share. </p> <h2 id=refactor_ordinarydiffeqjl_to_use_sub-packages_of_solvers_600 ><a href="#refactor_ordinarydiffeqjl_to_use_sub-packages_of_solvers_600" class=header-anchor >Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers &#40;&#36;600&#41;</a></h2> <p>Originally set at &#36;300, this project was expanded to two months with the bounty doubled after the full scope of the work was found to be much larger than expected. </p> <ul> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2253</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2256</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2264</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2267</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2268</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2272</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2274</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2285</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2286</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2292</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2301</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2303</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2304</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2308</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2312</p> </ul> <p>This was in conjunction with some helper PR from the library maintainers:</p> <ul> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2240</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2357</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2321</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2313</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2311</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2309</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2300</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2302</p> <li><p>https://github.com/SciML/OrdinaryDiffEq.jl/pull/2299</p> </ul> <p>Altogether, having Param Umesh Thakkar join our team as a contributor and work through this refactor has turned into a major improvement for users of DifferentialEquations.jl because one can now install packages which are solver-specific, greatly reducing the dependencies required and thus the installation and load times. For example, let&#39;s check out if you want just the <code>Tsit5</code> integrator. Because of the importance of this method, it was turned into its own solver subpackage. Prior to these changes, the first call time was:</p> <pre><code class="julia hljs"><span class=hljs-meta >@time</span> <span class=hljs-keyword >begin</span>
+    <span class=hljs-keyword >using</span> OrdinaryDiffEq
+
+    <span class=hljs-keyword >function</span> lorenz(du, u, p, t)
+        du[<span class=hljs-number >1</span>] = <span class=hljs-number >10.0</span>(u[<span class=hljs-number >2</span>] - u[<span class=hljs-number >1</span>])
+        du[<span class=hljs-number >2</span>] = u[<span class=hljs-number >1</span>] * (<span class=hljs-number >28.0</span> - u[<span class=hljs-number >3</span>]) - u[<span class=hljs-number >2</span>]
+        du[<span class=hljs-number >3</span>] = u[<span class=hljs-number >1</span>] * u[<span class=hljs-number >2</span>] - (<span class=hljs-number >8</span> / <span class=hljs-number >3</span>) * u[<span class=hljs-number >3</span>]
+    <span class=hljs-keyword >end</span>
+
+    lorenzprob = ODEProblem(lorenz, [<span class=hljs-number >1.0</span>; <span class=hljs-number >0.0</span>; <span class=hljs-number >0.0</span>], (<span class=hljs-number >0.0</span>, <span class=hljs-number >1.0</span>))
+    sol = solve(lorenzprob, Tsit5());
+<span class=hljs-keyword >end</span>;
+
+<span class=hljs-comment ># 2.459902 seconds (5.46 M allocations: 349.671 MiB, 3.02% gc time, 22.39% compilation time)</span></code></pre> <p>Now using the <code>Tsit5</code> specific package we get:</p> <pre><code class="julia hljs"><span class=hljs-meta >@time</span> <span class=hljs-keyword >begin</span>
+    <span class=hljs-keyword >using</span> OrdinaryDiffEqTsit5
+
+    <span class=hljs-keyword >function</span> lorenz(du, u, p, t)
+        du[<span class=hljs-number >1</span>] = <span class=hljs-number >10.0</span>(u[<span class=hljs-number >2</span>] - u[<span class=hljs-number >1</span>])
+        du[<span class=hljs-number >2</span>] = u[<span class=hljs-number >1</span>] * (<span class=hljs-number >28.0</span> - u[<span class=hljs-number >3</span>]) - u[<span class=hljs-number >2</span>]
+        du[<span class=hljs-number >3</span>] = u[<span class=hljs-number >1</span>] * u[<span class=hljs-number >2</span>] - (<span class=hljs-number >8</span> / <span class=hljs-number >3</span>) * u[<span class=hljs-number >3</span>]
+    <span class=hljs-keyword >end</span>
+
+    lorenzprob = ODEProblem(lorenz, [<span class=hljs-number >1.0</span>; <span class=hljs-number >0.0</span>; <span class=hljs-number >0.0</span>], (<span class=hljs-number >0.0</span>, <span class=hljs-number >1.0</span>))
+    sol = solve(lorenzprob, Tsit5());
+<span class=hljs-keyword >end</span>;
+<span class=hljs-comment ># 0.564754 seconds (975.66 k allocations: 72.982 MiB, 1.42% gc time, 15.30% compilation time: 2% of which was recompilation)</span></code></pre> <p>This can go even further in the near future. By looking at the load time statistics:</p> <pre><code class="julia hljs"><span class=hljs-meta >@time_imports</span> <span class=hljs-keyword >using</span> OrdinaryDiffEqTsit5
+
+[ Info: Precompiling OrdinaryDiffEqTsit5 [b1df2697-<span class=hljs-number >797e-41</span>e3-<span class=hljs-number >8120</span>-<span class=hljs-number >5422</span>d3b24e4a]
+               ┌ <span class=hljs-number >0.0</span> ms DocStringExtensions.__init__() 
+     <span class=hljs-number >12.0</span> ms  DocStringExtensions <span class=hljs-number >91.45</span>% compilation time
+      <span class=hljs-number >0.3</span> ms  Reexport
+      <span class=hljs-number >5.9</span> ms  Preferences
+      <span class=hljs-number >0.3</span> ms  PrecompileTools
+      <span class=hljs-number >1.0</span> ms  ArrayInterface
+      <span class=hljs-number >0.6</span> ms  StaticArraysCore
+      <span class=hljs-number >0.4</span> ms  ArrayInterface → ArrayInterfaceStaticArraysCoreExt
+      <span class=hljs-number >4.0</span> ms  FunctionWrappers
+      <span class=hljs-number >0.3</span> ms  MuladdMacro
+      <span class=hljs-number >2.2</span> ms  OrderedCollections
+      <span class=hljs-number >0.4</span> ms  UnPack
+      <span class=hljs-number >0.4</span> ms  Parameters
+               ┌ <span class=hljs-number >3.6</span> ms SuiteSparse_jll.__init__() 
+      <span class=hljs-number >4.1</span> ms  SuiteSparse_jll
+               ┌ <span class=hljs-number >3.8</span> ms SparseArrays.CHOLMOD.__init__() <span class=hljs-number >83.60</span>% compilation time
+     <span class=hljs-number >94.1</span> ms  SparseArrays <span class=hljs-number >3.40</span>% compilation time
+      <span class=hljs-number >0.4</span> ms  ArrayInterface → ArrayInterfaceSparseArraysExt
+      <span class=hljs-number >0.6</span> ms  Statistics
+      <span class=hljs-number >0.3</span> ms  IfElse
+      <span class=hljs-number >6.9</span> ms  Static
+      <span class=hljs-number >0.6</span> ms  Compat
+      <span class=hljs-number >0.3</span> ms  Compat → CompatLinearAlgebraExt
+               ┌ <span class=hljs-number >0.0</span> ms Requires.__init__() 
+      <span class=hljs-number >0.5</span> ms  Requires
+      <span class=hljs-number >9.2</span> ms  StaticArrayInterface
+      <span class=hljs-number >0.7</span> ms  ManualMemory
+               ┌ <span class=hljs-number >0.0</span> ms ThreadingUtilities.__init__() 
+      <span class=hljs-number >3.8</span> ms  ThreadingUtilities
+      <span class=hljs-number >0.4</span> ms  SIMDTypes
+      <span class=hljs-number >1.6</span> ms  LayoutPointers
+      <span class=hljs-number >1.7</span> ms  CloseOpenIntervals
+      <span class=hljs-number >5.3</span> ms  StrideArraysCore
+      <span class=hljs-number >0.4</span> ms  BitTwiddlingConvenienceFunctions
+               ┌ <span class=hljs-number >0.0</span> ms CPUSummary.__init__() 
+      <span class=hljs-number >1.1</span> ms  CPUSummary
+               ┌ <span class=hljs-number >0.0</span> ms PolyesterWeave.__init__() 
+      <span class=hljs-number >4.1</span> ms  PolyesterWeave
+      <span class=hljs-number >0.7</span> ms  Polyester
+      <span class=hljs-number >0.4</span> ms  FastBroadcast
+      <span class=hljs-number >5.3</span> ms  RecipesBase
+      <span class=hljs-number >0.4</span> ms  ExprTools
+      <span class=hljs-number >0.6</span> ms  RuntimeGeneratedFunctions
+      <span class=hljs-number >5.3</span> ms  MacroTools
+     <span class=hljs-number >14.5</span> ms  Test
+      <span class=hljs-number >0.6</span> ms  InverseFunctions
+      <span class=hljs-number >0.3</span> ms  InverseFunctions → DatesExt
+      <span class=hljs-number >0.5</span> ms  ConstructionBase
+      <span class=hljs-number >0.3</span> ms  CompositionsBase
+      <span class=hljs-number >0.3</span> ms  CompositionsBase → CompositionsBaseInverseFunctionsExt
+               ┌ <span class=hljs-number >0.0</span> ms Accessors.__init__() 
+      <span class=hljs-number >7.3</span> ms  Accessors
+      <span class=hljs-number >2.1</span> ms  SymbolicIndexingInterface
+      <span class=hljs-number >0.5</span> ms  Adapt
+      <span class=hljs-number >0.3</span> ms  DataValueInterfaces
+      <span class=hljs-number >0.6</span> ms  DataAPI
+      <span class=hljs-number >0.3</span> ms  IteratorInterfaceExtensions
+      <span class=hljs-number >0.4</span> ms  TableTraits
+      <span class=hljs-number >5.8</span> ms  Tables
+      <span class=hljs-number >1.5</span> ms  GPUArraysCore
+      <span class=hljs-number >0.4</span> ms  ArrayInterface → ArrayInterfaceGPUArraysCoreExt
+     <span class=hljs-number >11.3</span> ms  RecursiveArrayTools
+      <span class=hljs-number >0.5</span> ms  RecursiveArrayTools → RecursiveArrayToolsFastBroadcastExt
+               ┌ <span class=hljs-number >0.0</span> ms TruncatedStacktraces.__init__() 
+      <span class=hljs-number >0.5</span> ms  TruncatedStacktraces
+      <span class=hljs-number >5.5</span> ms  Setfield
+      <span class=hljs-number >2.9</span> ms  IrrationalConstants
+      <span class=hljs-number >0.7</span> ms  DiffRules
+      <span class=hljs-number >0.7</span> ms  DiffResults
+               ┌ <span class=hljs-number >1.4</span> ms OpenLibm_jll.__init__() 
+      <span class=hljs-number >2.0</span> ms  OpenLibm_jll
+      <span class=hljs-number >0.5</span> ms  NaNMath
+      <span class=hljs-number >0.5</span> ms  LogExpFunctions
+      <span class=hljs-number >0.4</span> ms  LogExpFunctions → LogExpFunctionsInverseFunctionsExt
+      <span class=hljs-number >0.5</span> ms  JLLWrappers
+               ┌ <span class=hljs-number >10.0</span> ms CompilerSupportLibraries_jll.__init__() <span class=hljs-number >26.91</span>% compilation time
+     <span class=hljs-number >10.7</span> ms  CompilerSupportLibraries_jll <span class=hljs-number >25.26</span>% compilation time
+               ┌ <span class=hljs-number >0.6</span> ms OpenSpecFun_jll.__init__() 
+      <span class=hljs-number >1.3</span> ms  OpenSpecFun_jll
+      <span class=hljs-number >4.2</span> ms  SpecialFunctions
+      <span class=hljs-number >0.5</span> ms  CommonSubexpressions
+     <span class=hljs-number >19.9</span> ms  ForwardDiff
+      <span class=hljs-number >0.7</span> ms  RecursiveArrayTools → RecursiveArrayToolsForwardDiffExt
+      <span class=hljs-number >0.6</span> ms  EnumX
+      <span class=hljs-number >0.5</span> ms  ConcreteStructs
+      <span class=hljs-number >0.5</span> ms  FastClosures
+      <span class=hljs-number >0.7</span> ms  PreallocationTools
+      <span class=hljs-number >0.6</span> ms  FunctionWrappersWrappers
+      <span class=hljs-number >0.6</span> ms  SciMLStructures
+               ┌ <span class=hljs-number >0.0</span> ms Distributed.__init__() 
+      <span class=hljs-number >8.0</span> ms  Distributed
+      <span class=hljs-number >0.6</span> ms  CommonSolve
+      <span class=hljs-number >2.1</span> ms  ADTypes
+     <span class=hljs-number >51.0</span> ms  MLStyle <span class=hljs-number >20.48</span>% compilation time
+      <span class=hljs-number >3.2</span> ms  Expronicon
+      <span class=hljs-number >6.1</span> ms  SciMLOperators
+               ┌ <span class=hljs-number >0.0</span> ms SciMLBase.__init__() 
+    <span class=hljs-number >109.4</span> ms  SciMLBase
+      <span class=hljs-number >0.8</span> ms  Tricks
+      <span class=hljs-number >7.4</span> ms  DiffEqBase
+     <span class=hljs-number >33.8</span> ms  FillArrays
+      <span class=hljs-number >1.9</span> ms  FillArrays → FillArraysSparseArraysExt
+      <span class=hljs-number >0.6</span> ms  FillArrays → FillArraysStatisticsExt
+      <span class=hljs-number >0.5</span> ms  SimpleUnPack
+     <span class=hljs-number >16.9</span> ms  DataStructures
+     <span class=hljs-number >16.6</span> ms  OrdinaryDiffEqCore
+    <span class=hljs-number >213.3</span> ms  OrdinaryDiffEqTsit5</code></pre> <p>It&#39;s clear that almost all of the remaining time is in loading. SparseArrays and thus 100ms will be cut off once Statistics.jl no longer requires SparseArrays in Julia v1.11. The SciMLBase and OrdinaryDiffEqTsit5 load times are being looked into in order to decrease it. We believe that we can get this down to around 200ms total on the first run, basically making the explicit Runge-Kutta methods feel instant without losing any feature support.</p> <p>Again, major thanks to Param Umesh Thakkar for his hard work on this refactor.</p> <h2 id=dae_problem_benchmarks_100_benchmark ><a href="#dae_problem_benchmarks_100_benchmark" class=header-anchor >DAE Problem Benchmarks &#40;&#36;100 / Benchmark&#41;</a></h2> <p>Marko Polic added a benchmark for the transistor amplifiers.</p> <ul> <li><p>https://github.com/SciML/SciMLBenchmarks.jl/pull/1007</p> </ul> <p>The built benchmark can now be found in the SciMLBenchmark documentation:</p> <ul> <li><p>https://docs.sciml.ai/SciMLBenchmarksOutput/dev/DAE/TransistorAmplifier/</p> </ul> <p>In particular, this benchmark has highlighted some missing features in ModelingToolkit structural simplification, namely to do with handling of singularity removal with parametric mass matrices, and also with the cost difference of diagonalizing the mass matrix vs allowing for non-diagonal mass matrices. Thus this benchmark will serve as an important development point for future changes to the compiler stack&#33;</p> <h2 id=interested_in_the_small_grants_program ><a href="#interested_in_the_small_grants_program" class=header-anchor >Interested in the Small Grants Program?</a></h2> <p>Do you want to become a contributor to the SciML Open Source Scientific Machine Learning organization? If so, check out the <a href="https://sciml.ai/small_grants/">SciML Small Grants</a> page to get started with applying&#33;</p> <!-- Footer--> <footer class="footer bg-light"> <div class=container > <div class=row > <div class="col-lg-6 h-100 text-center text-lg-start my-auto"> <ul class="list-inline mb-2"> <li class=list-inline-item ><a href="/community">Contact</a> <!-- <li class=list-inline-item ><a href="#!">Terms of Use</a> <li class=list-inline-item ><a href="#!">Privacy Policy</a> --> </ul> <p class="text-muted small mb-4 mb-lg-0">Website powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia</a> programming language. &copy; SciML 2022. All Rights Reserved.</p> <p class="text-muted small mb-4 mb-lg-0">Edit on <a href="https://github.com/SciML/sciml.ai">GitHub</a></p> </div> <div class="col-lg-6 h-100 text-center text-lg-end my-auto"> <ul class="list-inline mb-0"> <li class="list-inline-item me-4"> <a href="https://github.com/SciML"><i class="bi-github fs-3"></i></a> <li class="list-inline-item me-4"> <a href="https://twitter.com/SciML_Org"><i class="bi-twitter fs-3"></i></a> <li class=list-inline-item > <a href="https://www.linkedin.com/company/the-julia-language"><i class="bi-linkedin fs-3"></i></a> </ul> </div> </div> </div> </footer> </div>
