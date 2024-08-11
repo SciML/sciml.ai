@@ -206,7 +206,37 @@ would be helpful for debugging.
 
 **Reviewers**: Chris Rackauckas
 
+## Refactor NonlinearSolve.jl and BoundaryValueDiffEq.jl to use Sub-Packages of Solvers (\$300 each)
+
+With the successful splitting of [OrdinaryDiffEq.jl](https://sciml.ai/news/2024/08/10/sciml_small_grants_successes/),
+we suspect that similar installation and loading time improvements can be had by
+splitting NonlinearSolve.jl and BoundaryValueDiffEq.jl in such a way that the solvers
+can precompile in parallel and allow for depending on only a portion of the algorithms.
+In particular, OrdinaryDiffEq.jl only needs to depend on a trust region method, meaning
+that other sets of methods can be fully discarded from its dependency stack.
+
+**Information to Get Started**: The OrdinaryDiffEq.jl solvers are all found in
+[the Github repository](https://github.com/SciML/OrdinaryDiffEq.jl) and
+the format of the package is docmented in the
+[developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/). [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
+documents the process on OrdinaryDiffEq.jl to 
+
+**Related Issues**: 
+
+**Success Criteria**: The independent solver packages are registered and released,
+and a breaking update to OrdinaryDiffEq.jl is released which reduces the loading
+time by not including all solvers by default. This success also requires updating
+package documentation to reflect these changes.
+
+**Recommended Skills**: Since all of the code for the solvers exists and this a refactor,
+no prior knowledge of numerical differential equations is required. Only standard software
+development skills and test-driven development of a large code base is required.
+
+**Reviewers**: Chris Rackauckas, Avik Pal
+
 ## Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus (\$100/solver set)
+
+**In Progress**: Claimed by Param Umesh Thakkar for the time period of August 11th, 2024 - September 11th 2024. 
 
 The perform_step! implementations per solver in OrdinaryDiffEq.jl are often "bespoke", i.e.
 one step implementation per solver. The reason is because the package code grew organically
