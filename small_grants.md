@@ -146,6 +146,7 @@ solvers in a standard SciMLBenchmarks benchmark build.
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
 **In Progress**: Claimed by Alonso Cisneros for the time period of July 20th, 2024 - August 20th 2024.
+**Extended**: Given an extension to September 11th.
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
