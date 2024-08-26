@@ -208,6 +208,8 @@ would be helpful for debugging.
 
 ## Refactor NonlinearSolve.jl and BoundaryValueDiffEq.jl to use Sub-Packages of Solvers (\$300 each)
 
+**In Progress**: Claimed by José Joaquín Zubieta Rico for the time period of August 26th, 2024 - September 26th 2024.
+
 With the successful splitting of [OrdinaryDiffEq.jl](https://sciml.ai/news/2024/08/10/sciml_small_grants_successes/),
 we suspect that similar installation and loading time improvements can be had by
 splitting NonlinearSolve.jl and BoundaryValueDiffEq.jl in such a way that the solvers
@@ -219,9 +221,9 @@ that other sets of methods can be fully discarded from its dependency stack.
 [the Github repository](https://github.com/SciML/OrdinaryDiffEq.jl) and
 the format of the package is docmented in the
 [developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/). [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
-documents the process on OrdinaryDiffEq.jl to 
+documents the process on OrdinaryDiffEq.jl to
 
-**Related Issues**: 
+**Related Issues**:
 
 **Success Criteria**: The independent solver packages are registered and released,
 and a breaking update to OrdinaryDiffEq.jl is released which reduces the loading
@@ -236,7 +238,7 @@ development skills and test-driven development of a large code base is required.
 
 ## Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus (\$100/solver set)
 
-**In Progress**: Claimed by Param Umesh Thakkar for the time period of August 11th, 2024 - September 11th 2024. 
+**In Progress**: Claimed by Param Umesh Thakkar for the time period of August 11th, 2024 - September 11th 2024.
 
 The perform_step! implementations per solver in OrdinaryDiffEq.jl are often "bespoke", i.e.
 one step implementation per solver. The reason is because the package code grew organically
@@ -345,6 +347,6 @@ development skills and test-driven development of a large code base is required.
 
 ## DAE Problem Benchmarks (\$100 / Benchmark)
 
-**In Progress**: Claimed by Marko Polic for the time period of June 18th, 2024 - July 18th 2024. 
-The transistor amplifier benchmark was added https://github.com/SciML/SciMLBenchmarks.jl/pull/1007. 
+**In Progress**: Claimed by Marko Polic for the time period of June 18th, 2024 - July 18th 2024.
+The transistor amplifier benchmark was added https://github.com/SciML/SciMLBenchmarks.jl/pull/1007.
 Project is kept open for other benchmarks.
