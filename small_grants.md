@@ -348,5 +348,5 @@ development skills and test-driven development of a large code base is required.
 ## DAE Problem Benchmarks (\$100 / Benchmark)
 
 **In Progress**: Claimed by Marko Polic for the time period of June 18th, 2024 - July 18th 2024.
-The transistor amplifier benchmark was added https://github.com/SciML/SciMLBenchmarks.jl/pull/1007.
+The transistor amplifier benchmark was added [https://github.com/SciML/SciMLBenchmarks.jl/pull/1007](https://github.com/SciML/SciMLBenchmarks.jl/pull/1007).
 Project is kept open for other benchmarks.
