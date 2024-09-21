@@ -87,6 +87,8 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 ## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
 
+**In Progress**: Claimed by Criston Hyett for the time period of September 21st, 2024 - October 20th 2024.
+
 The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for awhile.
 They need to be updated to the "new" linear solve syntax introduced in 2022.
 When updated, these benchmarks should serve as a canonical development
@@ -117,6 +119,8 @@ PDE discretiations.
 **Reviewers**: Chris Rackauckas
 
 ## Update BlackBoxOptimizationBenchmarking.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$300)
+
+**In Progress**: Claimed by Alonso Cisneros for the time period of September 21st, 2024 - October 20th 2024.
 
 [BlackBoxOptimizationBenchmarking.jl](https://github.com/jonathanBieler/BlackBoxOptimizationBenchmarking.jl)
 is a very interesting set of benchmarks between global optimization tools. However,
@@ -180,8 +184,6 @@ solvers in a standard SciMLBenchmarks benchmark build.
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
 ## DAE Problem Benchmarks (\$100 / Benchmark)
-
-**In Progress**: Claimed by Marko Polic for the time period of June 18th, 2024 - July 18th 2024.
 
 New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
 ability to better tune solvers across problems. However, we are currently lacking in the
