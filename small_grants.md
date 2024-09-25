@@ -118,6 +118,67 @@ PDE discretiations.
 
 **Reviewers**: Chris Rackauckas
 
+## SciMLBenchmarks Compatability Bump for Benchmark Sets (\100 each set)
+
+The [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl) are a large set of benchmarks maintained
+by the SciML organization. As such, keeping these benchmarks up-to-date can be a time-consuming task.
+In many cases, we can end up in a situation where there are many package bumps that need to happen. Sometimes
+no code needs to be updated, in other cases the benchmark code does need to be updated. The only way to tell
+is to start the update process, bump the project and manifest tomls, and start digging into the results.
+
+These bumps are done in subsets. The currently identified subsets are:
+
+#### ParameterEstimation
+
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/799](https://github.com/SciML/SciMLBenchmarks.jl/pull/799)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1063](https://github.com/SciML/SciMLBenchmarks.jl/pull/1063)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1064](https://github.com/SciML/SciMLBenchmarks.jl/pull/1064)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1065](https://github.com/SciML/SciMLBenchmarks.jl/pull/1065)
+
+#### PINNs
+
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1062](https://github.com/SciML/SciMLBenchmarks.jl/pull/1062)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1061](https://github.com/SciML/SciMLBenchmarks.jl/pull/1061)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1044](https://github.com/SciML/SciMLBenchmarks.jl/pull/1044)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/877](https://github.com/SciML/SciMLBenchmarks.jl/pull/877)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1060](https://github.com/SciML/SciMLBenchmarks.jl/pull/1060)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1059](https://github.com/SciML/SciMLBenchmarks.jl/pull/1059)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1043](https://github.com/SciML/SciMLBenchmarks.jl/pull/1043)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/876](https://github.com/SciML/SciMLBenchmarks.jl/pull/876)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/605](https://github.com/SciML/SciMLBenchmarks.jl/pull/605)
+
+#### ComplicatedPDE
+
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/793](https://github.com/SciML/SciMLBenchmarks.jl/pull/793)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/868](https://github.com/SciML/SciMLBenchmarks.jl/pull/868)
+
+#### DynamicalODE
+
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1025](https://github.com/SciML/SciMLBenchmarks.jl/pull/1025)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/870](https://github.com/SciML/SciMLBenchmarks.jl/pull/870)
+
+#### BayesianInference
+
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/797](https://github.com/SciML/SciMLBenchmarks.jl/pull/797)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/866](https://github.com/SciML/SciMLBenchmarks.jl/pull/866)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1038](https://github.com/SciML/SciMLBenchmarks.jl/pull/1038)
+
+**Information to Get Started**: The
+[Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
+describes how to contribute to the benchmarks. The benchmark results are
+generated using the benchmark server. It is expected that the developer checks that the benchmarks
+are appropriately ran and generating correct graphs when updated, and highlight any performance
+regressions found through the update process.
+
+**Related Issues**: See the linked pull requests.
+
+**Success Criteria**: The benchmarks should run and give similar results to the pre-updated benchmarks,
+and any regressions should be identified with an issue opened in the appropriate repository.
+
+**Recommended Skills**: Willingness to roll up some sleaves and figure out what changed in breaking updates.
+
+**Reviewers**: Chris Rackauckas
+
 ## Update BlackBoxOptimizationBenchmarking.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$300)
 
 **In Progress**: Claimed by Alonso Cisneros for the time period of September 21st, 2024 - October 20th 2024.
