@@ -269,9 +269,7 @@ would be helpful for debugging.
 
 **Reviewers**: Chris Rackauckas
 
-## Refactor NonlinearSolve.jl and BoundaryValueDiffEq.jl to use Sub-Packages of Solvers (\$300 each)
-
-**In Progress**: Claimed by José Joaquín Zubieta Rico for the time period of August 26th, 2024 - September 26th 2024.
+## Refactor NonlinearSolve.jl to use Sub-Packages of Solvers (\$300 each)
 
 With the successful splitting of [OrdinaryDiffEq.jl](https://sciml.ai/news/2024/08/10/sciml_small_grants_successes/),
 we suspect that similar installation and loading time improvements can be had by
