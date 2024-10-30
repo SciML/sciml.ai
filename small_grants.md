@@ -85,7 +85,7 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Update NeuralPDE to be more maintainable (\$....)
+## Update NeuralPDE to be more maintainable (\$300)
 
 NeuralPDE is a package for training Physics Informed Neural Networks based on Lux.jl.
 It was originally developed from Flux and while updating to Lux, several older bits
