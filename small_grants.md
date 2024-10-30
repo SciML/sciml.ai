@@ -85,6 +85,22 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
+## Update NeuralPDE to be more maintainable (\$....)
+
+NeuralPDE is a package for training Physics Informed Neural Networks based on Lux.jl.
+It was originally developed from Flux and while updating to Lux, several older bits
+were left inplace. These need to be updated to a more Lux style approach.
+
+**Information to Get Started**: The linked issue describes in detail what needs to be
+done.
+
+**Related Issues**: https://github.com/SciML/NeuralPDE.jl/issues/900
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of Physics Informed Neural
+Networks and GPUs
+
+**Reviewers**: Avik Pal, Chris Rackauckas
+
 ## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
 
 **In Progress**: Claimed by Criston Hyett for the time period of September 21st, 2024 - October 20th 2024.
