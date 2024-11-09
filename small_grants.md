@@ -197,8 +197,6 @@ and any regressions should be identified with an issue opened in the appropriate
 
 ## Update BlackBoxOptimizationBenchmarking.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$300)
 
-**In Progress**: Claimed by Alonso Cisneros for the time period of September 21st, 2024 - October 20th 2024.
-
 [BlackBoxOptimizationBenchmarking.jl](https://github.com/jonathanBieler/BlackBoxOptimizationBenchmarking.jl)
 is a very interesting set of benchmarks between global optimization tools. However,
 it has not been updated in years. It would be useful to the community if this
@@ -225,9 +223,6 @@ solvers in a standard SciMLBenchmarks benchmark build.
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
-
-**In Progress**: Claimed by Alonso Cisneros for the time period of July 20th, 2024 - August 20th 2024.
-**Extended**: Given an extension to September 11th.
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
@@ -286,8 +281,6 @@ would be helpful for debugging.
 **Reviewers**: Chris Rackauckas
 
 ## Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus (\$100/solver set)
-
-**In Progress**: Claimed by Param Umesh Thakkar for the time period of August 11th, 2024 - September 11th 2024.
 
 The perform_step! implementations per solver in OrdinaryDiffEq.jl are often "bespoke", i.e.
 one step implementation per solver. The reason is because the package code grew organically
