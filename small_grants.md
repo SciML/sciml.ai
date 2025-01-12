@@ -59,7 +59,7 @@ The difference between the small grants program and a standard bounty program is
 to discourage "sniping" bounties from others, i.e. someone working for a few weeks on a project
 before suddenly someone else appears with a complete solution and takes the payout. While this
 is not impossible to prevent, as an open source community there may be others who happen to
-be working the same project independently, the reduce the occurrences of this phonomena we have
+be working the same project independently, to reduce the occurrences of this phonomena we have
 a policy that payouts will only occur for declared projects. This policy can be overriden on
 special circumstances by a majority vote of the steering council.
 
