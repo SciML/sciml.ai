@@ -24,17 +24,26 @@ be considered in the approval evaluations.
 
 ## Declaring for a Project
 
-To declare for a small grant program, send an email to sciml@julialang.org with:
+To declare for a small grant program, open a pull request on the Github repo for
+[https://github.com/SciML/sciml.ai](https://github.com/SciML/sciml.ai) in the
+`small_grants.md` file with a declaration for the grant in the section of the
+project of interest. For example:
+
+> **In Progress**: Claimed by XXXXXX for the time period of (today) - (one month later).
+
+In your pull request, please share:
 
 * Full legal name
 * CV
-* Link to Github account
 * Short bio / background about your experience in the topic
 * Description of which project you're interested in
 
-The potential reviewers will then get in touch to clarify details of the project and
-establish a clear work statement. Once clarifed, steering council will then respond with
-whether the application is accepted and commence the work under the supervision of the
+If some anonymity is requested, you may instead send this information to sciml@julialang.org.
+
+The potential reviewers will discuss the current-ness of the small grant project, the
+availability of reviewers, and the willingness to review. The small grant project
+is accepted when a majority of the steering council approves of the project and the PR
+is merged. At that point the work will commence under the supervision of the
 reviewer. When the reviewer accepts and merges the appropriate PRs, the grant will be
 determined as completed and the payout will commence. The grants are project based and
 payout will only occur upon acceptance by the reviewer.
@@ -42,6 +51,29 @@ payout will only occur upon acceptance by the reviewer.
 Note that information about ongoing projects will be tracked as public information
 below in order to give clear information to other contributors about what projects
 are taken. Completed projects will be added to a projects archive.
+
+## Going Over the One-Month Time Budget
+
+Each project is given a one month exclusive period for the purpose of decreasing competition.
+The difference between the small grants program and a standard bounty program is that we wish
+to discourage "sniping" bounties from others, i.e. someone working for a few weeks on a project
+before suddenly someone else appears with a complete solution and takes the payout. While this
+is not impossible to prevent, as an open source community there may be others who happen to
+be working the same project independently, to reduce the occurrences of this phonomena we have
+a policy that payouts will only occur for declared projects. This policy can be overriden on
+special circumstances by a majority vote of the steering council.
+
+In order to discourage "spotting", i.e. claiming projects to sit on them indefinitely and thus
+blocking other contributors, only one month exclusive periods are granted. If the project seems
+to be going beyond this one month timeframe, the contributor should ask for an extension by
+making a new pull request to bump the time window, which would then need to pass by a majority
+vote of the steering council. If a new claim PR is opened after the time window has passed
+without the contributor formally bumping the time window, then the new claim PR will be reviewed
+under the assumption that the project is not currently active.
+
+Note that unsuccessful small grants projects, i.e. claims of potential projects where the
+contributor disappears and does not end up with a PR, will be used in the criteria of whether
+further requests are accepted.
 
 ## Donating to the Program
 
@@ -59,6 +91,18 @@ and this means we must ensure that the suggested projects will have a prompt rev
 process and proper maintanance beyond the timeframe of the project. For this reason,
 we suggest discussing with maintainers in the official Slack/Zulip before making
 an earmarked donation.
+
+## Adding Projects to the List
+
+If you wish to add a project to the small grants list, open a pull request in the 
+[https://github.com/SciML/sciml.ai](https://github.com/SciML/sciml.ai) in the
+`small_grants.md` file with a full description of the project and the suspected monetary
+payout. New projects require approval by a steering committee member. The justification
+for the funding is required. If it is a personal donation, it is recommended that personal
+donation is made prior to the PR, though for known members of the community this requirement
+can be waived. Some of the projects can be covered through prior grant funds and other
+donations made to the SciML project, though it should not be assumed that this will be the
+case for any project without review by a steering committee member.
 
 ## Commitments from Reviewers
 
@@ -101,9 +145,40 @@ Networks and GPUs
 
 **Reviewers**: Avik Pal, Chris Rackauckas
 
-## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
+## Rewrite the NeuralPDE parser (\$300)
 
-**In Progress**: Claimed by Criston Hyett for the time period of September 21st, 2024 - October 20th 2024.
+NeuralPDE is a package for training Physics Informed Neural Networks (PINNs) uses a
+symbolic representation for problems which are then lowered into generated code for
+the user, fully automating the PINN experience. However, the previous formulation of the
+codegen process used pre-built kernels that can be difficult to debug. The goal of this
+project is to rewrite the loss function generator to instead generate a Symbolics.jl
+expression, which can be analyzed an generate code through `build_function`.
+
+**Information to Get Started**: A partial uncompleted pull request https://github.com/SciML/NeuralPDE.jl/pull/877 can be used as a starting point.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of Physics Informed Neural
+Networks, and symbolic computing.
+
+**Reviewers**: Chris Rackauckas
+
+## Update SciMLOperators.jl to allow for different defining vectors from actions (\$500)
+
+SciMLOperators.jl is a package for defining lazy operators `A(u,p,t)*v` which can be used
+throughout the ecosystem. However, many of the operators incorrectly make the assumption
+that `u = v`, i.e. `A(u,p,t)*u` is the operation. While this is the only case required
+for some ODE integrators, this oversimplification limits the full usage of the library.
+It is expected that this is a breaking change (with a major release bump) and is the
+major change required for the v1.0 release.
+
+**Information to Get Started**: The documentation of https://github.com/SciML/SciMLOperators.jl
+should be sufficient.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of linear operators and multiple dispatch
+in Julia.
+
+**Reviewers**: Chris Rackauckas
+
+## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
 
 The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for awhile.
 They need to be updated to the "new" linear solve syntax introduced in 2022.
@@ -162,22 +237,6 @@ These bumps are done in subsets. The currently identified subsets are:
 * [https://github.com/SciML/SciMLBenchmarks.jl/pull/1043](https://github.com/SciML/SciMLBenchmarks.jl/pull/1043)
 * [https://github.com/SciML/SciMLBenchmarks.jl/pull/876](https://github.com/SciML/SciMLBenchmarks.jl/pull/876)
 * [https://github.com/SciML/SciMLBenchmarks.jl/pull/605](https://github.com/SciML/SciMLBenchmarks.jl/pull/605)
-
-#### ComplicatedPDE
-
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/793](https://github.com/SciML/SciMLBenchmarks.jl/pull/793)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/868](https://github.com/SciML/SciMLBenchmarks.jl/pull/868)
-
-#### DynamicalODE
-
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1025](https://github.com/SciML/SciMLBenchmarks.jl/pull/1025)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/870](https://github.com/SciML/SciMLBenchmarks.jl/pull/870)
-
-#### BayesianInference
-
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/797](https://github.com/SciML/SciMLBenchmarks.jl/pull/797)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/866](https://github.com/SciML/SciMLBenchmarks.jl/pull/866)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1038](https://github.com/SciML/SciMLBenchmarks.jl/pull/1038)
 
 **Information to Get Started**: The
 [Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
@@ -323,8 +382,6 @@ development skills and test-driven development of a large code base is required.
 **Reviewers**: Chris Rackauckas
 
 ## Update LoopVectorization to Support Changes in Julia v1.12 (\$200)
-
-**In Progress**: Claimed by Miguel Raz Guzman for the time period of May 10th, 2024 - June 10th 2024.
 
 [LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
 central package for the performance of many Julia packages. Its internals make
