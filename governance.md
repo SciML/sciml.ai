@@ -26,10 +26,10 @@ handled on a case-by-case basis.
 ## Current Steering Council
 
 - [Chris Rackauckas (Massachusetts Institute of Technology)](https://chrisrackauckas.com/)
-- Yingbo Ma (Julia Computing)
+- [Torkel Lohman (University of Oxford)](https://www.maths.ox.ac.uk/people/torkel.loman)
 - [Samuel Isaacson (Boston University)](http://math.bu.edu/people/isaacson/)
-- [David Widmann (Uppsala Universitet)](https://widmann.dev/)
-- [Vaibhav Dixit (MIT)](https://vaibhavdixit02.github.io/)
+- [David Widmann (PumasAI)](https://widmann.dev/)
+- [Vaibhav Dixit (Massachusetts Institute of Technology)](https://vaibhavdixit02.github.io/)
 
 
 ## Advisory Committee
