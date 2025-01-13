@@ -25,23 +25,22 @@ handled on a case-by-case basis.
 
 ## Current Steering Council
 
-- [Chris Rackauckas (Massachusetts Institute of Technology)](https://chrisrackauckas.com/)
-- [Torkel Lohman (University of Oxford)](https://www.maths.ox.ac.uk/people/torkel.loman)
-- [Samuel Isaacson (Boston University)](http://math.bu.edu/people/isaacson/)
-- [David Widmann (PumasAI)](https://widmann.dev/)
 - [Vaibhav Dixit (Massachusetts Institute of Technology)](https://vaibhavdixit02.github.io/)
-
+- [Samuel Isaacson (Boston University)](http://math.bu.edu/people/isaacson/)
+- [Torkel Lohman (University of Oxford)](https://www.maths.ox.ac.uk/people/torkel.loman)
+- [Chris Rackauckas (Massachusetts Institute of Technology)](https://chrisrackauckas.com/)
+- [David Widmann (PumasAI)](https://www.widmann.dev/)
 
 ## Advisory Committee
 
 - [Alan Edelman (Massachusetts Institute of Technology)](http://math.mit.edu/~edelman/index.php)
-- [Viral Shah (Julia Computing)](https://en.wikipedia.org/wiki/Viral_B._Shah)
 - [Vijay Ivaturi (University of Maryland)](https://www.linkedin.com/in/vijayivaturi/)
-- [Venkat Viswanathan (Carnegie Mellon University)](https://www.meche.engineering.cmu.edu/directory/bios/viswanathan-venkat.html)
-- [Jesse Perla (University of British Columbia)](https://www.jesseperla.com/)
 - [Mykel Kochenderfer (Stanford)](https://mykel.kochenderfer.com/)
-- [Madeleine Udell (Cornell)](https://people.orie.cornell.edu/mru8/)
+- [Jesse Perla (University of British Columbia)](https://www.jesseperla.com/)
 - [Moritz Schauer (Chalmers University of Technology | University of Gothenburg)](http://www.math.chalmers.se/~smoritz/index.html)
+- [Viral Shah (Julia Computing)](https://en.wikipedia.org/wiki/Viral_B._Shah)
+- [Madeleine Udell (Cornell)](https://people.orie.cornell.edu/mru8/)
+- [Venkat Viswanathan (Carnegie Mellon University)](https://www.andrew.cmu.edu/user/venkatv/)
 
 # Governing Rules and Duties
 
