@@ -211,6 +211,11 @@ PDE discretiations.
 
 ## SciMLBenchmarks Compatability Bump for Benchmark Sets (\100 each set)
 
+Full Legal Name: Param Umesh Thakkar
+CV: https://drive.google.com/file/d/1a3SeVqE-k5ismGDl6ocFxMki5-6LL6O8/view?usp=sharing
+Short bio / background about your experience in the topic: I have been working on updating the benchmarks and have successfully updated some of the benchmarks here.
+Description of which project you're interested in: SciMLBenchmarks Compatability Bump for Benchmark Sets (\100 each set)
+
 The [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl) are a large set of benchmarks maintained
 by the SciML organization. As such, keeping these benchmarks up-to-date can be a time-consuming task.
 In many cases, we can end up in a situation where there are many package bumps that need to happen. Sometimes
