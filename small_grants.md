@@ -211,6 +211,8 @@ PDE discretiations.
 
 ## SciMLBenchmarks Compatability Bump for Benchmark Sets (\100 each set)
 
+**In Progress**: Both sets claimed by Param Umesh Thakkar for the time period of January 21st - February 21st.
+
 The [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl) are a large set of benchmarks maintained
 by the SciML organization. As such, keeping these benchmarks up-to-date can be a time-consuming task.
 In many cases, we can end up in a situation where there are many package bumps that need to happen. Sometimes
