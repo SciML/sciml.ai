@@ -24,19 +24,13 @@ be considered in the approval evaluations.
 
 ## Declaring for a Project
 
-To declare for a small grant program, open a pull request on the Github repo for
-[https://github.com/SciML/sciml.ai](https://github.com/SciML/sciml.ai) in the
-`small_grants.md` file with a declaration for the grant in the section of the
-project of interest. For example:
 
-> **In Progress**: Claimed by XXXXXX for the time period of (today) - (one month later).
 
-In your pull request, please share:
 
-* Full legal name
-* CV
-* Short bio / background about your experience in the topic
-* Description of which project you're interested in
+* Arushi Gupta 
+* Drive Link to my CV - https://drive.google.com/file/d/1VOc7QIArQLAlne1gg92luZpQh9-VgsOA/view?usp=sharing
+* I am currently in my third year of undergraduate studies of Instrumentation and Control Engineering at NIT Jalandhar where I have built a good understanding of programming, mathematical modeling, and AI/ML. I have worked on machine learning models and workflows as evidenced by my projects such as GenSolve Curvetopia where I was able to perform curve regularization with soft functions on synthetic data to achieve high accuracy. Although my understanding of Physics Informed Neural Networks is at an undergraduate level, I am enthusiastic about engaging in more practical work. Furthermore, I have experience in performance optimization through Python and data analysis, and I have a basic understanding of GPU-based computations, which will allow me to effectively participate in the improvement of NeuralPDE.
+* NeuralPDE is a package for training Physics Informed Neural Networks based on Lux.jl. It was originally developed from Flux and while updating to Lux, several older bits were left inplace. These need to be updated to a more Lux style approach.
 
 If some anonymity is requested, you may instead send this information to sciml@julialang.org.
 
