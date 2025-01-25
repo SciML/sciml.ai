@@ -131,6 +131,8 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 ## Update NeuralPDE to be more maintainable (\$300)
 
+**In Progress**: Claimed by Arushi Gupta for the time period of January 25th - February 25th.
+
 NeuralPDE is a package for training Physics Informed Neural Networks based on Lux.jl.
 It was originally developed from Flux and while updating to Lux, several older bits
 were left inplace. These need to be updated to a more Lux style approach.
