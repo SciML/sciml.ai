@@ -3,6 +3,16 @@
 
 # SciML Scientific Machine Learning Projects – Google Summer of Code
 
+## Modelingtoolkit based Parser for Physics Informed Neural Networks (PINNs)
+
+[NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl) uses [ModelingTookit.jl](https://github.com/SciML/ModelingToolkit.jl) to define differential equations for solving PINNs. Currently, the loss functions for PINNs are constructed manually, which limits their applicability to a specific subset of systems. By utilizing ModelingToolkit.jl, loss functions could be generated symbolically, enabling broader generalization across diverse systems and improving flexibility. To achieve this, parsing the equations symbolically is essential.
+
+**Recommended Skills**: Background knowledge in symbolics and machine learning.
+
+**Expected Results**: New Parser for lowering from Modelingtoolkit systems to loss functions.
+
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Sathvik Bhagavan](https://github.com/sathvikbhagavan)
+
 ## Improvements to Physics-Informed Neural networks (PINN) for solving differential equations
 
 Neural networks can be used as a method for efficiently solving difficult partial differential equations.
