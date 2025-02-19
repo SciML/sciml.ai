@@ -182,6 +182,11 @@ in Julia.
 
 ## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
 
+Full legal name: Jigyasu
+CV: https://drive.google.com/file/d/17IJHHqU20ZHmXyMSsZzjnWNAYnkZ3U55/view?usp=sharing
+Short bio: I am an engineering undergraduate at the National Institute of Technology Agartala, India. I have taken courses in programming, data structures and algorithms, probability, linear algebra, numerical methods and machine learning. I have actively contributed to open-source projects such as sktime (machine learning framework for time series) and scikit-image in the past. I want to gradually get more involved in the development of projects in the SciML ecosystem.
+Description of which project you're interested in: Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
+
 The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for awhile.
 They need to be updated to the "new" linear solve syntax introduced in 2022.
 When updated, these benchmarks should serve as a canonical development
