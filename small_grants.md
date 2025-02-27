@@ -182,6 +182,8 @@ in Julia.
 
 ## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
 
+**In Progress**: Claimed by Jigyasu for the time period of February 23rd - March 24th.
+
 The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for awhile.
 They need to be updated to the "new" linear solve syntax introduced in 2022.
 When updated, these benchmarks should serve as a canonical development
