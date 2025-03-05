@@ -165,6 +165,8 @@ Networks, and symbolic computing.
 
 ## Update SciMLOperators.jl to allow for different defining vectors from actions (\$500)
 
+**In Progress**: Claimed by Divyansh Goyal for the time period of March 5th - April 5th.
+
 SciMLOperators.jl is a package for defining lazy operators `A(u,p,t)*v` which can be used
 throughout the ecosystem. However, many of the operators incorrectly make the assumption
 that `u = v`, i.e. `A(u,p,t)*u` is the operation. While this is the only case required
