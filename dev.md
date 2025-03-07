@@ -80,7 +80,8 @@ associated with the project.
 - [Optimization](/gsoc/gsoc_optimization)
 - [Numerical Differential Equations and Stochastic Process Simulation](/gsoc/gsoc_diffeq)
 - [Scientific Machine Learning](/gsoc/gsoc_sciml)
-- [Symbolic-Numeric Computing](/gsoc/gsoc_symbolic)
+- [Symbolic Computing](/gsoc/gsoc_symbolic)
+- [Symbolic-Numeric Methods](/gsoc/gsoc_symbolic_numeric)
 
 ## Google Season of Docs
 

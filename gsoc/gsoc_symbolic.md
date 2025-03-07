@@ -1,112 +1,53 @@
-@def title = "SciML Symbolic-Numeric Computing Projects – Google Summer of Code"
-@def tags = ["home", "sciml", "diffeq"]
+# Symbolic computation project ideas - Summer of Code
 
-# SciML Symbolic-Numeric Computing Projects – Google Summer of Code
+## Symbolic Matrix and Tensor Calculus
 
-## Parameter identifiability analysis
+[Matrix calculus](https://www.matrixcalculus.org/matrixCalculus) is the ability to do calculus
+directly on matrix expressions rather than requiring the performance of the calculus on the
+scalar quantities. For example, `x'*A*x + c*sin(y)'*x` differntiates to `2*A*x + c*sin(y)`.
+Currently, Symbolics.jl does not support matrix calculus, only scalar calculus, so the work
+would be to expand the support to include handling of symbolic matrices.
 
-Parameter identifiability analysis is an analysis that describes whether the
-parameters of a dynamical system can be identified from data or whether they
-are redundant. There are two forms of identifiability analysis: structural
-and practical. Structural identifiability analysis relates changes in the
-solution of the ODE directly to other parameters, showcasing that it is
-impossible to distinguish between parameter A being higher and parameter B
-being lower, or the vice versa situation, given only data about the solution
-because of how the two interact. This could be done directly on the symbolic
-form of the equation as part of
-[ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl).
-Meanwhile, practical identifiability analysis looks as to whether the parameters
-are non-identifiable in a practical sense, for example if two parameters are
-numerically indistinguishable (given possibly noisy data). In this case, numerical
-techniques being built in DiffEqSensitivity.jl, such as a
-[nonlinear likelihood profiler](https://github.com/SciML/DiffEqSensitivity.jl/issues/109)
-or an
-[information sensitivity measure](https://github.com/SciML/DiffEqSensitivity.jl/issues/108)
-can be used to showcase whether a parameter has a unique enough effect to be determined.
+For more information, see [this paper](https://www.matrixcalculus.org/matrixcalculus.pdf)
+and [this paper](https://www.matrixcalculus.org/tensorcalculus.pdf).
 
-**Recommended Skills**: A basic background in differential equations and the ability to use
-numerical ODE solver libraries. Background in the numerical analysis of differential equation
-solvers is not required.
+**Recommended Skills**: High school/freshman calculus and a willingness to learn symbolic computing
 
-**Expected Results**: Efficient and high-quality implementations of parameter identifiability
-methods.
+**Expected Results**: A working implementation of matrix calculus
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Aayush Sabharwal](https://github.com/AayushSabharwal)
 
-**Expected Project Size**: 350 hour.
+**Duration**: 350 hours
 
-**Difficulty**: Hard.
+## Symbolic Integration in Symbolics.jl
 
-## Model Order Reduction
+Implement the [heuristic approach to symbolic integration](https://dspace.mit.edu/handle/1721.1/11997).
+Then hook into a repository of rules such as [RUMI](https://rulebasedintegration.org/).
+See also the potential of using symbolic-numeric integration techniques (https://github.com/SciML/SymbolicNumericIntegration.jl)
 
-Model order reduction is a technique for automatically finding a small model which approximates
-the large model but is computationally much cheaper. We plan to use the infrastructure built
-by ModelingToolkit.jl to [implement a litany of methods](https://github.com/SciML/ModelingToolkit.jl/issues/58)
-and find out the best way to accelerate differential equation solves.
+**Recommended Skills**: High school/Freshman Calculus
 
-**Recommended Skills**: A basic background in differential equations and the ability to use
-numerical ODE solver libraries. Background in the numerical analysis of differential equation
-solvers is not required.
+**Expected Results**: A working implementation of symbolic integration in the Symbolics.jl library, along with documentation and tutorials demonstrating its use in scientific disciplines.
 
-**Expected Results**: Efficient and high-quality implementations of model order reduction methods.
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Aayush Sabharwal](https://github.com/AayushSabharwal)
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
+**Duration**: 350 hours
 
-**Expected Project Size**: 350 hour.
 
-**Difficulty**: Medium to Hard depending on the chosen subtasks.
+## Automatically improving floating point accuracy (Herbie)
 
-## Automated symbolic manipulations of differential equation systems
+[Herbie](https://herbie.uwplse.org/) documents a way to optimize floating point functions so as to reduce instruction count while reorganizing operations such that floating point inaccuracies do not get magnified. It would be a great addition to have this written in Julia and have it work on Symbolics.jl expressions. An ideal implementation would use the e-graph facilities of Metatheory.jl to implement this.
 
-Numerically solving a differential equation can be difficult, and thus it can be helpful for
-users to simplify their model before handing it to the solver. Alas this takes time... so
-let's automate it! [ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl) is
-a project for automating the model transformation process. Various parts of the library are
-still open, such as:
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Aayush Sabharwal](https://github.com/AayushSabharwal), [Alessandro Cheli](https://github.com/0x0f0f0f)
 
-@@tight-list
-- Support for DAEs, DDEs, and SDEs
-- Pantelides algorithm for DAE index reduction
-- Lamperti transforms
-- Automatic construction of adjoint solutions
-- Tearing in nonlinear solvers
-- Solving distributed delay equations
-@@
+**Duration**: 350 hours
 
-**Recommended Skills**: A basic background in differential equations and the ability to use
-numerical ODE solver libraries. Background in the numerical analysis of differential equation
-solvers is not required.
+## Reparametrizing ODE models with scaling transformations
 
-**Expected Results**: Efficient and high-quality implementations of model transformation methods.
+**Project Overview:** Many ODE models appearing in applications have hidden symmetries which makes the solution of data fitting problem nonunique. [StructuralIdentifiability.jl](https://github.com/SciML/StructuralIdentifiability.jl) offers algorithms for proposing new coordinates for the model removing this redundancy. The approach used at the moment relies on heavy computations and may be very slow for larger models. Scaling is a particular type of reparametrizations which can be discovered much faster. The goal of the project would be to implement such faster algorithms (adapting them to the context of identifiability assessment) and integrate into StructuralIdentifiability.jl.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Yingbo Ma](https://github.com/YingboMa)
+**Mentors:** [Alexander Demin](https://github.com/sumiya11), [Gleb Pogudin](https://www.lix.polytechnique.fr/Labo/Gleb.POGUDIN/)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Project Difficulty**: Medium
 
-**Difficulty**: Medium to Hard depending on the chosen subtasks.
-
-## Symbolic Analysis and Transformations of Chemical Reaction Networks
-
-Catalyst.jl provides the ability to create symbolic models of chemical reaction networks, generate symbolic differential equation and stochastic process models from them, and offers some functionality to analyze symbolic chemical reaction networks. There are a variety of ways Catalyst.jl's core capabilities could be expanded, including adding
-
-@@tight-list
-- additional tooling to infer from reaction network graph representations possible dynamic and equilibrium behaviors using chemical reaction network theory.
-- support for elimination of aliased species between different Catalyst model components to enable more modular composition of Catalyst-based models.
-- adding more τ-leaping solvers in StochasticDiffEq, and corresponding symbolic interfaces in ModelingToolkit and Catalyst.
-- expanding FiniteStateProjection.jl chemical master equation solvers, along with symbolic representations in ModelingToolkit and Catalyst.
-- hybrid models mixing reactions across modeling scales (ODEs, SDEs, τ-leaping, jump processes), along with translation layers to generate such systems from Catalyst reaction network models.
-    - methods for dynamically moving species/reactions between these scales during a simulation.
-- network-free modeling capabilities and associated JumpProcess.jl solvers.
-
-**Recommended Skills**: Strong understanding of ODE models for chemical systems and Julia open-source programming,
-particularly [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl) and [ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl).
-
-**Expected Results**: Extend Catalyst with one or more of the preceding features, with corresponding ModelingToolkit updates, enabling users to build, analyze, and simulate Catalyst-derived models incorporating the new components.
-
-**Mentors**: [Samuel Isaacson](https://github.com/isaacsas) and [Chris Rackauckas](https://github.com/ChrisRackauckas).
-
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
-
-**Difficulty**: Easy to Hard depending on the chosen subtasks.
-
-@@
+**Estimated Duration**: 350 hours
