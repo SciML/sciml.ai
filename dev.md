@@ -64,7 +64,7 @@ schedules of university students.
 
 ## Google Summer of Code
 
-The SciML organization is a partner organization for Google Summer of Code
+The SciML organization is a partner organization for Google Summer of Code (GSOC)
 under the [NumFOCUS](https://numfocus.org/) umbrella. In this summer program,
 students are paid to work on various SciML open source software repositories.
 Each of the students are paired with a team of mentors to teaching them various
@@ -82,6 +82,8 @@ associated with the project.
 - [Scientific Machine Learning](/gsoc/gsoc_sciml)
 - [Symbolic Computing](/gsoc/gsoc_symbolic)
 - [Symbolic-Numeric Methods](/gsoc/gsoc_symbolic_numeric)
+
+**Note**, GSOCs are quite competitive, and we often receive more applicants then slots awarded from Google. For this reason it is strongly recommended to contact us well in advance of the GSOC submission deadlines, and demonstrate via some initial contributions that you are likely to be able to make progress on the proposed project. Tackling smaller components that the GSOC project would build from, or demonstrate your knowledge of the library you will work on, are a good first step in learning the development process (i.e. how to modify the library you will work on, how to make Github pull requests, how to address feedback in reviews, etc).
 
 ## Google Season of Docs
 
