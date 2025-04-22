@@ -49,7 +49,7 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Expected Results**: Contributions of production-quality solver methods.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Yingbo Ma](https://github.com/YingboMa), [Kanav Gupta](https://github.com/kanav99) and [Utkarsh](https://github.com/utkarsh530)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Kanav Gupta](https://github.com/kanav99) and [Utkarsh](https://github.com/utkarsh530), [Oscar Smith](https://github.com/oscardssmith)
 
 **Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
 
@@ -78,7 +78,7 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Expected Results**: Improved benchmarks to share with the community.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Yingbo Ma](https://github.com/YingboMa)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and , [Oscar Smith](https://github.com/oscardssmith)
 
 **Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
 
