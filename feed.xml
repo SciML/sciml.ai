@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  State of SciML 2025  ]]>
+  </title>
+  <link> https://sciml.ai/news/2025/04/28/state_of_sciml/index.html </link>
+  <guid> https://sciml.ai/news/2025/04/28/state_of_sciml/index.html </guid>
+  <description>
+    <![CDATA[  State of SciML 2025: Julia Equation Solvers and AI for Science  ]]>
+  </description>  
+    
+  <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  SciML Update: Symbolic Solvers, Direct Enzyme on ODEs, and More  ]]>
   </title>
   <link> https://sciml.ai/news/2024/08/25/rootfinding_enzyme/index.html </link>
