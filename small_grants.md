@@ -156,9 +156,6 @@ codegen process used pre-built kernels that can be difficult to debug. The goal 
 project is to rewrite the loss function generator to instead generate a Symbolics.jl
 expression, which can be analyzed an generate code through `build_function`.
 
-**In Progress**: Claimed by Brian Hoh for the time period of March 6th - April 6th.
-Extended to April 6th - May 6th due to time constraints
-
 **Information to Get Started**: A partial uncompleted pull request https://github.com/SciML/NeuralPDE.jl/pull/877 can be used as a starting point.
 
 **Recommended Skills**: Basic (undergrad-level) knowledge of Physics Informed Neural
