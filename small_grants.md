@@ -230,24 +230,17 @@ is to start the update process, bump the project and manifest tomls, and start d
 
 These bumps are done in subsets. The currently identified subsets are:
 
-#### ParameterEstimation
+#### BayesianInference
 
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/799](https://github.com/SciML/SciMLBenchmarks.jl/pull/799)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1063](https://github.com/SciML/SciMLBenchmarks.jl/pull/1063)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1064](https://github.com/SciML/SciMLBenchmarks.jl/pull/1064)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1065](https://github.com/SciML/SciMLBenchmarks.jl/pull/1065)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1182](https://github.com/SciML/SciMLBenchmarks.jl/pull/1182)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1106](https://github.com/SciML/SciMLBenchmarks.jl/pull/1106)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1105](https://github.com/SciML/SciMLBenchmarks.jl/pull/1105)
 
-#### PINNs
+#### AutomaticDifferentiationSparse
 
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1062](https://github.com/SciML/SciMLBenchmarks.jl/pull/1062)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1061](https://github.com/SciML/SciMLBenchmarks.jl/pull/1061)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1044](https://github.com/SciML/SciMLBenchmarks.jl/pull/1044)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/877](https://github.com/SciML/SciMLBenchmarks.jl/pull/877)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1060](https://github.com/SciML/SciMLBenchmarks.jl/pull/1060)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1059](https://github.com/SciML/SciMLBenchmarks.jl/pull/1059)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1043](https://github.com/SciML/SciMLBenchmarks.jl/pull/1043)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/876](https://github.com/SciML/SciMLBenchmarks.jl/pull/876)
-* [https://github.com/SciML/SciMLBenchmarks.jl/pull/605](https://github.com/SciML/SciMLBenchmarks.jl/pull/605)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1023](https://github.com/SciML/SciMLBenchmarks.jl/pull/1023)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1033](https://github.com/SciML/SciMLBenchmarks.jl/pull/1033)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1069](https://github.com/SciML/SciMLBenchmarks.jl/pull/1069)
 
 **Information to Get Started**: The
 [Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
@@ -421,7 +414,11 @@ which SciML will help administer through the small grants program.
 
 **Reviewers**: Chris Elrod
 
+
+
 # Successful Projects Archive
+
+
 
 These are the previous SciML small grants projects which have successfully concluded and payed out.
 
@@ -429,7 +426,7 @@ These are the previous SciML small grants projects which have successfully concl
 
 #### Note: Bounty increase to \$600 from \$300 (7/20/2024)
 
-**In Progress**: Claimed by Param Umesh Thakkar for the time period of June 18th, 2024 - August 18th 2024. Extended due to scope and cost extension.
+** Completed by Param Umesh Thakkar for the time period of June 18th, 2024 - August 18th 2024. Extended due to scope and cost extension. **
 
 It's no surprise to anyone to hear that DifferentialEquations.jl, in particular the
 OrdinaryDiffEq.jl solver package, is very large and takes a long time to precompile.
@@ -459,6 +456,53 @@ development skills and test-driven development of a large code base is required.
 
 ## DAE Problem Benchmarks (\$100 / Benchmark)
 
-**In Progress**: Completed by Marko Polic in the time period of June 18th, 2024 - July 18th 2024.
+**Completed by Marko Polic in the time period of June 18th, 2024 - July 18th 2024.**
 The transistor amplifier benchmark was added [https://github.com/SciML/SciMLBenchmarks.jl/pull/1007](https://github.com/SciML/SciMLBenchmarks.jl/pull/1007).
 Project is kept open for other benchmarks.
+
+## SciMLBenchmarks Compatability Bump for Benchmark Sets (\100 each set)
+
+**Completed by Param Umesh Thakkar for the time period of January 21st - February 21st. Extended from February 21st to March 21st. Extended due to the project's complexity and final refinements. **
+
+The [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl) are a large set of benchmarks maintained
+by the SciML organization. As such, keeping these benchmarks up-to-date can be a time-consuming task.
+In many cases, we can end up in a situation where there are many package bumps that need to happen. Sometimes
+no code needs to be updated, in other cases the benchmark code does need to be updated. The only way to tell
+is to start the update process, bump the project and manifest tomls, and start digging into the results.
+
+These bumps are done in subsets. The currently identified subsets are:
+
+#### ParameterEstimation
+
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/799](https://github.com/SciML/SciMLBenchmarks.jl/pull/799)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1063](https://github.com/SciML/SciMLBenchmarks.jl/pull/1063)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1064](https://github.com/SciML/SciMLBenchmarks.jl/pull/1064)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1065](https://github.com/SciML/SciMLBenchmarks.jl/pull/1065)
+
+#### PINNs
+
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1062](https://github.com/SciML/SciMLBenchmarks.jl/pull/1062)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1061](https://github.com/SciML/SciMLBenchmarks.jl/pull/1061)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1044](https://github.com/SciML/SciMLBenchmarks.jl/pull/1044)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/877](https://github.com/SciML/SciMLBenchmarks.jl/pull/877)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1060](https://github.com/SciML/SciMLBenchmarks.jl/pull/1060)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1059](https://github.com/SciML/SciMLBenchmarks.jl/pull/1059)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/1043](https://github.com/SciML/SciMLBenchmarks.jl/pull/1043)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/876](https://github.com/SciML/SciMLBenchmarks.jl/pull/876)
+* [https://github.com/SciML/SciMLBenchmarks.jl/pull/605](https://github.com/SciML/SciMLBenchmarks.jl/pull/605)
+
+**Information to Get Started**: The
+[Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
+describes how to contribute to the benchmarks. The benchmark results are
+generated using the benchmark server. It is expected that the developer checks that the benchmarks
+are appropriately ran and generating correct graphs when updated, and highlight any performance
+regressions found through the update process.
+
+**Related Issues**: See the linked pull requests.
+
+**Success Criteria**: The benchmarks should run and give similar results to the pre-updated benchmarks,
+and any regressions should be identified with an issue opened in the appropriate repository.
+
+**Recommended Skills**: Willingness to roll up some sleaves and figure out what changed in breaking updates.
+
+**Reviewers**: Chris Rackauckas
