@@ -166,7 +166,7 @@ Networks, and symbolic computing.
 ## Update SciMLOperators.jl to allow for different defining vectors from actions (\$500)
 
 **In Progress**: Claimed by Divyansh Goyal for the time period of March 5th - April 5th.
-Extended from April 5th - May 5th. Extended due to the project's planned goals for a minor 
+Extended from April 5th - May 20th. Extended due to the project's planned goals for a minor 
 version release change under 0.4.0, following which a new breaking release change will support
 the aforementioned feature.
 
