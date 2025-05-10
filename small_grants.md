@@ -149,6 +149,8 @@ Networks and GPUs
 
 ## Rewrite the NeuralPDE parser (\$300)
 
+**In Progress**: Claimed by Aryan Bagale  for the time period of  May 11th - April 11th.
+
 NeuralPDE is a package for training Physics Informed Neural Networks (PINNs) uses a
 symbolic representation for problems which are then lowered into generated code for
 the user, fully automating the PINN experience. However, the previous formulation of the
