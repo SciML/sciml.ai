@@ -260,6 +260,8 @@ and any regressions should be identified with an issue opened in the appropriate
 
 ## Update BlackBoxOptimizationBenchmarking.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$300)
 
+**In Progress**: Claimed by Prashant Andoriya for the time period of May 11, 2025 - June 11, 2025.
+
 [BlackBoxOptimizationBenchmarking.jl](https://github.com/jonathanBieler/BlackBoxOptimizationBenchmarking.jl)
 is a very interesting set of benchmarks between global optimization tools. However,
 it has not been updated in years. It would be useful to the community if this
