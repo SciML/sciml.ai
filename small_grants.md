@@ -79,7 +79,7 @@ further requests are accepted.
 
 After a succesful project, a pull request to [https://github.com/SciML/sciml.ai](https://github.com/SciML/sciml.ai)
 must be made that updates the Small Grants project page declaring the project as completed
-by moving it to the completed section. This pull request then must be merged by the designed
+by moving it to the completed section. This pull request then must be merged by the designated
 reviewer. Once this is merged, the project is declared to be successfully completed unless
 comments by the reviewer in the pull request suggest otherwise. Upon completion, open an
 expense report at [https://opencollective.com/sciml/expenses/new](https://opencollective.com/sciml/expenses/new)
@@ -471,7 +471,7 @@ development skills and test-driven development of a large code base is required.
 The transistor amplifier benchmark was added [https://github.com/SciML/SciMLBenchmarks.jl/pull/1007](https://github.com/SciML/SciMLBenchmarks.jl/pull/1007).
 Project is kept open for other benchmarks.
 
-## SciMLBenchmarks Compatability Bump for Benchmark Sets (\100 each set)
+## SciMLBenchmarks Compatability Bump for Benchmark Sets (\$100 each set)
 
 **Completed by Param Umesh Thakkar for the time period of January 21st - February 21st. Extended from February 21st to March 21st. Extended due to the project's complexity and final refinements. **
 
@@ -520,7 +520,7 @@ and any regressions should be identified with an issue opened in the appropriate
 
 ## Update SciMLOperators.jl to allow for different defining vectors from actions (\$500)
 
-**Completed by Divyansh Goyal on May 17th.**
+**Completed by Divyansh Goyal on May 17th, 2025.**
 
 SciMLOperators.jl is a package for defining lazy operators `A(u,p,t)*v` which can be used
 throughout the ecosystem. However, many of the operators incorrectly make the assumption
