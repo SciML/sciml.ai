@@ -75,6 +75,39 @@ Note that unsuccessful small grants projects, i.e. claims of potential projects 
 contributor disappears and does not end up with a PR, will be used in the criteria of whether
 further requests are accepted.
 
+## Getting Paid Out
+
+After a succesful project, a pull request to [https://github.com/SciML/sciml.ai](https://github.com/SciML/sciml.ai)
+must be made that updates the Small Grants project page declaring the project as completed
+by moving it to the completed section. This pull request then must be merged by the designed
+reviewer. Once this is merged, the project is declared to be successfully completed unless
+comments by the reviewer in the pull request suggest otherwise. Upon completion, open an
+expense report at [https://opencollective.com/sciml/expenses/new](https://opencollective.com/sciml/expenses/new)
+and follow the instructions to submit an expense. In the expense report,
+
+We need a PDF invoice on file. Please submit an invoice using an invoice template (for example: https://create.microsoft.com/en-us/templates/invoices) that contains the following information:
+
+* Current Date
+* Unique Invoice Number
+* Name and Contact Information
+* Bill To Information (NumFOCUS)
+* Project Name and Grant Information (if relevant)
+* Period of Work Performed
+* Itemized List of Work Performed
+* Short description
+* Hourly rate
+* Total for Invoice
+* Payment Terms (e.g., Net 30)
+
+Lastly, in order to process payment, we the following should be added as a comment to the report filing:
+
+* SWIFT/BIC#
+* IFSC
+* Account Number
+
+A steering council member will review that the expense matches the approved grant and, if so, approve
+the expense. This finalizes the process and the payment will be sent.
+
 ## Donating to the Program
 
 If you wish to donate to the SciML Small Grants Program,
@@ -160,28 +193,6 @@ expression, which can be analyzed an generate code through `build_function`.
 
 **Recommended Skills**: Basic (undergrad-level) knowledge of Physics Informed Neural
 Networks, and symbolic computing.
-
-**Reviewers**: Chris Rackauckas
-
-## Update SciMLOperators.jl to allow for different defining vectors from actions (\$500)
-
-**In Progress**: Claimed by Divyansh Goyal for the time period of March 5th - April 5th.
-Extended from April 5th - May 20th. Extended due to the project's planned goals for a minor 
-version release change under 0.4.0, following which a new breaking release change will support
-the aforementioned feature.
-
-SciMLOperators.jl is a package for defining lazy operators `A(u,p,t)*v` which can be used
-throughout the ecosystem. However, many of the operators incorrectly make the assumption
-that `u = v`, i.e. `A(u,p,t)*u` is the operation. While this is the only case required
-for some ODE integrators, this oversimplification limits the full usage of the library.
-It is expected that this is a breaking change (with a major release bump) and is the
-major change required for the v1.0 release.
-
-**Information to Get Started**: The documentation of https://github.com/SciML/SciMLOperators.jl
-should be sufficient.
-
-**Recommended Skills**: Basic (undergrad-level) knowledge of linear operators and multiple dispatch
-in Julia.
 
 **Reviewers**: Chris Rackauckas
 
@@ -504,5 +515,24 @@ regressions found through the update process.
 and any regressions should be identified with an issue opened in the appropriate repository.
 
 **Recommended Skills**: Willingness to roll up some sleaves and figure out what changed in breaking updates.
+
+**Reviewers**: Chris Rackauckas
+
+## Update SciMLOperators.jl to allow for different defining vectors from actions (\$500)
+
+**Completed by Divyansh Goyal on May 17th.**
+
+SciMLOperators.jl is a package for defining lazy operators `A(u,p,t)*v` which can be used
+throughout the ecosystem. However, many of the operators incorrectly make the assumption
+that `u = v`, i.e. `A(u,p,t)*u` is the operation. While this is the only case required
+for some ODE integrators, this oversimplification limits the full usage of the library.
+It is expected that this is a breaking change (with a major release bump) and is the
+major change required for the v1.0 release.
+
+**Information to Get Started**: The documentation of https://github.com/SciML/SciMLOperators.jl
+should be sufficient.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of linear operators and multiple dispatch
+in Julia.
 
 **Reviewers**: Chris Rackauckas
