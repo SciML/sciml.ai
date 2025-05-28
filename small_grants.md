@@ -162,43 +162,41 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Update NeuralPDE to be more maintainable (\$300)
+## Create Wrapper Functions to SymPy for Symbolics.jl (\$300)
 
-**In Progress**: Claimed by Arushi Gupta for the time period of January 25th - February 25th.
+The Symbolics.jl solver handles a lot of cases, but can always be better. 
+The lowest hanging fruit is to set it up with SymPy.jl as an alternative backend, 
+where automatic translation is used to do the solving, i.e. transform a Symbolics.jl 
+expression to SymPy, run the SymPy symbolic solver to get a solution, and convert back 
+to Symbolics.jl. 
 
-NeuralPDE is a package for training Physics Informed Neural Networks based on Lux.jl.
-It was originally developed from Flux and while updating to Lux, several older bits
-were left inplace. These need to be updated to a more Lux style approach.
+The goals of this project are thus as follows:
 
-**Information to Get Started**: The linked issue describes in detail what needs to be
-done.
+* Document the Symbolics <-> Sympy round trip conversion process and functions. Add tests that it works.
+* Create wrapper functions for the specific Sympy solvers, i.e. 
+    * linear solve
+    * algebraic solve
+    * integrate
+    * limit
+    * simplify
 
-**Related Issues**: https://github.com/SciML/NeuralPDE.jl/issues/900
+**Information to Get Started**: There is already a `symbolics_to_sympy` function 
+https://github.com/JuliaSymbolics/Symbolics.jl/blob/v6.40.0/ext/SymbolicsSymPyExt.jl and 
+there is an exchange function in SymPy core, so I think all of the tools are there to do
+such conversions, see https://github.com/JuliaSymbolics/Symbolics.jl/issues/1223 and 
+https://github.com/jverzani/SymPyCore.jl/pull/88. 
 
-**Recommended Skills**: Basic (undergrad-level) knowledge of Physics Informed Neural
-Networks and GPUs
+**Related Issues**: https://github.com/JuliaSymbolics/Symbolics.jl/issues/1551
 
-**Reviewers**: Avik Pal, Chris Rackauckas
+**Success Criteria**: Pull requests which add the 5 requested functions to the
+SymbolicsSymPyExt.jl extension of Symbolics.jl,
+https://github.com/JuliaSymbolics/Symbolics.jl/blob/master/ext/SymbolicsSymPyExt.jl
 
-## Rewrite the NeuralPDE parser (\$300)
-
-NeuralPDE is a package for training Physics Informed Neural Networks (PINNs) uses a
-symbolic representation for problems which are then lowered into generated code for
-the user, fully automating the PINN experience. However, the previous formulation of the
-codegen process used pre-built kernels that can be difficult to debug. The goal of this
-project is to rewrite the loss function generator to instead generate a Symbolics.jl
-expression, which can be analyzed an generate code through `build_function`.
-
-**Information to Get Started**: A partial uncompleted pull request https://github.com/SciML/NeuralPDE.jl/pull/877 can be used as a starting point.
-
-**Recommended Skills**: Basic (undergrad-level) knowledge of Physics Informed Neural
-Networks, and symbolic computing.
+**Recommended Skills**: Basic (undergrad-level) knowledge of calculus and Python
 
 **Reviewers**: Chris Rackauckas
 
 ## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
-
-**In Progress**: Claimed by Jigyasu for the time period of February 23rd - March 24th.
 
 The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for awhile.
 They need to be updated to the "new" linear solve syntax introduced in 2022.
@@ -230,8 +228,6 @@ PDE discretiations.
 **Reviewers**: Chris Rackauckas
 
 ## SciMLBenchmarks Compatability Bump for Benchmark Sets (\100 each set)
-
-**In Progress**: Both sets claimed by Param Umesh Thakkar for the time period of January 21st - February 21st. Extended from February 21st to March 21st. Extended due to the project's complexity and final refinements.
 
 The [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl) are a large set of benchmarks maintained
 by the SciML organization. As such, keeping these benchmarks up-to-date can be a time-consuming task.
@@ -269,36 +265,7 @@ and any regressions should be identified with an issue opened in the appropriate
 
 **Reviewers**: Chris Rackauckas
 
-## Update BlackBoxOptimizationBenchmarking.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$300)
-
-[BlackBoxOptimizationBenchmarking.jl](https://github.com/jonathanBieler/BlackBoxOptimizationBenchmarking.jl)
-is a very interesting set of benchmarks between global optimization tools. However,
-it has not been updated in years. It would be useful to the community if this
-set of benchmarks was updated to the modern SciML interfaces and benchmarking tools
-so it can make use of the full set of methods in Optimization.jl and drive further
-developments and recommendations to users.
-
-**Information to Get Started**: The
-[Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
-describes how to contribute to the benchmarks. The benchmark results are
-generated using the benchmark server. It is expected that the benchmarks are
-updated to use the [Optimization.jl](https://docs.sciml.ai/Optimization/stable/)
-interface, which is an interface over most optimizers in Julia. Not all of the
-optimizers are covered in this interface: simply remove the optimizers which
-are not wrapped into Optimization.jl
-
-**Related Issues**: [https://github.com/SciML/SciMLBenchmarks.jl/issues/640](https://github.com/SciML/SciMLBenchmarks.jl/issues/640)
-
-**Success Criteria**: The benchmarks should be turned into a loop over Optimization.jl
-solvers in a standard SciMLBenchmarks benchmark build.
-
-**Recommended Skills**: Basic (undergrad-level) knowledge of using numerical optimizers
-
-**Reviewers**: Chris Rackauckas and Vaibhav Dixit
-
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
-**In Progress**: Claimed by Alonso Cisneros for the time period of 10.Mar.25 - 10.Apr.25.
-
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
@@ -425,11 +392,7 @@ which SciML will help administer through the small grants program.
 
 **Reviewers**: Chris Elrod
 
-
-
 # Successful Projects Archive
-
-
 
 These are the previous SciML small grants projects which have successfully concluded and payed out.
 
