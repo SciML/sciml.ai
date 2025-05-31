@@ -164,7 +164,7 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 ## Create Wrapper Functions to SymPy for Symbolics.jl (\$300)
 
-***In progress:** being worked on by Rick de Wolf*
+***In progress:** being worked on by Rick de Wolf starting June 1st and ending July 1st*
 
 The Symbolics.jl solver handles a lot of cases, but can always be better. 
 The lowest hanging fruit is to set it up with SymPy.jl as an alternative backend, 
