@@ -225,6 +225,8 @@ the Optimization.jl repository.
 
 ## Wrap PyCMA into the Optimization.jl Interface (\$100)
 
+***In progress:** being worked on by Maximilian Pochapski*
+
 PyCMA is a very good global optimizer written in Python. It did very well in
 early editions of the BlackboxOptimizationBenchmarking.jl tests (see for example
 https://github.com/jonathanBieler/BlackBoxOptimizationBenchmarking.jl/tree/v0.1.0)
