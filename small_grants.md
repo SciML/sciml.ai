@@ -200,6 +200,8 @@ https://github.com/JuliaSymbolics/Symbolics.jl/blob/master/ext/SymbolicsSymPyExt
 
 ## Wrap `scipy.optimize` into the Optimization.jl Interface (\$300)
 
+**In progress:** being worked on by Aditya Pandey*
+
 `scipy.optimize` is a standard in Python with lots of different methods, both local
 and global optimizers, that are well-tested and robust. Thus in order to improve
 the benchmarking and development of native Julia solvers, it would be helpful to
