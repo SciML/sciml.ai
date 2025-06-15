@@ -283,6 +283,8 @@ PDE discretiations.
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
+*In Progress: Claimed by Arnav Kapoor for the time period of July 5th 2025 - August 5th 2025.*
+
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
 and comparing optimization algorithms. We would like to be able to repurpose this work for
