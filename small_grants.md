@@ -252,7 +252,9 @@ the Optimization.jl repository.
 
 ## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
 
-The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for awhile.
+**In Progress**: Claimed by Arjit Seth from June 20, 2025, to July 20, 2025.
+
+The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for a while.
 They need to be updated to the "new" linear solve syntax introduced in 2022.
 When updated, these benchmarks should serve as a canonical development
 point for PDE-specific methods, such as implicit-explicit (IMEX) and
@@ -261,7 +263,7 @@ exponential integrators.
 **Information to Get Started**: The
 [Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
 describes how to contribute to the benchmarks. The benchmark results are
-generated using the benchmark server. Half of the benchmarks are setup
+generated using the benchmark server. Half of the benchmarks are set up
 using hand-discretized finite difference stencils for the PDE, the other
 half use ApproxFun.jl in order to do a pseudospectral discretization.
 A direct pseudospectral discretization via manual FFTs and operator
@@ -271,13 +273,13 @@ construction would also be fine.
 
 **Success Criteria**: Pull requests which [update the benchmarks in the
 folder](https://github.com/SciML/SciMLBenchmarks.jl/tree/master/benchmarks/SimpleHandwrittenPDE)
-to be sucessful with current Julia and package version (v1.10) without
+to be successful with the current Julia and package version (v1.10) without
 erroring, generating work-precision diagrams. In addition, these should be updated
-to give a more clear definition of the PDE being solve, adding a LaTeX
+to give a clearer definition of the PDE being solved, adding a LaTeX
 description of the equations to the top of the file.
 
 **Recommended Skills**: Basic (undergrad-level) knowledge of finite difference and pseudospectral
-PDE discretiations.
+PDE discretizations.
 
 **Reviewers**: Chris Rackauckas
 
