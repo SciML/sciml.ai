@@ -444,7 +444,7 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
-## DAE Problem Benchmarks ($100 / Benchmark)
+## DAE Problem Benchmarks (\$100 / Benchmark)
 
 **Completed by Marko Polic in the time period of June 18th, 2024 - July 18th 2024.**
 The transistor amplifier benchmark was added [https://github.com/SciML/SciMLBenchmarks.jl/pull/1007](https://github.com/SciML/SciMLBenchmarks.jl/pull/1007).
