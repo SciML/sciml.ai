@@ -497,7 +497,7 @@ and any regressions should be identified with an issue opened in the appropriate
 
 **Reviewers**: Chris Rackauckas
 
-## Update SciMLOperators.jl to allow for different defining vectors from actions ($500)
+## Update SciMLOperators.jl to allow for different defining vectors from actions (\$500)
 
 **Completed by Divyansh Goyal on May 17th, 2025.**
 
