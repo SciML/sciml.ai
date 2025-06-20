@@ -189,7 +189,7 @@ the Optimization.jl repository.
 
 **Reviewers**: Chris Rackauckas
 
-## Wrap PyCMA into the Optimization.jl Interface ($100)
+## Wrap PyCMA into the Optimization.jl Interface (\$100)
 
 ***In progress:** being worked on by Maximilian Pochapski*
 
