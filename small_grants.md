@@ -414,7 +414,7 @@ The project used the existing `symbolics_to_sympy` function and the SymPy exchan
 
 ## Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers ($600)
 
-#### Note: Bounty increase to $600 from $300 (7/20/2024)
+#### Note: Bounty increase to \$600 from \$300 (7/20/2024)
 
 **Completed by Param Umesh Thakkar for the time period of June 18th, 2024 - August 18th 2024. Extended due to scope and cost extension.**
 
