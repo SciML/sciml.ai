@@ -14,7 +14,7 @@ by SciML in a manner that is designed to give better outcomes to both
 contributors and maintainers of the project. In order to remove a hostile
 competitive atmosphere, **candidates must declare to the committee interest
 before solving the chosen issue** and, upon approval by the selection committee,
-are given an exclusive time  interval (defaulting to one month) to solve the issue.
+are given an exclusive time interval (defaulting to one month) to solve the issue.
 Payout is done upon completion of the chosen project and acceptance by the steering
 council.
 
@@ -59,8 +59,8 @@ The difference between the small grants program and a standard bounty program is
 to discourage "sniping" bounties from others, i.e. someone working for a few weeks on a project
 before suddenly someone else appears with a complete solution and takes the payout. While this
 is not impossible to prevent, as an open source community there may be others who happen to
-be working the same project independently, to reduce the occurrences of this phonomena we have
-a policy that payouts will only occur for declared projects. This policy can be overriden on
+be working the same project independently, to reduce the occurrences of this phenomena we have
+a policy that payouts will only occur for declared projects. This policy can be overridden on
 special circumstances by a majority vote of the steering council.
 
 In order to discourage "spotting", i.e. claiming projects to sit on them indefinitely and thus
@@ -77,7 +77,7 @@ further requests are accepted.
 
 ## Getting Paid Out
 
-After a succesful project, a pull request to [https://github.com/SciML/sciml.ai](https://github.com/SciML/sciml.ai)
+After a successful project, a pull request to [https://github.com/SciML/sciml.ai](https://github.com/SciML/sciml.ai)
 must be made that updates the Small Grants project page declaring the project as completed
 by moving it to the completed section. This pull request then must be merged by the designated
 reviewer. Once this is merged, the project is declared to be successfully completed unless
@@ -121,7 +121,7 @@ project to become a part of the SciML Small Grants program it must be
 approved by the SciML Steering Council. The reason why all chosen projects must be
 vetted by the Steering Council is that we want to be fair to the potential contributors,
 and this means we must ensure that the suggested projects will have a prompt review
-process and proper maintanance beyond the timeframe of the project. For this reason,
+process and proper maintenance beyond the timeframe of the project. For this reason,
 we suggest discussing with maintainers in the official Slack/Zulip before making
 an earmarked donation.
 
@@ -161,42 +161,6 @@ achieve a mergable PR within the time frame, but there is no expectation that th
 will "go the extra mile" to teach the contributor how the package or mathematics works.
 
 # List of Current Projects
-
-## Create Wrapper Functions to SymPy for Symbolics.jl (\$300)
-
-***In progress:** being worked on by Rick de Wolf starting June 1st and ending July 1st*
-
-The Symbolics.jl solver handles a lot of cases, but can always be better. 
-The lowest hanging fruit is to set it up with SymPy.jl as an alternative backend, 
-where automatic translation is used to do the solving, i.e. transform a Symbolics.jl 
-expression to SymPy, run the SymPy symbolic solver to get a solution, and convert back 
-to Symbolics.jl. 
-
-The goals of this project are thus as follows:
-
-* Document the Symbolics <-> Sympy round trip conversion process and functions. Add tests that it works.
-* Create wrapper functions for the specific Sympy solvers, i.e. 
-    * linear solve
-    * algebraic solve
-    * integrate
-    * limit
-    * simplify
-
-**Information to Get Started**: There is already a `symbolics_to_sympy` function 
-https://github.com/JuliaSymbolics/Symbolics.jl/blob/v6.40.0/ext/SymbolicsSymPyExt.jl and 
-there is an exchange function in SymPy core, so I think all of the tools are there to do
-such conversions, see https://github.com/JuliaSymbolics/Symbolics.jl/issues/1223 and 
-https://github.com/jverzani/SymPyCore.jl/pull/88. 
-
-**Related Issues**: https://github.com/JuliaSymbolics/Symbolics.jl/issues/1551
-
-**Success Criteria**: Pull requests which add the 5 requested functions to the
-SymbolicsSymPyExt.jl extension of Symbolics.jl,
-https://github.com/JuliaSymbolics/Symbolics.jl/blob/master/ext/SymbolicsSymPyExt.jl
-
-**Recommended Skills**: Basic (undergrad-level) knowledge of calculus and Python
-
-**Reviewers**: Chris Rackauckas
 
 ## Wrap `scipy.optimize` into the Optimization.jl Interface (\$300)
 
@@ -296,7 +260,7 @@ interfaces and benchmarking tools so it can make use of the full set of methods 
 Optimization.jl and drive further developments and recommendations to users.
 
 This would likely turn into either contributions to CUTEst or wrappers to CUTEst (hosted in
-SciML) which which transform the NLPModels form into Optimization.jl, and a benchmarking
+SciML) which transform the NLPModels form into Optimization.jl, and a benchmarking
 script that loops over all optimization problems and applies a set of optimizers to each of
 them, computing summary statistics at the bottom.
 
@@ -332,13 +296,13 @@ generated using the benchmark server. The [transition amplifier benchmark](https
 and [slider crank benchmark](https://github.com/SciML/SciMLBenchmarks.jl/pull/373) were old
 PRs to add a few of the problems. These could be used as starting points to solve two problems.
 One would likely need to modify the structural simplification to turn dummy derivative off
-as well, that can be discsused with Chris in the PR review.
+as well, that can be discussed with Chris in the PR review.
 
 **Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
 
 **Success Criteria**: New benchmarks with the DAE systems.
 
-**Recommended Skills**: Prior knowledge in modeling with differential-algebaic equations
+**Recommended Skills**: Prior knowledge in modeling with differential-algebraic equations
 would be helpful for debugging.
 
 **Reviewers**: Chris Rackauckas
@@ -360,11 +324,11 @@ be discussed before starting the project.
 
 It is recommended that implicit methods such as Rosenbrock and SDIRK integrators are
 done first, as the extra intricacies of their algorithm make this refactor simpler
-because the nuances of the implementation are less likely to noticably impact performance.
+because the nuances of the implementation are less likely to noticeably impact performance.
 
 **Information to Get Started**: The OrdinaryDiffEq.jl solvers are all found in
 [the Github repository](https://github.com/SciML/OrdinaryDiffEq.jl) and
-the format of the package is docmented in the
+the format of the package is documented in the
 [developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/). The key to doing
 this right is to note that it is just a refactor, so all of the methods are there in
 the package already. However, note that some methods can be a bit nuanced, for example,
@@ -390,7 +354,7 @@ development skills and test-driven development of a large code base is required.
 [LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
 central package for the performance of many Julia packages. Its internals make
 use of many low-level features and manual SIMD that can make it require significant
-maintanance to be optimized for new versions of the compiler.
+maintenance to be optimized for new versions of the compiler.
 
 **Information to Get Started**:
 
@@ -408,19 +372,51 @@ which SciML will help administer through the small grants program.
 
 **Success Criteria**: LoopVectorization.jl runs on v1.12's latest release.
 
-**Recommended Skills**: This requires some low-level knoweldge of LLVM IR and familiarity with `llvmcall`. The changes should be routine.
+**Recommended Skills**: This requires some low-level knowledge of LLVM IR and familiarity with `llvmcall`. The changes should be routine.
 
 **Reviewers**: Chris Elrod
 
 # Successful Projects Archive
 
-These are the previous SciML small grants projects which have successfully concluded and payed out.
+These are the previous SciML small grants projects which have successfully concluded and paid out.
+
+## Add SymPy.jl as an Alternative Backend for Symbolics.jl (\$300)
+
+**Completed by Jash Ambaliya on June 20th, 2025.**
+
+The Symbolics.jl symbolic solver covers a wide range of cases, but adding a fallback to SymPy's solver provides broader coverage with minimal effort. This project implemented a backend integration using SymPy.jl via automatic conversion between Symbolics and SymPy representations. It introduced helper functions for converting expressions, solving them using SymPy, and converting results back.
+
+**Goals Achieved** :
+
+- Documented and tested the Symbolics <-> SymPy roundtrip conversion.
+- Implemented wrappers in `SymbolicsSymPyExt.jl` for the following SymPy-based operations:
+  - `linear_solve`
+  - `algebraic_solve`
+  - `integrate`
+  - `limit`
+  - `simplify`
+
+This enhancement expands Symbolics.jl’s solving capabilities by leveraging the mature SymPy backend when native solutions are insufficient.
+
+**Information to Get Started** :
+
+The project used the existing `symbolics_to_sympy` function and the SymPy exchange mechanism. Reference discussions included:
+
+- [Symbolics.jl #1223](https://github.com/JuliaSymbolics/Symbolics.jl/issues/1223)
+- [SymPyCore.jl #88](https://github.com/jverzani/SymPyCore.jl/pull/88)
+- [Symbolics.jl #1551](https://github.com/JuliaSymbolics/Symbolics.jl/issues/1551)
+
+**Success Criteria** : Pull requests adding the five requested functions to the [SymbolicsSymPyExt.jl](https://github.com/JuliaSymbolics/Symbolics.jl/blob/master/ext/SymbolicsSymPyExt.jl).
+
+**Recommended Skills** : Basic (undergrad-level) knowledge of calculus, symbolic computation, and Python interop in Julia.
+
+**Reviewers** : Chris Rackauckas
 
 ## Refactor OrdinaryDiffEq.jl to use Sub-Packages of Solvers (\$600)
 
 #### Note: Bounty increase to \$600 from \$300 (7/20/2024)
 
-** Completed by Param Umesh Thakkar for the time period of June 18th, 2024 - August 18th 2024. Extended due to scope and cost extension. **
+**Completed by Param Umesh Thakkar for the time period of June 18th, 2024 - August 18th 2024. Extended due to scope and cost extension.**
 
 It's no surprise to anyone to hear that DifferentialEquations.jl, in particular the
 OrdinaryDiffEq.jl solver package, is very large and takes a long time to precompile.
@@ -428,11 +424,11 @@ However, this is because there are a lot of solvers in the package. The goal wou
 be to refactor this package so that sets of solvers are instead held in subpackages
 that are only loaded on-demand. Since many of the solvers are only used in more
 niche applications, this allows for them to be easily maintained in the same repo
-while not imposing a loading cost on the more standard appliations.
+while not imposing a loading cost on the more standard applications.
 
 **Information to Get Started**: The OrdinaryDiffEq.jl solvers are all found in
 [the Github repository](https://github.com/SciML/OrdinaryDiffEq.jl) and
-the format of the package is docmented in the
+the format of the package is documented in the
 [developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/)
 
 **Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
@@ -454,9 +450,9 @@ development skills and test-driven development of a large code base is required.
 The transistor amplifier benchmark was added [https://github.com/SciML/SciMLBenchmarks.jl/pull/1007](https://github.com/SciML/SciMLBenchmarks.jl/pull/1007).
 Project is kept open for other benchmarks.
 
-## SciMLBenchmarks Compatability Bump for Benchmark Sets (\$100 each set)
+## SciMLBenchmarks Compatibility Bump for Benchmark Sets (\$100 each set)
 
-**Completed by Param Umesh Thakkar for the time period of January 21st - February 21st. Extended from February 21st to March 21st. Extended due to the project's complexity and final refinements. **
+**Completed by Param Umesh Thakkar for the time period of January 21st - February 21st. Extended from February 21st to March 21st. Extended due to the project's complexity and final refinements.**
 
 The [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl) are a large set of benchmarks maintained
 by the SciML organization. As such, keeping these benchmarks up-to-date can be a time-consuming task.
@@ -497,7 +493,7 @@ regressions found through the update process.
 **Success Criteria**: The benchmarks should run and give similar results to the pre-updated benchmarks,
 and any regressions should be identified with an issue opened in the appropriate repository.
 
-**Recommended Skills**: Willingness to roll up some sleaves and figure out what changed in breaking updates.
+**Recommended Skills**: Willingness to roll up some sleeves and figure out what changed in breaking updates.
 
 **Reviewers**: Chris Rackauckas
 
