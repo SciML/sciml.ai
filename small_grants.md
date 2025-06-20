@@ -380,7 +380,7 @@ which SciML will help administer through the small grants program.
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
 
-## Add SymPy.jl as an Alternative Backend for Symbolics.jl ($300)
+## Add SymPy.jl as an Alternative Backend for Symbolics.jl (\$300)
 
 **Completed by Jash Ambaliya on June 20th, 2025.**
 
