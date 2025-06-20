@@ -349,7 +349,7 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
-## Update LoopVectorization to Support Changes in Julia v1.12 ($200)
+## Update LoopVectorization to Support Changes in Julia v1.12 (\$200)
 
 [LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
 central package for the performance of many Julia packages. Its internals make
