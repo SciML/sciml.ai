@@ -450,7 +450,7 @@ development skills and test-driven development of a large code base is required.
 The transistor amplifier benchmark was added [https://github.com/SciML/SciMLBenchmarks.jl/pull/1007](https://github.com/SciML/SciMLBenchmarks.jl/pull/1007).
 Project is kept open for other benchmarks.
 
-## SciMLBenchmarks Compatibility Bump for Benchmark Sets ($100 each set)
+## SciMLBenchmarks Compatibility Bump for Benchmark Sets (\$100 each set)
 
 **Completed by Param Umesh Thakkar for the time period of January 21st - February 21st. Extended from February 21st to March 21st. Extended due to the project's complexity and final refinements.**
 
