@@ -282,7 +282,7 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
-## DAE Problem Benchmarks ($100 / Benchmark)
+## DAE Problem Benchmarks (\$100 / Benchmark)
 
 New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
 ability to better tune solvers across problems. However, we are currently lacking in the
