@@ -162,7 +162,7 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Wrap `scipy.optimize` into the Optimization.jl Interface ($300)
+## Wrap `scipy.optimize` into the Optimization.jl Interface (\$300)
 
 **In progress:** being worked on by Aditya Pandey*
 
