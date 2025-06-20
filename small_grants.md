@@ -214,7 +214,7 @@ the Optimization.jl repository.
 
 **Reviewers**: Chris Rackauckas
 
-## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set ($200)
+## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
 
 **In Progress**: Claimed by Arjit Seth from June 20, 2025, to July 20, 2025.
 
