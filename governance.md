@@ -25,7 +25,7 @@ handled on a case-by-case basis.
 
 ## Current Steering Council
 
-- [Vaibhav Dixit (Massachusetts Institute of Technology)](https://vaibhavdixit02.github.io/)
+- [Aayush Sabharwal (JuliaHub)](https://github.com/AayushSabharwal)
 - [Samuel Isaacson (Boston University)](http://math.bu.edu/people/isaacson/)
 - [Torkel Lohman (University of Oxford)](https://www.maths.ox.ac.uk/people/torkel.loman)
 - [Chris Rackauckas (Massachusetts Institute of Technology)](https://chrisrackauckas.com/)
