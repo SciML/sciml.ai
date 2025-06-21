@@ -309,6 +309,8 @@ would be helpful for debugging.
 
 ## Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus (\$100/solver set)
 
+***In Progress:** Claimed for the SDIRK set by Krish Gaur for the time period of July 4th 2025 - August 4th, 2025*
+
 The perform_step! implementations per solver in OrdinaryDiffEq.jl are often "bespoke", i.e.
 one step implementation per solver. The reason is because the package code grew organically
 over time and this is the easiest way to ensure performance and write out a new method.
