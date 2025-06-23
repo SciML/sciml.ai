@@ -162,33 +162,6 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Wrap `scipy.optimize` into the Optimization.jl Interface (\$300)
-
-**In progress:** being worked on by Aditya Pandey*
-
-`scipy.optimize` is a standard in Python with lots of different methods, both local
-and global optimizers, that are well-tested and robust. Thus in order to improve
-the benchmarking and development of native Julia solvers, it would be helpful to
-have these algorithms more easily accessible on the standard optimization interface.
-Additionally, it can help users who are transitioning projects to and from Julia
-to have a direct way to call the previous code in order to double check the translation.
-The goal of this project is to use PythonCall.jl to setup the wrapper subpackage
-OptimizationSciPy.jl with the bells and whistles to make such benchmarking and usage
-straightforward and simple.
-
-**Information to Get Started**: See the issue https://github.com/SciML/Optimization.jl/issues/917
-which has links to starter code. PythonCall.jl is a well-documented library for calling Python
-code from Julia and thus its documentation is a good starting point as well.
-
-**Related Issues**: https://github.com/SciML/Optimization.jl/issues/917
-
-**Success Criteria**: Merged pull request which adds a new OptimizationSciPy.jl to 
-the Optimization.jl repository.
-
-**Recommended Skills**: Basic (undergrad-level) knowledge of calculus and Python
-
-**Reviewers**: Chris Rackauckas
-
 ## Wrap PyCMA into the Optimization.jl Interface (\$100)
 
 ***In progress:** being worked on by Maximilian Pochapski*
@@ -382,6 +355,33 @@ which SciML will help administer through the small grants program.
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
 
+## Wrap `scipy.optimize` into the Optimization.jl Interface (\$300)
+
+**Completed by Aditya Pandey on June 23rd, 2025**
+
+`scipy.optimize` is a standard in Python with lots of different methods, both local
+and global optimizers, that are well-tested and robust. Thus in order to improve
+the benchmarking and development of native Julia solvers, it would be helpful to
+have these algorithms more easily accessible on the standard optimization interface.
+Additionally, it can help users who are transitioning projects to and from Julia
+to have a direct way to call the previous code in order to double check the translation.
+The goal of this project is to use PythonCall.jl to setup the wrapper subpackage
+OptimizationSciPy.jl with the bells and whistles to make such benchmarking and usage
+straightforward and simple.
+
+**Information to Get Started**: See the issue https://github.com/SciML/Optimization.jl/issues/917
+which has links to starter code. PythonCall.jl is a well-documented library for calling Python
+code from Julia and thus its documentation is a good starting point as well.
+
+**Related Issues**: https://github.com/SciML/Optimization.jl/issues/917
+
+**Success Criteria**: Merged pull request which adds a new OptimizationSciPy.jl to 
+the Optimization.jl repository.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of calculus and Python
+
+**Reviewers**: Chris Rackauckas
+
 ## Add SymPy.jl as an Alternative Backend for Symbolics.jl (\$300)
 
 **Completed by Jash Ambaliya on June 20th, 2025.**
@@ -517,3 +517,4 @@ should be sufficient.
 in Julia.
 
 **Reviewers**: Chris Rackauckas
+
