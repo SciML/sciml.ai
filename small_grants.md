@@ -257,6 +257,8 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 ## DAE Problem Benchmarks (\$100 / Benchmark)
 
+**In Progress**: Claimed by Jayant Pranjal for the time period of 26th June 2025 - 26th July 2025.
+
 New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
 ability to better tune solvers across problems. However, we are currently lacking in the
 number of such benchmarks that exist. The goal would be to add standard benchmarks from
