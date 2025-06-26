@@ -333,7 +333,7 @@ These are the previous SciML small grants projects which have successfully concl
 
 ## Wrap PyCMA into the Optimization.jl Interface (\$100)
 
-***Completed by Maximilian Pochapski June 25th, 2025*
+*Completed by Maximilian Pochapski June 25th, 2025*
 
 PyCMA is a very good global optimizer written in Python. It did very well in
 early editions of the BlackboxOptimizationBenchmarking.jl tests (see for example
