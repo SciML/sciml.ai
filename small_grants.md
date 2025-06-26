@@ -162,31 +162,6 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Wrap PyCMA into the Optimization.jl Interface (\$100)
-
-***In progress:** being worked on by Maximilian Pochapski*
-
-PyCMA is a very good global optimizer written in Python. It did very well in
-early editions of the BlackboxOptimizationBenchmarking.jl tests (see for example
-https://github.com/jonathanBieler/BlackBoxOptimizationBenchmarking.jl/tree/v0.1.0)
-and thus it would be good to have available for users to call and for benchmarking new
-global optimization algorithms against.  The goal of this project is to use PythonCall.jl 
-to setup the wrapper subpackage OptimizationPyCMA.jl with the bells and whistles to make 
-such benchmarking and usage straightforward and simple.
-
-**Information to Get Started**: See the issue https://github.com/SciML/Optimization.jl/issues/918
-which has links to starter code. PythonCall.jl is a well-documented library for calling Python
-code from Julia and thus its documentation is a good starting point as well.
-
-**Related Issues**: https://github.com/SciML/Optimization.jl/issues/918
-
-**Success Criteria**: Merged pull request which adds a new OptimizationPyCMA.jl to 
-the Optimization.jl repository.
-
-**Recommended Skills**: Basic (undergrad-level) knowledge of calculus and Python
-
-**Reviewers**: Chris Rackauckas
-
 ## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$200)
 
 **In Progress**: Claimed by Arjit Seth from June 20, 2025, to July 20, 2025.
@@ -354,6 +329,32 @@ which SciML will help administer through the small grants program.
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
+
+
+## Wrap PyCMA into the Optimization.jl Interface (\$100)
+
+*Completed by Maximilian Pochapski June 25th, 2025*
+
+PyCMA is a very good global optimizer written in Python. It did very well in
+early editions of the BlackboxOptimizationBenchmarking.jl tests (see for example
+https://github.com/jonathanBieler/BlackBoxOptimizationBenchmarking.jl/tree/v0.1.0)
+and thus it would be good to have available for users to call and for benchmarking new
+global optimization algorithms against.  The goal of this project is to use PythonCall.jl 
+to setup the wrapper subpackage OptimizationPyCMA.jl with the bells and whistles to make 
+such benchmarking and usage straightforward and simple.
+
+**Information to Get Started**: See the issue https://github.com/SciML/Optimization.jl/issues/918
+which has links to starter code. PythonCall.jl is a well-documented library for calling Python
+code from Julia and thus its documentation is a good starting point as well.
+
+**Related Issues**: https://github.com/SciML/Optimization.jl/issues/918
+
+**Success Criteria**: Merged pull request which adds a new OptimizationPyCMA.jl to 
+the Optimization.jl repository.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of calculus and Python
+
+**Reviewers**: Chris Rackauckas
 
 ## Wrap `scipy.optimize` into the Optimization.jl Interface (\$300)
 
