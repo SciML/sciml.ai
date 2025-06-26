@@ -206,6 +206,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://sciml.ai/news/2025/06/26/state_of_sciml/index.html</loc>
+    <lastmod>2025-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://sciml.ai/small_grants/index.html</loc>
     <lastmod>2025-06-26</lastmod>
     <changefreq>monthly</changefreq>
