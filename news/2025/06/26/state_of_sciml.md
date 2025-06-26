@@ -8,7 +8,7 @@
 
 *This blog post is a comprehensive summary of the presentation ["State of SciML"](https://www.youtube.com/watch?v=SZZ0lT8DVRo) given at JuliaCon 2024. The original slides can be found at [https://figshare.com/articles/presentation/State_of_SciML_JuliaCon2024_/26299429](https://figshare.com/articles/presentation/State_of_SciML_JuliaCon2024_/26299429).*
 
-As we enter 2025, the SciML Open Source organization has evolved into the world's most comprehensive ecosystem for scientific machine learning and differential equation solving. This technical report provides a detailed overview of our current state, recent achievements, and roadmap for the future.
+As we enter 2025, the SciML Open Source organization has evolved into the world's most comprehensive ecosystem for scientific machine learning and differential equation solving. This blog post provides a detailed overview of our current state, recent achievements, and roadmap for the future.
 
 ## What is the SciML Open Source Organization?
 
