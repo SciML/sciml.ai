@@ -16,8 +16,8 @@ Since its inception, the SciML Small Grants Program has achieved impressive mile
 - **8 successfully completed projects** with full payouts
 - **5 currently active projects** in progress
 - **~90% success rate** for claimed projects
-- **$2,400-2,600 total paid out** to contributors
-- **$800+ in active project value** currently being worked on
+- **\$2,400-2,600 total paid out** to contributors
+- **\$800+ in active project value** currently being worked on
 
 ## Success Stories: Major Contributions
 
@@ -25,17 +25,17 @@ Since its inception, the SciML Small Grants Program has achieved impressive mile
 
 Our optimization ecosystem has been significantly enhanced through several successful projects:
 
-**SciPy and PyCMA Integration ($400 total)** - Completed by Aditya Pandey and Maximilian Pochapski, these projects brought Python's mature optimization libraries into the Julia ecosystem via Optimization.jl, providing users with battle-tested algorithms and enabling seamless migration paths.
+**SciPy and PyCMA Integration (\$400 total)** - Completed by Aditya Pandey and Maximilian Pochapski, these projects brought Python's mature optimization libraries into the Julia ecosystem via Optimization.jl, providing users with battle-tested algorithms and enabling seamless migration paths.
 
-**Symbolics.jl Enhancement ($300)** - Jash Ambaliya successfully integrated SymPy as a fallback backend for Symbolics.jl, dramatically expanding the symbolic computation capabilities available to users when native Julia implementations hit limitations.
+**Symbolics.jl Enhancement (\$300)** - Jash Ambaliya successfully integrated SymPy as a fallback backend for Symbolics.jl, dramatically expanding the symbolic computation capabilities available to users when native Julia implementations hit limitations.
 
 ### Performance and Infrastructure Improvements
 
-**OrdinaryDiffEq.jl Refactoring ($600)** - The crown jewel of our completed projects, Param Umesh Thakkar's comprehensive refactoring of OrdinaryDiffEq.jl into sub-packages has transformed the user experience. As detailed in our [previous blog post](https://sciml.ai/news/2024/08/10/sciml_small_grants_successes/), this work reduced first-time-to-solution from 2.46 seconds to 0.56 seconds - a 4.4x improvement that makes Julia's differential equation solvers feel truly instant.
+**OrdinaryDiffEq.jl Refactoring (\$600)** - The crown jewel of our completed projects, Param Umesh Thakkar's comprehensive refactoring of OrdinaryDiffEq.jl into sub-packages has transformed the user experience. As detailed in our [previous blog post](https://sciml.ai/news/2024/08/10/sciml_small_grants_successes/), this work reduced first-time-to-solution from 2.46 seconds to 0.56 seconds - a 4.4x improvement that makes Julia's differential equation solvers feel truly instant.
 
-**SciMLOperators.jl Modernization ($500)** - Divyansh Goyal's breaking changes to SciMLOperators.jl resolved fundamental limitations in how lazy operators handle different defining vectors, preparing the package for its v1.0 release and enabling more sophisticated use cases throughout the ecosystem.
+**SciMLOperators.jl Modernization (\$500)** - Divyansh Goyal's breaking changes to SciMLOperators.jl resolved fundamental limitations in how lazy operators handle different defining vectors, preparing the package for its v1.0 release and enabling more sophisticated use cases throughout the ecosystem.
 
-**Benchmark Infrastructure ($600-800 estimated)** - Param Umesh Thakkar and Marko Polic have contributed extensively to maintaining and expanding SciMLBenchmarks.jl, ensuring our performance tracking infrastructure remains current with the rapidly evolving Julia ecosystem.
+**Benchmark Infrastructure (\$600-800 estimated)** - Param Umesh Thakkar and Marko Polic have contributed extensively to maintaining and expanding SciMLBenchmarks.jl, ensuring our performance tracking infrastructure remains current with the rapidly evolving Julia ecosystem.
 
 ## Unique Program Design
 
