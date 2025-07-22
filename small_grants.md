@@ -523,7 +523,7 @@ in Julia.
 
 **Reviewers**: Chris Rackauckas
 
-## Improve training performance of GPU backend in EvoTrees (\$2000)
+## Improve training performance of GPU backend in EvoTrees.jl (\$2000)
 
 EvoTrees.jl[https://github.com/Evovest/EvoTrees.jl] is an efficient pure-Julia 
 implementation of boosted trees. Performance on CPU is competitive and even superior to 
