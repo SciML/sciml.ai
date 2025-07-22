@@ -523,3 +523,30 @@ in Julia.
 
 **Reviewers**: Chris Rackauckas
 
+## Improve training performance of GPU backend in EvoTrees (\$2000)
+
+EvoTrees.jl[https://github.com/Evovest/EvoTrees.jl] is an efficient pure-Julia 
+implementation of boosted trees. Performance on CPU is competitive and even superior to 
+peers such as XGBoost. However, the GPU backend is lagging.
+
+The objective of this project is to improve the GPU backend to bring the training benchmarks to 
+in a competitive range to XGBoost. A premium of \$500 will be awarded if the solution is implemented 
+with [KernelAbstractions.jl](https://github.com/JuliaGPU/KernelAbstractions.jl), allowing the support for AMD gpus.
+
+**Information to Get Started**: A key bottleneck is assumed to be the important overhead 
+from the large number of kernels launched as the depth of the tree grows. Also, only the gradients
+and histograms are computed on the GPU, while gains and best node split could also be computed on the GPU
+and reduce the GPU to CPU communications. Potential solution paths and preliminary work initiative is
+discussed in this [issue](https://github.com/Evovest/EvoTrees.jl/issues/288).
+
+**Success Criteria**: A PR is merged to EvoTrees.jl which brings the benchmarked GPU training time to 
+less than 125% that of XGBoost for the 1M and 10M observations benchmarks as discussed in the core 
+[issue](https://github.com/Evovest/EvoTrees.jl/issues/288).
+
+It should be reproducible on either a 3090, 4090 or a RTX A4000.
+The solution should be purely Julia based, and not result in a significant increase in code complexity / LoCs.
+
+**Recommended Skills**: Experience in kernel development on GPU, preferably with CUDA.jl or [KernelAbstractions.jl](https://github.com/JuliaGPU/KernelAbstractions.jl).
+General performance optimization and multi-threading.
+
+**Reviewers**: [Jeremie Desgagne-Bouchard](https://github.com/jeremiedb)
