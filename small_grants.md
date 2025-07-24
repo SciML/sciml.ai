@@ -334,7 +334,6 @@ which SciML will help administer through the small grants program.
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
 
-
 ## Wrap PyCMA into the Optimization.jl Interface (\$100)
 
 *Completed by Maximilian Pochapski June 25th, 2025*
@@ -524,6 +523,7 @@ in Julia.
 **Reviewers**: Chris Rackauckas
 
 ## Improve training performance of GPU backend in EvoTrees.jl (\$2000)
+In Progress: being worked on by Aditya Pandey
 
 EvoTrees.jl[https://github.com/Evovest/EvoTrees.jl] is an efficient pure-Julia 
 implementation of boosted trees. Performance on CPU is competitive and even superior to 
@@ -550,3 +550,4 @@ The solution should be purely Julia based, and not result in a significant incre
 General performance optimization and multi-threading.
 
 **Reviewers**: [Jeremie Desgagne-Bouchard](https://github.com/jeremiedb)
+
