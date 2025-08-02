@@ -162,9 +162,9 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$350)
+## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$400)
 
->**In Progress**: Claimed by Arjit Seth from June 20, 2025, to July 20, 2025.
+>**In Progress**: Claimed by Arjit Seth from June 23, 2025, to July 23, 2025.
 
 The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for a while.
 They need to be updated to the "new" linear solve syntax introduced in 2022.
