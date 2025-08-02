@@ -162,39 +162,6 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$400)
-
->**In Progress**: Claimed by Arjit Seth from June 23, 2025, to July 23, 2025.
-
-The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for a while.
-They need to be updated to the "new" linear solve syntax introduced in 2022.
-When updated, these benchmarks should serve as a canonical development
-point for PDE-specific methods, such as implicit-explicit (IMEX) and
-exponential integrators.
-
-**Information to Get Started**: The
-[Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
-describes how to contribute to the benchmarks. The benchmark results are
-generated using the benchmark server. Half of the benchmarks are set up
-using hand-discretized finite difference stencils for the PDE, the other
-half use ApproxFun.jl in order to do a pseudospectral discretization.
-A direct pseudospectral discretization via manual FFTs and operator
-construction would also be fine.
-
-**Related Issues**: [https://github.com/SciML/SciMLBenchmarks.jl/issues/929](https://github.com/SciML/SciMLBenchmarks.jl/issues/929)
-
-**Success Criteria**: Pull requests which [update the benchmarks in the
-folder](https://github.com/SciML/SciMLBenchmarks.jl/tree/master/benchmarks/SimpleHandwrittenPDE)
-to be successful with the current Julia and package version (v1.10) without
-erroring, generating work-precision diagrams. In addition, these should be updated
-to give a clearer definition of the PDE being solved, adding a LaTeX
-description of the equations to the top of the file.
-
-**Recommended Skills**: Basic (undergrad-level) knowledge of finite difference and pseudospectral
-PDE discretizations.
-
-**Reviewers**: Chris Rackauckas
-
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
 *In Progress: Claimed by Arnav Kapoor for the time period of July 5th 2025 - August 5th 2025.*
@@ -333,6 +300,40 @@ which SciML will help administer through the small grants program.
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
+
+
+## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$400)
+
+>Completed by Arjit Seth on August 1, 2025.
+
+The "Simple Handwritten PDEs as ODEs" benchmarks have been failing for a while.
+They need to be updated to the "new" linear solve syntax introduced in 2022.
+When updated, these benchmarks should serve as a canonical development
+point for PDE-specific methods, such as implicit-explicit (IMEX) and
+exponential integrators.
+
+**Information to Get Started**: The
+[Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
+describes how to contribute to the benchmarks. The benchmark results are
+generated using the benchmark server. Half of the benchmarks are set up
+using hand-discretized finite difference stencils for the PDE, the other
+half use ApproxFun.jl in order to do a pseudospectral discretization.
+A direct pseudospectral discretization via manual FFTs and operator
+construction would also be fine.
+
+**Related Issues**: [https://github.com/SciML/SciMLBenchmarks.jl/issues/929](https://github.com/SciML/SciMLBenchmarks.jl/issues/929)
+
+**Success Criteria**: Pull requests which [update the benchmarks in the
+folder](https://github.com/SciML/SciMLBenchmarks.jl/tree/master/benchmarks/SimpleHandwrittenPDE)
+to be successful with the current Julia and package version (v1.10) without
+erroring, generating work-precision diagrams. In addition, these should be updated
+to give a clearer definition of the PDE being solved, adding a LaTeX
+description of the equations to the top of the file.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of finite difference and pseudospectral
+PDE discretizations.
+
+**Reviewers**: Chris Rackauckas
 
 ## Wrap PyCMA into the Optimization.jl Interface (\$100)
 
