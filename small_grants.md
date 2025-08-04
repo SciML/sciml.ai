@@ -199,7 +199,7 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 ## DAE Problem Benchmarks (\$100 / Benchmark)
 
-**In Progress**: Claimed by Jayant Pranjal for the time period of 26th June 2025 - 26th July 2025.
+**In Progress**: Claimed by Jayant Pranjal for the time period of 24th July 2025 - 24th Aug 2025.
 
 New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
 ability to better tune solvers across problems. However, we are currently lacking in the
@@ -301,6 +301,34 @@ which SciML will help administer through the small grants program.
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
 
+## DAE Problem Benchmarks (\$100 / Benchmark)
+
+Completed by **Jayant Pranjal**
+
+**Benchmarks added:** NAND Gate Problem benchmark
+
+New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
+ability to better tune solvers across problems. However, we are currently lacking in the
+number of such benchmarks that exist. The goal would be to add standard benchmarks from
+[this issue](https://github.com/SciML/SciMLBenchmarks.jl/issues/359) to the SciMLBenchmarks
+system so that they can be performance tracked over time.
+
+**Information to Get Started**: [Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
+describes how to contribute to the benchmarks. The benchmark results are
+generated using the benchmark server. The [transition amplifier benchmark](https://github.com/SciML/SciMLBenchmarks.jl/pull/372)
+and [slider crank benchmark](https://github.com/SciML/SciMLBenchmarks.jl/pull/373) were old
+PRs to add a few of the problems. These could be used as starting points to solve two problems.
+One would likely need to modify the structural simplification to turn dummy derivative off
+as well, that can be discussed with Chris in the PR review.
+
+**Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
+
+**Success Criteria**: New benchmarks with the DAE systems.
+
+**Recommended Skills**: Prior knowledge in modeling with differential-algebraic equations
+would be helpful for debugging.
+
+**Reviewers**: Chris Rackauckas
 
 ## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$400)
 
