@@ -164,7 +164,7 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
-*In Progress: Claimed by Arnav Kapoor for the time period of July 5th 2025 - August 5th 2025.*
+*In Progress: Claimed by Raunak Narang for the time period of August 6th 2025 - September 6th 2025.*
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
