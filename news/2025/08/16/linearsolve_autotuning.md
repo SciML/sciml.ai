@@ -103,23 +103,32 @@ For complex arithmetic, we found that specialized algorithms matter even more:
 - `LUFactorization` outperforms vendor libraries by **2x** for ComplexF32
 - Apple Accelerate struggles with complex numbers, making pure Julia implementations preferable
 
-## Setting Preferences: Making It Permanent
+## Applying Your Results: Using the Optimal Algorithms
 
-Once you've identified the best algorithms for your system, you can set them as defaults using Julia's Preferences system:
+Once you've identified the best algorithms for your system through autotuning, you can directly use them in your code:
 
 ```julia
-using LinearSolve, Preferences
+using LinearSolve
 
-# Set algorithm preferences based on autotuning results
-set_preferences!(
-    "LinearSolve",
-    "small_matrix_alg" => "RFLUFactorization",
-    "medium_matrix_alg" => "AppleAccelerateLUFactorization",
-    "large_matrix_alg" => "MetalLUFactorization"
-)
+# Based on your autotuning results, choose the appropriate algorithm
+A = rand(100, 100)
+b = rand(100)
+
+# For small matrices on Apple Silicon (from autotuning)
+prob = LinearProblem(A, b)
+sol = solve(prob, RFLUFactorization())
+
+# For larger matrices
+A_large = rand(1000, 1000)
+b_large = rand(1000)
+prob_large = LinearProblem(A_large, b_large)
+sol_large = solve(prob_large, AppleAccelerateLUFactorization())
+
+# Or let LinearSolve choose based on its heuristics
+sol_auto = solve(prob)  # Uses default algorithm selection
 ```
 
-These preferences are stored in your project's `LocalPreferences.toml` file and automatically applied whenever you use LinearSolve.jl.
+The autotuning results help inform LinearSolve.jl's internal heuristics, which are continuously improved based on community benchmark submissions. Future versions may support automatic preference setting based on your hardware configuration.
 
 ## Performance Visualization: A Picture Worth 1000 Benchmarks
 
