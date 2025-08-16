@@ -103,32 +103,28 @@ For complex arithmetic, we found that specialized algorithms matter even more:
 - `LUFactorization` outperforms vendor libraries by **2x** for ComplexF32
 - Apple Accelerate struggles with complex numbers, making pure Julia implementations preferable
 
-## Applying Your Results: Using the Optimal Algorithms
+## Using the Results: Automatic Algorithm Selection
 
-Once you've identified the best algorithms for your system through autotuning, you can directly use them in your code:
+The beauty of LinearSolve.jl's autotuning system is that you don't need to manually specify algorithms. The benchmark results from the community directly improve the default heuristics, so you simply use:
 
 ```julia
 using LinearSolve
 
-# Based on your autotuning results, choose the appropriate algorithm
+# Create your linear problem
 A = rand(100, 100)
 b = rand(100)
-
-# For small matrices on Apple Silicon (from autotuning)
 prob = LinearProblem(A, b)
-sol = solve(prob, RFLUFactorization())
 
-# For larger matrices
-A_large = rand(1000, 1000)
-b_large = rand(1000)
-prob_large = LinearProblem(A_large, b_large)
-sol_large = solve(prob_large, AppleAccelerateLUFactorization())
-
-# Or let LinearSolve choose based on its heuristics
-sol_auto = solve(prob)  # Uses default algorithm selection
+# Just solve - LinearSolve automatically picks the best algorithm!
+sol = solve(prob)  # Uses optimized heuristics based on community benchmarks
 ```
 
-The autotuning results help inform LinearSolve.jl's internal heuristics, which are continuously improved based on community benchmark submissions. Future versions may support automatic preference setting based on your hardware configuration.
+The autotuning results you and others share help LinearSolve.jl make intelligent decisions about:
+- When to use pure Julia implementations vs vendor libraries
+- Matrix size thresholds for GPU acceleration
+- Special handling for complex numbers and sparse matrices
+
+By contributing your benchmark results with `share_results()`, you're directly improving the default algorithm selection for everyone. The more diverse hardware configurations we collect, the smarter the automatic selection becomes.
 
 ## Performance Visualization: A Picture Worth 1000 Benchmarks
 
