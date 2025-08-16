@@ -44,12 +44,7 @@ Pkg.add([<span class=hljs-string >&quot;LinearSolve&quot;</span>, <span class=hl
 
 <span class=hljs-comment ># Run comprehensive benchmarks</span>
 <span class=hljs-keyword >using</span> LinearSolve, LinearSolveAutotune
-results = autotune_setup(
-    sizes = :all,           <span class=hljs-comment ># Test all size categories</span>
-    types = [<span class=hljs-built_in >Float32</span>, <span class=hljs-built_in >Float64</span>, <span class=hljs-built_in >ComplexF64</span>],
-    quality = :high,        <span class=hljs-comment ># Thorough benchmarking</span>
-    time_limit = <span class=hljs-number >60.0</span>      <span class=hljs-comment ># Limit per-algorithm time</span>
-)
+results = autotune_setup()
 
 <span class=hljs-comment ># Analyze your results</span>
 display(results)
