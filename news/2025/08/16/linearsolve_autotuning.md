@@ -180,12 +180,7 @@ Pkg.add(["LinearSolve", "LinearSolveAutotune"])
 
 # Run comprehensive benchmarks
 using LinearSolve, LinearSolveAutotune
-results = autotune_setup(
-    sizes = :all,           # Test all size categories
-    types = [Float32, Float64, ComplexF64],
-    quality = :high,        # Thorough benchmarking
-    time_limit = 60.0      # Limit per-algorithm time
-)
+results = autotune_setup()
 
 # Analyze your results
 display(results)
