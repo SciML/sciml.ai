@@ -161,6 +161,20 @@ achieve a mergable PR within the time frame, but there is no expectation that th
 will "go the extra mile" to teach the contributor how the package or mathematics works.
 
 # List of Current Projects
+## Fix `DataInterpolations` Bspline derivatives (\$100)
+
+`DataInterpolations.jl` is a SciML repository for interpolating 1D data. It supports a wide number of interpolation types, as well as taking first and second derivatives of the interpolations. Specifically, the BSplineInterpoation has a few bugs with regards to where it puts the control points, and how it calculates derivatives.
+
+**Information to Get Started**: See the issue https://github.com/SciML/DataInterpolations.jl/issues/419 describes the issue and a proposed solution. Specifically, this work will likely start by mirroring https://github.com/SciML/DataInterpolationsND.jl/pull/20 and re-enabling the derviative tests for BSpline interpolations.
+
+**Related Issues**: https://github.com/SciML/Optimization.jl/issues/917
+
+**Success Criteria**: Merged pull request which adds a new OptimizationSciPy.jl to 
+the Optimization.jl repository.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of calculus
+
+**Reviewers**: Chris Rackauckas and Oscar Smith
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
