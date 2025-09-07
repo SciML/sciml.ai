@@ -257,7 +257,8 @@ sol_cpu = solve(prob, Rodas5P(linsolve=MKL32MixedLUFactorization()))
 - **Medium systems (500×500 to 5000×5000)**: Platform-specific BLAS libraries (MKL, Apple Accelerate)  
 - **Large systems (> 5000×5000)**: GPU offloading with mixed precision provides optimal performance
 
-### Julia's Performance Leadership in Small Matrix Factorization
+### Note from AutoTune Performance Results: Julia's Performance Leadership in Small Matrix Factorization
+
 
 A remarkable finding from the LinearSolveAutotune results across hundreds of different CPUs is that **RecursiveFactorization.jl consistently outperforms all BLAS implementations for small matrices (256×256 and smaller)**. This pure Julia implementation beats optimized libraries like Intel MKL, OpenBLAS, and vendor-specific implementations, demonstrating that the Julia ecosystem is well ahead of traditional BLAS tools in this domain.
 
