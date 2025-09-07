@@ -127,30 +127,9 @@ sol_rf = solve(prob, RF32MixedLUFactorization())                      # Recursiv
 sol_cuda = solve(prob, CUDAOffload32MixedLUFactorization())           # NVIDIA
 sol_metal = solve(prob, MetalOffload32MixedLUFactorization())         # Apple Silicon
 
-# Direct BLAS integration
+# Direct BLAS integration (full precision)
 sol_openblas_direct = solve(prob, OpenBLASLUFactorization())          # Direct OpenBLAS calls
-```
-
-### Mixed Precision in ODE Solving
-
-Mixed precision linear solvers are particularly effective in ODE solvers for stiff problems where Jacobian factorization dominates computational cost:
-
-```julia
-using OrdinaryDiffEq, LinearSolve
-
-# Stiff ODE system
-function stiff_ode!(du, u, p, t)
-    k1, k2, k3 = p
-    du[1] = -k1*u[1] + k2*u[2]
-    du[2] = k1*u[1] - k2*u[2] - k3*u[2]
-    du[3] = k3*u[2]
-end
-
-u0 = [1.0, 0.0, 0.0]
-prob = ODEProblem(stiff_ode!, u0, (0.0, 10.0), [10.0, 5.0, 1.0])
-
-# Use mixed precision for internal linear systems
-sol = solve(prob, Rodas5P(linsolve=MKL32MixedLUFactorization()))
+sol_blis = solve(prob, BLISLUFactorization())                         # BLIS high-performance library
 ```
 
 ### Mixed Precision Newton Methods with NonlinearSolve.jl
@@ -182,24 +161,26 @@ sol_gpu = solve(prob, NewtonRaphson(linsolve=CUDAOffload32MixedLUFactorization()
 - **Memory efficiency**: Reduced memory bandwidth for Jacobian factorization
 - **Scalability**: Performance benefits increase with problem dimension
 
-### Hardware-Adaptive Algorithm Selection
+### Mixed Precision in ODE Solving
+
+Mixed precision linear solvers are particularly effective in ODE solvers for stiff problems where Jacobian factorization dominates computational cost:
 
 ```julia
-# Choose solver based on available hardware and matrix size
-function choose_solver(matrix_size)
-    if matrix_size < 500
-        RF32MixedLUFactorization()  # Optimized for small-medium matrices
-    elseif Sys.isapple()
-        AppleAccelerate32MixedLUFactorization()
-    elseif CUDA.functional()
-        CUDAOffload32MixedLUFactorization()
-    else
-        OpenBLAS32MixedLUFactorization()  # Cross-platform fallback
-    end
+using OrdinaryDiffEq, LinearSolve
+
+# Stiff ODE system
+function stiff_ode!(du, u, p, t)
+    k1, k2, k3 = p
+    du[1] = -k1*u[1] + k2*u[2]
+    du[2] = k1*u[1] - k2*u[2] - k3*u[2]
+    du[3] = k3*u[2]
 end
 
-solver = choose_solver(size(A, 1))
-sol = solve(prob, solver)
+u0 = [1.0, 0.0, 0.0]
+prob = ODEProblem(stiff_ode!, u0, (0.0, 10.0), [10.0, 5.0, 1.0])
+
+# Use mixed precision for internal linear systems
+sol = solve(prob, Rodas5P(linsolve=MKL32MixedLUFactorization()))
 ```
 
 ## Performance Characteristics
@@ -276,22 +257,17 @@ sol_cpu = solve(prob, Rodas5P(linsolve=MKL32MixedLUFactorization()))
 - **Medium systems (500×500 to 5000×5000)**: Platform-specific BLAS libraries (MKL, Apple Accelerate)  
 - **Large systems (> 5000×5000)**: GPU offloading with mixed precision provides optimal performance
 
-## Getting Started
+### Julia's Performance Leadership in Small Matrix Factorization
 
-```julia
-using Pkg
-Pkg.add(["LinearSolve", "LinearSolveAutotune"])
+A remarkable finding from the LinearSolveAutotune results across hundreds of different CPUs is that **RecursiveFactorization.jl consistently outperforms all BLAS implementations for small matrices (256×256 and smaller)**. This pure Julia implementation beats optimized libraries like Intel MKL, OpenBLAS, and vendor-specific implementations, demonstrating that the Julia ecosystem is well ahead of traditional BLAS tools in this domain.
 
-# Run comprehensive benchmarking
-using LinearSolve, LinearSolveAutotune
-benchmark_and_set_preferences!()  # Includes all new mixed precision and BLAS methods
+This performance advantage stems from:
+- **Reduced call overhead**: Pure Julia avoids FFI costs for small matrices
+- **Optimized blocking strategies**: RecursiveFactorization uses cache-optimal algorithms
+- **Julia compiler optimizations**: LLVM can optimize the entire computation path
+- **Elimination of memory layout conversions**: Direct operation on Julia arrays
 
-# Automatic optimal solver selection
-A = rand(1000, 1000) + I
-b = rand(1000)
-prob = LinearProblem(A, b)
-sol = solve(prob)  # Uses best available solver based on benchmarking
-```
+This trend reflects the broader evolution of scientific computing, where high-level languages with sophisticated compilers can outperform traditional low-level libraries in specific domains. The SciML ecosystem continues to push these boundaries, developing native Julia algorithms that leverage the language's performance characteristics while maintaining the productivity benefits of high-level programming.
 
 ## Looking Forward
 
