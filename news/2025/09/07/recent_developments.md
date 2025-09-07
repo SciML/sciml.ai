@@ -1,16 +1,16 @@
 @def rss_pubdate = Date(2025,9,7)
-@def rss = """SciML Summer 2025 Update: Mixed Precision Solvers, Neural ODE Extensions, and Ecosystem Improvements"""
+@def rss = """Mixed Precision Linear Solvers and Enhanced BLAS Integration in LinearSolve.jl"""
 @def published = " 7 September 2025 "
-@def title = "SciML Summer 2025 Update: Mixed Precision Solvers, Neural ODE Extensions, and Ecosystem Improvements"
+@def title = "Mixed Precision Linear Solvers and Enhanced BLAS Integration in LinearSolve.jl"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
 
-# SciML Summer 2025 Update: Mixed Precision Solvers, Neural ODE Extensions, and Ecosystem Improvements
+# Mixed Precision Linear Solvers and Enhanced BLAS Integration in LinearSolve.jl
 
-The SciML ecosystem has seen significant developments over the summer months of 2025, with notable advances in mixed precision linear solving, neural differential equations, GPU support, and package consolidation. This update covers the major new features and improvements from July through September 2025.
+LinearSolve.jl has received a major expansion of its solver capabilities over the summer of 2025, with the introduction of comprehensive mixed precision linear solvers and enhanced BLAS library integration. These developments provide significant performance improvements for memory-bandwidth limited problems while expanding hardware support across different platforms.
 
-## LinearSolve.jl: New Mixed Precision Capabilities
+## Mixed Precision Linear Solvers
 
-The most significant development has been the introduction of comprehensive mixed precision linear solvers in LinearSolve.jl. This represents a substantial expansion of performance options for scientific computing applications.
+The centerpiece of these developments is a comprehensive suite of mixed precision LU factorization methods that perform computations in Float32 precision while maintaining Float64 interfaces. This approach provides significant performance benefits for well-conditioned, memory-bandwidth limited problems.
 
 ### New Mixed Precision Factorization Methods
 
@@ -21,279 +21,201 @@ The most significant development has been the introduction of comprehensive mixe
 - `MetalOffload32MixedLUFactorization`: GPU-accelerated mixed precision for Apple Metal
 
 **Extended Mixed Precision Support (PR #753):**
-- `OpenBLAS32MixedLUFactorization`: Mixed precision using OpenBLAS for broader hardware support
+- `OpenBLAS32MixedLUFactorization`: Mixed precision using OpenBLAS for cross-platform support
 - `RF32MixedLUFactorization`: Mixed precision using RecursiveFactorization.jl, optimized for small to medium matrices
 
-**OpenBLAS Direct Support (PR #745):**
-- `OpenBLASLUFactorization`: High-performance option that directly calls OpenBLAS_jll, providing an open-source alternative to MKL
+### How Mixed Precision Works
 
-### Performance Benefits
+All mixed precision solvers follow the same pattern:
+1. **Input**: Accept Float64/ComplexF64 matrices and vectors
+2. **Conversion**: Automatically convert to Float32/ComplexF32 for factorization
+3. **Computation**: Perform LU factorization in reduced precision
+4. **Solution**: Convert results back to original precision (Float64/ComplexF64)
 
-These solvers provide:
-- **Up to 2x speedup** for memory-bandwidth limited problems
-- **Reduced memory usage** during factorization 
-- **Hardware acceleration** leveraging GPU offloading and optimized CPU libraries
-- **Complex number support** for both real and complex matrices
-- **Automatic precision conversion** (Float64/ComplexF64 → Float32/ComplexF32 for computation → Float64/ComplexF64 for results)
+This approach reduces memory bandwidth requirements and can provide up to **2x speedups** for large, well-conditioned matrices while maintaining reasonable accuracy (typically within 1e-5 relative error).
 
-### Enhanced Autotune Integration
+## Enhanced BLAS Library Integration
 
-**Smart Algorithm Selection (PR #730, #733):**
-The autotune system now includes mixed precision solvers with intelligent fallback mechanisms:
-- **Availability checking**: Verifies algorithms are usable before selecting them
-- **Dual preference system**: Stores both "best overall" and "best always-loaded" algorithms  
-- **Intelligent fallback**: Gracefully degrades when extensions aren't available
+Alongside mixed precision capabilities, LinearSolve.jl has significantly expanded its direct BLAS library support, providing users with more high-performance options.
 
-## Using Mixed Precision Linear Solvers: Practical Examples
+### OpenBLAS Direct Integration (PR #745)
+
+**OpenBLASLUFactorization**: A new high-performance solver that directly calls OpenBLAS_jll routines without going through libblastrampoline:
+
+- **Optimal performance**: Direct calls to OpenBLAS for maximum efficiency
+- **Cross-platform**: Works on all platforms where OpenBLAS is available
+- **Open source alternative**: Provides MKL-like performance without proprietary dependencies
+- **Pre-allocated workspace**: Avoids allocations during solving
+
+```julia
+using LinearSolve
+
+A = rand(1000, 1000)
+b = rand(1000)
+prob = LinearProblem(A, b)
+
+# Direct OpenBLAS usage
+sol = solve(prob, OpenBLASLUFactorization())
+```
+
+### BLIS Integration Enhancement (PR #733)
+
+**BLISLUFactorization** has been integrated into the default algorithm selection system:
+
+- **Automatic availability**: Included in autotune benchmarking when BLIS is available
+- **Smart selection**: Can be automatically chosen as optimal solver for specific hardware
+- **Fallback support**: Graceful degradation when BLIS extension isn't loaded
+
+## Enhanced Autotune Integration
+
+The autotune system has been significantly enhanced to incorporate the new mixed precision and BLAS solvers with intelligent algorithm selection.
+
+### Smart Algorithm Selection (PR #730, #733)
+
+**Availability Checking**: The system now verifies that algorithms are actually usable before selecting them:
+- Checks if required libraries (MKL, OpenBLAS, BLIS) are available
+- Verifies GPU functionality for CUDA/Metal solvers
+- Gracefully falls back to always-available methods when extensions aren't loaded
+
+**Dual Preference System**: Autotune can now store both:
+- `best_algorithm_{type}_{size}`: Overall fastest algorithm (may require extensions)
+- `best_always_loaded_{type}_{size}`: Fastest among always-available methods
+
+**Intelligent Fallback Chain**:
+1. Try best overall algorithm → if available, use it
+2. Fall back to best always-loaded → if available, use it  
+3. Fall back to existing heuristics → guaranteed available
+
+This ensures optimal performance when extensions are available while maintaining robustness when they're not.
+
+### Algorithm Integration
+
+All new solvers are now integrated into the default algorithm selection:
+
+```julia
+using LinearSolve, LinearSolveAutotune
+
+# Benchmark includes all new mixed precision and BLAS methods
+benchmark_and_set_preferences!()
+
+# Default solver automatically uses best available algorithm
+A = rand(1000, 1000)  
+b = rand(1000)
+prob = LinearProblem(A, b)
+sol = solve(prob)  # May internally use OpenBLAS32MixedLUFactorization, BLISLUFactorization, etc.
+```
+
+## Practical Examples
 
 ### Direct Linear System Solving
-
-The new mixed precision solvers can be used directly for linear systems where memory bandwidth is a bottleneck:
 
 ```julia
 using LinearSolve
 
 # Create a large, well-conditioned linear system
-A = rand(2000, 2000) + 5.0I  # Adding identity ensures good conditioning
+A = rand(2000, 2000) + 5.0I  # Well-conditioned matrix
 b = rand(2000)
 prob = LinearProblem(A, b)
 
-# Solve with different mixed precision methods
-# Intel MKL (if available)
-sol_mkl = solve(prob, MKL32MixedLUFactorization())
+# Mixed precision solvers - up to 2x speedup for memory-bandwidth limited problems
+sol_mkl = solve(prob, MKL32MixedLUFactorization())                    # Intel MKL
+sol_apple = solve(prob, AppleAccelerate32MixedLUFactorization())      # Apple Accelerate  
+sol_openblas = solve(prob, OpenBLAS32MixedLUFactorization())          # OpenBLAS
+sol_rf = solve(prob, RF32MixedLUFactorization())                      # RecursiveFactorization
 
-# Apple Accelerate (macOS)
-sol_apple = solve(prob, AppleAccelerate32MixedLUFactorization())
+# GPU acceleration (if available)
+sol_cuda = solve(prob, CUDAOffload32MixedLUFactorization())           # NVIDIA
+sol_metal = solve(prob, MetalOffload32MixedLUFactorization())         # Apple Silicon
 
-# OpenBLAS (cross-platform)
-sol_openblas = solve(prob, OpenBLAS32MixedLUFactorization())
-
-# RecursiveFactorization (pure Julia, optimized for small-medium matrices)
-using RecursiveFactorization
-sol_rf = solve(prob, RF32MixedLUFactorization())
-
-# GPU acceleration (if hardware available)
-sol_cuda = solve(prob, CUDAOffload32MixedLUFactorization())  # NVIDIA
-sol_metal = solve(prob, MetalOffload32MixedLUFactorization()) # Apple Silicon
+# Direct BLAS integration
+sol_openblas_direct = solve(prob, OpenBLASLUFactorization())          # Direct OpenBLAS calls
 ```
 
 ### Mixed Precision in ODE Solving
 
-The real power of mixed precision linear solvers becomes apparent when used within ODE solvers for stiff problems. Here's how to leverage them in differential equation solving:
+Mixed precision linear solvers are particularly effective in ODE solvers for stiff problems where Jacobian factorization dominates computational cost:
 
 ```julia
 using OrdinaryDiffEq, LinearSolve
 
-# Define a stiff ODE system (e.g., chemical kinetics)
+# Stiff ODE system
 function stiff_ode!(du, u, p, t)
-    # Example: stiff chemical reaction system
     k1, k2, k3 = p
     du[1] = -k1*u[1] + k2*u[2]
     du[2] = k1*u[1] - k2*u[2] - k3*u[2]
     du[3] = k3*u[2]
 end
 
-# Problem setup
 u0 = [1.0, 0.0, 0.0]
-tspan = (0.0, 10.0)
-p = [10.0, 5.0, 1.0]  # Stiff parameters
-prob = ODEProblem(stiff_ode!, u0, tspan, p)
+prob = ODEProblem(stiff_ode!, u0, (0.0, 10.0), [10.0, 5.0, 1.0])
 
-# Solve with mixed precision linear solver for the internal linear systems
-# This is particularly effective for large systems where the Jacobian factorization
-# dominates computational cost
+# Use mixed precision for internal linear systems
 sol = solve(prob, Rodas5P(linsolve=MKL32MixedLUFactorization()))
-
-# Compare with different mixed precision choices
-sol_openblas = solve(prob, Rodas5P(linsolve=OpenBLAS32MixedLUFactorization()))
-sol_rf = solve(prob, Rodas5P(linsolve=RF32MixedLUFactorization()))
 ```
 
-### Advanced Mixed Precision Configuration
-
-For maximum performance, you can fine-tune mixed precision choices based on matrix properties:
+### Hardware-Adaptive Algorithm Selection
 
 ```julia
-# For smaller systems (< 500×500), RecursiveFactorization often excels
-small_system_solver = RF32MixedLUFactorization()
-
-# For larger systems, choose based on available hardware
-if Sys.isapple()
-    large_system_solver = AppleAccelerate32MixedLUFactorization()
-elseif CUDA.functional()
-    large_system_solver = CUDAOffload32MixedLUFactorization()
-else
-    large_system_solver = MKL32MixedLUFactorization()
-end
-
-# Use in ODE solving with adaptive choice
-function solve_with_mixed_precision(prob, n_vars)
-    if n_vars < 500
-        linsolve = small_system_solver
+# Choose solver based on available hardware and matrix size
+function choose_solver(matrix_size)
+    if matrix_size < 500
+        RF32MixedLUFactorization()  # Optimized for small-medium matrices
+    elseif Sys.isapple()
+        AppleAccelerate32MixedLUFactorization()
+    elseif CUDA.functional()
+        CUDAOffload32MixedLUFactorization()
     else
-        linsolve = large_system_solver
+        OpenBLAS32MixedLUFactorization()  # Cross-platform fallback
     end
-    
-    solve(prob, Rodas5P(linsolve=linsolve))
 end
+
+solver = choose_solver(size(A, 1))
+sol = solve(prob, solver)
 ```
 
-## Enhanced Autotune Integration
+## Performance Characteristics
 
-**PR #730** and related improvements have revolutionized how LinearSolve.jl automatically selects optimal algorithms. The autotune system now includes mixed precision solvers and provides intelligent fallback mechanisms:
-
-### Smart Algorithm Selection
-
-```julia
-using LinearSolve, LinearSolveAutotune
-
-# Run comprehensive benchmarking including mixed precision options
-benchmark_and_set_preferences!()
-
-# After benchmarking, the default solver automatically uses the best available algorithm
-A = rand(1000, 1000)
-b = rand(1000)
-prob = LinearProblem(A, b)
-
-# This now automatically chooses the optimal solver (potentially mixed precision)
-# based on your hardware and the autotuning results
-sol = solve(prob)  # Could internally use MKL32MixedLUFactorization if it's fastest
-```
-
-### Availability Checking and Fallback
-
-The enhanced autotune system (**PR #733**) now includes:
-- **Availability checking**: Verifies algorithms are actually usable before selecting them
-- **Dual preference system**: Stores both "best overall" and "best always-loaded" algorithms
-- **Intelligent fallback**: Gracefully degrades when extensions aren't available
-
-## Performance Impact
-
-The mixed precision solvers show significant performance benefits:
+### Mixed Precision Benefits
 
 - **Memory bandwidth limited problems**: Up to 2x speedup
-- **Large well-conditioned matrices**: Substantial memory usage reduction
-- **GPU offloading**: Leverages specialized hardware acceleration
-- **Iterative algorithms**: Particularly beneficial where moderate precision is acceptable
+- **Large matrices**: Significant memory usage reduction during factorization
+- **Well-conditioned systems**: Maintains accuracy within 1e-5 relative error
+- **Complex number support**: Works with both real and complex matrices
 
-## OpenBLAS Direct Support
+### OpenBLAS/BLIS Integration Benefits
 
-**PR #745** added `OpenBLASLUFactorization` as a new high-performance option that directly calls OpenBLAS_jll, providing an excellent open-source alternative to MKL with identical interfaces.
+- **Cross-platform performance**: High-performance computing without proprietary dependencies
+- **Direct library calls**: Bypasses intermediate layers for optimal efficiency  
+- **Automatic selection**: Integrated into autotune benchmarking system
+- **Fallback support**: Graceful degradation when libraries aren't available
 
 ## Getting Started
 
-To explore these new mixed precision capabilities:
-
 ```julia
 using Pkg
-Pkg.add(["LinearSolve", "LinearSolveAutotune", "RecursiveFactorization"])
+Pkg.add(["LinearSolve", "LinearSolveAutotune"])
 
-# Run autotuning to find the best solvers for your hardware
+# Run comprehensive benchmarking
 using LinearSolve, LinearSolveAutotune
-benchmark_and_set_preferences!()
+benchmark_and_set_preferences!()  # Includes all new mixed precision and BLAS methods
 
-# Your subsequent LinearSolve.jl usage will automatically benefit from
-# optimal algorithm selection, including mixed precision where beneficial
-```
-
-## DiffEqFlux.jl: Multidimensional Neural ODE Support
-
-### Extended Multiple Shooting (PR #974)
-
-A significant enhancement to neural differential equations has been the extension of the `multiple_shoot` loss function to support multidimensional NeuralODEs. Previously limited to vector-valued systems, the multiple shooting method now works with:
-
-- **Multidimensional tensors**: State `u` and right-hand sides can be tensor-valued
-- **Image-based neural ODEs**: Applications involving spatial-temporal dynamics
-- **Higher-dimensional systems**: Complex multiphysics applications
-
-```julia
-# Now supports multidimensional NeuralODEs
-neural_ode_2d = NeuralODE(Chain(Conv((3,3), 1=>8, tanh), 
-                                Conv((3,3), 8=>1, tanh)), 
-                          (0.0f0, 1.0f0), Tsit5())
-
-# Multiple shooting works seamlessly with tensor-valued states
-loss_multiple_shoot(neural_ode_2d, data_tensor)
-```
-
-## NeuralPDE.jl: Enhanced GPU Compatibility
-
-### GPU-Compatible Training (PR #955)
-
-NeuralPDE.jl received important GPU support improvements:
-
-**Initial States Option**: Added `initial_states` option to `Phi` and `PhysicsInformedNN` to enable training models where states must be on the same device as parameters.
-
-**Parameter Handling**: Fixed equation parameter handling to use scalars instead of single-element arrays, resolving GPU compatibility issues.
-
-**ModelingToolkit v10 Compatibility**: Updated imports for compatibility with ModelingToolkit v10.
-
-These changes enable GPU-accelerated training of physics-informed neural networks and neural differential equation models.
-
-## Optimization.jl: Package Consolidation
-
-### OptimizationBase Migration (PR #993)
-
-A major structural improvement was the migration of OptimizationBase.jl as a sublibrary within Optimization.jl:
-
-**Benefits:**
-- **Repository consolidation**: Reduces maintenance overhead
-- **Simplified dependency management**: OptimizationBase now embedded rather than external
-- **Consistent versioning**: Packages released together
-
-**Implementation:**
-- Complete source code moved to `lib/OptimizationBase/` 
-- All dependencies integrated into main Project.toml
-- CI configuration updated for sublibrary testing
-- Zero breaking changes to existing APIs
-
-### Sophia Optimizer Improvements (PR #1000)
-
-Fixed compatibility issues between the Sophia optimizer and ComponentArrays when using DifferentiationInterface/Enzyme autodiff. The fix ensures proper shadow type generation for automatic differentiation.
-
-## System Reliability Improvements
-
-### Copy Method Enhancements
-
-**OrdinaryDiffEq.jl - WOperator Copy (PR #2865):**
-Added missing `Base.copy` method for `WOperator` types, enabling proper copying of Jacobian operators in stiff ODE solvers.
-
-**NonlinearSolve.jl - Jacobian Operator Copy (PR #691):**
-Implemented copy methods for Jacobian operators, improving memory management in iterative nonlinear solvers.
-
-These improvements enhance the robustness of solver caching and memory management across the ecosystem.
-
-## Getting Started with New Features
-
-To explore the new capabilities:
-
-```julia
-using Pkg
-Pkg.add(["LinearSolve", "LinearSolveAutotune", "DiffEqFlux", "NeuralPDE", "Optimization"])
-
-# Test mixed precision linear solving
-using LinearSolve
-A = rand(1000, 1000) + 5.0I
+# Automatic optimal solver selection
+A = rand(1000, 1000) + I
 b = rand(1000)
 prob = LinearProblem(A, b)
-sol = solve(prob, MKL32MixedLUFactorization())
-
-# Multidimensional neural ODE
-using DiffEqFlux, Flux
-dudt = Chain(Conv((3,3), 2=>10, relu), Conv((3,3), 10=>2))
-neural_ode = NeuralODE(dudt, (0.0f0, 1.0f0), Tsit5())
+sol = solve(prob)  # Uses best available solver based on benchmarking
 ```
 
 ## Looking Forward
 
-These summer developments strengthen the SciML ecosystem's foundation across several dimensions:
+The introduction of mixed precision linear solvers and enhanced BLAS integration represents a significant expansion of LinearSolve.jl's capabilities:
 
-- **Performance**: Mixed precision solvers provide significant speedups for appropriate problems
-- **Capability**: Multidimensional neural ODEs enable new application areas
-- **Usability**: GPU compatibility improvements lower barriers to accelerated computing
-- **Maintainability**: Package consolidation reduces ecosystem complexity
+- **Performance**: New algorithmic approaches for memory-bandwidth limited problems
+- **Hardware support**: Broader platform coverage with OpenBLAS and BLIS integration
+- **Usability**: Intelligent algorithm selection reduces user burden
+- **Ecosystem integration**: Seamless integration with ODE solvers and other SciML packages
 
-The focus on both algorithmic advances and practical usability improvements reflects the ecosystem's maturation and commitment to serving diverse scientific computing needs.
+These developments provide both immediate performance benefits and establish a foundation for future mixed precision innovations across the SciML ecosystem.
 
 ---
 
