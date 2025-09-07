@@ -1,16 +1,16 @@
 @def rss_pubdate = Date(2025,9,7)
-@def rss = """New Mixed Precision Linear Solvers: Revolutionary Performance for Scientific Computing"""
+@def rss = """SciML Summer 2025 Update: Mixed Precision Solvers, Neural ODE Extensions, and Ecosystem Improvements"""
 @def published = " 7 September 2025 "
-@def title = "New Mixed Precision Linear Solvers: Revolutionary Performance for Scientific Computing"
+@def title = "SciML Summer 2025 Update: Mixed Precision Solvers, Neural ODE Extensions, and Ecosystem Improvements"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
 
-# New Mixed Precision Linear Solvers: Revolutionary Performance for Scientific Computing
+# SciML Summer 2025 Update: Mixed Precision Solvers, Neural ODE Extensions, and Ecosystem Improvements
 
-The SciML ecosystem has achieved a major breakthrough with the introduction of comprehensive mixed precision linear solvers in LinearSolve.jl. This development, spanning multiple PRs from August 2025, fundamentally transforms performance possibilities for memory-bandwidth limited scientific computing applications, delivering up to **2x speedups** while maintaining accuracy for well-conditioned problems.
+The SciML ecosystem has seen significant developments over the summer months of 2025, with notable advances in mixed precision linear solving, neural differential equations, GPU support, and package consolidation. This update covers the major new features and improvements from July through September 2025.
 
-## Revolutionary Mixed Precision Linear Solvers
+## LinearSolve.jl: New Mixed Precision Capabilities
 
-The centerpiece of these developments is a comprehensive suite of new mixed precision LU factorization methods introduced in **PR #746** and extended in **PR #753**. These solvers perform computations in Float32 precision while maintaining Float64 interfaces, providing significant performance improvements for memory-bandwidth limited problems.
+The most significant development has been the introduction of comprehensive mixed precision linear solvers in LinearSolve.jl. This represents a substantial expansion of performance options for scientific computing applications.
 
 ### New Mixed Precision Factorization Methods
 
@@ -24,14 +24,25 @@ The centerpiece of these developments is a comprehensive suite of new mixed prec
 - `OpenBLAS32MixedLUFactorization`: Mixed precision using OpenBLAS for broader hardware support
 - `RF32MixedLUFactorization`: Mixed precision using RecursiveFactorization.jl, optimized for small to medium matrices
 
-### Key Features and Benefits
+**OpenBLAS Direct Support (PR #745):**
+- `OpenBLASLUFactorization`: High-performance option that directly calls OpenBLAS_jll, providing an open-source alternative to MKL
 
-These new solvers deliver:
-- **Transparent precision conversion**: Automatically converts Float64/ComplexF64 to Float32/ComplexF32 for factorization
-- **Up to 2x performance improvements** for large, well-conditioned matrices
-- **Reduced memory usage** during factorization (critical for memory-bandwidth limited problems)
-- **Hardware acceleration**: Leverages GPU offloading and optimized CPU libraries
-- **Complex number support**: Handles both real and complex matrices seamlessly
+### Performance Benefits
+
+These solvers provide:
+- **Up to 2x speedup** for memory-bandwidth limited problems
+- **Reduced memory usage** during factorization 
+- **Hardware acceleration** leveraging GPU offloading and optimized CPU libraries
+- **Complex number support** for both real and complex matrices
+- **Automatic precision conversion** (Float64/ComplexF64 → Float32/ComplexF32 for computation → Float64/ComplexF64 for results)
+
+### Enhanced Autotune Integration
+
+**Smart Algorithm Selection (PR #730, #733):**
+The autotune system now includes mixed precision solvers with intelligent fallback mechanisms:
+- **Availability checking**: Verifies algorithms are usable before selecting them
+- **Dual preference system**: Stores both "best overall" and "best always-loaded" algorithms  
+- **Intelligent fallback**: Gracefully degrades when extensions aren't available
 
 ## Using Mixed Precision Linear Solvers: Practical Examples
 
@@ -185,14 +196,104 @@ benchmark_and_set_preferences!()
 # optimal algorithm selection, including mixed precision where beneficial
 ```
 
-## Future Directions
+## DiffEqFlux.jl: Multidimensional Neural ODE Support
 
-This mixed precision foundation enables exciting future developments:
-- **Adaptive precision**: Dynamic precision selection based on problem conditioning
-- **Multi-level precision**: Different precisions for different stages of computation
-- **Extended hardware support**: Integration with emerging accelerator architectures
+### Extended Multiple Shooting (PR #974)
 
-The introduction of comprehensive mixed precision linear solvers represents a major step forward for the SciML ecosystem, delivering both immediate performance benefits and a foundation for future innovations in scientific computing.
+A significant enhancement to neural differential equations has been the extension of the `multiple_shoot` loss function to support multidimensional NeuralODEs. Previously limited to vector-valued systems, the multiple shooting method now works with:
+
+- **Multidimensional tensors**: State `u` and right-hand sides can be tensor-valued
+- **Image-based neural ODEs**: Applications involving spatial-temporal dynamics
+- **Higher-dimensional systems**: Complex multiphysics applications
+
+```julia
+# Now supports multidimensional NeuralODEs
+neural_ode_2d = NeuralODE(Chain(Conv((3,3), 1=>8, tanh), 
+                                Conv((3,3), 8=>1, tanh)), 
+                          (0.0f0, 1.0f0), Tsit5())
+
+# Multiple shooting works seamlessly with tensor-valued states
+loss_multiple_shoot(neural_ode_2d, data_tensor)
+```
+
+## NeuralPDE.jl: Enhanced GPU Compatibility
+
+### GPU-Compatible Training (PR #955)
+
+NeuralPDE.jl received important GPU support improvements:
+
+**Initial States Option**: Added `initial_states` option to `Phi` and `PhysicsInformedNN` to enable training models where states must be on the same device as parameters.
+
+**Parameter Handling**: Fixed equation parameter handling to use scalars instead of single-element arrays, resolving GPU compatibility issues.
+
+**ModelingToolkit v10 Compatibility**: Updated imports for compatibility with ModelingToolkit v10.
+
+These changes enable GPU-accelerated training of physics-informed neural networks and neural differential equation models.
+
+## Optimization.jl: Package Consolidation
+
+### OptimizationBase Migration (PR #993)
+
+A major structural improvement was the migration of OptimizationBase.jl as a sublibrary within Optimization.jl:
+
+**Benefits:**
+- **Repository consolidation**: Reduces maintenance overhead
+- **Simplified dependency management**: OptimizationBase now embedded rather than external
+- **Consistent versioning**: Packages released together
+
+**Implementation:**
+- Complete source code moved to `lib/OptimizationBase/` 
+- All dependencies integrated into main Project.toml
+- CI configuration updated for sublibrary testing
+- Zero breaking changes to existing APIs
+
+### Sophia Optimizer Improvements (PR #1000)
+
+Fixed compatibility issues between the Sophia optimizer and ComponentArrays when using DifferentiationInterface/Enzyme autodiff. The fix ensures proper shadow type generation for automatic differentiation.
+
+## System Reliability Improvements
+
+### Copy Method Enhancements
+
+**OrdinaryDiffEq.jl - WOperator Copy (PR #2865):**
+Added missing `Base.copy` method for `WOperator` types, enabling proper copying of Jacobian operators in stiff ODE solvers.
+
+**NonlinearSolve.jl - Jacobian Operator Copy (PR #691):**
+Implemented copy methods for Jacobian operators, improving memory management in iterative nonlinear solvers.
+
+These improvements enhance the robustness of solver caching and memory management across the ecosystem.
+
+## Getting Started with New Features
+
+To explore the new capabilities:
+
+```julia
+using Pkg
+Pkg.add(["LinearSolve", "LinearSolveAutotune", "DiffEqFlux", "NeuralPDE", "Optimization"])
+
+# Test mixed precision linear solving
+using LinearSolve
+A = rand(1000, 1000) + 5.0I
+b = rand(1000)
+prob = LinearProblem(A, b)
+sol = solve(prob, MKL32MixedLUFactorization())
+
+# Multidimensional neural ODE
+using DiffEqFlux, Flux
+dudt = Chain(Conv((3,3), 2=>10, relu), Conv((3,3), 10=>2))
+neural_ode = NeuralODE(dudt, (0.0f0, 1.0f0), Tsit5())
+```
+
+## Looking Forward
+
+These summer developments strengthen the SciML ecosystem's foundation across several dimensions:
+
+- **Performance**: Mixed precision solvers provide significant speedups for appropriate problems
+- **Capability**: Multidimensional neural ODEs enable new application areas
+- **Usability**: GPU compatibility improvements lower barriers to accelerated computing
+- **Maintainability**: Package consolidation reduces ecosystem complexity
+
+The focus on both algorithmic advances and practical usability improvements reflects the ecosystem's maturation and commitment to serving diverse scientific computing needs.
 
 ---
 
