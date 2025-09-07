@@ -153,6 +153,35 @@ prob = ODEProblem(stiff_ode!, u0, (0.0, 10.0), [10.0, 5.0, 1.0])
 sol = solve(prob, Rodas5P(linsolve=MKL32MixedLUFactorization()))
 ```
 
+### Mixed Precision Newton Methods with NonlinearSolve.jl
+
+The mixed precision linear solvers integrate seamlessly with NonlinearSolve.jl to provide mixed precision Newton methods. This approach, as demonstrated by C.T. Kelley in "Newton's Method in Mixed Precision" (SIAM Review, 2022), shows that using single precision for Newton step linear solves has minimal impact on nonlinear convergence rates while providing significant performance benefits.
+
+```julia
+using NonlinearSolve, LinearSolve
+
+# Define a nonlinear system
+function nonlinear_system!(F, u, p)
+    F[1] = u[1]^2 + u[2]^2 - 1
+    F[2] = u[1] - u[2]^3
+end
+
+u0 = [0.5, 0.5]
+prob = NonlinearProblem(nonlinear_system!, u0)
+
+# Use mixed precision linear solver for Newton steps
+# The Jacobian factorization uses Float32, but maintains Float64 accuracy
+sol = solve(prob, NewtonRaphson(linsolve=MKL32MixedLUFactorization()))
+
+# For larger systems where GPU acceleration helps
+sol_gpu = solve(prob, NewtonRaphson(linsolve=CUDAOffload32MixedLUFactorization()))
+```
+
+**Key Benefits of Mixed Precision Newton Methods:**
+- **Preserved convergence**: Kelley's analysis shows that nonlinear convergence rates remain essentially unchanged when using single precision for the linear solve
+- **Memory efficiency**: Reduced memory bandwidth for Jacobian factorization
+- **Scalability**: Performance benefits increase with problem dimension
+
 ### Hardware-Adaptive Algorithm Selection
 
 ```julia
@@ -182,12 +211,70 @@ sol = solve(prob, solver)
 - **Well-conditioned systems**: Maintains accuracy within 1e-5 relative error
 - **Complex number support**: Works with both real and complex matrices
 
-### OpenBLAS/BLIS Integration Benefits
+### OpenBLAS/BLAS Integration Benefits
 
 - **Cross-platform performance**: High-performance computing without proprietary dependencies
 - **Direct library calls**: Bypasses intermediate layers for optimal efficiency  
 - **Automatic selection**: Integrated into autotune benchmarking system
 - **Fallback support**: Graceful degradation when libraries aren't available
+
+### GPU Offloading Performance Thresholds
+
+Based on community-contributed LinearSolveAutotune benchmark data, GPU acceleration shows distinct performance characteristics:
+
+**Metal GPU Performance (Apple Silicon):**
+- **Below 500×500 matrices**: CPU algorithms dominate performance
+- **500×500 to 5000×5000**: Competitive performance between CPU and GPU
+- **Above 5000×5000**: GPU delivers **2-3x speedup**, reaching over **1 TFLOP**
+
+**CUDA GPU Performance:**
+- Similar threshold behavior, with GPU acceleration becoming advantageous for larger matrices
+- Mixed precision (32-bit) GPU solvers often outperform 64-bit CPU LU factorization at lower matrix size thresholds than full precision GPU solvers
+
+## GPU Offloading for Large Stiff ODE Systems
+
+For large stiff ODE systems where Jacobian factorization dominates computational cost, GPU offloading with mixed precision can provide substantial performance improvements:
+
+```julia
+using OrdinaryDiffEq, LinearSolve
+
+# Large stiff system (e.g., discretized PDE)
+function large_stiff_system!(du, u, p, t)
+    # Example: 2D heat equation discretization
+    n = Int(sqrt(length(u)))  # Assume square grid
+    Δx = 1.0 / (n - 1)
+    α = p[1]
+    
+    # Interior points with finite difference
+    for i in 2:n-1
+        for j in 2:n-1
+            idx = (i-1)*n + j
+            du[idx] = α * ((u[idx-1] - 2u[idx] + u[idx+1]) / Δx^2 +
+                          (u[idx-n] - 2u[idx] + u[idx+n]) / Δx^2)
+        end
+    end
+    # Boundary conditions (simplified)
+    du[1:n] .= 0.0    # Bottom
+    du[end-n+1:end] .= 0.0  # Top
+end
+
+# Large system (10000 unknowns)
+n = 100
+u0 = rand(n*n)
+prob = ODEProblem(large_stiff_system!, u0, (0.0, 1.0), [0.01])
+
+# For systems > 5000×5000 Jacobians, GPU mixed precision excels
+sol_metal = solve(prob, Rodas5P(linsolve=MetalOffload32MixedLUFactorization()))
+sol_cuda = solve(prob, Rodas5P(linsolve=CUDAOffload32MixedLUFactorization()))
+
+# CPU fallback for smaller systems or when GPU unavailable  
+sol_cpu = solve(prob, Rodas5P(linsolve=MKL32MixedLUFactorization()))
+```
+
+**Performance Guidelines from AutoTune Data:**
+- **Small systems (< 500×500 Jacobians)**: Use RecursiveFactorization mixed precision
+- **Medium systems (500×500 to 5000×5000)**: Platform-specific BLAS libraries (MKL, Apple Accelerate)  
+- **Large systems (> 5000×5000)**: GPU offloading with mixed precision provides optimal performance
 
 ## Getting Started
 
