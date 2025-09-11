@@ -409,14 +409,14 @@ you can start doing:
 
 - Star our libraries like [DifferentialEquations.jl](https://github.com/SciML/DifferentialEquations.jl).
   Such recognition drives our growth to sustain the project.
-- [Join our chatroom](https://gitter.im/JuliaDiffEq/Lobby) to discuss with us.
-- If you're a student, [find a summer project that interests you](https://sciml.ai/jsoc/projects/)
+- [Join our official channels](https://sciml.ai/community/#official_channels) to discuss with us.
+- If you're a student, [find a summer project that interests you](https://sciml.ai/dev/#google_summer_of_code)
   and apply for funding through Google Summer of Code or other processes (contact
-  us if you are interested)
+  us if you are interested). See our [SciML Developer Programs](https://sciml.ai/dev/#sciml_developer_programs) page for more opportunities.
 - Start contributing! We recommend opening up an issue to discuss first, and we
   can help you get started.
-- Help update our websites, tutorials, benchmarks, and documentation
-- Help answer questions on Stack Overflow, the [Julia Discourse](https://discourse.sciml.ai/),
+- Help update our websites, tutorials, benchmarks, and documentation.
+- Help answer questions on Stack Overflow, the [Julia Discourse](https://discourse.julialang.org/),
   and other sites!
 - Hold workshops to train others on our tools.
 
