@@ -44,10 +44,12 @@ constraints = Constraints([
 ])
 
 # Check satisfiability
-if issatisfiable(constraints)
-    # The constraints have a solution
-    solution = resolve(constraints)
-    println("Found satisfying solution")
+if issatisfiable(true, constraints)
+    println("Constraints are satisfiable!")
+
+    # Test specific conditions
+    println("Can n be 3? ", issatisfiable(n == 3, constraints))
+    println("Can x be positive? ", issatisfiable(x > 0, constraints))
 else
     println("No solution exists")
 end
@@ -61,19 +63,21 @@ Express complex mathematical properties naturally and verify them automatically:
 # Prove mathematical properties
 @variables a::Real b::Real c::Real
 
-# Is this statement always true?
+# Test if a mathematical identity holds
 conjecture = (a + b)^2 == a^2 + 2*a*b + b^2
-is_theorem = isprovable(conjecture)  # Returns: true
+empty_constraints = Constraints([])  # No additional constraints
+is_theorem = isprovable(conjecture, empty_constraints)
 println("Theorem proven: $is_theorem")
 
 # Find counterexamples to false conjectures
+# Note: a^2 + b^2 >= (a + b)^2 is generally FALSE!
 false_claim = a^2 + b^2 ≥ (a + b)^2
 
 # Check if we can find values where this is false
-if issatisfiable(a^2 + b^2 < (a + b)^2)
-    counterexample = resolve(Constraints([a^2 + b^2 < (a + b)^2]))
-    println("Counterexample found to false claim")
-    # Will find values like a = 1, b = 2 where 5 < 9
+if issatisfiable(a^2 + b^2 < (a + b)^2, empty_constraints)
+    println("Counterexample exists to false claim")
+    println("Can a=1, b=2? ", issatisfiable((a == 1) & (b == 2), empty_constraints))
+    # Indeed: 1 + 4 = 5 < 9 = (1+2)^2
 end
 ```
 
@@ -97,9 +101,12 @@ constraints = Constraints([
 ])
 
 # Find solutions with high profit
-if issatisfiable(constraints)
-    optimal = resolve(constraints)
-    println("Optimal allocation found with profit ≥ 2000")
+if issatisfiable(true, constraints)
+    println("Solution with profit ≥ 2000 exists!")
+
+    # Test specific allocations
+    println("Can achieve profit = 2000? ", issatisfiable(profit == 2000, constraints))
+    println("Can achieve profit ≥ 2500? ", issatisfiable(profit ≥ 2500, constraints))
 else
     println("No solution with target profit exists")
 end
@@ -110,25 +117,27 @@ end
 Verify properties of algorithms and systems:
 
 ```julia
-# Verify sorting algorithm properties
-@variables arr::Vector{Int} original_arr::Vector{Int} n::Int
+# Verify algorithm properties using integer constraints
+@variables n::Int m::Int result::Int
 
-# Define sorting properties using constraints
-pre_condition = n > 0
-post_condition = Constraints([
-    # Array is sorted (simplified representation)
-    all(arr[i] ≤ arr[i+1] for i in 1:n-1),
-    # Array is a permutation of original
-    length(arr) == length(original_arr)
+# Example: Verify multiplication is commutative for positive integers
+commutativity_constraints = Constraints([
+    n > 0,
+    m > 0,
+    n ≤ 10,  # Bound the search space
+    m ≤ 10
 ])
 
-# Verify that sorting preserves these properties
-safety_property = pre_condition ⟹ post_condition
-
-if isprovable(safety_property)
-    println("Sorting invariant proven correct")
+# Test if n*m == m*n always holds
+if isprovable(n*m == m*n, commutativity_constraints)
+    println("Multiplication commutativity verified")
 else
-    println("Potential counterexample exists")
+    # Check for counterexamples
+    if issatisfiable(n*m != m*n, commutativity_constraints)
+        println("Counterexample to commutativity found")
+    else
+        println("No counterexample found within bounds")
+    end
 end
 ```
 
@@ -147,16 +156,21 @@ Verify safety properties and find control parameters:
 safety_property = (position + velocity*time ≤ boundary - safety_margin)
 
 # Find valid control parameters
+# Define safety constraints with specific values
+max_time = 10
+boundary = 100
+
 safety_constraints = Constraints([
-    safety_property,
+    position + velocity * time ≤ boundary - safety_margin,
     velocity ≥ 0,
     safety_margin ≥ 0.5,
-    time ≤ max_time
+    time ≤ max_time,
+    position ≥ 0
 ])
 
-if issatisfiable(safety_constraints)
-    safe_params = resolve(safety_constraints)
-    println("Safe parameters found")
+if issatisfiable(true, safety_constraints)
+    println("Safe parameters exist!")
+    println("Can velocity be 5? ", issatisfiable(velocity == 5, safety_constraints))
 end
 ```
 
@@ -174,9 +188,9 @@ model_constraints = [
 ]
 
 # Find model parameters satisfying ethical and performance constraints
-if issatisfiable(model_constraints)
-    ethical_model = resolve(model_constraints)
-    println("Ethical model parameters found")
+if issatisfiable(true, model_constraints)
+    println("Ethical model parameters are achievable!")
+    println("Can achieve 90% accuracy? ", issatisfiable(accuracy ≥ 0.90, model_constraints))
 end
 ```
 
@@ -195,9 +209,9 @@ biological_constraints = [
 ]
 
 # Find parameter ranges for desired behavior
-if issatisfiable(biological_constraints)
-    viable_parameters = resolve(biological_constraints)
-    println("Viable biological parameters found")
+if issatisfiable(true, biological_constraints)
+    println("Viable biological parameters exist!")
+    println("Can protein_A be high? ", issatisfiable(protein_A ≥ 5.0, biological_constraints))
 end
 ```
 
@@ -211,11 +225,11 @@ SymbolicSMT.jl is designed for both ease of use and performance:
 - **Extensibility**: Easy to add new theories and constraint types
 
 The library provides:
-- **`issatisfiable(constraints)`**: Check if constraints have a solution
-- **`isprovable(property)`**: Verify if a property is always true
-- **`resolve(constraints)`**: Find solutions and simplify expressions
+- **`issatisfiable(condition, constraints)`**: Check if a condition can be satisfied under constraints
+- **`isprovable(property, constraints)`**: Verify if a property always holds under constraints
 - **`Constraints([...])`**: Define collections of constraints
-- **`@variables`**: Declare symbolic variables with types (Real, Int, Bool, etc.)
+- **`@variables x::Type`**: Declare symbolic variables with types (Real, Int, Bool, etc.)
+- **Logical operators**: `&` (and), `|` (or), `~` (not) for complex conditions
 
 Under the hood, it leverages Z3's advanced algorithms including:
 - DPLL(T) for satisfiability checking
@@ -242,11 +256,13 @@ constraints = Constraints([
     x + y == 7          # On the line x + y = 7
 ])
 
-# Check if solution exists and find it
-if issatisfiable(constraints)
-    solution = resolve(constraints)
-    println("Solution found: intersection of circle and line")
-    # The system finds x = 3, y = 4 (and x = 4, y = 3)
+# Check if solution exists
+if issatisfiable(true, constraints)
+    println("Solution exists!")
+    # Test specific values
+    println("Can x be 3? ", issatisfiable(x == 3, constraints))  # true
+    println("Can x be 4? ", issatisfiable(x == 4, constraints))  # true
+    println("Can x be 0? ", issatisfiable(x == 0, constraints))  # false
 else
     println("No solution exists for the given constraints")
 end
