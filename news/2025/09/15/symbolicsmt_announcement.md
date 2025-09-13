@@ -124,10 +124,6 @@ issatisfiable(n*m != m*n, commutativity_constraints)     # false - no counterexa
 issatisfiable(n == 3 & m == 4, commutativity_constraints) # true - specific valid values
 ```
 
-## Real-World Applications
-
-SymbolicSMT.jl opens up powerful new possibilities across multiple domains:
-
 ### Control Systems and Robotics
 
 Verify safety properties and find control parameters:
