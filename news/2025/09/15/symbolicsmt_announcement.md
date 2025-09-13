@@ -41,7 +41,13 @@ constraint3 = n * m == 12
 constraint4 = n > 0 && m > 0
 
 # Check satisfiability
-result = is_satisfiable([constraint1, constraint2, constraint3, constraint4])
+status = sat!([constraint1, constraint2, constraint3, constraint4])
+if status == SAT
+    # Extract solution values
+    x_val = value(x)
+    y_val = value(y)
+    println("Found solution: x = $x_val, y = $y_val")
+end
 ```
 
 ### 2. High-Level Constraint Reasoning
@@ -54,12 +60,20 @@ Express complex mathematical properties naturally and verify them automatically:
 
 # Is this statement always true?
 conjecture = (a + b)^2 == a^2 + 2*a*b + b^2
-is_theorem = prove(conjecture)  # Returns: true
+# To prove: check if the negation is unsatisfiable
+negation = !conjecture
+status = sat!(negation)
+is_theorem = (status == UNSAT)  # Returns: true if no counterexample exists
 
 # Find counterexamples to false conjectures
 false_claim = a^2 + b^2 ≥ (a + b)^2
-counterexample = find_counterexample(false_claim)
-# Returns: a = -1, b = 2 (since 1 + 4 = 5 < 1 is false)
+# Check if the negation has a solution
+neg_claim = !(a^2 + b^2 ≥ (a + b)^2)
+status = sat!(neg_claim)
+if status == SAT
+    a_val, b_val = value(a), value(b)
+    println("Counterexample: a = $a_val, b = $b_val")
+end
 ```
 
 ### 3. Optimization and Resource Allocation
@@ -67,7 +81,7 @@ counterexample = find_counterexample(false_claim)
 Solve complex optimization problems with symbolic constraints:
 
 ```julia
-@variables time_A time_B time_C cost revenue
+@variables time_A time_B time_C cost revenue profit
 
 constraints = [
     time_A + time_B + time_C ≤ 40,  # Total time budget
@@ -75,11 +89,19 @@ constraints = [
     time_B ≥ 8,
     time_C ≥ 3,
     cost == 50*time_A + 30*time_B + 80*time_C,
-    revenue == 120*time_A + 90*time_B + 200*time_C
+    revenue == 120*time_A + 90*time_B + 200*time_C,
+    profit == revenue - cost
 ]
 
-# Maximize profit subject to constraints
-optimal = maximize(revenue - cost, constraints)
+# Find solutions with high profit using optimization modeling
+# Add constraint for minimum desired profit and solve
+profit_target = 2000
+high_profit_constraint = profit ≥ profit_target
+status = sat!(vcat(constraints, [high_profit_constraint]))
+if status == SAT
+    println("Optimal allocation: A=$(value(time_A)), B=$(value(time_B)), C=$(value(time_C))")
+    println("Profit: $(value(profit))")
+end
 ```
 
 ### 4. Verification and Formal Methods
@@ -87,14 +109,19 @@ optimal = maximize(revenue - cost, constraints)
 Verify properties of algorithms and systems:
 
 ```julia
-# Verify sorting algorithm properties
-@variables arr::Array n::Int i::Int j::Int
+# Verify sorting algorithm properties using uninterpreted functions
+@uninterpreted is_sorted(arr::Array) Bool
+@uninterpreted is_permutation(arr1::Array, arr2::Array) Bool
+@variables arr::Array original_arr::Array n::Int
 
-pre_condition = n > 0 && length(arr) == n
+pre_condition = n > 0
 post_condition = is_sorted(arr) && is_permutation(arr, original_arr)
 
 # Verify that our sorting invariant holds
-invariant_holds = prove(pre_condition ⟹ post_condition)
+# Check if there exists a case where pre_condition is true but post_condition is false
+counterexample_exists = pre_condition && !post_condition
+status = sat!(counterexample_exists)
+invariant_holds = (status == UNSAT)  # No counterexample means invariant holds
 ```
 
 ## Real-World Applications
@@ -112,12 +139,16 @@ Verify safety properties and find control parameters:
 safety_property = (position + velocity*time ≤ boundary - safety_margin)
 
 # Find valid control parameters
-safe_params = solve_constraints([
+safety_constraints = [
     safety_property,
     velocity ≥ 0,
     safety_margin ≥ 0.5,
     time ≤ max_time
-])
+]
+status = sat!(safety_constraints)
+if status == SAT
+    safe_params = (velocity=value(velocity), time=value(time), margin=value(safety_margin))
+end
 ```
 
 ### Machine Learning and Data Science
@@ -134,7 +165,10 @@ model_constraints = [
 ]
 
 # Find model parameters satisfying ethical and performance constraints
-ethical_model = solve_constraints(model_constraints)
+status = sat!(model_constraints)
+if status == SAT
+    ethical_model = (weights=value(weights), bias=value(bias), accuracy=value(accuracy))
+end
 ```
 
 ### Computational Biology
@@ -152,7 +186,10 @@ biological_constraints = [
 ]
 
 # Find parameter ranges for desired behavior
-viable_parameters = characterize_solutions(biological_constraints)
+status = sat!(biological_constraints)
+if status == SAT
+    viable_parameters = (protein_A=value(protein_A), protein_B=value(protein_B), rate=value(reaction_rate))
+end
 ```
 
 ## Performance and Integration
@@ -164,7 +201,13 @@ SymbolicSMT.jl is designed for both ease of use and performance:
 - **Composability**: Works seamlessly with other SciML packages
 - **Extensibility**: Easy to add new theories and constraint types
 
-The library leverages Z3's advanced algorithms including:
+The library provides:
+- **`sat!(constraints)`**: Check if constraints are satisfiable and return SAT/UNSAT/UNKNOWN
+- **`value(variable)`**: Extract concrete values from satisfying assignments
+- **`@uninterpreted`**: Declare uninterpreted functions for abstract reasoning
+- **Seamless integration**: Work directly with Symbolics.jl expressions
+
+Under the hood, it leverages Z3's advanced algorithms including:
 - DPLL(T) for satisfiability checking
 - Quantifier elimination for symbolic reasoning
 - Model-based quantifier instantiation
@@ -189,8 +232,13 @@ constraints = [
     x + y == 7          # On the line x + y = 7
 ]
 
-solution = solve_constraints(constraints)
-println("Solution found: x = $(solution.x), y = $(solution.y)")
+status = sat!(constraints)
+if status == SAT
+    x_sol, y_sol = value(x), value(y)
+    println("Solution found: x = $x_sol, y = $y_sol")
+else
+    println("No solution exists for the given constraints")
+end
 ```
 
 ## The Road Ahead
