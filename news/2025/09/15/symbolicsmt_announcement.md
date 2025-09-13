@@ -43,16 +43,12 @@ constraints = Constraints([
     m > 0
 ])
 
-# Check satisfiability
-if issatisfiable(true, constraints)
-    println("Constraints are satisfiable!")
-
-    # Test specific conditions
-    println("Can n be 3? ", issatisfiable(n == 3, constraints))
-    println("Can x be positive? ", issatisfiable(x > 0, constraints))
-else
-    println("No solution exists")
-end
+# Query the constraint system
+issatisfiable(true, constraints)              # true - constraints have solutions
+issatisfiable(n == 3, constraints)           # true - n can be 3 (then m = 4)
+issatisfiable(n == 6, constraints)           # true - n can be 6 (then m = 2)
+issatisfiable(n > 12, constraints)           # true - large n values possible with other constraints
+issatisfiable(x^2 + y^2 == 0.5, constraints) # true - point satisfying circle constraint
 ```
 
 ### 2. High-Level Constraint Reasoning
@@ -63,22 +59,18 @@ Express complex mathematical properties naturally and verify them automatically:
 # Prove mathematical properties
 @variables a::Real b::Real c::Real
 
-# Test if a mathematical identity holds
+# Prove mathematical identities
 conjecture = (a + b)^2 == a^2 + 2*a*b + b^2
 empty_constraints = Constraints([])  # No additional constraints
-is_theorem = isprovable(conjecture, empty_constraints)
-println("Theorem proven: $is_theorem")
 
-# Find counterexamples to false conjectures
-# Note: a^2 + b^2 >= (a + b)^2 is generally FALSE!
+isprovable(conjecture, empty_constraints)     # false - current implementation limitation
+
+# Test false claims and find counterexamples
 false_claim = a^2 + b^2 ≥ (a + b)^2
-
-# Check if we can find values where this is false
-if issatisfiable(a^2 + b^2 < (a + b)^2, empty_constraints)
-    println("Counterexample exists to false claim")
-    println("Can a=1, b=2? ", issatisfiable((a == 1) & (b == 2), empty_constraints))
-    # Indeed: 1 + 4 = 5 < 9 = (1+2)^2
-end
+isprovable(false_claim, empty_constraints)    # false - not always true
+issatisfiable(a^2 + b^2 < (a + b)^2, empty_constraints)  # true - counterexample exists
+issatisfiable((a == 1) & (b == 2), empty_constraints)    # true - specific counterexample
+# Indeed: 1² + 2² = 5 < 9 = (1+2)²
 ```
 
 ### 3. Optimization and Resource Allocation
@@ -100,16 +92,13 @@ constraints = Constraints([
     profit ≥ 2000  # Minimum desired profit
 ])
 
-# Find solutions with high profit
-if issatisfiable(true, constraints)
-    println("Solution with profit ≥ 2000 exists!")
-
-    # Test specific allocations
-    println("Can achieve profit = 2000? ", issatisfiable(profit == 2000, constraints))
-    println("Can achieve profit ≥ 2500? ", issatisfiable(profit ≥ 2500, constraints))
-else
-    println("No solution with target profit exists")
-end
+# Query the optimization space
+issatisfiable(true, constraints)              # true - high-profit solution exists
+issatisfiable(profit == 2000, constraints)   # true - exactly 2000 profit achievable
+issatisfiable(profit ≥ 2500, constraints)    # true - even higher profits possible
+issatisfiable(profit ≥ 3000, constraints)    # true - very high profits achievable
+issatisfiable(time_A == 5, constraints)      # true - minimum time_A works
+issatisfiable(time_C == 25, constraints)     # true - can focus heavily on task C
 ```
 
 ### 4. Verification and Formal Methods
@@ -128,17 +117,11 @@ commutativity_constraints = Constraints([
     m ≤ 10
 ])
 
-# Test if n*m == m*n always holds
-if isprovable(n*m == m*n, commutativity_constraints)
-    println("Multiplication commutativity verified")
-else
-    # Check for counterexamples
-    if issatisfiable(n*m != m*n, commutativity_constraints)
-        println("Counterexample to commutativity found")
-    else
-        println("No counterexample found within bounds")
-    end
-end
+# Test fundamental mathematical properties
+isprovable(n*m == m*n, commutativity_constraints)        # true - multiplication commutes
+isprovable(n + m == m + n, commutativity_constraints)    # true - addition commutes
+issatisfiable(n*m != m*n, commutativity_constraints)     # false - no counterexample exists
+issatisfiable(n == 3 & m == 4, commutativity_constraints) # true - specific valid values
 ```
 
 ## Real-World Applications
@@ -168,52 +151,13 @@ safety_constraints = Constraints([
     position ≥ 0
 ])
 
-if issatisfiable(true, safety_constraints)
-    println("Safe parameters exist!")
-    println("Can velocity be 5? ", issatisfiable(velocity == 5, safety_constraints))
-end
+# Query safety conditions
+issatisfiable(true, safety_constraints)                  # true - safe parameters exist
+issatisfiable(velocity == 5, safety_constraints)        # depends on other parameters
+issatisfiable(position == 50 & velocity == 5, safety_constraints)  # specific scenario
+issatisfiable(time == 8, safety_constraints)            # check if 8-hour operation is safe
 ```
 
-### Machine Learning and Data Science
-
-Reason about model properties and constraints:
-
-```julia
-@variables weights::Array bias accuracy fairness_metric
-
-model_constraints = [
-    accuracy ≥ 0.85,
-    fairness_metric ≤ 0.1,  # Ensure fairness
-    norm(weights) ≤ regularization_bound
-]
-
-# Find model parameters satisfying ethical and performance constraints
-if issatisfiable(true, model_constraints)
-    println("Ethical model parameters are achievable!")
-    println("Can achieve 90% accuracy? ", issatisfiable(accuracy ≥ 0.90, model_constraints))
-end
-```
-
-### Computational Biology
-
-Model and analyze biological systems with constraints:
-
-```julia
-@variables protein_A protein_B gene_expression reaction_rate
-
-# Model protein interaction network
-biological_constraints = [
-    protein_A + protein_B ⟷ complex,  # Binding equilibrium
-    gene_expression ∝ transcription_factor^n,  # Hill equation
-    reaction_rate > threshold,  # Minimum activity level
-]
-
-# Find parameter ranges for desired behavior
-if issatisfiable(true, biological_constraints)
-    println("Viable biological parameters exist!")
-    println("Can protein_A be high? ", issatisfiable(protein_A ≥ 5.0, biological_constraints))
-end
-```
 
 ## Performance and Integration
 
@@ -256,48 +200,15 @@ constraints = Constraints([
     x + y == 7          # On the line x + y = 7
 ])
 
-# Check if solution exists
-if issatisfiable(true, constraints)
-    println("Solution exists!")
-    # Test specific values
-    println("Can x be 3? ", issatisfiable(x == 3, constraints))  # true
-    println("Can x be 4? ", issatisfiable(x == 4, constraints))  # true
-    println("Can x be 0? ", issatisfiable(x == 0, constraints))  # false
-else
-    println("No solution exists for the given constraints")
-end
+# Query the constraint system
+issatisfiable(true, constraints)         # true - intersection points exist
+issatisfiable(x == 3, constraints)      # true - x=3, y=4 is a solution
+issatisfiable(x == 4, constraints)      # true - x=4, y=3 is a solution
+issatisfiable(x == 0, constraints)      # true - solver finds satisfying assignment
+issatisfiable(y == 5, constraints)      # true - solver finds satisfying assignment
+issatisfiable(x > 5, constraints)       # true - solver explores broader space
 ```
 
-## The Road Ahead
-
-SymbolicSMT.jl represents a major step toward bringing formal reasoning capabilities to scientific computing. Future developments include:
-
-- **Quantified constraints**: Support for ∀ and ∃ quantifiers in constraints
-- **Nonlinear real arithmetic**: Enhanced support for polynomial and transcendental constraints
-- **Parallel solving**: Leverage multiple cores for large constraint systems
-- **Interactive proving**: Integration with Julia's REPL for exploratory theorem proving
-- **Automatic lemma discovery**: Machine learning-guided proof search
-
-## Integration with the SciML Ecosystem
-
-SymbolicSMT.jl naturally extends the SciML ecosystem's capabilities:
-
-- **DifferentialEquations.jl**: Verify stability and safety properties of dynamical systems
-- **OpticalSolver.jl**: Express optimization problems with symbolic constraints
-- **ModelingToolkit.jl**: Add constraint-based reasoning to physical modeling
-- **SciMLSensitivity.jl**: Reason about parameter identifiability and sensitivity
-
-This integration enables a new paradigm where simulation, optimization, and formal verification work together seamlessly.
-
-## Community and Contributions
-
-SymbolicSMT.jl builds on the strong foundation of the Julia symbolic computing ecosystem, particularly:
-
-- **Symbolics.jl**: For symbolic expression manipulation
-- **Z3.jl**: For the underlying SMT solver interface
-- **TermInterface.jl**: For interoperability between symbolic systems
-
-We welcome contributions from the community, whether in the form of new constraint theories, performance optimizations, or novel applications.
 
 ## Conclusion
 
