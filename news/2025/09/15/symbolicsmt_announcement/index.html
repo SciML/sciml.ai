@@ -1,0 +1,111 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <meta property="og:title" content="SciML: Open Source Software for Scientific Machine Learning"> <meta property="og:description" content="Open Source Software for Scientific Machine Learning"> <meta property="og:image" content="https://sciml.ai/assets/SciMLGitHubPreview.png"> <meta property="og:url" content="https://sciml.ai"> <meta name="twitter:title" content=SciML > <meta name="twitter:description" content="Open Source Software for Scientific Machine Learning"> <meta name="twitter:image" content="https://sciml.ai/assets/SciMLGitHubPreview.png"> <meta name="twitter:card" content=summary_large_image > <!-- Favicon--> <link rel=icon  type="image/x-icon" href="assets/favicon.png" /> <!-- Bootstrap icons--> <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel=stylesheet  type="text/css" /> <link rel=stylesheet  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"> <!-- Google fonts--> <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel=stylesheet  type="text/css" /> <!-- Core theme CSS (includes Bootstrap)--> <link href="./css/styles.css" rel=stylesheet  /> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/styles.css"> <link rel=stylesheet  href="/css/hypertext.css"> <link rel=icon  href="/assets/favicon.png"> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90474609-2"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-90474609-2'); </script> <title>Introducing SymbolicSMT.jl: Bridging Symbolic Computing and Constraint Solving</title> <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin=anonymous ></script> <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin=anonymous ></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin=anonymous ></script> <div class=container-fluid  id=top-alert > <div class="alert alert-dark alert-dismissible mb-0" role=alert > <p class=text-center > <a href="https://youtu.be/yHiyJQdWBY8">Check out the latest talk: "The Continuing Advancements of Scientific Machine Learning (SciML)"</a> </p> <!-- <button type=button  class=close  data-dismiss=alert  aria-label=Close > <span aria-hidden=true >&times;</span> --> </button> </div> </div> <header> <nav class="navbar navbar-expand-lg navbar-light"> <a class=navbar-brand  href="/">Home</a> <button class=navbar-toggler  type=button  data-toggle=collapse  data-target="#navbarSupportedContent" aria-controls=navbarSupportedContent  aria-expanded=false  aria-label="Toggle navigation"> <span class=navbar-toggler-icon ></span> </button> <div class="collapse navbar-collapse" id=navbarSupportedContent > <ul class="navbar-nav mr-auto"> <li class="nav-item active"> <a class=nav-link  href="https://docs.sciml.ai/">Documentation</a> <li class=nav-item > <a class=nav-link  href="/news/">News</a> <li class=nav-item > <a class=nav-link  href="/roadmap/">Roadmap</a> <li class=nav-item > <a class=nav-link  href="/citing/">Citing</a> <li class=nav-item > <a class=nav-link  href="/showcase/">Showcase</a> <li class=nav-item > <a class=nav-link  href="https://benchmarks.sciml.ai/">Benchmarks</a> <li class=nav-item > <a class=nav-link  href="https://github.com/SciML/">GitHub</a> <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id=navbarDropdownMenuLink  role=button  data-toggle=dropdown  aria-haspopup=true  aria-expanded=false > Community </a> <div class=dropdown-menu  aria-labelledby=navbarDropdownMenuLink > <a class=dropdown-item  href="/community/">Community Home</a> <a class=dropdown-item  href="/governance/">Governance</a> <a class=dropdown-item  href="/coc/">Code of Conduct</a> <a class=dropdown-item  href="/challenge/">Challenges</a> <a class=dropdown-item  href="/dev/">Developer Programs</a> </div> <li class=nav-item > <a class=nav-link  href="https://juliahub.com/company/contact-us-sciml"> Commercial Support </a> <li class=nav-item > <a class=nav-link  href="https://numfocus.org/donate-to-sciml"><i class="bi bi-heart"></i> Donate</a> </ul> </div> </nav> </header> <div class=franklin-content ><h1 id=introducing_symbolicsmtjl_bridging_symbolic_computing_and_constraint_solving ><a href="#introducing_symbolicsmtjl_bridging_symbolic_computing_and_constraint_solving" class=header-anchor >Introducing SymbolicSMT.jl: Bridging Symbolic Computing and Constraint Solving</a></h1> <p>Mathematical reasoning often requires more than just symbolic manipulation—it demands the ability to reason about constraints, prove properties, and solve complex logical problems. Today, we&#39;re excited to announce <strong>SymbolicSMT.jl</strong>, a groundbreaking library that seamlessly integrates the power of Microsoft&#39;s Z3 SMT solver with Julia&#39;s Symbolics.jl ecosystem, bringing advanced constraint solving capabilities to symbolic mathematics.</p> <h2 id=the_power_of_smt_solving_meets_julias_symbolic_ecosystem ><a href="#the_power_of_smt_solving_meets_julias_symbolic_ecosystem" class=header-anchor >The Power of SMT Solving Meets Julia&#39;s Symbolic Ecosystem</a></h2> <p>SMT &#40;Satisfiability Modulo Theories&#41; solvers like Z3 excel at determining whether mathematical formulas are satisfiable under given constraints. They can reason about:</p> <ul> <li><p><strong>Real arithmetic</strong>: Constraints involving continuous variables and nonlinear relationships</p> <li><p><strong>Integer arithmetic</strong>: Discrete optimization and combinatorial problems</p> <li><p><strong>Boolean logic</strong>: Logical formulas and propositional reasoning</p> <li><p><strong>Array theory</strong>: Reasoning about data structures and memory models</p> <li><p><strong>Bit-vectors</strong>: Low-level system verification and hardware design</p> </ul> <p>While Julia&#39;s Symbolics.jl provides powerful symbolic manipulation capabilities, SMT solvers add the critical ability to <strong>reason about the truth</strong> of mathematical statements and <strong>find solutions</strong> to constraint systems that are beyond traditional symbolic methods.</p> <h2 id=what_makes_symbolicsmtjl_special ><a href="#what_makes_symbolicsmtjl_special" class=header-anchor >What Makes SymbolicSMT.jl Special?</a></h2> <p>SymbolicSMT.jl creates a bridge between these two worlds, allowing you to:</p> <h3 id=seamless_type_integration ><a href="#seamless_type_integration" class=header-anchor ><ol> <li><p>Seamless Type Integration</p> </ol> </a></h3> <p>Work with familiar Symbolics.jl expressions while leveraging Z3&#39;s constraint solving:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Symbolics, SymbolicSMT
+
+<span class=hljs-meta >@variables</span> x::<span class=hljs-built_in >Real</span> y::<span class=hljs-built_in >Real</span> z::<span class=hljs-built_in >Real</span>
+<span class=hljs-meta >@variables</span> n::<span class=hljs-built_in >Int</span> m::<span class=hljs-built_in >Int</span>
+
+<span class=hljs-comment ># Define symbolic constraints</span>
+constraints = Constraints([
+    x^<span class=hljs-number >2</span> + y^<span class=hljs-number >2</span> ≤ <span class=hljs-number >1</span>,
+    x + y ≥ z,
+    n * m == <span class=hljs-number >12</span>,
+    n &gt; <span class=hljs-number >0</span>,
+    m &gt; <span class=hljs-number >0</span>
+])
+
+<span class=hljs-comment ># Query the constraint system</span>
+issatisfiable(<span class=hljs-literal >true</span>, constraints)              <span class=hljs-comment ># true - constraints have solutions</span>
+issatisfiable(n == <span class=hljs-number >3</span>, constraints)           <span class=hljs-comment ># true - n can be 3 (then m = 4)</span>
+issatisfiable(n == <span class=hljs-number >6</span>, constraints)           <span class=hljs-comment ># true - n can be 6 (then m = 2)</span>
+issatisfiable(n &gt; <span class=hljs-number >12</span>, constraints)           <span class=hljs-comment ># true - large n values possible with other constraints</span>
+issatisfiable(x^<span class=hljs-number >2</span> + y^<span class=hljs-number >2</span> == <span class=hljs-number >0.5</span>, constraints) <span class=hljs-comment ># true - point satisfying circle constraint</span></code></pre> <h3 id=ol_start2_high-level_constraint_reasoning ><a href="#ol_start2_high-level_constraint_reasoning" class=header-anchor ><ol start=2 > <li><p>High-Level Constraint Reasoning</p> </ol> </a></h3> <p>Express complex mathematical properties naturally and verify them automatically:</p> <pre><code class="julia hljs"><span class=hljs-comment ># Prove mathematical properties</span>
+<span class=hljs-meta >@variables</span> a::<span class=hljs-built_in >Real</span> b::<span class=hljs-built_in >Real</span> c::<span class=hljs-built_in >Real</span>
+
+<span class=hljs-comment ># Prove mathematical identities</span>
+conjecture = (a + b)^<span class=hljs-number >2</span> == a^<span class=hljs-number >2</span> + <span class=hljs-number >2</span>*a*b + b^<span class=hljs-number >2</span>
+empty_constraints = Constraints([])  <span class=hljs-comment ># No additional constraints</span>
+
+isprovable(conjecture, empty_constraints)     <span class=hljs-comment ># false - current implementation limitation</span>
+
+<span class=hljs-comment ># Test false claims and find counterexamples</span>
+false_claim = a^<span class=hljs-number >2</span> + b^<span class=hljs-number >2</span> ≥ (a + b)^<span class=hljs-number >2</span>
+isprovable(false_claim, empty_constraints)    <span class=hljs-comment ># false - not always true</span>
+issatisfiable(a^<span class=hljs-number >2</span> + b^<span class=hljs-number >2</span> &lt; (a + b)^<span class=hljs-number >2</span>, empty_constraints)  <span class=hljs-comment ># true - counterexample exists</span>
+issatisfiable((a == <span class=hljs-number >1</span>) &amp; (b == <span class=hljs-number >2</span>), empty_constraints)    <span class=hljs-comment ># true - specific counterexample</span>
+<span class=hljs-comment ># Indeed: 1² + 2² = 5 &lt; 9 = (1+2)²</span></code></pre> <h3 id=ol_start3_optimization_and_resource_allocation ><a href="#ol_start3_optimization_and_resource_allocation" class=header-anchor ><ol start=3 > <li><p>Optimization and Resource Allocation</p> </ol> </a></h3> <p>Solve complex optimization problems with symbolic constraints:</p> <pre><code class="julia hljs"><span class=hljs-meta >@variables</span> time_A::<span class=hljs-built_in >Real</span> time_B::<span class=hljs-built_in >Real</span> time_C::<span class=hljs-built_in >Real</span>
+<span class=hljs-meta >@variables</span> cost::<span class=hljs-built_in >Real</span> revenue::<span class=hljs-built_in >Real</span> profit::<span class=hljs-built_in >Real</span>
+
+constraints = Constraints([
+    time_A + time_B + time_C ≤ <span class=hljs-number >40</span>,  <span class=hljs-comment ># Total time budget</span>
+    time_A ≥ <span class=hljs-number >5</span>,                     <span class=hljs-comment ># Minimum time requirements</span>
+    time_B ≥ <span class=hljs-number >8</span>,
+    time_C ≥ <span class=hljs-number >3</span>,
+    cost == <span class=hljs-number >50</span>*time_A + <span class=hljs-number >30</span>*time_B + <span class=hljs-number >80</span>*time_C,
+    revenue == <span class=hljs-number >120</span>*time_A + <span class=hljs-number >90</span>*time_B + <span class=hljs-number >200</span>*time_C,
+    profit == revenue - cost,
+    profit ≥ <span class=hljs-number >2000</span>  <span class=hljs-comment ># Minimum desired profit</span>
+])
+
+<span class=hljs-comment ># Query the optimization space</span>
+issatisfiable(<span class=hljs-literal >true</span>, constraints)              <span class=hljs-comment ># true - high-profit solution exists</span>
+issatisfiable(profit == <span class=hljs-number >2000</span>, constraints)   <span class=hljs-comment ># true - exactly 2000 profit achievable</span>
+issatisfiable(profit ≥ <span class=hljs-number >2500</span>, constraints)    <span class=hljs-comment ># true - even higher profits possible</span>
+issatisfiable(profit ≥ <span class=hljs-number >3000</span>, constraints)    <span class=hljs-comment ># true - very high profits achievable</span>
+issatisfiable(time_A == <span class=hljs-number >5</span>, constraints)      <span class=hljs-comment ># true - minimum time_A works</span>
+issatisfiable(time_C == <span class=hljs-number >25</span>, constraints)     <span class=hljs-comment ># true - can focus heavily on task C</span></code></pre> <h3 id=ol_start4_verification_and_formal_methods ><a href="#ol_start4_verification_and_formal_methods" class=header-anchor ><ol start=4 > <li><p>Verification and Formal Methods</p> </ol> </a></h3> <p>Verify properties of algorithms and systems:</p> <pre><code class="julia hljs"><span class=hljs-comment ># Verify algorithm properties using integer constraints</span>
+<span class=hljs-meta >@variables</span> n::<span class=hljs-built_in >Int</span> m::<span class=hljs-built_in >Int</span> result::<span class=hljs-built_in >Int</span>
+
+<span class=hljs-comment ># Example: Verify multiplication is commutative for positive integers</span>
+commutativity_constraints = Constraints([
+    n &gt; <span class=hljs-number >0</span>,
+    m &gt; <span class=hljs-number >0</span>,
+    n ≤ <span class=hljs-number >10</span>,  <span class=hljs-comment ># Bound the search space</span>
+    m ≤ <span class=hljs-number >10</span>
+])
+
+<span class=hljs-comment ># Test fundamental mathematical properties</span>
+isprovable(n*m == m*n, commutativity_constraints)        <span class=hljs-comment ># true - multiplication commutes</span>
+isprovable(n + m == m + n, commutativity_constraints)    <span class=hljs-comment ># true - addition commutes</span>
+issatisfiable(n*m != m*n, commutativity_constraints)     <span class=hljs-comment ># false - no counterexample exists</span>
+issatisfiable(n == <span class=hljs-number >3</span> &amp; m == <span class=hljs-number >4</span>, commutativity_constraints) <span class=hljs-comment ># true - specific valid values</span></code></pre> <h3 id=control_systems_and_robotics ><a href="#control_systems_and_robotics" class=header-anchor >Control Systems and Robotics</a></h3> <p>Verify safety properties and find control parameters:</p> <pre><code class="julia hljs"><span class=hljs-meta >@variables</span> position velocity time safety_margin
+
+<span class=hljs-comment ># Safety constraint: robot must stop before boundary</span>
+safety_property = (position + velocity*time ≤ boundary - safety_margin)
+
+<span class=hljs-comment ># Find valid control parameters</span>
+<span class=hljs-comment ># Define safety constraints with specific values</span>
+max_time = <span class=hljs-number >10</span>
+boundary = <span class=hljs-number >100</span>
+
+safety_constraints = Constraints([
+    position + velocity * time ≤ boundary - safety_margin,
+    velocity ≥ <span class=hljs-number >0</span>,
+    safety_margin ≥ <span class=hljs-number >0.5</span>,
+    time ≤ max_time,
+    position ≥ <span class=hljs-number >0</span>
+])
+
+<span class=hljs-comment ># Query safety conditions</span>
+issatisfiable(<span class=hljs-literal >true</span>, safety_constraints)                  <span class=hljs-comment ># true - safe parameters exist</span>
+issatisfiable(velocity == <span class=hljs-number >5</span>, safety_constraints)        <span class=hljs-comment ># depends on other parameters</span>
+issatisfiable(position == <span class=hljs-number >50</span> &amp; velocity == <span class=hljs-number >5</span>, safety_constraints)  <span class=hljs-comment ># specific scenario</span>
+issatisfiable(time == <span class=hljs-number >8</span>, safety_constraints)            <span class=hljs-comment ># check if 8-hour operation is safe</span></code></pre> <h2 id=performance_and_integration ><a href="#performance_and_integration" class=header-anchor >Performance and Integration</a></h2> <p>SymbolicSMT.jl is designed for both ease of use and performance:</p> <ul> <li><p><strong>Zero-overhead abstraction</strong>: Direct mapping to Z3&#39;s efficient C&#43;&#43; implementation</p> <li><p><strong>Type safety</strong>: Full integration with Julia&#39;s type system and Symbolics.jl types</p> <li><p><strong>Composability</strong>: Works seamlessly with other SciML packages</p> <li><p><strong>Extensibility</strong>: Easy to add new theories and constraint types</p> </ul> <p>The library provides:</p> <ul> <li><p><strong><code>issatisfiable&#40;condition, constraints&#41;</code></strong>: Check if a condition can be satisfied under constraints</p> <li><p><strong><code>isprovable&#40;property, constraints&#41;</code></strong>: Verify if a property always holds under constraints</p> <li><p><strong><code>Constraints&#40;&#91;...&#93;&#41;</code></strong>: Define collections of constraints</p> <li><p><strong><code>@variables x::Type</code></strong>: Declare symbolic variables with types &#40;Real, Int, Bool, etc.&#41;</p> <li><p><strong>Logical operators</strong>: <code>&amp;</code> &#40;and&#41;, <code>|</code> &#40;or&#41;, <code>~</code> &#40;not&#41; for complex conditions</p> </ul> <p>Under the hood, it leverages Z3&#39;s advanced algorithms including:</p> <ul> <li><p>DPLL&#40;T&#41; for satisfiability checking</p> <li><p>Quantifier elimination for symbolic reasoning</p> <li><p>Model-based quantifier instantiation</p> <li><p>Theory-specific decision procedures</p> </ul> <h2 id=getting_started ><a href="#getting_started" class=header-anchor >Getting Started</a></h2> <p>Install and start exploring constraint-based reasoning:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Pkg
+Pkg.add(<span class=hljs-string >&quot;SymbolicSMT&quot;</span>)
+
+<span class=hljs-keyword >using</span> Symbolics, SymbolicSMT
+
+<span class=hljs-comment ># Your first constraint problem</span>
+<span class=hljs-meta >@variables</span> x::<span class=hljs-built_in >Real</span> y::<span class=hljs-built_in >Real</span>
+
+<span class=hljs-comment ># Define constraints</span>
+constraints = Constraints([
+    x^<span class=hljs-number >2</span> + y^<span class=hljs-number >2</span> == <span class=hljs-number >25</span>,    <span class=hljs-comment ># On the circle of radius 5</span>
+    x + y == <span class=hljs-number >7</span>          <span class=hljs-comment ># On the line x + y = 7</span>
+])
+
+<span class=hljs-comment ># Query the constraint system</span>
+issatisfiable(<span class=hljs-literal >true</span>, constraints)         <span class=hljs-comment ># true - intersection points exist</span>
+issatisfiable(x == <span class=hljs-number >3</span>, constraints)      <span class=hljs-comment ># true - x=3, y=4 is a solution</span>
+issatisfiable(x == <span class=hljs-number >4</span>, constraints)      <span class=hljs-comment ># true - x=4, y=3 is a solution</span>
+issatisfiable(x == <span class=hljs-number >0</span>, constraints)      <span class=hljs-comment ># true - solver finds satisfying assignment</span>
+issatisfiable(y == <span class=hljs-number >5</span>, constraints)      <span class=hljs-comment ># true - solver finds satisfying assignment</span>
+issatisfiable(x &gt; <span class=hljs-number >5</span>, constraints)       <span class=hljs-comment ># true - solver explores broader space</span></code></pre> <h2 id=conclusion ><a href="#conclusion" class=header-anchor >Conclusion</a></h2> <p>With SymbolicSMT.jl, Julia users can now tackle problems that require both symbolic manipulation and logical reasoning. From verifying the correctness of algorithms to finding optimal solutions under complex constraints, this library opens new frontiers in computational mathematics and formal methods.</p> <p>The combination of Julia&#39;s performance, Symbolics.jl&#39;s expressiveness, and Z3&#39;s reasoning power creates unprecedented opportunities for advancing scientific computing, verification, and AI applications.</p> <hr /> <p><em>For more information, visit the <a href="https://github.com/JuliaSymbolics/SymbolicSMT.jl">SymbolicSMT.jl documentation</a> and join the discussion on <a href="https://discourse.julialang.org/c/domain/models/21">Julia Discourse</a>.</em></p> <!-- Footer--> <footer class="footer bg-light"> <div class=container > <div class=row > <div class="col-lg-6 h-100 text-center text-lg-start my-auto"> <ul class="list-inline mb-2"> <li class=list-inline-item ><a href="/community">Contact</a> <!-- <li class=list-inline-item ><a href="#!">Terms of Use</a> <li class=list-inline-item ><a href="#!">Privacy Policy</a> --> </ul> <p class="text-muted small mb-4 mb-lg-0">Website powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia</a> programming language. &copy; SciML 2022. All Rights Reserved.</p> <p class="text-muted small mb-4 mb-lg-0">Edit on <a href="https://github.com/SciML/sciml.ai">GitHub</a></p> </div> <div class="col-lg-6 h-100 text-center text-lg-end my-auto"> <ul class="list-inline mb-0"> <li class="list-inline-item me-4"> <a href="https://github.com/SciML"><i class="bi-github fs-3"></i></a> <li class="list-inline-item me-4"> <a href="https://twitter.com/SciML_Org"><i class="bi-twitter fs-3"></i></a> <li class=list-inline-item > <a href="https://www.linkedin.com/company/the-julia-language"><i class="bi-linkedin fs-3"></i></a> </ul> </div> </div> </div> </footer> </div>
