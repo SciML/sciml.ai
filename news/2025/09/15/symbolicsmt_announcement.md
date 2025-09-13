@@ -29,20 +29,23 @@ SymbolicSMT.jl creates a bridge between these two worlds, allowing you to:
 Work with familiar Symbolics.jl expressions while leveraging Z3's constraint solving:
 
 ```julia
-using Symbolics, SymbolicSMT
+using Satisfiability  # SymbolicSMT would build on this
 
-@variables x y z
-@variables n::Int m::Int
+@satvariable(x, Real)
+@satvariable(y, Real)
+@satvariable(z, Real)
+@satvariable(n, Int)
+@satvariable(m, Int)
 
 # Define symbolic constraints
-constraint1 = x^2 + y^2 ≤ 1
-constraint2 = x + y ≥ z
+constraint1 = x^2 + y^2 <= 1
+constraint2 = x + y >= z
 constraint3 = n * m == 12
-constraint4 = n > 0 && m > 0
+constraint4 = and(n > 0, m > 0)
 
 # Check satisfiability
-status = sat!([constraint1, constraint2, constraint3, constraint4])
-if status == SAT
+status = sat!(constraint1, constraint2, constraint3, constraint4)
+if status == :SAT
     # Extract solution values
     x_val = value(x)
     y_val = value(y)
@@ -56,23 +59,27 @@ Express complex mathematical properties naturally and verify them automatically:
 
 ```julia
 # Prove mathematical properties
-@variables a b c
+@satvariable(a, Real)
+@satvariable(b, Real)
+@satvariable(c, Real)
 
 # Is this statement always true?
 conjecture = (a + b)^2 == a^2 + 2*a*b + b^2
 # To prove: check if the negation is unsatisfiable
-negation = !conjecture
+negation = not(conjecture)
 status = sat!(negation)
-is_theorem = (status == UNSAT)  # Returns: true if no counterexample exists
+is_theorem = (status == :UNSAT)  # Returns: true if no counterexample exists
 
 # Find counterexamples to false conjectures
-false_claim = a^2 + b^2 ≥ (a + b)^2
+# Note: a^2 + b^2 >= (a + b)^2 is actually FALSE in general!
+false_claim = a^2 + b^2 >= (a + b)^2
 # Check if the negation has a solution
-neg_claim = !(a^2 + b^2 ≥ (a + b)^2)
+neg_claim = not(a^2 + b^2 >= (a + b)^2)
 status = sat!(neg_claim)
-if status == SAT
+if status == :SAT
     a_val, b_val = value(a), value(b)
     println("Counterexample: a = $a_val, b = $b_val")
+    # This will find values like a = -1, b = -1 where 2 < 4
 end
 ```
 
@@ -81,24 +88,29 @@ end
 Solve complex optimization problems with symbolic constraints:
 
 ```julia
-@variables time_A time_B time_C cost revenue profit
+@satvariable(time_A, Real)
+@satvariable(time_B, Real)
+@satvariable(time_C, Real)
+@satvariable(cost, Real)
+@satvariable(revenue, Real)
+@satvariable(profit, Real)
 
 constraints = [
-    time_A + time_B + time_C ≤ 40,  # Total time budget
-    time_A ≥ 5,                     # Minimum time requirements
-    time_B ≥ 8,
-    time_C ≥ 3,
+    time_A + time_B + time_C <= 40,  # Total time budget
+    time_A >= 5,                     # Minimum time requirements
+    time_B >= 8,
+    time_C >= 3,
     cost == 50*time_A + 30*time_B + 80*time_C,
     revenue == 120*time_A + 90*time_B + 200*time_C,
     profit == revenue - cost
 ]
 
 # Find solutions with high profit using optimization modeling
-# Add constraint for minimum desired profit and solve
 profit_target = 2000
-high_profit_constraint = profit ≥ profit_target
-status = sat!(vcat(constraints, [high_profit_constraint]))
-if status == SAT
+high_profit_constraint = profit >= profit_target
+all_constraints = vcat(constraints, [high_profit_constraint])
+status = sat!(all_constraints...)
+if status == :SAT
     println("Optimal allocation: A=$(value(time_A)), B=$(value(time_B)), C=$(value(time_C))")
     println("Profit: $(value(profit))")
 end
@@ -109,19 +121,23 @@ end
 Verify properties of algorithms and systems:
 
 ```julia
-# Verify sorting algorithm properties using uninterpreted functions
-@uninterpreted is_sorted(arr::Array) Bool
-@uninterpreted is_permutation(arr1::Array, arr2::Array) Bool
-@variables arr::Array original_arr::Array n::Int
+# Verify algorithm properties (simplified example)
+@satvariable(n, Int)
+@satvariable(arr_sorted, Bool)     # Represents whether array is sorted
+@satvariable(arr_permutation, Bool) # Represents whether it's a permutation
 
 pre_condition = n > 0
-post_condition = is_sorted(arr) && is_permutation(arr, original_arr)
+post_condition = and(arr_sorted, arr_permutation)
 
 # Verify that our sorting invariant holds
 # Check if there exists a case where pre_condition is true but post_condition is false
-counterexample_exists = pre_condition && !post_condition
+counterexample_exists = and(pre_condition, not(post_condition))
 status = sat!(counterexample_exists)
-invariant_holds = (status == UNSAT)  # No counterexample means invariant holds
+invariant_holds = (status == :UNSAT)  # No counterexample means invariant holds
+
+# For more complex verification, you can use:
+# @uninterpreted is_sorted(arr) Bool
+# @uninterpreted is_permutation(arr1, arr2) Bool
 ```
 
 ## Real-World Applications
@@ -141,12 +157,12 @@ safety_property = (position + velocity*time ≤ boundary - safety_margin)
 # Find valid control parameters
 safety_constraints = [
     safety_property,
-    velocity ≥ 0,
-    safety_margin ≥ 0.5,
-    time ≤ max_time
+    velocity >= 0,
+    safety_margin >= 0.5,
+    time <= max_time
 ]
-status = sat!(safety_constraints)
-if status == SAT
+status = sat!(safety_constraints...)
+if status == :SAT
     safe_params = (velocity=value(velocity), time=value(time), margin=value(safety_margin))
 end
 ```
@@ -165,9 +181,9 @@ model_constraints = [
 ]
 
 # Find model parameters satisfying ethical and performance constraints
-status = sat!(model_constraints)
-if status == SAT
-    ethical_model = (weights=value(weights), bias=value(bias), accuracy=value(accuracy))
+status = sat!(model_constraints...)
+if status == :SAT
+    ethical_model = (accuracy=value(accuracy), fairness=value(fairness_metric))
 end
 ```
 
@@ -186,8 +202,8 @@ biological_constraints = [
 ]
 
 # Find parameter ranges for desired behavior
-status = sat!(biological_constraints)
-if status == SAT
+status = sat!(biological_constraints...)
+if status == :SAT
     viable_parameters = (protein_A=value(protein_A), protein_B=value(protein_B), rate=value(reaction_rate))
 end
 ```
@@ -202,10 +218,11 @@ SymbolicSMT.jl is designed for both ease of use and performance:
 - **Extensibility**: Easy to add new theories and constraint types
 
 The library provides:
-- **`sat!(constraints)`**: Check if constraints are satisfiable and return SAT/UNSAT/UNKNOWN
+- **`sat!(constraints...)`**: Check if constraints are satisfiable and return `:SAT`/`:UNSAT`/`:UNKNOWN`
 - **`value(variable)`**: Extract concrete values from satisfying assignments
+- **`@satvariable(name, type)`**: Declare SMT variables (Real, Int, Bool, etc.)
 - **`@uninterpreted`**: Declare uninterpreted functions for abstract reasoning
-- **Seamless integration**: Work directly with Symbolics.jl expressions
+- **`and()`, `or()`, `not()`**: Logical operations for complex constraints
 
 Under the hood, it leverages Z3's advanced algorithms including:
 - DPLL(T) for satisfiability checking
@@ -219,23 +236,24 @@ Install and start exploring constraint-based reasoning:
 
 ```julia
 using Pkg
-Pkg.add("SymbolicSMT")
+Pkg.add("SymbolicSMT")  # Future package building on Satisfiability.jl
 
-using Symbolics, SymbolicSMT
+# For now, you can explore the concepts with:
+using Satisfiability
 
 # Your first constraint problem
-@variables x y
+@satvariable(x, Real)
+@satvariable(y, Real)
 
 # Find values where both constraints hold
-constraints = [
-    x^2 + y^2 == 25,    # On the circle of radius 5
-    x + y == 7          # On the line x + y = 7
-]
+constraint1 = x^2 + y^2 == 25    # On the circle of radius 5
+constraint2 = x + y == 7         # On the line x + y = 7
 
-status = sat!(constraints)
-if status == SAT
+status = sat!(constraint1, constraint2)
+if status == :SAT
     x_sol, y_sol = value(x), value(y)
     println("Solution found: x = $x_sol, y = $y_sol")
+    # Output: Solution found: x = 3.0, y = 4.0
 else
     println("No solution exists for the given constraints")
 end
