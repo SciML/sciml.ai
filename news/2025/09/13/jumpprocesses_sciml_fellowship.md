@@ -6,7 +6,7 @@
 
 # SciML Fellowship development 2025 - JumpProcesses.jl: Introducing vr_aggregator for VariableRateJumps, GPU-enhanced SimpleTauLeaping and Extending with τ-Leap Algorithms for Jump Process Simulation
 
-![image](../../../../../assets/gsoc2025pics/siva.jpeg)
+![image](../../../../assets/gsoc2025pics/siva.jpeg)
 
  Hello! I’m [Siva Sathyaseelan D N](https://github.com/sivasathyaseeelan), a pre-final year B.Tech + M.Tech Industrial Chemistry student at IIT BHU, Varanasi, India. Over the summer of 2025, as part of the SciML Fellowship, I made significant enhancements to `JumpProcesses.jl`, a Julia package for simulating stochastic jump processes. My contributions focused on three key areas: the introduction of the `vr_aggregator` framework for handling variable rate jump processes, the development of a GPU-enhanced `SimpleTauLeaping` ensemble solver, and the extension of JumpProcesses.jl with new `τ-leaping algorithms` for efficient jump process simulations. These advancements improve performance, scalability, and usability for stochastic simulations, particularly in applications like chemical reaction networks, epidemiological models, and other systems with discrete state changes.
 
