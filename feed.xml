@@ -42,6 +42,25 @@
 
 <item>
   <title>
+    <![CDATA[  SciML Fellowship development 2025 - JumpProcesses.jl  ]]>
+  </title>
+  <link> https://sciml.ai/news/2025/09/13/jumpprocesses_sciml_fellowship/index.html </link>
+  <guid> https://sciml.ai/news/2025/09/13/jumpprocesses_sciml_fellowship/index.html </guid>
+  <description>
+    <![CDATA[  SciML Fellowship development 2025 - JumpProcesses.jl  ]]>
+  </description>  
+    
+  <pubDate>Fri, 12 Sep 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Mixed Precision Linear Solvers and Enhanced BLAS Integration in LinearSolve.jl  ]]>
   </title>
   <link> https://sciml.ai/news/2025/09/07/recent_developments/index.html </link>

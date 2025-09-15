@@ -1,0 +1,205 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <meta property="og:title" content="SciML: Open Source Software for Scientific Machine Learning"> <meta property="og:description" content="Open Source Software for Scientific Machine Learning"> <meta property="og:image" content="https://sciml.ai/assets/SciMLGitHubPreview.png"> <meta property="og:url" content="https://sciml.ai"> <meta name="twitter:title" content=SciML > <meta name="twitter:description" content="Open Source Software for Scientific Machine Learning"> <meta name="twitter:image" content="https://sciml.ai/assets/SciMLGitHubPreview.png"> <meta name="twitter:card" content=summary_large_image > <!-- Favicon--> <link rel=icon  type="image/x-icon" href="assets/favicon.png" /> <!-- Bootstrap icons--> <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel=stylesheet  type="text/css" /> <link rel=stylesheet  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"> <!-- Google fonts--> <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel=stylesheet  type="text/css" /> <!-- Core theme CSS (includes Bootstrap)--> <link href="./css/styles.css" rel=stylesheet  /> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/styles.css"> <link rel=stylesheet  href="/css/hypertext.css"> <link rel=icon  href="/assets/favicon.png"> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90474609-2"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-90474609-2'); </script> <title>SciML Fellowship development 2025 - JumpProcesses.jl</title> <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin=anonymous ></script> <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin=anonymous ></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin=anonymous ></script> <div class=container-fluid  id=top-alert > <div class="alert alert-dark alert-dismissible mb-0" role=alert > <p class=text-center > <a href="https://youtu.be/yHiyJQdWBY8">Check out the latest talk: "The Continuing Advancements of Scientific Machine Learning (SciML)"</a> </p> <!-- <button type=button  class=close  data-dismiss=alert  aria-label=Close > <span aria-hidden=true >&times;</span> --> </button> </div> </div> <header> <nav class="navbar navbar-expand-lg navbar-light"> <a class=navbar-brand  href="/">Home</a> <button class=navbar-toggler  type=button  data-toggle=collapse  data-target="#navbarSupportedContent" aria-controls=navbarSupportedContent  aria-expanded=false  aria-label="Toggle navigation"> <span class=navbar-toggler-icon ></span> </button> <div class="collapse navbar-collapse" id=navbarSupportedContent > <ul class="navbar-nav mr-auto"> <li class="nav-item active"> <a class=nav-link  href="https://docs.sciml.ai/">Documentation</a> <li class=nav-item > <a class=nav-link  href="/news/">News</a> <li class=nav-item > <a class=nav-link  href="/roadmap/">Roadmap</a> <li class=nav-item > <a class=nav-link  href="/citing/">Citing</a> <li class=nav-item > <a class=nav-link  href="/showcase/">Showcase</a> <li class=nav-item > <a class=nav-link  href="https://benchmarks.sciml.ai/">Benchmarks</a> <li class=nav-item > <a class=nav-link  href="https://github.com/SciML/">GitHub</a> <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id=navbarDropdownMenuLink  role=button  data-toggle=dropdown  aria-haspopup=true  aria-expanded=false > Community </a> <div class=dropdown-menu  aria-labelledby=navbarDropdownMenuLink > <a class=dropdown-item  href="/community/">Community Home</a> <a class=dropdown-item  href="/governance/">Governance</a> <a class=dropdown-item  href="/coc/">Code of Conduct</a> <a class=dropdown-item  href="/challenge/">Challenges</a> <a class=dropdown-item  href="/dev/">Developer Programs</a> </div> <li class=nav-item > <a class=nav-link  href="https://juliahub.com/company/contact-us-sciml"> Commercial Support </a> <li class=nav-item > <a class=nav-link  href="https://numfocus.org/donate-to-sciml"><i class="bi bi-heart"></i> Donate</a> </ul> </div> </nav> </header> <div class=franklin-content ><h1 id="sciml_fellowship_development_2025_-_jumpprocessesjl_introducing_vr_aggregator_for_variableratejumps_gpu-enhanced_simpletauleaping_and_extending_with_τ-leap_algorithms_for_jump_process_simulation"><a href="#sciml_fellowship_development_2025_-_jumpprocessesjl_introducing_vr_aggregator_for_variableratejumps_gpu-enhanced_simpletauleaping_and_extending_with_τ-leap_algorithms_for_jump_process_simulation" class=header-anchor >SciML Fellowship development 2025 - JumpProcesses.jl: Introducing vr_aggregator for VariableRateJumps, GPU-enhanced SimpleTauLeaping and Extending with τ-Leap Algorithms for Jump Process Simulation</a></h1> <p><img src="../../../../assets/gsoc2025pics/siva.jpeg" alt=image  /></p> <p>Hello&#33; I’m <a href="https://github.com/sivasathyaseeelan">Siva Sathyaseelan D N</a>, a pre-final year B.Tech &#43; M.Tech Industrial Chemistry student at IIT BHU, Varanasi, India. Over the summer of 2025, as part of the SciML Fellowship, I made significant enhancements to <code>JumpProcesses.jl</code>, a Julia package for simulating stochastic jump processes. My contributions focused on three key areas: the introduction of the <code>vr_aggregator</code> framework for handling variable rate jump processes, the development of a GPU-enhanced <code>SimpleTauLeaping</code> ensemble solver, and the extension of JumpProcesses.jl with new <code>τ-leaping algorithms</code> for efficient jump process simulations. These advancements improve performance, scalability, and usability for stochastic simulations, particularly in applications like chemical reaction networks, epidemiological models, and other systems with discrete state changes.</p> <h1 id=variable_rate_aggregator_vr_aggregator ><a href="#variable_rate_aggregator_vr_aggregator" class=header-anchor >Variable Rate Aggregator &#40;vr_aggregator&#41;</a></h1> <p>The <code>vr_aggregator</code> framework introduces a robust and flexible approach to handling variable rate jump processes, addressing limitations in previous implementations and enabling efficient simulations for systems with time-varying rates.</p> <h2 id=key_contributions ><a href="#key_contributions" class=header-anchor >Key Contributions</a></h2> <ul> <li><p><strong>VR<em>Direct and VR</em>FRM &#40;<a href="https://github.com/SciML/JumpProcesses.jl/pull/477">PR #477</a>, Merged&#41;</strong>: Introduced <code>vr_aggregator</code> with <code>VR_Direct</code> &#40;Variable Rate Direct with Constant Bounds&#41; and <code>VR_FRM</code> &#40;Variable Rate Forward Rate Mode&#41; for optimized variable rate handling.</p> <li><p><strong>Optimized VR_DirectEventCache &#40;<a href="https://github.com/SciML/JumpProcesses.jl/pull/486">PR #486</a>, Merged&#41;</strong>: Removed redundant <code>VariableRateJumps</code> structures for improved memory efficiency.</p> <li><p><strong>VR_DirectFW Aggregator &#40;<a href="https://github.com/SciML/JumpProcesses.jl/pull/488">PR #488</a>, Merged&#41;</strong>: Added forward-time optimized aggregator for frequent rate updates.</p> <li><p><strong>Bug Fixes &#40;<a href="https://github.com/SciML/JumpProcesses.jl/pull/489">PR #489</a>, Merged&#41;</strong>: Enhanced stability and reliability for edge cases.</p> <li><p><strong>Benchmarking &#40;<a href="https://github.com/SciML/SciMLBenchmarks.jl/pull/1230">PR #1230</a>, Open&#41;</strong>: Ongoing performance evaluations in <code>SciMLBenchmarks.jl</code>, showing significant improvements.</p> </ul> <h2 id=practical_examples ><a href="#practical_examples" class=header-anchor >Practical Examples</a></h2> <h3 id=example_1_variable_rate_jump_process_with_ode ><a href="#example_1_variable_rate_jump_process_with_ode" class=header-anchor >Example 1: Variable Rate Jump Process with ODE</a></h3> <p>This example demonstrates a simple ODE with two variable rate jumps, solved using different <code>vr_aggregator</code> methods &#40;<code>VR_FRM</code>, <code>VR_Direct</code>, <code>VR_DirectFW</code>&#41;.</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> JumpProcesses, DiffEqBase, StableRNGs
+
+<span class=hljs-comment ># Set random seed for reproducibility</span>
+rng = StableRNG(<span class=hljs-number >12345</span>)
+
+<span class=hljs-comment ># Define variable rate jump</span>
+rate(u, p, t) = u[<span class=hljs-number >1</span>]  <span class=hljs-comment ># State-dependent rate</span>
+affect!(integrator) = (integrator.u[<span class=hljs-number >1</span>] = integrator.u[<span class=hljs-number >1</span>] / <span class=hljs-number >2</span>)  <span class=hljs-comment ># Halve the state</span>
+jump = VariableRateJump(rate, affect!, interp_points=<span class=hljs-number >1000</span>)
+jump2 = deepcopy(jump)
+
+<span class=hljs-comment ># Define ODE</span>
+f(du, u, p, t) = (du[<span class=hljs-number >1</span>] = u[<span class=hljs-number >1</span>])  <span class=hljs-comment ># Exponential growth</span>
+prob = ODEProblem(f, [<span class=hljs-number >0.2</span>], (<span class=hljs-number >0.0</span>, <span class=hljs-number >10.0</span>))
+
+<span class=hljs-comment ># Solve with different vr_aggregators</span>
+jump_prob_vrfrm = JumpProblem(prob, jump, jump2; vr_aggregator=VR_FRM(), rng)
+sol_vrfrm = solve(jump_prob_vrfrm, Tsit5())
+
+jump_prob_vrdirect = JumpProblem(prob, jump, jump2; vr_aggregator=VR_Direct(), rng)
+sol_vrdirect = solve(jump_prob_vrdirect, Tsit5())
+
+jump_prob_vrdirectfw = JumpProblem(prob, jump, jump2; vr_aggregator=VR_DirectFW(), rng)
+sol_vrdirectfw = solve(jump_prob_vrdirectfw, Tsit5())</code></pre> <p>This example shows how to use different <code>vr_aggregator</code> methods to simulate a system where the state decreases by half at random times, driven by a state-dependent rate.</p> <h3 id=example_2_ensemble_simulation_with_birth_and_death_jumps ><a href="#example_2_ensemble_simulation_with_birth_and_death_jumps" class=header-anchor >Example 2: Ensemble Simulation with Birth and Death Jumps</a></h3> <p>This example runs an ensemble simulation of an ODE with birth and death jumps, computing the mean state across trajectories.</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> JumpProcesses, DiffEqBase, StableRNGs, Statistics
+
+<span class=hljs-comment ># Set random seed for reproducibility</span>
+rng = StableRNG(<span class=hljs-number >12345</span>)
+
+<span class=hljs-comment ># Define ODE (no continuous dynamics)</span>
+<span class=hljs-keyword >function</span> ode_fxn(du, u, p, t)
+    du .= <span class=hljs-number >0</span>
+    <span class=hljs-literal >nothing</span>
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-comment ># Define birth jump: ∅ → X</span>
+b_rate(u, p, t) = u[<span class=hljs-number >1</span>] * p[<span class=hljs-number >1</span>]  <span class=hljs-comment ># Birth rate proportional to state</span>
+birth!(integrator) = (integrator.u[<span class=hljs-number >1</span>] += <span class=hljs-number >1</span>; <span class=hljs-literal >nothing</span>)
+b_jump = VariableRateJump(b_rate, birth!)
+
+<span class=hljs-comment ># Define death jump: X → ∅</span>
+d_rate(u, p, t) = u[<span class=hljs-number >1</span>] * p[<span class=hljs-number >2</span>]  <span class=hljs-comment ># Death rate proportional to state</span>
+death!(integrator) = (integrator.u[<span class=hljs-number >1</span>] -= <span class=hljs-number >1</span>; <span class=hljs-literal >nothing</span>)
+d_jump = VariableRateJump(d_rate, death!)
+
+<span class=hljs-comment ># Set up problem</span>
+u0 = [<span class=hljs-number >1.0</span>]  <span class=hljs-comment ># Initial state</span>
+tspan = (<span class=hljs-number >0.0</span>, <span class=hljs-number >4.0</span>)
+p = [<span class=hljs-number >2.0</span>, <span class=hljs-number >1.0</span>]  <span class=hljs-comment ># Birth and death rates</span>
+prob = ODEProblem(ode_fxn, u0, tspan, p)
+
+<span class=hljs-comment ># Run ensemble simulation</span>
+Nsims = <span class=hljs-number >1000</span>
+jump_prob = JumpProblem(prob, b_jump, d_jump; vr_aggregator=VR_FRM(), rng)
+ensemble = EnsembleProblem(jump_prob)
+sol = solve(ensemble, Tsit5(), trajectories=Nsims, save_everystep=<span class=hljs-literal >false</span>)
+
+<span class=hljs-comment ># Compute mean state at end</span>
+mean_state = mean(sol.u[i][<span class=hljs-number >1</span>] <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:Nsims)
+println(<span class=hljs-string >&quot;Mean state at t=<span class=hljs-subst >$(tspan[<span class=hljs-number >2</span>])</span>: <span class=hljs-variable >$mean_state</span>&quot;</span>)</code></pre> <p>This example models a birth-death process and computes the average state across 1000 trajectories, showcasing the use of <code>vr_aggregator</code> in ensemble simulations.</p> <h1 id=gpu-enhanced_simpletauleaping_ensemble_solver ><a href="#gpu-enhanced_simpletauleaping_ensemble_solver" class=header-anchor >GPU-Enhanced SimpleTauLeaping Ensemble Solver</a></h1> <p>The <code>SimpleTauLeaping</code> solver leverages GPU parallelism to accelerate large-scale ensemble simulations by approximating multiple jump events in a single time step, significantly reducing computational cost for systems with high event rates.</p> <h2 id=key_contributions__2 ><a href="#key_contributions__2" class=header-anchor >Key Contributions</a></h2> <ul> <li><p><strong>GPU Kernels for SimpleTauLeaping &#40;<a href="https://github.com/SciML/JumpProcesses.jl/pull/490">PR #490</a>, Merged&#41;</strong>: Implemented parallelized leap steps for high performance on NVIDIA GPUs.</p> <li><p><strong>GPU-Compatible Poisson Sampling &#40;<a href="https://github.com/SciML/JumpProcesses.jl/pull/512">PR #512</a>, Merged; <a href="https://github.com/SciML/PoissonRandom.jl/pull/54">PR #54</a>, Merged&#41;</strong>: Optimized Poisson random number generation for GPU-based jump events, enhancing simulation efficiency.</p> </ul> <p>GPU enhancements parallelize these steps across thousands of trajectories, achieving up to 10x speedups for large ensemble simulations on NVIDIA GPUs.</p> <h2 id=practical_examples__2 ><a href="#practical_examples__2" class=header-anchor >Practical Examples</a></h2> <h3 id=example_1_sir_model_with_influx ><a href="#example_1_sir_model_with_influx" class=header-anchor >Example 1: SIR Model with Influx</a></h3> <p>This example simulates an SIR epidemiological model with an influx of susceptible individuals, comparing GPU and serial implementations of <code>SimpleTauLeaping</code>.</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> JumpProcesses, DiffEqBase, StableRNGs, Statistics, CUDA
+
+<span class=hljs-comment ># Set random seed for reproducibility</span>
+rng = StableRNG(<span class=hljs-number >12345</span>)
+
+<span class=hljs-comment ># Define SIR model parameters</span>
+β = <span class=hljs-number >0.1</span> / <span class=hljs-number >1000.0</span>  <span class=hljs-comment ># Infection rate</span>
+ν = <span class=hljs-number >0.01</span>           <span class=hljs-comment ># Recovery rate</span>
+influx_rate = <span class=hljs-number >1.0</span>  <span class=hljs-comment ># Influx rate</span>
+p = (β, ν, influx_rate)
+
+<span class=hljs-comment ># Define jump rates</span>
+regular_rate = (out, u, p, t) -&gt; <span class=hljs-keyword >begin</span>
+    out[<span class=hljs-number >1</span>] = p[<span class=hljs-number >1</span>] * u[<span class=hljs-number >1</span>] * u[<span class=hljs-number >2</span>]  <span class=hljs-comment ># β*S*I (infection)</span>
+    out[<span class=hljs-number >2</span>] = p[<span class=hljs-number >2</span>] * u[<span class=hljs-number >2</span>]         <span class=hljs-comment ># ν*I (recovery)</span>
+    out[<span class=hljs-number >3</span>] = p[<span class=hljs-number >3</span>]                <span class=hljs-comment ># influx_rate</span>
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-comment ># Define state changes</span>
+regular_c = (dc, u, p, t, counts, mark) -&gt; <span class=hljs-keyword >begin</span>
+    dc .= <span class=hljs-number >0.0</span>
+    dc[<span class=hljs-number >1</span>] = -counts[<span class=hljs-number >1</span>] + counts[<span class=hljs-number >3</span>]  <span class=hljs-comment ># S: -infection + influx</span>
+    dc[<span class=hljs-number >2</span>] = counts[<span class=hljs-number >1</span>] - counts[<span class=hljs-number >2</span>]   <span class=hljs-comment ># I: +infection - recovery</span>
+    dc[<span class=hljs-number >3</span>] = counts[<span class=hljs-number >2</span>]               <span class=hljs-comment ># R: +recovery</span>
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-comment ># Set up problem</span>
+u0 = [<span class=hljs-number >999.0</span>, <span class=hljs-number >10.0</span>, <span class=hljs-number >0.0</span>]  <span class=hljs-comment ># S, I, R</span>
+tspan = (<span class=hljs-number >0.0</span>, <span class=hljs-number >250.0</span>)
+prob_disc = DiscreteProblem(u0, tspan, p)
+rj = RegularJump(regular_rate, regular_c, <span class=hljs-number >3</span>)
+jump_prob = JumpProblem(prob_disc, PureLeaping(), rj)
+
+<span class=hljs-comment ># Run ensemble simulations</span>
+Nsims = <span class=hljs-number >100_000</span>
+sol_gpu = solve(EnsembleProblem(jump_prob), SimpleTauLeaping(),
+    EnsembleGPUKernel(CUDABackend()); trajectories=Nsims, dt=<span class=hljs-number >1.0</span>)
+mean_gpu = mean(sol.u[i][<span class=hljs-number >1</span>, <span class=hljs-keyword >end</span>] <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:Nsims)
+
+sol_serial = solve(EnsembleProblem(jump_prob), SimpleTauLeaping(),
+    EnsembleSerial(); trajectories=Nsims, dt=<span class=hljs-number >1.0</span>)
+mean_serial = mean(sol.u[i][<span class=hljs-number >1</span>, <span class=hljs-keyword >end</span>] <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:Nsims)
+println(<span class=hljs-string >&quot;GPU mean (S at t=<span class=hljs-subst >$(tspan[<span class=hljs-number >2</span>])</span>): <span class=hljs-variable >$mean_gpu</span>, Serial mean: <span class=hljs-variable >$mean_serial</span>&quot;</span>)</code></pre> <h3 id=example_2_seir_model_with_exposed_compartment ><a href="#example_2_seir_model_with_exposed_compartment" class=header-anchor >Example 2: SEIR Model with Exposed Compartment</a></h3> <p>This example simulates an SEIR epidemiological model with an exposed compartment, using <code>SimpleTauLeaping</code> with GPU acceleration.</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> JumpProcesses, DiffEqBase, StableRNGs, Statistics, CUDA
+
+<span class=hljs-comment ># Set random seed for reproducibility</span>
+rng = StableRNG(<span class=hljs-number >12345</span>)
+
+<span class=hljs-comment ># Define SEIR model parameters</span>
+β = <span class=hljs-number >0.3</span> / <span class=hljs-number >1000.0</span>  <span class=hljs-comment ># Infection rate</span>
+σ = <span class=hljs-number >0.2</span>           <span class=hljs-comment ># Progression rate</span>
+ν = <span class=hljs-number >0.01</span>          <span class=hljs-comment ># Recovery rate</span>
+p = (β, σ, ν)
+
+<span class=hljs-comment ># Define jump rates</span>
+regular_rate = (out, u, p, t) -&gt; <span class=hljs-keyword >begin</span>
+    out[<span class=hljs-number >1</span>] = p[<span class=hljs-number >1</span>] * u[<span class=hljs-number >1</span>] * u[<span class=hljs-number >3</span>]  <span class=hljs-comment ># β*S*I (infection)</span>
+    out[<span class=hljs-number >2</span>] = p[<span class=hljs-number >2</span>] * u[<span class=hljs-number >2</span>]         <span class=hljs-comment ># σ*E (progression)</span>
+    out[<span class=hljs-number >3</span>] = p[<span class=hljs-number >3</span>] * u[<span class=hljs-number >3</span>]         <span class=hljs-comment ># ν*I (recovery)</span>
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-comment ># Define state changes</span>
+regular_c = (dc, u, p, t, counts, mark) -&gt; <span class=hljs-keyword >begin</span>
+    dc .= <span class=hljs-number >0.0</span>
+    dc[<span class=hljs-number >1</span>] = -counts[<span class=hljs-number >1</span>]           <span class=hljs-comment ># S: -infection</span>
+    dc[<span class=hljs-number >2</span>] = counts[<span class=hljs-number >1</span>] - counts[<span class=hljs-number >2</span>] <span class=hljs-comment ># E: +infection - progression</span>
+    dc[<span class=hljs-number >3</span>] = counts[<span class=hljs-number >2</span>] - counts[<span class=hljs-number >3</span>] <span class=hljs-comment ># I: +progression - recovery</span>
+    dc[<span class=hljs-number >4</span>] = counts[<span class=hljs-number >3</span>]            <span class=hljs-comment ># R: +recovery</span>
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-comment ># Set up problem</span>
+u0 = [<span class=hljs-number >999.0</span>, <span class=hljs-number >0.0</span>, <span class=hljs-number >10.0</span>, <span class=hljs-number >0.0</span>]  <span class=hljs-comment ># S, E, I, R</span>
+tspan = (<span class=hljs-number >0.0</span>, <span class=hljs-number >250.0</span>)
+prob_disc = DiscreteProblem(u0, tspan, p)
+rj = RegularJump(regular_rate, regular_c, <span class=hljs-number >3</span>)
+jump_prob = JumpProblem(prob_disc, PureLeaping(), rj; rng=StableRNG(<span class=hljs-number >12345</span>))
+
+<span class=hljs-comment ># Run ensemble simulations</span>
+Nsims = <span class=hljs-number >100_000</span>
+sol_gpu = solve(EnsembleProblem(jump_prob), SimpleTauLeaping(),
+    EnsembleGPUKernel(CUDABackend()); trajectories=Nsims, dt=<span class=hljs-number >1.0</span>)
+mean_gpu = mean(sol.u[i][<span class=hljs-keyword >end</span>, <span class=hljs-keyword >end</span>] <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:Nsims)
+
+sol_serial = solve(EnsembleProblem(jump_prob), SimpleTauLeaping(),
+    EnsembleSerial(); trajectories=Nsims, dt=<span class=hljs-number >1.0</span>)
+mean_serial = mean(sol.u[i][<span class=hljs-keyword >end</span>, <span class=hljs-keyword >end</span>] <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:Nsims)
+println(<span class=hljs-string >&quot;GPU mean (R at t=<span class=hljs-subst >$(tspan[<span class=hljs-number >2</span>])</span>): <span class=hljs-variable >$mean_gpu</span>, Serial mean: <span class=hljs-variable >$mean_serial</span>&quot;</span>)</code></pre> <h1 id="extending_jumpprocessesjl_with_τ-leap_algorithms"><a href="#extending_jumpprocessesjl_with_τ-leap_algorithms" class=header-anchor >Extending JumpProcesses.jl with τ-Leap Algorithms</a></h1> <p>The introduction of new <code>τ-leaping algorithms</code> extends JumpProcesses.jl to provide flexible and efficient methods for simulating jump processes, catering to diverse system dynamics, from non-stiff to highly stiff systems.</p> <h2 id=key_contributions__3 ><a href="#key_contributions__3" class=header-anchor >Key Contributions</a></h2> <ul> <li><p><strong>SimpleExplicitTauLeaping &#40;<a href="https://github.com/SciML/JumpProcesses.jl/pull/513">PR #513</a>, Open&#41;</strong>: An explicit solver for non-stiff systems, offering fast simulations where stability is not a concern.</p> <li><p><strong>SimpleImplicitTauLeaping &#40;<a href="https://github.com/SciML/JumpProcesses.jl/pull/500">PR #500</a>, Open&#41;</strong>: An implicit solver for stiff jump processes, ensuring stability in systems with large rate disparities.</p> <li><p><strong>SimpleAdaptiveTauLeaping &#40;<a href="https://github.com/SciML/JumpProcesses.jl/pull/524">PR #524</a>, Open&#41;</strong>: An adaptive solver that dynamically adjusts leap sizes to balance accuracy and performance.</p> </ul> <h2 id=practical_examples__3 ><a href="#practical_examples__3" class=header-anchor >Practical Examples</a></h2> <h3 id="example_1_birth-death_process_with_explicit_τ-leaping"><a href="#example_1_birth-death_process_with_explicit_τ-leaping" class=header-anchor >Example 1: Birth-Death Process with Explicit τ-Leaping</a></h3> <p>This example simulates a non-stiff birth-death process using <code>SimpleExplicitTauLeaping</code>, suitable for systems with balanced rates.</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> JumpProcesses, DiffEqBase, StableRNGs, Plots
+
+<span class=hljs-comment ># Set random seed for reproducibility</span>
+rng = StableRNG(<span class=hljs-number >12345</span>)
+
+<span class=hljs-comment ># Define birth-death system</span>
+<span class=hljs-keyword >function</span> define_birth_death_system()
+    c = (<span class=hljs-number >0.5</span>, <span class=hljs-number >0.5</span>)  <span class=hljs-comment ># Birth and death rates</span>
+    <span class=hljs-comment ># Reaction 1: Birth (∅ → X)</span>
+    reactant_stoich1 = []  <span class=hljs-comment ># No reactants consumed</span>
+    net_stoich1 = [<span class=hljs-built_in >Pair</span>(<span class=hljs-number >1</span>, <span class=hljs-number >1</span>)]  <span class=hljs-comment ># X +1</span>
+    <span class=hljs-comment ># Reaction 2: Death (X → ∅)</span>
+    reactant_stoich2 = [<span class=hljs-built_in >Pair</span>(<span class=hljs-number >1</span>, <span class=hljs-number >1</span>)]  <span class=hljs-comment ># X consumed</span>
+    net_stoich2 = [<span class=hljs-built_in >Pair</span>(<span class=hljs-number >1</span>, -<span class=hljs-number >1</span>)]  <span class=hljs-comment ># X -1</span>
+    jumps = MassActionJump([c[<span class=hljs-number >1</span>], c[<span class=hljs-number >2</span>]], [reactant_stoich1, reactant_stoich2], 
+                          [net_stoich1, net_stoich2])
+    <span class=hljs-keyword >return</span> jumps
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-comment ># Set up problem</span>
+u0 = [<span class=hljs-number >10</span>]  <span class=hljs-comment ># Initial population</span>
+tspan = (<span class=hljs-number >0.0</span>, <span class=hljs-number >10.0</span>)
+prob = DiscreteProblem(u0, tspan, <span class=hljs-literal >nothing</span>)
+jump_prob = JumpProblem(prob, PureLeaping(), define_birth_death_system())
+
+<span class=hljs-comment ># Solve with SimpleExplicitTauLeaping</span>
+sol_explicit = solve(jump_prob, SimpleExplicitTauLeaping(); saveat=<span class=hljs-number >0.01</span>)
+plot(sol_explicit, label=<span class=hljs-string >&quot;Population&quot;</span>, title=<span class=hljs-string >&quot;Explicit Tau-Leaping: Birth-Death Process&quot;</span>)</code></pre> <h3 id="example_2_stiff_system_with_implicit_and_adaptive_τ-leaping"><a href="#example_2_stiff_system_with_implicit_and_adaptive_τ-leaping" class=header-anchor >Example 2: Stiff System with Implicit and Adaptive τ-Leaping</a></h3> <p>This example simulates a stiff chemical reaction system from Cao et al. &#40;2007&#41; using <code>SimpleImplicitTauLeaping</code> and <code>SimpleAdaptiveTauLeaping</code>.</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> JumpProcesses, DiffEqBase, StableRNGs, Plots
+
+<span class=hljs-comment ># Set random seed for reproducibility</span>
+rng = StableRNG(<span class=hljs-number >12345</span>)
+
+<span class=hljs-comment ># Define stiff system (Cao et al., 2007)</span>
+<span class=hljs-keyword >function</span> define_stiff_system()
+    c = (<span class=hljs-number >1000.0</span>, <span class=hljs-number >1000.0</span>, <span class=hljs-number >1.0</span>)  <span class=hljs-comment ># Rate constants</span>
+    <span class=hljs-comment ># Reaction 1: S1 → S2</span>
+    reactant_stoich1 = [<span class=hljs-built_in >Pair</span>(<span class=hljs-number >1</span>, <span class=hljs-number >1</span>)]  <span class=hljs-comment ># S1 consumed</span>
+    net_stoich1 = [<span class=hljs-built_in >Pair</span>(<span class=hljs-number >1</span>, -<span class=hljs-number >1</span>), <span class=hljs-built_in >Pair</span>(<span class=hljs-number >2</span>, <span class=hljs-number >1</span>)]  <span class=hljs-comment ># S1 -1, S2 +1</span>
+    <span class=hljs-comment ># Reaction 2: S2 → S1</span>
+    reactant_stoich2 = [<span class=hljs-built_in >Pair</span>(<span class=hljs-number >2</span>, <span class=hljs-number >1</span>)]  <span class=hljs-comment ># S2 consumed</span>
+    net_stoich2 = [<span class=hljs-built_in >Pair</span>(<span class=hljs-number >1</span>, <span class=hljs-number >1</span>), <span class=hljs-built_in >Pair</span>(<span class=hljs-number >2</span>, -<span class=hljs-number >1</span>)]  <span class=hljs-comment ># S1 +1, S2 -1</span>
+    <span class=hljs-comment ># Reaction 3: S2 → S3</span>
+    reactant_stoich3 = [<span class=hljs-built_in >Pair</span>(<span class=hljs-number >2</span>, <span class=hljs-number >1</span>)]  <span class=hljs-comment ># S2 consumed</span>
+    net_stoich3 = [<span class=hljs-built_in >Pair</span>(<span class=hljs-number >2</span>, -<span class=hljs-number >1</span>), <span class=hljs-built_in >Pair</span>(<span class=hljs-number >3</span>, <span class=hljs-number >1</span>)]  <span class=hljs-comment ># S2 -1, S3 +1</span>
+    jumps = MassActionJump([c[<span class=hljs-number >1</span>], c[<span class=hljs-number >2</span>], c[<span class=hljs-number >3</span>]], [reactant_stoich1, reactant_stoich2, reactant_stoich3], 
+                          [net_stoich1, net_stoich2, net_stoich3])
+    <span class=hljs-keyword >return</span> jumps
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-comment ># Set up problem</span>
+u0 = [<span class=hljs-number >100</span>, <span class=hljs-number >0</span>, <span class=hljs-number >0</span>]  <span class=hljs-comment ># S1=100, S2=0, S3=0</span>
+tspan = (<span class=hljs-number >0.0</span>, <span class=hljs-number >5.0</span>)
+prob = DiscreteProblem(u0, tspan, <span class=hljs-literal >nothing</span>)
+jump_prob = JumpProblem(prob, PureLeaping(), define_stiff_system())
+
+<span class=hljs-comment ># Solve with SimpleImplicitTauLeaping</span>
+sol_implicit = solve(jump_prob, SimpleImplicitTauLeaping(); saveat=<span class=hljs-number >0.01</span>)
+plot(sol_implicit, label=[<span class=hljs-string >&quot;S1&quot;</span> <span class=hljs-string >&quot;S2&quot;</span> <span class=hljs-string >&quot;S3&quot;</span>], title=<span class=hljs-string >&quot;Implicit Tau-Leaping&quot;</span>)
+
+<span class=hljs-comment ># Solve with SimpleAdaptiveTauLeaping</span>
+sol_adaptive = solve(jump_prob, SimpleAdaptiveTauLeaping(); saveat=<span class=hljs-number >0.001</span>)
+plot(sol_adaptive, label=[<span class=hljs-string >&quot;S1&quot;</span> <span class=hljs-string >&quot;S2&quot;</span> <span class=hljs-string >&quot;S3&quot;</span>], title=<span class=hljs-string >&quot;Adaptive Tau-Leaping&quot;</span>)</code></pre> <h1 id=future_work_includes ><a href="#future_work_includes" class=header-anchor >Future Work Includes</a></h1> <p>These contributions lay the foundation for further advancements in JumpProcesses.jl:</p> <ul> <li><p><strong>Merging τ-Leap Algorithms</strong>: Finalize and merge SimpleExplicitTauLeaping, SimpleImplicitTauLeaping, and SimpleAdaptiveTauLeaping to make them available to users.</p> <li><p><strong>Benchmarking</strong>: Complete performance evaluations for τ-leaping algorithms in SciMLBenchmarks.jl to quantify their benefits.</p> <li><p><strong>Documentation</strong>: Develop comprehensive documentation, including usage guides and performance tips for τ-leaping algorithms.</p> <li><p><strong>GPU-Enhanced SSAStepper</strong>: Extend GPU support to the SSAStepper for exact stochastic ensemble simulations, complementing the approximate τ-leaping methods.</p> </ul> <p>These developments enhance the SciML ecosystem’s capabilities for stochastic modeling, providing researchers with powerful tools for simulating complex systems.</p> <h1 id=acknowledgments ><a href="#acknowledgments" class=header-anchor >Acknowledgments</a></h1> <p>Thank you <a href="https://github.com/isaacsas">Professor Dr. Samuel A. Isaacson</a> and <a href="https://github.com/ChrisRackauckas">Dr. Christopher Rackauckas</a>, for your incredible guidance and support throughout the SciML Fellowship program. Your expertise, encouragement, and constructive feedback during this fellowship is invaluable in helping me navigate the complexities of the project. Your mentorship not only enhanced my technical skills but also inspired me to grow as a contributor to the open-source community. Thank you for your time, patience, and dedication to my learning journey&#33;</p> <!-- Footer--> <footer class="footer bg-light"> <div class=container > <div class=row > <div class="col-lg-6 h-100 text-center text-lg-start my-auto"> <ul class="list-inline mb-2"> <li class=list-inline-item ><a href="/community">Contact</a> <!-- <li class=list-inline-item ><a href="#!">Terms of Use</a> <li class=list-inline-item ><a href="#!">Privacy Policy</a> --> </ul> <p class="text-muted small mb-4 mb-lg-0">Website powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia</a> programming language. &copy; SciML 2022. All Rights Reserved.</p> <p class="text-muted small mb-4 mb-lg-0">Edit on <a href="https://github.com/SciML/sciml.ai">GitHub</a></p> </div> <div class="col-lg-6 h-100 text-center text-lg-end my-auto"> <ul class="list-inline mb-0"> <li class="list-inline-item me-4"> <a href="https://github.com/SciML"><i class="bi-github fs-3"></i></a> <li class="list-inline-item me-4"> <a href="https://twitter.com/SciML_Org"><i class="bi-twitter fs-3"></i></a> <li class=list-inline-item > <a href="https://www.linkedin.com/company/the-julia-language"><i class="bi-linkedin fs-3"></i></a> </ul> </div> </div> </div> </footer> </div>
