@@ -1,18 +1,46 @@
 @def rss_pubdate = Date(2025,9,17)
-@def rss = """Sundials.jl v5.0: Major Update with Breaking Changes for Safer DAE Solving"""
+@def rss = """Sundials.jl v5.0: Update to SUNDIALS v7 and Improved DAE Initialization"""
 @def published = " 17 September 2025 "
-@def title = "Sundials.jl v5.0: Major Update with Breaking Changes for Safer DAE Solving"
+@def title = "Sundials.jl v5.0: Update to SUNDIALS v7 and Improved DAE Initialization"
 @def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>"""
 
-# Sundials.jl v5.0: Major Update with Breaking Changes for Safer DAE Solving
+# Sundials.jl v5.0: Update to SUNDIALS v7 and Improved DAE Initialization
 
 We're excited to announce the release of **Sundials.jl v5.0**, a major update that brings significant improvements to differential-algebraic equation (DAE) solving, upgrades to the latest Sundials C library, and enhanced integration with the SciML ecosystem. This release includes important breaking changes designed to improve safety, clarity, and performance when solving DAEs.
 
-## Why the Breaking Changes?
+## Why the Breaking Changes? How is this related to coming DifferentialEquations.jl v8 and OrdinaryDiffEq v7 breaking changes?
 
-After extensive experience with users encountering subtle bugs from automatic DAE initialization, we've made the difficult but necessary decision to change the default behavior. Previously, IDA would silently attempt to compute consistent initial conditions, which could sometimes produce incorrect results without any warning. This led to hard-to-debug issues where simulations would run but produce physically meaningless results.
+Sundials.jl is the first library in the set getting a major breaking change. If you aren't aware, check out the 
+[the State of SciML extended edition](https://www.youtube.com/watch?v=SZZ0lT8DVRo) which discusses the major changes coming to the SciML differential equation solvers. The main things are:
 
-With v5.0, we're prioritizing **correctness and clarity** over convenience. The new approach ensures users are aware of initialization requirements and can make informed decisions about their solving strategy.
+1. Simplifying the DifferentialEquations.jl library's dependencies to only be ODEs
+2. Simplifying OrdinaryDiffEq.jl's dependencies to just the standard default algorithms
+3. Changing the default DAE initialization to `CheckInit`, i.e. don't change `u0` without the user opting into allowing things to change (except with
+   ModelingToolkit.jl, because it strictly enforces equations vs guesses behavior)
+4. No initialization ran by default after a callback, i.e. use the callback.initalizealg (which defaults to `CheckInit`) after a callback on a DAE
+
+While the (1) and (2) are not so related, (3) and (4) are breaking changes because what used to just `solve(prob, IDA())` would now be 
+`solve(prob, IDA(), initializealg = BrownFullBasicInit())` as otherwise your `du0` guess needs to be correct. Is `du0` respected or a guess?
+Is `u0` respected or a guess? In the previous semanitcs it was a bit of "it depends". Thus we have been wanting to impose a change to `CheckInit`,
+which means by default DAE consistency is checked and you get an error if the initial conditions are not consistent, but then it's easy to change to
+different documented behaviors:
+
+* `BrownFullBasicInit()`: treat the differential variables as known and change `u0` for the algebraic variables, and also change `du0` to be consistent
+* `ShampineCollocationInit()`: treat all initial values as guesses and change `u0`/`du0` to be consistent to the DAE definition
+
+Etc. With this, you never need to go "wait, but I set `u0[2] = 2.0...` but the solver then used `u0[2] = 4.0`!", with this change of semanitcs it will never
+change values without you declaring that it's a changable guess (and ModelingToolkit.jl then keeps the same semantics, as that's the v10 semantics).  This led to 
+hard-to-debug issues where simulations would run but produce physically meaningless results. It was the documented semantics, but if users didn't know this
+detail, it can be very difficult for them to figure out why their initial conditions could be ignored. Thus we're prioritizing **correctness and clarity** over 
+convenience. The new approach ensures users are aware of initialization requirements and can make informed decisions about their solving strategy.
+
+However... how do we roll this out across the ecosystem?
+
+It just so happened that other changes in the ecosystem made it possible to update the underlying SUNDIALS binary from v5.4 to v7, which itself is already a breaking
+change requiring a major. Thus to keep things simple, we have decided to also update the Sundials.jl initialization to its "final form". DifferentialEquations.jl
+and OrdinaryDiffEq.jl will soon follow, hopefully before the end of the year.
+
+So with that said... let's get to the changes.
 
 ## Major Changes in v5.0
 
@@ -20,10 +48,10 @@ With v5.0, we're prioritizing **correctness and clarity** over convenience. The 
 
 The most significant change affects all users of the IDA solver for DAE problems. The new default behavior validates initial conditions rather than automatically modifying them.
 
-**Before (v4.x):** Automatic initialization could silently produce incorrect results
+**Before (v4.x):** Automatic initialization could silently change the `u0` parts for the algebraic variables.
 ```julia
 prob = DAEProblem(f, du0, u0, tspan, differential_vars=differential_vars)
-sol = solve(prob, IDA())  # Might silently compute wrong initial conditions
+sol = solve(prob, IDA())  # Might change `u0` before solving, specifically the algebraic variables by default
 ```
 
 **After (v5.0):** Explicit initialization choice required
@@ -32,12 +60,15 @@ using DiffEqBase: BrownFullBasicInit
 
 prob = DAEProblem(f, du0, u0, tspan, differential_vars=differential_vars)
 
-# Option 1: Request automatic initialization (recommended for most users)
-sol = solve(prob, IDA(), initializealg=BrownFullBasicInit())
+sol = solve(prob, IDA()) # Solves with CheckInit, i.e. it fails if `(du0, u0, p, t)` is not consistent
 
-# Option 2: Provide consistent initial conditions
-# Ensure du0 and u0 satisfy f(du0, u0, p, t0) = 0
-sol = solve(prob, IDA())  # Will validate and error if inconsistent
+# Option 1: Request automatic initialization of algebraic variables (recommended for most users)
+# Automatically changes the part of `u0` for the algebraic variables and all of `du0` to get a consistent set
+sol = solve(prob, IDA(), initializealg=BrownFullBasicInit()) 
+
+# Option 2: Request automatic initialization of all variables
+# Automatically changes `u0` and `du0` to get a consistent set
+sol = solve(prob, IDA(), initializealg=ShampineCollocationInit())
 ```
 
 ### Available Initialization Algorithms
@@ -51,7 +82,7 @@ Sundials.jl v5.0 supports multiple initialization strategies through the `initia
 
 ### 2. Upgrade to Sundials v7 C Library
 
-We've upgraded from Sundials v6 to v7, bringing improved performance and new features. This introduces breaking changes for users of the low-level C API:
+We've upgraded from Sundials v5 to v7, bringing improved performance and new features. This introduces breaking changes for users of the low-level C API:
 
 **Key Change:** All Sundials objects now require a `SUNContext` for thread safety and better resource management.
 
@@ -72,11 +103,11 @@ SUNContext_Free(ctx)
 
 ### 3. Enhanced ModelingToolkit Integration
 
-CVODE and ARKODE now fully support the `initializealg` parameter, enabling seamless integration with ModelingToolkit's parameter initialization system. This is particularly important for large-scale models with complex initialization requirements.
+IDA, CVODE and ARKODE now fully support the `initializealg` parameter, enabling seamless integration with ModelingToolkit's parameter initialization system. This is particularly important for large-scale models with complex initialization requirements.
 
 ```julia
 # Automatic handling of ModelingToolkit initialization
-sol = solve(prob, CVODE_BDF())  # Uses DefaultInit() which detects MT requirements
+sol = solve(prob, CVODE_BDF())  # Uses DefaultInit() which detects MTK requirements, i.e. OverrideInit()
 ```
 
 ## Migration Guide
@@ -123,23 +154,8 @@ While breaking changes are never easy, we believe these updates position Sundial
 
 The upgrade to Sundials v7 also opens doors for future enhancements, including better GPU support and improved parallel solving capabilities that we plan to expose in future releases.
 
-## Getting Started
-
-To upgrade to Sundials.jl v5.0:
-
-```julia
-using Pkg
-Pkg.update("Sundials")
-```
-
-For detailed documentation and examples, visit the [Sundials.jl documentation](https://docs.sciml.ai/Sundials/stable/).
-
 ## Acknowledgments
 
 We thank the entire SciML community for their feedback and patience as we worked through these important changes. Special thanks to the Sundials team at LLNL for their continued development of the underlying C library.
 
 If you encounter any issues during migration, please don't hesitate to open an issue on the [Sundials.jl GitHub repository](https://github.com/SciML/Sundials.jl) or ask questions on the [Julia Discourse](https://discourse.julialang.org/) forums.
-
-## Conclusion
-
-Sundials.jl v5.0 represents a significant step forward in DAE solving within the Julia ecosystem. While the breaking changes require some code updates, they ultimately lead to more reliable, maintainable, and correct scientific computing code. We're confident these changes will benefit the community in the long run and look forward to seeing what you build with the improved solver capabilities.
