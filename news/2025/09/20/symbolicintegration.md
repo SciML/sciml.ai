@@ -8,7 +8,7 @@
 
 We're excited to highlight the growing symbolic integration capabilities in the Julia ecosystem, particularly with **SymbolicIntegration.jl** and its integration with the broader Symbolics.jl ecosystem. These packages bring powerful symbolic integration algorithms to Julia, combining ease of use with sophisticated mathematical techniques.
 
-## The Julia Advantage: Multiple Approaches to Symbolic Integration
+## The Julia Symbolics.jl Approach to Symbolic Integration: Implement and Support A Variety of Algorithms with Different Properties
 
 The Julia ecosystem now offers several complementary approaches to symbolic integration, each with unique strengths:
 
@@ -18,7 +18,7 @@ The Julia ecosystem now offers several complementary approaches to symbolic inte
 
 - **Native Julia implementation**: No external dependencies on other CAS systems
 - **Risch algorithm components**: Implementation of parts of the famous Risch algorithm for transcendental functions
-- **Rule-based methods**: Classical pattern-matching approaches for common integral forms
+- **Rule-based methods**: Classical pattern-matching approaches for common integral forms (built from [RUBI](https://rulebasedintegration.org/))
 - **Extensible architecture**: Built on AbstractAlgebra.jl for generic algorithm implementations
 
 Currently supports:
@@ -39,7 +39,7 @@ Currently supports:
 [SymbolicNumericIntegration.jl](https://github.com/SciML/SymbolicNumericIntegration.jl) takes an innovative approach by combining symbolic and numerical techniques:
 
 - **Hybrid algorithm**: Uses randomized algorithms with sparse regression
-- **SINDy-inspired**: Adapts techniques from Sparse Identification of Nonlinear Dynamics
+- **Symbolic Regression Based**: Adapts techniques from Sparse Identification of Nonlinear Dynamics (SINDy) for symbolic regression as a core part of the method
 - **Broad coverage**: Handles polynomials, exponentials, logarithms, trigonometric, and rational functions
 - **Automatic coefficient determination**: Uses numerical methods to find symbolic coefficients
 
@@ -76,22 +76,6 @@ The Julia symbolic integration ecosystem demonstrates the language's unique posi
 2. **Composability**: Tight integration with Julia's type system and multiple dispatch
 3. **Flexibility**: Choose the right tool for your specific integration problem
 4. **Interoperability**: Seamless use of Python libraries when needed
-
-## Current State and Future Directions
-
-### What's Available Now
-
-- **Basic to intermediate integrals**: All three approaches handle common integration problems effectively
-- **Transcendental functions**: Good support for exponentials, logarithms, and trigonometric functions
-- **Rational functions**: Complete algorithms for rational function integration
-- **Hybrid methods**: Unique symbolic-numeric approaches not available in traditional CAS
-
-### Active Development Areas
-
-- **Algebraic functions**: Support for √x and fractional powers is being developed
-- **Special functions**: Integration involving Bessel, hypergeometric, and other special functions
-- **Definite integrals**: Contour integration and residue theorem implementations
-- **Deep learning integration**: Exploring neural network approaches to pattern recognition in integrals
 
 ## Getting Started
 
@@ -160,4 +144,5 @@ For more information:
 - [SymbolicIntegration.jl Documentation](https://github.com/HaraldHofstaetter/SymbolicIntegration.jl)
 - [SymbolicNumericIntegration.jl Documentation](https://docs.sciml.ai/SymbolicNumericIntegration/stable/)
 - [Symbolics.jl Documentation](https://docs.sciml.ai/Symbolics/stable/)
+
 - [JuliaSymbolics Organization](https://juliasymbolics.org/)
