@@ -568,7 +568,7 @@ in Julia.
 **Reviewers**: Chris Rackauckas
 
 ## Improve training performance of GPU backend in EvoTrees.jl (\$2000)
-**In Progress:** being worked on by Aditya Pandey from August 1 to October 1, 2025.
+**In Progress:** being worked on by Aditya Pandey from August 1 to November 1, 2025.
 (Extended from September 1,2025 due to integration of work with main branch and adding features)
 
 EvoTrees.jl[https://github.com/Evovest/EvoTrees.jl] is an efficient pure-Julia 
