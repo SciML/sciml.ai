@@ -284,9 +284,13 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
+# Successful Projects Archive
+
+These are the previous SciML small grants projects which have successfully concluded and paid out.
+
 ## Update LoopVectorization to Support Changes in Julia v1.12 (\$200)
 
-**In Progress**: being worked on by Maximilian Pochapski
+*Completed by Maximilian Pochapski Oct 8th, 2025*
 
 [LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
 central package for the performance of many Julia packages. Its internals make
@@ -312,10 +316,6 @@ which SciML will help administer through the small grants program.
 **Recommended Skills**: This requires some low-level knowledge of LLVM IR and familiarity with `llvmcall`. The changes should be routine.
 
 **Reviewers**: Chris Elrod
-
-# Successful Projects Archive
-
-These are the previous SciML small grants projects which have successfully concluded and paid out.
 
 ## DAE Problem Benchmarks (\$100 / Benchmark)
 
