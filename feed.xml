@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  SymbolicIntegration.jl: Best-of-Both-Worlds Symbolic Integration with Risch and 3400&#43; Integration Rules  ]]>
+  </title>
+  <link> https://sciml.ai/news/2025/10/10/SymbolicIntegration/index.html </link>
+  <guid> https://sciml.ai/news/2025/10/10/SymbolicIntegration/index.html </guid>
+  <description>
+    <![CDATA[  SymbolicIntegration.jl: Best-of-Both-Worlds Symbolic Integration with Risch and 3400&#43; Integration Rules  ]]>
+  </description>  
+    
+  <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  SciML Developer Chat Episode 1: Trimming, Base Splits, and Symbolics Precompilation  ]]>
   </title>
   <link> https://sciml.ai/news/2025/10/10/SciMLDevChat1/index.html </link>
