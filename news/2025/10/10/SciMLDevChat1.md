@@ -11,7 +11,7 @@ Welcome to the inaugural SciML Developer Chat! This is a new format we're trying
 You can watch the full video here:
 
 ~~~
-iframe width="560" height="315" src="https://www.youtube.com/embed/0yQ4aZ-ABhY?si=5LIR8gayIkvxyM6Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0yQ4aZ-ABhY?si=5LIR8gayIkvxyM6Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ~~~
 
 (This is an AI-assisted summary of the discussion)
