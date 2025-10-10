@@ -1,0 +1,306 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <meta property="og:title" content="SciML: Open Source Software for Scientific Machine Learning"> <meta property="og:description" content="Open Source Software for Scientific Machine Learning"> <meta property="og:image" content="https://sciml.ai/assets/SciMLGitHubPreview.png"> <meta property="og:url" content="https://sciml.ai"> <meta name="twitter:title" content=SciML > <meta name="twitter:description" content="Open Source Software for Scientific Machine Learning"> <meta name="twitter:image" content="https://sciml.ai/assets/SciMLGitHubPreview.png"> <meta name="twitter:card" content=summary_large_image > <!-- Favicon--> <link rel=icon  type="image/x-icon" href="assets/favicon.png" /> <!-- Bootstrap icons--> <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel=stylesheet  type="text/css" /> <link rel=stylesheet  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"> <!-- Google fonts--> <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel=stylesheet  type="text/css" /> <!-- Core theme CSS (includes Bootstrap)--> <link href="./css/styles.css" rel=stylesheet  /> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/styles.css"> <link rel=stylesheet  href="/css/hypertext.css"> <link rel=icon  href="/assets/favicon.png"> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90474609-2"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-90474609-2'); </script> <title></title> <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin=anonymous ></script> <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin=anonymous ></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin=anonymous ></script> <div class=container-fluid  id=top-alert > <div class="alert alert-dark alert-dismissible mb-0" role=alert > <p class=text-center > <a href="https://youtu.be/yHiyJQdWBY8">Check out the latest talk: "The Continuing Advancements of Scientific Machine Learning (SciML)"</a> </p> <!-- <button type=button  class=close  data-dismiss=alert  aria-label=Close > <span aria-hidden=true >&times;</span> --> </button> </div> </div> <header> <nav class="navbar navbar-expand-lg navbar-light"> <a class=navbar-brand  href="/">Home</a> <button class=navbar-toggler  type=button  data-toggle=collapse  data-target="#navbarSupportedContent" aria-controls=navbarSupportedContent  aria-expanded=false  aria-label="Toggle navigation"> <span class=navbar-toggler-icon ></span> </button> <div class="collapse navbar-collapse" id=navbarSupportedContent > <ul class="navbar-nav mr-auto"> <li class="nav-item active"> <a class=nav-link  href="https://docs.sciml.ai/">Documentation</a> <li class=nav-item > <a class=nav-link  href="/news/">News</a> <li class=nav-item > <a class=nav-link  href="/roadmap/">Roadmap</a> <li class=nav-item > <a class=nav-link  href="/citing/">Citing</a> <li class=nav-item > <a class=nav-link  href="/showcase/">Showcase</a> <li class=nav-item > <a class=nav-link  href="https://benchmarks.sciml.ai/">Benchmarks</a> <li class=nav-item > <a class=nav-link  href="https://github.com/SciML/">GitHub</a> <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id=navbarDropdownMenuLink  role=button  data-toggle=dropdown  aria-haspopup=true  aria-expanded=false > Community </a> <div class=dropdown-menu  aria-labelledby=navbarDropdownMenuLink > <a class=dropdown-item  href="/community/">Community Home</a> <a class=dropdown-item  href="/governance/">Governance</a> <a class=dropdown-item  href="/coc/">Code of Conduct</a> <a class=dropdown-item  href="/challenge/">Challenges</a> <a class=dropdown-item  href="/dev/">Developer Programs</a> </div> <li class=nav-item > <a class=nav-link  href="https://juliahub.com/company/contact-us-sciml"> Commercial Support </a> <li class=nav-item > <a class=nav-link  href="https://numfocus.org/donate-to-sciml"><i class="bi bi-heart"></i> Donate</a> </ul> </div> </nav> </header> <div class=franklin-content ><pre><code class="markdown hljs">@def rss<span class=hljs-emphasis >_pubdate = Date(2025, 10, 10)
+@def rss = &quot;&quot;&quot;SciML Developer Chat Episode 1: Trimming, Base Splits, and Symbolics Precompilation&quot;&quot;&quot;
+@def published = &quot;10 October 2025&quot;
+@def title = &quot;SciML Developer Chat Episode 1: Trimming, Base Splits, and Symbolics Precompilation&quot;
+@def authors = &quot;&quot;&quot;<span class=language-xml ><span class=hljs-tag >&lt;<span class=hljs-name >a</span> <span class=hljs-attr >href</span>=<span class=hljs-string >&quot;https://github.com/ChrisRackauckas&quot;</span>&gt;</span></span>Chris Rackauckas<span class=language-xml ><span class=hljs-tag >&lt;/<span class=hljs-name >a</span>&gt;</span></span>, <span class=language-xml ><span class=hljs-tag >&lt;<span class=hljs-name >a</span> <span class=hljs-attr >href</span>=<span class=hljs-string >&quot;https://github.com/oscardssmith&quot;</span>&gt;</span></span>Oscar Smith<span class=language-xml ><span class=hljs-tag >&lt;/<span class=hljs-name >a</span>&gt;</span></span>, <span class=language-xml ><span class=hljs-tag >&lt;<span class=hljs-name >a</span> <span class=hljs-attr >href</span>=<span class=hljs-string >&quot;https://github.com/AayushSabharwal&quot;</span>&gt;</span></span>Ayush Sabharwal<span class=language-xml ><span class=hljs-tag >&lt;/<span class=hljs-name >a</span>&gt;</span></span>&quot;&quot;&quot;
+
+# SciML Developer Chat Episode 1: Trimming, Base Splits, and Symbolics Precompilation
+
+Welcome to the inaugural SciML Developer Chat! This is a new format we&#x27;re trying out to share what&#x27;s happening behind the scenes in SciML development. Rather than waiting for formal blog posts or annual JuliaCon talks, we&#x27;re pulling developers together for casual discussions about ongoing work.
+
+You can watch the full video here:
+
+~~~
+iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0yQ4aZ-ABhY?si=5LIR8gayIkvxyM6Z&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;<span class=language-xml ><span class=hljs-tag >&lt;/<span class=hljs-name >iframe</span>&gt;</span></span>
+~~~
+
+(This is an AI-assisted summary of the discussion)
+
+In this first episode, Chris Rackauckas, Oscar Smith, and Ayush Sabharwal discuss four major development efforts currently underway in the SciML ecosystem. Let&#x27;s dive into each topic.
+
+## Trimming Support Throughout SciML
+
+One of the most exciting recent developments has been getting SciML to work with Julia&#x27;s static compilation and trimming capabilities. This effort kicked off at the JuliaCon hackathon when Romeo showed up and said, &quot;I want to get JuliaC and trimming working on SciML.&quot; What started as a prototype that required specific development branches and exact algorithm choices has evolved into robust, well-tested support.
+
+### What is Trimming?
+
+Trimming refers to Julia&#x27;s ability to create statically compiled binaries that only include the code paths actually used by your program. This is crucial for deployment scenarios where you want minimal binary sizes and don&#x27;t want to ship the entire Julia runtime.
+
+### The Technical Challenges
+
+Making SciML trimmable required changes throughout the stack:
+
+<span class=hljs-strong >**Base Julia Changes**</span>: Gabriel and Cody worked on making various parts of Base compatible with trimming, particularly around error paths. In regular Julia, dynamic behavior on error paths is acceptable since errors are rare. For trimming, these needed to be either made static or configured to abort on error.
+
+<span class=hljs-strong >**LinearSolve.jl**</span>: This was one of the biggest challenges. The library now uses `@static` annotations extensively to satisfy trimming constraints. The key rule: you must be able to determine statically which algorithm you&#x27;re using. Dynamic algorithm selection (like checking `CUDA.functional()` at runtime) breaks trimming because it might try to compile code for systems you don&#x27;t have.
+
+The solution involved creating functions that are always false by default, then overwriting them via extensions when CUDA is actually loaded. This way, if you&#x27;re not building with CUDA, the code remains static and trimmable.
+
+<span class=hljs-strong >**CPUSummary.jl**</span>: This required a major redesign. Previously, it would `eval` in CPU properties at init time (cache sizes, core counts, etc.). Now it uses Preferences.jl, making everything static at compile time. The trade-off: binaries are no longer relocatable to different CPU architectures. Your binary will be optimized for the CPU you built it on, not the one you&#x27;re running it on. This is acceptable for most deployment scenarios but something to be aware of.
+
+### Current Status
+
+As of now:
+- Explicit solvers (Tsit5, Vern7) work out of the box
+- Semi-implicit solvers (Rosenbrocks) work with the linearsolve changes
+- NonlinearSolve.jl has comprehensive trim tests
+- One remaining piece: getting the full robust default algorithm stack to trim
+
+Oscar demonstrated that Rosenbrock solvers now trim successfully, though initialization algorithms need attention. The initialization does use nonlinear solve, so we need the full robust nonlinear solver stack to be trimmable.
+
+### Testing Strategy
+
+Romeo put together an impressive test infrastructure in NonlinearSolve.jl that actually runs `juliac`, builds a binary, and tests it in a separate process. This is the gold standard, though it&#x27;s time-intensive to set up in every repo. We&#x27;re exploring using JET for static analysis as an alternative, though it has had some false positive issues that were recently resolved in Julia 1.12.
+
+The plan is to create a downstream integration test where SciMLBase calls NonlinearSolve.jl&#x27;s trim test, then write a similar test for ODE solvers.
+
+## Base Splitting Refactors
+
+If you&#x27;ve noticed some version instability in SciML packages recently, this is why. We&#x27;ve been restructuring the entire dependency graph to create a cleaner, more modular architecture.
+
+### The Old Architecture Problem
+
+In the early days of DifferentialEquations.jl (around 2016), we made some architectural choices that made sense at the time but became problematic as the ecosystem grew:
+
+1. <span class=hljs-strong >**SteadyStateDiffEq as a special case**</span>: Steady state problems are essentially nonlinear problems (ODEs run to infinity), so `AbstractNonlinearProblem` inherited from `AbstractDiffEqProblem`. This meant NonlinearSolve.jl depended on DiffEqBase.jl.
+
+2. <span class=hljs-strong >**Circular dependency issues**</span>: The nonlinear solvers used in ODE solver callbacks couldn&#x27;t come from NonlinearSolve.jl because that would create a circular dependency. So we had duplicate nonlinear solver implementations.
+
+3. <span class=hljs-strong >**Shared code duplication**</span>: All the keyword argument checking, type promotion, and compatibility checking was duplicated across problem types.
+
+### The New Architecture
+
+We&#x27;ve restructured to create a cleaner hierarchy:</span></code></pre> <p> SciMLBase.jl | &#43;----------------&#43;----------------&#43; | | |</p> <p>DiffEqBase NonlinearSolveBase OptimizationBase | | | OrdinaryDiffEq NonlinearSolve Optimization.jl</p> <pre><code class="julia hljs">**SciMLBase.jl** sits at the bottom with functionality shared by ALL SciML solvers:
+- Element type checking and promotion
+- Distribution handling
+- U0 compatibility validation
+- Parameter promotion
+
+**Specialized base packages** (DiffEqBase, NonlinearSolveBase, OptimizationBase) contain code shared within each solver family.
+
+**Solver libraries** depend only on their respective base packages.
+
+<span class=hljs-comment >### Benefits</span>
+
+<span class=hljs-number >1.</span> **No more circular dependencies**: NonlinearSolve.jl can be used independently of differential equation solvers
+<span class=hljs-number >2.</span> **Correct error messages**: Nonlinear solvers no longer throw error messages about ODE <span class=hljs-keyword >function</span> syntax
+<span class=hljs-number >3.</span> **Reduced compilation times**: You don&#x27;t pull <span class=hljs-keyword >in</span> Fortran dependencies from Optimization.jl when you just want to use OptimizationOptimisers.jl
+<span class=hljs-number >4.</span> **Cleaner symbolic indexing**: No more weird cases <span class=hljs-keyword >where</span> nonlinear problems inherit time-dependence from being subtypes of DE problems
+
+<span class=hljs-comment >### What Users See</span>
+
+There were some versions that didn&#x27;t precompile during this transition - that&#x27;s what all the version bumps were about. We had the same <span class=hljs-keyword >function</span> defined <span class=hljs-keyword >in</span> two base packages temporarily during the migration.
+
+The good news: this is now complete except <span class=hljs-keyword >for</span> possibly merging DiffEqBase into OrdinaryDiffEqCore. Since Sundials.jl v5 now uses the same initialization interface as OrdinaryDiffEq, there&#x27;s less need <span class=hljs-keyword >for</span> a separate base package. However, this change might be more annoying than it&#x27;s worth, so we&#x27;re still discussing it.
+
+<span class=hljs-comment >### Future Work</span>
+
+We may create even more specialized base packages:
+- **LinearSolveBase.jl**: A minimal version that builds without MKL, even though we default to <span class=hljs-keyword >using</span> MKL
+- **SciMLSensitivityBase.jl**: A minimal version without Enzyme, even though we default to <span class=hljs-keyword >using</span> Enzyme
+
+This would enable building binaries without these heavy dependencies when needed, <span class=hljs-keyword >while</span> still defaulting to them <span class=hljs-keyword >for</span> normal use.
+
+<span class=hljs-comment >## SymbolicUtils v4.0 Rewrite</span>
+
+This is perhaps the most ambitious change discussed <span class=hljs-keyword >in</span> the episode. Ayush has been leading a complete rewrite of SymbolicUtils.jl, the foundation of ModelingToolkit.jl&#x27;s symbolic manipulation capabilities.
+
+<span class=hljs-comment >### The Motivation</span>
+
+If you&#x27;ve ever loaded ModelingToolkit and tried to simplify an ODE system, you&#x27;ve noticed it takes a <span class=hljs-keyword >while</span> on the first call, even though we precompile what we can. The root cause: <span class=hljs-literal >nothing</span> <span class=hljs-keyword >in</span> symbolic manipulation was type stable. Everything eventually gave up and fell back to <span class=hljs-string >`Any`</span>.
+
+<span class=hljs-comment >### The Technical Challenge</span>
+
+Symbolic computing requires different internal representations <span class=hljs-keyword >for</span> optimal performance:
+
+- **Polynomials**: Should use <span class=hljs-string >&quot;add muls&quot;</span> - dictionaries <span class=hljs-keyword >where</span> keys are terms and values are coefficients. This makes associative/commutative rules trivial to apply (x + y + z == y + x + z is just dictionary equality).
+
+- **General expressions**: Tree representation with operation and arguments.
+
+- **Arrays**: Need special handling with Einstein summation notation.
+
+But <span class=hljs-keyword >if</span> your tree nodes can be any of these types, you <span class=hljs-keyword >end</span> up with <span class=hljs-string >`Array{Any}`</span> <span class=hljs-keyword >for</span> the arguments, destroying type stability.
+
+<span class=hljs-comment >### The Solution: Sum Types</span>
+
+SymbolicUtils v4<span class=hljs-number >.0</span> introduces a Moshi sum type (similar to Rust enums or OCaml variants).
+
+This is one type with a union of different internal representations. Arrays of <span class=hljs-string >`BasicSymbolic`</span> are type stable, even <span class=hljs-keyword >if</span> they contain a mix of terms, polynomials, and constants. Runtime checks determine which variant you have, but the type itself is stable.
+
+<span class=hljs-comment >### Major Breaking Changes</span>
+
+**<span class=hljs-number >1.</span> No <span class=hljs-built_in >Type</span> Parameters <span class=hljs-keyword >for</span> Value Types**
+
+Previously: <span class=hljs-string >`BasicSymbolic{Real}`</span>, <span class=hljs-string >`Symbolic{Vector{Real}}`</span>
+
+Now: Just <span class=hljs-string >`BasicSymbolic`</span>. The value type is stored as metadata but not <span class=hljs-keyword >in</span> the type parameter.
+
+Why: Functions can <span class=hljs-keyword >return</span> scalars or arrays depending on their arguments. You can&#x27;t store argument types <span class=hljs-keyword >in</span> a type-stable way <span class=hljs-keyword >if</span> the <span class=hljs-keyword >return</span> type depends on runtime values.
+
+**<span class=hljs-number >2.</span> Symbolic Constants**
+
+Previously: <span class=hljs-string >`x - x`</span> would <span class=hljs-keyword >return</span> <span class=hljs-string >`0`</span> (an integer)
+
+Now: <span class=hljs-string >`x - x`</span> returns a blue <span class=hljs-string >`const(0)`</span> (a symbolic constant)
+
+This ensures that any operation on symbolics returns a symbolic. This is the basis of type stability - you can statically infer that adding two symbolics gives a symbolic, not potentially a number or array.
+
+If you actually want a number, you must explicitly request it (e.g., with <span class=hljs-string >`val=true`</span> <span class=hljs-keyword >in</span> substitute).
+
+<span class=hljs-comment >### Array Support Improvements</span>
+
+The rewrite includes first-class support <span class=hljs-keyword >for</span> arrays:
+
+- **Undefined sizes**: Symbolic arrays can have unknown dimensions. Code generation will loop over <span class=hljs-string >`axes(x, 1)`</span> and <span class=hljs-string >`axes(x, 2)`</span>.
+
+- **O(<span class=hljs-number >1</span>) discretization**: PDE discretization code can be generated that works <span class=hljs-keyword >for</span> any discretization size. Change your grid resolution, use the same compiled code.
+
+- **<span class=hljs-built_in >Array</span> operations**: Full primitive array algebra with potential <span class=hljs-keyword >for</span> future loop fusion optimizations.
+
+This is particularly important <span class=hljs-keyword >for</span> MethodOfLines.jl, which should see dramatic compile time improvements once fully integrated.
+
+<span class=hljs-comment >### Performance Implications</span>
+
+The type stability enables precompilation of symbolic workflows. Simplifying an ODE system should become nearly instantaneous instead of taking <span class=hljs-number >30</span>+ seconds on the first call.
+
+Ayush has optimized specific algorithms that are commonly used. Making <span class=hljs-number >100</span>% of Symbolics.jl type stable will take several more months, but the critical paths are done.
+
+<span class=hljs-comment >### Migration Path</span>
+
+SymbolicUtils v4<span class=hljs-number >.0</span> is released. Symbolics.jl is almost updated. ModelingToolkit.jl integration is ongoing. <span class=hljs-built_in >Some</span> scalarization analysis still needs work to avoid breaking up array operations unnecessarily.
+
+Daria is working on integrating Bumper.jl and Reactant.jl so generated code with array operations will be non-allocating and fast by default.
+
+<span class=hljs-comment >## DifferentialEquations.jl v8 Breaking Changes</span>
+
+The final topic covered the upcoming breaking changes to DifferentialEquations.jl and OrdinaryDiffEq.jl.
+
+<span class=hljs-comment >### The Core Problem</span>
+
+DifferentialEquations.jl was designed as a batteries-included package that depends on everything. This made sense when the ecosystem was small, but now:
+
+- Almost nobody solves stochastic equations, boundary value problems, AND DAEs <span class=hljs-keyword >in</span> the same session
+- People want to use sub-libraries independently
+- The default algorithm having dependencies on everything means pulling <span class=hljs-keyword >in</span> unnecessary code
+
+<span class=hljs-comment >### The Solution: Restructuring</span>
+
+**DifferentialEquations.jl v8** will become focused specifically on ODEs. It will:
+- Contain only the <span class=hljs-number >6</span>-<span class=hljs-number >10</span> solvers that <span class=hljs-number >99.9</span>% of people use
+- Load quickly
+- Not depend on every solver package
+
+For other problem types, use the specific packages:
+- <span class=hljs-string >`StochasticDiffEq.jl`</span> <span class=hljs-keyword >for</span> SDEs
+- <span class=hljs-string >`DelayDiffEq.jl`</span> <span class=hljs-keyword >for</span> DDEs  
+- <span class=hljs-string >`BoundaryValueDiffEq.jl`</span> <span class=hljs-keyword >for</span> BVPs
+- <span class=hljs-string >`SteadyStateDiffEq.jl`</span> <span class=hljs-keyword >for</span> steady states
+
+Documentation at diffq.sciml.ai has already been updated to guide users to the appropriate package.
+
+**OrdinaryDiffEq.jl v7** will be split so additional solvers are <span class=hljs-keyword >in</span> separate packages:
+- Core solvers <span class=hljs-keyword >in</span> OrdinaryDiffEq.jl
+- Specialized solvers (Feagin, extrapolation methods, etc.) <span class=hljs-keyword >in</span> extension packages
+
+<span class=hljs-comment >### Other Breaking Changes</span>
+
+**<span class=hljs-number >1.</span> Preconditioner Interface**
+
+Preconditioners now go as arguments to your <span class=hljs-string >`linsolve`</span> parameter, not as separate solver arguments. This makes it easier to:
+- Switch out solvers
+- Save and reuse built preconditioners  
+- Use simple preconditioners like AMG without custom code
+
+**<span class=hljs-number >2.</span> Check Initialization by Default**
+
+For DAE problems, the solver will now check that your initial conditions are consistent by default (like Sundials.jl v5 already does). You must explicitly tell it <span class=hljs-keyword >if</span> you want it to modify your initial conditions.
+
+This prevents confusing interactions with callbacks <span class=hljs-keyword >where</span> inconsistent initial conditions silently changed.
+
+**<span class=hljs-number >3.</span> Trimming-Compatible Default Controllers**
+
+Various bits of the controller interface that were runtime dynamic will become type-level static to support trimming.
+
+<span class=hljs-comment >### Open Questions</span>
+
+**Should we default to Enzyme instead of ForwardDiff?**
+
+Decision: **No**. The experience with Julia <span class=hljs-number >1.11</span> showed that Enzyme support can lag <span class=hljs-keyword >for</span> months on new Julia releases. We can&#x27;t have OrdinaryDiffEq not working on new Julia versions <span class=hljs-keyword >for</span> <span class=hljs-number >6</span> months. ForwardDiff always works day one.
+
+Users can easily switch to Enzyme when needed, but the default needs to be maximally robust.
+
+**Can we delete OrdinaryDiffEq&#x27;s internal nonlinear solvers?**
+
+This is the big question mark. Oscar is working to make NonlinearSolve.jl fast enough <span class=hljs-keyword >for</span> the specific use case inside ODE solvers. If successful, we can:
+- Delete a lot of OrdinaryDiffEq&#x27;s code
+- Get better nonlinear convergence (trust region methods, line searches)
+- Allow larger time steps
+- Have one less internal implementation to maintain
+
+The challenge: ODE solvers need very specific hooks and performance characteristics. We&#x27;re optimizing NonlinearSolve.jl to meet these needs over the next <span class=hljs-number >1</span>-<span class=hljs-number >2</span> months.
+
+This might not technically be a breaking change (how nonlinear solving is done internally isn&#x27;t part of the API), but it&#x27;s sweeping enough that bundling it with v7 makes sense.
+
+**Will we switch to DifferentiationInterface.jl?**
+
+Possibly. Oscar is considering changes to how you specify derivatives (Jacobians, W operators, VJPs, JVPs). The current interface isn&#x27;t quite right, and DifferentiationInterface.jl provides a nice audited standard.
+
+This could be the actual breaking part of the nonlinear solve integration, more than the solver change itself.
+
+<span class=hljs-comment >### DAE Solvers</span>
+
+An open GSOC project: finish DFBDF to be better than IDA from Sundials. Current status:
+- DFBDF is often faster than IDA
+- <span class=hljs-built_in >Missing</span>: collocation polynomial interpolation (currently uses Hermite polynomials, less stable)
+- Has callback support (added earlier this year)
+
+However, <span class=hljs-keyword >for</span> most users, the recommendation remains: use mass matrix ODE formulations instead of DAE problems. Every benchmark shows they&#x27;re faster and more robust. ModelingToolkit.jl defaults to this approach.
+
+<span class=hljs-comment >### Merging Repositories</span>
+
+StochasticDiffEq.jl and DelayDiffEq.jl will likely be merged into OrdinaryDiffEq.jl. They reuse so much of the same code (everything except their specific time steppers) that keeping them separate has become a maintenance burden.
+
+They use internal OrdinaryDiffEq code that has <span class=hljs-string >&quot;no interface and is horrible,&quot;</span> so merging them enables cleaning this up.
+
+BoundaryValueDiffEq.jl will likely stay separate - it&#x27;s different enough to warrant its own package.
+
+<span class=hljs-comment >## Timeline</span>
+
+These changes are happening now:
+- **SymbolicUtils v4<span class=hljs-number >.0</span>**: Released
+- **Symbolics.jl update**: Nearly complete  
+- **NonlinearSolveBase/OptimizationBase**: Complete
+- **Trimming support**: Most infrastructure done, testing ongoing
+- **OrdinaryDiffEq v7 / DifferentialEquations.jl v8**: Target next <span class=hljs-number >1</span>-<span class=hljs-number >2</span> months
+
+This is a lot of breaking changes at once, but consolidating them means:
+- One migration period instead of multiple
+- Aligned ecosystem upgrades
+- Taking advantage of the <span class=hljs-keyword >break</span> to fix multiple pain points at once
+
+<span class=hljs-comment >## Conclusion</span>
+
+These changes represent months of work from many contributors:
+- **Romeo**: Trimming prototype and test infrastructure
+- **Gabriel and Cody**: Base Julia trimming support  
+- **Max**: LoopVectorization.jl <span class=hljs-number >1.12</span> compatibility
+- **Jaden**: Optimization.jl base split work
+- **Aayush**: SymbolicUtils v4<span class=hljs-number >.0</span> rewrite
+- **Oscar**: Numerics, preconditioner interface, nonlinear solve optimization
+- **Chris**: Architecture and coordination
+
+The result will be:
+- Faster precompilation across the ecosystem
+- Cleaner dependency graphs
+- Static compilation support
+- <span class=hljs-built_in >Type</span>-stable symbolic manipulation
+- More modular, maintainable code
+
+We hope you enjoyed this first SciML Developer Chat! If you&#x27;d like to see more of these casual development discussions, <span class=hljs-keyword >let</span> us know. Future episodes could cover:
+- Catalyst.jl developments with Torkel
+- The new VerbosityChain logging system with Jaden  
+- Other behind-the-scenes work <span class=hljs-keyword >in</span> SciML
+
+The goal is to share what&#x27;s happening without the overhead of formal blog posts or waiting <span class=hljs-keyword >for</span> JuliaCon. Think of it as the lazy way to share more information - and we mean that <span class=hljs-keyword >in</span> the best possible way!
+
+And as always, <span class=hljs-keyword >if</span> you have questions or want to contribute, join us on the [Julia Slack](https://julialang.org/slack/) or [GitHub](https://github.com/SciML).</code></pre> <!-- Footer--> <footer class="footer bg-light"> <div class=container > <div class=row > <div class="col-lg-6 h-100 text-center text-lg-start my-auto"> <ul class="list-inline mb-2"> <li class=list-inline-item ><a href="/community">Contact</a> <!-- <li class=list-inline-item ><a href="#!">Terms of Use</a> <li class=list-inline-item ><a href="#!">Privacy Policy</a> --> </ul> <p class="text-muted small mb-4 mb-lg-0">Website powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia</a> programming language. &copy; SciML 2022. All Rights Reserved.</p> <p class="text-muted small mb-4 mb-lg-0">Edit on <a href="https://github.com/SciML/sciml.ai">GitHub</a></p> </div> <div class="col-lg-6 h-100 text-center text-lg-end my-auto"> <ul class="list-inline mb-0"> <li class="list-inline-item me-4"> <a href="https://github.com/SciML"><i class="bi-github fs-3"></i></a> <li class="list-inline-item me-4"> <a href="https://twitter.com/SciML_Org"><i class="bi-twitter fs-3"></i></a> <li class=list-inline-item > <a href="https://www.linkedin.com/company/the-julia-language"><i class="bi-linkedin fs-3"></i></a> </ul> </div> </div> </div> </footer> </div>
