@@ -3,41 +3,7 @@
 
 # SciML Symbolic-Numeric Computing Projects – Google Summer of Code
 
-## Parameter identifiability analysis
-
-Parameter identifiability analysis is an analysis that describes whether the
-parameters of a dynamical system can be identified from data or whether they
-are redundant. There are two forms of identifiability analysis: structural
-and practical. Structural identifiability analysis relates changes in the
-solution of the ODE directly to other parameters, showcasing that it is
-impossible to distinguish between parameter A being higher and parameter B
-being lower, or the vice versa situation, given only data about the solution
-because of how the two interact. This could be done directly on the symbolic
-form of the equation as part of
-[ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl).
-Meanwhile, practical identifiability analysis looks as to whether the parameters
-are non-identifiable in a practical sense, for example if two parameters are
-numerically indistinguishable (given possibly noisy data). In this case, numerical
-techniques being built in DiffEqSensitivity.jl, such as a
-[nonlinear likelihood profiler](https://github.com/SciML/DiffEqSensitivity.jl/issues/109)
-or an
-[information sensitivity measure](https://github.com/SciML/DiffEqSensitivity.jl/issues/108)
-can be used to showcase whether a parameter has a unique enough effect to be determined.
-
-**Recommended Skills**: A basic background in differential equations and the ability to use
-numerical ODE solver libraries. Background in the numerical analysis of differential equation
-solvers is not required.
-
-**Expected Results**: Efficient and high-quality implementations of parameter identifiability
-methods.
-
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
-
-**Expected Project Size**: 350 hour.
-
-**Difficulty**: Hard.
-
-## Model Order Reduction
+## Automated Model Order Reduction
 
 Model order reduction is a technique for automatically finding a small model which approximates
 the large model but is computationally much cheaper. We plan to use the infrastructure built
