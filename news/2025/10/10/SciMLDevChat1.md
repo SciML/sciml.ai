@@ -1,9 +1,8 @@
-```markdown
 @def rss_pubdate = Date(2025, 10, 10)
 @def rss = """SciML Developer Chat Episode 1: Trimming, Base Splits, and Symbolics Precompilation"""
 @def published = "10 October 2025"
 @def title = "SciML Developer Chat Episode 1: Trimming, Base Splits, and Symbolics Precompilation"
-@def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>, <a href="https://github.com/oscardssmith">Oscar Smith</a>, <a href="https://github.com/AayushSabharwal">Ayush Sabharwal</a>"""
+@def authors = """<a href="https://github.com/ChrisRackauckas">Chris Rackauckas</a>, <a href="https://github.com/oscardssmith">Oscar Smith</a>, <a href="https://github.com/AayushSabharwal">Aayush Sabharwal</a>"""
 
 # SciML Developer Chat Episode 1: Trimming, Base Splits, and Symbolics Precompilation
 
@@ -317,4 +316,3 @@ We hope you enjoyed this first SciML Developer Chat! If you'd like to see more o
 The goal is to share what's happening without the overhead of formal blog posts or waiting for JuliaCon. Think of it as the lazy way to share more information - and we mean that in the best possible way!
 
 And as always, if you have questions or want to contribute, join us on the [Julia Slack](https://julialang.org/slack/) or [GitHub](https://github.com/SciML).
-```
