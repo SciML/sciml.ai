@@ -163,7 +163,7 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 # List of Current Projects
 ## Fix `DataInterpolations` Bspline derivatives (\$100)
 
-*In Progress: Claimed by Divyansh Goyal for the time period of September 11th 2025 - October 11th 2025.*
+*In Progress: Claimed by Divyansh Goyal for the time period of September 11th 2025 - October 11th 2025. Extended from October 11 2025 - November 12 2025, in support for a fully mature PR.*
 
 `DataInterpolations.jl` is a SciML repository for interpolating 1D data. It supports a wide number of interpolation types, as well as taking first and second derivatives of the interpolations. Specifically, the BSplineInterpoation has a few bugs with regards to where it puts the control points, and how it calculates derivatives.
 
