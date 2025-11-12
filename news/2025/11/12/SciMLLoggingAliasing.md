@@ -16,48 +16,114 @@ If you've ever found yourself drowning in solver output or wishing you could sel
 
 Traditional logging approaches often force an all-or-nothing choice: either see everything or see nothing. In complex scientific workflows—where you might want algorithm selection warnings but not iteration progress, or vice versa—this granularity matters. SciMLLogging.jl provides structured message handling that integrates seamlessly with Julia's native logging system while adding the specificity scientific computing demands.
 
-### How It Works
+### How It Works in LinearSolve.jl
 
-SciMLLogging organizes messages hierarchically by component and type. You define custom verbosity structures that inherit from `AbstractVerbositySpecifier`, specifying exactly which categories of messages you want to see:
+Let's look at a concrete example from LinearSolve.jl. The package defines a `LinearVerbosity` struct organized into three main groups: error control, performance, and numerical diagnostics.
 
 ```julia
-using SciMLLogging
-using ConcreteStructs
+using LinearSolve, SciMLLogging
 
-@concrete struct MyVerbosity <: AbstractVerbositySpecifier
-    algorithm_choice
-    iteration_progress
-    convergence_warnings
-end
+# Quick start: Use a preset configuration
+verbose = LinearVerbosity(Standard())  # Balanced default
+solve(prob, verbose = verbose)
 
-function MyVerbosity(;
-    algorithm_choice = WarnLevel(),
-    iteration_progress = Silent(),
-    convergence_warnings = WarnLevel()
-)
-    MyVerbosity(algorithm_choice, iteration_progress, convergence_warnings)
-end
+# Or choose from other presets:
+LinearVerbosity(None())      # All messages disabled
+LinearVerbosity(Minimal())   # Only critical errors
+LinearVerbosity(Detailed())  # Comprehensive debugging
+LinearVerbosity(All())       # Maximum verbosity
 ```
 
-In this example, you'll see warnings about algorithm choices and convergence issues, but iteration progress will be suppressed—perfect for long-running optimizations where progress bars would clutter your output.
-
-### Logging Messages
-
-Package developers can emit structured messages using the `@SciMLMessage` macro:
+The real power comes from fine-grained control over individual message categories:
 
 ```julia
-@SciMLMessage("Automatic algorithm selection: Switching to Rodas5P",
-              verbose, :algorithm_choice)
+# Control entire groups at once
+verbose = LinearVerbosity(
+    error_control = WarnLevel(),  # Show all error-related warnings
+    numerical = InfoLevel(),       # Show numerical diagnostics
+    performance = Silent()         # Hide performance messages
+)
 
-# For dynamic messages:
-@SciMLMessage(verbose, :convergence_warnings) do
-    "Convergence slowing: residual = $(current_residual)"
+# Or control individual fields
+verbose = LinearVerbosity(
+    default_lu_fallback = WarnLevel(),     # Warn about factorization fallbacks
+    blas_errors = ErrorLevel(),             # Show BLAS errors
+    convergence_failure = WarnLevel(),      # Warn about convergence issues
+    KrylovJL_verbosity = CustomLevel(1),   # Pass verbosity to Krylov.jl
+    condition_number = InfoLevel()          # Show condition numbers
+)
+
+# Mix group and individual settings (individual overrides group)
+verbose = LinearVerbosity(
+    numerical = Silent(),              # Silence all numerical messages
+    blas_errors = WarnLevel()          # Except BLAS errors
+)
+```
+
+Here's what this looks like in practice with a rank-deficient system:
+
+```julia
+using LinearSolve
+
+A = [1.0 0 0 0
+     0 1 0 0
+     0 0 1 0
+     0 0 0 0]  # Singular matrix
+b = rand(4)
+prob = LinearProblem(A, b)
+
+# With warnings enabled:
+verbose = LinearVerbosity(default_lu_fallback = WarnLevel())
+solve(prob, verbose = verbose)
+# ┌ Warning: LU factorization failed, falling back to QR factorization.
+# │ `A` is potentially rank-deficient.
+# └ @ LinearSolve
+
+# Change to InfoLevel for informational messages instead
+verbose = LinearVerbosity(default_lu_fallback = InfoLevel())
+solve(prob, verbose = verbose)
+# [ Info: LU factorization failed, falling back to QR factorization.
+#         `A` is potentially rank-deficient.
+```
+
+### Message Categories in LinearSolve.jl
+
+LinearVerbosity organizes messages into semantically meaningful groups:
+
+**Error Control Group:**
+- `default_lu_fallback`: Notifications when falling back from specialized methods
+- `blas_errors`: Critical BLAS/LAPACK errors
+- `blas_invalid_args`: Argument validation failures
+
+**Performance Group:**
+- `no_right_preconditioning`: Messages about preconditioning choices
+
+**Numerical Group:**
+- `convergence_failure`: Iterative solver convergence issues
+- `solver_failure`: General solver failures
+- `max_iters`: Maximum iteration warnings
+- `condition_number`: Matrix conditioning information
+- `KrylovJL_verbosity`, `HYPRE_verbosity`, `pardiso_verbosity`: Pass-through verbosity to external solvers
+- `blas_info`, `blas_success`: BLAS operation diagnostics
+
+### For Package Developers
+
+Package developers emit structured messages using the `@SciMLMessage` macro:
+
+```julia
+@SciMLMessage("LU factorization failed, falling back to QR factorization. " *
+              "`A` is potentially rank-deficient.",
+              verbose, :default_lu_fallback)
+
+# Dynamic messages with computed values:
+@SciMLMessage(verbose, :condition_number) do
+    "Matrix condition number: $(cond(A)) for $(size(A)) matrix"
 end
 ```
 
 ### Advanced Logger Configuration
 
-SciMLLogging.jl includes `SciMLLogger`, which extends standard Julia logging with file output and flexible routing:
+SciMLLogging.jl includes `SciMLLogger` for routing messages to files:
 
 ```julia
 logger = SciMLLogger(
@@ -67,11 +133,11 @@ logger = SciMLLogger(
 )
 
 with_logger(logger) do
-    solve(prob, Tsit5(), verbose = MyVerbosity())
+    solve(prob, verbose = LinearVerbosity(Detailed()))
 end
 ```
 
-This setup displays info and warning messages in your REPL while simultaneously logging warnings to a file—invaluable for debugging long-running simulations or auditing solver behavior in production systems.
+This captures all warnings to `solver_warnings.log` while displaying info and warnings in your REPL—perfect for auditing solver behavior in production systems or debugging long-running workflows.
 
 ## Aliasing Specification: Memory Optimization Made Explicit
 
