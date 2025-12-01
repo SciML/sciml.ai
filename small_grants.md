@@ -163,8 +163,6 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 # List of Current Projects
 ## Fix `DataInterpolations` Bspline derivatives (\$100)
 
-*In Progress: Claimed by Divyansh Goyal for the time period of September 11th 2025 - October 11th 2025. Extended from October 11 2025 - November 12 2025, in support for a fully mature PR.*
-
 `DataInterpolations.jl` is a SciML repository for interpolating 1D data. It supports a wide number of interpolation types, as well as taking first and second derivatives of the interpolations. Specifically, the BSplineInterpoation has a few bugs with regards to where it puts the control points, and how it calculates derivatives.
 
 **Information to Get Started**: See the issue https://github.com/SciML/DataInterpolations.jl/issues/419 describes the issue and a proposed solution. Specifically, this work will likely start by mirroring https://github.com/SciML/DataInterpolationsND.jl/pull/20 and re-enabling the derviative tests for BSpline interpolations.
@@ -179,8 +177,6 @@ the Optimization.jl repository.
 **Reviewers**: Chris Rackauckas and Oscar Smith
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
-
-*In Progress: Claimed by Raunak Narang for the time period of August 6th 2025 - September 6th 2025.*
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
@@ -214,8 +210,6 @@ solvers in a standard SciMLBenchmarks benchmark build.
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
 ## DAE Problem Benchmarks (\$100 / Benchmark)
-
-**In Progress**: Claimed by Jayant Pranjal for the time period of 24th July 2025 - 24th Aug 2025.
 
 New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
 ability to better tune solvers across problems. However, we are currently lacking in the
