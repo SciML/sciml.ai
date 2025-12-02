@@ -86,7 +86,7 @@ has been the lack of measures addressing the commercialization sustainability re
 citing the fact that the liberal MIT license would allow competitors and large companies who do not contribute
 to the project to use all contributions to build a competing project (and this is something that has been seen).
 
-Because of these requirements, we looked for a solution that satisfied all of the following criteria:
+Because of these requirements, we looked for a solution that satisfies all of the following criteria:
 
 1. The core functionality of ModelingToolkit.jl, in particular the parts that are used by projects such as 
    Catalyst.jl and SymBoltz.jl which are just developing and compiling ODEs, remains open source and permissively
