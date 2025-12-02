@@ -161,16 +161,59 @@ achieve a mergable PR within the time frame, but there is no expectation that th
 will "go the extra mile" to teach the contributor how the package or mathematics works.
 
 # List of Current Projects
+
+## Setup SciMLBenchmarks CI scripts to support GPU benchmarking (\$300)
+
+The current SciMLBenchmarks only run on CPU. There are many cases we wish to benchmark on GPU. The goal of this project is to modify the CI scripts to support GPU benchmarking.
+
+**Information to Get Started**: See the current scripts in https://github.com/SciML/SciMLBenchmarks.jl/tree/master/.buildkite
+
+**Success Criteria**: Merged pull request which changes the SciMLBenchmarks CI scripts to have a GPU queue, and setting up one of the benchmarks with a GPU queue
+
+**Recommended Skills**: Understanding of Devops tooling and CI scripts
+
+**Reviewers**: Chris Rackauckas
+
+## Fix OrdinaryDiffEq Downgrade tests (\$100)
+
+The downgrade tests are a set of tests which ensure that the package can be downgraded to a previous version and still work. This is important for ensuring that the package is stable and can be used in production environments. However, these tests are currently failing in many repositories due to changes in the package dependencies or the package itself. For example, OrdinaryDiffEq and most of its sublibraries
+currently fail the downgrade tests.
+
+The purpose of this is to work through what is required for the minimum version bumping in order to ensure the downgrade tests pass on OrdinaryDiffEq and all of its sublibraries. This may require tracking down incorrect versions in dependencies as well.
+
+**Information to Get Started**: See the test failures on master, i.e. https://github.com/SciML/OrdinaryDiffEq.jl/pull/2919 
+
+**Success Criteria**: Merged pull request which fixes all of the downgrade tests in OrdinaryDiffEq and its sublibraries.
+
+**Recommended Skills**: Knowledge of the Julia package system and how to use the `Pkg` standard library to downgrade packages.
+
+**Reviewers**: Chris Rackauckas and Oscar Smith
+
+## CurveFit.jl Enhancements (\$300)
+
+CurveFit.jl is a high-level package for fitting curves to data. It sits at a very important part of the
+ecosystem which was traditionally missing, filled by packages like LsqFit.jl which used inefficient
+and unstable algorithms. While CurveFit.jl's design on NonlinearSolve.jl has been a major improvement
+to this space, giving accessibility to using the more sophisticated methods of the SciML solver
+ecosystem, it still lacks some important features for users. The goal of this project is to add a few
+of this missing features to be a feature-complete curve fitting library, built on the solid numerical
+foundations of SciML.
+
+**Information to Get Started**: This issue https://github.com/SciML/CurveFit.jl/issues/41 describes all of the current requirements
+
+**Success Criteria**: Merged pull requests which solve all of the issues in 41.
+
+**Recommended Skills**: Knowledge of Julia, numerical analysis, and a willness to learn some of the statistics API
+
+**Reviewers**: Chris Rackauckas
+
 ## Fix `DataInterpolations` Bspline derivatives (\$100)
 
 `DataInterpolations.jl` is a SciML repository for interpolating 1D data. It supports a wide number of interpolation types, as well as taking first and second derivatives of the interpolations. Specifically, the BSplineInterpoation has a few bugs with regards to where it puts the control points, and how it calculates derivatives.
 
 **Information to Get Started**: See the issue https://github.com/SciML/DataInterpolations.jl/issues/419 describes the issue and a proposed solution. Specifically, this work will likely start by mirroring https://github.com/SciML/DataInterpolationsND.jl/pull/20 and re-enabling the derviative tests for BSpline interpolations.
 
-**Related Issues**: https://github.com/SciML/Optimization.jl/issues/917
-
-**Success Criteria**: Merged pull request which adds a new OptimizationSciPy.jl to 
-the Optimization.jl repository.
+**Success Criteria**: Merged pull request which fixes the numerical issues
 
 **Recommended Skills**: Basic (undergrad-level) knowledge of calculus
 
