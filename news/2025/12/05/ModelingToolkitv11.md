@@ -230,7 +230,8 @@ year and a half. It is generally rather buggy and leads to more difficult debugg
 year, for most issues we have suggested that users rewrite their code to not use the macro whenever sharing
 bug reports. We are finally making the decision to fully deprecate the `@mtkmodel` macro. The reasoning is
 simply that there are almost no maintainers, so while it does something interesting, [it is not at a state
-which gives ModelingToolkit.jl a good look](https://discourse.julialang.org/t/using-mtk-when-i-import-modelingtoolkit/133681/12), while it does not add a major benefit for the maintenance time it takes,
+which gives ModelingToolkit.jl a good look](https://discourse.julialang.org/t/using-mtk-when-i-import-modelingtoolkit/133681/12), 
+while it does not add a major benefit for the maintenance time it takes,
 and thus should not be what people see in the first tutorial.
 
 Because of this, all of the documentation will be updated to instead use the direct ModelingToolkit.jl form.
