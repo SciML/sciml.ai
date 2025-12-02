@@ -141,7 +141,7 @@ This is a major change as Symbolics.jl and ModelingToolkit.jl have long been cit
 have the worst time-to-first-X issues in Julia due to the heavy use of dynamic typing in the symbolic
 computing stack. This has now been largely fixed by using a recursive sumtype representation. The exact solution
 is rather technical, see https://github.com/JuliaSymbolics/SymbolicUtils.jl/issues/737 for details. This allows
-us to marry the [performance improvements of the advanced term representation](https://arxiv.org/abs/2306.05397) 
+us to marry the [performance improvements of the advanced term representation](https://arxiv.org/abs/2105.03949) 
 with type-stability and all its associated performance benefits in SymbolicUtils.jl
 representation.
 
