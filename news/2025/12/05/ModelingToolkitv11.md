@@ -51,7 +51,7 @@ This was a difficult decision to make, and the evolution of ModelingToolkit.jl s
 failed attempts to do this correctly. We previously had StructuralTransformation.jl as a separate package
 back in the early days of ModelingToolkit.jl, but utlimately the developer burden of maintaing it as separate
 was so high that it had almost killed the entire project. Because of this, we had always had to hold back
-on some of the more advanced features of actively making it into the ecosystem. Some of the coolest features
+on actively releasing some of the more advanced features into the ecosystem. Some of the coolest features
 and major advancements in acausal modeling, such as 
 [techniques for making large loops and arrays compile fast](https://patents.google.com/patent/US20250013444A1/en),
 specifically had to be omitted or kept separate in order to deal with licensing issues due to the commerical
