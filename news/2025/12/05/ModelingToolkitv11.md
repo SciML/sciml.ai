@@ -20,7 +20,7 @@ which we want to be transparent about, so please read through the entire post.
 ## Licensing Changes
 
 One significant item to address with this update is the licensing associated with ModelingToolkit.jl.
-Starting with version 11, ModelingToolkit.jl will in a way where some of its dependencies have an AGPL
+Starting with version 11, ModelingToolkit.jl will be structured in a way where some of its dependencies have an AGPL
 license. In short (and will be elaborated on later), ModelingToolkit.jl and SymbolicUtils.jl now included
 and extendable pass system for the compiler, meaning that additional compiler passes can be added into
 the system through downstream dependencies. This is a powerful feature that allows for more extensibility
