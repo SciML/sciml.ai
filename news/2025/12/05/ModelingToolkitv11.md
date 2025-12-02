@@ -214,9 +214,9 @@ We should note that while [Dyad](https://help.juliahub.com/dyad/dev/) is a comme
 a license for commercial use, its standard libraries (i.e. the ones matching the ModelingToolkitStandardLibrary)
 are open source and licensed with the liberal BSD-3 license. Dyad by design generates ModelingToolkit.jl code
 as part of its compilation process, meaning that these standard libraries include a Julia package with 
-ModelingToolkit versions of every component which can be used without installing Dyad. As such, these component
+ModelingToolkit versions of every component that can be used without installing Dyad. As such, these component
 libraries serve as a fully open source alternative to everything in the ModelingToolkitStandardLibrary.jl, but
-has very active maintanance, lots of testing in the real world, and many thoughtful design decisions from some
+have very active maintenance, lots of testing in the real world, and many thoughtful design decisions from some
 of the industry's best. With all of that together, we do not see a good reason to continue maintaining
 the ModelingToolkitStandardLibrary.jl, hence its deprecation. However, we note that we will need to improve
 the documentation for purely ModelingToolkit / non-Dyad users of these component libraries, including the
