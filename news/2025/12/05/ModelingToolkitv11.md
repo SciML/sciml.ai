@@ -77,8 +77,8 @@ total donations to the project have been <$10k over the full 10 years.
 As one may guess, 15 developer
 years for the top developers of the SciML space was not able to be sustained on that budget, and thus
 most of the shortfall was made up through commercial contracts and grants with commercial requirements, such as
-grants form DARPA and ARPA-E. However, these grants and contracts often have requirements for commercialization
-and thus items around ModelingToolkit.jl have repeatedly required being removed from the grant scope due to
+grants from DARPA and ARPA-E. However, these grants and contracts often have requirements for commercialization
+and thus items around ModelingToolkit.jl have repeatedly required to be removed from the grant scope due to
 reviewer feedback suggesting that these activites do not fall under the required commercialization scope. That
 is not to mention all of the lost funding due to this sustainability issue: in particluar about $6 million of
 grants were denied this year on the topic of improvements to ModelingToolkit.jl with the repeated main reasoning
