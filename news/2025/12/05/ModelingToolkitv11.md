@@ -97,12 +97,12 @@ Because of these requirements, we looked for a solution that satisfies all of th
 3. The developer burden of maintaining the codebase remains manageable and does not lead to fragmentation of   
    the symbolic compiler ecosystem.
 
-We believe that this major infrustructure change satisfies all of these requirements, where ModelingToolkitBase.jl
+We believe that this major infrastructure change satisfies all these requirements. ModelingToolkitBase.jl
 is a GPL-free core version that libraries such as Catalyst.jl and SymBoltz.jl can directly depend on, while the
-acausal modeling capabilties still work without any changes to user code just by doing `using ModelingToolkit`,
-and the developer burden is manageable since there is now a single codebase for the symbolic compiler. And,
-AGPL is still an OSI-approved open source license, so the code remains open source and available for use in open
-source projects without any issues, the packages are registed in the General registry which means the installation
+acausal modeling capabilities still work without any changes to user code by just doing `using ModelingToolkit`.
+The developer burden is manageable since there is now a single codebase for the symbolic compiler. Since
+AGPL is still an OSI-approved open source license, the code remains open source and available for use in open
+source projects without any issues. The packages are registered in the General registry which means that installation
 remains easy, and the source code is fully available for inspection, research, and contributions.
 
 We additionally excited to see what this pass system leads to. This infrastructure open up the possibility to 
