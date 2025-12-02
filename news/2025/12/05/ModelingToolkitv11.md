@@ -55,9 +55,9 @@ on actively releasing some of the more advanced features into the ecosystem. Som
 and major advancements in acausal modeling, such as 
 [techniques for making large loops and arrays compile fast](https://patents.google.com/patent/US20250013444A1/en),
 specifically had to be omitted or kept separate in order to deal with licensing issues due to the commerical
-aspects for which they were developed for. Many may recall the project JuliaSimCompiler.jl which was a separate
-backend to ModelingToolkit.jl models which implemented many of these compiler passes, but ultimately having to
-maintain two separate compilers means you have 2 bad compilers: during the time frame of JuliaSimCompiler the
+aspects for which they were developed. Many may recall the project JuliaSimCompiler.jl, which was a separate
+backend to ModelingToolkit.jl models that implemented many of these compiler passes. Ultimately, having to
+maintain two separate compilers means having 2 bad compilers: during the time frame of JuliaSimCompiler the
 issues list in both repositories grew enormously and the bug surface became very high due to divergences in
 compiler support. Once more, having this separate compiler almost killed the entire project due to the high
 maintanance burden.
