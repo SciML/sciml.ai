@@ -21,8 +21,8 @@ which we want to be transparent about, so please read through the entire post.
 
 One significant item to address with this update is the licensing associated with ModelingToolkit.jl.
 Starting with version 11, ModelingToolkit.jl will be structured in a way where some of its dependencies have an AGPL
-license. In short (and will be elaborated on later), ModelingToolkit.jl and SymbolicUtils.jl now included
-and extendable pass system for the compiler, meaning that additional compiler passes can be added into
+license. In short (and will be elaborated on later), ModelingToolkit.jl and SymbolicUtils.jl now include
+an extendable pass system for the compiler, meaning that additional compiler passes can be added into
 the system through downstream dependencies. This is a powerful feature that allows for more extensibility
 and customization of the symbolic transformation process. This is something that was attempted from the
 start, which is why the StructuralTransformation.jl subpackage/submodule was always shipped with
