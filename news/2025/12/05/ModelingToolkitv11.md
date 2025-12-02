@@ -81,8 +81,8 @@ grants from DARPA and ARPA-E. However, these grants and contracts often have req
 and thus items around ModelingToolkit.jl have repeatedly required to be removed from the grant scope due to
 reviewer feedback suggesting that these activites do not fall under the required commercialization scope. That
 is not to mention all of the lost funding due to this sustainability issue: in particluar about $6 million of
-grants were denied this year on the topic of improvements to ModelingToolkit.jl with the repeated main reasoning
-noting being the lack of addressing the commericalization sustainability requirements of the funding agencies,
+grants on the topic of improvements to ModelingToolkit.jl were denied this year. The repeated main reasoning
+has been the lack of measures addressing the commercialization sustainability requirements of the funding agencies,
 citing the fact that the liberal MIT license would allow competitors and large companies who do not contribute
 to the project to use all contributions to build a competing project (and this is something that has been seen).
 
