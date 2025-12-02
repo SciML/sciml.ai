@@ -142,7 +142,7 @@ have the worst time-to-first-X issues in Julia due to the heavy use of dynamic t
 computing stack. This has now been largely fixed by using a recursive sumtype representation. The exact solution
 is rather technical, see https://github.com/JuliaSymbolics/SymbolicUtils.jl/issues/737 for details. This allows
 us to marry the [performance improvements of the advanced term representation](https://arxiv.org/abs/2306.05397) 
-while also having type-stability and all of the associated performance benefits in the SymbolicUtils.jl
+with type-stability and all its associated performance benefits in SymbolicUtils.jl
 representation.
 
 Because the core aspects were now type-stable, changes were made to the parts on top of the representation,
