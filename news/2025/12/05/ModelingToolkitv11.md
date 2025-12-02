@@ -68,7 +68,7 @@ almost all of the funding that has been achieved for ModelingToolkit.jl througho
 both developer and government requirements for commercialization. While many may believe that the (US) government
 supports open source software development and would prefer for this software to be distributed as free under a
 permissive license, the reality is that government contracts and grants often have requirements for 
-commercialization. For full tarnsparency, the ModelingToolkit.jl has required about 3 full time expert/senior
+commercialization. For full transparency, ModelingToolkit.jl has required about 3 full-time expert/senior
 developers for the last 5 years, and the funding for this project has totaled around ~$250k (after overhead) of
 government grants directed to the non-commercial aspects of the project (we thank Bernt Lie for his early
 contributions via DigiWell and Chris Tessum for co-PIing on a related NSF grant). We additionally note that 
