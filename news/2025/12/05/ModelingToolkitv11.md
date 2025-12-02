@@ -233,7 +233,7 @@ simply that there are almost no maintainers, so while it does something interest
 which gives ModelingToolkit.jl a good look, and thus should not be what people see in the first tutorial.
 
 Because of this, all of the documentation will be updated to instead use the direct ModelingToolkit.jl form.
-We believe that this accomplishes a few goals. One it decreases the feature surface, making it easier to have a
+We believe that this accomplishes a few goals. Firstly, it decreases the feature surface, making it easier to have a
 less buggy project and thus simply a better user experience. It also more clearly brings users into the
 "core" usage of ModelingToolkit as a compiler, where the direct interface has always been more flexible for
 many use cases like building libraries and things which are not related specifically to acausal modeling of
