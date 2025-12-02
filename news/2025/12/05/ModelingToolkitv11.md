@@ -49,7 +49,7 @@ the symbolic transformation libraries specifically for handling acausal models a
 
 This was a difficult decision to make, and the evolution of ModelingToolkit.jl shows many scars of previous
 failed attempts to do this correctly. We previously had StructuralTransformation.jl as a separate package
-back in the early days of ModelingToolkit.jl, but utlimately the developer burden of maintaing it as separate
+back in the early days of ModelingToolkit.jl, but ultimately the developer burden of maintaining it separately
 was so high that it had almost killed the entire project. Because of this, we had always had to hold back
 on actively releasing some of the more advanced features into the ecosystem. Some of the coolest features
 and major advancements in acausal modeling, such as 
