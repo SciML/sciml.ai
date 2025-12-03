@@ -194,7 +194,7 @@ which SciML will help administer through the small grants program.
 
 **Recommended Skills**: This requires some low-level knowledge of LoopVectorization.jl.
 
-**Reviewers**: TODO
+**Reviewers**: Chris Rackauckas and Oscar Smith
 
 
 ## Setup SciMLBenchmarks CI scripts to support GPU benchmarking (\$300)
