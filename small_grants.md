@@ -164,7 +164,7 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 
 
-## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$ TODO)
+## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
 
 [LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
 central package for the performance of many Julia packages. Its internals make
