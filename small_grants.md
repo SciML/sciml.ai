@@ -162,6 +162,41 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
+
+
+## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$ TODO)
+
+[LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
+central package for the performance of many Julia packages. Its internals make
+use of many low-level features and manual SIMD that can make it require significant
+maintenance to be optimized for new system architectures and versions of the compiler.
+
+**Information to Get Started**:
+
+LoopVectorization.jl was mainly developed having x64 Intel systems in mind and
+available as testing platforms. Apple has launched the new Apple M series processors
+using an ARM architecture some time ago. When updating the CI infrastructure of
+LoopVectorization.jl to run tests on Apple ARM systems
+(see <https://github.com/JuliaSIMD/LoopVectorization.jl/pull/563>),
+several bugs were found. These test failures were marked in the PR, and the
+issue <https://github.com/JuliaSIMD/LoopVectorization.jl/issues/564> has been
+created.
+
+The purpose of this project is to update LoopVectorization.jl and/or related packages
+from the JuliaSIMD ecosystem so that all tests pass on all available platforms;
+all broken/skipped tests (`@test_broken`, `@test_skip`) are changed backed to normal
+tests (`@test`) that pass on all platforms.
+
+Note that the funds for this project as given by earmarked donations to the JuliaLang project
+which SciML will help administer through the small grants program.
+
+**Success Criteria**: LoopVectorization.jl runs all tests on all platforms.
+
+**Recommended Skills**: This requires some low-level knowledge of LoopVectorization.jl.
+
+**Reviewers**: TODO
+
+
 ## Setup SciMLBenchmarks CI scripts to support GPU benchmarking (\$300)
 
 The current SciMLBenchmarks only run on CPU. There are many cases we wish to benchmark on GPU. The goal of this project is to modify the CI scripts to support GPU benchmarking.
