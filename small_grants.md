@@ -242,6 +242,8 @@ foundations of SciML.
 
 **Reviewers**: Chris Rackauckas
 
+In Progress: Claimed by AR-1669 for the time period of (4/12/2025) - (4/1/2026).
+
 ## Fix `DataInterpolations` Bspline derivatives (\$100)
 
 `DataInterpolations.jl` is a SciML repository for interpolating 1D data. It supports a wide number of interpolation types, as well as taking first and second derivatives of the interpolations. Specifically, the BSplineInterpoation has a few bugs with regards to where it puts the control points, and how it calculates derivatives.
