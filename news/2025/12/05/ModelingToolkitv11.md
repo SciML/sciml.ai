@@ -196,7 +196,7 @@ first major steps are complete.
 
 ## Deprecation of the ModelingToolkitStandardLibrary.jl
 
-We are announcing that the `@mtkmodel` macro and the ModelingToolkitStandardLibrary.jl will soon be deprecated.
+We are announcing that the ModelingToolkitStandardLibrary.jl will soon be deprecated.
 This is due to focusing more of the ModelingToolkit.jl maintainance team on a smaller set of codebases in order
 to ensure that we can grow in a more sustainable manner. In particular, the ModelingToolkitStandardLibrary.jl's
 deprecation is due to simply falling behind. Not only has no one has been actively maintaining this library,
