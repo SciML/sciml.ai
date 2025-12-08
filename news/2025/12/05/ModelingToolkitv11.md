@@ -224,7 +224,7 @@ discoverability aspect, which is slated for the near future.
 
 ## Deprecation of the `@mtkmodel` Macro and Focusing the Development Effort of ModelingToolkit.jl as a Compiler
 
-The `@mtkmodel` macro was designed as a Modelica-like syntax for which one can use ModelingToolkit.jl. While
+We are also announcing that the `@mtkmodel` macro will soon be deprecated. The `@mtkmodel` macro was designed as a Modelica-like syntax for which one can use ModelingToolkit.jl. While
 some effort was put into it at the early stages, it ultimately has lacked much development for around the last
 year and a half. It is generally rather buggy and leads to more difficult debugging. Thus for around the last
 year, for most issues we have suggested that users rewrite their code to not use the macro whenever sharing
