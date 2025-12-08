@@ -269,5 +269,4 @@ the amount of open source-ness in the project, gives people ways to opt out of a
 sustainable model for the project's future. I hope the complete honesty and transparency of these changes helps
 everyone understand the reasoning behind the changes. And I, Chris Rackauckas, am available to talk about not
 just the technical aspects but also the community and funding aspects of ModelingToolkit, SciML, and the rest of
-the Julia ecosystem at any time. If you have any questions, feel free to reach out. Let's see if this makes the
-best version of the open source ecosystem.
+the Julia ecosystem at any time. If you have any questions, feel free to reach out.
