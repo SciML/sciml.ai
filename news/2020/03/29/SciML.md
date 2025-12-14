@@ -110,11 +110,11 @@ It is very rare that someone thinks their model is perfect. Thus a large portion
 of the focus of our organization is to help scientific modelers derive equations
 and fit models. This includes tools for:
 
-- [Maximum likelihood and Bayesian parameter estimation](https://diffeq.sciml.ai/dev/analysis/parameter_estimation/)
-- [Forward and adjoint local sensitivity analysis](https://diffeq.sciml.ai/dev/analysis/sensitivity/) for fast gradients
-- [Global sensitivity analysis](https://diffeq.sciml.ai/dev/analysis/global_sensitivity/)
+- [Maximum likelihood and Bayesian parameter estimation](https://docs.sciml.ai/Overview/stable/highlevels/inverse_problems/)
+- [Forward and adjoint local sensitivity analysis](https://docs.sciml.ai/SciMLSensitivity/stable/) for fast gradients
+- [Global sensitivity analysis](https://docs.sciml.ai/GlobalSensitivity/stable/)
 - [Building surrogates of models](https://surrogates.sciml.ai/latest/)
-- [Uncertainty quantification](https://diffeq.sciml.ai/dev/analysis/uncertainty_quantification/)
+- [Uncertainty quantification](https://docs.sciml.ai/Overview/stable/highlevels/uncertainty_quantification/)
 
 Some of our newer tooling like [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl)
 can even take in timeseries data and generate LaTeX code for the best fitting model
@@ -374,7 +374,7 @@ are the following:
   and its Physics-Informed Neural Networks (PINN) functionality,
   [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl), etc.
   Because it does not require differential equations, we plan to split out the
-  documentation of [Global Sensitivity Analysis](https://diffeq.sciml.ai/latest/analysis/global_sensitivity/)
+  documentation of [Global Sensitivity Analysis](https://docs.sciml.ai/GlobalSensitivity/stable/)
   to better facilitate its wider usage.
 - We plan to continue improving the [ModelingToolkit](https://github.com/SciML/ModelingToolkit.jl)
   ecosystem utilizing its symbolic nature for [generic specification of PDEs](https://github.com/SciML/DifferentialEquations.jl/issues/469).

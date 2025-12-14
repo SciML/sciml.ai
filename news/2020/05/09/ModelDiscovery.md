@@ -150,7 +150,7 @@ probabilistic programming libraries ([ModelingToolkit.jl](https://github.com/Sci
 automatically transforms Julia differential equation code to Stan). Together,
 this serves as a very good resource for non-Bayesian-inclined users to utilize
 Bayesian parameter estimation with just one function.
-[See the parameter estimation documentation for more details](https://diffeq.sciml.ai/latest/analysis/parameter_estimation/).
+[See the parameter estimation documentation for more details](https://docs.sciml.ai/Overview/stable/highlevels/inverse_problems/).
 
 As a quick update to the probabilistic programming space, we would like to note
 that the Turing.jl library performs exceptionally well in comparison to the

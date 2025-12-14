@@ -77,7 +77,7 @@ is a combination that can be orders of magnitude faster than Stan.jl (though
 additional testing which takes into account accuracy differences will be
 needed for a more precise determination). Still, it's as simple to use as the
 other Bayesian functions (see
-[the example](https://diffeq.sciml.ai/latest/analysis/parameter_estimation))
+[the example](https://docs.sciml.ai/Overview/stable/highlevels/inverse_problems/))
 and so give it a try if you're up for it.
 
 ## Livestream Tutorial
