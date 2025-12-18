@@ -13,7 +13,7 @@ We are excited to announce major releases for a large set of the symbolic stack,
 * SymbolicUtils v4
 
 This is a massive transformation of the symbolic ecosystem in Julia, with a focus on improving type-stability and performance, as well as setting the stage for future array programming capabilities.
-Major props to Aayush Sabarwal for leading much of the development on this release over the path
+Major props to Aayush Sabarwal for leading much of the development on this release over the past
 9 months. With this, we have a lot to talk about and share. Some of this is a difficult discussion
 which we want to be transparent about, so please read through the entire post.
 
