@@ -259,6 +259,8 @@ In Progress: Claimed by AR-1669 for the time period of (4/12/2025) - (4/1/2026).
 
 **Reviewers**: Chris Rackauckas and Oscar Smith
 
+In Progress: Claimed by ajatshatru01 for the time period of (23/12/2025) - (23/1/2026).
+
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
