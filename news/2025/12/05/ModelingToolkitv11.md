@@ -41,10 +41,7 @@ registry, meaning that ModelingToolkit.jl remains easy to install and use for op
 However, depending on how one uses ModelingToolkit, the AGPL license may have some additional requirements you must satisfy, so please review the license if you
 are considering using the full ModelingToolkit.jl library. For example, if you are redistributing
 ModelingToolkit.jl in a shipped binary or web service, then you need to ensure the licensing requirements
-of AGPL are satisfied. It was already the case before that some dependencies of ModelingToolkit.jl and
-Julia itself were GPL dependencies, notably SuiteSparse and FFTW are GPL-licensed libraries and thus
-ModelingToolkit.jl already had some GPL implications. However, with this change, the implications include
-the symbolic transformation libraries specifically for handling acausal models and high-index DAEs.
+of AGPL are satisfied. We again stress, however, that the MTK extension library license change only impacts the full ModelingToolkit.jl library that includes the symbolic transformation extension libraries for handling acausal models and high-index DAEs. If one only installs and uses ModelingToolkitBase.jl, then the underlying library is still MIT, and has the same permissiveness as ModelingToolkit v10.
 
 This was a difficult decision to make, and the evolution of ModelingToolkit.jl shows many scars of previous
 failed attempts to do this correctly. We previously had StructuralTransformation.jl as a separate package
