@@ -29,7 +29,7 @@ start, which is why the StructuralTransformation.jl subpackage/submodule was alw
 ModelingToolkit.jl, but the pass system was never modular enough to follow allow for external extensions,
 now it does. 
 
-ModelingToolkitBase.jl is thus an MIT-licensed package with no Julia GPL dependencies and contains all
+ModelingToolkitBase.jl is a new, MIT-licensed package with no Julia AGPL dependencies that contains most 
 of the core functionality of ModelingToolkit.jl. This for example includes the utilities for building
 `System`s, generating code for ODEs, SDEs, etc., and the main symbolic compiler pipeline. 
 ModelingToolkitBase.jl is thus a fully functional symbolic modeling compiler which can take symbolic
