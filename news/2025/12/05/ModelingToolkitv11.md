@@ -182,7 +182,7 @@ This is one of the alternative passes that are additionally scheduled to be turn
 ModelingToolkit compiler when ready. The ModelingToolkit tearing passes still need to improve their rules around
 arrays to remove some scalarization, and this will happen in the v11 time frame as no breaking changes are required
 for that. When completed, the generated code for array expressions will be O(1) in code size and compilation time.
-This will solve a long-standing issue in the ModelingToolkit compiler, and approximately 80% of the work is now
+This will solve a long-standing issue in the ModelingToolkit compiler, and approximately 60% of the work is now
 completed because the Symbolics code generation was one major aspect.
 
 We note for avid users that MethodOfLines.jl will need a substantial change in order to use array expressions
