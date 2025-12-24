@@ -35,8 +35,7 @@ of the core functionality of ModelingToolkit.jl. This for example includes the u
 ModelingToolkitBase.jl is thus a fully functional symbolic modeling compiler which can take symbolic
 descriptions of systems and generate performant Julia code for them as-is.
 
-With this change, the versions of the symbolic transformation libraries has been moved to
-a separate repository (https://github.com/JuliaComputing/StateSelection.jl) which is licensed under [AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html).
+What has changed is that the symbolic transformation components which are primarily used by acausal DAE models, for example the advanced tearing and alias elimination passes, have been moved to a separate repository (https://github.com/JuliaComputing/StateSelection.jl) which is licensed under [AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html) and managed by JuliaHub.
 As AGPL is an [OSI-approved license](https://opensource.org/licenses), this package is open source and released as part of the General
 registry, meaning that ModelingToolkit.jl remains easy to install and use for open source projects.
 However, depending on how one uses ModelingToolkit, the AGPL license may have some additional requirements you must satisfy, so please review the license if you
