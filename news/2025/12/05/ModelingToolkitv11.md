@@ -90,7 +90,8 @@ Because of these requirements, we looked for a solution that satisfies all of th
 
 1. The core functionality of ModelingToolkit.jl, in particular the parts that are used by projects such as 
    Catalyst.jl and SymBoltz.jl which are just developing and compiling ODEs, remains open source and permissively
-   licensed.
+   licensed. This includes enough of the symbolic compiler passes so that basic acausal models, handling of
+   observed equations, etc. continues to work in the purely MIT licensed version.
 2. There are sufficient protections in place for the JuliaHub developments in order to continue to secure both
    commercial and government funding for those full time on the project. In particular, this is the functionality
    around acausal modeling, high-index DAE handling, and large-scale model compilation optimizations.
