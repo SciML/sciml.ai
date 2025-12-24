@@ -39,8 +39,8 @@ With this change, the versions of the symbolic transformation libraries has been
 a separate repository (https://github.com/JuliaComputing/StateSelection.jl) which is licensed under [AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html).
 As AGPL is an [OSI-approved license](https://opensource.org/licenses), this package is open source and released as part of the General
 registry, meaning that ModelingToolkit.jl remains easy to install and use for open source projects.
-However, AGPL does have some implications for commercial use, so please review the license if you
-are considering using ModelingToolkit.jl in a commercial setting. In particular, if you are redistributing
+However, depending on how one uses ModelingToolkit, the AGPL license may have some additional requirements you must satisfy, so please review the license if you
+are considering using the full ModelingToolkit.jl library. For example, if you are redistributing
 ModelingToolkit.jl in a shipped binary or web service, then you need to ensure the licensing requirements
 of AGPL are satisfied. It was already the case before that some dependencies of ModelingToolkit.jl and
 Julia itself were GPL dependencies, notably SuiteSparse and FFTW are GPL-licensed libraries and thus
