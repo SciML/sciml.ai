@@ -23,12 +23,12 @@
 
 <item>
   <title>
-    <![CDATA[  SciML Scientific Machine Learning Citations  ]]>
+    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
   </title>
-  <link> https://sciml.ai/citing/index.html </link>
-  <guid> https://sciml.ai/citing/index.html </guid>
+  <link> https://sciml.ai/roadmap/index.html </link>
+  <guid> https://sciml.ai/roadmap/index.html </guid>
   <description>
-    <![CDATA[  Citations for the SciML Scientific Machine Learning software organization  ]]>
+    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
@@ -42,12 +42,31 @@
 
 <item>
   <title>
-    <![CDATA[  SciML Scientific Machine Learning Showcase  ]]>
+    <![CDATA[  Scientific Machine Learning Community  ]]>
   </title>
-  <link> https://sciml.ai/showcase/index.html </link>
-  <guid> https://sciml.ai/showcase/index.html </guid>
+  <link> https://sciml.ai/community/index.html </link>
+  <guid> https://sciml.ai/community/index.html </guid>
   <description>
-    <![CDATA[  Showcase of SciML Scientific Machine Learning applications  ]]>
+    <![CDATA[  This page describes the community pages, chatrooms, and forums used by the scientific machine learning community  ]]>
+  </description>  
+    
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Scientific Machine Learning Citations  ]]>
+  </title>
+  <link> https://sciml.ai/citing/index.html </link>
+  <guid> https://sciml.ai/citing/index.html </guid>
+  <description>
+    <![CDATA[  Citations for the SciML Scientific Machine Learning software organization  ]]>
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
@@ -80,50 +99,31 @@
 
 <item>
   <title>
+    <![CDATA[  SciML Scientific Machine Learning Showcase  ]]>
+  </title>
+  <link> https://sciml.ai/showcase/index.html </link>
+  <guid> https://sciml.ai/showcase/index.html </guid>
+  <description>
+    <![CDATA[  Showcase of SciML Scientific Machine Learning applications  ]]>
+  </description>  
+    
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  SciML Scientific Machine Learning Challenge Problems and Datasets  ]]>
   </title>
   <link> https://sciml.ai/challenge/index.html </link>
   <guid> https://sciml.ai/challenge/index.html </guid>
   <description>
     <![CDATA[  Challenge problems and research datasets for the Scientific Machine Learning &#40;SciML&#41;  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Staging Team</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
-  </title>
-  <link> https://sciml.ai/roadmap/index.html </link>
-  <guid> https://sciml.ai/roadmap/index.html </guid>
-  <description>
-    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Staging Team</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Scientific Machine Learning Community  ]]>
-  </title>
-  <link> https://sciml.ai/community/index.html </link>
-  <guid> https://sciml.ai/community/index.html </guid>
-  <description>
-    <![CDATA[  This page describes the community pages, chatrooms, and forums used by the scientific machine learning community  ]]>
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  

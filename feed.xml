@@ -213,12 +213,12 @@
 
 <item>
   <title>
-    <![CDATA[  2025 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
+    <![CDATA[  State of the SciML Open Source Software Ecosystem, 2025  ]]>
   </title>
-  <link> https://sciml.ai/news/2025/05/23/gsoc_2025/index.html </link>
-  <guid> https://sciml.ai/news/2025/05/23/gsoc_2025/index.html </guid>
+  <link> https://sciml.ai/news/2025/06/26/state_of_sciml/index.html </link>
+  <guid> https://sciml.ai/news/2025/06/26/state_of_sciml/index.html </guid>
   <description>
-    <![CDATA[  2025 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
+    <![CDATA[  State of the SciML Open Source Software Ecosystem, 2025  ]]>
   </description>  
     
   <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>  
@@ -232,12 +232,12 @@
 
 <item>
   <title>
-    <![CDATA[  State of the SciML Open Source Software Ecosystem, 2025  ]]>
+    <![CDATA[  2025 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
   </title>
-  <link> https://sciml.ai/news/2025/06/26/state_of_sciml/index.html </link>
-  <guid> https://sciml.ai/news/2025/06/26/state_of_sciml/index.html </guid>
+  <link> https://sciml.ai/news/2025/05/23/gsoc_2025/index.html </link>
+  <guid> https://sciml.ai/news/2025/05/23/gsoc_2025/index.html </guid>
   <description>
-    <![CDATA[  State of the SciML Open Source Software Ecosystem, 2025  ]]>
+    <![CDATA[  2025 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
   </description>  
     
   <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>  
@@ -346,12 +346,12 @@
 
 <item>
   <title>
-    <![CDATA[  2024 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
+    <![CDATA[  2023 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
   </title>
-  <link> https://sciml.ai/news/2024/06/05/gsoc_2024/index.html </link>
-  <guid> https://sciml.ai/news/2024/06/05/gsoc_2024/index.html </guid>
+  <link> https://sciml.ai/news/2023/06/29/gsoc_summer_fellowship/index.html </link>
+  <guid> https://sciml.ai/news/2023/06/29/gsoc_summer_fellowship/index.html </guid>
   <description>
-    <![CDATA[  2024 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
+    <![CDATA[  2023 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
   </description>  
     
   <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>  
@@ -365,12 +365,12 @@
 
 <item>
   <title>
-    <![CDATA[  2023 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
+    <![CDATA[  2024 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
   </title>
-  <link> https://sciml.ai/news/2023/06/29/gsoc_summer_fellowship/index.html </link>
-  <guid> https://sciml.ai/news/2023/06/29/gsoc_summer_fellowship/index.html </guid>
+  <link> https://sciml.ai/news/2024/06/05/gsoc_2024/index.html </link>
+  <guid> https://sciml.ai/news/2024/06/05/gsoc_2024/index.html </guid>
   <description>
-    <![CDATA[  2023 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
+    <![CDATA[  2024 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
   </description>  
     
   <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>  
@@ -821,12 +821,12 @@
 
 <item>
   <title>
-    <![CDATA[  SciML Scientific Machine Learning Citations  ]]>
+    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
   </title>
-  <link> https://sciml.ai/citing/index.html </link>
-  <guid> https://sciml.ai/citing/index.html </guid>
+  <link> https://sciml.ai/roadmap/index.html </link>
+  <guid> https://sciml.ai/roadmap/index.html </guid>
   <description>
-    <![CDATA[  Citations for the SciML Scientific Machine Learning software organization  ]]>
+    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
@@ -840,12 +840,31 @@
 
 <item>
   <title>
-    <![CDATA[  SciML Scientific Machine Learning Showcase  ]]>
+    <![CDATA[  Scientific Machine Learning Community  ]]>
   </title>
-  <link> https://sciml.ai/showcase/index.html </link>
-  <guid> https://sciml.ai/showcase/index.html </guid>
+  <link> https://sciml.ai/community/index.html </link>
+  <guid> https://sciml.ai/community/index.html </guid>
   <description>
-    <![CDATA[  Showcase of SciML Scientific Machine Learning applications  ]]>
+    <![CDATA[  This page describes the community pages, chatrooms, and forums used by the scientific machine learning community  ]]>
+  </description>  
+    
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Scientific Machine Learning Citations  ]]>
+  </title>
+  <link> https://sciml.ai/citing/index.html </link>
+  <guid> https://sciml.ai/citing/index.html </guid>
+  <description>
+    <![CDATA[  Citations for the SciML Scientific Machine Learning software organization  ]]>
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
@@ -878,50 +897,31 @@
 
 <item>
   <title>
+    <![CDATA[  SciML Scientific Machine Learning Showcase  ]]>
+  </title>
+  <link> https://sciml.ai/showcase/index.html </link>
+  <guid> https://sciml.ai/showcase/index.html </guid>
+  <description>
+    <![CDATA[  Showcase of SciML Scientific Machine Learning applications  ]]>
+  </description>  
+    
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  SciML Scientific Machine Learning Challenge Problems and Datasets  ]]>
   </title>
   <link> https://sciml.ai/challenge/index.html </link>
   <guid> https://sciml.ai/challenge/index.html </guid>
   <description>
     <![CDATA[  Challenge problems and research datasets for the Scientific Machine Learning &#40;SciML&#41;  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Staging Team</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
-  </title>
-  <link> https://sciml.ai/roadmap/index.html </link>
-  <guid> https://sciml.ai/roadmap/index.html </guid>
-  <description>
-    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Staging Team</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Scientific Machine Learning Community  ]]>
-  </title>
-  <link> https://sciml.ai/community/index.html </link>
-  <guid> https://sciml.ai/community/index.html </guid>
-  <description>
-    <![CDATA[  This page describes the community pages, chatrooms, and forums used by the scientific machine learning community  ]]>
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
@@ -1222,8 +1222,8 @@
   <title>
     <![CDATA[  SDIRK Methods   ]]>
   </title>
-  <link> https://sciml.ai/news/2017/08/13/SDIRK/index.html </link>
-  <guid> https://sciml.ai/news/2017/08/13/SDIRK/index.html </guid>
+  <link> https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html </link>
+  <guid> https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html </guid>
   <description>
     <![CDATA[  SDIRK Methods   ]]>
   </description>  
@@ -1241,8 +1241,8 @@
   <title>
     <![CDATA[  SDIRK Methods   ]]>
   </title>
-  <link> https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html </link>
-  <guid> https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html </guid>
+  <link> https://sciml.ai/news/2017/08/13/SDIRK/index.html </link>
+  <guid> https://sciml.ai/news/2017/08/13/SDIRK/index.html </guid>
   <description>
     <![CDATA[  SDIRK Methods   ]]>
   </description>  
