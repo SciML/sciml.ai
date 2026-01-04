@@ -8,9 +8,13 @@
 
 **How do you make contributing easier while demanding more from the code?**
 
-SciML has 200+ packages on Julia's cutting edge. We need strict standards—trim compatibility, static interfaces, performance tracking. But strict requirements create barriers: new contributors submit PRs, CI fails mysteriously, they give up.
+SciML has 200+ packages with stricter standards than most of the Julia ecosystem. We test for static compilability, type stability, and interface consistency. Many upstream packages don't—AD packages like Zygote and Enzyme frequently introduce regressions, and foundational packages like Distributions.jl don't test for `juliac --trim` compatibility or static interfaces.
 
-Our answer: **AI agents enforce the hard stuff, so humans focus on the interesting stuff.**
+This means SciML is often the first to discover upstream bugs. We file issues, contribute fixes, and wait. Meanwhile, our CI goes red through no fault of our own.
+
+We want to raise standards even higher—every SciML package compatible with `juliac --trim`. But that's only possible if we can handle the upstream breakage without drowning contributors in mysterious CI failures.
+
+Our answer: **AI agents that track upstream issues, keep CI green, and let humans focus on real work.**
 
 ## The Key Insight
 
