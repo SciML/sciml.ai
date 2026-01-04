@@ -113,3 +113,17 @@ analysis.
 **Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
 
 **Difficulty**: Easy to Medium depending on the chosen subtasks.
+
+## ODE-Based Reservoir Models in ReservoirComputing.jl
+
+[ReservoirComputing.jl](https://github.com/SciML/ReservoirComputing.jl) currently targets discrete-time reservoir models such as Echo State Networks and Next Generation Reservoir Computing. The aim of this project would be to add a ContinuousReservoirComputer model: a continuous-time general approach for reservoir computing models, where the hidden state evolves via an ODE. This extension would enable to then extend ReservoirComputing.jl adding models like Liquid State Machines.
+
+**Recommended Skills**: Background knowledge in numerical analysis and some basics of reservoir computing.
+
+**Expected Results**: New ContinuousReservoirComputer model integrated into ReservoirComputing.jl. Additional time-continuous models that build on the new APIs.
+
+**Mentors**: [Francesco Martinuzzi](https://github.com/MartinuzziFrancesco), [Chris Rackauckas](https://github.com/ChrisRackauckas)
+
+**Expected Project Size**: 175 hour (core model + docs/tests), 350 hour if adding stretch items (additional models).
+
+**Difficulty**: Medium
