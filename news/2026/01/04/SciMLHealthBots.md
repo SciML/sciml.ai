@@ -12,9 +12,16 @@ SciML has 200+ packages with stricter standards than most of the Julia ecosystem
 
 This means SciML is often the first to discover upstream bugs. We file issues, contribute fixes, and wait. But in the meantime, CI stays red. Maintainers have to remember "oh yeah, that's the Zygote issue." Contributors unfamiliar with the repo see red badges and don't know if their PR broke something or if it's a known issue. Merging requires manually checking logs to verify "the right test" is failing. This process is time-consuming and error-prone.
 
-We want to raise standards even higher—every SciML package compatible with `juliac --trim`. But that's only possible if we can handle the upstream breakage without drowning contributors in mysterious CI failures.
+We want to raise standards even higher:
 
-Our answer: **AI agents that track upstream issues, keep CI green, and let humans focus on real work.**
+- Every SciML package compatible with `juliac --trim`
+- Well-defined interfaces with tested assumptions (no relying on 1-based indexing, proper number type compatibility, GPU support)
+- Explicit imports only—no `using` in package code
+- Pull the rest of the Julia ecosystem toward these stricter coding practices
+
+The question is: **how do we do this without sacrificing the ease of contributions SciML has always had for mathematicians and scientists?** How do we make contributing *even easier* while making code requirements *stricter*?
+
+Our answer: **AI agents that enforce the hard stuff, track upstream issues, keep CI green, and let humans focus on the science.**
 
 ## The Key Insight
 
