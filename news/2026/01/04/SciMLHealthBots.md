@@ -27,18 +27,39 @@ Strictness and accessibility only conflict when *humans* enforce the rules. With
 - **Static interfaces.** Type-stable APIs, consistent patterns.
 - **Performance is a bug.** Regressions tracked and fixed automatically.
 
+## Bot Types
+
+13 specialized agents run continuously across all SciML repositories:
+
+| Bot | Purpose |
+|-----|---------|
+| **CI Health Check** | Diagnose and fix CI failures, keep all repos green |
+| **Issue Solver** | Investigate bugs, prioritize `bug`-labeled issues |
+| **Dependency Update** | Handle upstream version bumps and breaking changes |
+| **Explicit Imports** | Add explicit imports for trim compatibility |
+| **Static Improvement** | Fix type instabilities and interface inconsistencies |
+| **Performance Check** | Detect regressions, track benchmarks |
+| **Deprecation Fix** | Update deprecated API usage |
+| **Interface Check** | Verify consistent APIs across packages |
+| **Docs Improvement** | Fix documentation issues |
+| **Version Bump** | Check for needed releases |
+| **Min Version Bump** | Update compat bounds |
+| **Precompilation** | Improve load times |
+| **Benchmark Check** | Monitor SciMLBenchmarks.jl |
+
+Up to 48 agents run concurrently. Control which types are active:
+
+```bash
+sciml-ctl tasks show                    # See enabled bots
+sciml-ctl tasks only ci_health_check    # Focus on CI health
+sciml-agents list                       # See running agents
+```
+
 ## How It Works
 
 **For contributors:** Submit your PR. If something's wrong, a bot explains what and suggests a fix. Green CI? Merge.
 
 **For upstream breaks:** Bots detect when Julia or dependencies break our tests, disable affected tests conditionally, and open `bug`-labeled issues. You never see failures that aren't yours.
-
-**For maintenance:** 48 concurrent agents handle CI health, issue investigation, static analysis, and performance monitoring continuously.
-
-```bash
-sciml-agents list          # See active agents
-sciml-ctl tasks show       # Control what runs
-```
 
 ## The Result
 
