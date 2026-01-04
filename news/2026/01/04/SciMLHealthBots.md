@@ -55,11 +55,31 @@ sciml-ctl tasks only ci_health_check    # Focus on CI health
 sciml-agents list                       # See running agents
 ```
 
-## How It Works
+## The Bug Fix Flow
 
-**For contributors:** Submit your PR. If something's wrong, a bot explains what and suggests a fix. Green CI? Merge.
+When CI Health Check detects a failure, it follows a resolution hierarchy:
 
-**For upstream breaks:** Bots detect when Julia or dependencies break our tests, disable affected tests conditionally, and open `bug`-labeled issues. You never see failures that aren't yours.
+**1. Try to fix it directly:**
+- Cap a dependency version in `[compat]`?
+- Fix the code?
+- Make behavior conditional on Julia version?
+- Add a missing explicit import?
+
+**2. If it can't fix it, keep CI green anyway:**
+- Mark the failing test as `@test_broken` or skip conditionally
+- Open a `bug`-labeled issue with full diagnostics
+- PR merges, CI stays green
+
+**3. Issue Solver picks it up:**
+- Issue Solver prioritizes `bug`-labeled issues
+- It attempts deeper fixes the CI Health Check couldn't do
+- If solved, removes the `@test_broken` marker and closes the issue
+
+This creates a cycle: **CI stays green, but regressions are tracked as issues and continuously worked on.** Contributors never see mysterious red badges from problems that predate their PR. Maintainers see a clear issue queue of known problems being actively resolved.
+
+## For Contributors
+
+Submit your PR. If something's wrong, a bot explains what and suggests a fix. Green CI? Merge. You never see failures that aren't yours.
 
 ## The Result
 
