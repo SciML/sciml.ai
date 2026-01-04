@@ -247,7 +247,7 @@ foundations of SciML.
 
 **Reviewers**: Chris Rackauckas
 
-In Progress: Claimed by AR-1669 for the time period of (4/12/2025) - (4/1/2026).
+In Progress: Claimed by Jash Ambaliya(AJ0070) for the time period of (5/1/2025) - (5/2/2026).
 
 ## Fix `DataInterpolations` Bspline derivatives (\$100)
 
