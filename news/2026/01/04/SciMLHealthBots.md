@@ -10,7 +10,7 @@
 
 SciML has 200+ packages with stricter standards than most of the Julia ecosystem. We test for static compilability, type stability, and interface consistency. Many upstream packages don't—AD packages like Zygote and Enzyme frequently introduce regressions, and foundational packages like Distributions.jl don't test for `juliac --trim` compatibility or static interfaces.
 
-This means SciML is often the first to discover upstream bugs. We file issues, contribute fixes, and wait. Meanwhile, our CI goes red through no fault of our own.
+This means SciML is often the first to discover upstream bugs. We file issues, contribute fixes, and wait. But in the meantime, CI stays red. Maintainers have to remember "oh yeah, that's the Zygote issue." Contributors unfamiliar with the repo see red badges and don't know if their PR broke something or if it's a known issue. Merging requires manually checking logs to verify "the right test" is failing. This process is time-consuming and error-prone.
 
 We want to raise standards even higher—every SciML package compatible with `juliac --trim`. But that's only possible if we can handle the upstream breakage without drowning contributors in mysterious CI failures.
 
