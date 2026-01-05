@@ -166,6 +166,8 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 ## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
 
+**In Progress**: Claimed by Khushmagrawal for the time period of January 02, 2026 - February 02, 2026.
+
 [LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
 central package for the performance of many Julia packages. Its internals make
 use of many low-level features and manual SIMD that can make it require significant
