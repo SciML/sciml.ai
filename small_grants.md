@@ -201,6 +201,9 @@ which SciML will help administer through the small grants program.
 
 The current SciMLBenchmarks only run on CPU. There are many cases we wish to benchmark on GPU. The goal of this project is to modify the CI scripts to support GPU benchmarking.
 
+
+**In Progress**: Claimed by divital-coder for the time period of (06-12-2025) - (06-02-2026).
+
 **Information to Get Started**: See the current scripts in https://github.com/SciML/SciMLBenchmarks.jl/tree/master/.buildkite
 
 **Success Criteria**: Merged pull request which changes the SciMLBenchmarks CI scripts to have a GPU queue, and setting up one of the benchmarks with a GPU queue
@@ -255,6 +258,8 @@ In Progress: Claimed by AR-1669 for the time period of (4/12/2025) - (4/1/2026).
 **Recommended Skills**: Basic (undergrad-level) knowledge of calculus
 
 **Reviewers**: Chris Rackauckas and Oscar Smith
+
+In Progress: Claimed by ajatshatru01 for the time period of (23/12/2025) - (23/1/2026).
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
@@ -521,7 +526,7 @@ The Symbolics.jl symbolic solver covers a wide range of cases, but adding a fall
   - `limit`
   - `simplify`
 
-This enhancement expands Symbolics.jl’s solving capabilities by leveraging the mature SymPy backend when native solutions are insufficient.
+This enhancement expands Symbolics.jl's solving capabilities by leveraging the mature SymPy backend when native solutions are insufficient.
 
 **Information to Get Started** :
 
