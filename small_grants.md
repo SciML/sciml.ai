@@ -229,26 +229,6 @@ The purpose of this is to work through what is required for the minimum version 
 
 **Reviewers**: Chris Rackauckas and Oscar Smith
 
-## CurveFit.jl Enhancements (\$300)
-
-CurveFit.jl is a high-level package for fitting curves to data. It sits at a very important part of the
-ecosystem which was traditionally missing, filled by packages like LsqFit.jl which used inefficient
-and unstable algorithms. While CurveFit.jl's design on NonlinearSolve.jl has been a major improvement
-to this space, giving accessibility to using the more sophisticated methods of the SciML solver
-ecosystem, it still lacks some important features for users. The goal of this project is to add a few
-of this missing features to be a feature-complete curve fitting library, built on the solid numerical
-foundations of SciML.
-
-**Information to Get Started**: This issue https://github.com/SciML/CurveFit.jl/issues/41 describes all of the current requirements
-
-**Success Criteria**: Merged pull requests which solve all of the issues in 41.
-
-**Recommended Skills**: Knowledge of Julia, numerical analysis, and a willness to learn some of the statistics API
-
-**Reviewers**: Chris Rackauckas
-
-In Progress: Claimed by AR-1669 for the time period of (4/12/2025) - (4/1/2026).
-
 ## Fix `DataInterpolations` Bspline derivatives (\$100)
 
 `DataInterpolations.jl` is a SciML repository for interpolating 1D data. It supports a wide number of interpolation types, as well as taking first and second derivatives of the interpolations. Specifically, the BSplineInterpoation has a few bugs with regards to where it puts the control points, and how it calculates derivatives.
@@ -368,6 +348,26 @@ development skills and test-driven development of a large code base is required.
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
+
+## CurveFit.jl Enhancements (\$300)
+
+Completed by **Andreja Ristivojevic**
+
+CurveFit.jl is a high-level package for fitting curves to data. It sits at a very important part of the
+ecosystem which was traditionally missing, filled by packages like LsqFit.jl which used inefficient
+and unstable algorithms. While CurveFit.jl's design on NonlinearSolve.jl has been a major improvement
+to this space, giving accessibility to using the more sophisticated methods of the SciML solver
+ecosystem, it still lacks some important features for users. The goal of this project is to add a few
+of this missing features to be a feature-complete curve fitting library, built on the solid numerical
+foundations of SciML.
+
+**Information to Get Started**: This issue https://github.com/SciML/CurveFit.jl/issues/41 describes all of the current requirements
+
+**Success Criteria**: Merged pull requests which solve all of the issues in 41.
+
+**Recommended Skills**: Knowledge of Julia, numerical analysis, and a willness to learn some of the statistics API
+
+**Reviewers**: Chris Rackauckas
 
 ## Update LoopVectorization to Support Changes in Julia v1.12 (\$200)
 
