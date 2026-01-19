@@ -371,7 +371,7 @@ A merged PR to NeuroTabModels.jl that includes:
 - Correctness of the implementation verified by assessing similarity of the predictions with original implementation.
 - Documentation of the model and minimal tests within the package test suite.
 
-It's also expected that TabM model will be assessed against basic regression benchmarks on MLBenchmarks.jl[https://github.com/Evovest/MLBenchmarks.jl/tree/openml] on `year` and `msrank` datasets. 
+It's also expected that TabM model will be assessed against basic regression benchmarks on [MLBenchmarks.jl](https://github.com/Evovest/MLBenchmarks.jl/tree/openml) on `year` and `msrank` datasets. 
 
 **Recommended Skills**: Familiarity with deep learning frameworks such as Flux.jl or Lux.jl and underlying autodiff systems (Enzyme.jl).
 
