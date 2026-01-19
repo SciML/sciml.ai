@@ -347,6 +347,36 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
+## Add support for TabM architecture in NeuroTabModels.jl and remove Zygote.jl dependency (\$1800)
+
+[NeuroTabModels.jl](https://github.com/Evovest/NeuroTabModels.jl) is a library for training neural networks on tabular data. It currently supports a limited set of architectures: MLP, ResNets and NeuroTrees, and is built on top of Flux.jl and Zygote.jl.
+
+The objective of this project is to set a better foundation for the library by moving from Zygote to Enzyme to benefit from improved performance through Reactant and demonstrating ease of extension by adding support for a new architecture type, TabM.
+
+**Information to Get Started**: 
+- TabM paper: 
+  - Official implementation: https://github.com/yandex-research/tabm
+  - Paper: https://arxiv.org/abs/2410.24210
+- Numerical embeddings: are a dependency for TabM, but can be useful for any other models. The objective is thus to implement them as new neural operators accessible to any model. Implementation to follow the Yandex reference:
+  - https://github.com/yandex-research/rtdl-num-embeddings/tree/main
+  - https://github.com/yandex-research/rtdl-num-embeddings/blob/main/package/README.md
+
+**Success Criteria**: 
+A merged PR to NeuroTabModels.jl that includes:
+- `TabM` as a newly supported architecture type.
+- A Numerical Embeddings module added as a preprocessing layer accessible to all models (TabM, MLP, NeuroTrees...)
+- Removal of the dependency on Zygote.jl in favor of Enzyme.jl for automatic differentiation.
+  This notably involves handling/replacing the currently existing custom rules used for `leaf_weights` in NeuroTrees. See https://enzyme.mit.edu/julia/stable/#Importing-ChainRules.
+- Performance comparison with the original TabM implementation.
+- Correctness of the implementation verified by assessing similarity of the predictions with original implementation.
+- Documentation of the model and minimal tests within the package test suite.
+
+It's also expected that TabM model will be assessed against basic regression benchmarks on [MLBenchmarks.jl](https://github.com/Evovest/MLBenchmarks.jl/tree/openml) on `year` and `msrank` datasets. 
+
+**Recommended Skills**: Familiarity with deep learning frameworks such as Flux.jl or Lux.jl and underlying autodiff systems (Enzyme.jl).
+
+**Reviewers**: [Jeremie Desgagne-Bouchard](https://github.com/jeremiedb)
+
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
