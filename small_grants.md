@@ -349,7 +349,7 @@ development skills and test-driven development of a large code base is required.
 
 ## Add support for TabM architecture in NeuroTabModels.jl and remove Zygote.jl dependency (\$1800)
 
-NeuroTabModels.jl[https://github.com/Evovest/NeuroTabModels.jl] is a library for training neural networks on tabular data. It currently supports a limited set of architectures: MLP, ResNets and NeuroTrees, and is built on top of Flux.jl and Zygote.jl.
+[NeuroTabModels.jl](https://github.com/Evovest/NeuroTabModels.jl) is a library for training neural networks on tabular data. It currently supports a limited set of architectures: MLP, ResNets and NeuroTrees, and is built on top of Flux.jl and Zygote.jl.
 
 The objective of this project is to set a better foundation for the library by moving from Zygote to Enzyme to benefit from improved performance through Reactant and demonstrating ease of extension by adding support for a new architecture type, TabM.
 
