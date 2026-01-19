@@ -162,8 +162,6 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-
-
 ## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
 
 **In Progress**: Claimed by Khushmagrawal for the time period of January 02, 2026 - February 02, 2026.
@@ -198,11 +196,9 @@ which SciML will help administer through the small grants program.
 
 **Reviewers**: Chris Rackauckas and Oscar Smith
 
-
 ## Setup SciMLBenchmarks CI scripts to support GPU benchmarking (\$300)
 
 The current SciMLBenchmarks only run on CPU. There are many cases we wish to benchmark on GPU. The goal of this project is to modify the CI scripts to support GPU benchmarking.
-
 
 **In Progress**: Claimed by divital-coder for the time period of (06-12-2025) - (06-02-2026).
 
@@ -348,6 +344,8 @@ development skills and test-driven development of a large code base is required.
 **Reviewers**: Chris Rackauckas
 
 ## Add support for TabM architecture in NeuroTabModels.jl and remove Zygote.jl dependency (\$1800)
+
+**In Progress**: Claimed by Aditya Pandey for the time period of January 20, 2026 - March 5, 2026.
 
 [NeuroTabModels.jl](https://github.com/Evovest/NeuroTabModels.jl) is a library for training neural networks on tabular data. It currently supports a limited set of architectures: MLP, ResNets and NeuroTrees, and is built on top of Flux.jl and Zygote.jl.
 
