@@ -162,9 +162,9 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-
-
 ## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
+
+**In Progress**: Claimed by Khushmagrawal for the time period of January 02, 2026 - February 02, 2026.
 
 [LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
 central package for the performance of many Julia packages. Its internals make
@@ -196,13 +196,11 @@ which SciML will help administer through the small grants program.
 
 **Reviewers**: Chris Rackauckas and Oscar Smith
 
-
 ## Setup SciMLBenchmarks CI scripts to support GPU benchmarking (\$300)
 
 The current SciMLBenchmarks only run on CPU. There are many cases we wish to benchmark on GPU. The goal of this project is to modify the CI scripts to support GPU benchmarking.
 
-
-**In Progress**: Claimed by divital-coder for the time period of (06-12-2025) - (06-01=2026).
+**In Progress**: Claimed by divital-coder for the time period of (06-12-2025) - (06-02-2026).
 
 **Information to Get Started**: See the current scripts in https://github.com/SciML/SciMLBenchmarks.jl/tree/master/.buildkite
 
@@ -248,6 +246,8 @@ foundations of SciML.
 In Progress: Claimed by AR-1669 for the time period of (4/12/2025) - (4/1/2026).
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
+
+**In Progress**: Claimed by Jash Ambaliya(AJ0070) for the time period of January 06, 2026 - February 06, 2026.
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
@@ -349,9 +349,61 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
+## Add support for TabM architecture in NeuroTabModels.jl and remove Zygote.jl dependency (\$1800)
+
+**In Progress**: Claimed by Aditya Pandey for the time period of January 20, 2026 - March 5, 2026.
+
+[NeuroTabModels.jl](https://github.com/Evovest/NeuroTabModels.jl) is a library for training neural networks on tabular data. It currently supports a limited set of architectures: MLP, ResNets and NeuroTrees, and is built on top of Flux.jl and Zygote.jl.
+
+The objective of this project is to set a better foundation for the library by moving from Zygote to Enzyme to benefit from improved performance through Reactant and demonstrating ease of extension by adding support for a new architecture type, TabM.
+
+**Information to Get Started**: 
+- TabM paper: 
+  - Official implementation: https://github.com/yandex-research/tabm
+  - Paper: https://arxiv.org/abs/2410.24210
+- Numerical embeddings: are a dependency for TabM, but can be useful for any other models. The objective is thus to implement them as new neural operators accessible to any model. Implementation to follow the Yandex reference:
+  - https://github.com/yandex-research/rtdl-num-embeddings/tree/main
+  - https://github.com/yandex-research/rtdl-num-embeddings/blob/main/package/README.md
+
+**Success Criteria**: 
+A merged PR to NeuroTabModels.jl that includes:
+- `TabM` as a newly supported architecture type.
+- A Numerical Embeddings module added as a preprocessing layer accessible to all models (TabM, MLP, NeuroTrees...)
+- Removal of the dependency on Zygote.jl in favor of Enzyme.jl for automatic differentiation.
+  This notably involves handling/replacing the currently existing custom rules used for `leaf_weights` in NeuroTrees. See https://enzyme.mit.edu/julia/stable/#Importing-ChainRules.
+- Performance comparison with the original TabM implementation.
+- Correctness of the implementation verified by assessing similarity of the predictions with original implementation.
+- Documentation of the model and minimal tests within the package test suite.
+
+It's also expected that TabM model will be assessed against basic regression benchmarks on [MLBenchmarks.jl](https://github.com/Evovest/MLBenchmarks.jl/tree/openml) on `year` and `msrank` datasets. 
+
+**Recommended Skills**: Familiarity with deep learning frameworks such as Flux.jl or Lux.jl and underlying autodiff systems (Enzyme.jl).
+
+**Reviewers**: [Jeremie Desgagne-Bouchard](https://github.com/jeremiedb)
+
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
+
+## CurveFit.jl Enhancements (\$300)
+
+Completed by **Andreja Ristivojevic**
+
+CurveFit.jl is a high-level package for fitting curves to data. It sits at a very important part of the
+ecosystem which was traditionally missing, filled by packages like LsqFit.jl which used inefficient
+and unstable algorithms. While CurveFit.jl's design on NonlinearSolve.jl has been a major improvement
+to this space, giving accessibility to using the more sophisticated methods of the SciML solver
+ecosystem, it still lacks some important features for users. The goal of this project is to add a few
+of this missing features to be a feature-complete curve fitting library, built on the solid numerical
+foundations of SciML.
+
+**Information to Get Started**: This issue https://github.com/SciML/CurveFit.jl/issues/41 describes all of the current requirements
+
+**Success Criteria**: Merged pull requests which solve all of the issues in 41.
+
+**Recommended Skills**: Knowledge of Julia, numerical analysis, and a willness to learn some of the statistics API
+
+**Reviewers**: Chris Rackauckas
 
 ## Update LoopVectorization to Support Changes in Julia v1.12 (\$200)
 
@@ -512,7 +564,7 @@ The Symbolics.jl symbolic solver covers a wide range of cases, but adding a fall
   - `limit`
   - `simplify`
 
-This enhancement expands Symbolics.jl’s solving capabilities by leveraging the mature SymPy backend when native solutions are insufficient.
+This enhancement expands Symbolics.jl's solving capabilities by leveraging the mature SymPy backend when native solutions are insufficient.
 
 **Information to Get Started** :
 
