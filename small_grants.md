@@ -225,26 +225,6 @@ The purpose of this is to work through what is required for the minimum version 
 
 **Reviewers**: Chris Rackauckas and Oscar Smith
 
-## CurveFit.jl Enhancements (\$300)
-
-CurveFit.jl is a high-level package for fitting curves to data. It sits at a very important part of the
-ecosystem which was traditionally missing, filled by packages like LsqFit.jl which used inefficient
-and unstable algorithms. While CurveFit.jl's design on NonlinearSolve.jl has been a major improvement
-to this space, giving accessibility to using the more sophisticated methods of the SciML solver
-ecosystem, it still lacks some important features for users. The goal of this project is to add a few
-of this missing features to be a feature-complete curve fitting library, built on the solid numerical
-foundations of SciML.
-
-**Information to Get Started**: This issue https://github.com/SciML/CurveFit.jl/issues/41 describes all of the current requirements
-
-**Success Criteria**: Merged pull requests which solve all of the issues in 41.
-
-**Recommended Skills**: Knowledge of Julia, numerical analysis, and a willness to learn some of the statistics API
-
-**Reviewers**: Chris Rackauckas
-
-In Progress: Claimed by AR-1669 for the time period of (4/12/2025) - (4/1/2026).
-
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
 **In Progress**: Claimed by Jash Ambaliya(AJ0070) for the time period of January 06, 2026 - February 06, 2026.
