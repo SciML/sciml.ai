@@ -225,20 +225,6 @@ The purpose of this is to work through what is required for the minimum version 
 
 **Reviewers**: Chris Rackauckas and Oscar Smith
 
-## Fix `DataInterpolations` Bspline derivatives (\$100)
-
-`DataInterpolations.jl` is a SciML repository for interpolating 1D data. It supports a wide number of interpolation types, as well as taking first and second derivatives of the interpolations. Specifically, the BSplineInterpoation has a few bugs with regards to where it puts the control points, and how it calculates derivatives.
-
-**Information to Get Started**: See the issue https://github.com/SciML/DataInterpolations.jl/issues/419 describes the issue and a proposed solution. Specifically, this work will likely start by mirroring https://github.com/SciML/DataInterpolationsND.jl/pull/20 and re-enabling the derviative tests for BSpline interpolations.
-
-**Success Criteria**: Merged pull request which fixes the numerical issues
-
-**Recommended Skills**: Basic (undergrad-level) knowledge of calculus
-
-**Reviewers**: Chris Rackauckas and Oscar Smith
-
-In Progress: Claimed by ajatshatru01 for the time period of (23/12/2025) - (23/1/2026).
-
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
 **In Progress**: Claimed by Jash Ambaliya(AJ0070) for the time period of January 06, 2026 - February 06, 2026.
@@ -711,3 +697,16 @@ General performance optimization and multi-threading.
 
 **Reviewers**: [Jeremie Desgagne-Bouchard](https://github.com/jeremiedb)
 
+## Fix `DataInterpolations` Bspline derivatives (\$100)
+
+Completed by Utsav Ojha(Github:- https://github.com/ajatshatru01 )
+
+`DataInterpolations.jl` is a SciML repository for interpolating 1D data. It supports a wide number of interpolation types, as well as taking first and second derivatives of the interpolations. Specifically, the BSplineInterpoation has a few bugs with regards to where it puts the control points, and how it calculates derivatives.
+
+**Information to Get Started**: See the issue https://github.com/SciML/DataInterpolations.jl/issues/419 describes the issue and a proposed solution. Specifically, this work will likely start by mirroring https://github.com/SciML/DataInterpolationsND.jl/pull/20 and re-enabling the derviative tests for BSpline interpolations.
+
+**Success Criteria**: Merged pull request(https://github.com/SciML/DataInterpolations.jl/pull/502 ) which fixes and clarifies the numerical issues
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of calculus
+
+**Reviewers**: Chris Rackauckas and Oscar Smith
