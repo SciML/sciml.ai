@@ -501,6 +501,14 @@ development skills and test-driven development of a large code base is required.
 The transistor amplifier benchmark was added [https://github.com/SciML/SciMLBenchmarks.jl/pull/1007](https://github.com/SciML/SciMLBenchmarks.jl/pull/1007).
 Project is kept open for other benchmarks.
 
+**In Progress: Claimed by Singh Harsh Rahulkumar for Jan 28th, 2026 – Feb 28th, 2026.**
+
+Proposed Project:
+Addition of a new Differential-Algebraic Equation (DAE) benchmark to SciMLBenchmarks.jl.
+The benchmark will introduce a distinct DAE system implemented using ModelingToolkit.jl,
+including solver comparisons, index and stiffness analysis, and performance benchmarking
+within the SciML ecosystem.
+
 ## SciMLBenchmarks Compatibility Bump for Benchmark Sets (\$100 each set)
 
 **Completed by Param Umesh Thakkar for the time period of January 21st - February 21st. Extended from February 21st to March 21st. Extended due to the project's complexity and final refinements.**
