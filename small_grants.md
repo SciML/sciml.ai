@@ -284,6 +284,36 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
+## DAE Problem Benchmarks ($100 / Benchmark)
+**In Progress: Claimed by Singh Harsh Rahulkumar for the time period of January 28, 2026 – February 28, 2026.**
+
+New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
+ability to evaluate solver robustness and performance across constrained mechanical systems.
+The goal of this project is to **finish and modernize the slider-crank mechanism DAE benchmark**
+and integrate it into the SciMLBenchmarks system for long-term performance tracking.
+
+### Information to Get Started
+The slider-crank mechanism is a classical constrained mechanical system that naturally forms
+an index-3 DAE. The benchmark will be formulated using ModelingToolkit.jl, following the
+conventions of existing DAE benchmarks. Structural simplification, constraint handling, and
+solver configuration will be addressed during implementation.
+
+### Related Issues
+- SciML/SciMLBenchmarks.jl#359  
+- SciML/OrdinaryDiffEq.jl#2177  
+
+### Success Criteria
+A merged pull request to SciMLBenchmarks.jl that adds or completes the slider-crank DAE benchmark
+as a `.jmd` file under `benchmarks/DAE/`, fully integrated into the benchmark server workflow.
+
+### Recommended Skills
+Prior experience with differential-algebraic equations, constrained mechanical systems, and
+symbolic modeling using ModelingToolkit.jl.
+
+### Reviewers
+Chris Rackauckas
+
+
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
@@ -500,14 +530,6 @@ development skills and test-driven development of a large code base is required.
 **Completed by Marko Polic in the time period of June 18th, 2024 - July 18th 2024.**
 The transistor amplifier benchmark was added [https://github.com/SciML/SciMLBenchmarks.jl/pull/1007](https://github.com/SciML/SciMLBenchmarks.jl/pull/1007).
 Project is kept open for other benchmarks.
-
-**In Progress: Claimed by Singh Harsh Rahulkumar for Jan 28th, 2026 – Feb 28th, 2026.**
-
-Proposed Project:
-Addition of a new Differential-Algebraic Equation (DAE) benchmark to SciMLBenchmarks.jl.
-The benchmark will introduce a distinct DAE system implemented using ModelingToolkit.jl,
-including solver comparisons, index and stiffness analysis, and performance benchmarking
-within the SciML ecosystem.
 
 ## SciMLBenchmarks Compatibility Bump for Benchmark Sets (\$100 each set)
 
