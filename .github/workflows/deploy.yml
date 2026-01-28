@@ -9,29 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         persist-credentials: false
-    # NOTE: Python is necessary for the pre-rendering (minification) step
     - name: Install python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.8'
-    # NOTE: Here you can install dependencies such as matplotlib if you use
-    # packages such as PyPlot.
-    # - run: pip install matplotlib
+        python-version: '3.11'
     - name: Install Julia
-      uses: julia-actions/setup-julia@v1
+      uses: julia-actions/setup-julia@v2
       with:
-        version: 1.5
-    # NOTE
-    #   The steps below ensure that NodeJS and Franklin are loaded then it
-    #   installs highlight.js which is needed for the prerendering step
-    #   (code highlighting + katex prerendering).
-    #   Then the environment is activated and instantiated to install all
-    #   Julia packages which may be required to successfully build your site.
-    #   The last line should be `optimize()` though you may want to give it
-    #   specific arguments, see the documentation or ?optimize in the REPL.
+        version: '1.10'
     - run: julia -e '
             using Pkg; Pkg.add(["NodeJS", "Franklin"]);
             using NodeJS; run(`$(npm_cmd()) install highlight.js`);
@@ -39,8 +27,8 @@ jobs:
             Pkg.activate("."); Pkg.instantiate();
             optimize()'
     - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: __site
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        folder: __site

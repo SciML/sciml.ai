@@ -161,26 +161,73 @@ achieve a mergable PR within the time frame, but there is no expectation that th
 will "go the extra mile" to teach the contributor how the package or mathematics works.
 
 # List of Current Projects
-## Fix `DataInterpolations` Bspline derivatives (\$100)
 
-*In Progress: Claimed by Divyansh Goyal for the time period of September 11th 2025 - October 11th 2025. Extended from October 11 2025 - November 12 2025, in support for a fully mature PR.*
+## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
 
-`DataInterpolations.jl` is a SciML repository for interpolating 1D data. It supports a wide number of interpolation types, as well as taking first and second derivatives of the interpolations. Specifically, the BSplineInterpoation has a few bugs with regards to where it puts the control points, and how it calculates derivatives.
+**In Progress**: Claimed by Khushmagrawal for the time period of January 02, 2026 - February 02, 2026.
 
-**Information to Get Started**: See the issue https://github.com/SciML/DataInterpolations.jl/issues/419 describes the issue and a proposed solution. Specifically, this work will likely start by mirroring https://github.com/SciML/DataInterpolationsND.jl/pull/20 and re-enabling the derviative tests for BSpline interpolations.
+[LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
+central package for the performance of many Julia packages. Its internals make
+use of many low-level features and manual SIMD that can make it require significant
+maintenance to be optimized for new system architectures and versions of the compiler.
 
-**Related Issues**: https://github.com/SciML/Optimization.jl/issues/917
+**Information to Get Started**:
 
-**Success Criteria**: Merged pull request which adds a new OptimizationSciPy.jl to 
-the Optimization.jl repository.
+LoopVectorization.jl was mainly developed having x64 Intel systems in mind and
+available as testing platforms. Apple has launched the new Apple M series processors
+using an ARM architecture some time ago. When updating the CI infrastructure of
+LoopVectorization.jl to run tests on Apple ARM systems
+(see <https://github.com/JuliaSIMD/LoopVectorization.jl/pull/563>),
+several bugs were found. These test failures were marked in the PR, and the
+issue <https://github.com/JuliaSIMD/LoopVectorization.jl/issues/564> has been
+created.
 
-**Recommended Skills**: Basic (undergrad-level) knowledge of calculus
+The purpose of this project is to update LoopVectorization.jl and/or related packages
+from the JuliaSIMD ecosystem so that all tests pass on all available platforms;
+all broken/skipped tests (`@test_broken`, `@test_skip`) are changed backed to normal
+tests (`@test`) that pass on all platforms.
+
+Note that the funds for this project as given by earmarked donations to the JuliaLang project
+which SciML will help administer through the small grants program.
+
+**Success Criteria**: LoopVectorization.jl runs all tests on all platforms.
+
+**Recommended Skills**: This requires some low-level knowledge of LoopVectorization.jl.
+
+**Reviewers**: Chris Rackauckas and Oscar Smith
+
+## Setup SciMLBenchmarks CI scripts to support GPU benchmarking (\$300)
+
+The current SciMLBenchmarks only run on CPU. There are many cases we wish to benchmark on GPU. The goal of this project is to modify the CI scripts to support GPU benchmarking.
+
+**In Progress**: Claimed by divital-coder for the time period of (06-12-2025) - (06-02-2026).
+
+**Information to Get Started**: See the current scripts in https://github.com/SciML/SciMLBenchmarks.jl/tree/master/.buildkite
+
+**Success Criteria**: Merged pull request which changes the SciMLBenchmarks CI scripts to have a GPU queue, and setting up one of the benchmarks with a GPU queue
+
+**Recommended Skills**: Understanding of Devops tooling and CI scripts
+
+**Reviewers**: Chris Rackauckas
+
+## Fix OrdinaryDiffEq Downgrade tests (\$100)
+
+The downgrade tests are a set of tests which ensure that the package can be downgraded to a previous version and still work. This is important for ensuring that the package is stable and can be used in production environments. However, these tests are currently failing in many repositories due to changes in the package dependencies or the package itself. For example, OrdinaryDiffEq and most of its sublibraries
+currently fail the downgrade tests.
+
+The purpose of this is to work through what is required for the minimum version bumping in order to ensure the downgrade tests pass on OrdinaryDiffEq and all of its sublibraries. This may require tracking down incorrect versions in dependencies as well.
+
+**Information to Get Started**: See the test failures on master, i.e. https://github.com/SciML/OrdinaryDiffEq.jl/pull/2919 
+
+**Success Criteria**: Merged pull request which fixes all of the downgrade tests in OrdinaryDiffEq and its sublibraries.
+
+**Recommended Skills**: Knowledge of the Julia package system and how to use the `Pkg` standard library to downgrade packages.
 
 **Reviewers**: Chris Rackauckas and Oscar Smith
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
-*In Progress: Claimed by Raunak Narang for the time period of August 6th 2025 - September 6th 2025.*
+**In Progress**: Claimed by Jash Ambaliya(AJ0070) for the time period of January 06, 2026 - February 06, 2026.
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
@@ -214,8 +261,6 @@ solvers in a standard SciMLBenchmarks benchmark build.
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
 ## DAE Problem Benchmarks (\$100 / Benchmark)
-
-**In Progress**: Claimed by Jayant Pranjal for the time period of 24th July 2025 - 24th Aug 2025.
 
 New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
 ability to better tune solvers across problems. However, we are currently lacking in the
@@ -317,6 +362,26 @@ Chris Rackauckas
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
+
+## CurveFit.jl Enhancements (\$300)
+
+Completed by **Andreja Ristivojevic**
+
+CurveFit.jl is a high-level package for fitting curves to data. It sits at a very important part of the
+ecosystem which was traditionally missing, filled by packages like LsqFit.jl which used inefficient
+and unstable algorithms. While CurveFit.jl's design on NonlinearSolve.jl has been a major improvement
+to this space, giving accessibility to using the more sophisticated methods of the SciML solver
+ecosystem, it still lacks some important features for users. The goal of this project is to add a few
+of this missing features to be a feature-complete curve fitting library, built on the solid numerical
+foundations of SciML.
+
+**Information to Get Started**: This issue https://github.com/SciML/CurveFit.jl/issues/41 describes all of the current requirements
+
+**Success Criteria**: Merged pull requests which solve all of the issues in 41.
+
+**Recommended Skills**: Knowledge of Julia, numerical analysis, and a willness to learn some of the statistics API
+
+**Reviewers**: Chris Rackauckas
 
 ## Update LoopVectorization to Support Changes in Julia v1.12 (\$200)
 
@@ -477,7 +542,7 @@ The Symbolics.jl symbolic solver covers a wide range of cases, but adding a fall
   - `limit`
   - `simplify`
 
-This enhancement expands Symbolics.jl’s solving capabilities by leveraging the mature SymPy backend when native solutions are insufficient.
+This enhancement expands Symbolics.jl's solving capabilities by leveraging the mature SymPy backend when native solutions are insufficient.
 
 **Information to Get Started** :
 
@@ -598,7 +663,10 @@ in Julia.
 **Reviewers**: Chris Rackauckas
 
 ## Improve training performance of GPU backend in EvoTrees.jl (\$2000)
-**In Progress:** being worked on by Aditya Pandey from August 1 to November 1, 2025.
+
+#### Note: Bounty was decided to be \$2250 due to partial KA.jl work
+
+**Completed by Aditya Pandey on October 25th, 2025.**
 (Extended from September 1,2025 due to integration of work with main branch and adding features)
 
 EvoTrees.jl[https://github.com/Evovest/EvoTrees.jl] is an efficient pure-Julia 
@@ -627,3 +695,16 @@ General performance optimization and multi-threading.
 
 **Reviewers**: [Jeremie Desgagne-Bouchard](https://github.com/jeremiedb)
 
+## Fix `DataInterpolations` Bspline derivatives (\$100)
+
+Completed by Utsav Ojha(Github:- https://github.com/ajatshatru01 )
+
+`DataInterpolations.jl` is a SciML repository for interpolating 1D data. It supports a wide number of interpolation types, as well as taking first and second derivatives of the interpolations. Specifically, the BSplineInterpoation has a few bugs with regards to where it puts the control points, and how it calculates derivatives.
+
+**Information to Get Started**: See the issue https://github.com/SciML/DataInterpolations.jl/issues/419 describes the issue and a proposed solution. Specifically, this work will likely start by mirroring https://github.com/SciML/DataInterpolationsND.jl/pull/20 and re-enabling the derviative tests for BSpline interpolations.
+
+**Success Criteria**: Merged pull request(https://github.com/SciML/DataInterpolations.jl/pull/502 ) which fixes and clarifies the numerical issues
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of calculus
+
+**Reviewers**: Chris Rackauckas and Oscar Smith

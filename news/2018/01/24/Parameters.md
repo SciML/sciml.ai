@@ -173,7 +173,7 @@ use this guide and request new additions as necessary!
 Adjoint sensitivity analysis lets you directly solve for the derivative of some
 functional of the differential equation solution, such as a cost function in
 an optimization problem.
-[DifferentialEquations.jl now has a package-independent adjoint sensitivity analysis implementation](https://diffeq.sciml.ai/latest/analysis/sensitivity) that lets you use any of the common
+[DifferentialEquations.jl now has a package-independent adjoint sensitivity analysis implementation](https://docs.sciml.ai/SciMLSensitivity/stable/) that lets you use any of the common
 interface ODE solvers to perform this analysis. While there are more optimizations
 which still need to be done in this area, this will be a useful feature for those
 looking to perform optimization on the ODE solver.
@@ -185,7 +185,7 @@ function approach. While L2-error of the solution against data corresponds to
 maximum likelihood estimation under the assumption of a Normal likelihood, this
 is constrained to very specific likelihood functions (Normal). Now our tools
 allow for giving a likelihood distribution associated with each time point.
-[We have some examples in the documentation showing how to use MLE estimation to get fitting distributions](https://diffeq.sciml.ai/latest/analysis/parameter_estimation).
+[We have some examples in the documentation showing how to use MLE estimation to get fitting distributions](https://docs.sciml.ai/Overview/stable/highlevels/inverse_problems/).
 This process is a more precise approach to data fitting and thus should be an
 interesting new tool to use in cases where one wants to fit parameters against
 a lot of data.
@@ -198,7 +198,7 @@ requires that your function is defined via `@ode_def` and will write and run a
 code from [Stan](https://mc-stan.org/) to generate posterior distributions. The
 `turing_inference` function uses [Turing.jl](https://github.com/yebai/Turing.jl)
 and can work with any DifferentialEquations.jl object. These functions simply
-require your `DEProblem`, data, and prior distributions and the [rest of the inference setup is done for you](https://diffeq.sciml.ai/latest/analysis/parameter_estimation). Thus this is a very quick way to make use of
+require your `DEProblem`, data, and prior distributions and the [rest of the inference setup is done for you](https://docs.sciml.ai/Overview/stable/highlevels/inverse_problems/). Thus this is a very quick way to make use of
 the power of Bayesian inference tools!
 
 ## Small Problem Speedups
