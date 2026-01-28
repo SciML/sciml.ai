@@ -329,37 +329,35 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
-## Add support for TabM architecture in NeuroTabModels.jl and remove Zygote.jl dependency (\$1800)
+## DAE Problem Benchmarks ($100 / Benchmark)
+**In Progress: Claimed by Singh Harsh Rahulkumar for the time period of January 28, 2026 – February 28, 2026.**
 
-**In Progress**: Claimed by Aditya Pandey for the time period of January 20, 2026 - March 5, 2026.
+New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
+ability to evaluate solver robustness and performance across constrained mechanical systems.
+The goal of this project is to **finish and modernize the slider-crank mechanism DAE benchmark**
+and integrate it into the SciMLBenchmarks system for long-term performance tracking.
 
-[NeuroTabModels.jl](https://github.com/Evovest/NeuroTabModels.jl) is a library for training neural networks on tabular data. It currently supports a limited set of architectures: MLP, ResNets and NeuroTrees, and is built on top of Flux.jl and Zygote.jl.
+### Information to Get Started
+The slider-crank mechanism is a classical constrained mechanical system that naturally forms
+an index-3 DAE. The benchmark will be formulated using ModelingToolkit.jl, following the
+conventions of existing DAE benchmarks. Structural simplification, constraint handling, and
+solver configuration will be addressed during implementation.
 
-The objective of this project is to set a better foundation for the library by moving from Zygote to Enzyme to benefit from improved performance through Reactant and demonstrating ease of extension by adding support for a new architecture type, TabM.
+### Related Issues
+- SciML/SciMLBenchmarks.jl#359  
+- SciML/OrdinaryDiffEq.jl#2177  
 
-**Information to Get Started**: 
-- TabM paper: 
-  - Official implementation: https://github.com/yandex-research/tabm
-  - Paper: https://arxiv.org/abs/2410.24210
-- Numerical embeddings: are a dependency for TabM, but can be useful for any other models. The objective is thus to implement them as new neural operators accessible to any model. Implementation to follow the Yandex reference:
-  - https://github.com/yandex-research/rtdl-num-embeddings/tree/main
-  - https://github.com/yandex-research/rtdl-num-embeddings/blob/main/package/README.md
+### Success Criteria
+A merged pull request to SciMLBenchmarks.jl that adds or completes the slider-crank DAE benchmark
+as a `.jmd` file under `benchmarks/DAE/`, fully integrated into the benchmark server workflow.
 
-**Success Criteria**: 
-A merged PR to NeuroTabModels.jl that includes:
-- `TabM` as a newly supported architecture type.
-- A Numerical Embeddings module added as a preprocessing layer accessible to all models (TabM, MLP, NeuroTrees...)
-- Removal of the dependency on Zygote.jl in favor of Enzyme.jl for automatic differentiation.
-  This notably involves handling/replacing the currently existing custom rules used for `leaf_weights` in NeuroTrees. See https://enzyme.mit.edu/julia/stable/#Importing-ChainRules.
-- Performance comparison with the original TabM implementation.
-- Correctness of the implementation verified by assessing similarity of the predictions with original implementation.
-- Documentation of the model and minimal tests within the package test suite.
+### Recommended Skills
+Prior experience with differential-algebraic equations, constrained mechanical systems, and
+symbolic modeling using ModelingToolkit.jl.
 
-It's also expected that TabM model will be assessed against basic regression benchmarks on [MLBenchmarks.jl](https://github.com/Evovest/MLBenchmarks.jl/tree/openml) on `year` and `msrank` datasets. 
+### Reviewers
+Chris Rackauckas
 
-**Recommended Skills**: Familiarity with deep learning frameworks such as Flux.jl or Lux.jl and underlying autodiff systems (Enzyme.jl).
-
-**Reviewers**: [Jeremie Desgagne-Bouchard](https://github.com/jeremiedb)
 
 # Successful Projects Archive
 
