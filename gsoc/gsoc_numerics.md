@@ -19,9 +19,9 @@ and [PETSc.jl](https://github.com/JuliaParallel/PETSc.jl) to make this easy.
 
 **Expected Results**: New parallel algorithms wrapped into [LinearSolve.jl](https://github.com/SciML/LinearSolve.jl)
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Oscar Smith](https://github.com/oscardssmith)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Medium depending on the chosen subtasks.
 
@@ -48,8 +48,8 @@ benchmarks.
 
 **Expected Results**: New tutorials in [SciMLTutorials](https://github.com/SciML/SciMLTutorials.jl) and benchmarks in [SciMLBenchmarks](https://github.com/SciML/SciMLBenchmarks.jl).
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Oscar Smith](https://github.com/oscardssmith)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy.

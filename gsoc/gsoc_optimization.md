@@ -26,7 +26,7 @@ infrastructure which is essential in these methods for performance.
 
 **Mentors**: [Vaibhav Dixit](https://github.com/Vaibhavdixit02), [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Hard depending on the chosen subtasks.
 
@@ -43,7 +43,7 @@ statistical, or optimization techniques. Familiarity with the relevant packages,
 
 **Mentors**: [Vaibhav Dixit](https://github.com/Vaibhavdixit02), [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Medium depending on the chosen subtasks.
 
@@ -63,7 +63,7 @@ predefined callbacks, using the state for non-standard stopping criterias in glo
 
 **Mentors**: [Vaibhav Dixit](https://github.com/Vaibhavdixit02), [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Medium depending on the chosen subtasks.
 
@@ -81,7 +81,7 @@ making these solvers efficient.
 
 **Mentors**: [Vaibhav Dixit](https://github.com/Vaibhavdixit02), [Avik Pal](https://github.com/avik-pal), [Utkarsh](https://github.com/utkarsh530), [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Medium depending on the chosen subtasks.
 

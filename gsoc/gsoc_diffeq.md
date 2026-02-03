@@ -51,7 +51,7 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Kanav Gupta](https://github.com/kanav99) and [Utkarsh](https://github.com/utkarsh530), [Oscar Smith](https://github.com/oscardssmith)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Hard depending on the chosen subtasks.
 
@@ -78,9 +78,9 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Expected Results**: Improved benchmarks to share with the community.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and , [Oscar Smith](https://github.com/oscardssmith)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Oscar Smith](https://github.com/oscardssmith)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Hard depending on the chosen subtasks.
 
@@ -107,7 +107,7 @@ to learn and a strong understanding of calculus and linear algebra.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Alex Jones](https://github.com/xtalax)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Medium to Hard depending on the chosen subtasks.
 
@@ -129,6 +129,6 @@ Jump processes are a widely used approach for modeling biological, chemical and 
 
 **Mentors**: [Samuel Isaacson](https://github.com/isaacsas) and [Chris Rackauckas](https://github.com/ChrisRackauckas).
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Medium to Hard depending on the chosen subtasks.

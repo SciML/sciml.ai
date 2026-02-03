@@ -16,7 +16,7 @@ solvers is not required.
 
 **Expected Results**: Efficient and high-quality implementations of model order reduction methods.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Oscar Smith](https://github.com/oscardssmith)
 
 **Expected Project Size**: 350 hour.
 
@@ -47,7 +47,7 @@ solvers is not required.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Yingbo Ma](https://github.com/YingboMa)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Medium to Hard depending on the chosen subtasks.
 
@@ -72,7 +72,7 @@ particularly [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl) and 
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas), [Anand Jain](https://github.com/anandijain) and [Samuel Isaacson](https://github.com/isaacsas)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Medium depending on the chosen subtasks.
 
@@ -96,7 +96,7 @@ particularly [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl) and 
 
 **Mentors**: [Samuel Isaacson](https://github.com/isaacsas) and [Chris Rackauckas](https://github.com/ChrisRackauckas).
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Hard depending on the chosen subtasks.
 

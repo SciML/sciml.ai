@@ -13,6 +13,10 @@
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Sathvik Bhagavan](https://github.com/sathvikbhagavan)
 
+**Expected Project Size**: 350 hour.
+
+**Difficulty**: Medium.
+
 ## Improvements to Physics-Informed Neural networks (PINN) for solving differential equations
 
 Neural networks can be used as a method for efficiently solving difficult partial differential equations.
@@ -27,7 +31,7 @@ would be interesting new neural network based methods to implement and benchmark
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Sathvik Bhagavan](https://github.com/sathvikbhagavan)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Hard depending on the chosen subtasks.
 
@@ -63,7 +67,7 @@ differential equations.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Anas Abdelrehim](https://github.com/AnasAbdelR)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Medium to Hard depending on the chosen subtasks.
 
@@ -88,7 +92,7 @@ is helpful but not required.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Sathvik Bhagavan](https://github.com/sathvikbhagavan)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Medium to Hard depending on the chosen subtasks.
 
@@ -110,7 +114,7 @@ analysis.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Vaibhav Dixit](https://github.com/Vaibhavdixit02)
 
-**Expected Project Size**: 175 hour or 350 hour depending on the chosen subtasks.
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Easy to Medium depending on the chosen subtasks.
 
@@ -124,6 +128,6 @@ analysis.
 
 **Mentors**: [Francesco Martinuzzi](https://github.com/MartinuzziFrancesco), [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
-**Expected Project Size**: 175 hour (core model + docs/tests), 350 hour if adding stretch items (additional models).
+**Expected Project Size**: 350 hour.
 
 **Difficulty**: Medium

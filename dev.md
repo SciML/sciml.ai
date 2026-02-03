@@ -84,6 +84,8 @@ scientific machine learning, to parallel and symbolic-numeric computing.
 To get started, take a look at the project lists and contact one of the mentors
 associated with the project.
 
+**Note**: All GSoC projects are expected to be 350 hours unless specified otherwise.
+
 #### Projects Lists
 
 - [General Numerics](/gsoc/gsoc_numerics)
