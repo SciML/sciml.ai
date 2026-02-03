@@ -8,6 +8,16 @@ Opportunities are available for everyone, all the way from students looking to
 learn to career scientists looking to fund dedicated open source time. Below
 are our major developer programs with more information on how to get involved.
 
+## Note About AI Use
+
+AI usage is allowed in the SciML Developer Programs, however any usage must be
+disclosed. Any use of AI tools that is undisclosed and discovered can give
+a disqualification from all future programs. We note that most of the projects
+which are posted as part of these programs have already been attempted using the
+latest state-of-the-art AI tools, and thus one should know that it is unlikely
+they will be successful only using the AI without some form of expert guidence
+and human intervention.
+
 ## SciML Small Grants Program
 
 The SciML small grants program is a program used to fund directed development
