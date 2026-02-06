@@ -23,12 +23,12 @@
 
 <item>
   <title>
-    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
+    <![CDATA[  SciML Scientific Machine Learning Governance  ]]>
   </title>
-  <link> https://sciml.ai/roadmap/index.html </link>
-  <guid> https://sciml.ai/roadmap/index.html </guid>
+  <link> https://sciml.ai/governance/index.html </link>
+  <guid> https://sciml.ai/governance/index.html </guid>
   <description>
-    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
+    <![CDATA[  Governance structure for the SciML Scientific Machine Learning open source software organization  ]]>
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
@@ -80,25 +80,6 @@
 
 <item>
   <title>
-    <![CDATA[  SciML Scientific Machine Learning Governance  ]]>
-  </title>
-  <link> https://sciml.ai/governance/index.html </link>
-  <guid> https://sciml.ai/governance/index.html </guid>
-  <description>
-    <![CDATA[  Governance structure for the SciML Scientific Machine Learning open source software organization  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Staging Team</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  SciML Scientific Machine Learning Showcase  ]]>
   </title>
   <link> https://sciml.ai/showcase/index.html </link>
@@ -124,6 +105,25 @@
   <guid> https://sciml.ai/challenge/index.html </guid>
   <description>
     <![CDATA[  Challenge problems and research datasets for the Scientific Machine Learning &#40;SciML&#41;  ]]>
+  </description>  
+    
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
+  </title>
+  <link> https://sciml.ai/roadmap/index.html </link>
+  <guid> https://sciml.ai/roadmap/index.html </guid>
+  <description>
+    <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
