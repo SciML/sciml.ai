@@ -200,7 +200,7 @@ which SciML will help administer through the small grants program.
 
 The current SciMLBenchmarks only run on CPU. There are many cases we wish to benchmark on GPU. The goal of this project is to modify the CI scripts to support GPU benchmarking.
 
-**In Progress**: Claimed by divital-coder for the time period of (06-12-2025) - (06-02-2026).
+**In Progress**: Claimed by divital-coder for the time period of (06-12-2025) - (06-03-2026).
 
 **Information to Get Started**: See the current scripts in https://github.com/SciML/SciMLBenchmarks.jl/tree/master/.buildkite
 
