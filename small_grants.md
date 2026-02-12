@@ -212,6 +212,8 @@ The current SciMLBenchmarks only run on CPU. There are many cases we wish to ben
 
 ## Fix OrdinaryDiffEq Downgrade tests (\$100)
 
+**In Progress**: Claimed by Param Thakkar for the time period of February 12, 2026 - March 12, 2026.
+
 The downgrade tests are a set of tests which ensure that the package can be downgraded to a previous version and still work. This is important for ensuring that the package is stable and can be used in production environments. However, these tests are currently failing in many repositories due to changes in the package dependencies or the package itself. For example, OrdinaryDiffEq and most of its sublibraries
 currently fail the downgrade tests.
 
