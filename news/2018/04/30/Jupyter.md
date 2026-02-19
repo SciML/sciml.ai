@@ -26,7 +26,7 @@ As both the efficiency and complexity of the methods grow, it is important that 
 
 To tackle this problem, we developed a confederated package ecosystem in Julia which has become known as [DifferentialEquations.jl](https://docs.sciml.ai/DiffEqDocs/stable/). The architecture of the software [is described here](https://openresearchsoftware.metajnl.com/articles/10.5334/jors.151/) and it allows for any developers to add dispatches to a common solve function. This ends up being important because it allows researchers to keep their research "their own" in their own repositories while contributing to this common cause. This is required since the researchers developing the methods need the research outputs to grow their own careers, but at the same it allows us to make use of their newest methods in more complex software. By doing so, we strike a balance between the user and research communities which is required to keep iterating the software of the field. [Note: we will be releasing a paper in a special issue which discusses exactly how this was done in further detail.]
 
-At this point we can say this methodology has been successful. We have a large active community, [SciML](https://github.com/SciML), which is devoted to solving the user and theoretical problems of the field through software development. The organization continually fields a large number of student researchers (and Google Summer of Code developers). We have covered areas which have traditionally not had adequate open-source software with high performance implementations, such as [symplectic integrators](https://docs.SciML.org/latest/solvers/dynamical_solve), [exponential and IMEX integrators](https://docs.SciML.org/latest/solvers/split_ode_solve), and [high order adaptive Runge-Kutta methods for SDEs](https://docs.SciML.org/latest/solvers/sde_solve). These solvers then automatically compose with higher level tools for things like [parameter estimation](https://docs.SciML.org/latest/analysis/parameter_estimation) and [chemical reaction modeling](https://docs.SciML.org/latest/models/biological).
+At this point we can say this methodology has been successful. We have a large active community, [SciML](https://github.com/SciML), which is devoted to solving the user and theoretical problems of the field through software development. The organization continually fields a large number of student researchers (and Google Summer of Code developers). We have covered areas which have traditionally not had adequate open-source software with high performance implementations, such as [symplectic integrators](https://docs.sciml.ai/latest/solvers/dynamical_solve), [exponential and IMEX integrators](https://docs.sciml.ai/latest/solvers/split_ode_solve), and [high order adaptive Runge-Kutta methods for SDEs](https://docs.sciml.ai/latest/solvers/sde_solve). These solvers then automatically compose with higher level tools for things like [parameter estimation](https://docs.sciml.ai/latest/analysis/parameter_estimation) and [chemical reaction modeling](https://docs.sciml.ai/latest/models/biological).
 
 Now that we have a successful and growing software ecosystem, it makes sense to cast our nets as wide as possible and distribute our methods to all of the users that need them. The software was developed in Julia because of [its unique ability to hit our efficiency and productivity demands](https://www.stochasticlifestyle.com/like-julia-scales-productive-insights-julia-developer/). However, we recognize that we live in a poly-language world and so in order to really meet the goals of our organization, we need to expand and become multi-language compatible.
 
@@ -66,7 +66,7 @@ plot(sol, xscale=:log10, tspan=(1e-6, 1e5), layout=(3,1))
 ```
 
 ~~~
-<img href="https://docs.SciML.org/latest/assets/intro_dae_plot.png"/>
+<img href="https://docs.sciml.ai/latest/assets/intro_dae_plot.png"/>
 ~~~
 
 This code directly translates over to Python with diffeqpy by putting "de." in front of package functions:
@@ -111,7 +111,7 @@ plotly::plot_ly(udf, x = sol$t, y = ~V1, type = 'scatter', mode = 'lines') |>
   plotly::add_trace(y = ~V3)
 ```
 
-Notice that the interfaces are virtually identical. Even key features about the solution are preserved. For example, the return sol is a continuous function sol(t) in Julia. This is true in Python as well. This means that the in-depth documentation carries across languages as well. Even the [common solver options](https://docs.SciML.org/latest/basics/common_solver_opts) carry across languages. For example, in Julia, to decrease the solver tolerances and specify that we want to use the SUNDIALS IDA algorithm we would do:
+Notice that the interfaces are virtually identical. Even key features about the solution are preserved. For example, the return sol is a continuous function sol(t) in Julia. This is true in Python as well. This means that the in-depth documentation carries across languages as well. Even the [common solver options](https://docs.sciml.ai/latest/basics/common_solver_opts) carry across languages. For example, in Julia, to decrease the solver tolerances and specify that we want to use the SUNDIALS IDA algorithm we would do:
 
 ```julia
 sol = solve(prob,IDA(),abstol=1e-8,reltol=1e-8)
@@ -139,7 +139,7 @@ A stochastic differential equation is a problem of the form
 
 $$ dX_t = f(X_t,t)dt + \sum_i g_i(X_t,t)dW_t^i $$
 
-where $f$ and $g$ are vector functions. If we instead use $ g $ as a matrix function against the vector of Brownian motions $ dW_t $ (the translation is described [in the DifferentialEquations.jl documentation](https://docs.SciML.org/latest/tutorials/sde_example)), then we have
+where $f$ and $g$ are vector functions. If we instead use $ g $ as a matrix function against the vector of Brownian motions $ dW_t $ (the translation is described [in the DifferentialEquations.jl documentation](https://docs.sciml.ai/latest/tutorials/sde_example)), then we have
 
 $$ dX_t = f(X_t,t)dt + g(X_t,t)dW_t $$
 

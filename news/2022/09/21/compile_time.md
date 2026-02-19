@@ -1114,7 +1114,7 @@ end
 
 so then all of the "real work" is precompiled. If this is done, then if `f` changes the `typeof(prob)`
 stays constant, and thus `solve` can be fully precompiled. In SciML we called this 
-[`SciMLBase.FunctionWrapperSpecialize`](https://scimlbase.sciml.ai/dev/interfaces/Problems/#Specialization-Levels).
+[`SciMLBase.FunctionWrapperSpecialize`](https://docs.sciml.ai/SciMLBase/dev/interfaces/Problems/#Specialization-Levels).
 However, the difficulty with this form is that we have to commit to the `FunctionWrapper` very early.
 If `ODEProblem` is then attempted to be solved with some new solver that uses some new automatic
 differentiation technique, it may break when it sees the `FunctionWrapper`, so you may need to manually

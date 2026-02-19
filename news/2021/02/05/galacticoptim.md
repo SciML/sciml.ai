@@ -79,20 +79,20 @@ did exist within DiffEqSensitivity.jl before, but now it has been given its
 own package with a bunch of upgrades to become a full-fledged global sensitivity
 analysis package. It is complete with its own documentation, tutorials, and
 many new methods. All of the methods allow for batching in a way that exposes
-parallelism to the user! [Check out the new documentation.](https://gsa.sciml.ai/dev/)
+parallelism to the user! [Check out the new documentation.](https://docs.sciml.ai/GlobalSensitivity/dev/)
 
 ## New DiffEqFlux Tutorials: Bouncing Ball, Multiple Networks, and More
 
 Due to popular request, quite a few new DiffEqFlux tutorials were added.
 There are tutorials doing [automatic differentiation through event handling like
-bouncing ball](https://diffeqflux.sciml.ai/dev/examples/bouncing_ball/),
-[parameter estimation techniques for highly stiff systems](https://diffeqflux.sciml.ai/dev/examples/stiff_ode_fit/),
+bouncing ball](https://docs.sciml.ai/DiffEqFlux/dev/examples/bouncing_ball/),
+[parameter estimation techniques for highly stiff systems](https://docs.sciml.ai/DiffEqFlux/dev/examples/stiff_ode_fit/),
 and more. While these aren't new functionalities, it's highlighting them in a
 new light that hopefully will help you make use of them effectively!
 
 ## New Uncertainty Quantification Tutorial: GPU-Acclerated Bayesian-Koopman UQ
 
-A new tutorial was added on [GPU-accelerated Bayesian Koopman uncertainty quantification](https://tutorials.sciml.ai/html/DiffEqUncertainty/03-GPU_Bayesian_Koopman.html). Together it shows how to estimate the uncertainty
+A new tutorial was added on [GPU-accelerated Bayesian Koopman uncertainty quantification](https://docs.sciml.ai/SciMLTutorialsOutput/html/DiffEqUncertainty/03-GPU_Bayesian_Koopman.html). Together it shows how to estimate the uncertainty
 distributions of parameters and then quickly compute probabilistic statements
 about the solution in a GPU-accelerated fashion that's order of magnitude faster
 than Monte Carlo. The steps are:
@@ -109,10 +109,10 @@ Check the tutorial for more information!
 
 The core DifferentialEquations.jl documentation was cleaned up with some of the
 auxillary pieces moved out. As part of that, more repositories around the ecosystem
-go their own documentation. [DiffEqParamEstim.jl](https://diffeqparamestim.sciml.ai/dev/)
+go their own documentation. [DiffEqParamEstim.jl](https://docs.sciml.ai/DiffEqParamEstim/dev/)
 is easy and automated parameter inference for differential equations.
-[DiffEqBayes.jl](https://diffeqbayes.sciml.ai/dev/) is easy Bayesian inference
-for differential equations. And [DiffEqOperators.jl](https://diffeqoperators.sciml.ai/dev/)
+[DiffEqBayes.jl](https://docs.sciml.ai/DiffEqBayes/dev/) is easy Bayesian inference
+for differential equations. And [DiffEqOperators.jl](https://docs.sciml.ai/DiffEqOperators/dev/)
 is our automated finite difference discretization library. Now that these docs
 are decoupled from the main docs, they are free to grow and flesh out their
 descriptions. The main pages of DifferentialEquations.jl now is a comparison

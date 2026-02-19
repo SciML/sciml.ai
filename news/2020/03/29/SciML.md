@@ -58,7 +58,7 @@ the organization by explaining a few things:
 
 ## We provide best-in-class tooling for solving differential equations
 
-We will continue to have [DifferentialEquations.jl](https://diffeq.sciml.ai/dev/) at
+We will continue to have [DifferentialEquations.jl](https://docs.sciml.ai/DiffEqDocs/dev/) at
 the core of the organization to support high performance solving of the differential
 equations that show up in scientific models. This means we plan to continue the
 research and development in:
@@ -85,8 +85,8 @@ This includes features like:
 - Automatic Jacobian coloring with [SparseDiffTools.jl](https://github.com/SciML/SparseDiffTools.jl), allowing for fast solutions
   to problems with sparse or structured (Tridiagonal, Banded, BlockBanded, etc.) Jacobians
 - Progress meter integration with the Juno IDE for estimated time to solution
-- [Automatic distributed, multithreaded, and GPU parallelism of ensemble trajectories](https://diffeq.SciML.ai/dev/features/ensemble/)
-- [Forward and adjoint local sensitivity analysis](https://diffeq.SciML.ai/dev/analysis/sensitivity/) for fast gradient computations
+- [Automatic distributed, multithreaded, and GPU parallelism of ensemble trajectories](https://docs.sciml.ai/DiffEqDocs/dev/features/ensemble/)
+- [Forward and adjoint local sensitivity analysis](https://docs.sciml.ai/DiffEqDocs/dev/analysis/sensitivity/) for fast gradient computations
 - Built-in interpolations for differential equation solutions
 - Wrappers for common C/Fortran methods like Sundials and Hairer's radau
 - Arbitrary precision with BigFloats and Arbfloats
@@ -102,7 +102,7 @@ methods outperforming classical Fortran methods like LSODA by 5x on a 20
 equation stiff ODE benchmark:
 
 ![](https://user-images.githubusercontent.com/1814174/77687352-a0082800-6f74-11ea-924d-442a0836be6d.PNG)
-[Reference: Pollution Model Benchmarks](https://benchmarks.sciml.ai/html/StiffODE/Pollution.html)
+[Reference: Pollution Model Benchmarks](https://docs.sciml.ai/SciMLBenchmarksOutput/html/StiffODE/Pollution.html)
 
 ## We provide tools for deriving and fitting scientific models
 
@@ -113,7 +113,7 @@ and fit models. This includes tools for:
 - [Maximum likelihood and Bayesian parameter estimation](https://docs.sciml.ai/Overview/stable/highlevels/inverse_problems/)
 - [Forward and adjoint local sensitivity analysis](https://docs.sciml.ai/SciMLSensitivity/stable/) for fast gradients
 - [Global sensitivity analysis](https://docs.sciml.ai/GlobalSensitivity/stable/)
-- [Building surrogates of models](https://surrogates.sciml.ai/latest/)
+- [Building surrogates of models](https://docs.sciml.ai/Surrogates/latest/)
 - [Uncertainty quantification](https://docs.sciml.ai/Overview/stable/highlevels/uncertainty_quantification/)
 
 Some of our newer tooling like [DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl)
@@ -187,7 +187,7 @@ and achieve an order of magnitude better performance than the classic Gillespie
 SSA methods:
 
 ![](https://user-images.githubusercontent.com/1814174/77689050-6d136380-6f77-11ea-9248-175de8c1c8e6.PNG)
-[Reference: Diffusion Model Benchmarks](https://benchmarks.sciml.ai/html/Jumps/Diffusion_CTRW.html)
+[Reference: Diffusion Model Benchmarks](https://docs.sciml.ai/SciMLBenchmarksOutput/html/Jumps/Diffusion_CTRW.html)
 
 Additionally, we have physics-based tooling and support external libraries like:
 
@@ -336,10 +336,10 @@ scientific machine learning to scale, and so we take performance seriously.
 
 This means we will continue to develop tools like
 [DiffEqFlux.jl](https://github.com/SciML/DiffEqFlux.jl) which supports the
-connection between the [DifferentialEquations.jl](https://diffeq.sciml.ai/dev/)
+connection between the [DifferentialEquations.jl](https://docs.sciml.ai/DiffEqDocs/dev/)
 differential equation solvers and the [Flux](https://fluxml.ai/) deep learning
 library. Another example includes our
-[surrogate modeling library, Surrogates.jl](https://surrogates.sciml.ai/dev/)
+[surrogate modeling library, Surrogates.jl](https://docs.sciml.ai/Surrogates/dev/)
 which is routinely tested with DifferentialEquations.jl and the machine learning
 AD tooling like Zygote.jl, meaning that you can be sure that our surrogates
 modeling tools can train on differential equations and then be used inside
@@ -365,9 +365,9 @@ are the following:
   directions, such as adding support for stochastic delay differential equations
   and improving our methods for DAEs.
 - We plan to create a new documentation setup. Instead of having everything
-  inside of the [DifferentialEquations.jl documentation](https://diffeq.sciml.ai/latest/),
+  inside of the [DifferentialEquations.jl documentation](https://docs.sciml.ai/DiffEqDocs/latest/),
   we plan to split out some of the SciML tools to their own complete documentation.
-  We have already done this for [Surrogates.jl](https://surrogates.sciml.ai/latest/).
+  We have already done this for [Surrogates.jl](https://docs.sciml.ai/Surrogates/latest/).
   Next on the list is [DiffEqFlux.jl](https://github.com/SciML/DiffEqFlux.jl)
   which by looking at the README should be clear is in need of its own full docs.
   Following that we plan to fully document [NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl)
@@ -390,7 +390,7 @@ are the following:
   plan to extend our Python and R offerings to include our neural network
   infused software like DiffEqFlux and NeuralPDE.
 - We plan to get feature-completeness in data driven modeling techniques like
-  [Radial Basis Function (RBF) surrogates](https://surrogates.sciml.ai/latest/),
+  [Radial Basis Function (RBF) surrogates](https://docs.sciml.ai/Surrogates/latest/),
   [Dynamic Mode Decomposition and SInDy type methods](https://github.com/SciML/DataDrivenDiffEq.jl),
   and [Model Order Reduction](https://github.com/SciML/ModelingToolkit.jl).
 - We plan to stay tightly coupled to the latest techniques in SciML, implementing

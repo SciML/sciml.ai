@@ -25,13 +25,13 @@ which now allows for fast computation of expected values with respect to distrib
 inputs. We demonstrate how this gives more than 1,000x faster calculations
 of moments than naive Monte Carlo calculations. If you haven't seen it, check
 out [Adam Gerlach's JuliaCon 2020 video describing the method and the results](https://www.youtube.com/watch?v=gbRG5VHkhsY).
-For a quick introduction, check out the [new expectation tutorial](https://tutorials.sciml.ai/html/DiffEqUncertainty/01-expectation_introduction.html).
+For a quick introduction, check out the [new expectation tutorial](https://docs.sciml.ai/SciMLTutorialsOutput/html/DiffEqUncertainty/01-expectation_introduction.html).
 
 The `expectation` function is differentiable, meaning that one can quickly
 optimize the expected value of the solution of a differential equation with respect
 its quantified uncertainties simply by placing it in an optimization context.
 That is demonstrated in [this new tutorial demonstrating how to optimize controls
-with respect to uncertainty](https://tutorials.sciml.ai/html/DiffEqUncertainty/02-AD_and_optimization.html).
+with respect to uncertainty](https://docs.sciml.ai/SciMLTutorialsOutput/html/DiffEqUncertainty/02-AD_and_optimization.html).
 
 We will continue to improve the documentation of the aspects of the ecosystem
 around uncertainty quantification and believe that this may be one of the
@@ -133,11 +133,11 @@ few years.
 
 ## ReservoirComputing.jl Documentation
 
-[ReservoirComputing.jl has released its documentation](https://reservoir.sciml.ai/dev/)
+[ReservoirComputing.jl has released its documentation](https://docs.sciml.ai/ReservoirComputing/dev/)
 detailing how to do high performance training of echo state networks and other
 reservoir-based machine learning methods. [Take a look at the first tutorial
 training an echo state network to predict the chaotic outputs of the Lorenz
-equation](https://reservoir.sciml.ai/dev/examples/esn/). This direction is particularly
+equation](https://docs.sciml.ai/ReservoirComputing/dev/examples/esn/). This direction is particularly
 exciting and we plan to help accelerate its developments over the next year.
 
 ## Physics-Informed Neural Networks: Systems of equations, PDAEs, and more

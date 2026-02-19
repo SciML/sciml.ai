@@ -11,7 +11,7 @@ so thanks to everyone who has been involved. Let's dive in.
 
 ## NeuralPDE.jl: Physics-Informed Neural Networks for Automated PDE Solving and High Dimensional PDEs
 
-We have officially released [NeuralPDE.jl](https://neuralpde.sciml.ai/dev/). This
+We have officially released [NeuralPDE.jl](https://docs.sciml.ai/NeuralPDE/dev/). This
 is a domain-specific library for gathering all of the neural network based PDE
 solver methods. Its main focus are on the two big branches of scientific machine
 learning:
@@ -112,7 +112,7 @@ pdealg = NNPDENS(u0, σᵀ∇u, opt=opt)
                             alg=EM(), dt=1.2, pabstol=1f-2)
 ```
 
-Boom: that's all there is to it. [Check out the documentation for more details](https://neuralpde.sciml.ai/dev/).
+Boom: that's all there is to it. [Check out the documentation for more details](https://docs.sciml.ai/NeuralPDE/dev/).
 There's still a lot of active development here so if you're a student who's interested
 in this topic, please get in touch.
 
@@ -228,7 +228,7 @@ l2 = loss()
 
 Thanks to Utkarsh (@utkarsh530), we now have fast parallelized implicit
 extrapolation in OrdinaryDiffEq.jl. You'll find these
-[in the documentation](https://diffeq.sciml.ai/dev/solvers/ode_solve/#Parallelized-Implicit-Extrapolation-Methods)
+[in the documentation](https://docs.sciml.ai/DiffEqDocs/dev/solvers/ode_solve/#Parallelized-Implicit-Extrapolation-Methods)
 as `ImplicitEulerExtrapolation`, `ImplicitDeuflhardExtrapolation`, and
 `ImplicitHairerWannerExtrapolation`. For those ODE-inclined, these are pure Julia
 implementations of SEULEX and SODEX which include automated multithreaded
@@ -237,7 +237,7 @@ parallelization of the `f` calls.
 ## New surrogates: Gradient-Enhanced Kriging
 
 Surrogates.jl continues to march forward. If you have not seen the documentation
-recently, do [check it out](https://surrogates.sciml.ai/latest) as it has undergone
+recently, do [check it out](https://docs.sciml.ai/Surrogates/latest) as it has undergone
 many major improvements, including showing differences between surrogates on
 many benchmark problems. One of the latest enhancements is Gradient-Enhanced Kriging,
 which is an extension to Kriging that can utilize derivative information
