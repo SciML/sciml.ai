@@ -49,7 +49,7 @@ solver = solve(probN, NewtonRaphson(), tol = 1e-9)
 ## SciML Common Interface Documentation
 
 With the common interface covering so many domains, we have put together a
-[SciML Common Interface Documentation](https://scimlbase.sciml.ai/dev/) which
+[SciML Common Interface Documentation](https://docs.sciml.ai/SciMLBase/dev/) which
 outlines the core tenants of the SciML common interfaces, how they interact,
 what packages are associated as the user-facing front to the interfaces, and more.
 We plan to use this to ensure that the interfaces for optimization, quadrature,
@@ -107,7 +107,7 @@ more information on these techniques, see [Frank's blog post on their developmen
 
 The event handling detection in the DiffEq solvers has improved enough to now
 be able to have handling of accumulation points. The
-[new tutorial](https://diffeq.sciml.ai/dev/features/callback_functions/#Handling-Accumulation-Points)
+[new tutorial](https://docs.sciml.ai/DiffEqDocs/dev/features/callback_functions/#Handling-Accumulation-Points)
 shows how to make approximately infinitely many events be handled with ease!
 
 ![](https://user-images.githubusercontent.com/1814174/122675006-89677580-d1a5-11eb-9ba2-fd83c14dbb3e.png)

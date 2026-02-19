@@ -208,7 +208,7 @@ For other problem types, use the specific packages:
 - `BoundaryValueDiffEq.jl` for BVPs
 - `SteadyStateDiffEq.jl` for steady states
 
-Documentation at diffq.sciml.ai has already been updated to guide users to the appropriate package.
+Documentation at https://docs.sciml.ai/DiffEqDocs/stable/ has already been updated to guide users to the appropriate package.
 
 **OrdinaryDiffEq.jl v7** will be split so additional solvers are in separate packages:
 - Core solvers in OrdinaryDiffEq.jl

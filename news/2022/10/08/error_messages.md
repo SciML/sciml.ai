@@ -105,7 +105,7 @@ help?> ODEProblem
 search: ODEProblem RODEProblem SplitODEProblem DynamicalODEProblem IncrementingODEProblem SecondOrderODEProblem
 
   Defines an ordinary differential equation (ODE) problem. Documentation Page:
-  https://diffeq.sciml.ai/stable/types/ode_types/
+  https://docs.sciml.ai/DiffEqDocs/stable/types/ode_types/
 
   Mathematical Specification of an ODE Problem
   ==============================================
@@ -143,7 +143,7 @@ search: ODEProblem RODEProblem SplitODEProblem DynamicalODEProblem IncrementingO
        specified functions. isinplace optionally sets whether the function is inplace or not. This is
        determined automatically, but not inferred. specialize optionally controls the specialization level.
        See the specialization levels section of the SciMLBase documentation
-       (https://scimlbase.sciml.ai/stable/interfaces/Problems/#Specialization-Levels) for more details. The
+       (https://docs.sciml.ai/SciMLBase/stable/interfaces/Problems/#Specialization-Levels) for more details. The
        default is AutoSpecialize.
 
   For more details on the in-place and specialization controls, see the ODEFunction documentation.

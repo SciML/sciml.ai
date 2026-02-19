@@ -15,7 +15,7 @@ of the talks which showcase the SciML tools.
 ## Adaptive and extendable numerical simulations with Trixi.jl
 
 Trixi.jl is a hyperbolic PDE solving package which uses
-[DifferentialEquations.jl](https://diffeq.sciml.ai/stable/) for its time stepping.
+[DifferentialEquations.jl](https://docs.sciml.ai/DiffEqDocs/stable/) for its time stepping.
 It adds features for meshing and defining stable spatial discretizations.
 
 ~~~
@@ -35,7 +35,7 @@ structures.
 
 ## Bayesian Neural Ordinary Differential Equations
 
-Bayesian Neural Ordinary Differential Equations mixes the [tools of DiffEqFlux.jl](https://diffeqflux.sciml.ai/dev/)
+Bayesian Neural Ordinary Differential Equations mixes the [tools of DiffEqFlux.jl](https://docs.sciml.ai/DiffEqFlux/dev/)
 with probabilistic programming languages [like Turing.jl](https://turing.ml/stable/)
 to allow for automatically discovering physical models in a way that gives
 uncertainty estimates.

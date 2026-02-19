@@ -133,7 +133,7 @@ entire DifferentialEquations.jl universe where a Sundials algorithm still reigns
 supreme as the recommended algorithm over any pure Julia method, and that is not
 in ODEs but DAEs. `IDA` is still unmatched in the pure Julia space. While it's
 routinely outperformed if you have a DAE written in mass matrix form of a certain size,
-[giving rise to the recommendations of OrdinaryDiffEq.jl in many DAE cases](https://diffeq.sciml.ai/stable/solvers/dae_solve/#Recommended-Methods),
+[giving rise to the recommendations of OrdinaryDiffEq.jl in many DAE cases](https://docs.sciml.ai/DiffEqDocs/stable/solvers/dae_solve/#Recommended-Methods),
 `IDA` is still unmatched when you have a fully-implicit or asymtopically large
 DAE definition. That will change. Junpeng Gao's summer project, under the mentorship of Yingbo, will
 be to similarly build a pure Julia BDF/NDF for fully-implicit DAEs into
@@ -227,7 +227,7 @@ quickest summary:
   will be adding routines for parameter identifiability analysis to ModelingToolkit.jl
 - [Mohammed Jeeshan Sheikh](https://summerofcode.withgoogle.com/projects/?sp-page=5#4929042274320384)
   will be working with Emmanuel Lujan and Tino Sultzer to build out the
-  [DiffEqOperators](http://diffeqoperators.sciml.ai/dev/) automated finite
+  [DiffEqOperators](https://docs.sciml.ai/DiffEqOperators/dev/) automated finite
   difference methods.
 - [Ashutosh Bharambe](https://summerofcode.withgoogle.com/projects/?sp-page=2#5673227164057600),
   along with Zoe McCarthy and Kirill Zubov (and many others!) will be continuing

@@ -12,7 +12,7 @@ DSL and a bunch of new solvers which incorporate jump dynamics for Levy processe
 
 ## Catalyst.jl: Chemical Reaction Models
 
-[Catalyst.jl](https://catalyst.sciml.ai/dev/) is our rebranding of the old
+[Catalyst.jl](https://docs.sciml.ai/Catalyst/dev/) is our rebranding of the old
 DiffEqBio for its expanded role in chemical reaction modeling. You can easily
 design reaction networks and then simulate them with fast methods for jump
 equations:
@@ -39,7 +39,7 @@ plot(jsol,lw=2,title="Gillespie: Michaelis-Menten Enzyme Kinetics")
 ![](https://user-images.githubusercontent.com/1814174/87864114-3bf9dd00-c932-11ea-83a0-58f38aee8bfb.png)
 
 All of the current DifferentialEquations simulation features can be directly
-applied to Catalyst. Additionally, Catalyst is built on [ModelingToolkit.jl](https://mtk.sciml.ai/dev/)
+applied to Catalyst. Additionally, Catalyst is built on [ModelingToolkit.jl](https://docs.sciml.ai/ModelingToolkit/dev/)
 so all of the [automatic optimization and parallelism features](https://youtu.be/UNkXNZZ3hSw)
 can be directly applied to Catalyst generated code. A lot of the following
 features also extend continuous-time Markov models as well in new ways!
@@ -105,7 +105,7 @@ jumpdiff_prob = JumpProblem(oop_sdeprob,Direct(),rj)
 
 Now you see that there's `f` and `g` ready to be changed to mix and match
 continuous and discrete stochastic behaviors. This is an extension of our
-previous [jump diffusion support](https://diffeq.sciml.ai/stable/tutorials/jump_diffusion/)
+previous [jump diffusion support](https://docs.sciml.ai/DiffEqDocs/stable/tutorials/jump_diffusion/)
 by incorporating non-adapted jumping, allowing for scaling to jumps with higher
 rates.
 
@@ -114,14 +114,14 @@ rates.
 Stochastic differential equations now have [adjoint definitions defined](https://frankschae.github.io/post/gsoc2020-high-weak-order-solvers-sde-adjoints/)
 which have extra optimizations on diagonal noise SDEs. This extends a
 [comparatively high performing SDE solver](https://gist.github.com/ChrisRackauckas/6a03e7b151c86b32d74b41af54d495c6)
-to have low-memory SDE fitting. A [new tutorial in DiffEqFlux](https://diffeqflux.sciml.ai/dev/examples/optimization_sde/)
+to have low-memory SDE fitting. A [new tutorial in DiffEqFlux](https://docs.sciml.ai/DiffEqFlux/dev/examples/optimization_sde/)
 demonstrates how to recover the parameters of an SDE with just a few minutes
 of compute. Thank [@frankschae](https://github.com/frankschae) for this advance!
 
 ## Tons of methods for high weak order solving of SDEs
 
 Due once again to [@frankschae](https://github.com/frankschae), we have plenty
-of new [high weak order methods](https://diffeq.sciml.ai/dev/solvers/sde_solve/#High-Weak-Order-Methods-1)
+of new [high weak order methods](https://docs.sciml.ai/DiffEqDocs/dev/solvers/sde_solve/#High-Weak-Order-Methods-1)
 for fast solving of SDEs. When paired with
 [recent performance improvements of DiffEqGPU](https://github.com/SciML/DiffEqGPU.jl),
 we see some massive performance advantages for fitting expectations of equations.
@@ -130,8 +130,8 @@ Formal benchmarks will come soon!
 ## Continuous Normalizing Flows and FFJORD Layers
 
 DiffEqFlux now provides
-[pre-built continuous normalizing flow and FFJORD layers](https://diffeqflux.sciml.ai/dev/layers/CNFLayer/)
-for doing common neural ODE based machine learning. [A new tutorial](https://diffeqflux.sciml.ai/dev/examples/normalizing_flows/)
+[pre-built continuous normalizing flow and FFJORD layers](https://docs.sciml.ai/DiffEqFlux/dev/layers/CNFLayer/)
+for doing common neural ODE based machine learning. [A new tutorial](https://docs.sciml.ai/DiffEqFlux/dev/examples/normalizing_flows/)
 demonstrates how to get up and running with these layers in just a matter of
 minutes. This brings [a system demonstrated to have a 100x neural ODE training
 advantage over PyTorch](https://gist.github.com/ChrisRackauckas/4a4d526c15cc4170ce37da837bfc32c4)

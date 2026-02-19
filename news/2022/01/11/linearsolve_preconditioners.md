@@ -65,10 +65,10 @@ And now what about using GMRES with a relative tolerance of `1e-7`?
 sol = solve(prob,KrylovJL_GMRES(),reltol=1e-7)
 ```
 
-Notice this all follows the [SciML Common Interface](https://scimlbase.sciml.ai/dev/)
-and thus has the same look and feel as [NonlinearSolve.jl](https://nonlinearsolve.sciml.ai/dev/),
-[DifferentialEquations.jl](https://diffeq.sciml.ai/stable/), and
-[GalacticOptim.jl](https://galacticoptim.sciml.ai/dev/). There are many nice
+Notice this all follows the [SciML Common Interface](https://docs.sciml.ai/SciMLBase/dev/)
+and thus has the same look and feel as [NonlinearSolve.jl](https://docs.sciml.ai/NonlinearSolve/dev/),
+[DifferentialEquations.jl](https://docs.sciml.ai/DiffEqDocs/stable/), and
+[GalacticOptim.jl](https://docs.sciml.ai/Optimization/dev/). There are many nice
 features in there, such as an iterative interface that helps with caching
 factorizations effectively. Thus for someone interesting in writing libraries
 which internally use linear solvers, this is a very nice target. In fact,
@@ -78,9 +78,9 @@ that may be its main purpose, leading us to the next point.
 
 The major breaking change of DifferentialEquations.jl v7 is the use of LinearSolve.jl
 for internal linear solves. Now, linear solvers for implicit algorithms are
-chosen by passing a [LinearSolve.jl solver](http://linearsolve.sciml.ai/dev/solvers/solvers/)
+chosen by passing a [LinearSolve.jl solver](https://docs.sciml.ai/LinearSolve/dev/solvers/solvers/)
 to the `linsolve` of compatible OrdinaryDiffEq.jl algorithms. This is all showcased
-in the new and improved [scaling stiff ODE solvers for PDEs tutorial](https://diffeq.sciml.ai/stable/tutorials/advanced_ode_example/)
+in the new and improved [scaling stiff ODE solvers for PDEs tutorial](https://docs.sciml.ai/DiffEqDocs/stable/tutorials/advanced_ode_example/)
 
 For example, let's say we are solving this big Brusselator PDE:
 
@@ -164,7 +164,7 @@ using LinearSolve
 ## Preconditioner Interface
 
 With the change to LinearSolve.jl comes a new preconditioner interface. Any
-[LinearSolve.jl-compatible preconditioner](http://linearsolve.sciml.ai/dev/basics/Preconditioners/)
+[LinearSolve.jl-compatible preconditioner](https://docs.sciml.ai/LinearSolve/dev/basics/Preconditioners/)
 can be used with any LinearSolve-based library. For example, let's change that
 PDE solve to use an ILU preconditioner:
 
@@ -388,7 +388,7 @@ prob = ODEProblem(f,u0,(0.0,60.0))
 Finally and at last: DAE benchmarks have been added to [SciMLBenchmarks.jl!](https://github.com/SciML/SciMLBenchmarks.jl)
 What held us up is that we wanted everything: we wanted to test mass-matrix
 ODE solvers against fully implicit DAE solvers vs methods which embed the
-constraints. Given the advancements in [ModelingToolkit.jl](https://mtk.sciml.ai/dev/),
+constraints. Given the advancements in [ModelingToolkit.jl](https://docs.sciml.ai/ModelingToolkit/dev/),
 we were able to build a code that automatically generates all forms.
 
 Right now we only have a few smaller DAEs implemented, but so far across the
@@ -412,7 +412,7 @@ We will continue to expand the suite, and are looking for [anyone interested in 
 ## New Documentation Tutorial on Code Optimization for DifferentialEquations
 
 Everyone needs help optimizing their code. Now there is
-[a new tutorial in the DifferentialEquations.jl documentation](https://diffeq.sciml.ai/stable/tutorials/faster_ode_example/)
+[a new tutorial in the DifferentialEquations.jl documentation](https://docs.sciml.ai/DiffEqDocs/stable/tutorials/faster_ode_example/)
 which goes through non-stiff and stiff ODE codes, showing users how to optimize
 their code.
 
@@ -505,7 +505,7 @@ snappier.
 
 ## Integro-Differential Equations with NeuralPDE.jl
 
-The [NeuralPDE.jl Physics-Informed Neural Network library](https://neuralpde.sciml.ai/dev/)
+The [NeuralPDE.jl Physics-Informed Neural Network library](https://docs.sciml.ai/NeuralPDE/dev/)
 now supports the automated solution of [integro-differential equations](https://en.wikipedia.org/wiki/Integro-differential_equation).
 
 For example, from a pure symbolic description of a PDE with integrals defined

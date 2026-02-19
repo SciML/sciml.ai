@@ -18,8 +18,8 @@ new tool for generating fast symbolic functions. Let's check it out!
 Following our development team's latest paper on [Bayesian Neural ODEs](https://arxiv.org/abs/2012.07244),
 DiffEqFlux comes equipped with new tutorials for demonstrating how to perform
 probabilistic estimation of neural network weights within differential equations.
-Thus you can check out our [new tutorials](https://diffeqflux.sciml.ai/dev/examples/BayesianNODE_NUTS/)
-and [start doing](https://diffeqflux.sciml.ai/dev/examples/BayesianNODE_SGLD/)
+Thus you can check out our [new tutorials](https://docs.sciml.ai/DiffEqFlux/dev/examples/BayesianNODE_NUTS/)
+and [start doing](https://docs.sciml.ai/DiffEqFlux/dev/examples/BayesianNODE_SGLD/)
 automated model discovery with probabilistic estimates!
 
 ![](https://user-images.githubusercontent.com/23134958/102398119-df940a00-4004-11eb-9cdb-eb7be8724dd3.png)
@@ -27,12 +27,12 @@ automated model discovery with probabilistic estimates!
 
 ## Automated Parallel Batching with EnsembleDistributed and EnsembleGPUArray with DiffEqFlux
 
-The [DifferentialEquations.jl ensemble interface](https://diffeq.sciml.ai/stable/features/ensemble/)
+The [DifferentialEquations.jl ensemble interface](https://docs.sciml.ai/DiffEqDocs/stable/features/ensemble/)
 is now fully compatible with the differentiation required for DiffEqFlux, meaning
 that all of the batching can be done on clusters and GPUs. This allows for parallelizing
 different solves to be done at the same time, which means minibatches can be
 split and computed in tandum, all in an automated fashion. For more information,
-check out the [new tutorial](https://diffeqflux.sciml.ai/dev/examples/data_parallel/).
+check out the [new tutorial](https://docs.sciml.ai/DiffEqFlux/dev/examples/data_parallel/).
 For example, the following is how to parallelize DiffEqFlux training across a
 cluster on a simple ODE:
 
@@ -76,7 +76,7 @@ res_distributed = DiffEqFlux.sciml_train(loss_distributed, θ, opt; cb = cb, max
 ## Virtual Brownian Trees: O(1) Memory SDE Solving and Adjoints
 
 A new `AbstractNoiseProcess` type, the `VirturalBrownianTree`, has been added to
-the [Noise Process Interface](https://diffeq.sciml.ai/dev/features/noise_process/#VirtualBrownianTree).
+the [Noise Process Interface](https://docs.sciml.ai/DiffEqDocs/dev/features/noise_process/#VirtualBrownianTree).
 This allows one to define a stochastic differential equation (or a random ordinary
 differential equation driven by an Ito process) in such a way that:
 

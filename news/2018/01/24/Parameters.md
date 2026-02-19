@@ -25,8 +25,8 @@ applying these breaking changes.
 To see what version you have, use `Pkg.status("DifferentialEquations")`. To
 stay on the previous version, use `Pkg.pin("DifferentialEquations",v"3.1.0")`.
 
-Note that the [latest docs](https://diffeq.sciml.ai/latest/index) are
-live with the changes. The [release-3.2 docs](https://diffeq.sciml.ai/release-3.2/)
+Note that the [latest docs](https://docs.sciml.ai/DiffEqDocs/latest/index) are
+live with the changes. The [release-3.2 docs](https://docs.sciml.ai/DiffEqDocs/release-3.2/)
 still hold the old syntax if needed.
 
 ### Summary of the Changes
@@ -163,7 +163,7 @@ for solving PDEs in Julia. More on this to come.
 
 ## Documentation FAQ
 
-The documentation now has [a FAQ page](https://diffeq.sciml.ai/latest/basics/faq).
+The documentation now has [a FAQ page](https://docs.sciml.ai/DiffEqDocs/latest/basics/faq).
 It explains a lot of things like how to optimize your code, how to build
 complicated models, and how to diagnose and handle numerical errors. Please
 use this guide and request new additions as necessary!

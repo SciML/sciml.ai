@@ -14,7 +14,7 @@ Let's dive right in!
 
 ## DataDrivenDiffEq.jl: Dynamic Mode Decomposition and Sparse Identification of Models
 
-[DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl) has arrived, complete with [documentation](https://datadriven.sciml.ai/dev/)
+[DataDrivenDiffEq.jl](https://github.com/SciML/DataDrivenDiffEq.jl) has arrived, complete with [documentation](https://docs.sciml.ai/DataDrivenDiffEq/dev/)
 and a [full set of examples](https://github.com/SciML/DataDrivenDiffEq.jl/tree/master/examples).
 Thank Julius Martensen (@AlCap23) for really driving this effort.
 You can use this library to identify the sparse functional form of a differential
@@ -100,7 +100,7 @@ estimation = solve(estimator, Tsit5(), saveat = solution.t)
 
 We can now do things like, reoptimize the parameters with DiffEqParamEstim.jl
 or DiffEqFlux.jl, or look at the AIC/BIC of the fit, or etc.jl. See the
-[DataDrivenDiffEq.jl documentation](https://datadriven.sciml.ai/dev/) for
+[DataDrivenDiffEq.jl documentation](https://docs.sciml.ai/DataDrivenDiffEq/dev/) for
 more details on all that you can do. We hope that by directly incorporating this
 into the SciML ecosystem that it will become a standard part of the scientific
 modeling workflow and will continue to improve its methods.
@@ -120,7 +120,7 @@ on this library as it was
 
 ## High Weak Order SDE Integrators
 
-As part of our continued work on [DifferentialEquations.jl](https://diffeq.sciml.ai/latest/)
+As part of our continued work on [DifferentialEquations.jl](https://docs.sciml.ai/DiffEqDocs/latest/)
 we have added new stochastic differential equation integrators, `DRI1` and `RI1`,
 which are able to better estimate the expected value of the solution without
 requiring the computational overhead of getting high order strong convergence.
@@ -159,8 +159,8 @@ other libraries. A lot of work had to be done in order to
 and [make the priors more constrained](https://github.com/SciML/DiffEqBayes.jl/pull/155),
 while Turing.jl has had no issues. This has shown up in other places as well,
 where [we have not been able to update our Bayesian Lorenz parameter estimation benchmarks due to robustness issues with Stan diverging](https://github.com/SciML/DiffEqBenchmarks.jl/blob/510c3683aa00ffa8e96e5c25bb07ef9301a06251/pdf/ParameterEstimation/DiffEqBayesLorenz.pdf)
-Additionally, [benchmarks on](https://benchmarks.sciml.ai/html/ParameterEstimation/DiffEqBayesLotkaVolterra.html)
-[other ODE systems](https://benchmarks.sciml.ai/html/ParameterEstimation/DiffEqBayesFitzHughNagumo.html)
+Additionally, [benchmarks on](https://docs.sciml.ai/SciMLBenchmarksOutput/html/ParameterEstimation/DiffEqBayesLotkaVolterra.html)
+[other ODE systems](https://docs.sciml.ai/SciMLBenchmarksOutput/html/ParameterEstimation/DiffEqBayesFitzHughNagumo.html)
 demonstrate a 5x and 3x performance advantage for Turing over Stan. Thus our
 examples showcase Turing.jl as being unequivically more robust for Bayesian
 parameter estimation of differential equation systems. We hope that, with the
