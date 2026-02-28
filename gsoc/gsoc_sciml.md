@@ -71,6 +71,50 @@ differential equations.
 
 **Difficulty**: Medium to Hard depending on the chosen subtasks.
 
+## Memory-Efficient Adjoint Methods via Disk Checkpointing and Optimal Schedules
+
+Training neural ODEs and computing gradients of large-scale differential equation
+models requires solving an adjoint (backward) problem that needs access to the
+forward solution at arbitrary time points.
+[SciMLSensitivity.jl](https://github.com/SciML/SciMLSensitivity.jl) currently
+supports in-memory checkpointing, where the forward solution is stored at
+discrete checkpoint times and intervals are re-solved on demand during the
+backward pass. This trades compute for memory (at most 2x the forward cost),
+but for very large models — 3D PDE discretizations, climate models, or neural
+ODEs with millions of state variables — even checkpointed solutions can exceed
+available RAM. This project would extend the checkpointing infrastructure to
+support disk-based storage and optimal checkpoint scheduling:
+
+@@tight-list
+- **Disk-based checkpoint storage**: Extend the existing `CheckpointSolution` infrastructure in SciMLSensitivity.jl to write checkpoint data (state vectors at checkpoint times) to disk instead of holding them in memory. During the backward pass, checkpoints would be loaded from disk on demand when an interval needs to be re-solved. This should use memory-mapped files or asynchronous I/O to minimize latency, and support configurable storage backends (local disk, temp files, or user-specified paths).
+- **Optimal checkpointing schedules (Revolve/binomial checkpointing)**: Implement the [Revolve algorithm of Griewank and Walther (2000)](https://doi.org/10.1145/347837.347846) which computes the optimal schedule of checkpoint placement given a fixed memory budget, minimizing the total number of forward recomputations. The current implementation uses a uniform schedule (checkpoints at `sol.t`), which is far from optimal when memory is constrained.
+- **Hierarchical (tiered) checkpointing**: Implement a two-level checkpointing scheme that keeps a small number of checkpoints in RAM for fast access and spills the rest to disk, similar to the [H-Revolve algorithm](https://doi.org/10.1145/3378672). This combines the speed of in-memory checkpointing for recently accessed intervals with the capacity of disk storage for the full trajectory.
+- **Lossy compression of checkpoint data**: For problems where approximate gradients are acceptable (e.g., early epochs of neural ODE training), implement optional lossy compression of checkpoint state vectors (e.g., reduced precision, PCA-based compression) to further reduce storage requirements while bounding the approximation error in the gradient.
+- **Benchmarks on large-scale problems**: Develop benchmarks comparing memory usage and wall-clock time across checkpointing strategies (no checkpointing, in-memory, disk-based, Revolve, hierarchical) on representative large-scale problems including neural ODEs, PDE-constrained optimization, and climate model adjoints.
+@@
+
+The improvements would benefit all adjoint methods in SciMLSensitivity.jl
+(`InterpolatingAdjoint`, `GaussAdjoint`, `BacksolveAdjoint`) and are essential
+for scaling scientific machine learning to the large models encountered in
+climate science, computational fluid dynamics, and whole-cell biological
+modeling.
+
+**Recommended Skills**: Background in automatic differentiation and adjoint
+methods. Systems programming experience (file I/O, memory management) is
+helpful. Familiarity with DifferentialEquations.jl and SciMLSensitivity.jl is
+a plus but not required.
+
+**Expected Results**: A working implementation of disk-based checkpointing and
+at least one optimal scheduling strategy (Revolve) integrated into
+SciMLSensitivity.jl, with benchmarks demonstrating memory savings on
+large-scale problems.
+
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Frank Schäfer](https://github.com/frankschae)
+
+**Expected Project Size**: 350 hour.
+
+**Difficulty**: Medium to Hard depending on the chosen subtasks.
+
 ## Accelerating optimization via machine learning with surrogate models: Surrogates.jl
 
 In many cases, when attempting to optimize a function `f(p)` each calculation
