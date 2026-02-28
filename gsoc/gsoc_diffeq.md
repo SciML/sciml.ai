@@ -55,6 +55,46 @@ linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Difficulty**: Easy to Hard depending on the chosen subtasks.
 
+## Global Error Estimation and Control for Differential Equations
+
+Standard ODE solvers control only the *local* truncation error at each step, but
+users often care about the *global* (accumulated) error at the end of a
+simulation. [GlobalDiffEq.jl](https://github.com/SciML/GlobalDiffEq.jl) aims to
+provide solvers that estimate and control global error for the
+DifferentialEquations.jl common interface. This project would develop practical,
+high-performance implementations of several complementary strategies from the
+numerical analysis literature:
+
+@@tight-list
+- **Adjoint-based global error estimation**: Implement the method of [Cao and Petzold (2004)](https://epubs.siam.org/doi/abs/10.1137/S1064827503420969), which solves an adjoint (backward-in-time) problem to propagate local defect information into a global error estimate, combined with small-sample statistical condition estimation for efficiency.
+- **Coupled time-stepping with built-in global error estimates**: Implement the general linear method (GLM) framework of [Constantinescu (2018)](https://arxiv.org/abs/1503.05166), where the global error estimate is propagated forward alongside the numerical solution as a generalization of Zadunaisky's procedure, yielding self-starting explicit schemes akin to Runge-Kutta methods.
+- **Specialized Runge-Kutta triples for global error control**: Implement the methods of [Makazaga and Murua (2003)](http://www.ehu.eus/ccwmuura/research/gee2003.pdf) and related schemes that extend the Dormand-Gilmore-Prince family of embedded RK pairs to cheaply produce global error estimates, with demonstrated efficiency gains (e.g. 45% step reduction on the Lorenz system).
+- **Asymptotic expansion methods**: Implement the approach of [Shampine (1986)](https://www.sciencedirect.com/science/article/pii/0898122186900325), which exploits the embedded pair infrastructure already present in standard solvers (e.g. Tsit5, DP5) to estimate global error via asymptotic error expansions at essentially no additional function evaluation cost.
+- **Jacobian-based global error estimators**: Implement methods from [Berzins (1988)](http://www.sci.utah.edu/publications/Ber1988b/Berzins_JSC1988.pdf) that use Jacobian information to estimate global error propagation.
+- **Global error controlled multistep methods**: Implement multistep methods with built-in global error control, extending the classical Adams and BDF families.
+@@
+
+The resulting solvers would integrate directly with the SciML ecosystem,
+providing users with reliable global error bounds alongside their numerical
+solutions. This is particularly important for long-time integration problems in
+celestial mechanics, molecular dynamics, and climate modeling where local error
+control alone can be insufficient.
+
+**Recommended Skills**: Background knowledge in numerical analysis (particularly
+ODE solver theory), familiarity with Runge-Kutta and multistep methods, and
+the ability (or eagerness to learn) to write fast Julia code. Some familiarity
+with adjoint methods is helpful but not required.
+
+**Expected Results**: Production-quality implementations of two or more global
+error estimation strategies in GlobalDiffEq.jl, with benchmarks demonstrating
+their accuracy and efficiency on standard test problems.
+
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Oscar Smith](https://github.com/oscardssmith)
+
+**Expected Project Size**: 350 hour.
+
+**Difficulty**: Medium to Hard depending on the chosen subtasks.
+
 ## Performance enhancements for differential equation solvers
 
 Wouldn't it be cool to have had a part in the development of widely used efficient differential equation solvers?
