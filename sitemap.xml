@@ -26,12 +26,6 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://sciml.ai/gsoc/gsoc_symbolic_numeric/index.html</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>https://sciml.ai/news/2020/03/23/DAE/index.html</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
