@@ -317,14 +317,14 @@ to learn and a strong understanding of calculus and linear algebra.
 Jump processes are a widely used approach for modeling biological, chemical and epidemiological systems that can account for both stochastic interactions, and spatial transport, of proteins/particles/agents. [JumpProcesses.jl](https://github.com/SciML/JumpProcesses.jl/) provides a library of optimized solvers for exactly simulating jump processes, including recently added solvers that allow for the simulation of spatially-distributed jump processes (where particles/agents move on graphs or general meshes). A variety of possible projects to extend and enhance the current tooling include
 
 @@tight-list
-- Adding additional stochastic simulation algorithms such as partial propensity methods (either explicitly or via wrapping the C++ [pSSALib](https://github.com/breezerider/pSSAlib)).
+- Adding additional stochastic simulation algorithms such as partial propensity methods (either explicitly or via wrapping the C++ [pSSALib](https://github.com/breezerider/pSSAlib)), or more recent methods listed in JumpProcesses issues.
 - Exploring cache-optimized table and queue data structures to improve performance of current solvers.
 - Extending the current graph and spatial algorithms to support interactions between particles/agents at different spatial locations, and developing tooling to automatically calculate transition rates via PDE discretization techniques.
 - Extending StochasticDiffEq.jl with τ-leap algorithms to enable the approximate, but more computationally efficient, simulation of jump processes.
 - Extending JumpProcesses and StochasticDiffEq with hybrid simulation capabilities, allowing models that mix ODEs, SDE and jump processes and can dynamically partition model components between each mathematical representation as needed to maintain physical accuracy.
 @@
 
-**Recommended Skills**: An understanding of how the Gillespie method or basic jump process simulation algorithms work, and experience using DiffEqJump.jl to simulate jump processes.
+**Recommended Skills**: Stochastic processes, numerical ODEs, an understanding of how the Gillespie method or basic jump process simulation algorithms work, and experience using JumpProcesses.jl to simulate jump processes.
 
 **Expected Results**: Completing one or more of the preceding improvements to the jump process simulation tooling.
 
@@ -332,4 +332,4 @@ Jump processes are a widely used approach for modeling biological, chemical and 
 
 **Expected Project Size**: 350 hour.
 
-**Difficulty**: Medium to Hard depending on the chosen subtasks.
+**Difficulty**: Hard, generally requires significant mathematical and/or theoretical chemistry background beyond beginning undergraduate classes, including background in stochastic processes and their numerical simulation. Only recommended for advanced undergraduates and/or graduate students. Not a project that AIs can handle without substantial, informed supervision and planning. 
