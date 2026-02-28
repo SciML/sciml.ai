@@ -109,7 +109,7 @@ at least one optimal scheduling strategy (Revolve) integrated into
 SciMLSensitivity.jl, with benchmarks demonstrating memory savings on
 large-scale problems.
 
-**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas) and [Frank Schäfer](https://github.com/frankschae)
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
 **Expected Project Size**: 350 hour.
 
