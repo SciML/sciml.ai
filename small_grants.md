@@ -162,6 +162,48 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
+## Stiff ODE Problem Benchmarks ($100 / Benchmark)
+**In Progress: Claimed by Singh Harsh Rahulkumar for the time period of March 10, 2026 – April 10, 2026.**
+
+New benchmarks for stiff ordinary differential equation (ODE) systems will help improve
+solver performance evaluation across challenging real-world models. While SciMLBenchmarks
+contains a large collection of ODE problems, several important stiff test problems are
+still missing.
+
+The goal of this project is to implement and integrate additional stiff ODE benchmark
+problems from the SciMLBenchmarks issue tracker into the benchmarking suite so their
+performance can be tracked across solvers and hardware platforms.
+
+**Benchmarks targeted include:**
+
+- Ring Modulator
+- Medical Akzo Nobel Problem
+- EMEP Problem
+- Beam Problem
+
+**Information to Get Started**: The  
+Contributing Section of the SciMLBenchmarks README describes how to structure and add
+new benchmarks. Benchmark outputs are generated using the SciML benchmark server and
+must produce work-precision diagrams successfully.
+
+**Related Issues**:  
+https://github.com/SciML/SciMLBenchmarks.jl/issues/358
+
+**Success Criteria**:
+
+- Each stiff ODE problem is implemented as a SciMLBenchmarks-compatible benchmark
+- Benchmarks run successfully on the benchmark server
+- Work-precision diagrams are generated for each problem
+- Pull requests are reviewed and merged
+
+**Recommended Skills**:
+
+- Familiarity with Julia and DifferentialEquations.jl
+- Understanding of stiff ODE solvers
+- Experience working with SciMLBenchmarks structure
+
+**Reviewers**: Chris Rackauckas
+
 ## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
 
 **In Progress**: Claimed by Khushmagrawal for the time period of January 02, 2026 - February 02, 2026.
