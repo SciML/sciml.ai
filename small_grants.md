@@ -164,7 +164,7 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 ## Stiff ODE Problem Benchmarks ($100)
 
-**In Progress: Claimed by Singh Harsh Rahulkumar for the time period of March 10, 2026 – April 10, 2026.**
+**In Progress: Claimed by Singh Harsh Rahulkumar for the time period of March 12, 2026 – April 12, 2026.**
 
 This project adds a set of stiff ordinary differential equation (ODE) benchmark problems
 to the SciMLBenchmarks suite. Compared to DAE benchmarks, these problems are expected
