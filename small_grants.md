@@ -162,45 +162,46 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Stiff ODE Problem Benchmarks ($100 / Benchmark)
+## Stiff ODE Problem Benchmarks ($100)
+
 **In Progress: Claimed by Singh Harsh Rahulkumar for the time period of March 10, 2026 – April 10, 2026.**
 
-New benchmarks for stiff ordinary differential equation (ODE) systems will help improve
-solver performance evaluation across challenging real-world models. While SciMLBenchmarks
-contains a large collection of ODE problems, several important stiff test problems are
-still missing.
+This project adds a set of stiff ordinary differential equation (ODE) benchmark problems
+to the SciMLBenchmarks suite. Compared to DAE benchmarks, these problems are expected
+to require less implementation effort and are likely to work with standard solver
+configurations without significant structural adjustments.
 
-The goal of this project is to implement and integrate additional stiff ODE benchmark
-problems from the SciMLBenchmarks issue tracker into the benchmarking suite so their
-performance can be tracked across solvers and hardware platforms.
+The goal is to implement and integrate the remaining stiff ODE benchmark problems
+from the SciMLBenchmarks issue tracker into the benchmarking framework so their
+performance can be tracked across solvers.
 
-**Benchmarks targeted include:**
-
+**Benchmarks included:**
 - Ring Modulator
 - Medical Akzo Nobel Problem
 - EMEP Problem
-- Beam Problem
+- E5 Problem
 
-**Information to Get Started**: The  
-Contributing Section of the SciMLBenchmarks README describes how to structure and add
-new benchmarks. Benchmark outputs are generated using the SciML benchmark server and
-must produce work-precision diagrams successfully.
+These benchmarks are expected to be completed together within a single pull request.
+
+**Information to Get Started**: The Contributing Section of the SciMLBenchmarks README
+describes how to structure and add new benchmarks. Benchmark outputs must successfully
+run on the SciML benchmark server and generate work-precision diagrams.
 
 **Related Issues**:  
 https://github.com/SciML/SciMLBenchmarks.jl/issues/358
 
 **Success Criteria**:
 
-- Each stiff ODE problem is implemented as a SciMLBenchmarks-compatible benchmark
-- Benchmarks run successfully on the benchmark server
-- Work-precision diagrams are generated for each problem
-- Pull requests are reviewed and merged
+- All listed stiff ODE problems are implemented
+- Benchmarks execute successfully in SciMLBenchmarks
+- Work-precision diagrams are generated
+- A single consolidated PR is merged
 
 **Recommended Skills**:
 
 - Familiarity with Julia and DifferentialEquations.jl
-- Understanding of stiff ODE solvers
-- Experience working with SciMLBenchmarks structure
+- Basic understanding of stiff ODE solvers
+- Experience with SciMLBenchmarks structure
 
 **Reviewers**: Chris Rackauckas
 
