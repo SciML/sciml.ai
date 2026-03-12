@@ -179,7 +179,7 @@ performance can be tracked across solvers.
 - Ring Modulator
 - Medical Akzo Nobel Problem
 - EMEP Problem
-- E5 Problem
+- BEAM Problem
 
 These benchmarks are expected to be completed together within a single pull request.
 
