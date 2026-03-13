@@ -360,6 +360,8 @@ challenging DAE systems.
 - Andrews' Squeezing Mechanism
 - Wheelset Problem
 
+**Information to Get Started**:
+
 These benchmarks include multiple formulations (mass-matrix, residual DAE,
 and ModelingToolkit index-reduced forms) and generate work-precision
 diagrams through the SciMLBenchmarks benchmarking infrastructure.
