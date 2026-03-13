@@ -262,32 +262,6 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
-## DAE Problem Benchmarks (\$100 / Benchmark)
-
-**In Progress: Claimed by Singh Harsh Rahulkumar for the time period of January 29, 2026 – February 28, 2026.**
-New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
-ability to better tune solvers across problems. However, we are currently lacking in the
-number of such benchmarks that exist. The goal would be to add standard benchmarks from
-[this issue](https://github.com/SciML/SciMLBenchmarks.jl/issues/359) to the SciMLBenchmarks
-system so that they can be performance tracked over time.
-
-**Information to Get Started**: [Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
-describes how to contribute to the benchmarks. The benchmark results are
-generated using the benchmark server. The [transition amplifier benchmark](https://github.com/SciML/SciMLBenchmarks.jl/pull/372)
-and [slider crank benchmark](https://github.com/SciML/SciMLBenchmarks.jl/pull/373) were old
-PRs to add a few of the problems. These could be used as starting points to solve two problems.
-One would likely need to modify the structural simplification to turn dummy derivative off
-as well, that can be discussed with Chris in the PR review.
-
-**Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
-
-**Success Criteria**: New benchmarks with the DAE systems.
-
-**Recommended Skills**: Prior knowledge in modeling with differential-algebraic equations
-would be helpful for debugging.
-
-**Reviewers**: Chris Rackauckas
-
 ## Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus (\$100/solver set)
 
 ***In Progress:** Claimed for the SDIRK set by Krish Gaur for the time period of July 4th 2025 - August 4th, 2025*
@@ -367,6 +341,43 @@ It's also expected that TabM model will be assessed against basic regression ben
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
+
+## DAE Problem Benchmarks ($100 / Benchmark)
+
+**Completed by Singh Harsh Rahulkumar(singhharsh1708)**
+
+New differential-algebraic equation (DAE) benchmarks were added to the
+SciMLBenchmarks suite to improve solver performance tracking across
+challenging DAE systems.
+
+**Benchmarks added:**
+- Slider-Crank Mechanism
+- Two-Bit Adding Unit
+- Fekete Problem
+- Water Tube System
+- Charge Pump
+- Car Axis Mechanism
+- Andrews' Squeezing Mechanism
+- Wheelset Problem
+
+**Information to Get Started**:
+
+These benchmarks include multiple formulations (mass-matrix, residual DAE,
+and ModelingToolkit index-reduced forms) and generate work-precision
+diagrams through the SciMLBenchmarks benchmarking infrastructure.
+
+**Related Pull Requests**
+
+- https://github.com/SciML/SciMLBenchmarks.jl/pull/1459
+- https://github.com/SciML/SciMLBenchmarks.jl/pull/1461
+- https://github.com/SciML/SciMLBenchmarks.jl/pull/1480
+- https://github.com/SciML/SciMLBenchmarks.jl/pull/1481
+- https://github.com/SciML/SciMLBenchmarks.jl/pull/1483
+- https://github.com/SciML/SciMLBenchmarks.jl/pull/1484
+- https://github.com/SciML/SciMLBenchmarks.jl/pull/1485
+- https://github.com/SciML/SciMLBenchmarks.jl/pull/1486
+
+**Reviewer:** Chris Rackauckas
 
 ## CurveFit.jl Enhancements (\$300)
 
