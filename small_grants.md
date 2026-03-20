@@ -306,9 +306,13 @@ development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
 
+# Successful Projects Archive
+
+These are the previous SciML small grants projects which have successfully concluded and paid out.
+
 ## Add support for TabM architecture in NeuroTabModels.jl and remove Zygote.jl dependency (\$1800)
 
-**In Progress**: Claimed by Aditya Pandey for the time period of January 20, 2026 - March 20, 2026.
+Completed by **Aditya Pandey**
 
 [NeuroTabModels.jl](https://github.com/Evovest/NeuroTabModels.jl) is a library for training neural networks on tabular data. It currently supports a limited set of architectures: MLP, ResNets and NeuroTrees, and is built on top of Flux.jl and Zygote.jl.
 
@@ -337,10 +341,6 @@ It's also expected that TabM model will be assessed against basic regression ben
 **Recommended Skills**: Familiarity with deep learning frameworks such as Flux.jl or Lux.jl and underlying autodiff systems (Enzyme.jl).
 
 **Reviewers**: [Jeremie Desgagne-Bouchard](https://github.com/jeremiedb)
-
-# Successful Projects Archive
-
-These are the previous SciML small grants projects which have successfully concluded and paid out.
 
 ## DAE Problem Benchmarks ($100 / Benchmark)
 
