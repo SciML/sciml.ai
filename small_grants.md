@@ -164,6 +164,8 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 ## Add AllocCheck.jl Allocation Tests Across OrdinaryDiffEq Solver Ecosystem ($300)
 
+**In Progress**: Claimed by SINGH HARSH RAHULKUMAR for the time period of March 11, 2026 - March 30, 2026.
+
 Add comprehensive `AllocCheck.jl`-based allocation tests for `perform_step!` across all OrdinaryDiffEq.jl solver subpackages and core infrastructure.
 
 The goal of this project is to establish full coverage for detecting memory allocations in solver stepping functions, ensuring that all solvers can be systematically verified for zero-allocation performance.
