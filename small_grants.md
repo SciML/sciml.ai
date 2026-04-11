@@ -162,6 +162,59 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
+## Add AllocCheck.jl Allocation Tests Across OrdinaryDiffEq Solver Ecosystem ($300)
+
+Add comprehensive `AllocCheck.jl`-based allocation tests for `perform_step!` across all OrdinaryDiffEq.jl solver subpackages and core infrastructure.
+
+The goal of this project is to establish full coverage for detecting memory allocations in solver stepping functions, ensuring that all solvers can be systematically verified for zero-allocation performance.
+
+**Information to Get Started**:
+
+OrdinaryDiffEq.jl contains a large collection of solver subpackages with different algorithmic structures (explicit RK, implicit methods, multistep, exponential integrators, etc.). Many of these solvers may allocate memory during `perform_step!`, which impacts performance.
+
+This project introduces static allocation analysis using `AllocCheck.jl`:
+- Uses `check_allocs` to detect allocation sites via LLVM
+- Marks allocation-free solvers with `@test length(allocs) == 0`
+- Marks known-allocating solvers with `broken=true` to preserve CI while tracking current state
+
+Special care is required to:
+- Use `FullSpecialize` to avoid `FunctionWrappers` allocations
+- Run allocation tests before JET to avoid compiler invalidation issues
+- Handle solver-specific requirements (SplitODEProblem, DynamicalODEProblem, SIMD/OOP constraints)
+
+**Work Completed**:
+
+- Added allocation tests across **all solver subpackages (~30+)**
+- Added core allocation tests in `OrdinaryDiffEqCore`
+- Created ~32 allocation test files and updated all `runtests.jl`
+- Identified:
+  - ~90 allocation-free solvers
+  - ~200+ solvers with known allocations (marked `broken=true`)
+- Handled multiple edge cases:
+  - DynamicalODE (`ArrayPartition`) allocations
+  - implicit solvers (linear/nonlinear solves)
+  - multistep and adaptive methods
+  - exponential/Krylov-based solvers
+  - SIMD and OOP solver constraints
+- Excluded unsupported cases (e.g., RKIP) with justification
+
+**Success Criteria**:
+
+- All solver subpackages include allocation tests for `perform_step!`
+- Allocation tests run successfully in CI across all packages
+- Allocation-free solvers pass with zero allocations
+- Known allocation cases are correctly marked with `broken=true`
+- Tests are executed before JET to ensure correct results
+
+**Recommended Skills**:
+
+- Familiarity with Julia and SciML ecosystem
+- Understanding of numerical ODE solvers
+- Knowledge of performance optimization and memory allocations
+- Ability to debug across a large multi-package codebase
+
+**Reviewers**: Chris Rackauckas
+
 ## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
 
 **In Progress**: Claimed by Khushmagrawal for the time period of January 02, 2026 - February 02, 2026.
