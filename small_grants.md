@@ -162,6 +162,43 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
+## Implement Pattern-Specific DAE Fast Path in ModelingToolkit.jl and SciMLBenchmarks 
+
+**In Progress**: Claimed by Singh Harsh Rahulkumar for the time period of April 30, 2026 - May 30, 2026.
+
+Electromagnetic transient (EMT) models and similar systems formulated via Modified Nodal Analysis can produce index-2 DAEs when the network contains cutsets of inductors. General-purpose approaches in ModelingToolkit.jl (Pantelides + dummy derivatives) handle these cases, but may incur unnecessary symbolic overhead for specific structural patterns.
+
+This project builds on the paper *“DAE Index Reduction for Electromagnetic Transient Models”* (arXiv:2604.06582) and discussions with Aayush Sabharwal to prototype a **pattern-specific optimization**: detecting structurally decoupled linear SCCs (via BLT structure) and applying local linear elimination within the existing inline linear SCC pass in the dummy derivatives loop.
+
+In parallel, this project adds EMT-based DAE benchmarks to SciMLBenchmarks.jl.
+
+### Information to Get Started
+
+- Structural criterion: BLT decomposition of the incidence matrix
+- Target pattern: SCCs with zero left dependencies (structurally decoupled blocks)
+- Relevant code: inline linear SCC handling in ModelingToolkit.jl
+- Benchmarks: SciMLBenchmarks contributing guide
+
+### Success Criteria
+
+- Merged PR to SciMLBenchmarks.jl adding:
+  - `EMTTransformerDAE.jmd` (S1 subsystem)
+  - `EMTTransformerS1S2.jmd` (S1+S2 subsystem)
+  - Work-precision diagrams across solvers
+
+- Merged PR to ModelingToolkit.jl:
+  - Adds guard condition for zero-left-dependency SCCs in dummy derivatives loop
+  - Uses existing linear SCC solve pathway
+  - Includes tests validating correctness and improved model construction performance
+
+### Recommended Skills
+
+- Differential-algebraic equations (DAEs)
+- ModelingToolkit.jl internals
+- Basic understanding of BLT decomposition and Pantelides
+
+**Reviewers**: Chris Rackauckas
+
 ## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
 
 **In Progress**: Claimed by Khushmagrawal for the time period of January 02, 2026 - February 02, 2026.
