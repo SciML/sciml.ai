@@ -162,6 +162,72 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
+## Benchmark Validation and Testing Infrastructure for SciMLBenchmarks.jl ($400)
+
+**In Progress**: Claimed by Prashant Andoriya for the time period of (May 2, 2026) - (June 7, 2026).
+
+The SciMLBenchmarks.jl repository contains a large collection of benchmark scripts (`.jmd` files) across multiple domains (ODEs, SDEs, PDEs, optimization, etc.). While previous projects have focused on adding new benchmarks and updating compatibility, there is currently no systematic validation framework to ensure that benchmarks execute correctly and produce valid outputs.
+
+Additionally, the current CI workflows do not validate benchmark execution or detect failures in benchmark scripts, which can allow silent errors or invalid results to go unnoticed.
+
+The objective of this project is to improve the reliability and maintainability of the benchmarking suite by introducing structured validation, execution checks, and CI-level verification.
+
+**Information to Get Started:**
+
+The Contributing Section of the SciMLBenchmarks README describes how benchmarks are executed and integrated. The current test system (`test/runtests.jl`) runs basic checks, but does not validate benchmark execution correctness or outputs.
+
+Relevant areas of the repository include:
+
+* `benchmarks/` (benchmark scripts)
+* `test/runtests.jl` (test entry point)
+* `.github/workflows/test.yml` and `benchmarks.yml` (CI pipelines)
+* `benchmark_defaults.toml` (configuration)
+
+**Scope of Work:**
+
+* Audit benchmark directories (e.g., `NonStiffODE`, `DAE`, `Optimization`, `NeuralNetworks`) to identify:
+
+  * failing or unstable `.jmd` executions
+  * missing validation or silent failures
+
+* Develop validation utilities (new module under `src/`):
+
+  * safely execute benchmark scripts
+  * detect runtime failures
+  * capture execution results
+
+* Extend the test system:
+
+  * modify `test/runtests.jl` to include benchmark execution checks
+  * integrate validation logic into the test pipeline
+  * initially validate a representative subset of benchmark categories (e.g., ODEs, DAEs) with extensibility to the full suite
+
+* Add output validation checks:
+
+  * detect invalid numerical values (`NaN`, `Inf`)
+  * verify expected output structure where applicable
+
+* Improve CI workflows:
+
+  * update `.github/workflows/test.yml` and `benchmarks.yml` to include validation steps
+  * extend CI triggers to include changes in `benchmarks/`
+  * ensure benchmark execution failures are surfaced and fail CI
+
+**Success Criteria:**
+
+* Benchmarks execute without silent failures
+* Invalid outputs (`NaN`/`Inf`) are automatically detected
+* CI consistently fails on broken or unstable benchmarks
+* Validation system is integrated and extensible across benchmark categories
+
+**Recommended Skills:**
+
+* Experience with testing and CI systems
+* Debugging and validation of computational pipelines
+
+**Reviewers:** Chris Rackauckas
+
+
 ## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
 
 **In Progress**: Claimed by Khushmagrawal for the time period of January 02, 2026 - February 02, 2026.
