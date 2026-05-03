@@ -162,6 +162,23 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
+## Modelingtoolkit based Parser for Physics Informed Neural Networks (PINNs) (\$500)
+
+**In Progress**: Claimed by [UTSAV OJHA](https://github.com/ajatshatru01) for the time period of MAY 25, 2026 - JUNE 25, 2026.
+
+[NeuralPDE.jl](https://github.com/SciML/NeuralPDE.jl) uses [ModelingTookit.jl](https://github.com/SciML/ModelingToolkit.jl) to define differential equations for solving PINNs. Currently, the loss functions for PINNs are constructed manually, which limits their applicability to a specific subset of systems. By utilizing ModelingToolkit.jl, loss functions could be generated symbolically, enabling broader generalization across diverse systems and improving flexibility. To achieve this, parsing the equations symbolically is essential.
+
+
+Note that the funds for this project as given by earmarked donations to the JuliaLang project
+which SciML will help administer through the small grants program.
+
+**Success Criteria**: New Parser for lowering from Modelingtoolkit systems to loss functions.
+
+**Recommended Skills**: Background knowledge in symbolics and machine learning.
+
+**Reviewers**: Chris Rackauckas 
+
+
 ## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
 
 **In Progress**: Claimed by Khushmagrawal for the time period of January 02, 2026 - February 02, 2026.
