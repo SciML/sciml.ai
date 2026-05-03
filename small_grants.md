@@ -162,7 +162,7 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Modelingtoolkit based Parser for Physics Informed Neural Networks (PINNs) (\$800)
+## Modelingtoolkit based Parser for Physics Informed Neural Networks (PINNs) (\$500)
 
 **In Progress**: Claimed by [UTSAV OJHA](https://github.com/ajatshatru01) for the time period of MAY 25, 2026 - JUNE 25, 2026.
 
