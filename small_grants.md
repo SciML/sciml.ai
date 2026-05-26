@@ -301,7 +301,7 @@ It's also expected that TabM model will be assessed against basic regression ben
 
 **Reviewers**: [Jeremie Desgagne-Bouchard](https://github.com/jeremiedb)
 
-## DAE Problem Benchmarks (\$100 / Benchmark — Project Complete)
+## DAE Problem Benchmarks (\$100 / Benchmark)
 
 Tracker issue [SciMLBenchmarks.jl#359](https://github.com/SciML/SciMLBenchmarks.jl/issues/359) was closed on March 13, 2026 with all listed problems implemented. The project added standard benchmarks from the [Bari IVP DAE test set](https://archimede.uniba.it/~testset/testsetivpsolvers/?page_id=26#DAE) to SciMLBenchmarks. Benchmarks include multiple formulations (mass-matrix, residual DAE, and ModelingToolkit index-reduced) and generate work-precision diagrams through the SciMLBenchmarks infrastructure.
 
