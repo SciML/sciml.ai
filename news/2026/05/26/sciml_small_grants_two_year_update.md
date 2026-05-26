@@ -68,15 +68,17 @@ Two notable governance / project-list changes since the year-one post:
 
 **AI usage policy ([PR #214](https://github.com/SciML/sciml.ai/pull/214), February 2026).** A note was added to the [SciML Developer Programs page](https://sciml.ai/dev/) clarifying that AI usage is allowed but must be disclosed, with undisclosed usage being grounds for disqualification from future programs. The note also makes explicit that the projects on offer have already been attempted with state-of-the-art AI tooling, so a contributor relying on AI alone without expert guidance is unlikely to succeed.
 
-## Currently Active Projects
+## Projects Open for Claim
 
-Five projects are claimed and in flight as of this writing:
+Going into this update, five projects had active claim declarations. All five were past their declared windows without extension PRs or recent activity on the relevant SciML repos, so they were cleared in a second stale-claim sweep ([PR #235](https://github.com/SciML/sciml.ai/pull/235), following the pattern established in [PR #191](https://github.com/SciML/sciml.ai/pull/191)). The project entries themselves remain on the list and are open for re-claim:
 
-- **LoopVectorization.jl Apple ARM (\$200)** — Khushmagrawal ([claim PR #201](https://github.com/SciML/sciml.ai/pull/201)). The follow-up to Maximilian's v1.12 work: get all tests passing on M-series Macs.
-- **SciMLBenchmarks GPU CI (\$300)** — divital-coder ([claim PR #196](https://github.com/SciML/sciml.ai/pull/196), [extended via PR #206](https://github.com/SciML/sciml.ai/pull/206) and [PR #215](https://github.com/SciML/sciml.ai/pull/215)). The long-standing GPU benchmarking queue project.
-- **OrdinaryDiffEq Downgrade Tests (\$100)** — Param Thakkar ([claim PR #216](https://github.com/SciML/sciml.ai/pull/216)). Param's fourth grant — he previously completed both the OrdinaryDiffEq sub-package refactor and the SciMLBenchmarks compat bumps.
-- **CUTEst.jl on the Optimization.jl Interface (\$200)** — Jash Ambaliya ([claim PR #208](https://github.com/SciML/sciml.ai/pull/208)). The CUTEst integration originally claimed by a different contributor in 2025 has been re-claimed by Jash, who previously completed the Symbolics ↔ SymPy backend work.
-- **OrdinaryDiffEq Tableau Refactor — SDIRK set (\$100/set)** — Krish Gaur. Refactoring the SDIRK `perform_step!` implementations into a single tableau-based loop.
+- **LoopVectorization.jl Apple ARM (\$200)** — the follow-up to Maximilian's v1.12 work: get all tests passing on M-series Macs.
+- **SciMLBenchmarks GPU CI (\$300)** — the long-standing GPU benchmarking queue project.
+- **OrdinaryDiffEq Downgrade Tests (\$100)** — making the downgrade-tests CI pass across OrdinaryDiffEq and its sublibraries. PR [SciML/OrdinaryDiffEq.jl#3047](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3047) (open but stalled with failing tests) is a partial starting point for whoever picks this up next.
+- **CUTEst.jl on the Optimization.jl Interface (\$200)** — wrap the CUTEst.jl problem set behind the Optimization.jl interface and add a SciMLBenchmarks loop over it.
+- **OrdinaryDiffEq Tableau Refactor — SDIRK set (\$100/set)** — refactor the SDIRK `perform_step!` implementations into a single tableau-based loop. Note that significant in-tree work has happened on this since the original claim (PR [SciML/OrdinaryDiffEq.jl#2779](https://github.com/SciML/OrdinaryDiffEq.jl/pull/2779) is still open, and additional unifying refactors have landed under other contributors in May 2026), so anyone picking this up should coordinate with the reviewers about what's left in scope.
+
+The pattern of clearing claim declarations when a window closes without extension is by design — see the [Going Over the One-Month Time Budget](https://sciml.ai/small_grants/#going_over_the_one-month_time_budget) section of the program page. Projects stay on the list; only the claim resets.
 
 ## Updated Totals
 
@@ -95,7 +97,7 @@ That's **\$5,950 in additional payouts over ten months**, bringing the running t
 
 A few patterns worth noting:
 
-- **Repeat contributors continue to dominate the high end.** Aditya Pandey (now three completed grants), Maximilian Pochapski (two), Param Thakkar (two completed and a third in progress), and Jash Ambaliya (one completed, second in progress) account for a large share of total payouts. The program's design of giving exclusive declared time periods, with extension support, evidently works for sustaining multi-grant contributor relationships.
+- **Repeat contributors continue to dominate the high end.** Aditya Pandey (now three completed grants), Maximilian Pochapski (two), Param Thakkar (two completed), and Jash Ambaliya (one completed) account for a large share of total payouts. The program's design of giving exclusive declared time periods, with extension support, evidently works for sustaining multi-grant contributor relationships.
 - **Open-ended "per-benchmark" projects scale well.** The DAE benchmark project alone has now been worked by Marko Polic, Jayant Pranjal, and Singh Harsh Rahulkumar across multiple cycles, with Singh's eight-system push being the single largest contribution to SciMLBenchmarks from the program.
 - **Scope expansions get rewarded.** The PDE benchmark bounty was bumped on completion. The EvoTrees.jl bounty was bumped for partial KA.jl work. The pattern of trusting contributors to push past the original spec and adjusting payment afterward has held up.
 
