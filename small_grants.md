@@ -257,7 +257,6 @@ bespoke). The remaining sub-packages are claimed on a per-set basis.
 
 - **[OrdinaryDiffEqSSPRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSSPRK/src)** — Strong-stability-preserving RK (SSPRK22, SSPRK33, SSPRK43, SSPRK53, SSPRK54, SSPRK63, SSPRK73, SSPRK83, SSPRK104, SSPRK932, etc.).
 - **[OrdinaryDiffEqLowStorageRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqLowStorageRK/src)** — 2N and 3N low-storage RK formats (CarpenterKennedy2N54, ParsaniKetchesonDeconinck variants, etc.).
-- **[OrdinaryDiffEqSymplecticRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSymplecticRK/src)** — symplectic integrators (VelocityVerlet, McAte2-8, Yoshida6, KahanLi6/8, Ruth3, etc.).
 - **[OrdinaryDiffEqRKN](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqRKN/src)** — Runge-Kutta-Nyström methods for second-order ODEs (Nystrom4, IRKN3-4, DPRKN6-12, ERKN4-7, etc.).
 - **[OrdinaryDiffEqExponentialRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqExponentialRK/src)** — exponential RK families (LawsonEuler, NorsettEuler, ETD2, ETDRK2-4, HochOst4, Exp4, EPIRK variants, etc.).
 
