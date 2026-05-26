@@ -211,6 +211,8 @@ The purpose of this is to work through what is required for the minimum version 
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
+**In Progress**: Claimed by Prashant Andoriya for the time period of May 26, 2026 - June 26, 2026.
+
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
 and comparing optimization algorithms. We would like to be able to repurpose this work for
