@@ -194,18 +194,6 @@ which SciML will help administer through the small grants program.
 
 **Reviewers**: Chris Rackauckas and Oscar Smith
 
-## Setup SciMLBenchmarks CI scripts to support GPU benchmarking (\$300)
-
-The current SciMLBenchmarks only run on CPU. There are many cases we wish to benchmark on GPU. The goal of this project is to modify the CI scripts to support GPU benchmarking.
-
-**Information to Get Started**: See the current scripts in https://github.com/SciML/SciMLBenchmarks.jl/tree/master/.buildkite
-
-**Success Criteria**: Merged pull request which changes the SciMLBenchmarks CI scripts to have a GPU queue, and setting up one of the benchmarks with a GPU queue
-
-**Recommended Skills**: Understanding of Devops tooling and CI scripts
-
-**Reviewers**: Chris Rackauckas
-
 ## Fix OrdinaryDiffEq Downgrade tests (\$100)
 
 The downgrade tests are a set of tests which ensure that the package can be downgraded to a previous version and still work. This is important for ensuring that the package is stable and can be used in production environments. However, these tests are currently failing in many repositories due to changes in the package dependencies or the package itself. For example, OrdinaryDiffEq and most of its sublibraries
