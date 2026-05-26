@@ -244,41 +244,49 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 ## Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus (\$100/solver set)
 
-The perform_step! implementations per solver in OrdinaryDiffEq.jl are often "bespoke", i.e.
+The `perform_step!` implementations per solver in OrdinaryDiffEq.jl are often "bespoke", i.e.
 one step implementation per solver. The reason is because the package code grew organically
 over time and this is the easiest way to ensure performance and write out a new method.
 However, many of the methods can be collapsed by class into a single solver set using a
-tableau implementation that loops over coefficients. Because of the nuances in performance
-and implementation, we have avoided doing this refactoring until a few more pieces were
-set in stone.
+tableau implementation that loops over coefficients. The SDIRK set has been completed under
+this project (see [OrdinaryDiffEqSDIRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSDIRK/src),
+where `generic_imex_perform_step.jl` now drives the methods previously implemented
+bespoke). The remaining sub-packages are claimed on a per-set basis.
 
-Note that this should be done based on classes of solvers, as documented in the code
-as files in the `perform_step!` implementations (though the explicit Runge-Kutta methods
-are split across a few files and should all be a single tableau). Solver set should
-be discussed before starting the project.
+**Solver sets still available for refactor** (each is its own \$100 grant, claim by sub-package name):
 
-It is recommended that implicit methods such as Rosenbrock and SDIRK integrators are
-done first, as the extra intricacies of their algorithm make this refactor simpler
-because the nuances of the implementation are less likely to noticeably impact performance.
+- **[OrdinaryDiffEqLowOrderRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqLowOrderRK/src)** — low-order explicit Runge-Kutta methods (BS3, BS5, DP5, Heun, Midpoint, Ralston, RK4, OwrenZen variants, etc.). Note BS5 uses a non-standard error estimator.
+- **[OrdinaryDiffEqHighOrderRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqHighOrderRK/src)** — high-order explicit RK (DP8, TanYam7, TsitPap8). DP8 has a non-standard error estimator.
+- **[OrdinaryDiffEqVerner](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqVerner/src)** — Vern6, Vern7, Vern8, Vern9. Has a lazy-interpolation twist that needs care in the refactor.
+- **[OrdinaryDiffEqFeagin](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqFeagin/src)** — Feagin10, Feagin12, Feagin14 (very high-order RK methods sharing similar structure).
+- **[OrdinaryDiffEqSSPRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSSPRK/src)** — Strong-stability-preserving RK (SSPRK22, SSPRK33, SSPRK43, SSPRK53, SSPRK54, SSPRK63, SSPRK73, SSPRK83, SSPRK104, SSPRK932, etc.).
+- **[OrdinaryDiffEqLowStorageRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqLowStorageRK/src)** — 2N and 3N low-storage RK formats (CarpenterKennedy2N54, ParsaniKetchesonDeconinck variants, etc.).
+- **[OrdinaryDiffEqSymplecticRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSymplecticRK/src)** — symplectic integrators (VelocityVerlet, McAte2-8, Yoshida6, KahanLi6/8, Ruth3, etc.).
+- **[OrdinaryDiffEqRKN](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqRKN/src)** — Runge-Kutta-Nyström methods for second-order ODEs (Nystrom4, IRKN3-4, DPRKN6-12, ERKN4-7, etc.).
+- **[OrdinaryDiffEqRosenbrock](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqRosenbrock/src)** — Rosenbrock W-methods and Rosenbrock-Wanner methods (Rodas3-5P, Veldd4, Velds4, GRK4T, etc.). A `rosenbrock_tableaus.jl` file already exists as a partial starting point.
+- **[OrdinaryDiffEqFIRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqFIRK/src)** — Fully implicit Runge-Kutta (RadauIIA3, RadauIIA5, RadauIIA9, AdaptiveRadau).
+- **[OrdinaryDiffEqExponentialRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqExponentialRK/src)** — exponential RK families (LawsonEuler, NorsettEuler, ETD2, ETDRK2-4, HochOst4, Exp4, EPIRK variants, etc.).
+- **[OrdinaryDiffEqStabilizedRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqStabilizedRK/src)** — Stabilized explicit RK for mildly stiff problems (ROCK2, ROCK4, ESERK4, ESERK5, SERK2).
+
+Solver set should be discussed before starting the project (especially around any algorithm-specific dispatch points the refactor needs to keep). The completed SDIRK refactor in [OrdinaryDiffEqSDIRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSDIRK/src) is the reference pattern.
 
 **Information to Get Started**: The OrdinaryDiffEq.jl solvers are all found in
 [the Github repository](https://github.com/SciML/OrdinaryDiffEq.jl) and
 the format of the package is documented in the
 [developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/). The key to doing
 this right is to note that it is just a refactor, so all of the methods are there in
-the package already. However, note that some methods can be a bit nuanced, for example,
-BS5 and DP8 use fairly non-standard error estimators for an explicit Runge-Kutta method,
-while Verner methods have a twist with laziness. Because of this, the key is to be
-careful to add points to dispatch to alternative based on the nuances of the given algorithms.
+the package already. Be careful to add dispatch points for algorithm-specific behavior
+(non-standard error estimators, lazy interpolation, etc.) where the bespoke implementations
+had them.
 
 **Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/233](https://github.com/SciML/OrdinaryDiffEq.jl/issues/233)
 
-**Success Criteria**: The independent solver packages are registered and released,
-and a breaking update to OrdinaryDiffEq.jl is released which reduces the loading
-time by not including all solvers by default. This success also requires updating
-package documentation to reflect these changes.
+**Success Criteria**: For the chosen sub-package, the per-method bespoke `perform_step!`
+implementations are replaced by a single tableau-driven `perform_step!` that loops over
+tableau coefficients, all existing tests pass, and there are no observable performance
+regressions on the relevant SciMLBenchmarks runs.
 
-**Recommended Skills**: Since all of the code for the solvers exists and this a refactor,
+**Recommended Skills**: Since all of the code for the solvers exists and this is a refactor,
 no prior knowledge of numerical differential equations is required. Only standard software
 development skills and test-driven development of a large code base is required.
 
@@ -320,40 +328,15 @@ It's also expected that TabM model will be assessed against basic regression ben
 
 **Reviewers**: [Jeremie Desgagne-Bouchard](https://github.com/jeremiedb)
 
-## DAE Problem Benchmarks ($100 / Benchmark)
+## DAE Problem Benchmarks (\$100 / Benchmark — Project Complete)
 
-**Completed by Singh Harsh Rahulkumar(singhharsh1708)**
+Tracker issue [SciMLBenchmarks.jl#359](https://github.com/SciML/SciMLBenchmarks.jl/issues/359) was closed on March 13, 2026 with all listed problems implemented. The project added standard benchmarks from the [Bari IVP DAE test set](https://archimede.uniba.it/~testset/testsetivpsolvers/?page_id=26#DAE) to SciMLBenchmarks. Benchmarks include multiple formulations (mass-matrix, residual DAE, and ModelingToolkit index-reduced) and generate work-precision diagrams through the SciMLBenchmarks infrastructure.
 
-New differential-algebraic equation (DAE) benchmarks were added to the
-SciMLBenchmarks suite to improve solver performance tracking across
-challenging DAE systems.
+**Benchmarks added under the grant program:**
 
-**Benchmarks added:**
-- Slider-Crank Mechanism
-- Two-Bit Adding Unit
-- Fekete Problem
-- Water Tube System
-- Charge Pump
-- Car Axis Mechanism
-- Andrews' Squeezing Mechanism
-- Wheelset Problem
-
-**Information to Get Started**:
-
-These benchmarks include multiple formulations (mass-matrix, residual DAE,
-and ModelingToolkit index-reduced forms) and generate work-precision
-diagrams through the SciMLBenchmarks benchmarking infrastructure.
-
-**Related Pull Requests**
-
-- https://github.com/SciML/SciMLBenchmarks.jl/pull/1459
-- https://github.com/SciML/SciMLBenchmarks.jl/pull/1461
-- https://github.com/SciML/SciMLBenchmarks.jl/pull/1480
-- https://github.com/SciML/SciMLBenchmarks.jl/pull/1481
-- https://github.com/SciML/SciMLBenchmarks.jl/pull/1483
-- https://github.com/SciML/SciMLBenchmarks.jl/pull/1484
-- https://github.com/SciML/SciMLBenchmarks.jl/pull/1485
-- https://github.com/SciML/SciMLBenchmarks.jl/pull/1486
+- **Transistor Amplifier** — Completed by Marko Polic (June 18th, 2024 – July 18th, 2024). PR [SciMLBenchmarks.jl#1007](https://github.com/SciML/SciMLBenchmarks.jl/pull/1007).
+- **NAND Gate** — Completed by Jayant Pranjal (August 2025). PR [SciMLBenchmarks.jl#1303](https://github.com/SciML/SciMLBenchmarks.jl/pull/1303).
+- **Slider-Crank, Two-Bit Adding Unit, Fekete, Water Tube, Charge Pump, Car Axis, Andrews' Squeezing Mechanism, Wheelset** — Completed by Singh Harsh Rahulkumar (singhharsh1708). PRs [#1459](https://github.com/SciML/SciMLBenchmarks.jl/pull/1459), [#1461](https://github.com/SciML/SciMLBenchmarks.jl/pull/1461), [#1480](https://github.com/SciML/SciMLBenchmarks.jl/pull/1480), [#1481](https://github.com/SciML/SciMLBenchmarks.jl/pull/1481), [#1483](https://github.com/SciML/SciMLBenchmarks.jl/pull/1483), [#1484](https://github.com/SciML/SciMLBenchmarks.jl/pull/1484), [#1485](https://github.com/SciML/SciMLBenchmarks.jl/pull/1485), [#1486](https://github.com/SciML/SciMLBenchmarks.jl/pull/1486).
 
 **Reviewer:** Chris Rackauckas
 
@@ -405,35 +388,6 @@ which SciML will help administer through the small grants program.
 **Recommended Skills**: This requires some low-level knowledge of LLVM IR and familiarity with `llvmcall`. The changes should be routine.
 
 **Reviewers**: Chris Elrod
-
-## DAE Problem Benchmarks (\$100 / Benchmark)
-
-Completed by **Jayant Pranjal**
-
-**Benchmarks added:** NAND Gate Problem benchmark
-
-New benchmarks for differential-algebraic equation (DAE) systems would greatly improve our
-ability to better tune solvers across problems. However, we are currently lacking in the
-number of such benchmarks that exist. The goal would be to add standard benchmarks from
-[this issue](https://github.com/SciML/SciMLBenchmarks.jl/issues/359) to the SciMLBenchmarks
-system so that they can be performance tracked over time.
-
-**Information to Get Started**: [Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
-describes how to contribute to the benchmarks. The benchmark results are
-generated using the benchmark server. The [transition amplifier benchmark](https://github.com/SciML/SciMLBenchmarks.jl/pull/372)
-and [slider crank benchmark](https://github.com/SciML/SciMLBenchmarks.jl/pull/373) were old
-PRs to add a few of the problems. These could be used as starting points to solve two problems.
-One would likely need to modify the structural simplification to turn dummy derivative off
-as well, that can be discussed with Chris in the PR review.
-
-**Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177](https://github.com/SciML/OrdinaryDiffEq.jl/issues/2177)
-
-**Success Criteria**: New benchmarks with the DAE systems.
-
-**Recommended Skills**: Prior knowledge in modeling with differential-algebraic equations
-would be helpful for debugging.
-
-**Reviewers**: Chris Rackauckas
 
 ## Fix and Update the "Simple Handwritten PDEs as ODEs" Benchmark Set (\$400)
 
@@ -583,12 +537,6 @@ no prior knowledge of numerical differential equations is required. Only standar
 development skills and test-driven development of a large code base is required.
 
 **Reviewers**: Chris Rackauckas
-
-## DAE Problem Benchmarks (\$100 / Benchmark)
-
-**Completed by Marko Polic in the time period of June 18th, 2024 - July 18th 2024.**
-The transistor amplifier benchmark was added [https://github.com/SciML/SciMLBenchmarks.jl/pull/1007](https://github.com/SciML/SciMLBenchmarks.jl/pull/1007).
-Project is kept open for other benchmarks.
 
 ## SciMLBenchmarks Compatibility Bump for Benchmark Sets (\$100 each set)
 
