@@ -246,6 +246,29 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
 
+## Refactor OrdinaryDiffEq.jl SDIRK Solver Set to Reuse perform_step! via Tableaus (\$100)
+
+**Completed by Singh Harsh Rahulkumar (singhharsh1708) in May 2026.**
+
+The per-method bespoke `perform_step!` implementations across the SDIRK and ESDIRK
+methods were collapsed into a single tableau-driven implementation in
+[`OrdinaryDiffEqSDIRK/src/generic_imex_perform_step.jl`](https://github.com/SciML/OrdinaryDiffEq.jl/blob/master/lib/OrdinaryDiffEqSDIRK/src/generic_imex_perform_step.jl),
+with tableaus defined in `sdirk_tableaus.jl` and `imex_tableaus.jl`. The original
+claim and scaffolding was started by Krish Gaur in
+[OrdinaryDiffEq.jl#2779](https://github.com/SciML/OrdinaryDiffEq.jl/pull/2779) (July 2025).
+
+**Related Pull Requests:**
+
+- [OrdinaryDiffEq.jl#2779](https://github.com/SciML/OrdinaryDiffEq.jl/pull/2779) — initial unified tableau structure (Krish Gaur)
+- [OrdinaryDiffEq.jl#3619](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3619), [#3620](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3620) — unify SFSDIRK4-8 and Hairer4/42 into generic PureSDIRK
+- [OrdinaryDiffEq.jl#3641](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3641) — fix behavioral regressions in generic SDIRK/IMEX
+- [OrdinaryDiffEq.jl#3650](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3650) — unify error estimation under dispatched `calculate_error_estimate!`
+- [OrdinaryDiffEq.jl#3654](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3654) — force type specialization of ESDIRK*L2SA tableau dispatches
+- [OrdinaryDiffEq.jl#3661](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3661) — add tableau embedded-pair consistency test for adaptive SDIRK/ESDIRK
+- [OrdinaryDiffEq.jl#3668](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3668) — add generic stage-predictor menu for ESDIRK methods
+
+**Reviewer:** Chris Rackauckas
+
 ## Add support for TabM architecture in NeuroTabModels.jl and remove Zygote.jl dependency (\$1800)
 
 Completed by **Aditya Pandey**
