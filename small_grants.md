@@ -255,8 +255,6 @@ bespoke). The remaining sub-packages are claimed on a per-set basis.
 
 **Solver sets still available for refactor** (each is its own \$100 grant, claim by sub-package name):
 
-- **[OrdinaryDiffEqLowOrderRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqLowOrderRK/src)** — low-order explicit Runge-Kutta methods (BS3, BS5, DP5, Heun, Midpoint, Ralston, RK4, OwrenZen variants, etc.). Note BS5 uses a non-standard error estimator.
-- **[OrdinaryDiffEqHighOrderRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqHighOrderRK/src)** — high-order explicit RK (DP8, TanYam7, TsitPap8). DP8 has a non-standard error estimator.
 - **[OrdinaryDiffEqSSPRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSSPRK/src)** — Strong-stability-preserving RK (SSPRK22, SSPRK33, SSPRK43, SSPRK53, SSPRK54, SSPRK63, SSPRK73, SSPRK83, SSPRK104, SSPRK932, etc.).
 - **[OrdinaryDiffEqLowStorageRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqLowStorageRK/src)** — 2N and 3N low-storage RK formats (CarpenterKennedy2N54, ParsaniKetchesonDeconinck variants, etc.).
 - **[OrdinaryDiffEqSymplecticRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSymplecticRK/src)** — symplectic integrators (VelocityVerlet, McAte2-8, Yoshida6, KahanLi6/8, Ruth3, etc.).
