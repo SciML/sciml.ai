@@ -263,10 +263,8 @@ bespoke). The remaining sub-packages are claimed on a per-set basis.
 - **[OrdinaryDiffEqLowStorageRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqLowStorageRK/src)** — 2N and 3N low-storage RK formats (CarpenterKennedy2N54, ParsaniKetchesonDeconinck variants, etc.).
 - **[OrdinaryDiffEqSymplecticRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSymplecticRK/src)** — symplectic integrators (VelocityVerlet, McAte2-8, Yoshida6, KahanLi6/8, Ruth3, etc.).
 - **[OrdinaryDiffEqRKN](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqRKN/src)** — Runge-Kutta-Nyström methods for second-order ODEs (Nystrom4, IRKN3-4, DPRKN6-12, ERKN4-7, etc.).
-- **[OrdinaryDiffEqRosenbrock](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqRosenbrock/src)** — Rosenbrock W-methods and Rosenbrock-Wanner methods (Rodas3-5P, Veldd4, Velds4, GRK4T, etc.). A `rosenbrock_tableaus.jl` file already exists as a partial starting point.
 - **[OrdinaryDiffEqFIRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqFIRK/src)** — Fully implicit Runge-Kutta (RadauIIA3, RadauIIA5, RadauIIA9, AdaptiveRadau).
 - **[OrdinaryDiffEqExponentialRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqExponentialRK/src)** — exponential RK families (LawsonEuler, NorsettEuler, ETD2, ETDRK2-4, HochOst4, Exp4, EPIRK variants, etc.).
-- **[OrdinaryDiffEqStabilizedRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqStabilizedRK/src)** — Stabilized explicit RK for mildly stiff problems (ROCK2, ROCK4, ESERK4, ESERK5, SERK2).
 
 Solver set should be discussed before starting the project (especially around any algorithm-specific dispatch points the refactor needs to keep). The completed SDIRK refactor in [OrdinaryDiffEqSDIRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSDIRK/src) is the reference pattern.
 
