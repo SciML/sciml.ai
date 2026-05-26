@@ -164,8 +164,6 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 ## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
 
-**In Progress**: Claimed by Khushmagrawal for the time period of January 02, 2026 - February 02, 2026.
-
 [LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
 central package for the performance of many Julia packages. Its internals make
 use of many low-level features and manual SIMD that can make it require significant
@@ -200,8 +198,6 @@ which SciML will help administer through the small grants program.
 
 The current SciMLBenchmarks only run on CPU. There are many cases we wish to benchmark on GPU. The goal of this project is to modify the CI scripts to support GPU benchmarking.
 
-**In Progress**: Claimed by divital-coder for the time period of (06-12-2025) - (06-03-2026).
-
 **Information to Get Started**: See the current scripts in https://github.com/SciML/SciMLBenchmarks.jl/tree/master/.buildkite
 
 **Success Criteria**: Merged pull request which changes the SciMLBenchmarks CI scripts to have a GPU queue, and setting up one of the benchmarks with a GPU queue
@@ -211,8 +207,6 @@ The current SciMLBenchmarks only run on CPU. There are many cases we wish to ben
 **Reviewers**: Chris Rackauckas
 
 ## Fix OrdinaryDiffEq Downgrade tests (\$100)
-
-**In Progress**: Claimed by Param Thakkar for the time period of February 12, 2026 - March 12, 2026.
 
 The downgrade tests are a set of tests which ensure that the package can be downgraded to a previous version and still work. This is important for ensuring that the package is stable and can be used in production environments. However, these tests are currently failing in many repositories due to changes in the package dependencies or the package itself. For example, OrdinaryDiffEq and most of its sublibraries
 currently fail the downgrade tests.
@@ -228,8 +222,6 @@ The purpose of this is to work through what is required for the minimum version 
 **Reviewers**: Chris Rackauckas and Oscar Smith
 
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
-
-**In Progress**: Claimed by Jash Ambaliya(AJ0070) for the time period of January 06, 2026 - February 06, 2026.
 
 [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
 is a repository of constrained and unconstrained nonlinear programming problems for testing
@@ -263,8 +255,6 @@ solvers in a standard SciMLBenchmarks benchmark build.
 **Reviewers**: Chris Rackauckas and Vaibhav Dixit
 
 ## Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus (\$100/solver set)
-
-***In Progress:** Claimed for the SDIRK set by Krish Gaur for the time period of July 4th 2025 - August 4th, 2025*
 
 The perform_step! implementations per solver in OrdinaryDiffEq.jl are often "bespoke", i.e.
 one step implementation per solver. The reason is because the package code grew organically
