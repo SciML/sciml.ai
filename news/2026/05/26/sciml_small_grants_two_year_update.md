@@ -70,15 +70,14 @@ Two notable governance / project-list changes since the year-one post:
 
 ## Projects Open for Claim
 
-Going into this update, five projects had active claim declarations. All five were past their declared windows without extension PRs or recent activity on the relevant SciML repos, so they were cleared in a second stale-claim sweep ([PR #235](https://github.com/SciML/sciml.ai/pull/235), following the pattern established in [PR #191](https://github.com/SciML/sciml.ai/pull/191)). The project entries themselves remain on the list and are open for re-claim:
+Going into this update, five projects had active claim declarations. All five were past their declared windows without extension PRs or recent activity on the relevant SciML repos, so they were cleared in a second stale-claim sweep ([PR #235](https://github.com/SciML/sciml.ai/pull/235), following the pattern established in [PR #191](https://github.com/SciML/sciml.ai/pull/191)). The SciMLBenchmarks GPU CI project was also dropped from the project list entirely as part of the same sweep. The remaining four projects are open for re-claim:
 
 - **LoopVectorization.jl Apple ARM (\$200)** — the follow-up to Maximilian's v1.12 work: get all tests passing on M-series Macs.
-- **SciMLBenchmarks GPU CI (\$300)** — the long-standing GPU benchmarking queue project.
 - **OrdinaryDiffEq Downgrade Tests (\$100)** — making the downgrade-tests CI pass across OrdinaryDiffEq and its sublibraries. PR [SciML/OrdinaryDiffEq.jl#3047](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3047) (open but stalled with failing tests) is a partial starting point for whoever picks this up next.
 - **CUTEst.jl on the Optimization.jl Interface (\$200)** — wrap the CUTEst.jl problem set behind the Optimization.jl interface and add a SciMLBenchmarks loop over it.
 - **OrdinaryDiffEq Tableau Refactor — SDIRK set (\$100/set)** — refactor the SDIRK `perform_step!` implementations into a single tableau-based loop. Note that significant in-tree work has happened on this since the original claim (PR [SciML/OrdinaryDiffEq.jl#2779](https://github.com/SciML/OrdinaryDiffEq.jl/pull/2779) is still open, and additional unifying refactors have landed under other contributors in May 2026), so anyone picking this up should coordinate with the reviewers about what's left in scope.
 
-The pattern of clearing claim declarations when a window closes without extension is by design — see the [Going Over the One-Month Time Budget](https://sciml.ai/small_grants/#going_over_the_one-month_time_budget) section of the program page. Projects stay on the list; only the claim resets.
+The pattern of clearing claim declarations when a window closes without extension is by design — see the [Going Over the One-Month Time Budget](https://sciml.ai/small_grants/#going_over_the_one-month_time_budget) section of the program page. In most cases the project itself stays on the list and only the claim resets.
 
 ## Updated Totals
 
@@ -103,7 +102,7 @@ A few patterns worth noting:
 
 ## Get Involved
 
-The [current project list](https://sciml.ai/small_grants/) is live with five open projects. If you want to claim one, open a PR against [sciml.ai](https://github.com/SciML/sciml.ai) modifying `small_grants.md` per the [declaration instructions](https://sciml.ai/small_grants/#declaring_for_a_project).
+The [current project list](https://sciml.ai/small_grants/) is live with four open projects. If you want to claim one, open a PR against [sciml.ai](https://github.com/SciML/sciml.ai) modifying `small_grants.md` per the [declaration instructions](https://sciml.ai/small_grants/#declaring_for_a_project).
 
 To support the program financially, [donate via NumFOCUS](https://numfocus.org/donate-to-sciml) — donations can be earmarked for specific projects with steering council approval, which is how the LoopVectorization.jl Julia v1.12 work was funded.
 
