@@ -240,48 +240,6 @@ solvers in a standard SciMLBenchmarks benchmark build.
 
 **Recommended Skills**: Basic (undergrad-level) knowledge of using numerical optimizers
 
-**Reviewers**: Chris Rackauckas and Vaibhav Dixit
-
-## Refactor OrdinaryDiffEq.jl Solver Sets to Reuse perform_step! Implementations via Tableaus (\$100/solver set)
-
-The `perform_step!` implementations per solver in OrdinaryDiffEq.jl are often "bespoke", i.e.
-one step implementation per solver. The reason is because the package code grew organically
-over time and this is the easiest way to ensure performance and write out a new method.
-However, many of the methods can be collapsed by class into a single solver set using a
-tableau implementation that loops over coefficients. The SDIRK set has been completed under
-this project (see [OrdinaryDiffEqSDIRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSDIRK/src),
-where `generic_imex_perform_step.jl` now drives the methods previously implemented
-bespoke). The remaining sub-packages are claimed on a per-set basis.
-
-**Solver sets still available for refactor** (each is its own \$100 grant, claim by sub-package name):
-
-- **[OrdinaryDiffEqSSPRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSSPRK/src)** — Strong-stability-preserving RK (SSPRK22, SSPRK33, SSPRK43, SSPRK53, SSPRK54, SSPRK63, SSPRK73, SSPRK83, SSPRK104, SSPRK932, etc.).
-- **[OrdinaryDiffEqLowStorageRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqLowStorageRK/src)** — 2N and 3N low-storage RK formats (CarpenterKennedy2N54, ParsaniKetchesonDeconinck variants, etc.).
-- **[OrdinaryDiffEqRKN](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqRKN/src)** — Runge-Kutta-Nyström methods for second-order ODEs (Nystrom4, IRKN3-4, DPRKN6-12, ERKN4-7, etc.).
-- **[OrdinaryDiffEqExponentialRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqExponentialRK/src)** — exponential RK families (LawsonEuler, NorsettEuler, ETD2, ETDRK2-4, HochOst4, Exp4, EPIRK variants, etc.).
-
-Solver set should be discussed before starting the project (especially around any algorithm-specific dispatch points the refactor needs to keep). The completed SDIRK refactor in [OrdinaryDiffEqSDIRK](https://github.com/SciML/OrdinaryDiffEq.jl/tree/master/lib/OrdinaryDiffEqSDIRK/src) is the reference pattern.
-
-**Information to Get Started**: The OrdinaryDiffEq.jl solvers are all found in
-[the Github repository](https://github.com/SciML/OrdinaryDiffEq.jl) and
-the format of the package is documented in the
-[developer documentation](https://docs.sciml.ai/DiffEqDevDocs/stable/). The key to doing
-this right is to note that it is just a refactor, so all of the methods are there in
-the package already. Be careful to add dispatch points for algorithm-specific behavior
-(non-standard error estimators, lazy interpolation, etc.) where the bespoke implementations
-had them.
-
-**Related Issues**: [https://github.com/SciML/OrdinaryDiffEq.jl/issues/233](https://github.com/SciML/OrdinaryDiffEq.jl/issues/233)
-
-**Success Criteria**: For the chosen sub-package, the per-method bespoke `perform_step!`
-implementations are replaced by a single tableau-driven `perform_step!` that loops over
-tableau coefficients, all existing tests pass, and there are no observable performance
-regressions on the relevant SciMLBenchmarks runs.
-
-**Recommended Skills**: Since all of the code for the solvers exists and this is a refactor,
-no prior knowledge of numerical differential equations is required. Only standard software
-development skills and test-driven development of a large code base is required.
-
 **Reviewers**: Chris Rackauckas
 
 # Successful Projects Archive
