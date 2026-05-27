@@ -68,14 +68,23 @@ Two notable governance / project-list changes since the year-one post:
 
 **AI usage policy ([PR #214](https://github.com/SciML/sciml.ai/pull/214), February 2026).** A note was added to the [SciML Developer Programs page](https://sciml.ai/dev/) clarifying that AI usage is allowed but must be disclosed, with undisclosed usage being grounds for disqualification from future programs. The note also makes explicit that the projects on offer have already been attempted with state-of-the-art AI tooling, so a contributor relying on AI alone without expert guidance is unlikely to succeed.
 
-## Projects Open for Claim
+## Project List Cleanups
 
-Going into this update, five projects had active claim declarations. All five were past their declared windows without extension PRs or recent activity on the relevant SciML repos, so they were cleared in a second stale-claim sweep ([PR #235](https://github.com/SciML/sciml.ai/pull/235), following the pattern established in [PR #191](https://github.com/SciML/sciml.ai/pull/191)). The SciMLBenchmarks GPU CI project was also dropped from the project list entirely as part of the same sweep. The remaining four projects are open for re-claim:
+Three cleanup PRs landed alongside this post:
 
-- **LoopVectorization.jl Apple ARM (\$200)** — the follow-up to Maximilian's v1.12 work: get all tests passing on M-series Macs.
-- **OrdinaryDiffEq Downgrade Tests (\$100)** — making the downgrade-tests CI pass across OrdinaryDiffEq and its sublibraries. PR [SciML/OrdinaryDiffEq.jl#3047](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3047) (open but stalled with failing tests) is a partial starting point for whoever picks this up next.
-- **CUTEst.jl on the Optimization.jl Interface (\$200)** — wrap the CUTEst.jl problem set behind the Optimization.jl interface and add a SciMLBenchmarks loop over it.
-- **OrdinaryDiffEq Tableau Refactor — SDIRK set (\$100/set)** — refactor the SDIRK `perform_step!` implementations into a single tableau-based loop. Note that significant in-tree work has happened on this since the original claim (PR [SciML/OrdinaryDiffEq.jl#2779](https://github.com/SciML/OrdinaryDiffEq.jl/pull/2779) is still open, and additional unifying refactors have landed under other contributors in May 2026), so anyone picking this up should coordinate with the reviewers about what's left in scope.
+**Stale-claim sweep ([PR #235](https://github.com/SciML/sciml.ai/pull/235), 2026-05-26).** Going into this update, five projects had active claim declarations. All five were past their declared windows without extension PRs or recent activity on the relevant SciML repos, so they were cleared in a second stale-claim sweep, following the pattern established in [PR #191](https://github.com/SciML/sciml.ai/pull/191).
+
+**SciMLBenchmarks GPU CI and tableau refactor projects retired ([PR #235](https://github.com/SciML/sciml.ai/pull/235) and a follow-up).** The GPU CI project was dropped from the list entirely. The "Refactor OrdinaryDiffEq.jl Solver Sets via Tableaus (\$100/solver set)" project was also retired — the SDIRK set was effectively completed in-tree by Singh Harsh Rahulkumar across a series of PRs in May 2026 ([OrdinaryDiffEq.jl#3619](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3619), [#3620](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3620), [#3641](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3641), [#3650](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3650), [#3654](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3654), [#3661](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3661), [#3668](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3668)) building on Krish Gaur's original scaffolding in [#2779](https://github.com/SciML/OrdinaryDiffEq.jl/pull/2779), but no formal small-grant claim was completed for it.
+
+**Archive consolidation ([PR #238](https://github.com/SciML/sciml.ai/pull/238)).** The DAE Problem Benchmarks project (open-ended at \$100/benchmark since the program began) hit completion: tracker issue [SciMLBenchmarks.jl#359](https://github.com/SciML/SciMLBenchmarks.jl/issues/359) closed on 2026-03-13 with all 11 listed problems implemented. The three separate archive entries (Marko Polic / Jayant Pranjal / Singh Harsh Rahulkumar) were consolidated into a single completed entry.
+
+## Open Projects
+
+Three projects are currently on the active list:
+
+- **LoopVectorization.jl Apple ARM (\$200)** — open. Follow-up to Maximilian's v1.12 work: get all tests passing on M-series Macs.
+- **OrdinaryDiffEq Downgrade Tests (\$100)** — open. Making the downgrade-tests CI pass across OrdinaryDiffEq and its sublibraries. PR [SciML/OrdinaryDiffEq.jl#3047](https://github.com/SciML/OrdinaryDiffEq.jl/pull/3047) (open but stalled with failing tests) is a partial starting point.
+- **CUTEst.jl on the Optimization.jl Interface (\$200)** — **claimed by Prashant Andoriya** ([PR #236](https://github.com/SciML/sciml.ai/pull/236), 2026-05-26 to 2026-06-26). Wrap the CUTEst.jl problem set behind the Optimization.jl interface and add a SciMLBenchmarks loop over it.
 
 The pattern of clearing claim declarations when a window closes without extension is by design — see the [Going Over the One-Month Time Budget](https://sciml.ai/small_grants/#going_over_the_one-month_time_budget) section of the program page. In most cases the project itself stays on the list and only the claim resets.
 
@@ -97,12 +106,12 @@ That's **\$5,950 in additional payouts over ten months**, bringing the running t
 A few patterns worth noting:
 
 - **Repeat contributors continue to dominate the high end.** Aditya Pandey (now three completed grants), Maximilian Pochapski (two), Param Thakkar (two completed), and Jash Ambaliya (one completed) account for a large share of total payouts. The program's design of giving exclusive declared time periods, with extension support, evidently works for sustaining multi-grant contributor relationships.
-- **Open-ended "per-benchmark" projects scale well.** The DAE benchmark project alone has now been worked by Marko Polic, Jayant Pranjal, and Singh Harsh Rahulkumar across multiple cycles, with Singh's eight-system push being the single largest contribution to SciMLBenchmarks from the program.
+- **Open-ended "per-benchmark" projects scale well.** The DAE benchmark project was worked by Marko Polic, Jayant Pranjal, and Singh Harsh Rahulkumar across multiple cycles — 10 of the 11 problems on the [tracker issue](https://github.com/SciML/SciMLBenchmarks.jl/issues/359) were added through the program (Singh's eight-system push being the single largest contribution), and the issue is now closed.
 - **Scope expansions get rewarded.** The PDE benchmark bounty was bumped on completion. The EvoTrees.jl bounty was bumped for partial KA.jl work. The pattern of trusting contributors to push past the original spec and adjusting payment afterward has held up.
 
 ## Get Involved
 
-The [current project list](https://sciml.ai/small_grants/) is live with four open projects. If you want to claim one, open a PR against [sciml.ai](https://github.com/SciML/sciml.ai) modifying `small_grants.md` per the [declaration instructions](https://sciml.ai/small_grants/#declaring_for_a_project).
+The [current project list](https://sciml.ai/small_grants/) has two unclaimed projects (LoopVectorization Apple ARM and OrdinaryDiffEq Downgrade Tests) with the CUTEst.jl wrapper claimed through June 26. If you want to claim one of the open projects, open a PR against [sciml.ai](https://github.com/SciML/sciml.ai) modifying `small_grants.md` per the [declaration instructions](https://sciml.ai/small_grants/#declaring_for_a_project).
 
 To support the program financially, [donate via NumFOCUS](https://numfocus.org/donate-to-sciml) — donations can be earmarked for specific projects with steering council approval, which is how the LoopVectorization.jl Julia v1.12 work was funded.
 
