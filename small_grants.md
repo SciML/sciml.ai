@@ -162,38 +162,6 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Update LoopVectorization.jl to pass all tests on MacOS ARM Systems (\$200)
-
-[LoopVectorization.jl](https://github.com/JuliaSIMD/LoopVectorization.jl) is a
-central package for the performance of many Julia packages. Its internals make
-use of many low-level features and manual SIMD that can make it require significant
-maintenance to be optimized for new system architectures and versions of the compiler.
-
-**Information to Get Started**:
-
-LoopVectorization.jl was mainly developed having x64 Intel systems in mind and
-available as testing platforms. Apple has launched the new Apple M series processors
-using an ARM architecture some time ago. When updating the CI infrastructure of
-LoopVectorization.jl to run tests on Apple ARM systems
-(see <https://github.com/JuliaSIMD/LoopVectorization.jl/pull/563>),
-several bugs were found. These test failures were marked in the PR, and the
-issue <https://github.com/JuliaSIMD/LoopVectorization.jl/issues/564> has been
-created.
-
-The purpose of this project is to update LoopVectorization.jl and/or related packages
-from the JuliaSIMD ecosystem so that all tests pass on all available platforms;
-all broken/skipped tests (`@test_broken`, `@test_skip`) are changed backed to normal
-tests (`@test`) that pass on all platforms.
-
-Note that the funds for this project as given by earmarked donations to the JuliaLang project
-which SciML will help administer through the small grants program.
-
-**Success Criteria**: LoopVectorization.jl runs all tests on all platforms.
-
-**Recommended Skills**: This requires some low-level knowledge of LoopVectorization.jl.
-
-**Reviewers**: Chris Rackauckas and Oscar Smith
-
 ## Fix OrdinaryDiffEq Downgrade tests (\$100)
 
 The downgrade tests are a set of tests which ensure that the package can be downgraded to a previous version and still work. This is important for ensuring that the package is stable and can be used in production environments. However, these tests are currently failing in many repositories due to changes in the package dependencies or the package itself. For example, OrdinaryDiffEq and most of its sublibraries
