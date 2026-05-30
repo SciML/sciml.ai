@@ -162,21 +162,6 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Fix OrdinaryDiffEq Downgrade tests (\$100)
-
-The downgrade tests are a set of tests which ensure that the package can be downgraded to a previous version and still work. This is important for ensuring that the package is stable and can be used in production environments. However, these tests are currently failing in many repositories due to changes in the package dependencies or the package itself. For example, OrdinaryDiffEq and most of its sublibraries
-currently fail the downgrade tests.
-
-The purpose of this is to work through what is required for the minimum version bumping in order to ensure the downgrade tests pass on OrdinaryDiffEq and all of its sublibraries. This may require tracking down incorrect versions in dependencies as well.
-
-**Information to Get Started**: See the test failures on master, i.e. https://github.com/SciML/OrdinaryDiffEq.jl/pull/2919 
-
-**Success Criteria**: Merged pull request which fixes all of the downgrade tests in OrdinaryDiffEq and its sublibraries.
-
-**Recommended Skills**: Knowledge of the Julia package system and how to use the `Pkg` standard library to downgrade packages.
-
-**Reviewers**: Chris Rackauckas and Oscar Smith
-
 ## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
 
 **In Progress**: Claimed by Prashant Andoriya for the time period of May 26, 2026 - June 26, 2026.
