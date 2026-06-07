@@ -232,12 +232,12 @@
 
 <item>
   <title>
-    <![CDATA[  State of the SciML Open Source Software Ecosystem, 2025  ]]>
+    <![CDATA[  2025 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
   </title>
-  <link> https://sciml.ai/news/2025/06/26/state_of_sciml/index.html </link>
-  <guid> https://sciml.ai/news/2025/06/26/state_of_sciml/index.html </guid>
+  <link> https://sciml.ai/news/2025/05/23/gsoc_2025/index.html </link>
+  <guid> https://sciml.ai/news/2025/05/23/gsoc_2025/index.html </guid>
   <description>
-    <![CDATA[  State of the SciML Open Source Software Ecosystem, 2025  ]]>
+    <![CDATA[  2025 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
   </description>  
     
   <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>  
@@ -251,12 +251,12 @@
 
 <item>
   <title>
-    <![CDATA[  2025 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
+    <![CDATA[  State of the SciML Open Source Software Ecosystem, 2025  ]]>
   </title>
-  <link> https://sciml.ai/news/2025/05/23/gsoc_2025/index.html </link>
-  <guid> https://sciml.ai/news/2025/05/23/gsoc_2025/index.html </guid>
+  <link> https://sciml.ai/news/2025/06/26/state_of_sciml/index.html </link>
+  <guid> https://sciml.ai/news/2025/06/26/state_of_sciml/index.html </guid>
   <description>
-    <![CDATA[  2025 Google Summer of Code and SciML&#39;s Summer Fellowship&#33;  ]]>
+    <![CDATA[  State of the SciML Open Source Software Ecosystem, 2025  ]]>
   </description>  
     
   <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>  
@@ -840,12 +840,69 @@
 
 <item>
   <title>
+    <![CDATA[  SciML Scientific Machine Learning Governance  ]]>
+  </title>
+  <link> https://sciml.ai/governance/index.html </link>
+  <guid> https://sciml.ai/governance/index.html </guid>
+  <description>
+    <![CDATA[  Governance structure for the SciML Scientific Machine Learning open source software organization  ]]>
+  </description>  
+    
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Scientific Machine Learning Challenge Problems and Datasets  ]]>
+  </title>
+  <link> https://sciml.ai/challenge/index.html </link>
+  <guid> https://sciml.ai/challenge/index.html </guid>
+  <description>
+    <![CDATA[  Challenge problems and research datasets for the Scientific Machine Learning &#40;SciML&#41;  ]]>
+  </description>  
+    
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
   </title>
   <link> https://sciml.ai/roadmap/index.html </link>
   <guid> https://sciml.ai/roadmap/index.html </guid>
   <description>
     <![CDATA[  SciML: Scientific Machine Learning Roadmap  ]]>
+  </description>  
+    
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  SciML Scientific Machine Learning Showcase  ]]>
+  </title>
+  <link> https://sciml.ai/showcase/index.html </link>
+  <guid> https://sciml.ai/showcase/index.html </guid>
+  <description>
+    <![CDATA[  Showcase of SciML Scientific Machine Learning applications  ]]>
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
@@ -884,63 +941,6 @@
   <guid> https://sciml.ai/citing/index.html </guid>
   <description>
     <![CDATA[  Citations for the SciML Scientific Machine Learning software organization  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Staging Team</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  SciML Scientific Machine Learning Governance  ]]>
-  </title>
-  <link> https://sciml.ai/governance/index.html </link>
-  <guid> https://sciml.ai/governance/index.html </guid>
-  <description>
-    <![CDATA[  Governance structure for the SciML Scientific Machine Learning open source software organization  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Staging Team</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  SciML Scientific Machine Learning Showcase  ]]>
-  </title>
-  <link> https://sciml.ai/showcase/index.html </link>
-  <guid> https://sciml.ai/showcase/index.html </guid>
-  <description>
-    <![CDATA[  Showcase of SciML Scientific Machine Learning applications  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Staging Team</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  SciML Scientific Machine Learning Challenge Problems and Datasets  ]]>
-  </title>
-  <link> https://sciml.ai/challenge/index.html </link>
-  <guid> https://sciml.ai/challenge/index.html </guid>
-  <description>
-    <![CDATA[  Challenge problems and research datasets for the Scientific Machine Learning &#40;SciML&#41;  ]]>
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
@@ -1241,8 +1241,8 @@
   <title>
     <![CDATA[  SDIRK Methods   ]]>
   </title>
-  <link> https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html </link>
-  <guid> https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html </guid>
+  <link> https://sciml.ai/news/2017/08/13/SDIRK/index.html </link>
+  <guid> https://sciml.ai/news/2017/08/13/SDIRK/index.html </guid>
   <description>
     <![CDATA[  SDIRK Methods   ]]>
   </description>  
@@ -1260,8 +1260,8 @@
   <title>
     <![CDATA[  SDIRK Methods   ]]>
   </title>
-  <link> https://sciml.ai/news/2017/08/13/SDIRK/index.html </link>
-  <guid> https://sciml.ai/news/2017/08/13/SDIRK/index.html </guid>
+  <link> https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html </link>
+  <guid> https://sciml.ai/news/2017/07/06/SymplecticRosenbrock/index.html </guid>
   <description>
     <![CDATA[  SDIRK Methods   ]]>
   </description>  
@@ -1410,12 +1410,12 @@
 
 <item>
   <title>
-    <![CDATA[  OrdinaryDiffEq v0.5  ]]>
+    <![CDATA[  PDEs Update  ]]>
   </title>
-  <link> https://sciml.ai/news/2016/01/21/saveat/index.html </link>
-  <guid> https://sciml.ai/news/2016/01/21/saveat/index.html </guid>
+  <link> https://sciml.ai/news/2017/01/05/fem/index.html </link>
+  <guid> https://sciml.ai/news/2017/01/05/fem/index.html </guid>
   <description>
-    <![CDATA[  OrdinaryDiffEq v0.5   ]]>
+    <![CDATA[  PDEs Update   ]]>
   </description>  
     
   <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>  
@@ -1429,12 +1429,12 @@
 
 <item>
   <title>
-    <![CDATA[  PDEs Update  ]]>
+    <![CDATA[  OrdinaryDiffEq v0.5  ]]>
   </title>
-  <link> https://sciml.ai/news/2017/01/05/fem/index.html </link>
-  <guid> https://sciml.ai/news/2017/01/05/fem/index.html </guid>
+  <link> https://sciml.ai/news/2016/01/21/saveat/index.html </link>
+  <guid> https://sciml.ai/news/2016/01/21/saveat/index.html </guid>
   <description>
-    <![CDATA[  PDEs Update   ]]>
+    <![CDATA[  OrdinaryDiffEq v0.5   ]]>
   </description>  
     
   <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>  
