@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  What&#39;s New in SciML Since OrdinaryDiffEq v7: Continuation Solvers, Multirate Integrators, and a Pure-Julia Sparse LU  ]]>
+  </title>
+  <link> https://sciml.ai/news/2026/07/29/sciml_since_ode_v7/index.html </link>
+  <guid> https://sciml.ai/news/2026/07/29/sciml_since_ode_v7/index.html </guid>
+  <description>
+    <![CDATA[  What&#39;s New in SciML Since OrdinaryDiffEq v7: Continuation Solvers, Multirate Integrators, and a Pure-Julia Sparse LU  ]]>
+  </description>  
+    
+  <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  SciML Small Grants Program: Two Years In, Eight More Projects Funded and Shipped  ]]>
   </title>
   <link> https://sciml.ai/news/2026/05/26/sciml_small_grants_two_year_update/index.html </link>
