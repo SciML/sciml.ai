@@ -243,6 +243,39 @@ Julia's `Distributed`/ensemble parallelism and the Weave build pipeline.
 
 **Reviewers**: Chris Rackauckas
 
+## Integro-Differential Equation PINN Solver Benchmark ($300)
+
+**In Progress**: Claimed by Arpan Chakraborty for the time period of August 1, 2026 - September 1, 2026.
+
+Issue #354 requests a benchmark comparing PINN solvers for integro-differential equations (IDEs) against traditional methods. NeuralPDE.jl IDE training is 10-60x slower than PDE equivalents, making this benchmark critical for the community.
+
+**Benchmark scope:**
+1. **Problem**: 1D Volterra IDE from NeuralPDE tutorial:
+∂u/∂t + 2u + 5∫₀ᵗ u(x)dx = 1,  u(0) = 0,  t ∈ [0, 2]
+   Exact solution: `u(t) = (1/2) * e^(-t) * sin(2t)`
+
+2. **PINN (NeuralPDE.jl)** — Training time, convergence iterations, L2 error, memory usage
+
+3. **Traditional** — Convert IDE to ODE system via differentiation + solve with Tsit5/Rodas5
+
+4. **Comparison** — Work-precision style diagrams: accuracy vs compute time
+
+**Information to Get Started:**
+- NeuralPDE IDE tutorial: https://docs.sciml.ai/NeuralPDE/stable/tutorials/integro_diff/
+- SciMLBenchmarks contributing: https://github.com/SciML/SciMLBenchmarks.jl#contributing
+
+**Related Issues**: [SciML/SciMLBenchmarks.jl#354](https://github.com/SciML/SciMLBenchmarks.jl/issues/354)
+
+**Success Criteria:**
+- New `.jmd` benchmark file in `benchmarks/NeuralPDE/` or `benchmarks/PINNErrorsVsTime/`
+- Weaves successfully under standard SciMLBenchmarks build
+- Training time vs accuracy comparison plots
+- Documentation of IDE formulation and solver configuration
+
+**Recommended Skills**: PINNs, differential equations, neural networks, Julia
+
+**Reviewers**: Chris Rackauckas, killah-t-cell
+
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
