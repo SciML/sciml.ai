@@ -243,6 +243,58 @@ Julia's `Distributed`/ensemble parallelism and the Weave build pipeline.
 
 **Reviewers**: Chris Rackauckas
 
+## Add Nonautonomous Linear ODE Scaling Benchmarks (proposed \$200)
+
+**Proposed**: Jitendra Prajapati (@infinityscroll), pending Steering Council
+approval, funding confirmation, and reviewer assignment. Requested duration:
+one month from approval, with the dated claim window set when approved.
+
+[SciMLBenchmarks.jl#404](https://github.com/SciML/SciMLBenchmarks.jl/issues/404)
+requests benchmarks of how linear ODE solution time and memory requirements
+change with system size. This project addresses a bounded first part: CPU
+benchmarks for nonautonomous linear ODEs, using exact reference solutions to
+compare Magnus and general-purpose ODE methods. The larger PDE and multi-node
+questions in the issue remain outside this scope.
+
+The deliverable is one `.jmd` page and its Project/Manifest environment. It
+includes a reproducible time-noncommuting linear-system family with an analytic
+solution, a constant-coefficient control, and work-precision and size-scaling
+plots at N = 8, 32, 128. The proposed solver set is `MagnusMidpoint` and
+`MagnusGauss4`, each with direct and Krylov exponential evaluation, plus `Tsit5`.
+The reviewer can adjust the solver set and parameter grids before approval.
+
+**Information to Get Started**: Follow the
+[SciMLBenchmarks contribution instructions](https://github.com/SciML/SciMLBenchmarks.jl#contributing)
+and the public
+[OrdinaryDiffEqLinear interfaces](https://docs.sciml.ai/OrdinaryDiffEq/stable/semilinear/Linear/).
+
+**Success Criteria**:
+
+* All affected pages weave without error through the standard `benchmark.jl`
+  entrypoint, including the environment/setup sequence where required.
+* Document and check the analytic reference and noncommutation property. Compute
+  each method's error on the same saved time grid.
+* Report actual errors, repeated warmed solve times, allocated bytes, fixed
+  parameters, package versions, and hardware. Allocated bytes must not be
+  labeled peak memory.
+* Show work-precision plots and scaling summaries using the fastest measured
+  configuration meeting a predeclared error target. Explicitly report unmet
+  targets, measurement caps, and omitted methods with their reasons.
+* Merge the reviewed benchmark and generate its plots and tables through the
+  standard build. Acceptance does not depend on a particular method winning.
+
+**Funding Justification**: The suggested \$200 is comparable to the current
+\$200 CUTEst-interface and AdaptiveSDE benchmark projects and below the archived
+\$400 handwritten-PDE benchmark-set project. This scope is limited to one family,
+a control, and three small sizes. Funding from existing eligible resources is
+requested subject to committee approval; no earmarked funds are claimed.
+
+**Recommended Skills**: Numerical ODE methods, Julia/SciML public interfaces,
+and reproducible benchmarking.
+
+**Reviewer**: To be designated by the Steering Council. Implementation starts
+after approval. AI-assisted drafting and development will be disclosed.
+
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
