@@ -232,7 +232,7 @@ Albert Rich's comprehensive RUBI rule-based integration system.
 
 If you use SymbolicIntegration.jl in your research, please cite:
 
-```bibtex
+```plaintext
 @software{SymbolicIntegration.jl,
   author = {Harald Hofstätter and Mattia Micheletta Merlin and Chris Rackauckas},
   title = {SymbolicIntegration.jl: Symbolic Integration for Julia},

@@ -151,6 +151,7 @@ Catalyst.jl provides the ability to create symbolic models of chemical reaction 
 - [ADVANCED LEVEL] spatial model representations in Catalyst combined with code generation for PDE libraries (such as Ferrite).
 - [MODERATE LEVEL] new ModelingToolkit-based systems to represent τ-leaping and/or abstract master equation representations, along with translation layers to generate such systems from Catalyst reaction network models.
 - [ADVANCED/MODERATE LEVEL] support for delays in ODE/SDE models and their propagation through ModelingToolkitBase to generate concrete models.
+@@
 
 **Recommended Skills**: Very strong understanding of ODE models for chemical systems and Julia open-source programming
 particularly [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl) and [ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl). Abstract algebra and graph theory for the network analysis components. Stochastic chemical kinetics and Gillespie method experience for the τ-leaping projects. 
