@@ -1,0 +1,12 @@
+[files]
+extend-exclude = [
+    "news",
+    "_libs",
+    "index.html",
+]
+
+[default.extend-words]
+Tak = "Tak"
+Strang = "Strang"
+Lok = "Lok"
+ist = "ist"

@@ -11,7 +11,7 @@ dir = @__DIR__
 Small helper function to run some code and redirect the output (stdout) to a file.
 """
 function genplain(s::String)
-    open(joinpath(dir, "output", "$(splitext(s)[1]).txt"), "w") do outf
+    return open(joinpath(dir, "output", "$(splitext(s)[1]).txt"), "w") do outf
         redirect_stdout(outf) do
             include(joinpath(dir, s))
         end

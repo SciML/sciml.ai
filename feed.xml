@@ -42,6 +42,44 @@
 
 <item>
   <title>
+    <![CDATA[  OrdinaryDiffEq.jl v7 and DifferentialEquations.jl v8: What Breaks, What to Do About It  ]]>
+  </title>
+  <link> https://sciml.ai/news/2026/07/28/OrdinaryDiffEqv7/index.html </link>
+  <guid> https://sciml.ai/news/2026/07/28/OrdinaryDiffEqv7/index.html </guid>
+  <description>
+    <![CDATA[  OrdinaryDiffEq.jl v7 and DifferentialEquations.jl v8: What Breaks, What to Do About It  ]]>
+  </description>  
+    
+  <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  ModelingToolkit v11: Licensing, Type-Stability / Performance Improvements, and Array Future  ]]>
+  </title>
+  <link> https://sciml.ai/news/2026/07/27/ModelingToolkitv11/index.html </link>
+  <guid> https://sciml.ai/news/2026/07/27/ModelingToolkitv11/index.html </guid>
+  <description>
+    <![CDATA[  ModelingToolkit v11: Licensing, Type-Stability / Performance Improvements, and Array Future  ]]>
+  </description>  
+    
+  <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Staging Team</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  SciML Small Grants Program: Two Years In, Eight More Projects Funded and Shipped  ]]>
   </title>
   <link> https://sciml.ai/news/2026/05/26/sciml_small_grants_two_year_update/index.html </link>
