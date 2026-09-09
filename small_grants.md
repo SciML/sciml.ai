@@ -162,41 +162,6 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 # List of Current Projects
 
-## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
-
-**In Progress**: Claimed by Prashant Andoriya for the time period of May 26, 2026 - June 26, 2026.
-
-[CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
-is a repository of constrained and unconstrained nonlinear programming problems for testing
-and comparing optimization algorithms. We would like to be able to repurpose this work for
-improving Optimization.jl's performance and tracking the performance of optimizers. It would
-be useful to the community if this set of benchmarks was updated to the modern SciML
-interfaces and benchmarking tools so it can make use of the full set of methods in
-Optimization.jl and drive further developments and recommendations to users.
-
-This would likely turn into either contributions to CUTEst or wrappers to CUTEst (hosted in
-SciML) which transform the NLPModels form into Optimization.jl, and a benchmarking
-script that loops over all optimization problems and applies a set of optimizers to each of
-them, computing summary statistics at the bottom.
-
-**Information to Get Started**: The
-[Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
-describes how to contribute to the benchmarks. The benchmark results are
-generated using the benchmark server. It is expected that the benchmarks are
-updated to use the [Optimization.jl](https://docs.sciml.ai/Optimization/stable/)
-interface, which is an interface over most optimizers in Julia. Not all of the
-optimizers are covered in this interface: simply remove the optimizers which
-are not wrapped into Optimization.jl
-
-**Related Issues**: [https://github.com/SciML/SciMLBenchmarks.jl/issues/935](https://github.com/SciML/SciMLBenchmarks.jl/issues/935)
-
-**Success Criteria**: The benchmarks should be turned into a loop over Optimization.jl
-solvers in a standard SciMLBenchmarks benchmark build.
-
-**Recommended Skills**: Basic (undergrad-level) knowledge of using numerical optimizers
-
-**Reviewers**: Chris Rackauckas
-
 ## Fix and Update the AdaptiveSDE Benchmark Set (\$200)
 
 **In Progress**: Claimed by Jitendra Verma for the time period of June 19, 2026 - July 19, 2026.
@@ -246,6 +211,41 @@ Julia's `Distributed`/ensemble parallelism and the Weave build pipeline.
 # Successful Projects Archive
 
 These are the previous SciML small grants projects which have successfully concluded and paid out.
+
+## Update CUTEst.jl to the Optimization.jl Interface and Add to SciMLBenchmarks (\$200)
+
+Completed by **Prashant Andoriya**
+
+[CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl)
+is a repository of constrained and unconstrained nonlinear programming problems for testing
+and comparing optimization algorithms. We would like to be able to repurpose this work for
+improving Optimization.jl's performance and tracking the performance of optimizers. It would
+be useful to the community if this set of benchmarks was updated to the modern SciML
+interfaces and benchmarking tools so it can make use of the full set of methods in
+Optimization.jl and drive further developments and recommendations to users.
+
+This would likely turn into either contributions to CUTEst or wrappers to CUTEst (hosted in
+SciML) which transform the NLPModels form into Optimization.jl, and a benchmarking
+script that loops over all optimization problems and applies a set of optimizers to each of
+them, computing summary statistics at the bottom.
+
+**Information to Get Started**: The
+[Contributing Section of the SciMLBenchmarks README](https://github.com/SciML/SciMLBenchmarks.jl?tab=readme-ov-file#contributing)
+describes how to contribute to the benchmarks. The benchmark results are
+generated using the benchmark server. It is expected that the benchmarks are
+updated to use the [Optimization.jl](https://docs.sciml.ai/Optimization/stable/)
+interface, which is an interface over most optimizers in Julia. Not all of the
+optimizers are covered in this interface: simply remove the optimizers which
+are not wrapped into Optimization.jl
+
+**Related Issues**: [https://github.com/SciML/SciMLBenchmarks.jl/issues/935](https://github.com/SciML/SciMLBenchmarks.jl/issues/935)
+
+**Success Criteria**: The benchmarks should be turned into a loop over Optimization.jl
+solvers in a standard SciMLBenchmarks benchmark build.
+
+**Recommended Skills**: Basic (undergrad-level) knowledge of using numerical optimizers
+
+**Reviewers**: Chris Rackauckas
 
 ## Add support for TabM architecture in NeuroTabModels.jl and remove Zygote.jl dependency (\$1800)
 
