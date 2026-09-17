@@ -164,7 +164,7 @@ will "go the extra mile" to teach the contributor how the package or mathematics
 
 ## Fix and Update the AdaptiveSDE Benchmark Set (\$200)
 
-**In Progress**: Claimed by Jitendra Verma for the time period of June 19, 2026 - July 19, 2026.
+Completed by **Jitendra Verma** on September 7, 2026.
 
 The [AdaptiveSDE benchmarks](https://github.com/SciML/SciMLBenchmarks.jl/tree/master/benchmarks/AdaptiveSDE)
 (`AdaptiveEfficiencyTests.jmd` and `qmaxDetermination.jmd`) compare the adaptive
