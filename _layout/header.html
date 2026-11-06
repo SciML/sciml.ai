@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-xxl navbar-light">
     <a class="navbar-brand" href="/">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -42,13 +42,18 @@
         </li>
         <li class="nav-item dropdown">
           <button class="nav-link dropdown-toggle" id="dyadSupportDropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dyad &amp; Support
+            Dyad &amp; Commercial Support
           </button>
           <div class="dropdown-menu dropdown-menu-end dyad-support-menu" aria-labelledby="dyadSupportDropdown">
-            <p class="px-3 py-2 mb-0">Dyad by JuliaHub is the agentic modeling and simulation platform built on the SciML stack. It helps you build, simulate, and validate physical models with AI agents.</p>
-            <a class="dropdown-item" href="https://juliahub.com/products/dyad">Explore Dyad</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://juliahub.com/company/contact-us-sciml">Commercial Support</a>
+            <a class="dropdown-item dyad-card" href="https://juliahub.com/products/dyad">
+              <img src="/assets/dyad-logo.svg" alt="Dyad" width="64" height="64" style="color-scheme: light;">
+              <p>Dyad by JuliaHub is the agentic modeling and simulation platform built on the SciML stack.</p>
+              <ul>
+                <li>A component-based GUI for modeling</li>
+                <li>A modeling language and compiler stack integrated with and transparent to AI agents</li>
+              </ul>
+            </a>
+            <p class="dyad-commercial-support">JuliaHub offers commercial support for ModelingToolkit and the SciML ecosystem. <a href="https://juliahub.com/company/contact-us-sciml">Contact Us</a>.</p>
           </div>
         </li>
         <li class="nav-item">

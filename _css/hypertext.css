@@ -1,5 +1,9 @@
 /* Simple css to follow the geometry of franklin-content (see franklin.css) */
 
+.navbar-nav .nav-link {
+  white-space: nowrap;
+}
+
 #dyadSupportDropdown {
   background: transparent;
   border: 0;
@@ -11,8 +15,33 @@
   max-width: calc(100vw - 2rem);
 }
 
-.dyad-support-menu p {
+.dyad-support-menu .dyad-card {
+  width: auto;
+  margin: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
   white-space: normal;
+}
+
+.dyad-card img {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.dyad-card p {
+  margin-bottom: 0.75rem;
+}
+
+.dyad-card ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.dyad-commercial-support {
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 0;
 }
 
 header {
