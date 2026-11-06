@@ -1,5 +1,20 @@
 /* Simple css to follow the geometry of franklin-content (see franklin.css) */
 
+#dyadSupportDropdown {
+  background: transparent;
+  border: 0;
+  font: inherit;
+}
+
+.dyad-support-menu {
+  width: 22rem;
+  max-width: calc(100vw - 2rem);
+}
+
+.dyad-support-menu p {
+  white-space: normal;
+}
+
 header {
   margin-top: 10px;
   position: relative;
