@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-xxl navbar-light">
     <a class="navbar-brand" href="/">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -40,10 +40,30 @@
             <a class="dropdown-item" href="/dev/">Developer Programs</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://juliahub.com/company/contact-us-sciml">
-            Commercial Support
-          </a>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" id="dyadSupportDropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dyad &amp; Commercial Support
+          </button>
+          <div class="dropdown-menu dropdown-menu-end dyad-support-menu" aria-labelledby="dyadSupportDropdown">
+            <a class="dyad-card" href="https://juliahub.com/products/dyad">
+              <div class="dyad-card-head">
+                <img class="dyad-card-logo" src="/assets/dyad-logo.svg" alt="" width="34" height="34">
+                <div>
+                  <span class="dyad-card-title">Dyad</span>
+                  <span class="dyad-card-by">By JuliaHub</span>
+                </div>
+              </div>
+              <div class="dyad-card-body">
+                <p class="dyad-card-intro">Dyad by JuliaHub is the agentic modeling and simulation platform built on the SciML stack.</p>
+                <ul class="dyad-card-features">
+                  <li>Component-based GUI for modeling</li>
+                  <li>Modeling language and compiler stack integrated with and transparent to AI agents</li>
+                </ul>
+                <span class="dyad-card-cta">Explore Dyad <span aria-hidden="true">↗</span></span>
+              </div>
+            </a>
+            <p class="dyad-commercial-support">JuliaHub offers commercial support for ModelingToolkit and the SciML ecosystem. <a href="https://juliahub.com/company/contact-us-sciml">Contact Us</a>.</p>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://numfocus.org/donate-to-sciml"><i class="bi bi-heart"></i> Donate</a>
