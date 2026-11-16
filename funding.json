@@ -1,0 +1,118 @@
+{
+  "$schema": "https://fundingjson.org/schema/v1.1.0.json",
+  "version": "v1.1.0",
+  "entity": {
+    "type": "organisation",
+    "role": "steward",
+    "name": "SciML Open Source Software Organization (fiscally sponsored by NumFOCUS, Inc.)",
+    "email": "crackauc@mit.edu",
+    "description": "SciML is an open source scientific computing software organization maintaining more than 200 MIT-licensed packages in the Julia programming language for differential equations, symbolic-numeric modeling, nonlinear and linear solvers, optimization, and scientific machine learning. SciML is governed by a five-person Steering Council led by founder and lead maintainer Christopher Rackauckas, and has operated since 2021 under a fiscal sponsorship agreement with NumFOCUS, Inc., a United States 501(c)(3) public charity that receives, administers, and audits project funds. Across its top 30 repositories, SciML has 684 lifetime contributors and 130 to 170 active contributors per year, none of whom holds a salaried position dedicated to maintaining SciML. Prior sustainability and community support administered through NumFOCUS includes a Chan Zuckerberg Initiative Essential Open Source Software (EOSS Round 4) grant of approximately $286,000 (2021-2023), mentorship of Google Summer of Code students within the Julia organization, which held 163 GSoC slots across 2017-2026, 12 SciML Summer Fellows since 2023, and eighteen completed maintenance microgrants ($100 to $2,250 each) through the SciML Small Grants Program.",
+    "webpageUrl": {
+      "url": "https://sciml.ai"
+    }
+  },
+  "projects": [
+    {
+      "guid": "sciml",
+      "name": "SciML Ecosystem (DifferentialEquations.jl, OrdinaryDiffEq.jl, ModelingToolkit.jl, SciMLBase.jl)",
+      "description": "SciML provides the core open source differential equation solver and acausal modeling stack in Julia, centered on DifferentialEquations.jl, OrdinaryDiffEq.jl, ModelingToolkit.jl, LinearSolve.jl, NonlinearSolve.jl, Catalyst.jl, and the shared SciMLBase.jl interface implemented or consumed across roughly 200 packages. The stack integrates stiff and non-stiff ODE, SDE, DDE, and DAE solvers with automatic differentiation and symbolic model compilation, and serves as production simulation infrastructure across health, climate, aerospace, energy, finance, and industry: FDA-recognized clinical pharmacology software (Pumas, used at Pfizer and other pharmaceutical companies), the Climate Modeling Alliance (CliMA), Federal Reserve Bank of New York DSGE macroeconomic models, NASA Launch Services trajectory analysis, the U.S. Air Force MagNav program, NREL power-grid dynamics tools, and engineering workflows at Boeing and ASML. Because SciMLBase sits near the bottom of the Julia scientific dependency graph, interface changes, compiler updates, and upstream breakage propagate widely across downstream packages. Research grants to academic and industrial contributors fund novel numerical algorithms, leaving an acute maintenance gap in pull-request review capacity, cross-package release engineering, compatibility testing, and issue triage.",
+      "webpageUrl": {
+        "url": "https://sciml.ai"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/SciML"
+      },
+      "licenses": [
+        "spdx:MIT"
+      ],
+      "tags": [
+        "scientific-computing",
+        "science",
+        "machine-learning",
+        "artificial-intelligence",
+        "data-science",
+        "programming",
+        "developer-tools",
+        "julia",
+        "differential-equations"
+      ]
+    }
+  ],
+  "funding": {
+    "channels": [
+      {
+        "guid": "numfocus-bank",
+        "type": "bank",
+        "address": "info@numfocus.org",
+        "description": "Institutional grant agreements, ACH, or international wire transfers to NumFOCUS, Inc. (U.S. 501(c)(3) fiscal sponsor for SciML). Contact sciml@julialang.org and info@numfocus.org for wire instructions and tax residency documentation."
+      },
+      {
+        "guid": "numfocus-donate",
+        "type": "payment-provider",
+        "address": "https://numfocus.org/donate-to-sciml",
+        "description": "Direct online donations to the NumFOCUS-hosted SciML fund (tax-deductible in the United States to the extent provided by law)."
+      },
+      {
+        "guid": "numfocus-opencollective",
+        "type": "payment-provider",
+        "address": "https://opencollective.com/sciml",
+        "description": "NumFOCUS-hosted SciML Open Collective used for transparent community contributions and maintainer expense disbursements."
+      }
+    ],
+    "plans": [
+      {
+        "guid": "maintainer-stipends-50k",
+        "status": "active",
+        "name": "Broad-Based Maintainer and Reviewer Stipends (Primary Annual Plan)",
+        "description": "Funds recurring part-time maintainer and pull-request reviewer stipends (not new feature research) across core SciML packages including SciMLBase.jl, OrdinaryDiffEq.jl, DifferentialEquations.jl, and ModelingToolkit.jl, covering code review, cross-package release engineering, compatibility upkeep, and issue triage via NumFOCUS.",
+        "amount": 50000,
+        "currency": "USD",
+        "frequency": "yearly",
+        "channels": [
+          "numfocus-bank",
+          "numfocus-donate",
+          "numfocus-opencollective"
+        ]
+      },
+      {
+        "guid": "core-triage-stipends-25k",
+        "status": "active",
+        "name": "Core Triage and Release Maintenance Stipends",
+        "description": "Scaled-down annual tier restricting recurring stipends to a smaller rotation of core maintainers focused on release-blocking regressions, pull-request review triage on SciMLBase.jl, OrdinaryDiffEq.jl, and ModelingToolkit.jl, and essential Julia-version compatibility bumps.",
+        "amount": 25000,
+        "currency": "USD",
+        "frequency": "yearly",
+        "channels": [
+          "numfocus-bank",
+          "numfocus-donate",
+          "numfocus-opencollective"
+        ]
+      },
+      {
+        "guid": "ecosystem-stewardship-100k",
+        "status": "active",
+        "name": "Full Ecosystem Maintainership and Review Capacity",
+        "description": "Expanded annual tier extending recurring maintainer and reviewer stipends across linear/nonlinear solvers, symbolic modeling, and cross-ecosystem benchmarks while pairing paid review capacity with ongoing maintenance microgrants and CI infrastructure.",
+        "amount": 100000,
+        "currency": "USD",
+        "frequency": "yearly",
+        "channels": [
+          "numfocus-bank"
+        ]
+      },
+      {
+        "guid": "community-maintenance-pool",
+        "status": "active",
+        "name": "General Maintenance and Small Grants Pool",
+        "description": "Open contribution of any amount to the NumFOCUS-hosted SciML maintenance fund supporting targeted bug-fix microgrants and developer sustainability programs.",
+        "amount": 0,
+        "currency": "USD",
+        "frequency": "one-time",
+        "channels": [
+          "numfocus-donate",
+          "numfocus-opencollective"
+        ]
+      }
+    ]
+  }
+}
