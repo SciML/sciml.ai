@@ -50,6 +50,9 @@ jobs:
           isempty(missing_pages) || error("Franklin did not write: $(join(missing_pages, ", "))")
           news = read(joinpath("__site", "news", "index.html"), String)
           occursin("/news/2016/11/26/hello/", news) || error("news index has no posts")
+          isfile(joinpath("__site", ".nojekyll")) || error("Franklin did not write .nojekyll")
+          fm = read(joinpath("__site", ".well-known", "funding-manifest-urls"), String)
+          fm == "https://sciml.ai/funding.json\n" || error("unexpected funding-manifest-urls content: $(repr(fm))")
         '
     - name: Deploy
       if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
